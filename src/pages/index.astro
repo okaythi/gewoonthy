@@ -26,7 +26,6 @@
         user-select: none;
       }
 
-      /* Base Watermark Structure */
       .watermark {
         position: fixed;
         top: 50%;
@@ -95,11 +94,11 @@
         opacity: 0.95;
       }
 
-      /* Book Icon Style */
+      /* Book Icon Style - Moved to Bottom Left */
       .read-link {
         position: fixed;
-        top: 4dvh;
-        right: 4vw;
+        bottom: 4dvh;
+        left: 4vw;
         z-index: 100;
         display: flex;
         align-items: center;
@@ -249,8 +248,8 @@
         .nav-btn svg { width: 20px; height: 30px; }
         
         .read-link {
-          top: 3dvh;
-          right: 3vw;
+          bottom: 3dvh;
+          left: 3vw;
         }
         .read-link svg {
           width: 24px;
@@ -260,7 +259,7 @@
     </style>
   </head>
   <body>
-    <!-- New Book Icon linking to /read -->
+    <!-- Book Icon -->
     <a href="/read" class="read-link" aria-label="Read" title="Read">
       <svg viewBox="0 0 24 24">
         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
