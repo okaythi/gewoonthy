@@ -2,12 +2,12 @@ export async function onRequest(context) {
   try {
     const listed = await context.env.MEDIA_BUCKET.list();
     
-    // Grabs your current domain (gewoonthy.pages.dev) dynamically
-    const origin = new URL(context.request.url).origin;
+    // Force all generated video links to use the new custom domain
+    const customDomain = 'https://media.thiago.qzz.io';
     
     const files = listed.objects
       .filter(obj => obj.key.endsWith('.mp4') || obj.key.endsWith('.webm'))
-      .map(obj => `${origin}/media/${encodeURIComponent(obj.key)}`);
+      .map(obj => `${customDomain}/media/${encodeURIComponent(obj.key)}`);
     
     return new Response(JSON.stringify(files), {
       headers: { 
