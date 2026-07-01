@@ -7,23 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Thy</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Yuji+Syuku&display=swap');
+
       html, body {
         margin: 0;
         padding: 0;
         width: 100vw;
-        height: 100dvh; /* Dynamic Viewport Height fixes iOS cutoff */
+        height: 100dvh;
         overflow: hidden;
         background-color: #000000;
         color: #d9d9d9;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         box-sizing: border-box;
         
-        /* Disable text selection */
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
       }
+
+      /* Base Watermark Structure */
+      .watermark {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        white-space: nowrap; 
+        color: #ffffff;
+        
+        opacity: 0; 
+        pointer-events: none; 
+        z-index: 50; 
+        transition: opacity 1.5s ease-in-out; 
+      }
+
+      .font-japanese-short {
+        font-family: 'Yuji Syuku', serif;
+        font-size: clamp(2rem, 8dvh, 6rem); 
+        letter-spacing: 0.3em;
+        text-transform: none;
+      }
+
+      .font-japanese-long {
+        font-family: 'Yuji Syuku', serif;
+        font-size: clamp(1rem, 4.5dvh, 4rem); 
+        letter-spacing: 0.1em; 
+        text-transform: none;
+      }
+
+      .font-dutch {
+        font-family: 'Caveat', cursive;
+        font-size: clamp(0.75rem, 2.5dvh, 1.8rem); 
+        letter-spacing: -0.1em; 
+        text-transform: uppercase; 
+      }
+
+      #watermark-left { left: 4vw; }
+      #watermark-right { right: 4vw; }
 
       .container {
         display: flex;
@@ -34,6 +75,8 @@
         height: 100dvh;
         padding: 4dvh 2vw;
         box-sizing: border-box;
+        position: relative;
+        z-index: 10;
       }
 
       .top-section {
@@ -50,6 +93,36 @@
         margin: 0;
         color: #ffffff;
         opacity: 0.95;
+      }
+
+      /* Book Icon Style */
+      .read-link {
+        position: fixed;
+        top: 4dvh;
+        right: 4vw;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #444;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .read-link:hover {
+        color: #ffffff;
+        transform: scale(1.05);
+      }
+
+      .read-link svg {
+        width: 28px;
+        height: 28px;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
       .player-wrapper {
@@ -121,7 +194,7 @@
         cursor: pointer;
         display: none;
         outline: none;
-        -webkit-tap-highlight-color: transparent; /* Removes blue tap box on mobile */
+        -webkit-tap-highlight-color: transparent;
       }
 
       .nav-btn svg {
@@ -133,9 +206,7 @@
         transition: stroke 0.2s ease;
       }
 
-      .nav-btn:hover svg {
-        stroke: #ffffff;
-      }
+      .nav-btn:hover svg { stroke: #ffffff; }
 
       .bottom-section {
         flex: 0 0 auto;
@@ -165,40 +236,41 @@
         letter-spacing: 2px;
       }
 
-      /* --- MOBILE FIXES --- */
+      @media (max-width: 1024px) {
+        .watermark { display: none !important; }
+      }
+
       @media (max-width: 768px) {
-        .container {
-          justify-content: center; /* Kills the massive black voids */
-          gap: 2rem;
-          padding: 2dvh 2vw;
-        }
+        .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; }
+        .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; }
+        .video-container { height: auto; }
+        video { max-height: 50dvh; }
+        .nav-btn { padding: 5px; }
+        .nav-btn svg { width: 20px; height: 30px; }
         
-        .player-wrapper {
-          flex: 0 0 auto; /* Stops wrapper from forcing itself to be full height */
-          height: auto;
-          gap: 0.25rem; /* Brings arrows closer to the video */
+        .read-link {
+          top: 3dvh;
+          right: 3vw;
         }
-
-        .video-container {
-          height: auto;
-        }
-
-        video {
-          max-height: 50dvh; /* Prevents vertical blowout */
-        }
-
-        .nav-btn {
-          padding: 5px; /* Reclaims horizontal space for the video */
-        }
-
-        .nav-btn svg {
-          width: 20px; /* Slims arrows slightly */
-          height: 30px;
+        .read-link svg {
+          width: 24px;
+          height: 24px;
         }
       }
     </style>
   </head>
   <body>
+    <!-- New Book Icon linking to /read -->
+    <a href="/read" class="read-link" aria-label="Read" title="Read">
+      <svg viewBox="0 0 24 24">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+      </svg>
+    </a>
+
+    <div id="watermark-left" class="watermark"></div>
+    <div id="watermark-right" class="watermark"></div>
+
     <div class="container">
       <div class="top-section">
         <h2>"Cuno doesn't fucking care!"</h2>
@@ -239,10 +311,7 @@
 
     <script>
       document.addEventListener('contextmenu', event => event.preventDefault());
-      document.addEventListener('copy', event => {
-        event.preventDefault();
-        return false;
-      });
+      document.addEventListener('copy', event => { event.preventDefault(); return false; });
       document.addEventListener('keydown', event => {
         if (event.key === 'F12') event.preventDefault();
         if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j')) event.preventDefault();
@@ -254,6 +323,8 @@
       const prevBtn = document.getElementById('prev-btn');
       const nextBtn = document.getElementById('next-btn');
       const trackNameEl = document.getElementById('track-name');
+      const leftWatermark = document.getElementById('watermark-left');
+      const rightWatermark = document.getElementById('watermark-right');
       
       let currentIndex = 0;
       let videoList = [];
@@ -261,6 +332,22 @@
       function extractName(url) {
         const filename = url.split('/').pop() || "";
         return decodeURIComponent(filename).replace(/\.[^/.]+$/, "");
+      }
+
+      function applyWatermark(leftText, rightText, fontClass) {
+        leftWatermark.className = 'watermark ' + fontClass;
+        rightWatermark.className = 'watermark ' + fontClass;
+        
+        leftWatermark.innerHTML = leftText;
+        rightWatermark.innerHTML = rightText;
+        
+        leftWatermark.style.opacity = '0.4';
+        rightWatermark.style.opacity = '0.4';
+      }
+
+      function clearWatermarks() {
+        leftWatermark.style.opacity = '0';
+        rightWatermark.style.opacity = '0';
       }
 
       function loadVideo(index) {
@@ -272,10 +359,26 @@
 
         player.style.opacity = 0;
         loader.style.display = 'flex';
+        clearWatermarks(); 
 
         const url = videoList[index];
+        const currentTrackName = extractName(url);
         player.src = url;
-        trackNameEl.textContent = extractName(url);
+        trackNameEl.textContent = currentTrackName;
+        
+        const trackUpper = currentTrackName.trim().toUpperCase();
+        
+        setTimeout(() => {
+          if (trackUpper === 'INORI') {
+            applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
+          } 
+          else if (trackUpper === 'KERO KERO BONITO - BREAK') {
+            applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
+          }
+          else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
+            applyWatermark('IT • A • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch');
+          }
+        }, 500); 
         
         player.play().catch(e => console.log("Autoplay prevented by browser."));
 
@@ -310,24 +413,15 @@
       }
 
       prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          loadVideo(currentIndex);
-        }
+        if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); }
       });
 
       nextBtn.addEventListener('click', () => {
-        if (currentIndex < videoList.length - 1) {
-          currentIndex++;
-          loadVideo(currentIndex);
-        }
+        if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
       });
 
       player.addEventListener('ended', () => {
-        if (currentIndex < videoList.length - 1) {
-          currentIndex++;
-          loadVideo(currentIndex);
-        }
+        if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
       });
 
       initialize();
