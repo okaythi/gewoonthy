@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 ---
 <html lang="en">
   <head>
@@ -6,6 +7,7 @@
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Thy</title>
+    <ClientRouter />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Yuji+Syuku&display=swap');
 
@@ -94,7 +96,6 @@
         opacity: 0.95;
       }
 
-      /* Book Icon Style - Moved to Bottom Left */
       .read-link {
         position: fixed;
         bottom: 4dvh;
@@ -259,7 +260,6 @@
     </style>
   </head>
   <body>
-    <!-- Book Icon -->
     <a href="/read" class="read-link" aria-label="Read" title="Read">
       <svg viewBox="0 0 24 24">
         <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
@@ -309,121 +309,138 @@
     </div>
 
     <script>
-      document.addEventListener('contextmenu', event => event.preventDefault());
-      document.addEventListener('copy', event => { event.preventDefault(); return false; });
-      document.addEventListener('keydown', event => {
-        if (event.key === 'F12') event.preventDefault();
-        if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j')) event.preventDefault();
-        if (event.ctrlKey && (event.key === 'U' || event.key === 'u')) event.preventDefault();
+      // Apply global security lockdown on page load (Astro View Transitions hook)
+      document.addEventListener('astro:page-load', () => {
+        if (!window.globalSecurityAttached) {
+          document.addEventListener('contextmenu', event => {
+            if (!event.target.closest('#quote-text')) event.preventDefault();
+          });
+          document.addEventListener('copy', event => {
+            const selection = window.getSelection();
+            if (!event.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
+              event.preventDefault();
+              return false;
+            }
+          });
+          document.addEventListener('keydown', event => {
+            if (event.key === 'F12') event.preventDefault();
+            if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j' || event.key === 'C' || event.key === 'c')) event.preventDefault();
+            if (event.ctrlKey && (event.key === 'U' || event.key === 'u')) event.preventDefault();
+          });
+          window.globalSecurityAttached = true;
+        }
       });
 
-      const player = document.getElementById('main-player');
-      const loader = document.getElementById('loader');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
-      const trackNameEl = document.getElementById('track-name');
-      const leftWatermark = document.getElementById('watermark-left');
-      const rightWatermark = document.getElementById('watermark-right');
-      
-      let currentIndex = 0;
-      let videoList = [];
-
-      function extractName(url) {
-        const filename = url.split('/').pop() || "";
-        return decodeURIComponent(filename).replace(/\.[^/.]+$/, "");
-      }
-
-      function applyWatermark(leftText, rightText, fontClass) {
-        leftWatermark.className = 'watermark ' + fontClass;
-        rightWatermark.className = 'watermark ' + fontClass;
+      // Video Player Logic
+      document.addEventListener('astro:page-load', () => {
+        const player = document.getElementById('main-player');
+        if (!player) return; // Prevent errors on other pages
         
-        leftWatermark.innerHTML = leftText;
-        rightWatermark.innerHTML = rightText;
+        const loader = document.getElementById('loader');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const trackNameEl = document.getElementById('track-name');
+        const leftWatermark = document.getElementById('watermark-left');
+        const rightWatermark = document.getElementById('watermark-right');
         
-        leftWatermark.style.opacity = '0.4';
-        rightWatermark.style.opacity = '0.4';
-      }
+        let currentIndex = 0;
+        let videoList = [];
 
-      function clearWatermarks() {
-        leftWatermark.style.opacity = '0';
-        rightWatermark.style.opacity = '0';
-      }
-
-      function loadVideo(index) {
-        if (!videoList || videoList.length === 0) {
-          trackNameEl.textContent = "Oops, there's nothing to see here yet.";
-          loader.style.display = 'none';
-          return;
+        function extractName(url) {
+          const filename = url.split('/').pop() || "";
+          return decodeURIComponent(filename).replace(/\.[^/.]+$/, "");
         }
 
-        player.style.opacity = 0;
-        loader.style.display = 'flex';
-        clearWatermarks(); 
-
-        const url = videoList[index];
-        const currentTrackName = extractName(url);
-        player.src = url;
-        trackNameEl.textContent = currentTrackName;
-        
-        const trackUpper = currentTrackName.trim().toUpperCase();
-        
-        setTimeout(() => {
-          if (trackUpper === 'INORI') {
-            applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
-          } 
-          else if (trackUpper === 'KERO KERO BONITO - BREAK') {
-            applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
-          }
-          else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
-            applyWatermark('IT • A • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch');
-          }
-        }, 500); 
-        
-        player.play().catch(e => console.log("Autoplay prevented by browser."));
-
-        prevBtn.style.display = index > 0 ? 'block' : 'none';
-        nextBtn.style.display = index < videoList.length - 1 ? 'block' : 'none';
-      }
-
-      player.addEventListener('loadedmetadata', () => {
-        loader.style.display = 'none';
-        player.style.opacity = 1;
-      });
-
-      player.addEventListener('waiting', () => {
-        loader.style.display = 'flex';
-        player.style.opacity = 0.5;
-      });
-
-      player.addEventListener('playing', () => {
-        loader.style.display = 'none';
-        player.style.opacity = 1;
-      });
-
-      async function initialize() {
-        try {
-          const res = await fetch('/api/videos');
-          videoList = await res.json();
-          loadVideo(currentIndex);
-        } catch(e) {
-          trackNameEl.textContent = "Failed to load tracks.";
-          loader.style.display = 'none';
+        function applyWatermark(leftText, rightText, fontClass) {
+          leftWatermark.className = 'watermark ' + fontClass;
+          rightWatermark.className = 'watermark ' + fontClass;
+          leftWatermark.innerHTML = leftText;
+          rightWatermark.innerHTML = rightText;
+          leftWatermark.style.opacity = '0.4';
+          rightWatermark.style.opacity = '0.4';
         }
-      }
 
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); }
+        function clearWatermarks() {
+          leftWatermark.style.opacity = '0';
+          rightWatermark.style.opacity = '0';
+        }
+
+        function loadVideo(index) {
+          if (!videoList || videoList.length === 0) {
+            trackNameEl.textContent = "Oops, there's nothing to see here yet.";
+            loader.style.display = 'none';
+            return;
+          }
+
+          player.style.opacity = 0;
+          loader.style.display = 'flex';
+          clearWatermarks(); 
+
+          const url = videoList[index];
+          const currentTrackName = extractName(url);
+          player.src = url;
+          trackNameEl.textContent = currentTrackName;
+          
+          const trackUpper = currentTrackName.trim().toUpperCase();
+          
+          setTimeout(() => {
+            if (trackUpper === 'INORI') {
+              applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
+            } 
+            else if (trackUpper === 'KERO KERO BONITO - BREAK') {
+              applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
+            }
+            else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
+              applyWatermark('IT • A • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch');
+            }
+          }, 500); 
+          
+          player.play().catch(e => console.log("Autoplay prevented by browser."));
+
+          prevBtn.style.display = index > 0 ? 'block' : 'none';
+          nextBtn.style.display = index < videoList.length - 1 ? 'block' : 'none';
+        }
+
+        player.addEventListener('loadedmetadata', () => {
+          loader.style.display = 'none';
+          player.style.opacity = 1;
+        });
+
+        player.addEventListener('waiting', () => {
+          loader.style.display = 'flex';
+          player.style.opacity = 0.5;
+        });
+
+        player.addEventListener('playing', () => {
+          loader.style.display = 'none';
+          player.style.opacity = 1;
+        });
+
+        async function initialize() {
+          try {
+            const res = await fetch('/api/videos');
+            videoList = await res.json();
+            loadVideo(currentIndex);
+          } catch(e) {
+            trackNameEl.textContent = "Failed to load tracks.";
+            loader.style.display = 'none';
+          }
+        }
+
+        prevBtn.addEventListener('click', () => {
+          if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); }
+        });
+
+        nextBtn.addEventListener('click', () => {
+          if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
+        });
+
+        player.addEventListener('ended', () => {
+          if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
+        });
+
+        initialize();
       });
-
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
-      });
-
-      player.addEventListener('ended', () => {
-        if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
-      });
-
-      initialize();
     </script>
   </body>
 </html>

@@ -1,11 +1,13 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thy - Read</title>
+    <title>Read - Thy</title>
+    <ClientRouter />
     <style>
       body {
         margin: 0;
@@ -207,7 +209,6 @@
         </svg>
         Return
       </a>
-      
       <select id="lang-picker" class="lang-selector">
         <option value="en">EN</option>
         <option value="nl">NL</option>
@@ -226,7 +227,7 @@
     </div>
 
     <div id="consent-toast" class="consent-toast">
-      <span>Hi, looks like you're in Europe. I use local storage to remember which quotes you've seen.</span>
+      <span>Looks like you're in the EU. I use local storage to remember which quotes you've seen.</span>
       <div class="consent-actions">
         <button id="consent-accept">Accept</button>
         <button id="consent-decline">Decline</button>
@@ -235,163 +236,159 @@
 
     <script>
       // ==========================================
-      // SECURITY LOCKDOWN
+      // SECURITY LOCKDOWN & APP LOGIC
       // ==========================================
       
-      // 1. Block right-click everywhere EXCEPT on the quote text
-      document.addEventListener('contextmenu', e => {
-        if (!e.target.closest('#quote-text')) {
-          e.preventDefault();
-        }
-      });
+      document.addEventListener('astro:page-load', () => {
+        const langPicker = document.getElementById('lang-picker');
+        if (!langPicker) return; // Exit if not on /read
 
-      // 2. Block copying everywhere EXCEPT from the quote text
-      document.addEventListener('copy', e => {
-        const selection = window.getSelection();
-        if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
-          e.preventDefault();
-          return false;
-        }
-      });
-
-      // 3. Block DevTools Shortcuts
-      document.addEventListener('keydown', e => {
-        if (e.key === 'F12') e.preventDefault();
-        if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault();
-        if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault();
-      });
-
-
-      // ==========================================
-      // APP LOGIC
-      // ==========================================
-
-      const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
-      let storageAllowed = false;
-      let currentQuoteData = null; // Store the {en, nl, fr} payload globally
-
-      const langPicker = document.getElementById('lang-picker');
-      const textEl = document.getElementById('quote-text');
-      const authorEl = document.getElementById('quote-author');
-      const sourceEl = document.getElementById('quote-source');
-      const quoteBox = document.getElementById('quote-box');
-
-      // Sync dropdown with localStorage preference if available
-      const savedLang = localStorage.getItem('pref_lang') || 'en';
-      langPicker.value = savedLang;
-
-      langPicker.addEventListener('change', (e) => {
-        const selectedLang = e.target.value;
-        localStorage.setItem('pref_lang', selectedLang);
-        
-        // Instantly swap the language if we have the quote data loaded
-        if (currentQuoteData && currentQuoteData.text[selectedLang]) {
-          textEl.style.opacity = 0; // Quick fade effect for language swap
-          setTimeout(() => {
-            textEl.textContent = `"${currentQuoteData.text[selectedLang]}"`;
-            textEl.style.opacity = 1;
-          }, 200);
-        }
-      });
-
-      async function init() {
-        const consent = localStorage.getItem('eu_consent');
-        
-        if (consent === 'accepted') {
-          storageAllowed = true;
-          fetchQuote();
-          return;
-        } else if (consent === 'declined') {
-          storageAllowed = false;
-          fetchQuote();
-          return;
-        }
-
-        try {
-          const traceRes = await fetch('/cdn-cgi/trace');
-          const traceText = await traceRes.text();
-          const locMatch = traceText.match(/loc=([A-Z]{2})/);
-          const country = locMatch ? locMatch[1] : null;
-
-          if (country && euCountries.includes(country)) {
-            showToast();
-          } else {
-            storageAllowed = true; 
-            fetchQuote();
+        // 1. Block right-click everywhere EXCEPT on the quote text
+        document.addEventListener('contextmenu', e => {
+          if (!e.target.closest('#quote-text')) {
+            e.preventDefault();
           }
-        } catch (e) {
-          showToast(); 
+        });
+
+        // 2. Block copying everywhere EXCEPT from the quote text
+        document.addEventListener('copy', e => {
+          const selection = window.getSelection();
+          if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
+            e.preventDefault();
+            return false;
+          }
+        });
+
+        // 3. Block DevTools Shortcuts
+        document.addEventListener('keydown', e => {
+          if (e.key === 'F12') e.preventDefault();
+          if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault();
+          if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault();
+        });
+
+        const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
+        let storageAllowed = false;
+        let currentQuoteData = null; 
+
+        const textEl = document.getElementById('quote-text');
+        const authorEl = document.getElementById('quote-author');
+        const sourceEl = document.getElementById('quote-source');
+        const quoteBox = document.getElementById('quote-box');
+
+        const savedLang = localStorage.getItem('pref_lang') || 'en';
+        langPicker.value = savedLang;
+
+        langPicker.addEventListener('change', (e) => {
+          const selectedLang = e.target.value;
+          localStorage.setItem('pref_lang', selectedLang);
+          
+          if (currentQuoteData && currentQuoteData.text[selectedLang]) {
+            textEl.style.opacity = 0; 
+            setTimeout(() => {
+              textEl.textContent = `"${currentQuoteData.text[selectedLang]}"`;
+              textEl.style.opacity = 1;
+            }, 200);
+          }
+        });
+
+        async function init() {
+          const consent = localStorage.getItem('eu_consent');
+          
+          if (consent === 'accepted') {
+            storageAllowed = true;
+            fetchQuote();
+            return;
+          } else if (consent === 'declined') {
+            storageAllowed = false;
+            fetchQuote();
+            return;
+          }
+
+          try {
+            const traceRes = await fetch('/cdn-cgi/trace');
+            const traceText = await traceRes.text();
+            const locMatch = traceText.match(/loc=([A-Z]{2})/);
+            const country = locMatch ? locMatch[1] : null;
+
+            if (country && euCountries.includes(country)) {
+              showToast();
+            } else {
+              storageAllowed = true; 
+              fetchQuote();
+            }
+          } catch (e) {
+            showToast(); 
+          }
         }
-      }
 
-      function showToast() {
-        const toast = document.getElementById('consent-toast');
-        toast.classList.add('visible');
-        fetchQuote(); 
+        function showToast() {
+          const toast = document.getElementById('consent-toast');
+          toast.classList.add('visible');
+          fetchQuote(); 
 
-        document.getElementById('consent-accept').addEventListener('click', () => {
-          localStorage.setItem('eu_consent', 'accepted');
-          storageAllowed = true;
-          toast.classList.remove('visible');
-          if (currentQuoteData) saveQuoteToStorage(currentQuoteData.id);
-        });
+          document.getElementById('consent-accept').addEventListener('click', () => {
+            localStorage.setItem('eu_consent', 'accepted');
+            storageAllowed = true;
+            toast.classList.remove('visible');
+            if (currentQuoteData) saveQuoteToStorage(currentQuoteData.id);
+          });
 
-        document.getElementById('consent-decline').addEventListener('click', () => {
-          localStorage.setItem('eu_consent', 'declined');
-          storageAllowed = false;
-          toast.classList.remove('visible');
-        });
-      }
+          document.getElementById('consent-decline').addEventListener('click', () => {
+            localStorage.setItem('eu_consent', 'declined');
+            storageAllowed = false;
+            toast.classList.remove('visible');
+          });
+        }
 
-      async function fetchQuote() {
-        let seenQuotes = [];
-        if (storageAllowed || localStorage.getItem('eu_consent') === 'accepted') {
+        async function fetchQuote() {
+          let seenQuotes = [];
+          if (storageAllowed || localStorage.getItem('eu_consent') === 'accepted') {
+            try {
+              const stored = localStorage.getItem('seenQuotes');
+              if (stored) seenQuotes = JSON.parse(stored);
+            } catch(e) {}
+          }
+
+          try {
+            const res = await fetch(`/api/quote?seen=${seenQuotes.join(',')}`);
+            currentQuoteData = await res.json();
+
+            const activeLang = langPicker.value;
+
+            textEl.style.transition = 'opacity 0.2s ease';
+            textEl.textContent = `"${currentQuoteData.text[activeLang] || currentQuoteData.text['en']}"`;
+            authorEl.textContent = `— ${currentQuoteData.author}`;
+            sourceEl.textContent = currentQuoteData.source;
+            
+            quoteBox.classList.add('visible');
+
+            if (storageAllowed) {
+              saveQuoteToStorage(currentQuoteData.id);
+            }
+          } catch (error) {
+            textEl.textContent = "A system error occurred. Please check back later.";
+            authorEl.textContent = "";
+            sourceEl.textContent = "";
+            quoteBox.classList.add('visible');
+          }
+        }
+
+        function saveQuoteToStorage(id) {
+          let seenQuotes = [];
           try {
             const stored = localStorage.getItem('seenQuotes');
             if (stored) seenQuotes = JSON.parse(stored);
           } catch(e) {}
-        }
-
-        try {
-          const res = await fetch(`/api/quote?seen=${seenQuotes.join(',')}`);
-          currentQuoteData = await res.json();
-
-          const activeLang = langPicker.value;
-
-          // Render UI
-          textEl.style.transition = 'opacity 0.2s ease';
-          textEl.textContent = `"${currentQuoteData.text[activeLang] || currentQuoteData.text['en']}"`;
-          authorEl.textContent = `— ${currentQuoteData.author}`;
-          sourceEl.textContent = currentQuoteData.source;
           
-          quoteBox.classList.add('visible');
-
-          if (storageAllowed) {
-            saveQuoteToStorage(currentQuoteData.id);
+          if (!seenQuotes.includes(parseInt(id))) {
+            seenQuotes.push(parseInt(id));
+            if (seenQuotes.length > 200) seenQuotes = []; 
+            localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
           }
-        } catch (error) {
-          textEl.textContent = "A system error occurred. Please check back later.";
-          authorEl.textContent = "";
-          sourceEl.textContent = "";
-          quoteBox.classList.add('visible');
         }
-      }
 
-      function saveQuoteToStorage(id) {
-        let seenQuotes = [];
-        try {
-          const stored = localStorage.getItem('seenQuotes');
-          if (stored) seenQuotes = JSON.parse(stored);
-        } catch(e) {}
-        
-        if (!seenQuotes.includes(parseInt(id))) {
-          seenQuotes.push(parseInt(id));
-          if (seenQuotes.length > 100) seenQuotes = []; 
-          localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', init);
+        init();
+      });
     </script>
   </body>
 </html>
