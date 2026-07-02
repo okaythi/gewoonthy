@@ -103,6 +103,68 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
+
+      /* Tiny Minimalist Consent Toast */
+      .consent-toast {
+        position: fixed;
+        bottom: 3dvh;
+        left: 50%;
+        transform: translateX(-50%) translateY(150%);
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 50px;
+        padding: 0.6rem 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 0.75rem;
+        color: #7a7a7a;
+        white-space: nowrap;
+        z-index: 1000;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      }
+      
+      .consent-toast.visible {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .consent-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .consent-actions button {
+        background: transparent;
+        border: none;
+        color: #d9d9d9;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 0;
+        transition: color 0.2s ease;
+      }
+
+      .consent-actions button:hover {
+        color: #ffffff;
+      }
+
+      @media (max-width: 768px) {
+        .consent-toast {
+          width: 90vw;
+          border-radius: 12px;
+          flex-direction: column;
+          gap: 0.75rem;
+          text-align: center;
+          white-space: normal;
+          padding: 1rem;
+          bottom: calc(2dvh + env(safe-area-inset-bottom));
+        }
+      }
     </style>
   </head>
   <body>
@@ -126,41 +188,97 @@
       </div>
     </div>
 
+    <div id="consent-toast" class="consent-toast">
+      <span>We use local storage to remember which quotes you've seen.</span>
+      <div class="consent-actions">
+        <button id="consent-accept">Accept</button>
+        <button id="consent-decline">Decline</button>
+      </div>
+    </div>
+
     <script>
+      const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
+      let storageAllowed = false;
+
+      async function init() {
+        const consent = localStorage.getItem('eu_consent');
+        
+        if (consent === 'accepted') {
+          storageAllowed = true;
+          fetchQuote();
+          return;
+        } else if (consent === 'declined') {
+          storageAllowed = false;
+          fetchQuote();
+          return;
+        }
+
+        try {
+          const traceRes = await fetch('/cdn-cgi/trace');
+          const traceText = await traceRes.text();
+          const locMatch = traceText.match(/loc=([A-Z]{2})/);
+          const country = locMatch ? locMatch[1] : null;
+
+          if (country && euCountries.includes(country)) {
+            showToast();
+          } else {
+            storageAllowed = true; 
+            fetchQuote();
+          }
+        } catch (e) {
+          showToast(); 
+        }
+      }
+
+      function showToast() {
+        const toast = document.getElementById('consent-toast');
+        toast.classList.add('visible');
+        fetchQuote(); 
+
+        document.getElementById('consent-accept').addEventListener('click', () => {
+          localStorage.setItem('eu_consent', 'accepted');
+          storageAllowed = true;
+          toast.classList.remove('visible');
+          
+          const currentQuoteId = document.getElementById('quote-box').dataset.currentId;
+          if (currentQuoteId) saveQuoteToStorage(currentQuoteId);
+        });
+
+        document.getElementById('consent-decline').addEventListener('click', () => {
+          localStorage.setItem('eu_consent', 'declined');
+          storageAllowed = false;
+          toast.classList.remove('visible');
+        });
+      }
+
       async function fetchQuote() {
         const quoteBox = document.getElementById('quote-box');
         const textEl = document.getElementById('quote-text');
         const authorEl = document.getElementById('quote-author');
         const sourceEl = document.getElementById('quote-source');
 
-        // Grab seen IDs from localStorage
         let seenQuotes = [];
-        try {
-          const stored = localStorage.getItem('seenQuotes');
-          if (stored) seenQuotes = JSON.parse(stored);
-        } catch(e) {}
+        if (storageAllowed || localStorage.getItem('eu_consent') === 'accepted') {
+          try {
+            const stored = localStorage.getItem('seenQuotes');
+            if (stored) seenQuotes = JSON.parse(stored);
+          } catch(e) {}
+        }
 
         try {
-          // Pass the seen IDs to our custom edge API
           const res = await fetch(`/api/quote?seen=${seenQuotes.join(',')}`);
           const quote = await res.json();
 
-          // Populate the UI
           textEl.textContent = `"${quote.text}"`;
           authorEl.textContent = `— ${quote.author}`;
           sourceEl.textContent = quote.source;
-
-          // Fade it in
+          
+          quoteBox.dataset.currentId = quote.id;
           quoteBox.classList.add('visible');
 
-          // Update tracking
-          seenQuotes.push(quote.id);
-          
-          // Failsafe: if the array gets massive, reset it so we don't blow up localStorage
-          if (seenQuotes.length > 200) seenQuotes = [];
-          
-          localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
-
+          if (storageAllowed) {
+            saveQuoteToStorage(quote.id);
+          }
         } catch (error) {
           textEl.textContent = "A system error occurred. Please check back later.";
           authorEl.textContent = "";
@@ -169,8 +287,21 @@
         }
       }
 
-      // Initialize on load
-      document.addEventListener('DOMContentLoaded', fetchQuote);
+      function saveQuoteToStorage(id) {
+        let seenQuotes = [];
+        try {
+          const stored = localStorage.getItem('seenQuotes');
+          if (stored) seenQuotes = JSON.parse(stored);
+        } catch(e) {}
+        
+        if (!seenQuotes.includes(parseInt(id))) {
+          seenQuotes.push(parseInt(id));
+          if (seenQuotes.length > 100) seenQuotes = []; 
+          localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', init);
     </script>
   </body>
 </html>
