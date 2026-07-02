@@ -21,7 +21,6 @@ import { ClientRouter } from 'astro:transitions';
         box-sizing: border-box;
         overflow: hidden;
         
-        /* Global selection prevention */
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -50,7 +49,6 @@ import { ClientRouter } from 'astro:transitions';
       .back-btn:hover { color: #ffffff; }
       .back-btn svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
 
-      /* Minimalist Language Dropdown */
       .lang-selector {
         background: transparent;
         border: none;
@@ -116,7 +114,6 @@ import { ClientRouter } from 'astro:transitions';
         line-height: 1.6;
         font-style: italic;
         
-        /* Enable selection ONLY on the quote text */
         -webkit-user-select: text;
         -moz-user-select: text;
         -ms-user-select: text;
@@ -124,7 +121,6 @@ import { ClientRouter } from 'astro:transitions';
         cursor: text;
       }
 
-      /* Native selection highlight color for aesthetics */
       blockquote::selection { background: rgba(255,255,255,0.2); color: #fff; }
 
       .author {
@@ -142,7 +138,6 @@ import { ClientRouter } from 'astro:transitions';
         letter-spacing: 0.5px;
       }
 
-      /* Tiny Minimalist Consent Toast */
       .consent-toast {
         position: fixed;
         bottom: 3dvh;
@@ -167,6 +162,16 @@ import { ClientRouter } from 'astro:transitions';
       
       .consent-toast.visible {
         transform: translateX(-50%) translateY(0);
+      }
+
+      .privacy-link {
+        color: #aaaaaa;
+        text-decoration: underline;
+        transition: color 0.2s ease;
+      }
+
+      .privacy-link:hover {
+        color: #ffffff;
       }
 
       .consent-actions { display: flex; gap: 1rem; }
@@ -227,7 +232,7 @@ import { ClientRouter } from 'astro:transitions';
     </div>
 
     <div id="consent-toast" class="consent-toast">
-      <span>Looks like you're in the EU. I use local storage to remember which quotes you've seen.</span>
+      <span>Looks like you're in the EU. I use local storage to remember which quotes you've seen. You can <a href="/privacy" class="privacy-link">read what data I collect and how it is used</a>.</span>
       <div class="consent-actions">
         <button id="consent-accept">Accept</button>
         <button id="consent-decline">Decline</button>
@@ -235,22 +240,16 @@ import { ClientRouter } from 'astro:transitions';
     </div>
 
     <script>
-      // ==========================================
-      // SECURITY LOCKDOWN & APP LOGIC
-      // ==========================================
-      
       document.addEventListener('astro:page-load', () => {
         const langPicker = document.getElementById('lang-picker');
-        if (!langPicker) return; // Exit if not on /read
+        if (!langPicker) return; 
 
-        // 1. Block right-click everywhere EXCEPT on the quote text
         document.addEventListener('contextmenu', e => {
           if (!e.target.closest('#quote-text')) {
             e.preventDefault();
           }
         });
 
-        // 2. Block copying everywhere EXCEPT from the quote text
         document.addEventListener('copy', e => {
           const selection = window.getSelection();
           if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
@@ -259,7 +258,6 @@ import { ClientRouter } from 'astro:transitions';
           }
         });
 
-        // 3. Block DevTools Shortcuts
         document.addEventListener('keydown', e => {
           if (e.key === 'F12') e.preventDefault();
           if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault();
