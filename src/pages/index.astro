@@ -376,7 +376,7 @@ import { ClientRouter } from 'astro:transitions';
           rightWatermark.style.opacity = '0';
         }
 
-        function loadVideo(index) {
+        async function loadVideo(index) {
           if (!videoList || videoList.length === 0) {
             trackNameEl.textContent = "Oops, there's nothing to see here yet.";
             loader.style.display = 'none';
@@ -389,10 +389,21 @@ import { ClientRouter } from 'astro:transitions';
 
           const url = videoList[index];
           const currentTrackName = extractName(url);
-          player.src = url;
           trackNameEl.textContent = currentTrackName;
-          
           const trackUpper = currentTrackName.trim().toUpperCase();
+
+          let finalUrl = url;
+          if (trackUpper.includes('SPIRIT')) {
+            try {
+              const res = await fetch('/api/token');
+              const { token } = await res.json();
+              finalUrl = `${url}?token=${token}`;
+            } catch (e) {
+              console.error("Token signature failed.");
+            }
+          }
+
+          player.src = finalUrl;
           
           setTimeout(() => {
             if (trackUpper === 'INORI') {
