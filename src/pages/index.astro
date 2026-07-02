@@ -309,7 +309,6 @@ import { ClientRouter } from 'astro:transitions';
     </div>
 
     <script>
-      // Apply global security lockdown on page load (Astro View Transitions hook)
       document.addEventListener('astro:page-load', () => {
         if (!window.globalSecurityAttached) {
           document.addEventListener('contextmenu', event => {
@@ -331,10 +330,9 @@ import { ClientRouter } from 'astro:transitions';
         }
       });
 
-      // Video Player Logic
       document.addEventListener('astro:page-load', () => {
         const player = document.getElementById('main-player');
-        if (!player) return; // Prevent errors on other pages
+        if (!player) return; 
         
         const loader = document.getElementById('loader');
         const prevBtn = document.getElementById('prev-btn');
@@ -414,6 +412,40 @@ import { ClientRouter } from 'astro:transitions';
         player.addEventListener('playing', () => {
           loader.style.display = 'none';
           player.style.opacity = 1;
+        });
+
+        player.addEventListener('error', async () => {
+          const trackUpper = trackNameEl.textContent.trim().toUpperCase();
+          if (trackUpper.includes('SPIRIT')) {
+            loader.style.display = 'none';
+            player.style.opacity = 0;
+            
+            let overlay = document.getElementById('geo-block-overlay');
+            if (!overlay) {
+              overlay = document.createElement('div');
+              overlay.id = 'geo-block-overlay';
+              overlay.innerHTML = `<div style="font-size: 3rem; margin-bottom: 1rem;">&#9888;&#65039;</div><div id="geo-block-text">For strict legal reasons, this video cannot be shown in your region.</div>`;
+              overlay.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000; color:#d9d9d9; z-index:20; text-align:center; padding: 2rem; font-family: inherit; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;';
+              player.parentElement.appendChild(overlay);
+            }
+            overlay.style.display = 'flex';
+            
+            try {
+              const res = await fetch('/cdn-cgi/trace');
+              const text = await res.text();
+              const match = text.match(/loc=([A-Z]{2})/);
+              const loc = match ? match[1] : null;
+              
+              const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region';
+              
+              document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`;
+            } catch(e) {}
+          }
+        });
+
+        player.addEventListener('loadstart', () => {
+          const overlay = document.getElementById('geo-block-overlay');
+          if (overlay) overlay.style.display = 'none';
         });
 
         async function initialize() {
