@@ -14,7 +14,7 @@ import { ClientRouter } from 'astro:transitions';
       html, body {
         margin: 0;
         padding: 0;
-        width: 100vw;
+        width: 100%;
         height: 100dvh;
         overflow: hidden;
         background-color: #000000;
@@ -28,18 +28,25 @@ import { ClientRouter } from 'astro:transitions';
         user-select: none;
       }
 
-      .watermark {
+      .watermark-wrapper {
         position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
+        height: 100dvh;
+        display: flex;
+        align-items: center;
+        z-index: 50;
+        pointer-events: none;
+      }
+
+      #watermark-left-wrapper { left: 4vw; }
+      #watermark-right-wrapper { right: 4vw; }
+
+      .watermark {
         writing-mode: vertical-rl;
         text-orientation: upright;
         white-space: nowrap; 
         color: #ffffff;
-        
         opacity: 0; 
-        pointer-events: none; 
-        z-index: 50; 
         transition: opacity 1.5s ease-in-out; 
       }
 
@@ -64,15 +71,12 @@ import { ClientRouter } from 'astro:transitions';
         text-transform: uppercase; 
       }
 
-      #watermark-left { left: 4vw; }
-      #watermark-right { right: 4vw; }
-
       .container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 100vw;
+        width: 100%;
         height: 100dvh;
         padding: 4dvh 2vw;
         box-sizing: border-box;
@@ -127,9 +131,8 @@ import { ClientRouter } from 'astro:transitions';
 
       .player-wrapper {
         flex: 1 1 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
         align-items: center;
         width: 100%;
         max-width: 900px;
@@ -147,6 +150,7 @@ import { ClientRouter } from 'astro:transitions';
         height: 100%;
         width: 100%;
         max-width: 800px;
+        margin: 0 auto;
       }
 
       .loader {
@@ -192,7 +196,7 @@ import { ClientRouter } from 'astro:transitions';
         border: none;
         padding: 10px;
         cursor: pointer;
-        display: none;
+        visibility: hidden; 
         outline: none;
         -webkit-tap-highlight-color: transparent;
       }
@@ -237,12 +241,17 @@ import { ClientRouter } from 'astro:transitions';
       }
 
       @media (max-width: 1024px) {
-        .watermark { display: none !important; }
+        .watermark-wrapper { display: none !important; }
       }
 
       @media (max-width: 768px) {
         .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; }
-        .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; }
+        .player-wrapper { 
+          flex: 0 0 auto; 
+          height: auto; 
+          gap: 0.25rem; 
+          grid-template-columns: 30px 1fr 30px;
+        }
         .video-container { height: auto; }
         video { max-height: 50dvh; }
         .nav-btn { padding: 5px; }
@@ -267,8 +276,12 @@ import { ClientRouter } from 'astro:transitions';
       </svg>
     </a>
 
-    <div id="watermark-left" class="watermark"></div>
-    <div id="watermark-right" class="watermark"></div>
+    <div id="watermark-left-wrapper" class="watermark-wrapper">
+      <div id="watermark-left" class="watermark"></div>
+    </div>
+    <div id="watermark-right-wrapper" class="watermark-wrapper">
+      <div id="watermark-right" class="watermark"></div>
+    </div>
 
     <div class="container">
       <div class="top-section">
@@ -389,14 +402,14 @@ import { ClientRouter } from 'astro:transitions';
               applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
             }
             else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
-              applyWatermark('IT • DA • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch')
+              applyWatermark('IT • A • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch')
             }
           }, 500); 
           
           player.play().catch(e => console.log("Autoplay prevented by browser."));
 
-          prevBtn.style.display = index > 0 ? 'block' : 'none';
-          nextBtn.style.display = index < videoList.length - 1 ? 'block' : 'none';
+          prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
+          nextBtn.style.visibility = index < videoList.length - 1 ? 'visible' : 'hidden';
         }
 
         player.addEventListener('loadedmetadata', () => {
