@@ -5,36 +5,37 @@ export async function onRequest(context) {
   if (filename === 'Spirit - Niemad Kan me Remmen.mp4' || filename === 'Spirit - Niemand Kan me Remmen.mp4') {
     const cf = request.cf || {};
     const country = cf.country;
-    
-    // 1. Blacklist: Known VPN infrastructure that masquerades as ISP traffic
     const asnOrg = (cf.asOrganization || '').toUpperCase();
-    const knownVpnASNs = [
-      'PROTON', 'MULLVAD', 'NORDVPN', 'EXPRESSVPN', 'SURFSHARK', 'CYBERGHOST', 
-      'IVPN', 'VPN', 'ANONYMOUS', 'PROXY'
-    ];
-    const isKnownVPN = knownVpnASNs.some(vpn => asnOrg.includes(vpn));
 
-    // 2. Datacentre / Transit Provider Blacklist
-    const isDatacenter = [
-      'AMAZON', 'AWS', 'GOOGLE', 'MICROSOFT', 'AZURE', 'DIGITALOCEAN', 
-      'HETZNER', 'OVH', 'LINODE', 'M247', 'DATACAMP', 'CHOOPA', 'LEASEWEB',
-      'SERVER', 'HOSTING', 'DATACENTER', 'CLOUD', 'DATAPACKET', 'COGENT', 
-      'LUMEN', 'GTT', 'ARELION', 'NFORCE', 'I3D', 'WORLDSTREAM', 'CLOUVIDER'
-    ].some(keyword => asnOrg.includes(keyword));
+    // 1. Blacklist: Known VPNs, Datacentres, and Transit infrastructure
+    const blockList = [
+      'PROTON', 'MULLVAD', 'NORD', 'EXPRESS', 'SURFSHARK', 'CYBERGHOST', 'IVPN',
+      'VPN', 'PROXY', 'TOR', 'ANONYMOUS', 'HOSTING', 'DATACENTRE', 'DATACENTER',
+      'CLOUD', 'VPS', 'TRANSIT', 'BACKBONE', 'IXP', 'AMAZON', 'AWS', 'GOOGLE',
+      'MICROSOFT', 'AZURE', 'DIGITALOCEAN', 'HETZNER', 'OVH', 'LINODE', 'M247',
+      'CHOOPA', 'LEASEWEB', 'DATAPACKET', 'COGENT', 'LUMEN', 'GTT', 'ARELION',
+      'NFORCE', 'I3D', 'WORLDSTREAM', 'CLOUVIDER', 'PACKETHUB', 'XTOM', 'SPEEDYNET'
+    ];
+    const isBlocked = blockList.some(keyword => asnOrg.includes(keyword));
+
+    // 2. Comprehensive Whitelist: Major EU Consumer Residential ISPs
+    const isVerifiedISP = [
+      'PROXIMUS', 'BELGACOM', 'TELENET', 'VOO', 'ORANGE', 'SCARLET', // BE
+      'KPN', 'ZIGGO', 'LIBERTY GLOBAL', 'VODAFONE', 'T-MOBILE', 'TELE2', 'DELTA', 'CAIW', // NL
+      'DEUTSCHE TELEKOM', 'TELEFONICA', '1&1', 'O2', 'FREE', 'SFR', 'BOUYGUES', 'NUMERICABLE', // DE/FR
+      'TIM', 'TELECOM ITALIA', 'WINDTRE', 'FASTWEB', 'ILIAD', // IT
+      'MOVISTAR', 'MASMOVIL', 'JAZZTEL', // ES
+      'TELIA', 'TELENOR', 'TRE', 'ELISA', 'DNA', 'ALTIBOX', 'BAHNHOF', // Nordics
+      'EIR', 'VIRGIN', 'SKY', // IE/UK/EU
+      'SWISSCOM', 'SUNRISE', 'SALT', // CH
+      'A1', 'MAGENTA', 'DREI', // AT
+      'PLAY', 'PLUS' // PL
+    ].some(isp => asnOrg.includes(isp));
 
     const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
     
-    // 3. Whitelist: Major Consumer ISPs only
-    const isVerifiedISP = [
-      'PROXIMUS', 'BELGACOM', 'TELENET', 'VOO', 'ORANGE', 'SCARLET', 
-      'KPN', 'ZIGGO', 'LIBERTY GLOBAL', 'VODAFONE', 'T-MOBILE', 'TELE2', 'DELTA', 
-      'DEUTSCHE TELEKOM', 'TELEFONICA', '1&1', 'O2', 'FREE', 'SFR', 'BOUYGUES',
-      'TIM', 'WINDTRE', 'FASTWEB', 'MOVISTAR', 'TELIA', 'TELENOR'
-    ].some(isp => asnOrg.includes(isp));
-
-    // 4. The Nuclear Block: Default-Deny
-    // Drop if Non-EU, Tor, known Datacentre, known VPN pattern, OR not a verified consumer ISP.
-    if (!euCountries.includes(country) || cf.isTor || isDatacenter || isKnownVPN || !isVerifiedISP) {
+    // 3. Execution: If it's NOT in the EU, OR matches blocklist, OR isn't a verified residential ISP -> BLOCK.
+    if (!euCountries.includes(country) || cf.isTor || isBlocked || !isVerifiedISP) {
       return new Response('403 Forbidden', { 
         status: 403,
         headers: { 'Cache-Control': 'private, no-store, no-cache, max-age=0' }
