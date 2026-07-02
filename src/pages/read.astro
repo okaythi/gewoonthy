@@ -13,7 +13,19 @@
         background-color: #000000;
         color: #d9d9d9;
         font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        box-sizing: border-box;
+        overflow: hidden;
       }
+      
+      .top-bar {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: flex-start;
+      }
+
       .back-btn {
         display: inline-flex;
         align-items: center;
@@ -22,10 +34,13 @@
         text-decoration: none;
         font-size: 0.9rem;
         transition: color 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
       }
+      
       .back-btn:hover {
         color: #ffffff;
       }
+      
       .back-btn svg {
         width: 16px;
         height: 16px;
@@ -33,29 +48,129 @@
         stroke-width: 2;
         fill: none;
       }
-      .content {
-        margin-top: 8vh;
+
+      .content-wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
       }
-      h1 {
+
+      .status-text {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #444;
+        margin-bottom: 3rem;
+      }
+
+      .quote-container {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .quote-container.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      blockquote {
+        margin: 0;
         font-weight: 300;
         color: #ffffff;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        line-height: 1.6;
         font-style: italic;
+      }
+
+      .author {
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: #7a7a7a;
+        letter-spacing: 1px;
+      }
+
+      .source {
+        font-size: 0.75rem;
+        color: #444;
+        margin-top: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
     </style>
   </head>
   <body>
-    <a href="/" class="back-btn">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-      </svg>
-      Return
-    </a>
-    <div class="content">
-      <h1>Standing by for transmission...</h1>
+    <div class="top-bar">
+      <a href="/" class="back-btn">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"></line>
+          <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Return
+      </a>
     </div>
+
+    <div class="content-wrapper">
+      <div class="status-text">Book currently unavailable</div>
+      
+      <div id="quote-box" class="quote-container">
+        <blockquote id="quote-text">Loading...</blockquote>
+        <div id="quote-author" class="author"></div>
+        <div id="quote-source" class="source"></div>
+      </div>
+    </div>
+
+    <script>
+      async function fetchQuote() {
+        const quoteBox = document.getElementById('quote-box');
+        const textEl = document.getElementById('quote-text');
+        const authorEl = document.getElementById('quote-author');
+        const sourceEl = document.getElementById('quote-source');
+
+        // Grab seen IDs from localStorage
+        let seenQuotes = [];
+        try {
+          const stored = localStorage.getItem('seenQuotes');
+          if (stored) seenQuotes = JSON.parse(stored);
+        } catch(e) {}
+
+        try {
+          // Pass the seen IDs to our custom edge API
+          const res = await fetch(`/api/quote?seen=${seenQuotes.join(',')}`);
+          const quote = await res.json();
+
+          // Populate the UI
+          textEl.textContent = `"${quote.text}"`;
+          authorEl.textContent = `— ${quote.author}`;
+          sourceEl.textContent = quote.source;
+
+          // Fade it in
+          quoteBox.classList.add('visible');
+
+          // Update tracking
+          seenQuotes.push(quote.id);
+          
+          // Failsafe: if the array gets massive, reset it so we don't blow up localStorage
+          if (seenQuotes.length > 200) seenQuotes = [];
+          
+          localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
+
+        } catch (error) {
+          textEl.textContent = "A system error occurred. Please check back later.";
+          authorEl.textContent = "";
+          sourceEl.textContent = "";
+          quoteBox.classList.add('visible');
+        }
+      }
+
+      // Initialize on load
+      document.addEventListener('DOMContentLoaded', fetchQuote);
+    </script>
   </body>
 </html>
