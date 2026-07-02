@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Read - Thy</title>
+    <title>Thy - Read</title>
     <style>
       body {
         margin: 0;
@@ -18,12 +18,20 @@
         height: 100dvh;
         box-sizing: border-box;
         overflow: hidden;
+        
+        /* Global selection prevention */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
       
       .top-bar {
         flex: 0 0 auto;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
       }
 
       .back-btn {
@@ -37,16 +45,34 @@
         -webkit-tap-highlight-color: transparent;
       }
       
-      .back-btn:hover {
+      .back-btn:hover { color: #ffffff; }
+      .back-btn svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; }
+
+      /* Minimalist Language Dropdown */
+      .lang-selector {
+        background: transparent;
+        border: none;
+        color: #7a7a7a;
+        font-family: inherit;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        outline: none;
+        transition: color 0.2s ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: 10px;
+      }
+
+      .lang-selector:hover, .lang-selector:focus {
         color: #ffffff;
       }
       
-      .back-btn svg {
-        width: 16px;
-        height: 16px;
-        stroke: currentColor;
-        stroke-width: 2;
-        fill: none;
+      .lang-selector option {
+        background: #111;
+        color: #fff;
       }
 
       .content-wrapper {
@@ -87,7 +113,17 @@
         font-size: clamp(1.2rem, 3vw, 1.8rem);
         line-height: 1.6;
         font-style: italic;
+        
+        /* Enable selection ONLY on the quote text */
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+        cursor: text;
       }
+
+      /* Native selection highlight color for aesthetics */
+      blockquote::selection { background: rgba(255,255,255,0.2); color: #fff; }
 
       .author {
         margin-top: 1.5rem;
@@ -131,10 +167,7 @@
         transform: translateX(-50%) translateY(0);
       }
 
-      .consent-actions {
-        display: flex;
-        gap: 1rem;
-      }
+      .consent-actions { display: flex; gap: 1rem; }
 
       .consent-actions button {
         background: transparent;
@@ -149,9 +182,7 @@
         transition: color 0.2s ease;
       }
 
-      .consent-actions button:hover {
-        color: #ffffff;
-      }
+      .consent-actions button:hover { color: #ffffff; }
 
       @media (max-width: 768px) {
         .consent-toast {
@@ -176,6 +207,12 @@
         </svg>
         Return
       </a>
+      
+      <select id="lang-picker" class="lang-selector">
+        <option value="en">EN</option>
+        <option value="nl">NL</option>
+        <option value="fr">FR</option>
+      </select>
     </div>
 
     <div class="content-wrapper">
@@ -189,7 +226,7 @@
     </div>
 
     <div id="consent-toast" class="consent-toast">
-      <span>We use local storage to remember which quotes you've seen.</span>
+      <span>Hi, looks like you're in Europe. I use local storage to remember which quotes you've seen.</span>
       <div class="consent-actions">
         <button id="consent-accept">Accept</button>
         <button id="consent-decline">Decline</button>
@@ -197,8 +234,65 @@
     </div>
 
     <script>
+      // ==========================================
+      // SECURITY LOCKDOWN
+      // ==========================================
+      
+      // 1. Block right-click everywhere EXCEPT on the quote text
+      document.addEventListener('contextmenu', e => {
+        if (!e.target.closest('#quote-text')) {
+          e.preventDefault();
+        }
+      });
+
+      // 2. Block copying everywhere EXCEPT from the quote text
+      document.addEventListener('copy', e => {
+        const selection = window.getSelection();
+        if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // 3. Block DevTools Shortcuts
+      document.addEventListener('keydown', e => {
+        if (e.key === 'F12') e.preventDefault();
+        if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault();
+        if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault();
+      });
+
+
+      // ==========================================
+      // APP LOGIC
+      // ==========================================
+
       const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
       let storageAllowed = false;
+      let currentQuoteData = null; // Store the {en, nl, fr} payload globally
+
+      const langPicker = document.getElementById('lang-picker');
+      const textEl = document.getElementById('quote-text');
+      const authorEl = document.getElementById('quote-author');
+      const sourceEl = document.getElementById('quote-source');
+      const quoteBox = document.getElementById('quote-box');
+
+      // Sync dropdown with localStorage preference if available
+      const savedLang = localStorage.getItem('pref_lang') || 'en';
+      langPicker.value = savedLang;
+
+      langPicker.addEventListener('change', (e) => {
+        const selectedLang = e.target.value;
+        localStorage.setItem('pref_lang', selectedLang);
+        
+        // Instantly swap the language if we have the quote data loaded
+        if (currentQuoteData && currentQuoteData.text[selectedLang]) {
+          textEl.style.opacity = 0; // Quick fade effect for language swap
+          setTimeout(() => {
+            textEl.textContent = `"${currentQuoteData.text[selectedLang]}"`;
+            textEl.style.opacity = 1;
+          }, 200);
+        }
+      });
 
       async function init() {
         const consent = localStorage.getItem('eu_consent');
@@ -239,9 +333,7 @@
           localStorage.setItem('eu_consent', 'accepted');
           storageAllowed = true;
           toast.classList.remove('visible');
-          
-          const currentQuoteId = document.getElementById('quote-box').dataset.currentId;
-          if (currentQuoteId) saveQuoteToStorage(currentQuoteId);
+          if (currentQuoteData) saveQuoteToStorage(currentQuoteData.id);
         });
 
         document.getElementById('consent-decline').addEventListener('click', () => {
@@ -252,11 +344,6 @@
       }
 
       async function fetchQuote() {
-        const quoteBox = document.getElementById('quote-box');
-        const textEl = document.getElementById('quote-text');
-        const authorEl = document.getElementById('quote-author');
-        const sourceEl = document.getElementById('quote-source');
-
         let seenQuotes = [];
         if (storageAllowed || localStorage.getItem('eu_consent') === 'accepted') {
           try {
@@ -267,17 +354,20 @@
 
         try {
           const res = await fetch(`/api/quote?seen=${seenQuotes.join(',')}`);
-          const quote = await res.json();
+          currentQuoteData = await res.json();
 
-          textEl.textContent = `"${quote.text}"`;
-          authorEl.textContent = `— ${quote.author}`;
-          sourceEl.textContent = quote.source;
+          const activeLang = langPicker.value;
+
+          // Render UI
+          textEl.style.transition = 'opacity 0.2s ease';
+          textEl.textContent = `"${currentQuoteData.text[activeLang] || currentQuoteData.text['en']}"`;
+          authorEl.textContent = `— ${currentQuoteData.author}`;
+          sourceEl.textContent = currentQuoteData.source;
           
-          quoteBox.dataset.currentId = quote.id;
           quoteBox.classList.add('visible');
 
           if (storageAllowed) {
-            saveQuoteToStorage(quote.id);
+            saveQuoteToStorage(currentQuoteData.id);
           }
         } catch (error) {
           textEl.textContent = "A system error occurred. Please check back later.";
