@@ -402,7 +402,7 @@ import { ClientRouter } from 'astro:transitions';
               applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
             }
             else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
-              applyWatermark('IT • A • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch')
+              applyWatermark('IT • DA • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch')
             }
           }, 500); 
           
@@ -437,8 +437,8 @@ import { ClientRouter } from 'astro:transitions';
             if (!overlay) {
               overlay = document.createElement('div');
               overlay.id = 'geo-block-overlay';
-              overlay.innerHTML = `<div style="font-size: 3rem; margin-bottom: 1rem;">&#9888;&#65039;</div><div id="geo-block-text">For strict legal reasons, this video cannot be shown in your region.</div>`;
-              overlay.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000; color:#d9d9d9; z-index:20; text-align:center; padding: 2rem; font-family: inherit; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;';
+              overlay.innerHTML = `<div style="font-size: 3rem; margin-bottom: 1rem;">&#9888;&#65039;</div><div id="geo-block-text" style="line-height: 1.5; max-width: 80%;">Loading verification...</div>`;
+              overlay.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000; color:#d9d9d9; z-index:20; text-align:center; padding: 2rem; font-family: inherit; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; box-sizing: border-box;';
               player.parentElement.appendChild(overlay);
             }
             overlay.style.display = 'flex';
@@ -448,11 +448,17 @@ import { ClientRouter } from 'astro:transitions';
               const text = await res.text();
               const match = text.match(/loc=([A-Z]{2})/);
               const loc = match ? match[1] : null;
+              const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
               
-              const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region';
-              
-              document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`;
-            } catch(e) {}
+              if (loc && euCountries.includes(loc)) {
+                document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection. Please disable any VPNs or proxies and try again on a standard network.";
+              } else {
+                const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region';
+                document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`;
+              }
+            } catch(e) {
+              document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection.";
+            }
           }
         });
 
