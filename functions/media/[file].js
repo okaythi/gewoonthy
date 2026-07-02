@@ -6,29 +6,35 @@ export async function onRequest(context) {
     const cf = request.cf || {};
     const country = cf.country;
     
-    // 1. Aggressive ASN & Threat Interrogation
+    // 1. Blacklist: Known VPN infrastructure that masquerades as ISP traffic
     const asnOrg = (cf.asOrganization || '').toUpperCase();
+    const knownVpnASNs = [
+      'PROTON', 'MULLVAD', 'NORDVPN', 'EXPRESSVPN', 'SURFSHARK', 'CYBERGHOST', 
+      'IVPN', 'VPN', 'ANONYMOUS', 'PROXY'
+    ];
+    const isKnownVPN = knownVpnASNs.some(vpn => asnOrg.includes(vpn));
+
+    // 2. Datacentre / Transit Provider Blacklist
     const isDatacenter = [
       'AMAZON', 'AWS', 'GOOGLE', 'MICROSOFT', 'AZURE', 'DIGITALOCEAN', 
       'HETZNER', 'OVH', 'LINODE', 'M247', 'DATACAMP', 'CHOOPA', 'LEASEWEB',
-      'SERVER', 'HOSTING', 'DATACENTER', 'CLOUD', 'VPN', 'PROXY', 'VPS',
-      'DATAPACKET', 'COGENT', 'LUMEN', 'GTT', 'ARELION', 'NFORCE', 'I3D', 
-      'WORLDSTREAM', 'CLOUVIDER', 'PACKETHUB', 'FDCSERVERS', 'XTOM',
-      'PROTON', 'MULLVAD', 'NORDVPN', 'EXPRESSVPN', 'SURFSHARK'
+      'SERVER', 'HOSTING', 'DATACENTER', 'CLOUD', 'DATAPACKET', 'COGENT', 
+      'LUMEN', 'GTT', 'ARELION', 'NFORCE', 'I3D', 'WORLDSTREAM', 'CLOUVIDER'
     ].some(keyword => asnOrg.includes(keyword));
 
     const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
     
-    // 2. Strict Whitelist of major consumer ISPs only
+    // 3. Whitelist: Major Consumer ISPs only
     const isVerifiedISP = [
       'PROXIMUS', 'BELGACOM', 'TELENET', 'VOO', 'ORANGE', 'SCARLET', 
-      'KPN', 'ZIGGO', 'LIBERTY GLOBAL', 'VODAFONE', 'T-MOBILE', 'TELE2', 'DELTA', 'CAIW', 
+      'KPN', 'ZIGGO', 'LIBERTY GLOBAL', 'VODAFONE', 'T-MOBILE', 'TELE2', 'DELTA', 
       'DEUTSCHE TELEKOM', 'TELEFONICA', '1&1', 'O2', 'FREE', 'SFR', 'BOUYGUES',
       'TIM', 'WINDTRE', 'FASTWEB', 'MOVISTAR', 'TELIA', 'TELENOR'
     ].some(isp => asnOrg.includes(isp));
 
-    // 3. Nuclear Block: If it's not a verified ISP, it's a proxy.
-    if (!euCountries.includes(country) || cf.isTor || isDatacenter || !isVerifiedISP) {
+    // 4. The Nuclear Block: Default-Deny
+    // Drop if Non-EU, Tor, known Datacentre, known VPN pattern, OR not a verified consumer ISP.
+    if (!euCountries.includes(country) || cf.isTor || isDatacenter || isKnownVPN || !isVerifiedISP) {
       return new Response('403 Forbidden', { 
         status: 403,
         headers: { 'Cache-Control': 'private, no-store, no-cache, max-age=0' }
