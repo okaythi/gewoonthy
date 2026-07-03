@@ -10,340 +10,75 @@ import { ClientRouter } from 'astro:transitions';
     <ClientRouter />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Yuji+Syuku&display=swap');
-
-      html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100dvh;
-        overflow: hidden;
-        background-color: #000000;
-        color: #d9d9d9;
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        box-sizing: border-box;
-        
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      .watermark-wrapper {
-        position: fixed;
-        top: 0;
-        height: 100dvh;
-        display: flex;
-        align-items: center;
-        z-index: 50;
-        pointer-events: none;
-      }
-
+      html, body { margin: 0; padding: 0; width: 100%; height: 100dvh; overflow: hidden; background-color: #000000; color: #d9d9d9; font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; box-sizing: border-box; user-select: none; }
+      .watermark-wrapper { position: fixed; top: 0; height: 100dvh; display: flex; align-items: center; z-index: 50; pointer-events: none; }
       #watermark-left-wrapper { left: 4vw; }
       #watermark-right-wrapper { right: 4vw; }
-
-      .watermark {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        white-space: nowrap; 
-        color: #ffffff;
-        opacity: 0; 
-        transition: opacity 1.5s ease-in-out; 
-      }
-
-      .font-japanese-short {
-        font-family: 'Yuji Syuku', serif;
-        font-size: clamp(2rem, 8dvh, 6rem); 
-        letter-spacing: 0.3em;
-        text-transform: none;
-      }
-
-      .font-japanese-long {
-        font-family: 'Yuji Syuku', serif;
-        font-size: clamp(1rem, 4.5dvh, 4rem); 
-        letter-spacing: 0.1em; 
-        text-transform: none;
-      }
-
-      .font-dutch {
-        font-family: 'Caveat', cursive;
-        font-size: clamp(0.75rem, 2.5dvh, 1.8rem); 
-        letter-spacing: -0.1em; 
-        text-transform: uppercase; 
-      }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 100dvh;
-        padding: 4dvh 2vw;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 10;
-      }
-
-      .top-section {
-        flex: 0 0 auto;
-        padding-top: 2dvh;
-      }
-
-      h2 {
-        font-size: clamp(1.2rem, 3vw, 2rem);
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-style: italic;
-        margin: 0;
-        color: #ffffff;
-        opacity: 0.95;
-      }
-
-      .read-link {
-        position: fixed;
-        bottom: 4dvh;
-        left: 4vw;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #444;
-        text-decoration: none;
-        transition: color 0.2s ease, transform 0.2s ease;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .read-link:hover {
-        color: #ffffff;
-        transform: scale(1.05);
-      }
-
-      .read-link svg {
-        width: 28px;
-        height: 28px;
-        stroke: currentColor;
-        stroke-width: 2;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .player-wrapper {
-        flex: 1 1 auto;
-        display: grid;
-        grid-template-columns: 50px 1fr 50px;
-        align-items: center;
-        width: 100%;
-        max-width: 900px;
-        height: 100%;
-        overflow: hidden;
-        gap: 1rem;
-        padding: 2vh 0;
-      }
-
-      .video-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .loader {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem;
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        font-weight: 900;
-        letter-spacing: 4px;
-        color: #ffffff;
-        text-transform: uppercase;
-        z-index: 10;
-        pointer-events: none;
-      }
-
-      .spinner {
-        width: clamp(1.2rem, 2.5vw, 1.8rem);
-        height: clamp(1.2rem, 2.5vw, 1.8rem);
-        border: 3px solid rgba(255, 255, 255, 0.2);
-        border-top-color: #ffffff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
-
-      video {
-        width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        border-radius: 2px;
-        background-color: transparent;
-        opacity: 0; 
-        transition: opacity 0.4s ease-in; 
-      }
-
-      .nav-btn {
-        background: none;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-        visibility: hidden; 
-        outline: none;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .nav-btn svg {
-        width: 30px;
-        height: 40px;
-        stroke: #444;
-        stroke-width: 2;
-        fill: none;
-        transition: stroke 0.2s ease;
-      }
-
+      .watermark { writing-mode: vertical-rl; text-orientation: upright; white-space: nowrap; color: #ffffff; opacity: 0; transition: opacity 1.5s ease-in-out; }
+      .font-japanese-short { font-family: 'Yuji Syuku', serif; font-size: clamp(2rem, 8dvh, 6rem); letter-spacing: 0.3em; }
+      .font-japanese-long { font-family: 'Yuji Syuku', serif; font-size: clamp(1rem, 4.5dvh, 4rem); letter-spacing: 0.1em; }
+      .font-dutch { font-family: 'Caveat', cursive; font-size: clamp(0.75rem, 2.5dvh, 1.8rem); letter-spacing: -0.1em; text-transform: uppercase; }
+      .container { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100%; height: 100dvh; padding: 4dvh 2vw; box-sizing: border-box; position: relative; z-index: 10; }
+      .top-section { flex: 0 0 auto; padding-top: 2dvh; }
+      h2 { font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; font-style: italic; margin: 0; color: #ffffff; opacity: 0.95; }
+      .read-link { position: fixed; bottom: 4dvh; left: 4vw; z-index: 100; display: flex; align-items: center; justify-content: center; color: #444; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; -webkit-tap-highlight-color: transparent; }
+      .read-link:hover { color: #ffffff; transform: scale(1.05); }
+      .read-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .player-wrapper { flex: 1 1 auto; display: grid; grid-template-columns: 50px 1fr 50px; align-items: center; width: 100%; max-width: 900px; height: 100%; overflow: hidden; gap: 1rem; padding: 2vh 0; }
+      .video-container { position: relative; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; max-width: 800px; margin: 0 auto; }
+      .loader { position: absolute; display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 900; letter-spacing: 4px; color: #ffffff; text-transform: uppercase; z-index: 10; pointer-events: none; }
+      .spinner { width: clamp(1.2rem, 2.5vw, 1.8rem); height: clamp(1.2rem, 2.5vw, 1.8rem); border: 3px solid rgba(255, 255, 255, 0.2); border-top-color: #ffffff; border-radius: 50%; animation: spin 1s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      video { width: 100%; max-height: 100%; object-fit: contain; border-radius: 2px; background-color: transparent; opacity: 0; transition: opacity 0.4s ease-in; }
+      video::cue { background-color: rgba(0, 0, 0, 0.8); color: #fff; font-family: 'Yuji Syuku', sans-serif; font-size: 1.2rem; }
+      .nav-btn { background: none; border: none; padding: 10px; cursor: pointer; visibility: hidden; outline: none; -webkit-tap-highlight-color: transparent; }
+      .nav-btn svg { width: 30px; height: 40px; stroke: #444; stroke-width: 2; fill: none; transition: stroke 0.2s ease; }
       .nav-btn:hover svg { stroke: #ffffff; }
-
-      .bottom-section {
-        flex: 0 0 auto;
-        text-align: center;
-        padding-bottom: 2dvh;
-      }
-
-      .track-info {
-        font-size: clamp(0.75rem, 1.5vw, 0.9rem);
-        line-height: 1.6;
-        color: #7a7a7a;
-        max-width: 90vw;
-        margin: 0 auto;
-      }
-
-      .track-title {
-        color: #ffffff;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-      }
-
-      footer {
-        margin-top: 3vh;
-        font-size: 0.65rem;
-        color: #333333;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      @media (max-width: 1024px) {
-        .watermark-wrapper { display: none !important; }
-      }
-
-      @media (max-width: 768px) {
-        .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; }
-        .player-wrapper { 
-          flex: 0 0 auto; 
-          height: auto; 
-          gap: 0.25rem; 
-          grid-template-columns: 30px 1fr 30px;
-        }
-        .video-container { height: auto; }
-        video { max-height: 50dvh; }
-        .nav-btn { padding: 5px; }
-        .nav-btn svg { width: 20px; height: 30px; }
-        
-        .read-link {
-          bottom: 3dvh;
-          left: 3vw;
-        }
-        .read-link svg {
-          width: 24px;
-          height: 24px;
-        }
-      }
+      .bottom-section { flex: 0 0 auto; text-align: center; padding-bottom: 2dvh; }
+      .track-info { font-size: clamp(0.75rem, 1.5vw, 0.9rem); line-height: 1.6; color: #7a7a7a; max-width: 90vw; margin: 0 auto; }
+      .track-title { color: #ffffff; font-weight: 700; letter-spacing: 0.5px; }
+      footer { margin-top: 3vh; font-size: 0.65rem; color: #333333; text-transform: uppercase; letter-spacing: 2px; }
+      @media (max-width: 1024px) { .watermark-wrapper { display: none !important; } }
+      @media (max-width: 768px) { .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; } .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; grid-template-columns: 30px 1fr 30px; } .video-container { height: auto; } video { max-height: 50dvh; } .nav-btn { padding: 5px; } .nav-btn svg { width: 20px; height: 30px; } .read-link { bottom: 3dvh; left: 3vw; } .read-link svg { width: 24px; height: 24px; } }
     </style>
   </head>
   <body>
-    <a href="/read" class="read-link" aria-label="Read" title="Read">
-      <svg viewBox="0 0 24 24">
-        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-      </svg>
-    </a>
-
-    <div id="watermark-left-wrapper" class="watermark-wrapper">
-      <div id="watermark-left" class="watermark"></div>
-    </div>
-    <div id="watermark-right-wrapper" class="watermark-wrapper">
-      <div id="watermark-right" class="watermark"></div>
-    </div>
+    <a href="/read" class="read-link" aria-label="Read" title="Read"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></a>
+    <div id="watermark-left-wrapper" class="watermark-wrapper"><div id="watermark-left" class="watermark"></div></div>
+    <div id="watermark-right-wrapper" class="watermark-wrapper"><div id="watermark-right" class="watermark"></div></div>
 
     <div class="container">
-      <div class="top-section">
-        <h2>"Cuno doesn't fucking care!"</h2>
-      </div>
-
+      <div class="top-section"><h2>"Cuno doesn't fucking care!"</h2></div>
       <div class="player-wrapper">
-        <button id="prev-btn" class="nav-btn" aria-label="Previous">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-
+        <button id="prev-btn" class="nav-btn" aria-label="Previous"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
         <div class="video-container">
-          <div id="loader" class="loader">
-            <div class="spinner"></div>
-            <span>LOADING...</span>
-          </div>
+          <div id="loader" class="loader"><div class="spinner"></div><span>LOADING...</span></div>
           <video id="main-player" controls autoplay playsinline controlslist="nodownload" oncontextmenu="return false;"></video>
         </div>
-
-        <button id="next-btn" class="nav-btn" aria-label="Next">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
+        <button id="next-btn" class="nav-btn" aria-label="Next"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
       </div>
-
       <div class="bottom-section">
         <div class="track-info">
           I'm thy and this page is a rotation of the music I've been listening to the most recently <br/><br/>
           &bull; Current track : <span id="track-name" class="track-title">Connecting...</span>
+          <div id="admin-bypass-warning" style="display:none; font-style:italic; font-size:0.75rem; color:#ff4a4a; margin-top: 10px;">
+            (You are currently watching outside of the EU or via a VPN. But Geoblock has been bypassed.)
+          </div>
         </div>
-        <footer>
-          &copy; 2026
-        </footer>
+        <footer>&copy; 2026</footer>
       </div>
     </div>
+
 
     <script>
       document.addEventListener('astro:page-load', () => {
         if (!window.globalSecurityAttached) {
-          document.addEventListener('contextmenu', event => {
-            if (!event.target.closest('#quote-text')) event.preventDefault();
-          });
-          document.addEventListener('copy', event => {
-            const selection = window.getSelection();
-            if (!event.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) {
-              event.preventDefault();
-              return false;
-            }
-          });
-          document.addEventListener('keydown', event => {
-            if (event.key === 'F12') event.preventDefault();
-            if (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i' || event.key === 'J' || event.key === 'j' || event.key === 'C' || event.key === 'c')) event.preventDefault();
-            if (event.ctrlKey && (event.key === 'U' || event.key === 'u')) event.preventDefault();
-          });
+          document.addEventListener('contextmenu', event => { if (!event.target.closest('#quote-text')) event.preventDefault(); });
+          document.addEventListener('copy', event => { const selection = window.getSelection(); if (!event.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) { event.preventDefault(); return false; } });
+          document.addEventListener('keydown', event => { if (event.key === 'F12') event.preventDefault(); if (event.ctrlKey && event.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(event.key)) event.preventDefault(); if (event.ctrlKey && ['U', 'u'].includes(event.key)) event.preventDefault(); });
           window.globalSecurityAttached = true;
         }
-      });
 
-      document.addEventListener('astro:page-load', () => {
         const player = document.getElementById('main-player');
         if (!player) return; 
         
@@ -351,155 +86,110 @@ import { ClientRouter } from 'astro:transitions';
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const trackNameEl = document.getElementById('track-name');
+        const warningEl = document.getElementById('admin-bypass-warning');
         const leftWatermark = document.getElementById('watermark-left');
         const rightWatermark = document.getElementById('watermark-right');
         
         let currentIndex = 0;
         let videoList = [];
 
-        function extractName(url) {
-          const filename = url.split('/').pop() || "";
-          return decodeURIComponent(filename).replace(/\.[^/.]+$/, "");
-        }
-
-        function applyWatermark(leftText, rightText, fontClass) {
-          leftWatermark.className = 'watermark ' + fontClass;
-          rightWatermark.className = 'watermark ' + fontClass;
-          leftWatermark.innerHTML = leftText;
-          rightWatermark.innerHTML = rightText;
-          leftWatermark.style.opacity = '0.4';
-          rightWatermark.style.opacity = '0.4';
-        }
-
-        function clearWatermarks() {
-          leftWatermark.style.opacity = '0';
-          rightWatermark.style.opacity = '0';
-        }
+        function extractName(url) { return decodeURIComponent(url.split('/').pop() || "").replace(/\.[^/.]+$/, ""); }
+        function applyWatermark(leftText, rightText, fontClass) { leftWatermark.className = 'watermark ' + fontClass; rightWatermark.className = 'watermark ' + fontClass; leftWatermark.innerHTML = leftText; rightWatermark.innerHTML = rightText; leftWatermark.style.opacity = '0.4'; rightWatermark.style.opacity = '0.4'; }
+        function clearWatermarks() { leftWatermark.style.opacity = '0'; rightWatermark.style.opacity = '0'; }
 
         async function loadVideo(index) {
-          if (!videoList || videoList.length === 0) {
-            trackNameEl.textContent = "Oops, there's nothing to see here yet.";
-            loader.style.display = 'none';
-            return;
-          }
+          if (!videoList || videoList.length === 0) { trackNameEl.textContent = "Oops, there's nothing to see here yet."; loader.style.display = 'none'; return; }
+          player.style.opacity = 0; loader.style.display = 'flex'; clearWatermarks(); 
+          
+          player.pause();
+          player.removeAttribute('src');
+          while (player.firstChild) { player.removeChild(player.firstChild); }
+          player.load();
 
-          player.style.opacity = 0;
-          loader.style.display = 'flex';
-          clearWatermarks(); 
+          if (warningEl) warningEl.style.display = 'none';
 
           const url = videoList[index];
           const currentTrackName = extractName(url);
           trackNameEl.textContent = currentTrackName;
           const trackUpper = currentTrackName.trim().toUpperCase();
 
+          const isSpirit = trackUpper.includes('SPIRIT');
+          const isMondai = trackUpper.includes('もんだいガール') || trackUpper.includes('MONDAI');
+
           let finalUrl = url;
-          if (trackUpper.includes('SPIRIT')) {
+
+          if (isSpirit || isMondai) {
             try {
-              const res = await fetch('/api/token');
-              const { token } = await res.json();
+              const trackParam = isMondai ? 'mondai' : 'spirit';
+              const res = await fetch(`/api/token?track=${trackParam}`);
+              const { token, isBypassed } = await res.json();
+              
+              // Video streams flow through media.thiago.*
               finalUrl = `${url}?token=${token}`;
-            } catch (e) {
-              console.error("Token signature failed.");
-            }
+
+              // Subtitles flow natively through the local Pages domain to bypass cross-domain CORS completely
+              if (isMondai) {
+                const trackEl = document.createElement('track');
+                trackEl.kind = 'subtitles';
+                trackEl.label = 'Japanese';
+                trackEl.srclang = 'ja';
+                trackEl.src = `/media/subtitles/mondai_girl.vtt?token=${token}`;
+                trackEl.default = true;
+                player.appendChild(trackEl);
+              }
+
+              if (isBypassed && warningEl) warningEl.style.display = 'block';
+            } catch (e) { console.error("Token signature failed."); }
           }
 
           player.src = finalUrl;
+          player.load();
           
           setTimeout(() => {
-            if (trackUpper === 'INORI') {
-              applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
-            } 
-            else if (trackUpper === 'KERO KERO BONITO - BREAK') {
-              applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
-            }
-            else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') {
-              applyWatermark('IT • DA • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch')
-            }
+            if (trackUpper === 'INORI') applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
+            else if (trackUpper === 'KERO KERO BONITO - BREAK') applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
+            else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') applyWatermark('IT • DA • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch');
+            else if (isMondai) applyWatermark('問題', 'ガール', 'font-japanese-short');
           }, 500); 
           
-          player.play().catch(e => console.log("Autoplay prevented by browser."));
-
+          player.play().catch(e => console.log("Autoplay prevented."));
           prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
           nextBtn.style.visibility = index < videoList.length - 1 ? 'visible' : 'hidden';
         }
 
-        player.addEventListener('loadedmetadata', () => {
-          loader.style.display = 'none';
-          player.style.opacity = 1;
-        });
-
-        player.addEventListener('waiting', () => {
-          loader.style.display = 'flex';
-          player.style.opacity = 0.5;
-        });
-
-        player.addEventListener('playing', () => {
-          loader.style.display = 'none';
-          player.style.opacity = 1;
-        });
+        player.addEventListener('loadedmetadata', () => { loader.style.display = 'none'; player.style.opacity = 1; if(player.textTracks.length > 0) player.textTracks[0].mode = 'showing'; });
+        player.addEventListener('waiting', () => { loader.style.display = 'flex'; player.style.opacity = 0.5; });
+        player.addEventListener('playing', () => { loader.style.display = 'none'; player.style.opacity = 1; });
 
         player.addEventListener('error', async () => {
           const trackUpper = trackNameEl.textContent.trim().toUpperCase();
-          if (trackUpper.includes('SPIRIT')) {
-            loader.style.display = 'none';
-            player.style.opacity = 0;
-            
+          if (trackUpper.includes('SPIRIT') || trackUpper.includes('もんだいガール') || trackUpper.includes('MONDAI')) {
+            loader.style.display = 'none'; player.style.opacity = 0;
             let overlay = document.getElementById('geo-block-overlay');
             if (!overlay) {
-              overlay = document.createElement('div');
-              overlay.id = 'geo-block-overlay';
+              overlay = document.createElement('div'); overlay.id = 'geo-block-overlay';
               overlay.innerHTML = `<div style="font-size: 3rem; margin-bottom: 1rem;">&#9888;&#65039;</div><div id="geo-block-text" style="line-height: 1.5; max-width: 80%;">Loading verification...</div>`;
               overlay.style.cssText = 'position:absolute; top:0; left:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#000; color:#d9d9d9; z-index:20; text-align:center; padding: 2rem; font-family: inherit; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; box-sizing: border-box;';
               player.parentElement.appendChild(overlay);
             }
             overlay.style.display = 'flex';
-            
             try {
-              const res = await fetch('/cdn-cgi/trace');
-              const text = await res.text();
-              const match = text.match(/loc=([A-Z]{2})/);
-              const loc = match ? match[1] : null;
-              const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
-              
-              if (loc && euCountries.includes(loc)) {
-                document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection. Please disable any VPNs or proxies and try again on a standard network.";
-              } else {
-                const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region';
-                document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`;
-              }
-            } catch(e) {
-              document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection.";
-            }
+              const res = await fetch('/cdn-cgi/trace'); const text = await res.text(); const loc = (text.match(/loc=([A-Z]{2})/) || [])[1];
+              const eu = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
+              const sea = ['ID', 'SG', 'MY', 'TH', 'VN', 'PH', 'BN', 'KH', 'LA', 'MM', 'TL'];
+              const allowed = trackUpper.includes('SPIRIT') ? eu : [...eu, 'JP', 'BR', ...sea];
+
+              if (loc && allowed.includes(loc)) document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection. Please disable any VPNs or proxies and try again on a standard network.";
+              else { const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region'; document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`; }
+            } catch(e) { document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection."; }
           }
         });
 
-        player.addEventListener('loadstart', () => {
-          const overlay = document.getElementById('geo-block-overlay');
-          if (overlay) overlay.style.display = 'none';
-        });
-
-        async function initialize() {
-          try {
-            const res = await fetch('/api/videos');
-            videoList = await res.json();
-            loadVideo(currentIndex);
-          } catch(e) {
-            trackNameEl.textContent = "Failed to load tracks.";
-            loader.style.display = 'none';
-          }
-        }
-
-        prevBtn.addEventListener('click', () => {
-          if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); }
-        });
-
-        nextBtn.addEventListener('click', () => {
-          if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
-        });
-
-        player.addEventListener('ended', () => {
-          if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); }
-        });
+        player.addEventListener('loadstart', () => { const overlay = document.getElementById('geo-block-overlay'); if (overlay) overlay.style.display = 'none'; });
+        async function initialize() { try { const res = await fetch('/api/videos'); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
+        prevBtn.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); } });
+        nextBtn.addEventListener('click', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
+        player.addEventListener('ended', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
 
         initialize();
       });
