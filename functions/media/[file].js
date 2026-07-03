@@ -8,17 +8,21 @@ export async function onRequest(context) {
     const country = cf.country;
     const userIp = request.headers.get('cf-connecting-ip') || 'unknown';
     const token = url.searchParams.get('token');
-    const expectedToken = btoa(userIp + 'CUNO_DOESNT_CARE_2026');
 
-    const cookies = request.headers.get('Cookie') || '';
-    const isAuthorizedAdmin = cookies.includes('thy_admin_session=VALIDATED_SECURE_ACCESS_994');
+    // Define both valid cryptographic states
+    const expectedUserToken = btoa(userIp + 'CUNO_DOESNT_CARE_2026');
+    const expectedAdminToken = btoa(userIp + 'ADMIN_BYPASS_2026');
 
-    if (!token || token !== expectedToken) {
+    // Reject if token is missing entirely, or if it matches neither salt
+    if (!token || (token !== expectedUserToken && token !== expectedAdminToken)) {
       return new Response('403 Forbidden - Invalid Session Token', { 
         status: 403,
         headers: { 'Cache-Control': 'private, no-store, no-cache, max-age=0' }
       });
     }
+
+    // Identify if the token was minted with God Mode
+    const isAdmin = (token === expectedAdminToken);
 
     const asnOrg = (cf.asOrganization || '').toUpperCase();
     const blockList = [
@@ -45,8 +49,9 @@ export async function onRequest(context) {
 
     const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
     
+    // The Execution Block
     if (!euCountries.includes(country) || cf.isTor || isBlocked || !isVerifiedISP) {
-      if (!isAuthorizedAdmin) {
+      if (!isAdmin) {
         return new Response('403 Forbidden - Geo/Proxy Block', { 
           status: 403,
           headers: { 'Cache-Control': 'private, no-store, no-cache, max-age=0' }
@@ -55,6 +60,7 @@ export async function onRequest(context) {
     }
   }
 
+  // --- STANDARD STREAMING LOGIC ---
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     return new Response('Method Not Allowed', { status: 405 });
   }

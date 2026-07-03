@@ -2,13 +2,18 @@ export async function onRequest(context) {
   const { request } = context;
   const cf = request.cf || {};
   const ip = request.headers.get('cf-connecting-ip') || 'unknown';
-  const token = btoa(ip + 'CUNO_DOESNT_CARE_2026');
 
+  // Check if the user possesses the Secret Knock cookie
   const cookies = request.headers.get('Cookie') || '';
   const isAuthorizedAdmin = cookies.includes('thy_admin_session=VALIDATED_SECURE_ACCESS_994');
 
+  // Elevate privilege: Admins get a special cryptographic salt bound to their IP
+  const salt = isAuthorizedAdmin ? 'ADMIN_BYPASS_2026' : 'CUNO_DOESNT_CARE_2026';
+  const token = btoa(ip + salt);
+
   let isBypassed = false;
 
+  // If Admin, check if they are currently violating the geofence to trigger the UI warning
   if (isAuthorizedAdmin) {
     const country = cf.country;
     const asnOrg = (cf.asOrganization || '').toUpperCase();
@@ -37,6 +42,7 @@ export async function onRequest(context) {
 
     const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
 
+    // If they fail the checks, flag that the bypass was used
     if (!euCountries.includes(country) || cf.isTor || isBlocked || !isVerifiedISP) {
       isBypassed = true;
     }
