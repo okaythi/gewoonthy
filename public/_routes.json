@@ -1,8 +1,10 @@
 {
   "version": 1,
   "include": [
-    "/media/*",
-    "/api/*"
+    "/*"
   ],
-  "exclude": []
+  "exclude": [
+    "/_astro/*",
+    "/favicon.png"
+  ]
 }
