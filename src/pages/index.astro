@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import AdminDashboard from '../components/AdminDashboard.astro';
 ---
 <html lang="en">
   <head>
@@ -25,12 +26,17 @@ import { ClientRouter } from 'astro:transitions';
       .read-link:hover { color: #ffffff; transform: scale(1.05); }
       .read-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
       .player-wrapper { flex: 1 1 auto; display: grid; grid-template-columns: 50px 1fr 50px; align-items: center; width: 100%; max-width: 900px; height: 100%; overflow: hidden; gap: 1rem; padding: 2vh 0; }
-      .video-container { position: relative; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; max-width: 800px; margin: 0 auto; }
+      .video-container { position: relative; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; max-width: 800px; margin: 0 auto; background: #000; }
       .loader { position: absolute; display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 900; letter-spacing: 4px; color: #ffffff; text-transform: uppercase; z-index: 10; pointer-events: none; }
       .spinner { width: clamp(1.2rem, 2.5vw, 1.8rem); height: clamp(1.2rem, 2.5vw, 1.8rem); border: 3px solid rgba(255, 255, 255, 0.2); border-top-color: #ffffff; border-radius: 50%; animation: spin 1s linear infinite; }
       @keyframes spin { to { transform: rotate(360deg); } }
       video { width: 100%; max-height: 100%; object-fit: contain; border-radius: 2px; background-color: transparent; opacity: 0; transition: opacity 0.4s ease-in; }
       video::cue { background-color: rgba(0, 0, 0, 0.8); color: #fff; font-family: 'Yuji Syuku', sans-serif; font-size: 1.2rem; }
+      
+      /* Blackout Overlay */
+      .video-blackout { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 15; opacity: 0; pointer-events: none; transition: opacity 0.05s ease; }
+      .video-blackout.active { opacity: 1; pointer-events: all; }
+
       .nav-btn { background: none; border: none; padding: 10px; cursor: pointer; visibility: hidden; outline: none; -webkit-tap-highlight-color: transparent; }
       .nav-btn svg { width: 30px; height: 40px; stroke: #444; stroke-width: 2; fill: none; transition: stroke 0.2s ease; }
       .nav-btn:hover svg { stroke: #ffffff; }
@@ -53,7 +59,8 @@ import { ClientRouter } from 'astro:transitions';
         <button id="prev-btn" class="nav-btn" aria-label="Previous"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
         <div class="video-container">
           <div id="loader" class="loader"><div class="spinner"></div><span>LOADING...</span></div>
-          <video id="main-player" controls autoplay playsinline controlslist="nodownload" oncontextmenu="return false;"></video>
+          <div id="video-blackout" class="video-blackout"></div>
+          <video id="main-player" controls autoplay playsinline controlslist="nodownload" crossorigin="anonymous" oncontextmenu="return false;"></video>
         </div>
         <button id="next-btn" class="nav-btn" aria-label="Next"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
       </div>
@@ -69,8 +76,45 @@ import { ClientRouter } from 'astro:transitions';
       </div>
     </div>
 
-
     <script>
+      // Anti-Capture Protocol
+      document.addEventListener('astro:page-load', () => {
+        if (!window.antiCaptureAttached) {
+          const blackout = document.getElementById('video-blackout');
+          const player = document.getElementById('main-player');
+
+          function triggerBlackout() {
+            // Admin Exemption: Check if the Edge Worker injected the secure context
+            if (document.getElementById('secure-admin-context')) return; 
+            if (blackout) blackout.classList.add('active');
+            if (player && !player.paused) player.pause();
+          }
+
+          function removeBlackout() {
+            if (blackout) blackout.classList.remove('active');
+          }
+
+          // Trigger on Snipping Tool overlay or Window focus loss
+          window.addEventListener('blur', triggerBlackout);
+          window.addEventListener('focus', removeBlackout);
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) triggerBlackout(); else removeBlackout();
+          });
+
+          // Trigger on known screenshot shortcuts
+          window.addEventListener('keydown', (e) => {
+            if (document.getElementById('secure-admin-context')) return;
+            if (e.key === 'PrintScreen' || (e.metaKey && e.shiftKey) || (e.ctrlKey && e.shiftKey && (e.key === 'S' || e.key === 's'))) {
+              triggerBlackout();
+              setTimeout(removeBlackout, 3000);
+            }
+          });
+
+          window.antiCaptureAttached = true;
+        }
+      });
+
+      // Global Security Attached
       document.addEventListener('astro:page-load', () => {
         if (!window.globalSecurityAttached) {
           document.addEventListener('contextmenu', event => { if (!event.target.closest('#quote-text')) event.preventDefault(); });
@@ -124,10 +168,8 @@ import { ClientRouter } from 'astro:transitions';
               const res = await fetch(`/api/token?track=${trackParam}`);
               const { token, isBypassed } = await res.json();
               
-              // Video streams flow through media.thiago.*
               finalUrl = `${url}?token=${token}`;
 
-              // Subtitles flow natively through the local Pages domain to bypass cross-domain CORS completely
               if (isMondai) {
                 const trackEl = document.createElement('track');
                 trackEl.kind = 'subtitles';
