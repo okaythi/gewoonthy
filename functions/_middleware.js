@@ -76,6 +76,32 @@ const ADMIN_PAYLOAD = `
           toggle.onclick = () => toggle.classList.toggle('active');
         });
       }
+
+      // Intercept the token fetch to check for the bypass flag
+      if (!window.adminFetchAttached) {
+        const originalFetch = window.fetch;
+        window.fetch = async function(...args) {
+          const res = await originalFetch.apply(this, args);
+          if (args[0] === '/api/token') {
+            res.clone().json().then(data => {
+              const warning = document.getElementById('admin-bypass-warning');
+              if (warning) warning.style.display = data.isBypassed ? 'block' : 'none';
+            }).catch(e => {});
+          }
+          return res;
+        };
+        window.adminFetchAttached = true;
+      }
+
+      // Hide the warning automatically when rotating to a new video
+      const player = document.getElementById('main-player');
+      if (player && !window.adminPlayerAttached) {
+        player.addEventListener('loadstart', () => {
+          const warning = document.getElementById('admin-bypass-warning');
+          if (warning) warning.style.display = 'none';
+        });
+        window.adminPlayerAttached = true;
+      }
     }
     initAdminUI();
     document.addEventListener('astro:page-load', initAdminUI);
@@ -87,7 +113,6 @@ export async function onRequest(context) {
   const { request, next } = context;
   const url = new URL(request.url);
 
-  // 1. THE SECRET KNOCK
   if (url.searchParams.get('system_override') === 'CUNO_DOESNT_CARE_2026') {
     url.searchParams.delete('system_override');
     return new Response('Override Accepted. Rebooting UI...', {
@@ -103,13 +128,18 @@ export async function onRequest(context) {
   const cookies = request.headers.get('Cookie') || '';
   const isAuthorizedAdmin = cookies.includes('thy_admin_session=VALIDATED_SECURE_ACCESS_994');
 
-  // 2. EDGE HTML INJECTION: Only appends the payload if fully authorized.
   const contentType = response.headers.get('content-type') || '';
   if (isAuthorizedAdmin && contentType.toLowerCase().includes('text/html')) {
     return new HTMLRewriter()
       .on('body', {
         element(el) {
           el.append(ADMIN_PAYLOAD, { html: true });
+        }
+      })
+      .on('.track-info', {
+        element(el) {
+          // Inject the warning block cleanly beneath the track title
+          el.append('<div id="admin-bypass-warning" style="display:none; font-style:italic; font-size:0.75rem; color:#ff4a4a; margin-top: 10px;">(You are currently watching outside of the EU or via a VPN. But Geoblock has been bypassed.)</div>', { html: true });
         }
       })
       .transform(response);
