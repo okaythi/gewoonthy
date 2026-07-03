@@ -76,29 +76,16 @@ const ADMIN_PAYLOAD = `
           toggle.onclick = () => toggle.classList.toggle('active');
         });
       }
-
-      // Intercept the token fetch to check for the bypass flag
-      if (!window.adminFetchAttached) {
-        const originalFetch = window.fetch;
-        window.fetch = async function(...args) {
-          const res = await originalFetch.apply(this, args);
-          if (args[0] === '/api/token') {
-            res.clone().json().then(data => {
-              const warning = document.getElementById('admin-bypass-warning');
-              if (warning) warning.style.display = data.isBypassed ? 'block' : 'none';
-            }).catch(e => {});
-          }
-          return res;
-        };
-        window.adminFetchAttached = true;
-      }
-
-      // Hide the warning automatically when rotating to a new video
+      
       const player = document.getElementById('main-player');
       if (player && !window.adminPlayerAttached) {
         player.addEventListener('loadstart', () => {
           const warning = document.getElementById('admin-bypass-warning');
-          if (warning) warning.style.display = 'none';
+          // If a new video loads, check if it's Spirit to decide whether to hide the warning
+          if (warning) {
+            const trackName = document.getElementById('track-name').textContent.toUpperCase();
+            warning.style.display = trackName.includes('SPIRIT') ? 'block' : 'none';
+          }
         });
         window.adminPlayerAttached = true;
       }
@@ -130,6 +117,39 @@ export async function onRequest(context) {
 
   const contentType = response.headers.get('content-type') || '';
   if (isAuthorizedAdmin && contentType.toLowerCase().includes('text/html')) {
+    
+    // Evaluate the geofence server-side for the warning injection
+    const cf = request.cf || {};
+    const country = cf.country;
+    const asnOrg = (cf.asOrganization || '').toUpperCase();
+
+    const blockList = [
+      'PROTON', 'MULLVAD', 'NORD', 'EXPRESS', 'SURFSHARK', 'CYBERGHOST', 'IVPN',
+      'VPN', 'PROXY', 'TOR', 'ANONYMOUS', 'HOSTING', 'DATACENTRE', 'DATACENTER',
+      'CLOUD', 'VPS', 'TRANSIT', 'BACKBONE', 'IXP', 'AMAZON', 'AWS', 'GOOGLE',
+      'MICROSOFT', 'AZURE', 'DIGITALOCEAN', 'HETZNER', 'OVH', 'LINODE', 'M247',
+      'CHOOPA', 'LEASEWEB', 'DATAPACKET', 'COGENT', 'LUMEN', 'GTT', 'ARELION',
+      'NFORCE', 'I3D', 'WORLDSTREAM', 'CLOUVIDER', 'PACKETHUB', 'XTOM', 'SPEEDYNET'
+    ];
+    const isBlocked = blockList.some(keyword => asnOrg.includes(keyword));
+
+    const isVerifiedISP = [
+      'PROXIMUS', 'BELGACOM', 'TELENET', 'VOO', 'ORANGE', 'SCARLET', 
+      'KPN', 'ZIGGO', 'LIBERTY GLOBAL', 'VODAFONE', 'T-MOBILE', 'TELE2', 'DELTA', 'CAIW', 
+      'DEUTSCHE TELEKOM', 'TELEFONICA', '1&1', 'O2', 'FREE', 'SFR', 'BOUYGUES', 'NUMERICABLE', 
+      'TIM', 'TELECOM ITALIA', 'WINDTRE', 'FASTWEB', 'ILIAD', 
+      'MOVISTAR', 'MASMOVIL', 'JAZZTEL', 
+      'TELIA', 'TELENOR', 'TRE', 'ELISA', 'DNA', 'ALTIBOX', 'BAHNHOF', 
+      'EIR', 'VIRGIN', 'SKY', 
+      'A1', 'MAGENTA', 'DREI', 
+      'PLAY', 'PLUS' 
+    ].some(isp => asnOrg.includes(isp));
+
+    const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
+    
+    // If true, the user is violating the geofence but allowed through via God Mode.
+    const isBypassingGeofence = !euCountries.includes(country) || cf.isTor || isBlocked || !isVerifiedISP;
+
     return new HTMLRewriter()
       .on('body', {
         element(el) {
@@ -138,8 +158,9 @@ export async function onRequest(context) {
       })
       .on('.track-info', {
         element(el) {
-          // Inject the warning block cleanly beneath the track title
-          el.append('<div id="admin-bypass-warning" style="display:none; font-style:italic; font-size:0.75rem; color:#ff4a4a; margin-top: 10px;">(You are currently watching outside of the EU or via a VPN. But Geoblock has been bypassed.)</div>', { html: true });
+          if (isBypassingGeofence) {
+            el.append('<div id="admin-bypass-warning" style="display:none; font-style:italic; font-size:0.75rem; color:#ff4a4a; margin-top: 10px;">(You are currently watching outside of the EU or via a VPN. But Geoblock has been bypassed.)</div>', { html: true });
+          }
         }
       })
       .transform(response);
