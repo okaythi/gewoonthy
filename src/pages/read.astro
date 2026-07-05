@@ -55,21 +55,28 @@ import AntiCapture from '../components/AntiCapture.astro';
       <span>Looks like you're in the EU. I use local storage to remember which quotes you've seen. You can <a href="/privacy" class="privacy-link">read what data I collect and how it is used</a>.</span>
       <div class="consent-actions"><button id="consent-accept">Accept</button><button id="consent-decline">Decline</button></div>
     </div>
-    <script data-astro-rerun>
-      (() => {
+    <script>
+      let lastInitUrl = '';
+      let listenersAttached = false;
+      let storageAllowed = false;
+      let currentQuoteData = null;
+
+      function setupReadPage() {
+        const currentUrl = window.location.href;
+        if (lastInitUrl === currentUrl) return;
+        lastInitUrl = currentUrl;
+
         const langPicker = document.getElementById('lang-picker');
         if (!langPicker) return; 
 
-        if (!window.readPageListenersAttached) {
+        if (!listenersAttached) {
           document.addEventListener('contextmenu', e => { if (!e.target.closest('#quote-text')) { e.preventDefault(); } });
           document.addEventListener('copy', e => { const selection = window.getSelection(); if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) { e.preventDefault(); return false; } });
           document.addEventListener('keydown', e => { if (e.key === 'F12') e.preventDefault(); if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault(); if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault(); });
-          window.readPageListenersAttached = true;
+          listenersAttached = true;
         }
 
         const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
-        let storageAllowed = false;
-        let currentQuoteData = null; 
         const textEl = document.getElementById('quote-text');
         const authorEl = document.getElementById('quote-author');
         const sourceEl = document.getElementById('quote-source');
@@ -145,7 +152,10 @@ import AntiCapture from '../components/AntiCapture.astro';
         }
 
         init();
-      })();
+      }
+
+      setupReadPage();
+      document.addEventListener('astro:page-load', setupReadPage);
     </script>
   </body>
 </html>
