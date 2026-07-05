@@ -13,5 +13,6 @@ export async function onRequest({ request: r }) {
     const p = (u.searchParams.get('track') || 'spirit') === 'mondai' ? [...e, 'JP', 'BR', ...s] : e;
     if (!p.includes(n) || c.isTor || x || !v) b = true;
   }
-  return new Response(JSON.stringify({ token: t, isBypassed: b }), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
+  const st = btoa(Date.now() + '|' + i + '|' + 'MONDAY_GIRL_SECURE');
+  return new Response(JSON.stringify({ token: t, st, isBypassed: b }), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
 }

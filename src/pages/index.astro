@@ -8,6 +8,7 @@ import { ClientRouter } from 'astro:transitions';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Thy</title>
     <ClientRouter />
+    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad29414c138e4d91a3f01c8b348f91a1"}'></script><!-- End Cloudflare Web Analytics -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Yuji+Syuku&display=swap');
       html, body { margin: 0; padding: 0; width: 100%; height: 100dvh; overflow: hidden; background-color: #000000; color: #d9d9d9; font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; box-sizing: border-box; user-select: none; }
@@ -91,6 +92,16 @@ import { ClientRouter } from 'astro:transitions';
               setTimeout(removeBlackout, 3000);
             }
           });
+          window.addEventListener('blur', () => {
+            triggerBlackout();
+          });
+          window.addEventListener('focus', () => {
+            removeBlackout();
+          });
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) triggerBlackout();
+            else removeBlackout();
+          });
           window.antiCaptureAttached = true;
         }
       });
@@ -112,6 +123,20 @@ import { ClientRouter } from 'astro:transitions';
         const rightWatermark = document.getElementById('watermark-right');
         let currentIndex = 0;
         let videoList = [];
+        let currentBlobUrl = null;
+        let currentVideoStartTime = 0;
+        let sessionData = JSON.parse(sessionStorage.getItem('thy_session_data')) || { id: crypto.randomUUID(), startTime: Date.now(), interactions: [] };
+        sessionStorage.setItem('thy_session_data', JSON.stringify(sessionData));
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'hidden') {
+            if (trackNameEl && trackNameEl.textContent && trackNameEl.textContent !== 'Connecting...') {
+               sessionData.interactions.push({ video: trackNameEl.textContent.trim(), type: 'watch', durationMs: Date.now() - currentVideoStartTime, timestamp: Date.now() });
+            }
+            navigator.sendBeacon('/api/analytics', JSON.stringify({ ...sessionData, url: window.location.href, referrer: document.referrer }));
+          }
+        });
+
         function extractName(url) { return decodeURIComponent(url.split('/').pop() || "").replace(/\.[^/.]+$/, ""); }
         function applyWatermark(leftText, rightText, fontClass) { leftWatermark.className = 'watermark ' + fontClass; rightWatermark.className = 'watermark ' + fontClass; leftWatermark.innerHTML = leftText; rightWatermark.innerHTML = rightText; leftWatermark.style.opacity = '0.4'; rightWatermark.style.opacity = '0.4'; }
         function clearWatermarks() { leftWatermark.style.opacity = '0'; rightWatermark.style.opacity = '0'; }
@@ -129,13 +154,29 @@ import { ClientRouter } from 'astro:transitions';
           const trackUpper = currentTrackName.trim().toUpperCase();
           const isSpirit = trackUpper.includes('SPIRIT');
           const isMondai = trackUpper.includes('もんだいガール') || trackUpper.includes('MONDAI');
+          if (currentVideoStartTime > 0 && trackNameEl.textContent !== 'Connecting...') {
+             sessionData.interactions.push({ video: trackNameEl.textContent.trim(), type: 'watch', durationMs: Date.now() - currentVideoStartTime, timestamp: Date.now() });
+             sessionStorage.setItem('thy_session_data', JSON.stringify(sessionData));
+          }
+          currentVideoStartTime = Date.now();
+          if (currentBlobUrl) { URL.revokeObjectURL(currentBlobUrl); currentBlobUrl = null; }
+
           let finalUrl = url;
           if (isSpirit || isMondai) {
             try {
               const trackParam = isMondai ? 'mondai' : 'spirit';
               const res = await fetch(`/api/token?track=${trackParam}`);
-              const { token, isBypassed } = await res.json();
-              finalUrl = `${url}?token=${token}`;
+              const { token, st, isBypassed } = await res.json();
+              
+              if (isMondai) {
+                const vidRes = await fetch(`/api/secure_media?url=${encodeURIComponent(url)}&token=${token}&st=${st}`);
+                const blob = await vidRes.blob();
+                finalUrl = URL.createObjectURL(blob);
+                currentBlobUrl = finalUrl;
+              } else {
+                finalUrl = `${url}?token=${token}`;
+              }
+
               if (isMondai) {
                 const trackEl = document.createElement('track');
                 trackEl.kind = 'subtitles';
@@ -189,7 +230,10 @@ import { ClientRouter } from 'astro:transitions';
         async function initialize() { try { const res = await fetch('/api/videos'); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
         prevBtn.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); } });
         nextBtn.addEventListener('click', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
-        player.addEventListener('ended', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
+        player.addEventListener('ended', () => { 
+          currentIndex = (currentIndex + 1) % videoList.length; 
+          loadVideo(currentIndex); 
+        });
         initialize();
       });
     </script>
