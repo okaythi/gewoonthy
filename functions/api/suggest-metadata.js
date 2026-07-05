@@ -40,7 +40,7 @@ export async function onRequest({ request }) {
         provider = "youtube";
       }
     }
-    // Apple Music or Raw Text Search -> iTunes Search API
+    // Deezer API (No rate limits for CF Workers, no Auth required)
     else {
       let searchTerm = query;
       if (query.includes('music.apple.com/')) {
@@ -49,21 +49,19 @@ export async function onRequest({ request }) {
          searchTerm = pathSegs[pathSegs.length - 2]?.replace(/-/g, ' ') || query;
       }
 
-      const targetUrl = `https://itunes.apple.com/search?term=${encodeURIComponent(searchTerm)}&entity=song&limit=1`;
-      const res = await fetch(targetUrl, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-      });
+      const targetUrl = `https://api.deezer.com/search?q=${encodeURIComponent(searchTerm)}&limit=1`;
+      const res = await fetch(targetUrl);
       
       debugInfo = `Status: ${res.status}`;
       if (res.ok) {
         const data = await res.json();
-        debugInfo += ` | Results: ${data.results?.length}`;
-        if (data.results && data.results.length > 0) {
-          const song = data.results[0];
-          track = song.trackName;
-          artist = song.artistName;
-          artwork = song.artworkUrl100 ? song.artworkUrl100.replace('100x100', '600x600') : '';
-          provider = query.includes('music.apple.com') ? 'apple' : 'itunes_search';
+        debugInfo += ` | Results: ${data.data?.length}`;
+        if (data.data && data.data.length > 0) {
+          const song = data.data[0];
+          track = song.title;
+          artist = song.artist?.name || "Unknown Artist";
+          artwork = song.album?.cover_xl || song.album?.cover_big || "";
+          provider = "deezer";
         }
       } else {
         debugInfo += ` | Text: ${await res.text()}`;
