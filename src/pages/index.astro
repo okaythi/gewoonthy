@@ -1,6 +1,5 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import AdminDashboard from '../components/AdminDashboard.astro';
 ---
 <html lang="en">
   <head>
@@ -32,11 +31,8 @@ import AdminDashboard from '../components/AdminDashboard.astro';
       @keyframes spin { to { transform: rotate(360deg); } }
       video { width: 100%; max-height: 100%; object-fit: contain; border-radius: 2px; background-color: transparent; opacity: 0; transition: opacity 0.4s ease-in; }
       video::cue { background-color: rgba(0, 0, 0, 0.8); color: #fff; font-family: 'Yuji Syuku', sans-serif; font-size: 1.2rem; }
-      
-      /* Blackout Overlay */
       .video-blackout { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 15; opacity: 0; pointer-events: none; transition: opacity 0.05s ease; }
       .video-blackout.active { opacity: 1; pointer-events: all; }
-
       .nav-btn { background: none; border: none; padding: 10px; cursor: pointer; visibility: hidden; outline: none; -webkit-tap-highlight-color: transparent; }
       .nav-btn svg { width: 30px; height: 40px; stroke: #444; stroke-width: 2; fill: none; transition: stroke 0.2s ease; }
       .nav-btn:hover svg { stroke: #ffffff; }
@@ -52,7 +48,6 @@ import AdminDashboard from '../components/AdminDashboard.astro';
     <a href="/read" class="read-link" aria-label="Read" title="Read"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></a>
     <div id="watermark-left-wrapper" class="watermark-wrapper"><div id="watermark-left" class="watermark"></div></div>
     <div id="watermark-right-wrapper" class="watermark-wrapper"><div id="watermark-right" class="watermark"></div></div>
-
     <div class="container">
       <div class="top-section"><h2>"Cuno doesn't fucking care!"</h2></div>
       <div class="player-wrapper">
@@ -75,46 +70,30 @@ import AdminDashboard from '../components/AdminDashboard.astro';
         <footer>&copy; 2026</footer>
       </div>
     </div>
-
     <script>
-      // Anti-Capture Protocol
       document.addEventListener('astro:page-load', () => {
         if (!window.antiCaptureAttached) {
           const blackout = document.getElementById('video-blackout');
-          const player = document.getElementById('main-player');
-
           function triggerBlackout() {
-            // Admin Exemption: Check if the Edge Worker injected the secure context
+            const trackName = document.getElementById('track-name');
+            if (!trackName) return;
+            const currentTrack = trackName.textContent.trim().toUpperCase();
+            if (!currentTrack.includes('もんだいガール') && !currentTrack.includes('MONDAI')) return;
             if (document.getElementById('secure-admin-context')) return; 
             if (blackout) blackout.classList.add('active');
-            if (player && !player.paused) player.pause();
           }
-
           function removeBlackout() {
             if (blackout) blackout.classList.remove('active');
           }
-
-          // Trigger on Snipping Tool overlay or Window focus loss
-          window.addEventListener('blur', triggerBlackout);
-          window.addEventListener('focus', removeBlackout);
-          document.addEventListener('visibilitychange', () => {
-            if (document.hidden) triggerBlackout(); else removeBlackout();
-          });
-
-          // Trigger on known screenshot shortcuts
           window.addEventListener('keydown', (e) => {
-            if (document.getElementById('secure-admin-context')) return;
             if (e.key === 'PrintScreen' || (e.metaKey && e.shiftKey) || (e.ctrlKey && e.shiftKey && (e.key === 'S' || e.key === 's'))) {
               triggerBlackout();
               setTimeout(removeBlackout, 3000);
             }
           });
-
           window.antiCaptureAttached = true;
         }
       });
-
-      // Global Security Attached
       document.addEventListener('astro:page-load', () => {
         if (!window.globalSecurityAttached) {
           document.addEventListener('contextmenu', event => { if (!event.target.closest('#quote-text')) event.preventDefault(); });
@@ -122,10 +101,8 @@ import AdminDashboard from '../components/AdminDashboard.astro';
           document.addEventListener('keydown', event => { if (event.key === 'F12') event.preventDefault(); if (event.ctrlKey && event.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(event.key)) event.preventDefault(); if (event.ctrlKey && ['U', 'u'].includes(event.key)) event.preventDefault(); });
           window.globalSecurityAttached = true;
         }
-
         const player = document.getElementById('main-player');
         if (!player) return; 
-        
         const loader = document.getElementById('loader');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
@@ -133,43 +110,32 @@ import AdminDashboard from '../components/AdminDashboard.astro';
         const warningEl = document.getElementById('admin-bypass-warning');
         const leftWatermark = document.getElementById('watermark-left');
         const rightWatermark = document.getElementById('watermark-right');
-        
         let currentIndex = 0;
         let videoList = [];
-
         function extractName(url) { return decodeURIComponent(url.split('/').pop() || "").replace(/\.[^/.]+$/, ""); }
         function applyWatermark(leftText, rightText, fontClass) { leftWatermark.className = 'watermark ' + fontClass; rightWatermark.className = 'watermark ' + fontClass; leftWatermark.innerHTML = leftText; rightWatermark.innerHTML = rightText; leftWatermark.style.opacity = '0.4'; rightWatermark.style.opacity = '0.4'; }
         function clearWatermarks() { leftWatermark.style.opacity = '0'; rightWatermark.style.opacity = '0'; }
-
         async function loadVideo(index) {
           if (!videoList || videoList.length === 0) { trackNameEl.textContent = "Oops, there's nothing to see here yet."; loader.style.display = 'none'; return; }
           player.style.opacity = 0; loader.style.display = 'flex'; clearWatermarks(); 
-          
           player.pause();
           player.removeAttribute('src');
           while (player.firstChild) { player.removeChild(player.firstChild); }
           player.load();
-
           if (warningEl) warningEl.style.display = 'none';
-
           const url = videoList[index];
           const currentTrackName = extractName(url);
           trackNameEl.textContent = currentTrackName;
           const trackUpper = currentTrackName.trim().toUpperCase();
-
           const isSpirit = trackUpper.includes('SPIRIT');
           const isMondai = trackUpper.includes('もんだいガール') || trackUpper.includes('MONDAI');
-
           let finalUrl = url;
-
           if (isSpirit || isMondai) {
             try {
               const trackParam = isMondai ? 'mondai' : 'spirit';
               const res = await fetch(`/api/token?track=${trackParam}`);
               const { token, isBypassed } = await res.json();
-              
               finalUrl = `${url}?token=${token}`;
-
               if (isMondai) {
                 const trackEl = document.createElement('track');
                 trackEl.kind = 'subtitles';
@@ -179,30 +145,24 @@ import AdminDashboard from '../components/AdminDashboard.astro';
                 trackEl.default = true;
                 player.appendChild(trackEl);
               }
-
               if (isBypassed && warningEl) warningEl.style.display = 'block';
-            } catch (e) { console.error("Token signature failed."); }
+            } catch (e) {}
           }
-
           player.src = finalUrl;
           player.load();
-          
           setTimeout(() => {
             if (trackUpper === 'INORI') applyWatermark('波羅羯諦', '羯諦羯諦', 'font-japanese-short');
             else if (trackUpper === 'KERO KERO BONITO - BREAK') applyWatermark('今っていうこの瞬間', '何もしないこの時間', 'font-japanese-long');
             else if (trackUpper === 'GRAFGRAVERS - VAN DE G NO DE H') applyWatermark('IT • DA • LA • MOOI', 'BEJOAT • DA • LAM • IT • OOI', 'font-dutch');
             else if (isMondai) applyWatermark('問題', 'ガール', 'font-japanese-short');
           }, 500); 
-          
-          player.play().catch(e => console.log("Autoplay prevented."));
+          player.play().catch(e => {});
           prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
           nextBtn.style.visibility = index < videoList.length - 1 ? 'visible' : 'hidden';
         }
-
         player.addEventListener('loadedmetadata', () => { loader.style.display = 'none'; player.style.opacity = 1; if(player.textTracks.length > 0) player.textTracks[0].mode = 'showing'; });
         player.addEventListener('waiting', () => { loader.style.display = 'flex'; player.style.opacity = 0.5; });
         player.addEventListener('playing', () => { loader.style.display = 'none'; player.style.opacity = 1; });
-
         player.addEventListener('error', async () => {
           const trackUpper = trackNameEl.textContent.trim().toUpperCase();
           if (trackUpper.includes('SPIRIT') || trackUpper.includes('もんだいガール') || trackUpper.includes('MONDAI')) {
@@ -220,19 +180,16 @@ import AdminDashboard from '../components/AdminDashboard.astro';
               const eu = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'];
               const sea = ['ID', 'SG', 'MY', 'TH', 'VN', 'PH', 'BN', 'KH', 'LA', 'MM', 'TL'];
               const allowed = trackUpper.includes('SPIRIT') ? eu : [...eu, 'JP', 'BR', ...sea];
-
               if (loc && allowed.includes(loc)) document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection. Please disable any VPNs or proxies and try again on a standard network.";
               else { const displayLoc = loc ? new Intl.DisplayNames(['en'], {type: 'region'}).of(loc) : 'your region'; document.getElementById('geo-block-text').textContent = `For strict legal reasons, this video cannot be shown in ${displayLoc}.`; }
             } catch(e) { document.getElementById('geo-block-text').textContent = "Due to strict copyright licensing, we could not securely verify your connection."; }
           }
         });
-
         player.addEventListener('loadstart', () => { const overlay = document.getElementById('geo-block-overlay'); if (overlay) overlay.style.display = 'none'; });
         async function initialize() { try { const res = await fetch('/api/videos'); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
         prevBtn.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); } });
         nextBtn.addEventListener('click', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
         player.addEventListener('ended', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
-
         initialize();
       });
     </script>

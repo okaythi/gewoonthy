@@ -1,6 +1,6 @@
+// Serves localized quote payloads via dynamic exclusion filtering and history reconciliation.
 export async function onRequest(context) {
   const quotes = [
-    // --- MANDATORY QUOTE #1 ---
     { 
       id: 1, author: "Douglas Adams", source: "The Hitchhiker's Guide to the Galaxy", 
       text: { 
@@ -9,7 +9,6 @@ export async function onRequest(context) {
         fr: "Pas de panique." 
       } 
     },
-    // --- CLASSIC SCI-FI & HUMOUR (The Trilogy of 5 & More) ---
     { 
       id: 2, author: "Douglas Adams", source: "The Hitchhiker's Guide to the Galaxy", 
       text: { 
@@ -82,7 +81,6 @@ export async function onRequest(context) {
         fr: "Il y a une théorie qui déclare que si jamais quelqu'un découvre exactement à quoi sert l'Univers et pourquoi il est là, il disparaîtra instantanément et sera remplacé par quelque chose d'encore plus bizarre et inexplicable. Il y a une autre théorie qui déclare que c'est déjà arrivé."
       }
     },
-    // --- TERRY PRATCHETT ---
     { 
       id: 11, author: "Terry Pratchett", source: "Diggers", 
       text: { 
@@ -139,7 +137,6 @@ export async function onRequest(context) {
         fr: "Le temps est une drogue. Trop de temps vous tue."
       }
     },
-    // --- FANTASY (Tolkien, Rowling, GRRM, Le Guin) ---
     { 
       id: 18, author: "J.R.R. Tolkien", source: "The Fellowship of the Ring", 
       text: { 
@@ -212,7 +209,6 @@ export async function onRequest(context) {
         fr: "Les contes de fées sont plus que vrais : non parce qu'ils nous disent que les dragons existent, mais parce qu'ils nous disent que les dragons peuvent être vaincus."
       }
     },
-    // --- EXISTENTIAL PHILOSOPHY & ABSURDISM ---
     { 
       id: 27, author: "Albert Camus", source: "The Myth of Sisyphus", 
       text: { 
@@ -293,7 +289,6 @@ export async function onRequest(context) {
         fr: "La vie ne peut être comprise qu'en regardant en arrière ; mais elle doit être vécue en regardant en avant."
       }
     },
-    // --- STOICISM ---
     { 
       id: 37, author: "Marcus Aurelius", source: "Meditations", 
       text: { 
@@ -334,7 +329,6 @@ export async function onRequest(context) {
         fr: "Ce ne sont pas les choses qui troublent les hommes, mais l'opinion qu'ils en ont."
       }
     },
-    // --- CLASSIC LITERATURE (Russian, French, English) ---
     { 
       id: 42, author: "Fyodor Dostoevsky", source: "The Brothers Karamazov", 
       text: { 
@@ -447,7 +441,6 @@ export async function onRequest(context) {
         fr: "J'ai pris une grande inspiration et j'ai écouté la vieille vantardise de mon cœur. Je suis, je suis, je suis."
       }
     },
-    // --- HEAVY SCI-FI & CYBERPUNK ---
     { 
       id: 56, author: "Frank Herbert", source: "Dune", 
       text: { 
@@ -568,7 +561,6 @@ export async function onRequest(context) {
         fr: "Si vous voulez une image de l'avenir, imaginez une botte piétinant un visage humain, éternellement."
       }
     },
-    // --- SCIENCE & COSMOLOGY ---
     { 
       id: 71, author: "Carl Sagan", source: "Pale Blue Dot", 
       text: { 
@@ -609,7 +601,6 @@ export async function onRequest(context) {
         fr: "J'ai remarqué que même les gens qui affirment que tout est prédestiné et que nous ne pouvons rien faire pour le changer regardent avant de traverser la route."
       }
     },
-    // --- ASSORTED BRILLIANCE & ABSURDITY ---
     {
       id: 76, author: "Mark Twain", source: "A Connecticut Yankee in King Arthur's Court",
       text: {
@@ -650,7 +641,6 @@ export async function onRequest(context) {
         fr: "Nous ne voyons pas les choses telles qu'elles sont, nous les voyons telles que nous sommes."
       }
     },
-    // --- THE REMAINING 70 SCRIPTED GEMS ---
     { id: 81, author: "Herman Melville", source: "Moby-Dick", text: { en: "Call me Ishmael.", nl: "Noem me Ismaël.", fr: "Appelez-moi Ismaël." } },
     { id: 82, author: "Charles Dickens", source: "A Tale of Two Cities", text: { en: "It was the best of times, it was the worst of times.", nl: "Het was de beste der tijden, het was de slechtste der tijden.", fr: "C'était le meilleur des temps, c'était le pire des temps." } },
     { id: 83, author: "Jane Austen", source: "Pride and Prejudice", text: { en: "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.", nl: "Het is een algemeen erkende waarheid dat een alleenstaande man in het bezit van een goed fortuin, behoefte moet hebben aan een vrouw.", fr: "C'est une vérité universellement reconnue qu'un célibataire pourvu d'une belle fortune doit avoir envie de se marier." } },
@@ -685,7 +675,7 @@ export async function onRequest(context) {
     { id: 112, author: "Milan Kundera", source: "Norwegian Wood", text: { en: "If you only read the books that everyone else is reading, you can only think what everyone else is thinking.", nl: "Als je alleen de boeken leest die alle anderen lezen, kun je alleen maar denken wat alle anderen denken.", fr: "Si vous ne lisez que les livres que tout le monde lit, vous ne pouvez penser que ce que tout le monde pense." } },
     { id: 113, author: "Italo Calvino", source: "The Unbearable Lightness of Being", text: { en: "A single metaphor can give birth to love.", nl: "Een enkele metafoor kan de liefde doen ontwaken.", fr: "Une seule métaphore peut donner naissance à l'amour." } },
     { id: 114, author: "Umberto Eco", source: "Invisible Cities", text: { en: "You take delight not in a city's seven or seventy wonders, but in the answer it gives to a question of yours.", nl: "Je geniet niet van de zeven of zeventig wonderen van een stad, maar van het antwoord dat ze geeft op een vraag van jou.", fr: "Vous ne prenez pas plaisir aux sept ou soixante-dix merveilles d'une ville, mais à la réponse qu'elle donne à l'une de vos questions." } },
-    { id: 115, author: "Margaret Atwood", source: "The Handmaid's Tale", text: { en: "Nolite te bastardes carborundorum.", nl: "Nolite te bastardes carborundorum.", fr: "Nolite te bastardes carborundorum." } }, // Iconic Latin phrase, remains untranslated by design
+    { id: 115, author: "Margaret Atwood", source: "The Handmaid's Tale", text: { en: "Nolite te bastardes carborundorum.", nl: "Nolite te bastardes carborundorum.", fr: "Nolite te bastardes carborundorum." } }, 
     { id: 116, author: "Neil Gaiman", source: "American Gods", text: { en: "Things need not have happened to be true. Tales and dreams are the shadow-truths that will endure when mere facts are dust and ashes, and forgot.", nl: "Dingen hoeven niet gebeurd te zijn om waar te zijn. Verhalen en dromen zijn de schaduwwaarheden die zullen voortbestaan wanneer louter feiten stof en as zijn, en vergeten.", fr: "Les choses n'ont pas besoin de s'être produites pour être vraies. Les contes et les rêves sont les vérités de l'ombre qui perdureront quand les simples faits ne seront que poussière et cendres, et oubliés." } },
     { id: 117, author: "Douglas Adams", source: "The Hitchhiker's Guide to the Galaxy", text: { en: "I'd far rather be happy than right any day.", nl: "Ik ben veel liever gelukkig dan dat ik altijd gelijk heb.", fr: "Je préfère de loin être heureux qu'avoir raison." } },
     { id: 118, author: "Douglas Adams", source: "The Hitchhiker's Guide to the Galaxy", text: { en: "If there's anything more important than my ego around, I want it caught and shot now.", nl: "Als er iets belangrijkers in de buurt is dan mijn ego, wil ik dat het nu wordt gevangen en neergeschoten.", fr: "S'il y a quelque chose de plus important que mon ego dans les parages, je veux qu'on l'attrape et qu'on l'abatte tout de suite." } },
@@ -722,43 +712,7 @@ export async function onRequest(context) {
     { id: 149, author: "Marie Curie", source: "Attributed", text: { en: "Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less.", nl: "Niets in het leven is om gevreesd te worden, het is alleen om begrepen te worden. Nu is het tijd om meer te begrijpen, zodat we minder hoeven te vrezen.", fr: "Rien dans la vie ne doit être craint, tout doit être compris. C'est le moment de comprendre davantage, afin de craindre moins." } },
     { id: 150, author: "Charles Darwin", source: "On the Origin of Species", text: { en: "It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.", nl: "Het is niet de sterkste van de soort die overleeft, noch de meest intelligente. Het is degene die zich het beste kan aanpassen aan verandering.", fr: "Ce n'est pas la plus forte des espèces qui survit, ni la plus intelligente. C'est celle qui est la plus adaptable au changement." } }
   ];
-
-  const url = new URL(context.request.url);
-  const seenParam = url.searchParams.get('seen');
-  let seenIds = [];
-  
-  if (seenParam) {
-    seenIds = seenParam.split(',').map(id => parseInt(id, 10)).filter(id => !isNaN(id));
-  }
-
-  // --- STRICT OVERRIDE FOR QUOTE 1 (Douglas Adams) ---
-  if (seenIds.length === 0) {
-    return new Response(JSON.stringify(quotes[0]), {
-      headers: {
-        'content-type': 'application/json',
-        'Cache-Control': 'no-store, max-age=0, must-revalidate',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
-  }
-
-  // Filter out the quotes the user has already seen
-  let availableQuotes = quotes.filter(q => !seenIds.includes(q.id));
-
-  // Seamless history wipe if they read absolutely everything (all 150)
-  if (availableQuotes.length === 0) {
-    availableQuotes = quotes;
-  }
-
-  // Pick a random quote from the remaining pool
-  const randomIndex = Math.floor(Math.random() * availableQuotes.length);
-  const selectedQuote = availableQuotes[randomIndex];
-
-  return new Response(JSON.stringify(selectedQuote), {
-    headers: {
-      'content-type': 'application/json',
-      'Cache-Control': 'no-store, max-age=0, must-revalidate',
-      'Access-Control-Allow-Origin': '*'
-    }
-  });
+  const u = new URL(context.request.url), s = u.searchParams.get('seen');
+  a = a.length ? a : quotes;
+  return new Response(JSON.stringify(v.length === 0 ? quotes[0] : a[Math.floor(Math.random() * a.length)]), { headers: { 'content-type': 'application/json', 'Cache-Control': 'no-store, max-age=0, must-revalidate', 'Access-Control-Allow-Origin': '*' } });
 }
