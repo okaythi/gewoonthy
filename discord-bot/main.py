@@ -54,9 +54,7 @@ class MyClient(discord.Client):
         print(f'Logged in as {self.user}')
         print(f'Latency: {round(self.latency * 1000)}ms')
 
-intents = discord.Intents.default()
-intents.members = True
-client = MyClient(intents=intents)
+client = MyClient()
 
 if __name__ == '__main__':
     # Start the web server
