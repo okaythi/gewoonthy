@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import AntiCapture from '../components/AntiCapture.astro';
 ---
 <html lang="en">
   <head>
@@ -49,17 +50,23 @@ import { ClientRouter } from 'astro:transitions';
         <div id="quote-source" class="source"></div>
       </div>
     </div>
+    <AntiCapture />
     <div id="consent-toast" class="consent-toast">
       <span>Looks like you're in the EU. I use local storage to remember which quotes you've seen. You can <a href="/privacy" class="privacy-link">read what data I collect and how it is used</a>.</span>
       <div class="consent-actions"><button id="consent-accept">Accept</button><button id="consent-decline">Decline</button></div>
     </div>
-    <script>
-      document.addEventListener('astro:page-load', () => {
+    <script data-astro-rerun>
+      (() => {
         const langPicker = document.getElementById('lang-picker');
         if (!langPicker) return; 
-        document.addEventListener('contextmenu', e => { if (!e.target.closest('#quote-text')) { e.preventDefault(); } });
-        document.addEventListener('copy', e => { const selection = window.getSelection(); if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) { e.preventDefault(); return false; } });
-        document.addEventListener('keydown', e => { if (e.key === 'F12') e.preventDefault(); if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(event.key)) e.preventDefault(); if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault(); });
+
+        if (!window.readPageListenersAttached) {
+          document.addEventListener('contextmenu', e => { if (!e.target.closest('#quote-text')) { e.preventDefault(); } });
+          document.addEventListener('copy', e => { const selection = window.getSelection(); if (!e.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) { e.preventDefault(); return false; } });
+          document.addEventListener('keydown', e => { if (e.key === 'F12') e.preventDefault(); if (e.ctrlKey && e.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(e.key)) e.preventDefault(); if (e.ctrlKey && ['U', 'u'].includes(e.key)) e.preventDefault(); });
+          window.readPageListenersAttached = true;
+        }
+
         const euCountries = ['AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'NO', 'IS', 'LI', 'CH'];
         let storageAllowed = false;
         let currentQuoteData = null; 
@@ -69,6 +76,7 @@ import { ClientRouter } from 'astro:transitions';
         const quoteBox = document.getElementById('quote-box');
         const savedLang = localStorage.getItem('pref_lang') || 'en';
         langPicker.value = savedLang;
+
         langPicker.addEventListener('change', (e) => {
           const selectedLang = e.target.value;
           localStorage.setItem('pref_lang', selectedLang);
@@ -77,6 +85,7 @@ import { ClientRouter } from 'astro:transitions';
             setTimeout(() => { textEl.textContent = `"${currentQuoteData.text[selectedLang]}"`; textEl.style.opacity = 1; }, 200);
           }
         });
+
         async function init() {
           const consent = localStorage.getItem('eu_consent');
           if (consent === 'accepted') { storageAllowed = true; fetchQuote(); return; } 
@@ -90,6 +99,7 @@ import { ClientRouter } from 'astro:transitions';
             else { storageAllowed = true; fetchQuote(); }
           } catch (e) { showToast(); }
         }
+
         function showToast() {
           const toast = document.getElementById('consent-toast');
           toast.classList.add('visible');
@@ -102,6 +112,7 @@ import { ClientRouter } from 'astro:transitions';
             localStorage.setItem('eu_consent', 'declined'); storageAllowed = false; toast.classList.remove('visible');
           });
         }
+
         async function fetchQuote() {
           let seenQuotes = [];
           if (storageAllowed || localStorage.getItem('eu_consent') === 'accepted') {
@@ -122,6 +133,7 @@ import { ClientRouter } from 'astro:transitions';
             authorEl.textContent = ""; sourceEl.textContent = ""; quoteBox.classList.add('visible');
           }
         }
+
         function saveQuoteToStorage(id) {
           let seenQuotes = [];
           try { const stored = localStorage.getItem('seenQuotes'); if (stored) seenQuotes = JSON.parse(stored); } catch(e) {}
@@ -131,8 +143,9 @@ import { ClientRouter } from 'astro:transitions';
             localStorage.setItem('seenQuotes', JSON.stringify(seenQuotes));
           }
         }
+
         init();
-      });
+      })();
     </script>
   </body>
 </html>
