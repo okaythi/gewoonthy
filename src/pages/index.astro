@@ -38,9 +38,8 @@ import AntiCapture from '../components/AntiCapture.astro';
       }
       .suggestion-input.active { width: 250px; padding: 8px 15px; opacity: 1; pointer-events: all; }
       .suggestion-input:focus { outline: none; border-color: #888; }
-      .suggest-btn { background: none; border: none; color: #444; cursor: pointer; transition: color 0.2s ease; padding: 0; display: flex; }
-      .suggest-btn:hover { color: #fff; }
-      .suggest-btn svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 2; fill: none; }
+      .suggest-btn { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; cursor: pointer; transition: all 0.2s ease; padding: 8px 15px; border-radius: 20px; font-size: 0.8rem; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; }
+      .suggest-btn:hover { background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.4); transform: scale(1.02); }
       
       /* Micro Modal */
       dialog { 
@@ -180,19 +179,19 @@ import AntiCapture from '../components/AntiCapture.astro';
       });
       document.addEventListener('astro:page-load', () => {
 
-        if (!window.suggestionAttached) {
-           const suggestBtn = document.getElementById('suggest-btn');
-           const suggestInput = document.getElementById('suggest-input');
-           const modal = document.getElementById('suggest-modal');
-           const honeypot = document.getElementById('hp-bot-trap');
-           let submissionCount = 0;
-           let lastSubmissionTime = Date.now();
+        const suggestBtn = document.getElementById('suggest-btn');
+        const suggestInput = document.getElementById('suggest-input');
+        const modal = document.getElementById('suggest-modal');
+        const honeypot = document.getElementById('hp-bot-trap');
+        
+        window.suggestionSubmissionCount = window.suggestionSubmissionCount || 0;
+        window.suggestionLastTime = window.suggestionLastTime || Date.now();
 
            async function handleSuggestionSubmit() {
                const query = suggestInput.value.trim();
                if (!query) return;
-               if (Date.now() - lastSubmissionTime > 300000) { submissionCount = 0; lastSubmissionTime = Date.now(); }
-               if (submissionCount >= 5) { alert('Limit reached.'); return; }
+               if (Date.now() - window.suggestionLastTime > 300000) { window.suggestionSubmissionCount = 0; window.suggestionLastTime = Date.now(); }
+               if (window.suggestionSubmissionCount >= 5) { alert('Limit reached.'); return; }
                if (honeypot.value) return;
 
                suggestInput.value = 'Fetching...';
@@ -238,7 +237,7 @@ import AntiCapture from '../components/AntiCapture.astro';
            document.getElementById('modal-cancel').addEventListener('click', () => modal.close());
            
            document.getElementById('modal-confirm').addEventListener('click', async () => {
-              submissionCount++;
+              window.suggestionSubmissionCount++;
               const track = document.getElementById('modal-track').textContent;
               const artist = document.getElementById('modal-artist').textContent;
               const alias = document.getElementById('modal-alias').value.trim();
@@ -258,9 +257,6 @@ import AntiCapture from '../components/AntiCapture.astro';
               document.getElementById('modal-alias').value = '';
               alert('Suggestion sent! Thanks.');
            });
-
-           window.suggestionAttached = true;
-        }
 
         const player = document.getElementById('main-player');
         if (!player) return; 
