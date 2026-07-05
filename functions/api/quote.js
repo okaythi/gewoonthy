@@ -1,4 +1,5 @@
 // Serves localized quote payloads via dynamic exclusion filtering and history reconciliation.
+
 export async function onRequest(context) {
   const quotes = [
     { 
