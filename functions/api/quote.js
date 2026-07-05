@@ -714,6 +714,8 @@ export async function onRequest(context) {
     { id: 150, author: "Charles Darwin", source: "On the Origin of Species", text: { en: "It is not the strongest of the species that survives, nor the most intelligent that survives. It is the one that is most adaptable to change.", nl: "Het is niet de sterkste van de soort die overleeft, noch de meest intelligente. Het is degene die zich het beste kan aanpassen aan verandering.", fr: "Ce n'est pas la plus forte des espèces qui survit, ni la plus intelligente. C'est celle qui est la plus adaptable au changement." } }
   ];
   const u = new URL(context.request.url), s = u.searchParams.get('seen');
+  const v = s ? s.split(',').map(Number) : [];
+  let a = quotes.filter(q => !v.includes(q.id));
   a = a.length ? a : quotes;
-  return new Response(JSON.stringify(v.length === 0 ? quotes[0] : a[Math.floor(Math.random() * a.length)]), { headers: { 'content-type': 'application/json', 'Cache-Control': 'no-store, max-age=0, must-revalidate', 'Access-Control-Allow-Origin': '*' } });
+  return new Response(JSON.stringify(a[Math.floor(Math.random() * a.length)]), { headers: { 'content-type': 'application/json', 'Cache-Control': 'no-store, max-age=0, must-revalidate', 'Access-Control-Allow-Origin': '*' } });
 }
