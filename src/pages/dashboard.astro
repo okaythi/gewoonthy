@@ -740,17 +740,19 @@ import AntiCapture from '../components/AntiCapture.astro';
 
       async function loadCloseFriends() {
          try {
-            const res = await fetch('/api/admin/close-friends', { credentials: 'same-origin' });
+            const res = await fetch('/api/admin/close-friends', { credentials: 'include' });
             if (res.ok) {
                closeFriends = await res.json();
                renderCloseFriends();
+            } else {
+               renderCloseFriends();
             }
-         } catch(e){}
+         } catch(e){ renderCloseFriends(); }
       }
 
       function renderCloseFriends() {
-         if (closeFriends.length === 0) {
-            friendsListContainer.innerHTML = '<div style="text-align:center; color:var(--text-secondary);">No close friends added.</div>';
+         if (!closeFriends || closeFriends.length === 0) {
+            friendsListContainer.innerHTML = '<div style="text-align:center; color:var(--text-secondary); margin-top:20px; font-style:italic;">No Close Friends yet...<br>Looks like someone needs to go outside and make some real friends. 💀</div>';
             return;
          }
          friendsListContainer.innerHTML = closeFriends.map(f => `
@@ -768,12 +770,12 @@ import AntiCapture from '../components/AntiCapture.astro';
       }
 
       window.removeFriend = async (userId) => {
-         await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'same-origin' });
+         await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
          loadCloseFriends();
       };
 
       window.addFriend = async (user) => {
-         await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'same-origin' });
+         await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
          searchResults.style.display = 'none';
          searchInput.value = '';
          loadCloseFriends();
@@ -790,7 +792,7 @@ import AntiCapture from '../components/AntiCapture.astro';
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(async () => {
                try {
-                  const res = await fetch('/api/admin/search-members?q=' + encodeURIComponent(q), { credentials: 'same-origin' });
+                  const res = await fetch('/api/admin/search-members?q=' + encodeURIComponent(q), { credentials: 'include' });
                   if (res.ok) {
                      const members = await res.json();
                      if (members.length === 0) {
