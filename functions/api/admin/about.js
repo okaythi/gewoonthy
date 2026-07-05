@@ -1,22 +1,26 @@
 export async function onRequest({ request, env }) {
-  if (!env.QUOTE_DB) return new Response('DB not bound', { status: 500 });
+  if (!env.ABOUT_ME) return new Response('DB not bound', { status: 500 });
 
   try {
     if (request.method === 'GET') {
-      const { results } = await env.QUOTE_DB.prepare(`SELECT * FROM about_blocks ORDER BY order_index ASC`).all();
+      const { results } = await env.ABOUT_ME.prepare(`SELECT * FROM about_blocks ORDER BY order_index ASC`).all();
       return new Response(JSON.stringify(results), { headers: { 'Content-Type': 'application/json' } });
     }
 
     if (request.method === 'POST') {
       const blocks = await request.json();
+      
+      const ip = request.headers.get('cf-connecting-ip') || 'unknown';
+      const timeBrussels = new Date().toLocaleString("en-BE", {timeZone: "Europe/Brussels"});
+
       // Bulk replace blocks
-      await env.QUOTE_DB.prepare(`DELETE FROM about_blocks`).run();
+      await env.ABOUT_ME.prepare(`DELETE FROM about_blocks`).run();
       
       const stmts = blocks.map((b, i) => 
-        env.QUOTE_DB.prepare(`INSERT INTO about_blocks (type, content, order_index) VALUES (?, ?, ?)`).bind(b.type, b.content, i)
+        env.ABOUT_ME.prepare(`INSERT INTO about_blocks (type, content, order_index, edited_by_ip, updated_at) VALUES (?, ?, ?, ?, ?)`).bind(b.type, b.content, i, ip, timeBrussels)
       );
       if (stmts.length > 0) {
-        await env.QUOTE_DB.batch(stmts);
+        await env.ABOUT_ME.batch(stmts);
       }
       return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });
     }
