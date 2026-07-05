@@ -8,15 +8,18 @@ import AntiCapture from '../components/AntiCapture.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>About Me</title>
     <ClientRouter />
-    <style>
+    <style is:global>
       :root {
-        --bg: #000;
+        --bg: #050505;
         --fg: #f0f0f0;
-        --accent: #888;
+        --accent: #a3a3a3;
+        --border: rgba(255, 255, 255, 0.08);
+        --glass-bg: rgba(255, 255, 255, 0.02);
+        --glass-hover: rgba(255, 255, 255, 0.04);
       }
       body {
         margin: 0; padding: 0; background: var(--bg); color: var(--fg);
-        font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+        font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
         min-height: 100dvh;
         padding-top: env(safe-area-inset-top, 20px);
         padding-bottom: env(safe-area-inset-bottom, 20px);
@@ -25,63 +28,156 @@ import AntiCapture from '../components/AntiCapture.astro';
         overflow-x: hidden;
       }
       .container {
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
+        padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 2rem);
       }
       /* Hardware accelerated nav */
       .nav {
         position: fixed;
         top: 0; left: 0; width: 100%;
-        padding: clamp(1rem, 3vw, 2rem);
-        background: rgba(0,0,0,0.8);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+        background: rgba(5, 5, 5, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
         transform: translate3d(0,0,0);
         z-index: 50;
         display: flex; justify-content: flex-start;
       }
       .back-btn {
-        color: var(--fg); text-decoration: none;
+        color: var(--accent); text-decoration: none;
         display: flex; align-items: center; gap: 8px;
-        font-weight: 600; font-size: clamp(0.9rem, 2vw, 1.1rem);
-        transition: color 0.2s;
+        font-weight: 500; font-size: 0.95rem;
+        transition: color 0.3s ease;
         -webkit-tap-highlight-color: transparent;
       }
-      .back-btn:hover { color: var(--accent); }
-      .back-btn svg { width: 24px; height: 24px; }
+      .back-btn:hover { color: var(--fg); }
+      .back-btn svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
+      .back-btn:hover svg { transform: translateX(-4px); }
+      
+      .pfp-container {
+        display: flex; justify-content: center; margin-bottom: 4rem;
+        position: relative;
+      }
+      .pfp-container::before {
+        content: '';
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 140px; height: 140px;
+        transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .pfp {
+        width: clamp(100px, 15vw, 130px);
+        height: clamp(100px, 15vw, 130px);
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #111;
+        border: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+      }
+      .pfp:hover {
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.05);
+      }
+      
+      #blocks-root {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3rem, 6vw, 5rem);
+      }
       
       /* Block styling */
       .block {
-        margin-bottom: clamp(2rem, 4vw, 4rem);
-        opacity: 0; transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        opacity: 0; transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .block.visible { opacity: 1; transform: translateY(0); }
       
-      /* Typography */
-      .p-block {
-        font-size: clamp(1rem, 2.5vw, 1.25rem);
-        line-height: 1.6;
-        color: #d9d9d9;
-      }
-      .img-block img {
-        width: 100%;
-        border-radius: 8px;
-        background: #111;
-        object-fit: cover;
-      }
-      .timeline-block {
-        border-left: 2px solid var(--accent);
-        padding-left: clamp(1rem, 3vw, 2rem);
-        margin-left: clamp(0.5rem, 1.5vw, 1rem);
-      }
-      .timeline-date {
-        font-weight: 900;
+      .category-title {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
         color: var(--accent);
-        font-size: clamp(0.8rem, 2vw, 1rem);
-        letter-spacing: 1px;
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .category-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+      }
+      
+      /* Sleek Grid */
+      .fields-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+      }
+      
+      /* Full width for Bio or long text */
+      .fields-grid:has(.field-card.is-bio) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      .field-card {
+        background: var(--glass-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .field-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .field-card:hover {
+        background: var(--glass-hover);
+        border-color: rgba(255,255,255,0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .field-card:hover::before {
+        opacity: 1;
+      }
+      
+      .field-label {
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .field-value {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #e2e2e2;
+        white-space: pre-wrap;
+        font-weight: 300;
+        position: relative;
+        z-index: 1;
       }
       
       .empty-state {
@@ -93,61 +189,8 @@ import AntiCapture from '../components/AntiCapture.astro';
         text-align: center;
         font-style: italic;
         color: var(--accent);
-        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-      }
-      
-      .category-title {
-        font-size: clamp(1.2rem, 3vw, 1.5rem);
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: var(--fg);
-        margin-bottom: 1.5rem;
-        border-bottom: 1px solid #333;
-        padding-bottom: 0.5rem;
-      }
-      
-      .field-row {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1rem;
-      }
-      
-      @media (min-width: 600px) {
-        .field-row {
-          flex-direction: row;
-          align-items: baseline;
-        }
-      }
-      
-      .field-label {
-        font-weight: 700;
-        color: var(--accent);
-        min-width: 150px;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-        margin-bottom: 0.25rem;
-      }
-      
-      .field-value {
-        flex: 1;
-        font-size: clamp(1rem, 2vw, 1.1rem);
-        line-height: 1.6;
-        color: #d9d9d9;
-        white-space: pre-wrap;
-      }
-      
-      .pfp-container {
-        display: flex; justify-content: center; margin-bottom: 2rem;
-      }
-      .pfp {
-        width: clamp(100px, 15vw, 150px);
-        height: clamp(100px, 15vw, 150px);
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--accent);
-        background-color: #111;
+        font-size: 1.2rem;
+        font-weight: 300;
       }
       
       @media (pointer: coarse) {
@@ -166,7 +209,7 @@ import AntiCapture from '../components/AntiCapture.astro';
       <div class="pfp-container">
         <img id="about-pfp" src="/media/about_me_pfp.png" class="pfp" alt="thy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23333\' stroke=\'%23888\' stroke-width=\'1\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><circle cx=\'12\' cy=\'8\' r=\'5\'/><path d=\'M20 21a8 8 0 0 0-16 0\'/></svg>'">
       </div>
-      <div id="blocks-root" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+      <div id="blocks-root">
         <div class="empty-state">Loading...</div>
       </div>
     </main>
