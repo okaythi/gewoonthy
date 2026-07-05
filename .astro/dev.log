@@ -1,0 +1,21 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.0.4 ready in 10218 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] / 202ms","label":null,"level":"info"}
+{"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
+{"message":"dependencies optimized: astro/virtual-modules/transitions-events.js, astro/virtual-modules/transitions-router.js, astro/virtual-modules/transitions-swap-functions.js, astro/virtual-modules/transitions-types.js","label":"vite","level":"info"}
+{"message":"[200] / 45ms","label":null,"level":"info"}
+{"message":"[404] /api/videos 38ms","label":null,"level":"info"}
+{"message":"[404] POST /api/analytics 2ms","label":null,"level":"info"}
+{"message":"[404] /api/videos 3ms","label":null,"level":"info"}
+{"message":"[200] /read 75ms","label":null,"level":"info"}
+{"message":"[200] /read 10ms","label":null,"level":"info"}
+{"message":"[404] /cdn-cgi/trace 6ms","label":null,"level":"info"}
+{"message":"[404] /api/quote 2ms","label":null,"level":"info"}
+{"message":"[200] /read 26ms","label":null,"level":"info"}
+{"message":"[404] POST /api/analytics 4ms","label":null,"level":"info"}
+{"message":"[404] /cdn-cgi/trace 1ms","label":null,"level":"info"}
+{"message":"[404] /api/quote 1ms","label":null,"level":"info"}

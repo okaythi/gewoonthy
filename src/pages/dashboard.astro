@@ -1,11 +1,12 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import AntiCapture from '../components/AntiCapture.astro';
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>System Dashboard V2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Admin Dashboard</title>
     <ClientRouter />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
@@ -162,11 +163,14 @@ import { ClientRouter } from 'astro:transitions';
   </head>
   <body>
     <div class="sidebar">
-      <div class="brand">System V2</div>
+      <div class="brand">Admin Dashboard</div>
       <div class="nav-item active" data-target="analytics">📊 Analytics</div>
+      <div class="nav-item" data-target="suggestions">🎶 Suggestions</div>
       <div class="nav-item" data-target="trust">🛡️ Trust & Safety</div>
       <div class="nav-item" data-target="quotes">🖋️ Localization</div>
       <div class="nav-item" data-target="vault">📂 Media Vault</div>
+      <div class="nav-item" data-target="close-friends">👥 Close Friends</div>
+      <div class="nav-item" data-target="about-editor">📖 About Editor</div>
       <div class="nav-item" data-target="config">⚙️ Config</div>
       
       <div class="theme-switch" id="theme-switch">🌓 Toggle Theme</div>
@@ -188,6 +192,35 @@ import { ClientRouter } from 'astro:transitions';
           <div class="card">
              <h2>Language Preferences</h2>
              <div class="chart-container" style="height:300px;"><canvas id="langChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SUGGESTIONS SECTION -->
+      <div id="suggestions" class="section">
+        <div class="header">
+          <h1>Track Suggestions Kanban</h1>
+          <button id="btn-wipe-discarded" class="btn btn-danger">Wipe Discarded</button>
+        </div>
+        <div class="dashboard-grid full">
+          <div class="card">
+            <h2>User Submissions</h2>
+            <div style="overflow-y:auto; max-height: 600px;">
+              <table class="data-table" id="suggestions-table">
+                <thead>
+                  <tr>
+                    <th>Track</th>
+                    <th>Artist</th>
+                    <th>Alias</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="5" style="text-align:center;">Loading DB...</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -259,9 +292,9 @@ import { ClientRouter } from 'astro:transitions';
         
         <div class="dashboard-grid">
           <div class="card">
-            <h2>R2 Object Explorer (Right-Click for options)</h2>
+            <h2>R2 Object Explorer (Right-Click a file for options)</h2>
             <ul class="file-tree" id="file-tree">
-              <li style="padding:1rem; text-align:center;">Loading Vault...</li>
+              <li style="padding:1rem; text-align:center; color:var(--text-secondary);">Loading Vault...</li>
             </ul>
           </div>
           
@@ -310,6 +343,56 @@ import { ClientRouter } from 'astro:transitions';
           </div>
         </div>
       </div>
+
+      <!-- CLOSE FRIENDS SECTION -->
+      <div id="close-friends" class="section">
+        <div class="header">
+          <h1>Close Friends Manager</h1>
+        </div>
+        <div class="dashboard-grid">
+          <div class="card">
+            <h2>Search Server Members</h2>
+            <div style="position: relative;">
+               <input type="text" id="friend-search-input" placeholder="Type a username..." style="width:100%; padding:10px; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:6px; font-family:inherit; outline:none;">
+               <div id="friend-search-results" style="position:absolute; top:100%; left:0; right:0; background:var(--bg-panel); backdrop-filter: blur(10px); border:1px solid var(--border); border-radius:6px; max-height:200px; overflow-y:auto; z-index:10; display:none; flex-direction:column; margin-top:5px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+               </div>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Current Close Friends</h2>
+            <div id="close-friends-list" style="display:flex; flex-direction:column; gap:10px; max-height: 400px; overflow-y:auto;">
+               <div style="text-align:center; color:var(--text-secondary);">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT EDITOR SECTION -->
+      <div id="about-editor" class="section">
+        <div class="header">
+          <h1>Headless About Editor</h1>
+          <button id="btn-save-about" class="btn">Deploy About Page</button>
+        </div>
+        <div class="dashboard-grid full">
+          <div class="card">
+            <h2>Profile Data Matrix</h2>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:20px;">
+              Fill in the default fields, or add custom categories and fields below. The frontend will automatically group and parse them into a sleek grid.
+            </p>
+            <div id="about-blocks-container" style="display:flex; flex-direction:column; gap:20px;"></div>
+            
+            <div style="margin-top:30px; padding-top:20px; border-top: 1px solid var(--border);">
+               <h3 style="margin-top:0; font-size:1rem;">Add Custom Field</h3>
+               <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                 <input type="text" id="new-field-category" placeholder="Category (e.g. Favorites)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
+                 <input type="text" id="new-field-label" placeholder="Label (e.g. Movie)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
+                 <input type="text" id="new-field-value" placeholder="Value (e.g. Interstellar)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px; flex:1;">
+                 <button class="btn" onclick="addCustomField()">+ Add Field</button>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
     </div>
 
@@ -328,92 +411,115 @@ import { ClientRouter } from 'astro:transitions';
       </div>
     </div>
 
+
+    <AntiCapture />
     <script type="module">
       import Chart from 'chart.js/auto';
 
-      // --- UI Interactivity ---
-      const navItems = document.querySelectorAll('.nav-item');
-      const sections = document.querySelectorAll('.section');
-      
-      navItems.forEach(item => {
-        item.addEventListener('click', () => {
-          navItems.forEach(n => n.classList.remove('active'));
-          sections.forEach(s => s.classList.remove('active'));
-          item.classList.add('active');
-          document.getElementById(item.dataset.target).classList.add('active');
+      document.addEventListener('astro:page-load', () => {
+        // --- UI Interactivity ---
+        const navItems = document.querySelectorAll('.nav-item');
+        const sections = document.querySelectorAll('.section');
+        
+        navItems.forEach(item => {
+          item.addEventListener('click', () => {
+            navItems.forEach(n => n.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            item.classList.add('active');
+            document.getElementById(item.dataset.target).classList.add('active');
+          });
         });
-      });
 
-      document.getElementById('theme-switch').addEventListener('click', () => {
-        document.body.classList.toggle('theme-light');
-      });
+        document.getElementById('theme-switch').addEventListener('click', () => {
+          document.body.classList.toggle('theme-light');
+        });
 
-      // --- Context Menu Logic ---
-      const ctxMenu = document.getElementById('context-menu');
-      let currentFileKey = null;
+        // --- Context Menu Logic ---
+        const ctxMenu = document.getElementById('context-menu');
+        if (ctxMenu) {
+           document.addEventListener('click', () => { ctxMenu.style.display = 'none'; });
+        }
+        
+        const btnCtxDelete = document.getElementById('ctx-delete');
+        if (btnCtxDelete) {
+           btnCtxDelete.addEventListener('click', async () => {
+              if(!confirm(`Delete ${window.currentFileKey}?`)) return;
+              await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'delete', key: window.currentFileKey }), credentials: 'same-origin' });
+              window.loadVault();
+           });
+        }
 
-      document.addEventListener('click', () => { ctxMenu.style.display = 'none'; });
-      
-      document.getElementById('ctx-delete').addEventListener('click', async () => {
-         if(!confirm(`Delete ${currentFileKey}?`)) return;
-         await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'delete', key: currentFileKey }) });
-         loadVault();
-      });
+        const btnCtxRename = document.getElementById('ctx-rename');
+        if (btnCtxRename) {
+           btnCtxRename.addEventListener('click', async () => {
+              const newName = prompt(`Rename ${window.currentFileKey} to (must start with media/):`, window.currentFileKey);
+              if(!newName || newName === window.currentFileKey) return;
+              await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'rename', key: window.currentFileKey, newKey: newName }), credentials: 'same-origin' });
+              window.loadVault();
+           });
+        }
 
-      document.getElementById('ctx-rename').addEventListener('click', async () => {
-         const newName = prompt(`Rename ${currentFileKey} to (must start with media/):`, currentFileKey);
-         if(!newName || newName === currentFileKey) return;
-         await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'rename', key: currentFileKey, newKey: newName }) });
-         loadVault();
-      });
+        const btnCtxPlay = document.getElementById('ctx-play');
+        if (btnCtxPlay) {
+           btnCtxPlay.addEventListener('click', async () => {
+              const res = await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'play_token', key: window.currentFileKey }), credentials: 'same-origin' });
+           const data = await res.json();
+           const modal = document.getElementById('sandbox-modal');
+           const player = document.getElementById('sandbox-player');
+           player.src = data.url;
+           modal.style.display = 'flex';
+        });
+        }
 
-      document.getElementById('ctx-play').addEventListener('click', async () => {
-         const res = await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'play_token', key: currentFileKey }) });
-         const data = await res.json();
-         const modal = document.getElementById('sandbox-modal');
-         const player = document.getElementById('sandbox-player');
-         player.src = data.url;
-         modal.style.display = 'flex';
-      });
+        const btnModalClose = document.getElementById('modal-close');
+        if (btnModalClose) {
+           btnModalClose.addEventListener('click', () => {
+              document.getElementById('sandbox-modal').style.display = 'none';
+              document.getElementById('sandbox-player').pause();
+              document.getElementById('sandbox-player').removeAttribute('src');
+           });
+        }
 
-      document.getElementById('modal-close').addEventListener('click', () => {
-         document.getElementById('sandbox-modal').style.display = 'none';
-         document.getElementById('sandbox-player').pause();
-         document.getElementById('sandbox-player').removeAttribute('src');
-      });
+        // --- Data Loading ---
+        window.vaultFiles = [];
 
-      // --- Data Loading ---
-      let vaultFiles = [];
-
-      async function loadVault() {
+        window.loadVault = async () => {
          try {
-           const res = await fetch('/api/admin/r2-explorer');
+           const res = await fetch('/api/admin/r2-explorer', { credentials: 'same-origin' });
            if (res.ok) {
              vaultFiles = await res.json();
              const tree = document.getElementById('file-tree');
-             tree.innerHTML = vaultFiles.map(f => `
-               <li class="file-item" data-key="${f.key}">
-                 <div>📄 ${f.key}</div>
-                 <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB</div>
-               </li>
-             `).join('');
-             
-             document.querySelectorAll('.file-item').forEach(li => {
-               li.addEventListener('contextmenu', (e) => {
-                 e.preventDefault();
-                 currentFileKey = li.dataset.key;
-                 ctxMenu.style.display = 'block';
-                 ctxMenu.style.left = e.pageX + 'px';
-                 ctxMenu.style.top = e.pageY + 'px';
-               });
-             });
+             if(vaultFiles.length === 0) {
+                 tree.innerHTML = '<li style="padding:1rem; text-align:center; color:#888;">No files found in bucket.</li>';
+             } else {
+                 tree.innerHTML = vaultFiles.map(f => `
+                   <li class="file-item" data-key="${f.key}">
+                     <div>📄 ${f.key}</div>
+                     <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB</div>
+                   </li>
+                 `).join('');
+                 
+                 document.querySelectorAll('.file-item').forEach(li => {
+                   li.addEventListener('contextmenu', (e) => {
+                     e.preventDefault();
+                     currentFileKey = li.dataset.key;
+                     ctxMenu.style.display = 'block';
+                     ctxMenu.style.left = e.pageX + 'px';
+                     ctxMenu.style.top = e.pageY + 'px';
+                   });
+                 });
+             }
+           } else {
+             document.getElementById('file-tree').innerHTML = '<li style="padding:1rem; text-align:center; color:var(--danger);">Error loading vault. Database/Bucket missing?</li>';
            }
-         } catch(e) {}
+         } catch(e) {
+           document.getElementById('file-tree').innerHTML = '<li style="padding:1rem; text-align:center; color:var(--danger);">Network Error loading vault.</li>';
+         }
       }
 
       async function loadQuotes() {
          try {
-           const res = await fetch('/api/admin/quotes');
+           const res = await fetch('/api/admin/quotes', { credentials: 'same-origin' });
            if(res.ok) {
              const quotes = await res.json();
              const tbody = document.querySelector('#quotes-table tbody');
@@ -428,6 +534,9 @@ import { ClientRouter } from 'astro:transitions';
                   <td class="editable ${nlClass}" onclick="editQuote(${q.id}, 'text_nl', '${(q.text_nl || '').replace(/'/g, "\\'")}')">${q.text_nl || 'MISSING'}</td>
                   <td class="editable ${frClass}" onclick="editQuote(${q.id}, 'text_fr', '${(q.text_fr || '').replace(/'/g, "\\'")}')">${q.text_fr || 'MISSING'}</td>
                   <td class="editable" onclick="editQuote(${q.id}, 'weight', ${q.weight})">${q.weight}</td>
+                  <td>
+                    <button onclick="fetch('/api/admin/quotes', {method:'DELETE', body:JSON.stringify({id:${q.id}}), credentials: 'same-origin'}).then(()=>loadQuotes())" class="btn btn-danger" style="padding:4px 8px; font-size:0.8rem;">Del</button>
+                  </td>
                 </tr>
                 `;
              }).join('');
@@ -447,20 +556,21 @@ import { ClientRouter } from 'astro:transitions';
          
          await fetch('/api/admin/quotes', {
             method: 'PUT',
-            body: JSON.stringify(q)
+            body: JSON.stringify(q),
+            credentials: 'same-origin'
          });
          loadQuotes();
       };
 
       async function loadThreats() {
          try {
-           const res = await fetch('/api/admin/telemetry');
+           const res = await fetch('/api/admin/telemetry', { credentials: 'same-origin' });
            if(res.ok) {
              const logs = await res.json();
              const tbody = document.querySelector('#threat-table tbody');
              tbody.innerHTML = logs.map(l => `
                 <tr>
-                  <td>${new Date(l.timestamp).toLocaleString()}</td>
+                  <td>${new Date(l.timestamp).toLocaleString('en-GB', { timeZone: 'Europe/Brussels', hour12: false })}</td>
                   <td style="color:var(--danger)">${l.ip_address}</td>
                   <td>${l.asn || 'N/A'}</td>
                   <td>${l.country}</td>
@@ -473,21 +583,92 @@ import { ClientRouter } from 'astro:transitions';
 
       document.getElementById('btn-clear-threats').addEventListener('click', async () => {
          if(confirm('Wipe the entire threat ledger?')) {
-            await fetch('/api/admin/telemetry', { method: 'DELETE' });
+            const btn = document.getElementById('btn-clear-threats');
+            const original = btn.textContent;
+            btn.textContent = 'Wiping...';
+            await fetch('/api/admin/telemetry', { method: 'DELETE', credentials: 'same-origin' });
             loadThreats();
+            btn.textContent = original;
+         }
+      });
+
+      async function loadSuggestions() {
+         try {
+           const res = await fetch('/api/admin/suggestions', { credentials: 'same-origin' });
+           if(res.ok) {
+             const suggs = await res.json();
+             const tbody = document.querySelector('#suggestions-table tbody');
+             tbody.innerHTML = suggs.map(s => `
+                <tr style="${s.status === 'discarded' ? 'opacity:0.5;' : ''}">
+                  <td>${s.track}</td>
+                  <td>${s.artist}</td>
+                  <td>${s.alias || 'Anonymous'}</td>
+                  <td>${s.status.toUpperCase()}</td>
+                  <td>
+                    ${s.status === 'pending' ? `<button onclick="updateSuggestion(${s.id}, 'approved')" class="btn" style="padding:4px 8px; font-size:0.8rem;">Approve</button>
+                    <button onclick="updateSuggestion(${s.id}, 'discarded')" class="btn btn-danger" style="padding:4px 8px; font-size:0.8rem;">Discard</button>` : ''}
+                  </td>
+                </tr>
+             `).join('');
+           }
+         } catch(e){}
+      }
+
+      window.updateSuggestion = async (id, status) => {
+         await fetch('/api/admin/suggestions', { method: 'PUT', body: JSON.stringify({ id, status }), credentials: 'same-origin' });
+         loadSuggestions();
+      };
+      
+      document.getElementById('btn-wipe-discarded').addEventListener('click', async () => {
+         if (confirm('Permanently delete all discarded suggestions?')) {
+            await fetch('/api/admin/suggestions', { method: 'DELETE', credentials: 'same-origin' });
+            loadSuggestions();
          }
       });
 
       document.getElementById('btn-export-script').addEventListener('click', () => {
-         let script = "#!/bin/bash\\n# Download all media\\n\\n";
+         const btn = document.getElementById('btn-export-script');
+         const original = btn.textContent;
+         btn.textContent = 'Generating...';
+         let script = "#!/bin/bash\n# Download all media\n\n";
          vaultFiles.forEach(f => {
-            script += `wget "https://gewoonthy.pages.dev/${f.key}"\\n`;
+            script += `wget "https://gewoonthy.pages.dev/${f.key}"\n`;
          });
          const blob = new Blob([script], { type: 'text/plain' });
          const a = document.createElement('a');
          a.href = URL.createObjectURL(blob);
          a.download = 'export_media.sh';
          a.click();
+         btn.textContent = original;
+      });
+
+      document.getElementById('btn-cron').addEventListener('click', async () => {
+         const btn = document.getElementById('btn-cron');
+         const original = btn.textContent;
+         btn.textContent = 'Triggering...';
+         try {
+            await fetch('/cdn-cgi/mf/scheduled', { method: 'POST', credentials: 'same-origin' }); // Local trigger
+         } catch(e) {}
+         setTimeout(() => { btn.textContent = original; alert('Cron Trigger sent.'); }, 1000);
+      });
+
+      document.getElementById('btn-save-config').addEventListener('click', async () => {
+         const btn = document.getElementById('btn-save-config');
+         const original = btn.textContent;
+         btn.textContent = 'Deploying Config...';
+         try {
+            await fetch('/api/admin/config', { 
+               method: 'POST', 
+               body: JSON.stringify({
+                  asnBlocklist: document.getElementById('asn-input').value,
+                  geoEuSpirit: document.getElementById('geo-eu-spirit').checked,
+                  geoGlobalMondai: document.getElementById('geo-global-mondai').checked,
+                  geoTor: document.getElementById('geo-tor').checked
+               }),
+               credentials: 'same-origin'
+            });
+         } catch(e) {}
+         setTimeout(() => { btn.textContent = original; alert('Configuration deployed instantly.'); }, 1000);
       });
 
       // --- Upload & Hash ---
@@ -518,12 +699,17 @@ import { ClientRouter } from 'astro:transitions';
 
          try {
            status.textContent = 'Requesting signature...';
-           const urlRes = await fetch(`/api/admin/upload?filename=${encodeURIComponent(file.name)}&type=${encodeURIComponent(file.type)}&hash=${hash}`);
+           const urlRes = await fetch(`/api/admin/upload?filename=${encodeURIComponent(file.name)}&type=${encodeURIComponent(file.type)}&hash=${hash}`, { credentials: 'same-origin' });
+           if (!urlRes.ok) {
+              const errText = await urlRes.text();
+              throw new Error(errText || urlRes.statusText);
+           }
            const { uploadUrl } = await urlRes.json();
            
            status.textContent = 'Uploading to Bucket...';
            const xhr = new XMLHttpRequest();
            xhr.open('PUT', uploadUrl, true);
+           xhr.withCredentials = true;
            xhr.setRequestHeader('Content-Type', file.type);
            xhr.upload.onprogress = (e) => {
              if (e.lengthComputable) {
@@ -542,14 +728,219 @@ import { ClientRouter } from 'astro:transitions';
            };
            xhr.send(file);
          } catch(e) {
-           status.textContent = 'Error initiating upload';
+           status.textContent = 'Error: ' + (e.message || 'Network failure');
          }
       }
+      
+      // --- Close Friends Manager ---
+      let closeFriends = [];
+      const searchInput = document.getElementById('friend-search-input');
+      const searchResults = document.getElementById('friend-search-results');
+      const friendsListContainer = document.getElementById('close-friends-list');
+
+      async function loadCloseFriends() {
+         try {
+            const res = await fetch('/api/admin/close-friends', { credentials: 'same-origin' });
+            if (res.ok) {
+               closeFriends = await res.json();
+               renderCloseFriends();
+            }
+         } catch(e){}
+      }
+
+      function renderCloseFriends() {
+         if (closeFriends.length === 0) {
+            friendsListContainer.innerHTML = '<div style="text-align:center; color:var(--text-secondary);">No close friends added.</div>';
+            return;
+         }
+         friendsListContainer.innerHTML = closeFriends.map(f => `
+            <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; border:1px solid var(--border);">
+               <div style="display:flex; align-items:center; gap:10px;">
+                  <img src="${f.avatar_url}" alt="Avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:1px solid var(--border);">
+                  <div>
+                     <div style="font-weight:600;">${f.display_name || f.username}</div>
+                     <div style="font-size:0.8rem; color:var(--text-secondary);">@${f.username}</div>
+                  </div>
+               </div>
+               <button onclick="removeFriend('${f.user_id}')" class="btn btn-danger" style="padding:6px 12px; font-size:0.8rem;">Remove</button>
+            </div>
+         `).join('');
+      }
+
+      window.removeFriend = async (userId) => {
+         await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'same-origin' });
+         loadCloseFriends();
+      };
+
+      window.addFriend = async (user) => {
+         await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'same-origin' });
+         searchResults.style.display = 'none';
+         searchInput.value = '';
+         loadCloseFriends();
+      };
+
+      let searchTimeout;
+      if (searchInput) {
+         searchInput.addEventListener('input', (e) => {
+            const q = e.target.value.trim();
+            if (!q) {
+               searchResults.style.display = 'none';
+               return;
+            }
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(async () => {
+               try {
+                  const res = await fetch('/api/admin/search-members?q=' + encodeURIComponent(q), { credentials: 'same-origin' });
+                  if (res.ok) {
+                     const members = await res.json();
+                     if (members.length === 0) {
+                        searchResults.innerHTML = '<div style="padding:10px; color:var(--text-secondary); text-align:center;">No members found.</div>';
+                     } else {
+                        searchResults.innerHTML = members.map(m => {
+                           const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url }).replace(/"/g, '&quot;');
+                           return \`
+                           <div onclick="addFriend(\${mStr})" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                              <img src="\${m.avatar_url}" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
+                              <div>
+                                 <div style="font-weight:600; font-size:0.9rem;">\${m.display_name || m.username}</div>
+                                 <div style="font-size:0.8rem; color:var(--text-secondary);">@\${m.username}</div>
+                              </div>
+                           </div>\`;
+                        }).join('');
+                     }
+                     searchResults.style.display = 'flex';
+                  }
+               } catch (err) {}
+            }, 300);
+         });
+         
+         document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+               searchResults.style.display = 'none';
+            }
+         });
+      }
+
+      loadCloseFriends();
+
+      // --- About Editor (Structured Categorized Fields) ---
+      let aboutBlocks = [];
+      const blocksContainer = document.getElementById('about-blocks-container');
+      
+      const defaultFields = [
+         { category: 'Personal', label: 'Name', value: '' },
+         { category: 'Personal', label: 'Location', value: '' },
+         { category: 'Personal', label: 'Occupation', value: '' },
+         { category: 'Personal', label: 'Languages', value: '' },
+         { category: 'Bio', label: 'Short Bio', value: '' },
+         { category: 'Bio', label: 'Long Bio', value: '' },
+         { category: 'Interests', label: 'Hobbies', value: '' },
+         { category: 'Interests', label: 'Favorite Music Genres', value: '' },
+         { category: 'Interests', label: 'Favorite Movies', value: '' },
+         { category: 'Links', label: 'GitHub', value: '' },
+         { category: 'Links', label: 'Twitter / X', value: '' },
+         { category: 'Links', label: 'LinkedIn', value: '' },
+         { category: 'Setup', label: 'OS', value: '' },
+         { category: 'Setup', label: 'Editor', value: '' }
+      ];
+
+      window.loadAboutBlocks = async () => {
+         try {
+            const res = await fetch('/api/admin/about', { credentials: 'same-origin' });
+            if(res.ok) {
+               const data = await res.json();
+               // If db is completely empty, initialize with default fields
+               if (data.length === 0) {
+                  aboutBlocks = defaultFields.map(f => ({ type: 'field', content: JSON.stringify(f) }));
+               } else {
+                  aboutBlocks = data;
+               }
+               renderAboutBlocks();
+            }
+         } catch(e){}
+      };
+
+      window.addCustomField = () => {
+         const cat = document.getElementById('new-field-category').value.trim();
+         const lab = document.getElementById('new-field-label').value.trim();
+         const val = document.getElementById('new-field-value').value.trim();
+         if(!cat || !lab) { alert('Category and Label are required'); return; }
+         aboutBlocks.push({ type: 'field', content: JSON.stringify({ category: cat, label: lab, value: val }) });
+         renderAboutBlocks();
+         document.getElementById('new-field-label').value = '';
+         document.getElementById('new-field-value').value = '';
+      };
+
+      window.removeAboutBlock = (index) => {
+         aboutBlocks.splice(index, 1);
+         renderAboutBlocks();
+      };
+
+      window.updateAboutBlock = (index, key, value) => {
+         try {
+            const c = JSON.parse(aboutBlocks[index].content);
+            c[key] = value;
+            aboutBlocks[index].content = JSON.stringify(c);
+         } catch(e){}
+      };
+
+      function renderAboutBlocks() {
+         // Group by category for rendering in editor
+         const groups = {};
+         aboutBlocks.forEach((b, i) => {
+            try {
+               const c = JSON.parse(b.content);
+               if(b.type === 'field' && c.category) {
+                  if(!groups[c.category]) groups[c.category] = [];
+                  groups[c.category].push({ index: i, ...c });
+               }
+            } catch(e) {}
+         });
+
+         let html = '';
+         for (const [category, fields] of Object.entries(groups)) {
+            html += `<div style="background:var(--glass-bg); padding:15px; border-radius:8px; border:1px solid var(--border);">`;
+            html += `<h3 style="margin-top:0; margin-bottom:15px; font-size:0.9rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">${category}</h3>`;
+            html += `<div style="display:grid; grid-template-columns: 1fr; gap:10px;">`;
+            
+            fields.forEach(f => {
+               const isBio = f.label.toLowerCase().includes('bio');
+               const inputHtml = isBio 
+                 ? `<textarea oninput="updateAboutBlock(${f.index}, 'value', this.value)" style="flex:1; min-height:80px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`
+                 : `<input type="text" oninput="updateAboutBlock(${f.index}, 'value', this.value)" value="${f.value}" style="flex:1; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">`;
+                 
+               html += `
+                  <div style="display:flex; align-items:flex-start; gap:15px; background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">
+                     <div style="width:120px; font-weight:600; font-size:0.9rem; padding-top:8px;">${f.label}</div>
+                     ${inputHtml}
+                     <button onclick="removeAboutBlock(${f.index})" class="btn-danger" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
+                  </div>
+               `;
+            });
+            html += `</div></div>`;
+         }
+         blocksContainer.innerHTML = html;
+      }
+
+      document.getElementById('btn-save-about').addEventListener('click', async () => {
+         const btn = document.getElementById('btn-save-about');
+         const original = btn.textContent;
+         btn.textContent = 'Deploying...';
+         await fetch('/api/admin/about', {
+            method: 'POST',
+            body: JSON.stringify(aboutBlocks),
+            credentials: 'same-origin'
+         });
+         btn.textContent = original;
+         alert('About page instantly deployed via D1 zero-code mutation!');
+      });
 
       async function loadAll() {
          await loadVault();
          await loadQuotes();
          await loadThreats();
+         await loadSuggestions();
+         await loadAboutBlocks();
          
          // Dummy charts
          try {
@@ -559,8 +950,8 @@ import { ClientRouter } from 'astro:transitions';
          } catch(e){}
       }
 
-      document.addEventListener('astro:page-load', loadAll);
-      if (document.readyState === 'complete') loadAll();
+      loadAll();
+      });
     </script>
   </body>
 </html>

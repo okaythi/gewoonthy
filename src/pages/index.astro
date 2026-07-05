@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import AntiCapture from '../components/AntiCapture.astro';
 ---
 <html lang="en">
   <head>
@@ -22,9 +23,45 @@ import { ClientRouter } from 'astro:transitions';
       .container { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100%; height: 100dvh; padding: 4dvh 2vw; box-sizing: border-box; position: relative; z-index: 10; }
       .top-section { flex: 0 0 auto; padding-top: 2dvh; }
       h2 { font-size: clamp(1.2rem, 3vw, 2rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; font-style: italic; margin: 0; color: #ffffff; opacity: 0.95; }
-      .read-link { position: fixed; bottom: 4dvh; left: 4vw; z-index: 100; display: flex; align-items: center; justify-content: center; color: #444; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; -webkit-tap-highlight-color: transparent; }
-      .read-link:hover { color: #ffffff; transform: scale(1.05); }
-      .read-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .left-nav { position: fixed; bottom: max(4vh, 30px); left: 4vw; z-index: 100; display: flex; align-items: center; gap: 15px; }
+      .nav-link { display: flex; align-items: center; justify-content: center; color: #444; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; -webkit-tap-highlight-color: transparent; }
+      .nav-link:hover { color: #ffffff; transform: scale(1.05); }
+      .nav-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      
+      /* Suggestion Matrix */
+      .suggestion-wrapper { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1.5rem; }
+      .suggestion-input {
+         width: 0; padding: 0; border: none; background: rgba(0,0,0,0.8); color: #fff;
+         font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; font-size: 0.9rem;
+         border-radius: 20px; outline: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+         opacity: 0; pointer-events: none;
+      }
+      .suggestion-input.active { width: 250px; padding: 8px 15px; opacity: 1; pointer-events: all; }
+      .suggestion-input:focus { outline: none; border-color: #888; }
+      .suggest-btn { background: none; border: none; color: #444; cursor: pointer; transition: color 0.2s ease; padding: 0; display: flex; }
+      .suggest-btn:hover { color: #fff; }
+      .suggest-btn svg { width: 24px; height: 24px; stroke: currentColor; stroke-width: 2; fill: none; }
+      
+      /* Micro Modal */
+      dialog { 
+         background: #111; color: #fff; border: 1px solid #333; border-radius: 12px; padding: 24px;
+         max-width: 400px; width: 90%; transform: translateY(20px); opacity: 0; transition: all 0.3s ease;
+         font-family: inherit;
+      }
+      dialog[open] { transform: translateY(0); opacity: 1; }
+      dialog::backdrop { background: rgba(0,0,0,0.8); backdrop-filter: blur(4px); }
+      .modal-art { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; background: #222; }
+      .modal-track { font-size: 1.2rem; font-weight: 900; margin-bottom: 0.2rem; }
+      .modal-artist { color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
+      .alias-input { width: 100%; background: #000; border: 1px solid #333; color: #fff; padding: 10px; border-radius: 6px; margin-bottom: 1.5rem; }
+      .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+      .modal-btn { background: #333; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+      .modal-btn.confirm { background: #fff; color: #000; }
+      .modal-btn:hover { opacity: 0.8; }
+      
+      /* Honeypot */
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
       .player-wrapper { flex: 1 1 auto; display: grid; grid-template-columns: 50px 1fr 50px; align-items: center; width: 100%; max-width: 900px; height: 100%; overflow: hidden; gap: 1rem; padding: 2vh 0; }
       .video-container { position: relative; display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; max-width: 800px; margin: 0 auto; background: #000; }
       .loader { position: absolute; display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 900; letter-spacing: 4px; color: #ffffff; text-transform: uppercase; z-index: 10; pointer-events: none; }
@@ -40,13 +77,29 @@ import { ClientRouter } from 'astro:transitions';
       .bottom-section { flex: 0 0 auto; text-align: center; padding-bottom: 2dvh; }
       .track-info { font-size: clamp(0.75rem, 1.5vw, 0.9rem); line-height: 1.6; color: #7a7a7a; max-width: 90vw; margin: 0 auto; }
       .track-title { color: #ffffff; font-weight: 700; letter-spacing: 0.5px; }
-      footer { margin-top: 3vh; font-size: 0.65rem; color: #333333; text-transform: uppercase; letter-spacing: 2px; }
       @media (max-width: 1024px) { .watermark-wrapper { display: none !important; } }
-      @media (max-width: 768px) { .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; } .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; grid-template-columns: 30px 1fr 30px; } .video-container { height: auto; } video { max-height: 50dvh; } .nav-btn { padding: 5px; } .nav-btn svg { width: 20px; height: 30px; } .read-link { bottom: 3dvh; left: 3vw; } .read-link svg { width: 24px; height: 24px; } }
+      @media (max-width: 768px) { .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; } .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; grid-template-columns: 30px 1fr 30px; } .video-container { height: auto; } video { max-height: 50dvh; } .nav-btn { padding: 5px; } .nav-btn svg { width: 20px; height: 30px; } .left-nav { bottom: env(safe-area-inset-bottom, 3dvh); left: 3vw; } .suggestion-wrapper { display: none !important; } }
+      @media (pointer: coarse) { .nav-btn, .nav-link, .suggest-btn { padding: 12px; min-width: 44px; min-height: 44px; } }
     </style>
   </head>
   <body>
-    <a href="/read" class="read-link" aria-label="Read" title="Read"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></a>
+    <div class="left-nav">
+       <a href="/read" class="nav-link" aria-label="Read" title="Read"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></a>
+       <a href="/about-me" class="nav-link" aria-label="About Me" title="About Me"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
+    </div>
+    
+
+
+    <dialog id="suggest-modal">
+       <img id="modal-art" class="modal-art" src="" alt="Album Art">
+       <div id="modal-track" class="modal-track">Loading...</div>
+       <div id="modal-artist" class="modal-artist">Please wait</div>
+       <input type="text" id="modal-alias" class="alias-input" placeholder="Your Alias (3-16 chars, optional)" minlength="3" maxlength="16">
+       <div class="modal-actions">
+          <button id="modal-cancel" class="modal-btn">Cancel</button>
+          <button id="modal-confirm" class="modal-btn confirm">Confirm Suggestion</button>
+       </div>
+    </dialog>
     <div id="watermark-left-wrapper" class="watermark-wrapper"><div id="watermark-left" class="watermark"></div></div>
     <div id="watermark-right-wrapper" class="watermark-wrapper"><div id="watermark-right" class="watermark"></div></div>
     <div class="container">
@@ -62,17 +115,24 @@ import { ClientRouter } from 'astro:transitions';
       </div>
       <div class="bottom-section">
         <div class="track-info">
-          I'm thy and this page is a rotation of the music I've been listening to the most recently <br/><br/>
+          <span class="track-title" id="track-title"></span><br />
+          <span id="track-artist"></span>
+          <div class="suggestion-wrapper">
+             <input type="text" id="suggest-input" class="suggestion-input" placeholder="Spotify URL, YouTube link, or track name..." autocomplete="off">
+             <input type="text" id="hp-bot-trap" class="visually-hidden" tabindex="-1" autocomplete="off">
+             <button id="suggest-btn" class="suggest-btn" aria-label="Suggest Song" title="Suggest Song">SUGGEST SONGS</button>
+          </div>
           &bull; Current track : <span id="track-name" class="track-title">Connecting...</span>
+          <div id="track-alias" style="display:none; font-size:0.75rem; color:#aaa; margin-top: 5px;"></div>
           <div id="admin-bypass-warning" style="display:none; font-style:italic; font-size:0.75rem; color:#ff4a4a; margin-top: 10px;">
             (You are currently watching outside of the EU or via a VPN. But Geoblock has been bypassed.)
           </div>
         </div>
-        <footer>&copy; 2026</footer>
       </div>
     </div>
+    <AntiCapture />
     <script>
-      document.addEventListener('astro:page-load', () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (!window.antiCaptureAttached) {
           const blackout = document.getElementById('video-blackout');
           function triggerBlackout(target = 'unknown') {
@@ -89,7 +149,6 @@ import { ClientRouter } from 'astro:transitions';
               player.pause();
             }
             
-            // Log to Threat Ledger
             navigator.sendBeacon('/api/telemetry', JSON.stringify({ eventType: 'ANTI_CAPTURE', target: target }));
           }
           function removeBlackout() {
@@ -120,12 +179,89 @@ import { ClientRouter } from 'astro:transitions';
         }
       });
       document.addEventListener('astro:page-load', () => {
-        if (!window.globalSecurityAttached) {
-          document.addEventListener('contextmenu', event => { if (!event.target.closest('#quote-text')) event.preventDefault(); });
-          document.addEventListener('copy', event => { const selection = window.getSelection(); if (!event.target.closest('#quote-text') && (!selection.anchorNode || !selection.anchorNode.parentElement.closest('#quote-text'))) { event.preventDefault(); return false; } });
-          document.addEventListener('keydown', event => { if (event.key === 'F12') event.preventDefault(); if (event.ctrlKey && event.shiftKey && ['I', 'i', 'J', 'j', 'C', 'c'].includes(event.key)) event.preventDefault(); if (event.ctrlKey && ['U', 'u'].includes(event.key)) event.preventDefault(); });
-          window.globalSecurityAttached = true;
+
+        if (!window.suggestionAttached) {
+           const suggestBtn = document.getElementById('suggest-btn');
+           const suggestInput = document.getElementById('suggest-input');
+           const modal = document.getElementById('suggest-modal');
+           const honeypot = document.getElementById('hp-bot-trap');
+           let submissionCount = 0;
+           let lastSubmissionTime = Date.now();
+
+           async function handleSuggestionSubmit() {
+               const query = suggestInput.value.trim();
+               if (!query) return;
+               if (Date.now() - lastSubmissionTime > 300000) { submissionCount = 0; lastSubmissionTime = Date.now(); }
+               if (submissionCount >= 5) { alert('Limit reached.'); return; }
+               if (honeypot.value) return;
+
+               suggestInput.value = 'Fetching...';
+               suggestInput.disabled = true;
+
+               try {
+                  const res = await fetch('/api/suggest-metadata', { method: 'POST', body: JSON.stringify({ query }), credentials: 'same-origin' });
+                  if (res.ok) {
+                     const data = await res.json();
+                     if (data.track && data.track !== 'Unknown Track') {
+                        document.getElementById('modal-track').textContent = data.track;
+                        document.getElementById('modal-artist').textContent = data.artist;
+                        const art = document.getElementById('modal-art');
+                        if (data.artwork) { art.src = data.artwork; art.style.display = 'block'; } else { art.style.display = 'none'; }
+                        modal.showModal();
+                     } else {
+                        alert('Could not find that track.');
+                     }
+                  } else { alert('Could not find that track.'); }
+               } catch (e) { alert('Network error.'); }
+               
+               suggestInput.value = '';
+               suggestInput.disabled = false;
+               suggestInput.classList.remove('active');
+           }
+
+           suggestBtn.addEventListener('click', () => {
+              if (!suggestInput.classList.contains('active')) {
+                 suggestInput.classList.add('active');
+                 suggestInput.focus();
+              } else {
+                 handleSuggestionSubmit();
+              }
+           });
+
+           suggestInput.addEventListener('keydown', (e) => {
+              if (e.key === 'Enter') {
+                 e.preventDefault();
+                 handleSuggestionSubmit();
+              }
+           });
+
+           document.getElementById('modal-cancel').addEventListener('click', () => modal.close());
+           
+           document.getElementById('modal-confirm').addEventListener('click', async () => {
+              submissionCount++;
+              const track = document.getElementById('modal-track').textContent;
+              const artist = document.getElementById('modal-artist').textContent;
+              const alias = document.getElementById('modal-alias').value.trim();
+              
+              const btn = document.getElementById('modal-confirm');
+              btn.textContent = 'Sending...';
+              
+              // In the next step we will build the /api/submit-suggestion endpoint.
+              await fetch('/api/submit-suggestion', {
+                 method: 'POST',
+                 body: JSON.stringify({ track, artist, alias, honeypot: honeypot.value }),
+                 credentials: 'same-origin'
+              }).catch(()=>{});
+
+              btn.textContent = 'Confirm Suggestion';
+              modal.close();
+              document.getElementById('modal-alias').value = '';
+              alert('Suggestion sent! Thanks.');
+           });
+
+           window.suggestionAttached = true;
         }
+
         const player = document.getElementById('main-player');
         if (!player) return; 
         const loader = document.getElementById('loader');
@@ -162,7 +298,18 @@ import { ClientRouter } from 'astro:transitions';
           while (player.firstChild) { player.removeChild(player.firstChild); }
           player.load();
           if (warningEl) warningEl.style.display = 'none';
-          const url = videoList[index];
+          const item = videoList[index];
+          const url = typeof item === 'string' ? item : item.url;
+          const currentAlias = typeof item === 'object' ? item.alias : null;
+          
+          const aliasEl = document.getElementById('track-alias');
+          if (currentAlias && aliasEl) {
+             aliasEl.textContent = `Suggested by: ${currentAlias}`;
+             aliasEl.style.display = 'block';
+          } else if (aliasEl) {
+             aliasEl.style.display = 'none';
+          }
+
           const currentTrackName = extractName(url);
           trackNameEl.textContent = currentTrackName;
           const trackUpper = currentTrackName.trim().toUpperCase();
@@ -179,11 +326,11 @@ import { ClientRouter } from 'astro:transitions';
           if (isSpirit || isMondai) {
             try {
               const trackParam = isMondai ? 'mondai' : 'spirit';
-              const res = await fetch(`/api/token?track=${trackParam}`);
+              const res = await fetch(`/api/token?track=${trackParam}`, { credentials: 'same-origin' });
               const { token, st, isBypassed } = await res.json();
               
               if (isMondai) {
-                const vidRes = await fetch(`/api/secure_media?url=${encodeURIComponent(url)}&token=${token}&st=${st}`);
+                const vidRes = await fetch(`/api/secure_media?url=${encodeURIComponent(url)}&token=${token}&st=${st}`, { credentials: 'same-origin' });
                 const blob = await vidRes.blob();
                 finalUrl = URL.createObjectURL(blob);
                 currentBlobUrl = finalUrl;
@@ -251,7 +398,7 @@ import { ClientRouter } from 'astro:transitions';
           }
         });
         player.addEventListener('loadstart', () => { const overlay = document.getElementById('geo-block-overlay'); if (overlay) overlay.style.display = 'none'; });
-        async function initialize() { try { const res = await fetch('/api/videos'); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
+        async function initialize() { try { const res = await fetch('/api/videos', { credentials: 'same-origin' }); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
         prevBtn.addEventListener('click', () => { 
            if (videoList.length > 0) {
               currentIndex = (currentIndex > 0) ? currentIndex - 1 : videoList.length - 1; 

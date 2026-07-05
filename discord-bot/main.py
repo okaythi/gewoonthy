@@ -1,17 +1,44 @@
 import discord
 import os
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 from threading import Thread
 
 load_dotenv()
 
 # Keep-alive web server
 app = Flask('')
+CORS(app)
 
 @app.route('/')
 def home():
     return "Bot is alive!"
+
+@app.route('/api/search_members')
+def search_members():
+    q = request.args.get('q', '').lower()
+    if not q:
+        return jsonify([])
+
+    guild_id = 238393736478851074
+    guild = client.get_guild(guild_id)
+    if not guild:
+        return jsonify({"error": "Guild not found"}), 404
+
+    members = []
+    for member in guild.members:
+        if q in member.name.lower() or q in member.display_name.lower():
+            avatar_url = str(member.avatar.url) if member.avatar else str(member.default_avatar.url)
+            members.append({
+                "id": str(member.id),
+                "username": member.name,
+                "display_name": member.display_name,
+                "avatar_url": avatar_url
+            })
+            if len(members) >= 15:
+                break
+    return jsonify(members)
 
 def run_server():
     # Use standard HTTP port 3000
@@ -28,6 +55,7 @@ class MyClient(discord.Client):
         print(f'Latency: {round(self.latency * 1000)}ms')
 
 intents = discord.Intents.default()
+intents.members = True
 client = MyClient(intents=intents)
 
 if __name__ == '__main__':
