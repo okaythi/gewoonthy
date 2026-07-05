@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div id="out">Not clicked</div>
+<script>
+window.addFriend = (u) => { document.getElementById('out').innerText = "Clicked: " + u.username; };
+</script>
+<div id="btn" onclick="addFriend({&quot;user_id&quot;:&quot;123&quot;,&quot;username&quot;:&quot;mug3&quot;})">Click me</div>
+</body>
+</html>

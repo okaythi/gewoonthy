@@ -49,3 +49,12 @@
 {"message":"[404] /api/admin/quotes 7ms","label":null,"level":"info"}
 {"message":"[404] /api/admin/telemetry 1ms","label":null,"level":"info"}
 {"message":"[404] /api/admin/suggestions 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/about 1ms","label":null,"level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[CompilerError] Expected corresponding JSX closing tag for 'img'. (The stacktrace appears to be already rewritten by something else, but was passed to vite.ssrFixStacktrace. This may cause incorrect stacktraces.)\n  Stack trace:\n    at /home/thy/gewoonthy/src/pages/dashboard.astro:788:17\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[200] /dashboard/ 68ms","label":null,"level":"info"}
+{"message":"[200] /dashboard/ 24ms","label":null,"level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}

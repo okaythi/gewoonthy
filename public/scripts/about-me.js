@@ -29,18 +29,21 @@ document.addEventListener('astro:page-load', async () => {
     });
 
     for (const [category, fields] of Object.entries(groups)) {
+       const validFields = fields.filter(f => f.value && f.value.trim() !== '');
+       if (validFields.length === 0) continue;
+
        const groupEl = document.createElement('div');
        groupEl.className = 'block';
        
        let html = `<div class="category-title">${category}</div>`;
        html += `<div class="fields-grid">`;
-       fields.forEach(f => {
+       validFields.forEach(f => {
           const isBio = f.label.toLowerCase().includes('bio') || (f.value && f.value.length > 100);
           const cardClass = isBio ? 'field-card is-bio' : 'field-card';
           html += `
              <div class="${cardClass}">
                <div class="field-label">${f.label}</div>
-               <div class="field-value">${f.value || ''}</div>
+               <div class="field-value">${f.value}</div>
              </div>
           `;
        });
