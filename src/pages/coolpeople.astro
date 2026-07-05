@@ -1,0 +1,138 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import AntiCapture from '../components/AntiCapture.astro';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Cool People</title>
+    <ClientRouter />
+    <style is:global>
+      :root {
+        --bg: #000000;
+        --fg: #f0f0f0;
+        --accent: #a3a3a3;
+      }
+      body {
+        margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+        font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+        min-height: 100dvh;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* Hardware accelerated nav */
+      .nav {
+        position: fixed;
+        top: 0; left: 0; width: 100%;
+        padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 2rem);
+        background: transparent;
+        transform: translate3d(0,0,0);
+        z-index: 50;
+        display: flex; justify-content: flex-start;
+      }
+      .back-btn {
+        color: var(--accent); text-decoration: none;
+        display: flex; align-items: center; gap: 8px;
+        font-weight: 500; font-size: 0.95rem;
+        transition: color 0.3s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .back-btn:hover { color: var(--fg); }
+      .back-btn svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
+      .back-btn:hover svg { transform: translateX(-4px); }
+      
+      .friends-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-items: center;
+        align-items: start;
+        padding: 2rem;
+      }
+      @media (max-width: 900px) {
+        .friends-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; }
+      }
+      @media (max-width: 480px) {
+        .friends-grid { grid-template-columns: repeat(1, 1fr); }
+      }
+      .friend-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        opacity: 0;
+        animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .friend-avatar {
+        width: clamp(100px, 15vw, 140px);
+        height: clamp(100px, 15vw, 140px);
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #111;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      }
+      .friend-card:hover .friend-avatar {
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.05);
+      }
+      .friend-username {
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: #e2e2e2;
+      }
+      
+      @media (pointer: coarse) {
+        .back-btn { padding: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </a>
+    </nav>
+    <main>
+      <div id="friends-grid" class="friends-grid"></div>
+    </main>
+    
+    <AntiCapture />
+    <script>
+      document.addEventListener('astro:page-load', async () => {
+         const grid = document.getElementById('friends-grid');
+         if (!grid) return;
+         try {
+            const res = await fetch('/api/admin/close-friends');
+            if (res.ok) {
+               let friends = await res.json();
+               friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
+               grid.innerHTML = friends.map((f, i) => `
+                  <div class="friend-card" style="animation-delay: ${i * 0.05}s">
+                     <img src="${f.avatar_url}" class="friend-avatar" alt="${f.username}">
+                     <div class="friend-username">@${f.username}</div>
+                     <!-- Badges will go here in the next step -->
+                     <div class="badges-container" data-user-id="${f.user_id}"></div>
+                  </div>
+               `).join('');
+            }
+         } catch(e) {
+            console.error("Failed to load friends", e);
+         }
+      });
+    </script>
+  </body>
+</html>
