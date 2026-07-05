@@ -399,7 +399,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                  <input type="text" id="new-field-category" placeholder="Category (e.g. Favorites)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
                  <input type="text" id="new-field-label" placeholder="Label (e.g. Movie)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
                  <input type="text" id="new-field-value" placeholder="Value (e.g. Interstellar)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px; flex:1;">
-                 <button class="btn" onclick="addCustomField()">+ Add Field</button>
+                 <button class="btn" id="btn-add-custom-field">+ Add Field</button>
                </div>
             </div>
           </div>
@@ -572,12 +572,12 @@ import AntiCapture from '../components/AntiCapture.astro';
                 <tr>
                   <td>${q.id}</td>
                   <td>${q.author}</td>
-                  <td class="editable" onclick="editQuote(${q.id}, 'text_en', '${q.text_en.replace(/'/g, "\\'")}')">${q.text_en}</td>
-                  <td class="editable ${nlClass}" onclick="editQuote(${q.id}, 'text_nl', '${(q.text_nl || '').replace(/'/g, "\\'")}')">${q.text_nl || 'MISSING'}</td>
-                  <td class="editable ${frClass}" onclick="editQuote(${q.id}, 'text_fr', '${(q.text_fr || '').replace(/'/g, "\\'")}')">${q.text_fr || 'MISSING'}</td>
-                  <td class="editable" onclick="editQuote(${q.id}, 'weight', ${q.weight})">${q.weight}</td>
+                  <td class="editable edit-quote-td" data-id="${q.id}" data-field="text_en" data-val="${q.text_en.replace(/"/g, '&quot;')}">${q.text_en}</td>
+                  <td class="editable edit-quote-td ${nlClass}" data-id="${q.id}" data-field="text_nl" data-val="${(q.text_nl || '').replace(/"/g, '&quot;')}">${q.text_nl || 'MISSING'}</td>
+                  <td class="editable edit-quote-td ${frClass}" data-id="${q.id}" data-field="text_fr" data-val="${(q.text_fr || '').replace(/"/g, '&quot;')}">${q.text_fr || 'MISSING'}</td>
+                  <td class="editable edit-quote-td" data-id="${q.id}" data-field="weight" data-val="${q.weight}">${q.weight}</td>
                   <td>
-                    <button onclick="fetch('/api/admin/quotes', {method:'DELETE', body:JSON.stringify({id:${q.id}}), credentials: 'same-origin'}).then(()=>loadQuotes())" class="btn btn-danger" style="padding:4px 8px; font-size:0.8rem;">Del</button>
+                    <button class="btn btn-danger delete-quote-btn" data-id="${q.id}" style="padding:4px 8px; font-size:0.8rem;">Del</button>
                   </td>
                 </tr>
                 `;
@@ -585,6 +585,21 @@ import AntiCapture from '../components/AntiCapture.astro';
              
              // Attach full payload to window for editing helper
              window.allQuotes = quotes;
+             
+             document.querySelectorAll('.edit-quote-td').forEach(el => {
+                el.addEventListener('click', (e) => {
+                   const id = parseInt(e.currentTarget.getAttribute('data-id'), 10);
+                   const field = e.currentTarget.getAttribute('data-field');
+                   const val = e.currentTarget.getAttribute('data-val');
+                   window.editQuote(id, field, val);
+                });
+             });
+             document.querySelectorAll('.delete-quote-btn').forEach(el => {
+                el.addEventListener('click', (e) => {
+                   const id = parseInt(e.currentTarget.getAttribute('data-id'), 10);
+                   fetch('/api/admin/quotes', {method:'DELETE', body:JSON.stringify({id:id}), credentials: 'same-origin'}).then(()=>loadQuotes());
+                });
+             });
            }
          } catch(e){}
       }
@@ -647,11 +662,19 @@ import AntiCapture from '../components/AntiCapture.astro';
                   <td>${s.alias || 'Anonymous'}</td>
                   <td>${s.status.toUpperCase()}</td>
                   <td>
-                    ${s.status === 'pending' ? `<button onclick="updateSuggestion(${s.id}, 'approved')" class="btn" style="padding:4px 8px; font-size:0.8rem;">Approve</button>
-                    <button onclick="updateSuggestion(${s.id}, 'discarded')" class="btn btn-danger" style="padding:4px 8px; font-size:0.8rem;">Discard</button>` : ''}
+                    ${s.status === 'pending' ? `<button data-id="${s.id}" data-status="approved" class="btn update-suggestion-btn" style="padding:4px 8px; font-size:0.8rem;">Approve</button>
+                    <button data-id="${s.id}" data-status="discarded" class="btn btn-danger update-suggestion-btn" style="padding:4px 8px; font-size:0.8rem;">Discard</button>` : ''}
                   </td>
                 </tr>
              `).join('');
+
+             document.querySelectorAll('.update-suggestion-btn').forEach(el => {
+                el.addEventListener('click', (e) => {
+                   const id = parseInt(e.currentTarget.getAttribute('data-id'), 10);
+                   const status = e.currentTarget.getAttribute('data-status');
+                   window.updateSuggestion(id, status);
+                });
+             });
            }
          } catch(e){}
       }
@@ -942,6 +965,7 @@ import AntiCapture from '../components/AntiCapture.astro';
          document.getElementById('new-field-label').value = '';
          document.getElementById('new-field-value').value = '';
       };
+      document.getElementById('btn-add-custom-field').addEventListener('click', window.addCustomField);
 
       window.removeAboutBlock = (index) => {
          aboutBlocks.splice(index, 1);
@@ -978,20 +1002,34 @@ import AntiCapture from '../components/AntiCapture.astro';
             fields.forEach(f => {
                const isBio = f.label.toLowerCase().includes('bio');
                const inputHtml = isBio 
-                 ? `<textarea oninput="updateAboutBlock(${f.index}, 'value', this.value)" style="flex:1; min-height:80px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`
-                 : `<input type="text" oninput="updateAboutBlock(${f.index}, 'value', this.value)" value="${f.value}" style="flex:1; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">`;
+                 ? `<textarea data-index="${f.index}" class="about-field-input" style="flex:1; min-height:80px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`
+                 : `<input type="text" data-index="${f.index}" class="about-field-input" value="${f.value}" style="flex:1; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">`;
                  
                html += `
                   <div style="display:flex; align-items:flex-start; gap:15px; background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">
                      <div style="width:120px; font-weight:600; font-size:0.9rem; padding-top:8px;">${f.label}</div>
                      ${inputHtml}
-                     <button onclick="removeAboutBlock(${f.index})" class="btn-danger" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
+                     <button data-index="${f.index}" class="btn-danger about-field-remove" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
                   </div>
                `;
             });
             html += `</div></div>`;
          }
          blocksContainer.innerHTML = html;
+
+         // Attach event listeners to avoid CSP inline script violation
+         document.querySelectorAll('.about-field-input').forEach(el => {
+            el.addEventListener('input', (e) => {
+               const idx = parseInt(e.target.getAttribute('data-index'), 10);
+               updateAboutBlock(idx, 'value', e.target.value);
+            });
+         });
+         document.querySelectorAll('.about-field-remove').forEach(el => {
+            el.addEventListener('click', (e) => {
+               const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
+               removeAboutBlock(idx);
+            });
+         });
       }
 
       document.getElementById('btn-save-about').addEventListener('click', async () => {
