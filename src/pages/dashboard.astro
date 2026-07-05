@@ -159,6 +159,8 @@ import AntiCapture from '../components/AntiCapture.astro';
         transition: all 0.3s ease; cursor: pointer; background: var(--glass-bg);
       }
       .upload-zone:hover { border-color: var(--accent); }
+      
+      .search-result-item:hover { background: rgba(255,255,255,0.1) !important; }
     </style>
   </head>
   <body>
@@ -793,25 +795,43 @@ import AntiCapture from '../components/AntiCapture.astro';
                               <div style="font-size:0.8rem; color:var(--text-secondary);">@${f.username}</div>
                            </div>
                         </div>
-                        <button onclick="removeFriend('${f.user_id}')" class="btn btn-danger" style="padding:6px 12px; font-size:0.8rem;">Remove</button>
+                        <button data-action="remove-friend" data-userid="${f.user_id}" class="btn btn-danger" style="padding:6px 12px; font-size:0.8rem;">Remove</button>
                      </div>
                   `).join('');
                }
             } else {
-               friendsList.innerHTML = '<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Failed to load friends.</div>';
+               const errText = await res.text();
+               friendsList.innerHTML = `<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Failed to load friends: ${errText}</div>`;
             }
          } catch(e) {
-            friendsList.innerHTML = '<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Error loading friends.</div>';
+            friendsList.innerHTML = `<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Error loading friends: ${e.message}</div>`;
          }
       };
 
-      window.removeFriend = async (userId) => {
-         await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
-         loadFriends();
-      };
+      // Event delegation for friend removal
+      friendsList.addEventListener('click', async (e) => {
+         const btn = e.target.closest('[data-action="remove-friend"]');
+         if (btn) {
+            const userId = btn.getAttribute('data-userid');
+            try {
+               const res = await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
+               if (!res.ok) alert('Failed to remove friend: ' + await res.text());
+            } catch (err) {
+               alert('Error removing friend: ' + err.message);
+            }
+            loadFriends();
+         }
+      });
 
       window.addFriend = async (user) => {
-         await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
+         try {
+            const res = await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
+            if (!res.ok) {
+               alert('Failed to add friend: ' + await res.text());
+            }
+         } catch (err) {
+            alert('Error adding friend: ' + err.message);
+         }
          searchResults.style.display = 'none';
          searchInput.value = '';
          loadFriends();
@@ -838,7 +858,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                         searchResults.innerHTML = members.map(m => {
                            const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url }).replace(/"/g, '&quot;');
                            return `
-                           <div class="search-result-item" data-user="${mStr}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                           <div class="search-result-item" data-user="${mStr}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border); transition: background 0.2s;">
                               <img src="${m.avatar_url}" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
                               <div>
                                  <div style="font-weight:600; font-size:0.9rem;">${m.display_name || m.username}</div>

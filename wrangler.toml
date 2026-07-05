@@ -1,0 +1,7 @@
+name = "gewoonthy"
+compatibility_date = "2024-03-20"
+
+[[d1_databases]]
+binding = "CLOSE_FRIENDS"
+database_name = "thy_closefriends"
+database_id = "8ded3741-1c5e-43cb-be18-4af280f97a6f"
