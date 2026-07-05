@@ -11,15 +11,15 @@ export async function onRequest({ request, env }) {
 
     if (request.method === 'POST') {
       const data = await request.json();
-      const { user_id, username, display_name, avatar_url } = data;
+      const { user_id, username, display_name, avatar_url, is_friend, friend_since } = data;
       
       if (!user_id) {
          return new Response('Missing user_id', { status: 400 });
       }
 
       await env.CLOSE_FRIENDS.prepare(
-        `INSERT INTO close_friends (user_id, username, display_name, avatar_url) VALUES (?, ?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET username=excluded.username, display_name=excluded.display_name, avatar_url=excluded.avatar_url`
-      ).bind(user_id, username || '', display_name || '', avatar_url || '').run();
+        `INSERT INTO close_friends (user_id, username, display_name, avatar_url, is_friend, friend_since) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET username=excluded.username, display_name=excluded.display_name, avatar_url=excluded.avatar_url, is_friend=excluded.is_friend, friend_since=excluded.friend_since`
+      ).bind(user_id, username || '', display_name || '', avatar_url || '', is_friend ? 1 : 0, friend_since || null).run();
       
       return new Response(JSON.stringify({ success: true }), {
         headers: { 'Content-Type': 'application/json' }

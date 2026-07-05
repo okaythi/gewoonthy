@@ -1,0 +1,1 @@
+ALTER TABLE close_friends ADD COLUMN is_friend BOOLEAN DEFAULT 0;

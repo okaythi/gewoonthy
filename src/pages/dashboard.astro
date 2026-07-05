@@ -815,7 +815,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                         <div style="display:flex; align-items:center; gap:10px;">
                            <img src="${f.avatar_url}" alt="Avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:1px solid var(--border);">
                            <div>
-                              <div style="font-weight:600;">${f.display_name || f.username}</div>
+                              <div style="font-weight:600;">${f.display_name || f.username}${f.is_friend ? `<span style="background:var(--success); color:#000; padding:2px 6px; border-radius:4px; font-size:0.7rem; font-weight:bold; margin-left:10px;" title="Friend since ${f.friend_since ? new Date(f.friend_since).toLocaleDateString() : 'unknown'}">Friend</span>` : ''}</div>
                               <div style="font-size:0.8rem; color:var(--text-secondary);">@${f.username}</div>
                            </div>
                         </div>
@@ -880,12 +880,12 @@ import AntiCapture from '../components/AntiCapture.astro';
                         searchResults.innerHTML = '<div style="padding:10px; color:var(--text-secondary); text-align:center;">No members found.</div>';
                      } else {
                         searchResults.innerHTML = members.map(m => {
-                           const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url }).replace(/"/g, '&quot;');
+                           const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url, is_friend: m.is_friend, friend_since: m.friend_since }).replace(/"/g, '&quot;');
                            return `
                            <div class="search-result-item" data-user="${mStr}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border); transition: background 0.2s;">
                               <img src="${m.avatar_url}" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
                               <div>
-                                 <div style="font-weight:600; font-size:0.9rem;">${m.display_name || m.username}</div>
+                                 <div style="font-weight:600; font-size:0.9rem;">${m.display_name || m.username}${m.is_friend ? `<span style="background:var(--success); color:#000; padding:2px 6px; border-radius:4px; font-size:0.7rem; font-weight:bold; margin-left:10px;" title="Friend since ${m.friend_since ? new Date(m.friend_since).toLocaleDateString() : 'unknown'}">Friend</span>` : ''}</div>
                                  <div style="font-size:0.8rem; color:var(--text-secondary);">@${m.username}</div>
                               </div>
                            </div>`;

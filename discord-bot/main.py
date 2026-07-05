@@ -30,11 +30,16 @@ def search_members():
     for member in guild.members:
         if q in member.name.lower() or q in member.display_name.lower():
             avatar_url = str(member.avatar.url) if member.avatar else str(member.default_avatar.url)
+            relationship = next((r for r in client.friends if r.user.id == member.id), None)
+            is_friend = relationship is not None
+            friend_since = relationship.since.isoformat() if relationship and relationship.since else None
             members.append({
                 "id": str(member.id),
                 "username": member.name,
                 "display_name": member.display_name,
-                "avatar_url": avatar_url
+                "avatar_url": avatar_url,
+                "is_friend": is_friend,
+                "friend_since": friend_since
             })
             if len(members) >= 15:
                 break

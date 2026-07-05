@@ -40,5 +40,7 @@ CREATE TABLE IF NOT EXISTS close_friends (
   user_id TEXT PRIMARY KEY,
   username TEXT NOT NULL,
   display_name TEXT,
-  avatar_url TEXT
+  avatar_url TEXT,
+  is_friend BOOLEAN DEFAULT 0,
+  friend_since DATETIME
 );
