@@ -41,3 +41,11 @@
 {"message":"[404] /api/admin/telemetry 2ms","label":null,"level":"info"}
 {"message":"[404] /api/admin/suggestions 2ms","label":null,"level":"info"}
 {"message":"[404] /api/admin/about 1ms","label":null,"level":"info"}
+{"message":"test.html","label":"watch","level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[200] /dashboard/ 106ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/close-friends 7ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/r2-explorer 9ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/quotes 7ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/telemetry 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/suggestions 1ms","label":null,"level":"info"}

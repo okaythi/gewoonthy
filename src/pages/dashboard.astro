@@ -832,7 +832,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                         searchResults.innerHTML = members.map(m => {
                            const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url }).replace(/"/g, '&quot;');
                            return `
-                           <div onclick="addFriend(${mStr})" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                           <div class="search-result-item" data-user="${mStr}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
                               <img src="${m.avatar_url}" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
                               <div>
                                  <div style="font-weight:600; font-size:0.9rem;">${m.display_name || m.username}</div>
@@ -846,10 +846,22 @@ import AntiCapture from '../components/AntiCapture.astro';
                } catch (err) {}
             }, 300);
          });
-         
          document.addEventListener('click', (e) => {
             if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
                searchResults.style.display = 'none';
+            }
+         });
+
+         searchResults.addEventListener('click', (e) => {
+            const item = e.target.closest('.search-result-item');
+            if (item) {
+               try {
+                  const userStr = item.getAttribute('data-user').replace(/&quot;/g, '"');
+                  const user = JSON.parse(userStr);
+                  window.addFriend(user);
+               } catch (err) {
+                  console.error('Error parsing user data:', err);
+               }
             }
          });
       }
