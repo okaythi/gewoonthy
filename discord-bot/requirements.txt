@@ -1,4 +1,4 @@
-discord.py
+discord.py-self
 flask
 flask-cors
 python-dotenv
