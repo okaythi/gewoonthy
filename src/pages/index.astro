@@ -287,7 +287,7 @@ import AntiCapture from '../components/AntiCapture.astro';
           }
         });
 
-        function extractName(url) { return decodeURIComponent(url.split('/').pop() || "").replace(/\.[^/.]+$/, ""); }
+        function extractName(url) { return decodeURIComponent(url || "").split('/').pop().replace(/\.[^/.]+$/, ""); }
         function applyWatermark(leftText, rightText, fontClass) { leftWatermark.className = 'watermark ' + fontClass; rightWatermark.className = 'watermark ' + fontClass; leftWatermark.innerHTML = leftText; rightWatermark.innerHTML = rightText; leftWatermark.style.opacity = '0.4'; rightWatermark.style.opacity = '0.4'; }
         function clearWatermarks() { leftWatermark.style.opacity = '0'; rightWatermark.style.opacity = '0'; }
         async function loadVideo(index) {
