@@ -46,20 +46,17 @@ import AntiCapture from '../components/AntiCapture.astro';
       .back-btn:hover svg { transform: translateX(-4px); }
       
       .friends-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 3rem 4rem;
         max-width: 1200px;
         margin: 0 auto;
-        justify-items: center;
-        align-items: start;
+        align-items: flex-start;
         padding: 2rem;
       }
       @media (max-width: 900px) {
-        .friends-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 3rem; }
-      }
-      @media (max-width: 480px) {
-        .friends-grid { grid-template-columns: repeat(1, 1fr); }
+        .friends-grid { gap: 2rem 3rem; }
       }
       .friend-card {
         display: flex;
@@ -139,7 +136,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                let friends = await res.json();
                friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
                grid.innerHTML = friends.map((f, i) => {
-                  const badgesHtml = (f.badges || []).map(b => `<img src="https://thiago.qzz.io/media/badges/${b}.svg" class="badge-icon" alt="${b}" title="${b.replace(/_/g, ' ')}">`).join('');
+                  const badgesHtml = (f.badges || []).map(b => `<img src="/media/badges/${b}.svg" class="badge-icon" alt="${b}" title="${b.replace(/_/g, ' ')}">`).join('');
                   return `
                   <div class="friend-card" style="animation-delay: ${i * 0.05}s">
                      <img src="${f.avatar_url}" class="friend-avatar" alt="${f.username}">
