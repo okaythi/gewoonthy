@@ -42,5 +42,6 @@ CREATE TABLE IF NOT EXISTS close_friends (
   display_name TEXT,
   avatar_url TEXT,
   is_friend BOOLEAN DEFAULT 0,
-  friend_since DATETIME
+  friend_since DATETIME,
+  badges TEXT DEFAULT '[]'
 );

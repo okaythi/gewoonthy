@@ -93,6 +93,24 @@ import AntiCapture from '../components/AntiCapture.astro';
         letter-spacing: 0.5px;
         color: #e2e2e2;
       }
+      .badges-container {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -6px;
+        flex-wrap: wrap;
+      }
+      .badge-icon {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        transition: transform 0.2s ease;
+      }
+      .badge-icon:hover {
+        transform: translateY(-2px) scale(1.1);
+      }
       
       @media (pointer: coarse) {
         .back-btn { padding: 12px; }
@@ -120,14 +138,16 @@ import AntiCapture from '../components/AntiCapture.astro';
             if (res.ok) {
                let friends = await res.json();
                friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
-               grid.innerHTML = friends.map((f, i) => `
+               grid.innerHTML = friends.map((f, i) => {
+                  const badgesHtml = (f.badges || []).map(b => `<img src="https://thiago.qzz.io/media/badges/${b}.svg" class="badge-icon" alt="${b}" title="${b.replace(/_/g, ' ')}">`).join('');
+                  return `
                   <div class="friend-card" style="animation-delay: ${i * 0.05}s">
                      <img src="${f.avatar_url}" class="friend-avatar" alt="${f.username}">
                      <div class="friend-username">@${f.username}</div>
-                     <!-- Badges will go here in the next step -->
-                     <div class="badges-container" data-user-id="${f.user_id}"></div>
+                     <div class="badges-container">${badgesHtml}</div>
                   </div>
-               `).join('');
+                  `;
+               }).join('');
             }
          } catch(e) {
             console.error("Failed to load friends", e);

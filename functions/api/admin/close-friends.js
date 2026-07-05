@@ -4,22 +4,26 @@ export async function onRequest({ request, env }) {
   try {
     if (request.method === 'GET') {
       const { results } = await env.CLOSE_FRIENDS.prepare(`SELECT * FROM close_friends`).all();
-      return new Response(JSON.stringify(results), {
+      const parsedResults = results.map(r => ({
+         ...r,
+         badges: JSON.parse(r.badges || '[]')
+      }));
+      return new Response(JSON.stringify(parsedResults), {
         headers: { 'Content-Type': 'application/json' }
       });
     }
 
     if (request.method === 'POST') {
       const data = await request.json();
-      const { user_id, username, display_name, avatar_url, is_friend, friend_since } = data;
+      const { user_id, username, display_name, avatar_url, is_friend, friend_since, badges } = data;
       
       if (!user_id) {
          return new Response('Missing user_id', { status: 400 });
       }
 
       await env.CLOSE_FRIENDS.prepare(
-        `INSERT INTO close_friends (user_id, username, display_name, avatar_url, is_friend, friend_since) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET username=excluded.username, display_name=excluded.display_name, avatar_url=excluded.avatar_url, is_friend=excluded.is_friend, friend_since=excluded.friend_since`
-      ).bind(user_id, username || '', display_name || '', avatar_url || '', is_friend ? 1 : 0, friend_since || null).run();
+        `INSERT INTO close_friends (user_id, username, display_name, avatar_url, is_friend, friend_since, badges) VALUES (?, ?, ?, ?, ?, ?, ?) ON CONFLICT(user_id) DO UPDATE SET username=excluded.username, display_name=excluded.display_name, avatar_url=excluded.avatar_url, is_friend=excluded.is_friend, friend_since=excluded.friend_since, badges=excluded.badges`
+      ).bind(user_id, username || '', display_name || '', avatar_url || '', is_friend ? 1 : 0, friend_since || null, JSON.stringify(badges || [])).run();
       
       return new Response(JSON.stringify({ success: true }), {
         headers: { 'Content-Type': 'application/json' }

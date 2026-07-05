@@ -28,6 +28,31 @@ def search_members():
         if user.id in seen_ids:
             return
         seen_ids.add(user.id)
+        
+        badges = []
+        flags = getattr(user, 'public_flags', None)
+        if flags:
+            if getattr(flags, 'staff', False): badges.append("staff")
+            if getattr(flags, 'partner', False): badges.append("partner")
+            if getattr(flags, 'hypesquad', False): badges.append("hypesquad_events")
+            if getattr(flags, 'bug_hunter', False): badges.append("bug_hunter")
+            if getattr(flags, 'hypesquad_bravery', False): badges.append("hypesquad_bravery")
+            if getattr(flags, 'hypesquad_brilliance', False): badges.append("hypesquad_brilliance")
+            if getattr(flags, 'hypesquad_balance', False): badges.append("hypesquad_balance")
+            if getattr(flags, 'early_supporter', False): badges.append("early_supporter")
+            if getattr(flags, 'bug_hunter_level_2', False): badges.append("bug_hunter_level_2")
+            if getattr(flags, 'verified_bot_developer', False): badges.append("verified_bot_developer")
+            if getattr(flags, 'discord_certified_moderator', False): badges.append("discord-mod")
+            if getattr(flags, 'active_developer', False): badges.append("active-developer")
+            
+        is_nitro = False
+        if getattr(user, 'premium_since', None): is_nitro = True
+        elif user.avatar and user.avatar.is_animated(): is_nitro = True
+        elif getattr(user, 'banner', None): is_nitro = True
+        
+        if is_nitro:
+            badges.append("premium")
+            
         avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
         members.append({
             "id": str(user.id),
@@ -35,7 +60,8 @@ def search_members():
             "display_name": user.display_name,
             "avatar_url": avatar_url,
             "is_friend": is_friend,
-            "friend_since": friend_since
+            "friend_since": friend_since,
+            "badges": badges
         })
 
     # 1. Search in guild members

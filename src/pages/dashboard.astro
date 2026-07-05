@@ -880,7 +880,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                         searchResults.innerHTML = '<div style="padding:10px; color:var(--text-secondary); text-align:center;">No members found.</div>';
                      } else {
                         searchResults.innerHTML = members.map(m => {
-                           const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url, is_friend: m.is_friend, friend_since: m.friend_since }).replace(/"/g, '&quot;');
+                           const mStr = JSON.stringify({ user_id: m.id, username: m.username, display_name: m.display_name, avatar_url: m.avatar_url, is_friend: m.is_friend, friend_since: m.friend_since, badges: m.badges || [] }).replace(/"/g, '&quot;');
                            return `
                            <div class="search-result-item" data-user="${mStr}" style="display:flex; align-items:center; gap:10px; padding:10px; cursor:pointer; border-bottom:1px solid var(--border); transition: background 0.2s;">
                               <img src="${m.avatar_url}" style="width:30px; height:30px; border-radius:50%; object-fit:cover;">
