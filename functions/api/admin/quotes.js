@@ -30,8 +30,16 @@ export async function onRequest({ request, env }) {
     }
 
     if (request.method === 'DELETE') {
-      const url = new URL(request.url);
-      const id = url.searchParams.get('id');
+      let id;
+      try {
+        const body = await request.json();
+        id = body.id;
+      } catch (e) {
+        // Fallback to URL parameter just in case
+        const url = new URL(request.url);
+        id = url.searchParams.get('id');
+      }
+      
       if (id) {
         await env.QUOTE_DB.prepare(`DELETE FROM quotes WHERE id = ?`).bind(id).run();
       }
