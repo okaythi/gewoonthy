@@ -1,0 +1,499 @@
+---
+import { ClientRouter } from 'astro:transitions';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Dashboard</title>
+    <ClientRouter />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+      
+      :root {
+        --bg-main: #050505;
+        --bg-panel: rgba(20, 20, 20, 0.7);
+        --text-primary: #f0f0f0;
+        --text-secondary: #888;
+        --accent: #fff;
+        --danger: #ff3333;
+        --success: #33ff77;
+        --border: rgba(255, 255, 255, 0.1);
+      }
+      
+      * { box-sizing: border-box; }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        min-height: 100dvh;
+        display: flex;
+        overflow-x: hidden;
+      }
+      
+      /* Glassmorphism Sidebar */
+      .sidebar {
+        width: 250px;
+        background: var(--bg-panel);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-right: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        z-index: 100;
+      }
+      
+      .brand {
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+      }
+      
+      .nav-item {
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .nav-item:hover, .nav-item.active {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-primary);
+      }
+      
+      /* Main Content */
+      .main-content {
+        flex: 1;
+        padding: 3rem;
+        overflow-y: auto;
+        height: 100dvh;
+      }
+      
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
+      
+      h1 { margin: 0; font-size: 2rem; font-weight: 900; letter-spacing: -1px; }
+      
+      .btn {
+        background: var(--accent);
+        color: #000;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      }
+      
+      .btn-danger {
+        background: rgba(255, 51, 51, 0.1);
+        color: var(--danger);
+        border: 1px solid var(--danger);
+      }
+      .btn-danger:hover {
+        background: var(--danger);
+        color: #000;
+      }
+      
+      /* Grid Layouts */
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      /* Glass Cards */
+      .card {
+        background: var(--bg-panel);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+      
+      .card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); }
+      .card h2 { margin-top: 0; font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--text-secondary); }
+      
+      /* Toggles */
+      .toggle-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+      }
+      
+      .switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+      .switch input { opacity: 0; width: 0; height: 0; }
+      .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 24px; }
+      .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
+      input:checked + .slider { background-color: var(--success); }
+      input:checked + .slider:before { transform: translateX(20px); }
+      
+      /* Textarea for ASNs */
+      textarea {
+        width: 100%;
+        background: rgba(0,0,0,0.5);
+        border: 1px solid var(--border);
+        color: #fff;
+        padding: 1rem;
+        border-radius: 6px;
+        font-family: monospace;
+        resize: vertical;
+        min-height: 100px;
+        margin-bottom: 1rem;
+      }
+      
+      /* Sections */
+      .section { display: none; animation: fadeIn 0.4s ease forwards; }
+      .section.active { display: block; }
+      
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      
+      /* Charts Container */
+      .chart-container { position: relative; height: 300px; width: 100%; }
+      
+      /* File Explorer */
+      .file-tree {
+        list-style: none; padding: 0; margin: 0;
+        max-height: 400px; overflow-y: auto;
+      }
+      .file-item {
+        padding: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05);
+        display: flex; justify-content: space-between; align-items: center;
+        font-size: 0.9rem;
+      }
+      .file-item:hover { background: rgba(255,255,255,0.02); }
+      .file-name { display: flex; align-items: center; gap: 8px; }
+      .file-meta { color: var(--text-secondary); font-size: 0.8rem; }
+      
+      /* Uploader */
+      .upload-zone {
+        border: 2px dashed var(--border);
+        border-radius: 12px; padding: 3rem; text-align: center;
+        transition: all 0.3s ease; cursor: pointer;
+        background: rgba(0,0,0,0.2);
+      }
+      .upload-zone:hover, .upload-zone.dragover {
+        border-color: var(--accent); background: rgba(255,255,255,0.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="brand">System</div>
+      <div class="nav-item active" data-target="analytics">Analytics</div>
+      <div class="nav-item" data-target="config">Configuration</div>
+      <div class="nav-item" data-target="vault">Media Vault</div>
+    </div>
+    
+    <div class="main-content">
+      <!-- ANALYTICS SECTION -->
+      <div id="analytics" class="section active">
+        <div class="header">
+          <h1>Analytics & Engagement</h1>
+          <button id="btn-cron" class="btn">Trigger Aggregation Sweep</button>
+        </div>
+        
+        <div class="dashboard-grid">
+          <div class="card">
+            <h2>Track Engagement Funnel (Dwell Time)</h2>
+            <div class="chart-container"><canvas id="funnelChart"></canvas></div>
+          </div>
+          <div class="card">
+            <h2>Language Preference Distribution</h2>
+            <div class="chart-container"><canvas id="langChart"></canvas></div>
+          </div>
+          <div class="card">
+            <h2>Visibility State Timeline (Blackouts)</h2>
+            <div class="chart-container"><canvas id="timelineChart"></canvas></div>
+          </div>
+          <div class="card">
+            <h2>Quote Delivery Heatmap</h2>
+            <div class="chart-container"><canvas id="quoteChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CONFIG SECTION -->
+      <div id="config" class="section">
+        <div class="header">
+          <h1>System Configuration</h1>
+          <button id="btn-save-config" class="btn">Deploy Config</button>
+        </div>
+        
+        <div class="dashboard-grid">
+          <div class="card">
+            <h2>Dynamic ASN Blocklist Editor</h2>
+            <p style="color:var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
+              Enter keywords to block (e.g., MULLVAD, DIGITALOCEAN). One per line.
+            </p>
+            <textarea id="asn-input" placeholder="MULLVAD&#10;PROTON&#10;..."></textarea>
+            
+            <div class="toggle-row" style="border:none">
+               <span>Live VPN Rejections</span>
+               <span id="vpn-counter" style="font-weight:900; color:var(--danger); font-size: 1.5rem;">0</span>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h2>Geo-Fencing Matrix</h2>
+            <div class="toggle-row">
+              <span>Allow EU for Spirit</span>
+              <label class="switch"><input type="checkbox" id="geo-eu-spirit" checked><span class="slider"></span></label>
+            </div>
+            <div class="toggle-row">
+              <span>Allow Global for Mondai</span>
+              <label class="switch"><input type="checkbox" id="geo-global-mondai" checked><span class="slider"></span></label>
+            </div>
+            <div class="toggle-row">
+              <span>Strict Tor Rejection</span>
+              <label class="switch"><input type="checkbox" id="geo-tor" checked><span class="slider"></span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- VAULT SECTION -->
+      <div id="vault" class="section">
+        <div class="header">
+          <h1>Media Vault</h1>
+        </div>
+        
+        <div class="dashboard-grid">
+          <div class="card">
+            <h2>Chunked Multipart Uploader</h2>
+            <div class="upload-zone" id="upload-zone">
+               <div style="font-size: 2rem; margin-bottom: 1rem;">☁️</div>
+               <div style="font-weight:600; margin-bottom: 0.5rem;">Drag & Drop Video Files</div>
+               <div style="font-size: 0.85rem; color:var(--text-secondary)">Supports .mp4, .webm (Bypasses 100MB limit via Presigned URLs)</div>
+               <input type="file" id="file-input" style="display:none" accept="video/mp4,video/webm">
+            </div>
+            <div id="upload-progress" style="margin-top: 1rem; display:none;">
+               <div style="height: 4px; background: #333; border-radius: 2px; overflow:hidden;">
+                 <div id="upload-bar" style="height:100%; width: 0%; background: var(--success); transition: width 0.2s;"></div>
+               </div>
+               <div id="upload-status" style="font-size: 0.8rem; text-align:right; margin-top: 4px; color: var(--text-secondary)">0%</div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <h2>R2 Object Explorer</h2>
+            <ul class="file-tree" id="file-tree">
+              <li style="padding:1rem; text-align:center; color:var(--text-secondary);">Loading Vault...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import Chart from 'chart.js/auto';
+
+      // Navigation
+      const navItems = document.querySelectorAll('.nav-item');
+      const sections = document.querySelectorAll('.section');
+      
+      navItems.forEach(item => {
+        item.addEventListener('click', () => {
+          navItems.forEach(n => n.classList.remove('active'));
+          sections.forEach(s => s.classList.remove('active'));
+          item.classList.add('active');
+          document.getElementById(item.dataset.target).classList.add('active');
+        });
+      });
+
+      // API Logic Placeholder
+      async function loadDashboard() {
+        try {
+          // Fetch Analytics Data
+          const analyticsRes = await fetch('/api/admin/analytics');
+          if (analyticsRes.ok) {
+             const data = await analyticsRes.json();
+             renderCharts(data);
+          }
+          
+          // Fetch Config
+          const configRes = await fetch('/api/admin/config');
+          if (configRes.ok) {
+             const config = await configRes.json();
+             if (config.asnBlocklist) document.getElementById('asn-input').value = config.asnBlocklist.join('\\n');
+             if (config.geo) {
+               document.getElementById('geo-eu-spirit').checked = config.geo.euSpirit !== false;
+               document.getElementById('geo-global-mondai').checked = config.geo.globalMondai !== false;
+               document.getElementById('geo-tor').checked = config.geo.strictTor !== false;
+             }
+          }
+
+          // Fetch Vault
+          const vaultRes = await fetch('/api/admin/r2-explorer');
+          if (vaultRes.ok) {
+             const files = await vaultRes.json();
+             const tree = document.getElementById('file-tree');
+             tree.innerHTML = files.map(f => `
+               <li class="file-item">
+                 <div class="file-name">📄 ${f.key}</div>
+                 <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB • ${new Date(f.uploaded).toLocaleDateString()}</div>
+               </li>
+             `).join('');
+          }
+        } catch(e) {
+          console.error("Dashboard Load Error", e);
+        }
+      }
+
+      function renderCharts(data) {
+         const chartConfig = {
+           responsive: true, maintainAspectRatio: false,
+           plugins: { legend: { labels: { color: '#888' } } },
+           scales: { 
+             x: { ticks: { color: '#666' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+             y: { ticks: { color: '#666' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+           }
+         };
+
+         new Chart(document.getElementById('funnelChart'), {
+           type: 'bar',
+           data: {
+             labels: data.funnel ? data.funnel.labels : ['Track 1', 'Track 2'],
+             datasets: [{ label: 'Avg Dwell Time (s)', data: data.funnel ? data.funnel.values : [120, 150], backgroundColor: '#fff' }]
+           }, options: chartConfig
+         });
+         
+         new Chart(document.getElementById('langChart'), {
+           type: 'doughnut',
+           data: {
+             labels: ['English (Def)', 'Dutch', 'French'],
+             datasets: [{ data: data.lang ? data.lang.values : [70, 20, 10], backgroundColor: ['#fff', '#888', '#333'], borderWidth: 0 }]
+           }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: {color: '#888'} } } }
+         });
+         
+         new Chart(document.getElementById('timelineChart'), {
+           type: 'line',
+           data: {
+             labels: data.timeline ? data.timeline.labels : ['10:00', '11:00', '12:00'],
+             datasets: [{ label: 'Blackouts Triggered', data: data.timeline ? data.timeline.values : [2, 5, 1], borderColor: '#ff3333', tension: 0.4 }]
+           }, options: chartConfig
+         });
+
+         new Chart(document.getElementById('quoteChart'), {
+           type: 'bar',
+           data: {
+             labels: data.quotes ? data.quotes.labels : ['Q1', 'Q2', 'Q3'],
+             datasets: [{ label: 'Views', data: data.quotes ? data.quotes.values : [50, 30, 80], backgroundColor: 'rgba(255,255,255,0.2)' }]
+           }, options: chartConfig
+         });
+         
+         if (data.vpnRejections !== undefined) {
+           document.getElementById('vpn-counter').textContent = data.vpnRejections;
+         }
+      }
+
+      // Save Config
+      document.getElementById('btn-save-config').addEventListener('click', async () => {
+         const btn = document.getElementById('btn-save-config');
+         btn.textContent = 'Deploying...';
+         const asnLines = document.getElementById('asn-input').value.split('\\n').map(l=>l.trim()).filter(Boolean);
+         const payload = {
+           asnBlocklist: asnLines,
+           geo: {
+             euSpirit: document.getElementById('geo-eu-spirit').checked,
+             globalMondai: document.getElementById('geo-global-mondai').checked,
+             strictTor: document.getElementById('geo-tor').checked
+           }
+         };
+         try {
+           await fetch('/api/admin/config', { method: 'POST', body: JSON.stringify(payload) });
+           btn.textContent = 'Saved!';
+           setTimeout(() => btn.textContent = 'Deploy Config', 2000);
+         } catch(e) {
+           btn.textContent = 'Error';
+         }
+      });
+
+      // Uploader Logic
+      const dropZone = document.getElementById('upload-zone');
+      const fileInput = document.getElementById('file-input');
+      dropZone.onclick = () => fileInput.click();
+      dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('dragover'); };
+      dropZone.ondragleave = () => dropZone.classList.remove('dragover');
+      dropZone.ondrop = (e) => { e.preventDefault(); dropZone.classList.remove('dragover'); if(e.dataTransfer.files[0]) handleUpload(e.dataTransfer.files[0]); };
+      fileInput.onchange = (e) => { if(e.target.files[0]) handleUpload(e.target.files[0]); };
+
+      async function handleUpload(file) {
+         document.getElementById('upload-progress').style.display = 'block';
+         const status = document.getElementById('upload-status');
+         const bar = document.getElementById('upload-bar');
+         try {
+           status.textContent = 'Requesting signature...';
+           const urlRes = await fetch(`/api/admin/upload?filename=${encodeURIComponent(file.name)}&type=${encodeURIComponent(file.type)}`);
+           const { uploadUrl, key } = await urlRes.json();
+           
+           status.textContent = 'Uploading to Bucket...';
+           const xhr = new XMLHttpRequest();
+           xhr.open('PUT', uploadUrl, true);
+           xhr.setRequestHeader('Content-Type', file.type);
+           
+           xhr.upload.onprogress = (e) => {
+             if (e.lengthComputable) {
+               const percent = Math.round((e.loaded / e.total) * 100);
+               bar.style.width = percent + '%';
+               status.textContent = percent + '%';
+             }
+           };
+           
+           xhr.onload = () => {
+             if (xhr.status >= 200 && xhr.status < 300) {
+               status.textContent = 'Upload Complete!';
+               loadDashboard(); // Refresh vault
+             } else {
+               status.textContent = 'Upload Failed: ' + xhr.status;
+             }
+           };
+           xhr.send(file);
+         } catch(e) {
+           status.textContent = 'Error initiating upload';
+         }
+      }
+      
+      // Cron Trigger
+      document.getElementById('btn-cron').addEventListener('click', async () => {
+        const btn = document.getElementById('btn-cron');
+        btn.textContent = 'Sweeping...';
+        await fetch('/api/admin/cron-trigger', { method: 'POST' });
+        btn.textContent = 'Sweep Complete';
+        setTimeout(() => btn.textContent = 'Trigger Aggregation Sweep', 3000);
+      });
+
+      // Init
+      document.addEventListener('astro:page-load', loadDashboard);
+      if (document.readyState === 'complete') loadDashboard();
+    </script>
+  </body>
+</html>
