@@ -29,6 +29,27 @@ import AntiCapture from '../components/AntiCapture.astro';
       a { color: #aaaaaa; text-decoration: underline; transition: color 0.2s ease; }
       a:hover { color: #ffffff; }
       .meta { font-size: 0.75rem; color: #555; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 3rem; }
+      .destroy-btn-container { margin-top: 4rem; display: flex; justify-content: center; margin-bottom: 2rem; width: 100%; }
+      .destroy-btn { 
+        background: rgba(255, 60, 60, 0.05); color: #ff4a4a; border: 1px solid rgba(255, 60, 60, 0.2); 
+        padding: 12px 28px; border-radius: 30px; font-family: inherit; font-size: 0.85rem; font-weight: 600; 
+        text-transform: uppercase; letter-spacing: 1.5px; cursor: pointer; display: inline-flex; align-items: center; 
+        gap: 12px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); 
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden;
+      }
+      .destroy-btn::before {
+        content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,60,60,0.1), transparent); transition: left 0.5s ease;
+      }
+      .destroy-btn:hover {
+        background: rgba(255, 60, 60, 0.15); border-color: rgba(255, 60, 60, 0.5);
+        box-shadow: 0 8px 25px rgba(255, 60, 60, 0.2); transform: translateY(-2px);
+      }
+      .destroy-btn:hover::before { left: 100%; }
+      .destroy-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+      .destroy-btn:hover svg { transform: rotate(15deg) scale(1.1); }
+      .destroy-btn.success { background: rgba(60, 255, 60, 0.05); color: #4aff4a; border-color: rgba(60, 255, 60, 0.3); }
+      .destroy-btn.success svg { transform: scale(1.2); }
     </style>
   </head>
   <body>
@@ -41,24 +62,39 @@ import AntiCapture from '../components/AntiCapture.astro';
         <div id="policy-en" class="policy-section active">
           <h1>Privacy Policy</h1><div class="meta">Effective Date: July 2026</div>
           <h2>1. Data Controller</h2><p>The entity responsible for processing activities on this website is: <strong>Thy</strong>.<br/>Contact: <a href="mailto:mathyschepers@proton.me">mathyschepers@proton.me</a></p>
-          <h2>2. Local Storage & Preferences</h2><p>To provide a seamless browsing experience, we utilize client-side HTML5 Local Storage. This strictly necessary mechanism retains your interface preferences and quote reading history directly on your device to prevent repetition. This data is never transmitted to, monitored by, or stored on our servers. You may permanently delete this data at any time by clearing your browser cache.</p>
+          <h2>2. Local Storage & Preferences</h2><p>To provide a seamless browsing experience, we utilize client-side HTML5 Local Storage. This strictly necessary mechanism retains your interface preferences and quote reading history directly on your device to prevent repetition. This data is never transmitted to, monitored by, or stored on our servers.</p>
           <h2>3. Infrastructure & Network Security</h2><p>This website is distributed via the Cloudflare global network. To ensure security, prevent malicious activity (such as DDoS attacks), and route your connection efficiently, Cloudflare temporarily processes standard connection metadata, including IP addresses and basic routing parameters. This processing is ephemeral, automated, and strictly necessary to safeguard the infrastructure and comply with regional legal requirements.</p>
-          <h2>4. Your Rights</h2><p>As no personal data is retained on our servers, data access and erasure rights concerning your preferences can be exercised independently by clearing your local browser storage. For any other privacy inquiries, please contact the email provided above.</p>
+          <h2>4. Security & Anti-Abuse Logging</h2><p>To protect copyrighted material and maintain infrastructure security, we actively monitor for unauthorized media capture attempts (e.g., screenshots or screen recordings). When such activity is detected, we log your IP address, ASN, country, and the nature of the event to our security ledger. This data is retained for a maximum of 365 days. This processing is based on our legitimate interest in protecting intellectual property.</p>
+          <h2>5. Analytics & Telemetry</h2><p>We collect anonymized session data, such as video watch duration and basic interaction metrics, using a temporary, random session identifier stored in your browser. This data is used solely to understand viewership and improve the platform. We also utilize Cloudflare Web Analytics, a privacy-first analytics service that does not use client-side tracking cookies. This processing is based on our legitimate interest in improving user experience.</p>
+          <h2>6. User Submissions</h2><p>If you choose to submit a song suggestion, any optional alias you provide will be stored in our database alongside your suggestion.</p>
+          <h2>7. Your Rights</h2><p>As no personal data is retained on our servers beyond what is explicitly mentioned, data access and erasure rights concerning your local preferences and sessions can be exercised independently by using the "Erase Local Data" button below. For any other privacy inquiries, please contact the email provided above.</p>
         </div>
         <div id="policy-nl" class="policy-section">
           <h1>Privacybeleid</h1><div class="meta">Ingangsdatum: Juli 2026</div>
           <h2>1. Verwerkingsverantwoordelijke</h2><p>De entiteit die verantwoordelijk is voor de verwerkingsactiviteiten op deze website is: <strong>Thy</strong>.<br/>Contact: <a href="mailto:mathyschepers@proton.me">mathyschepers@proton.me</a></p>
-          <h2>2. Lokale Opslag & Voorkeuren</h2><p>Om een naadloze ervaring te bieden, maken wij gebruik van client-side HTML5 Local Storage. Dit strikt noodzakelijke mechanisme bewaart uw interfacevoorkeuren en leesgeschiedenis uitsluitend lokaal op uw apparaat. Deze gegevens worden nooit naar onze servers verzonden, door ons gemonitord of opgeslagen. U kunt deze gegevens op elk moment permanent verwijderen door uw browsercache te wissen.</p>
+          <h2>2. Lokale Opslag & Voorkeuren</h2><p>Om een naadloze ervaring te bieden, maken wij gebruik van client-side HTML5 Local Storage. Dit strikt noodzakelijke mechanisme bewaart uw interfacevoorkeuren en leesgeschiedenis uitsluitend lokaal op uw apparaat. Deze gegevens worden nooit naar onze servers verzonden, door ons gemonitord of opgeslagen.</p>
           <h2>3. Infrastructuur & Netwerkbeveiliging</h2><p>Deze website wordt gedistribueerd via het wereldwijde Cloudflare-netwerk. Om de veiligheid te garanderen, kwaadaardige activiteiten te voorkomen en uw verbinding efficiënt te routeren, verwerkt Cloudflare tijdelijk standaard verbindingsmetagegevens, waaronder IP-adressen en basisrouteringsparameters. Deze verwerking is van voorbijgaande aard, geautomatiseerd en strikt noodzakelijk om de infrastructuur te beveiligen en te voldoen aan regionale wettelijke vereisten.</p>
-          <h2>4. Uw Rechten</h2><p>Aangezien er geen persoonsgegevens op onze servers worden bewaard, kunt u uw recht op inzage en verwijdering met betrekking tot uw voorkeuren zelfstandig uitoefenen door uw lokale browseropslag te wissen. Voor overige privacyvragen kunt u contact opnemen via het bovenstaande e-mailadres.</p>
+          <h2>4. Beveiliging & Anti-Misbruik Logboeken</h2><p>Ter bescherming van auteursrechtelijk beschermd materiaal en om de veiligheid van onze infrastructuur te handhaven, monitoren wij actief op ongeoorloofde pogingen om media vast te leggen (bijv. screenshots of schermopnames). Wanneer dergelijke activiteit wordt gedetecteerd, loggen wij uw IP-adres, ASN, land en de aard van de gebeurtenis in ons beveiligingsregister. Deze gegevens worden maximaal 365 dagen bewaard. Deze verwerking is gebaseerd op ons gerechtvaardigd belang om intellectueel eigendom te beschermen.</p>
+          <h2>5. Analyse & Telemetrie</h2><p>Wij verzamelen geanonimiseerde sessiegegevens, zoals de afspeelduur van video's en basisinteractiestatistieken, met behulp van een tijdelijke, willekeurige sessie-identificatie die in uw browser is opgeslagen. Deze gegevens worden uitsluitend gebruikt om het kijkgedrag te begrijpen en het platform te verbeteren. Daarnaast maken we gebruik van Cloudflare Web Analytics, een privacygerichte analysedienst die geen trackingcookies aan de clientzijde gebruikt. Deze verwerking is gebaseerd op ons gerechtvaardigd belang om de gebruikerservaring te verbeteren.</p>
+          <h2>6. Gebruikersinzendingen</h2><p>Als u ervoor kiest om een nummer voor te stellen, wordt elke optionele alias die u opgeeft, samen met uw suggestie in onze database opgeslagen.</p>
+          <h2>7. Uw Rechten</h2><p>Aangezien er geen persoonsgegevens op onze servers worden bewaard buiten wat expliciet is vermeld, kunt u uw recht op inzage en verwijdering met betrekking tot uw lokale voorkeuren en sessies zelfstandig uitoefenen via de knop "Lokale Gegevens Wissen" hieronder. Voor overige privacyvragen kunt u contact opnemen via het bovenstaande e-mailadres.</p>
         </div>
         <div id="policy-fr" class="policy-section">
           <h1>Politique de Confidentialité</h1><div class="meta">Date d'entrée en vigueur : Juillet 2026</div>
           <h2>1. Responsable du Traitement</h2><p>L'entité responsable des activités de traitement sur ce site web est : <strong>Thy</strong>.<br/>Contact : <a href="mailto:mathyschepers@proton.me">mathyschepers@proton.me</a></p>
-          <h2>2. Stockage Local et Préférences</h2><p>Afin d'offrir une expérience de navigation fluide, nous utilisons le stockage local HTML5 (Local Storage) côté client. Ce mécanisme strictement nécessaire conserve vos préférences d'interface et votre historique de lecture directement sur votre appareil afin d'éviter les répétitions. Ces données ne sont jamais transmises, surveillées ni stockées sur nos serveurs. Vous pouvez supprimer définitivement ces données à tout moment en vidant le cache de votre navigateur.</p>
+          <h2>2. Stockage Local et Préférences</h2><p>Afin d'offrir une expérience de navigation fluide, nous utilisons le stockage local HTML5 (Local Storage) côté client. Ce mécanisme strictement nécessaire conserve vos préférences d'interface et votre historique de lecture directement sur votre appareil afin d'éviter les répétitions. Ces données ne sont jamais transmises, surveillées ni stockées sur nos serveurs.</p>
           <h2>3. Infrastructure et Sécurité du Réseau</h2><p>Ce site web est distribué via le réseau mondial Cloudflare. Pour assurer la sécurité, prévenir les activités malveillantes (telles que les attaques DDoS) et acheminer efficacement votre connexion, Cloudflare traite temporairement des métadonnées de connexion standard, y compris les adresses IP et les paramètres de routage de base. Ce traitement est éphémère, automatisé et strictement nécessaire pour protéger l'infrastructure et se conformer aux exigences légales régionales.</p>
-          <h2>4. Vos Droits</h2><p>Étant donné qu'aucune donnée personnelle n'est conservée sur nos serveurs, les droits d'accès et d'effacement concernant vos préférences peuvent être exercés indépendamment en effaçant le stockage local de votre navigateur. Pour toute autre question relative à la confidentialité, veuillez contacter l'adresse e-mail fournie ci-dessus.</p>
+          <h2>4. Sécurité et Journalisation Anti-Abus</h2><p>Afin de protéger le matériel protégé par le droit d'auteur et de maintenir la sécurité de l'infrastructure, nous surveillons activement les tentatives non autorisées de capture de médias (par ex., captures d'écran ou enregistrements). Lorsqu'une telle activité est détectée, nous enregistrons votre adresse IP, votre ASN, votre pays et la nature de l'événement dans notre registre de sécurité. Ces données sont conservées pour une durée maximale de 365 jours. Ce traitement est basé sur notre intérêt légitime à protéger la propriété intellectuelle.</p>
+          <h2>5. Analytique et Télémétrie</h2><p>Nous recueillons des données de session anonymisées, telles que la durée de visionnage des vidéos et des mesures d'interaction de base, à l'aide d'un identifiant de session temporaire et aléatoire stocké dans votre navigateur. Ces données sont utilisées uniquement pour comprendre l'audience et améliorer la plateforme. Nous utilisons également Cloudflare Web Analytics, un service d'analyse respectueux de la vie privée qui n'utilise pas de cookies de suivi côté client. Ce traitement est basé sur notre intérêt légitime à améliorer l'expérience utilisateur.</p>
+          <h2>6. Soumissions des Utilisateurs</h2><p>Si vous choisissez de soumettre une suggestion de chanson, tout pseudonyme facultatif que vous fournissez sera stocké dans notre base de données avec votre suggestion.</p>
+          <h2>7. Vos Droits</h2><p>Étant donné qu'aucune donnée personnelle n'est conservée sur nos serveurs au-delà de ce qui est explicitement mentionné, les droits d'accès et d'effacement concernant vos préférences locales et vos sessions peuvent être exercés indépendamment en utilisant le bouton "Effacer les Données Locales" ci-dessous. Pour toute autre question relative à la confidentialité, veuillez contacter l'adresse e-mail fournie ci-dessus.</p>
         </div>
+      </div>
+      <div class="destroy-btn-container">
+        <button id="destroy-data-btn" class="destroy-btn" aria-label="Erase Local Data">
+          <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+          <span id="destroy-btn-text">Erase Local Data</span>
+        </button>
       </div>
     </div>
     <script>
@@ -68,9 +104,17 @@ import AntiCapture from '../components/AntiCapture.astro';
         const sections = { 'en': document.getElementById('policy-en'), 'nl': document.getElementById('policy-nl'), 'fr': document.getElementById('policy-fr') };
         const savedLang = localStorage.getItem('pref_lang') || 'en';
         langPicker.value = savedLang;
+        const btnTranslations = {
+          'en': 'Erase Local Data',
+          'nl': 'Lokale Gegevens Wissen',
+          'fr': 'Effacer les Données Locales'
+        };
+        const destroyBtnText = document.getElementById('destroy-btn-text');
+        
         function switchLang(lang) {
           Object.values(sections).forEach(el => el.classList.remove('active'));
           if (sections[lang]) sections[lang].classList.add('active');
+          if (destroyBtnText && btnTranslations[lang]) destroyBtnText.textContent = btnTranslations[lang];
         }
         switchLang(savedLang);
         langPicker.addEventListener('change', (e) => {
@@ -78,6 +122,30 @@ import AntiCapture from '../components/AntiCapture.astro';
           localStorage.setItem('pref_lang', selectedLang);
           switchLang(selectedLang);
         });
+
+        const destroyBtn = document.getElementById('destroy-data-btn');
+        if (destroyBtn) {
+          destroyBtn.addEventListener('click', () => {
+            // Clear HTML5 Storage
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            // Clear Cookies
+            document.cookie.split(';').forEach(cookie => {
+              const eqPos = cookie.indexOf('=');
+              const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+              document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/';
+            });
+
+            // Visual feedback
+            destroyBtn.classList.add('success');
+            destroyBtn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg><span id="destroy-btn-text">Data Destroyed</span>';
+            
+            setTimeout(() => {
+              window.location.reload();
+            }, 800);
+          });
+        }
       });
     </script>
     <AntiCapture />
