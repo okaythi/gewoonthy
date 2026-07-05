@@ -169,7 +169,7 @@ import AntiCapture from '../components/AntiCapture.astro';
       <div class="nav-item" data-target="trust">🛡️ Trust & Safety</div>
       <div class="nav-item" data-target="quotes">🖋️ Localization</div>
       <div class="nav-item" data-target="vault">📂 Media Vault</div>
-      <div class="nav-item" data-target="close-friends">👥 Close Friends</div>
+      <div class="nav-item" data-target="friends-manager">👥 Friends</div>
       <div class="nav-item" data-target="about-editor">📖 About Editor</div>
       <div class="nav-item" data-target="config">⚙️ Config</div>
       
@@ -344,28 +344,37 @@ import AntiCapture from '../components/AntiCapture.astro';
         </div>
       </div>
 
-      <!-- CLOSE FRIENDS SECTION -->
-      <div id="close-friends" class="section">
-        <div class="header">
-          <h1>Close Friends Manager</h1>
-        </div>
-        <div class="dashboard-grid">
-          <div class="card">
-            <h2>Search Server Members</h2>
-            <div style="position: relative;">
-               <input type="text" id="friend-search-input" placeholder="Type a username..." style="width:100%; padding:10px; background:var(--bg-main); color:#fff; border:1px solid var(--border); border-radius:6px; font-family:inherit; outline:none;">
-               <div id="friend-search-results" style="position:absolute; top:100%; left:0; right:0; background:var(--bg-panel); backdrop-filter: blur(10px); border:1px solid var(--border); border-radius:6px; max-height:200px; overflow-y:auto; z-index:10; display:none; flex-direction:column; margin-top:5px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);">
+      <!-- FRIENDS SECTION -->
+      <section id="friends-manager" class="section">
+         <div class="header">
+            <h1>Friends Manager</h1>
+         </div>
+         <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items:start;">
+            
+            <!-- Left Column: Search Server Members -->
+            <div style="background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+               <h3 style="margin-top:0; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--text-secondary);">Search Server Members</h3>
+               <div style="position:relative;">
+                  <input type="text" id="member-search" placeholder="Search by username or display name..." style="width:100%; padding:10px; border-radius:6px; border:1px solid var(--border); background:var(--bg-main); color:#fff; font-size:1rem;">
+                  <div id="search-results" style="position:absolute; top:100%; left:0; right:0; background:var(--bg-panel); border:1px solid var(--border); border-radius:6px; margin-top:5px; max-height:300px; overflow-y:auto; display:none; flex-direction:column; z-index:10;">
+                     <!-- Results dynamically inserted here -->
+                  </div>
                </div>
             </div>
-          </div>
-          <div class="card">
-            <h2>Current Close Friends</h2>
-            <div id="close-friends-list" style="display:flex; flex-direction:column; gap:10px; max-height: 400px; overflow-y:auto;">
-               <div style="text-align:center; color:var(--text-secondary);">Loading...</div>
+
+            <!-- Right Column: Current Friends -->
+            <div style="background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+               <h3 style="margin-top:0; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--text-secondary);">Current Friends</h3>
+               <div id="current-close-friends" style="display:flex; flex-direction:column;">
+                  <!-- Friends dynamically inserted here -->
+                  <div style="padding: 20px; text-align:center; color: var(--text-secondary); font-style: italic;">
+                     Loading...
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
+            
+         </div>
+      </section>
 
       <!-- ABOUT EDITOR SECTION -->
       <div id="about-editor" class="section">
@@ -436,8 +445,8 @@ import AntiCapture from '../components/AntiCapture.astro';
                      // Check if we recently retried to prevent infinite loops
                      if (!sessionStorage.getItem('cf_auth_retry')) {
                         sessionStorage.setItem('cf_auth_retry', '1');
-                        alert('Your secure session has expired. Reloading to re-authenticate...');
-                        window.location.reload();
+                        alert('Your secure session has expired. Redirecting to re-authenticate...');
+                        window.location.href = '/api/admin/auth-check?redirect=' + encodeURIComponent(window.location.pathname);
                      } else {
                         console.error('CF Access Auth Loop detected.', err);
                      }
@@ -762,53 +771,50 @@ import AntiCapture from '../components/AntiCapture.astro';
          }
       }
       
-      // --- Close Friends Manager ---
-      let closeFriends = [];
-      const searchInput = document.getElementById('friend-search-input');
-      const searchResults = document.getElementById('friend-search-results');
-      const friendsListContainer = document.getElementById('close-friends-list');
+      // --- Friends Manager ---
+      const friendsList = document.getElementById('current-close-friends');
+      const searchInput = document.getElementById('member-search');
+      const searchResults = document.getElementById('search-results');
 
-      async function loadCloseFriends() {
+      const loadFriends = async () => {
          try {
             const res = await fetch('/api/admin/close-friends', { credentials: 'include' });
             if (res.ok) {
-               closeFriends = await res.json();
-               renderCloseFriends();
+               const friends = await res.json();
+               if (friends.length === 0) {
+                  friendsList.innerHTML = '<div style="padding: 20px; text-align:center; color: var(--text-secondary); font-style: italic;">No Friends yet...<br/>Looks like someone needs to go outside and make some real friends.</div>';
+               } else {
+                  friendsList.innerHTML = friends.map(f => `
+                     <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; border:1px solid var(--border); margin-bottom: 10px;">
+                        <div style="display:flex; align-items:center; gap:10px;">
+                           <img src="${f.avatar_url}" alt="Avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:1px solid var(--border);">
+                           <div>
+                              <div style="font-weight:600;">${f.display_name || f.username}</div>
+                              <div style="font-size:0.8rem; color:var(--text-secondary);">@${f.username}</div>
+                           </div>
+                        </div>
+                        <button onclick="removeFriend('${f.user_id}')" class="btn btn-danger" style="padding:6px 12px; font-size:0.8rem;">Remove</button>
+                     </div>
+                  `).join('');
+               }
             } else {
-               renderCloseFriends();
+               friendsList.innerHTML = '<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Failed to load friends.</div>';
             }
-         } catch(e){ renderCloseFriends(); }
-      }
-
-      function renderCloseFriends() {
-         if (!closeFriends || closeFriends.length === 0) {
-            friendsListContainer.innerHTML = '<div style="text-align:center; color:var(--text-secondary); margin-top:20px; font-style:italic;">No Close Friends yet...<br>Looks like someone needs to go outside and make some real friends.</div>';
-            return;
+         } catch(e) {
+            friendsList.innerHTML = '<div style="padding: 20px; text-align:center; color: var(--text-secondary);">Error loading friends.</div>';
          }
-         friendsListContainer.innerHTML = closeFriends.map(f => `
-            <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; border:1px solid var(--border);">
-               <div style="display:flex; align-items:center; gap:10px;">
-                  <img src="${f.avatar_url}" alt="Avatar" style="width:40px; height:40px; border-radius:50%; object-fit:cover; border:1px solid var(--border);">
-                  <div>
-                     <div style="font-weight:600;">${f.display_name || f.username}</div>
-                     <div style="font-size:0.8rem; color:var(--text-secondary);">@${f.username}</div>
-                  </div>
-               </div>
-               <button onclick="removeFriend('${f.user_id}')" class="btn btn-danger" style="padding:6px 12px; font-size:0.8rem;">Remove</button>
-            </div>
-         `).join('');
-      }
+      };
 
       window.removeFriend = async (userId) => {
          await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
-         loadCloseFriends();
+         loadFriends();
       };
 
       window.addFriend = async (user) => {
          await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
          searchResults.style.display = 'none';
          searchInput.value = '';
-         loadCloseFriends();
+         loadFriends();
       };
 
       let searchTimeout;
@@ -866,7 +872,7 @@ import AntiCapture from '../components/AntiCapture.astro';
          });
       }
 
-      loadCloseFriends();
+      loadFriends();
 
       // --- About Editor (Structured Categorized Fields) ---
       let aboutBlocks = [];
