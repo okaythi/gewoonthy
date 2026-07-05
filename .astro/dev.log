@@ -1,21 +1,43 @@
 {"message":"connected.","label":"vite","level":"info"}
-{"message":"Generated 1ms","label":"types","level":"info"}
+{"message":"Generated 3ms","label":"types","level":"info"}
 {"message":"connected.","label":"vite","level":"info"}
 {"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
-{"message":" astro  v7.0.4 ready in 10218 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":" astro  v7.0.4 ready in 7389 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}
-{"message":"[200] / 202ms","label":null,"level":"info"}
+{"message":"[200] /dashboard/ 79ms","label":null,"level":"info"}
 {"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
 {"message":"dependencies optimized: astro/virtual-modules/transitions-events.js, astro/virtual-modules/transitions-router.js, astro/virtual-modules/transitions-swap-functions.js, astro/virtual-modules/transitions-types.js","label":"vite","level":"info"}
-{"message":"[200] / 45ms","label":null,"level":"info"}
-{"message":"[404] /api/videos 38ms","label":null,"level":"info"}
-{"message":"[404] POST /api/analytics 2ms","label":null,"level":"info"}
-{"message":"[404] /api/videos 3ms","label":null,"level":"info"}
-{"message":"[200] /read 75ms","label":null,"level":"info"}
-{"message":"[200] /read 10ms","label":null,"level":"info"}
-{"message":"[404] /cdn-cgi/trace 6ms","label":null,"level":"info"}
-{"message":"[404] /api/quote 2ms","label":null,"level":"info"}
-{"message":"[200] /read 26ms","label":null,"level":"info"}
-{"message":"[404] POST /api/analytics 4ms","label":null,"level":"info"}
-{"message":"[404] /cdn-cgi/trace 1ms","label":null,"level":"info"}
-{"message":"[404] /api/quote 1ms","label":null,"level":"info"}
+{"message":"[200] /dashboard/ 13ms","label":null,"level":"info"}
+{"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
+{"message":"dependency optimized: chart.js/auto","label":"vite","level":"info"}
+{"message":"[404] /api/admin/close-friends 27ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/r2-explorer 4ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/quotes 7ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/telemetry 2ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/suggestions 4ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/about 21ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/search-members 4ms","label":null,"level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[200] /dashboard/ 43ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/close-friends 11ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/r2-explorer 8ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/quotes 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/telemetry 3ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/suggestions 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/about 2ms","label":null,"level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[200] /dashboard/ 30ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/close-friends 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/r2-explorer 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/quotes 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/telemetry 9ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/suggestions 4ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/about 1ms","label":null,"level":"info"}
+{"message":"src/pages/dashboard.astro","label":"watch","level":"info"}
+{"message":"[200] /dashboard/ 46ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/close-friends 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/r2-explorer 3ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/quotes 1ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/telemetry 2ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/suggestions 2ms","label":null,"level":"info"}
+{"message":"[404] /api/admin/about 1ms","label":null,"level":"info"}
