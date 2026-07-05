@@ -15,34 +15,53 @@ CORS(app)
 def home():
     return "Bot is alive!"
 
-@app.route('/api/search_members')
+@app.route('/api/search_members', methods=['GET'])
 def search_members():
     q = request.args.get('q', '').lower()
     if not q:
         return jsonify([])
 
+    members = []
+    seen_ids = set()
+    
+    def add_user_to_results(user, is_friend, friend_since):
+        if user.id in seen_ids:
+            return
+        seen_ids.add(user.id)
+        avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
+        members.append({
+            "id": str(user.id),
+            "username": user.name,
+            "display_name": user.display_name,
+            "avatar_url": avatar_url,
+            "is_friend": is_friend,
+            "friend_since": friend_since
+        })
+
+    # 1. Search in guild members
     guild_id = 238393736478851074
     guild = client.get_guild(guild_id)
-    if not guild:
-        return jsonify({"error": "Guild not found"}), 404
+    if guild:
+        for member in guild.members:
+            if q in member.name.lower() or q in member.display_name.lower():
+                relationship = next((r for r in client.friends if r.user.id == member.id), None)
+                is_friend = relationship is not None
+                friend_since = relationship.since.isoformat() if relationship and relationship.since else None
+                add_user_to_results(member, is_friend, friend_since)
+                if len(members) >= 15:
+                    break
 
-    members = []
-    for member in guild.members:
-        if q in member.name.lower() or q in member.display_name.lower():
-            avatar_url = str(member.avatar.url) if member.avatar else str(member.default_avatar.url)
-            relationship = next((r for r in client.friends if r.user.id == member.id), None)
-            is_friend = relationship is not None
-            friend_since = relationship.since.isoformat() if relationship and relationship.since else None
-            members.append({
-                "id": str(member.id),
-                "username": member.name,
-                "display_name": member.display_name,
-                "avatar_url": avatar_url,
-                "is_friend": is_friend,
-                "friend_since": friend_since
-            })
-            if len(members) >= 15:
-                break
+    # 2. Search in client's friends list
+    if len(members) < 15:
+        for relationship in client.friends:
+            friend_user = relationship.user
+            if q in friend_user.name.lower() or q in friend_user.display_name.lower():
+                is_friend = True
+                friend_since = relationship.since.isoformat() if relationship.since else None
+                add_user_to_results(friend_user, is_friend, friend_since)
+                if len(members) >= 15:
+                    break
+
     return jsonify(members)
 
 def run_server():
