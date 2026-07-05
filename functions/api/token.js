@@ -30,7 +30,15 @@ export async function onRequest({ request: r, env }) {
     const p = (u.searchParams.get('track') || 'spirit') === 'mondai' ? [...e, ...s] : e;
     const torBlock = geo.strictTor ? c.isTor : false;
     
-    if (!p.includes(n) || torBlock || x || !v) b = true;
+    if (!p.includes(n) || torBlock || x || !v) {
+      b = true;
+      if (env.QUOTE_DB) {
+        let reason = torBlock ? 'TOR' : (!p.includes(n) ? 'GEOBLOCK' : (!v ? 'ISP_NOT_ALLOWED' : 'ASN_BLOCK'));
+        env.QUOTE_DB.prepare(
+          `INSERT INTO threat_ledger (ip_address, asn, country, event_type, target, blocked) VALUES (?, ?, ?, ?, ?, ?)`
+        ).bind(i, o, n, reason, 'video_token', 1).run().catch(e => console.error("Threat log fail", e));
+      }
+    }
   }
   const st = btoa(Date.now() + '|' + i + '|' + 'MONDAY_GIRL_SECURE');
   return new Response(JSON.stringify({ token: t, st, isBypassed: b }), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });

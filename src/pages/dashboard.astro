@@ -5,7 +5,7 @@ import { ClientRouter } from 'astro:transitions';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>System Dashboard</title>
+    <title>System Dashboard V2</title>
     <ClientRouter />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
@@ -18,225 +18,266 @@ import { ClientRouter } from 'astro:transitions';
         --accent: #fff;
         --danger: #ff3333;
         --success: #33ff77;
+        --warning: #ffaa00;
         --border: rgba(255, 255, 255, 0.1);
+        --glass-bg: rgba(0,0,0,0.5);
+      }
+
+      body.theme-light {
+        --bg-main: #f0f0f0;
+        --bg-panel: rgba(255, 255, 255, 0.7);
+        --text-primary: #050505;
+        --text-secondary: #555;
+        --accent: #000;
+        --border: rgba(0, 0, 0, 0.1);
+        --glass-bg: rgba(255,255,255,0.5);
       }
       
       * { box-sizing: border-box; }
       
       body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: var(--bg-main);
-        color: var(--text-primary);
-        min-height: 100dvh;
-        display: flex;
-        overflow-x: hidden;
+        margin: 0; padding: 0; font-family: 'Inter', sans-serif;
+        background-color: var(--bg-main); color: var(--text-primary);
+        min-height: 100dvh; display: flex; overflow-x: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
       
       /* Glassmorphism Sidebar */
       .sidebar {
-        width: 250px;
-        background: var(--bg-panel);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        width: 250px; background: var(--bg-panel);
+        backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
         border-right: 1px solid var(--border);
-        display: flex;
-        flex-direction: column;
-        padding: 2rem 1rem;
-        z-index: 100;
+        display: flex; flex-direction: column; padding: 2rem 1rem; z-index: 100;
       }
       
       .brand {
-        font-weight: 900;
-        font-size: 1.5rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 3rem;
-        padding-left: 1rem;
+        font-weight: 900; font-size: 1.5rem; letter-spacing: 2px;
+        text-transform: uppercase; margin-bottom: 3rem; padding-left: 1rem;
       }
       
       .nav-item {
-        padding: 1rem;
-        margin-bottom: 0.5rem;
-        border-radius: 8px;
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
+        padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px;
+        color: var(--text-secondary); text-decoration: none; font-weight: 600;
+        transition: all 0.3s ease; cursor: pointer; display: flex; align-items: center; gap: 10px;
       }
+      .nav-item:hover, .nav-item.active { background: rgba(128, 128, 128, 0.1); color: var(--text-primary); }
       
-      .nav-item:hover, .nav-item.active {
-        background: rgba(255, 255, 255, 0.05);
-        color: var(--text-primary);
+      .theme-switch {
+        margin-top: auto; padding: 1rem; cursor: pointer;
+        color: var(--text-secondary); font-weight: 600; display:flex; align-items:center; gap: 10px;
       }
       
       /* Main Content */
-      .main-content {
-        flex: 1;
-        padding: 3rem;
-        overflow-y: auto;
-        height: 100dvh;
-      }
-      
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 3rem;
-      }
-      
+      .main-content { flex: 1; padding: 3rem; overflow-y: auto; height: 100dvh; }
+      .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
       h1 { margin: 0; font-size: 2rem; font-weight: 900; letter-spacing: -1px; }
       
       .btn {
-        background: var(--accent);
-        color: #000;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
-        font-weight: 600;
-        font-family: 'Inter', sans-serif;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background: var(--accent); color: var(--bg-main); border: none;
+        padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 600;
+        cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
-      
-      .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-      }
-      
-      .btn-danger {
-        background: rgba(255, 51, 51, 0.1);
-        color: var(--danger);
-        border: 1px solid var(--danger);
-      }
-      .btn-danger:hover {
-        background: var(--danger);
-        color: #000;
-      }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(128, 128, 128, 0.2); }
+      .btn-danger { background: rgba(255, 51, 51, 0.1); color: var(--danger); border: 1px solid var(--danger); }
+      .btn-danger:hover { background: var(--danger); color: #000; }
       
       /* Grid Layouts */
       .dashboard-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem; margin-bottom: 3rem;
       }
+      .dashboard-grid.full { grid-template-columns: 1fr; }
       
       /* Glass Cards */
       .card {
-        background: var(--bg-panel);
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1.5rem;
+        background: var(--bg-panel); backdrop-filter: blur(10px);
+        border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem;
         transition: transform 0.3s ease;
       }
-      
-      .card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); }
-      .card h2 { margin-top: 0; font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--text-secondary); }
+      .card:hover { border-color: rgba(128,128,128,0.2); }
+      .card h2 { margin-top: 0; font-size: 1.2rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--text-secondary); display:flex; justify-content: space-between;}
       
       /* Toggles */
-      .toggle-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-      }
-      
+      .toggle-row { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-bottom: 1px solid var(--border); }
       .switch { position: relative; display: inline-block; width: 44px; height: 24px; }
       .switch input { opacity: 0; width: 0; height: 0; }
-      .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #333; transition: .4s; border-radius: 24px; }
+      .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #777; transition: .4s; border-radius: 24px; }
       .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; }
       input:checked + .slider { background-color: var(--success); }
       input:checked + .slider:before { transform: translateX(20px); }
       
-      /* Textarea for ASNs */
+      /* Textarea */
       textarea {
-        width: 100%;
-        background: rgba(0,0,0,0.5);
-        border: 1px solid var(--border);
-        color: #fff;
-        padding: 1rem;
-        border-radius: 6px;
-        font-family: monospace;
-        resize: vertical;
-        min-height: 100px;
-        margin-bottom: 1rem;
+        width: 100%; background: var(--glass-bg); border: 1px solid var(--border);
+        color: var(--text-primary); padding: 1rem; border-radius: 6px;
+        font-family: monospace; resize: vertical; min-height: 100px; margin-bottom: 1rem;
       }
       
       /* Sections */
       .section { display: none; animation: fadeIn 0.4s ease forwards; }
       .section.active { display: block; }
-      
       @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
       
-      /* Charts Container */
-      .chart-container { position: relative; height: 300px; width: 100%; }
+      /* Data Tables */
+      .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+      .data-table th, .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
+      .data-table th { color: var(--text-secondary); font-weight: 600; }
+      .data-table tr:hover { background: rgba(128,128,128,0.05); }
+      
+      /* Inline Editing */
+      .editable { cursor: pointer; border-bottom: 1px dashed var(--text-secondary); }
+      .editable:hover { background: rgba(255,255,255,0.1); }
+      .missing { color: var(--danger); font-weight: bold; }
+      
+      /* Context Menu */
+      .context-menu {
+        display: none; position: absolute; background: var(--bg-main);
+        border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0;
+        z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      }
+      .context-menu-item { padding: 0.5rem 1rem; cursor: pointer; font-size: 0.9rem; }
+      .context-menu-item:hover { background: var(--accent); color: var(--bg-main); }
+      
+      /* Sandbox Modal */
+      .modal-overlay {
+        display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.9); z-index: 2000; justify-content: center; align-items: center;
+      }
+      .modal-content { background: #000; border-radius: 8px; overflow: hidden; max-width: 90%; max-height: 90%; }
+      .modal-close { position: absolute; top: 20px; right: 20px; color: #fff; font-size: 2rem; cursor: pointer; }
+      video { max-width: 100%; max-height: 80vh; outline: none; }
       
       /* File Explorer */
-      .file-tree {
-        list-style: none; padding: 0; margin: 0;
-        max-height: 400px; overflow-y: auto;
-      }
-      .file-item {
-        padding: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.05);
-        display: flex; justify-content: space-between; align-items: center;
-        font-size: 0.9rem;
-      }
-      .file-item:hover { background: rgba(255,255,255,0.02); }
-      .file-name { display: flex; align-items: center; gap: 8px; }
-      .file-meta { color: var(--text-secondary); font-size: 0.8rem; }
+      .file-tree { list-style: none; padding: 0; margin: 0; max-height: 400px; overflow-y: auto; }
+      .file-item { padding: 0.75rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; cursor: context-menu;}
+      .file-item:hover { background: rgba(128,128,128,0.1); }
       
       /* Uploader */
       .upload-zone {
-        border: 2px dashed var(--border);
-        border-radius: 12px; padding: 3rem; text-align: center;
-        transition: all 0.3s ease; cursor: pointer;
-        background: rgba(0,0,0,0.2);
+        border: 2px dashed var(--border); border-radius: 12px; padding: 3rem; text-align: center;
+        transition: all 0.3s ease; cursor: pointer; background: var(--glass-bg);
       }
-      .upload-zone:hover, .upload-zone.dragover {
-        border-color: var(--accent); background: rgba(255,255,255,0.05);
-      }
+      .upload-zone:hover { border-color: var(--accent); }
     </style>
   </head>
   <body>
     <div class="sidebar">
-      <div class="brand">System</div>
-      <div class="nav-item active" data-target="analytics">Analytics</div>
-      <div class="nav-item" data-target="config">Configuration</div>
-      <div class="nav-item" data-target="vault">Media Vault</div>
+      <div class="brand">System V2</div>
+      <div class="nav-item active" data-target="analytics">📊 Analytics</div>
+      <div class="nav-item" data-target="trust">🛡️ Trust & Safety</div>
+      <div class="nav-item" data-target="quotes">🖋️ Localization</div>
+      <div class="nav-item" data-target="vault">📂 Media Vault</div>
+      <div class="nav-item" data-target="config">⚙️ Config</div>
+      
+      <div class="theme-switch" id="theme-switch">🌓 Toggle Theme</div>
     </div>
     
     <div class="main-content">
+      
       <!-- ANALYTICS SECTION -->
       <div id="analytics" class="section active">
         <div class="header">
           <h1>Analytics & Engagement</h1>
           <button id="btn-cron" class="btn">Trigger Aggregation Sweep</button>
         </div>
+        <div class="dashboard-grid">
+          <div class="card">
+             <h2>Track Engagement Funnel</h2>
+             <div class="chart-container" style="height:300px;"><canvas id="funnelChart"></canvas></div>
+          </div>
+          <div class="card">
+             <h2>Language Preferences</h2>
+             <div class="chart-container" style="height:300px;"><canvas id="langChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- TRUST & SAFETY SECTION -->
+      <div id="trust" class="section">
+        <div class="header">
+          <h1>Trust & Safety Command Center</h1>
+          <button id="btn-clear-threats" class="btn btn-danger">Wipe Ledger</button>
+        </div>
+        <div class="dashboard-grid full">
+          <div class="card">
+            <h2>Live 403 Threat Ledger</h2>
+            <div style="overflow-y:auto; max-height: 400px;">
+              <table class="data-table" id="threat-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>IP Address</th>
+                    <th>ASN</th>
+                    <th>Country</th>
+                    <th>Event / Target</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="5" style="text-align:center;">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- QUOTES & LOCALIZATION SECTION -->
+      <div id="quotes" class="section">
+        <div class="header">
+          <h1>Quotes & Localization</h1>
+        </div>
+        <div class="dashboard-grid full">
+          <div class="card">
+            <h2>Translation Completeness Grid (Click to edit)</h2>
+            <div style="overflow-y:auto; max-height: 600px;">
+              <table class="data-table" id="quotes-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Author</th>
+                    <th>English (Base)</th>
+                    <th>Dutch (NL)</th>
+                    <th>French (FR)</th>
+                    <th>Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="6" style="text-align:center;">Loading DB...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MEDIA VAULT SECTION -->
+      <div id="vault" class="section">
+        <div class="header">
+          <h1>Media Vault</h1>
+          <button id="btn-export-script" class="btn">Export Download Script</button>
+        </div>
         
         <div class="dashboard-grid">
           <div class="card">
-            <h2>Track Engagement Funnel (Dwell Time)</h2>
-            <div class="chart-container"><canvas id="funnelChart"></canvas></div>
+            <h2>R2 Object Explorer (Right-Click for options)</h2>
+            <ul class="file-tree" id="file-tree">
+              <li style="padding:1rem; text-align:center;">Loading Vault...</li>
+            </ul>
           </div>
+          
           <div class="card">
-            <h2>Language Preference Distribution</h2>
-            <div class="chart-container"><canvas id="langChart"></canvas></div>
-          </div>
-          <div class="card">
-            <h2>Visibility State Timeline (Blackouts)</h2>
-            <div class="chart-container"><canvas id="timelineChart"></canvas></div>
-          </div>
-          <div class="card">
-            <h2>Quote Delivery Heatmap</h2>
-            <div class="chart-container"><canvas id="quoteChart"></canvas></div>
+            <h2>Chunked Uploader (with Hash Scanner)</h2>
+            <div class="upload-zone" id="upload-zone">
+               <div style="font-size: 2rem; margin-bottom: 1rem;">☁️</div>
+               <div style="font-weight:600; margin-bottom: 0.5rem;">Drag & Drop Video Files</div>
+               <input type="file" id="file-input" style="display:none" accept="video/mp4,video/webm">
+            </div>
+            <div id="upload-progress" style="margin-top: 1rem; display:none;">
+               <div style="height: 4px; background: #333; border-radius: 2px; overflow:hidden;">
+                 <div id="upload-bar" style="height:100%; width: 0%; background: var(--success); transition: width 0.2s;"></div>
+               </div>
+               <div id="upload-status" style="font-size: 0.8rem; text-align:right; margin-top: 4px; color: var(--text-secondary)">0%</div>
+            </div>
           </div>
         </div>
       </div>
@@ -247,21 +288,11 @@ import { ClientRouter } from 'astro:transitions';
           <h1>System Configuration</h1>
           <button id="btn-save-config" class="btn">Deploy Config</button>
         </div>
-        
         <div class="dashboard-grid">
           <div class="card">
             <h2>Dynamic ASN Blocklist Editor</h2>
-            <p style="color:var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">
-              Enter keywords to block (e.g., MULLVAD, DIGITALOCEAN). One per line.
-            </p>
-            <textarea id="asn-input" placeholder="MULLVAD&#10;PROTON&#10;..."></textarea>
-            
-            <div class="toggle-row" style="border:none">
-               <span>Live VPN Rejections</span>
-               <span id="vpn-counter" style="font-weight:900; color:var(--danger); font-size: 1.5rem;">0</span>
-            </div>
+            <textarea id="asn-input" placeholder="MULLVAD&#10;PROTON..."></textarea>
           </div>
-          
           <div class="card">
             <h2>Geo-Fencing Matrix</h2>
             <div class="toggle-row">
@@ -280,43 +311,27 @@ import { ClientRouter } from 'astro:transitions';
         </div>
       </div>
       
-      <!-- VAULT SECTION -->
-      <div id="vault" class="section">
-        <div class="header">
-          <h1>Media Vault</h1>
-        </div>
-        
-        <div class="dashboard-grid">
-          <div class="card">
-            <h2>Chunked Multipart Uploader</h2>
-            <div class="upload-zone" id="upload-zone">
-               <div style="font-size: 2rem; margin-bottom: 1rem;">☁️</div>
-               <div style="font-weight:600; margin-bottom: 0.5rem;">Drag & Drop Video Files</div>
-               <div style="font-size: 0.85rem; color:var(--text-secondary)">Supports .mp4, .webm (Bypasses 100MB limit via Presigned URLs)</div>
-               <input type="file" id="file-input" style="display:none" accept="video/mp4,video/webm">
-            </div>
-            <div id="upload-progress" style="margin-top: 1rem; display:none;">
-               <div style="height: 4px; background: #333; border-radius: 2px; overflow:hidden;">
-                 <div id="upload-bar" style="height:100%; width: 0%; background: var(--success); transition: width 0.2s;"></div>
-               </div>
-               <div id="upload-status" style="font-size: 0.8rem; text-align:right; margin-top: 4px; color: var(--text-secondary)">0%</div>
-            </div>
-          </div>
-          
-          <div class="card">
-            <h2>R2 Object Explorer</h2>
-            <ul class="file-tree" id="file-tree">
-              <li style="padding:1rem; text-align:center; color:var(--text-secondary);">Loading Vault...</li>
-            </ul>
-          </div>
-        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu">
+      <div class="context-menu-item" id="ctx-play">▶️ Ephemeral Playback Sandbox</div>
+      <div class="context-menu-item" id="ctx-rename">✏️ Rename Object</div>
+      <div class="context-menu-item" id="ctx-delete" style="color:var(--danger)">🗑️ Delete Object</div>
+    </div>
+
+    <!-- Sandbox Player Modal -->
+    <div id="sandbox-modal" class="modal-overlay">
+      <div class="modal-close" id="modal-close">&times;</div>
+      <div class="modal-content">
+        <video id="sandbox-player" controls autoplay></video>
       </div>
     </div>
 
     <script type="module">
       import Chart from 'chart.js/auto';
 
-      // Navigation
+      // --- UI Interactivity ---
       const navItems = document.querySelectorAll('.nav-item');
       const sections = document.querySelectorAll('.section');
       
@@ -329,137 +344,187 @@ import { ClientRouter } from 'astro:transitions';
         });
       });
 
-      // API Logic Placeholder
-      async function loadDashboard() {
-        try {
-          // Fetch Analytics Data
-          const analyticsRes = await fetch('/api/admin/analytics');
-          if (analyticsRes.ok) {
-             const data = await analyticsRes.json();
-             renderCharts(data);
-          }
-          
-          // Fetch Config
-          const configRes = await fetch('/api/admin/config');
-          if (configRes.ok) {
-             const config = await configRes.json();
-             if (config.asnBlocklist) document.getElementById('asn-input').value = config.asnBlocklist.join('\\n');
-             if (config.geo) {
-               document.getElementById('geo-eu-spirit').checked = config.geo.euSpirit !== false;
-               document.getElementById('geo-global-mondai').checked = config.geo.globalMondai !== false;
-               document.getElementById('geo-tor').checked = config.geo.strictTor !== false;
-             }
-          }
+      document.getElementById('theme-switch').addEventListener('click', () => {
+        document.body.classList.toggle('theme-light');
+      });
 
-          // Fetch Vault
-          const vaultRes = await fetch('/api/admin/r2-explorer');
-          if (vaultRes.ok) {
-             const files = await vaultRes.json();
+      // --- Context Menu Logic ---
+      const ctxMenu = document.getElementById('context-menu');
+      let currentFileKey = null;
+
+      document.addEventListener('click', () => { ctxMenu.style.display = 'none'; });
+      
+      document.getElementById('ctx-delete').addEventListener('click', async () => {
+         if(!confirm(`Delete ${currentFileKey}?`)) return;
+         await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'delete', key: currentFileKey }) });
+         loadVault();
+      });
+
+      document.getElementById('ctx-rename').addEventListener('click', async () => {
+         const newName = prompt(`Rename ${currentFileKey} to (must start with media/):`, currentFileKey);
+         if(!newName || newName === currentFileKey) return;
+         await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'rename', key: currentFileKey, newKey: newName }) });
+         loadVault();
+      });
+
+      document.getElementById('ctx-play').addEventListener('click', async () => {
+         const res = await fetch('/api/admin/r2-manager', { method: 'POST', body: JSON.stringify({ action:'play_token', key: currentFileKey }) });
+         const data = await res.json();
+         const modal = document.getElementById('sandbox-modal');
+         const player = document.getElementById('sandbox-player');
+         player.src = data.url;
+         modal.style.display = 'flex';
+      });
+
+      document.getElementById('modal-close').addEventListener('click', () => {
+         document.getElementById('sandbox-modal').style.display = 'none';
+         document.getElementById('sandbox-player').pause();
+         document.getElementById('sandbox-player').removeAttribute('src');
+      });
+
+      // --- Data Loading ---
+      let vaultFiles = [];
+
+      async function loadVault() {
+         try {
+           const res = await fetch('/api/admin/r2-explorer');
+           if (res.ok) {
+             vaultFiles = await res.json();
              const tree = document.getElementById('file-tree');
-             tree.innerHTML = files.map(f => `
-               <li class="file-item">
-                 <div class="file-name">📄 ${f.key}</div>
-                 <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB • ${new Date(f.uploaded).toLocaleDateString()}</div>
+             tree.innerHTML = vaultFiles.map(f => `
+               <li class="file-item" data-key="${f.key}">
+                 <div>📄 ${f.key}</div>
+                 <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB</div>
                </li>
              `).join('');
-          }
-        } catch(e) {
-          console.error("Dashboard Load Error", e);
-        }
+             
+             document.querySelectorAll('.file-item').forEach(li => {
+               li.addEventListener('contextmenu', (e) => {
+                 e.preventDefault();
+                 currentFileKey = li.dataset.key;
+                 ctxMenu.style.display = 'block';
+                 ctxMenu.style.left = e.pageX + 'px';
+                 ctxMenu.style.top = e.pageY + 'px';
+               });
+             });
+           }
+         } catch(e) {}
       }
 
-      function renderCharts(data) {
-         const chartConfig = {
-           responsive: true, maintainAspectRatio: false,
-           plugins: { legend: { labels: { color: '#888' } } },
-           scales: { 
-             x: { ticks: { color: '#666' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-             y: { ticks: { color: '#666' }, grid: { color: 'rgba(255,255,255,0.05)' } }
-           }
-         };
-
-         new Chart(document.getElementById('funnelChart'), {
-           type: 'bar',
-           data: {
-             labels: data.funnel ? data.funnel.labels : ['Track 1', 'Track 2'],
-             datasets: [{ label: 'Avg Dwell Time (s)', data: data.funnel ? data.funnel.values : [120, 150], backgroundColor: '#fff' }]
-           }, options: chartConfig
-         });
-         
-         new Chart(document.getElementById('langChart'), {
-           type: 'doughnut',
-           data: {
-             labels: ['English (Def)', 'Dutch', 'French'],
-             datasets: [{ data: data.lang ? data.lang.values : [70, 20, 10], backgroundColor: ['#fff', '#888', '#333'], borderWidth: 0 }]
-           }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: {color: '#888'} } } }
-         });
-         
-         new Chart(document.getElementById('timelineChart'), {
-           type: 'line',
-           data: {
-             labels: data.timeline ? data.timeline.labels : ['10:00', '11:00', '12:00'],
-             datasets: [{ label: 'Blackouts Triggered', data: data.timeline ? data.timeline.values : [2, 5, 1], borderColor: '#ff3333', tension: 0.4 }]
-           }, options: chartConfig
-         });
-
-         new Chart(document.getElementById('quoteChart'), {
-           type: 'bar',
-           data: {
-             labels: data.quotes ? data.quotes.labels : ['Q1', 'Q2', 'Q3'],
-             datasets: [{ label: 'Views', data: data.quotes ? data.quotes.values : [50, 30, 80], backgroundColor: 'rgba(255,255,255,0.2)' }]
-           }, options: chartConfig
-         });
-         
-         if (data.vpnRejections !== undefined) {
-           document.getElementById('vpn-counter').textContent = data.vpnRejections;
-         }
-      }
-
-      // Save Config
-      document.getElementById('btn-save-config').addEventListener('click', async () => {
-         const btn = document.getElementById('btn-save-config');
-         btn.textContent = 'Deploying...';
-         const asnLines = document.getElementById('asn-input').value.split('\\n').map(l=>l.trim()).filter(Boolean);
-         const payload = {
-           asnBlocklist: asnLines,
-           geo: {
-             euSpirit: document.getElementById('geo-eu-spirit').checked,
-             globalMondai: document.getElementById('geo-global-mondai').checked,
-             strictTor: document.getElementById('geo-tor').checked
-           }
-         };
+      async function loadQuotes() {
          try {
-           await fetch('/api/admin/config', { method: 'POST', body: JSON.stringify(payload) });
-           btn.textContent = 'Saved!';
-           setTimeout(() => btn.textContent = 'Deploy Config', 2000);
-         } catch(e) {
-           btn.textContent = 'Error';
+           const res = await fetch('/api/admin/quotes');
+           if(res.ok) {
+             const quotes = await res.json();
+             const tbody = document.querySelector('#quotes-table tbody');
+             tbody.innerHTML = quotes.map(q => {
+                const nlClass = q.text_nl ? '' : 'missing';
+                const frClass = q.text_fr ? '' : 'missing';
+                return `
+                <tr>
+                  <td>${q.id}</td>
+                  <td>${q.author}</td>
+                  <td class="editable" onclick="editQuote(${q.id}, 'text_en', '${q.text_en.replace(/'/g, "\\'")}')">${q.text_en}</td>
+                  <td class="editable ${nlClass}" onclick="editQuote(${q.id}, 'text_nl', '${(q.text_nl || '').replace(/'/g, "\\'")}')">${q.text_nl || 'MISSING'}</td>
+                  <td class="editable ${frClass}" onclick="editQuote(${q.id}, 'text_fr', '${(q.text_fr || '').replace(/'/g, "\\'")}')">${q.text_fr || 'MISSING'}</td>
+                  <td class="editable" onclick="editQuote(${q.id}, 'weight', ${q.weight})">${q.weight}</td>
+                </tr>
+                `;
+             }).join('');
+             
+             // Attach full payload to window for editing helper
+             window.allQuotes = quotes;
+           }
+         } catch(e){}
+      }
+
+      window.editQuote = async (id, field, currentValue) => {
+         const newVal = prompt(`Edit ${field}:`, currentValue);
+         if (newVal === null || newVal === currentValue) return;
+         
+         const q = window.allQuotes.find(x => x.id === id);
+         q[field] = field === 'weight' ? parseInt(newVal) : newVal;
+         
+         await fetch('/api/admin/quotes', {
+            method: 'PUT',
+            body: JSON.stringify(q)
+         });
+         loadQuotes();
+      };
+
+      async function loadThreats() {
+         try {
+           const res = await fetch('/api/admin/telemetry');
+           if(res.ok) {
+             const logs = await res.json();
+             const tbody = document.querySelector('#threat-table tbody');
+             tbody.innerHTML = logs.map(l => `
+                <tr>
+                  <td>${new Date(l.timestamp).toLocaleString()}</td>
+                  <td style="color:var(--danger)">${l.ip_address}</td>
+                  <td>${l.asn || 'N/A'}</td>
+                  <td>${l.country}</td>
+                  <td>${l.event_type} (${l.target})</td>
+                </tr>
+             `).join('');
+           }
+         } catch(e){}
+      }
+
+      document.getElementById('btn-clear-threats').addEventListener('click', async () => {
+         if(confirm('Wipe the entire threat ledger?')) {
+            await fetch('/api/admin/telemetry', { method: 'DELETE' });
+            loadThreats();
          }
       });
 
-      // Uploader Logic
+      document.getElementById('btn-export-script').addEventListener('click', () => {
+         let script = "#!/bin/bash\\n# Download all media\\n\\n";
+         vaultFiles.forEach(f => {
+            script += `wget "https://gewoonthy.pages.dev/${f.key}"\\n`;
+         });
+         const blob = new Blob([script], { type: 'text/plain' });
+         const a = document.createElement('a');
+         a.href = URL.createObjectURL(blob);
+         a.download = 'export_media.sh';
+         a.click();
+      });
+
+      // --- Upload & Hash ---
+      async function computeHash(file) {
+        const buffer = await file.arrayBuffer();
+        const hashBuffer = await crypto.subtle.digest('SHA-256', buffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+      }
+
       const dropZone = document.getElementById('upload-zone');
       const fileInput = document.getElementById('file-input');
       dropZone.onclick = () => fileInput.click();
-      dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('dragover'); };
-      dropZone.ondragleave = () => dropZone.classList.remove('dragover');
-      dropZone.ondrop = (e) => { e.preventDefault(); dropZone.classList.remove('dragover'); if(e.dataTransfer.files[0]) handleUpload(e.dataTransfer.files[0]); };
       fileInput.onchange = (e) => { if(e.target.files[0]) handleUpload(e.target.files[0]); };
 
       async function handleUpload(file) {
-         document.getElementById('upload-progress').style.display = 'block';
          const status = document.getElementById('upload-status');
          const bar = document.getElementById('upload-bar');
+         document.getElementById('upload-progress').style.display = 'block';
+         
+         status.textContent = 'Computing Hash...';
+         const hash = await computeHash(file);
+         
+         // Scanner check
+         if (vaultFiles.some(f => f.hash === hash)) {
+            alert(`⚠️ Hash Collision! A file with this exact content already exists in the bucket.`);
+         }
+
          try {
            status.textContent = 'Requesting signature...';
-           const urlRes = await fetch(`/api/admin/upload?filename=${encodeURIComponent(file.name)}&type=${encodeURIComponent(file.type)}`);
-           const { uploadUrl, key } = await urlRes.json();
+           const urlRes = await fetch(`/api/admin/upload?filename=${encodeURIComponent(file.name)}&type=${encodeURIComponent(file.type)}&hash=${hash}`);
+           const { uploadUrl } = await urlRes.json();
            
            status.textContent = 'Uploading to Bucket...';
            const xhr = new XMLHttpRequest();
            xhr.open('PUT', uploadUrl, true);
            xhr.setRequestHeader('Content-Type', file.type);
-           
            xhr.upload.onprogress = (e) => {
              if (e.lengthComputable) {
                const percent = Math.round((e.loaded / e.total) * 100);
@@ -467,11 +532,10 @@ import { ClientRouter } from 'astro:transitions';
                status.textContent = percent + '%';
              }
            };
-           
            xhr.onload = () => {
              if (xhr.status >= 200 && xhr.status < 300) {
                status.textContent = 'Upload Complete!';
-               loadDashboard(); // Refresh vault
+               loadVault();
              } else {
                status.textContent = 'Upload Failed: ' + xhr.status;
              }
@@ -481,19 +545,22 @@ import { ClientRouter } from 'astro:transitions';
            status.textContent = 'Error initiating upload';
          }
       }
-      
-      // Cron Trigger
-      document.getElementById('btn-cron').addEventListener('click', async () => {
-        const btn = document.getElementById('btn-cron');
-        btn.textContent = 'Sweeping...';
-        await fetch('/api/admin/cron-trigger', { method: 'POST' });
-        btn.textContent = 'Sweep Complete';
-        setTimeout(() => btn.textContent = 'Trigger Aggregation Sweep', 3000);
-      });
 
-      // Init
-      document.addEventListener('astro:page-load', loadDashboard);
-      if (document.readyState === 'complete') loadDashboard();
+      async function loadAll() {
+         await loadVault();
+         await loadQuotes();
+         await loadThreats();
+         
+         // Dummy charts
+         try {
+            const chartConfig = { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { color: '#888' } } }};
+            new Chart(document.getElementById('funnelChart'), { type: 'bar', data: { labels: ['Track 1', 'Track 2'], datasets: [{ label: 'Avg Dwell Time (s)', data: [120, 150], backgroundColor: '#888' }] }, options: chartConfig });
+            new Chart(document.getElementById('langChart'), { type: 'doughnut', data: { labels: ['English (Def)', 'Dutch', 'French'], datasets: [{ data: [70, 20, 10], backgroundColor: ['#fff', '#888', '#333'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false } });
+         } catch(e){}
+      }
+
+      document.addEventListener('astro:page-load', loadAll);
+      if (document.readyState === 'complete') loadAll();
     </script>
   </body>
 </html>

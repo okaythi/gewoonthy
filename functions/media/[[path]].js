@@ -5,7 +5,18 @@ export async function onRequest(context) {
   const bucketKey = pathArray.map(decodeURIComponent).join('/');
   const url = new URL(request.url);
   const isSubtitle = bucketKey.endsWith('.vtt');
-  if (isSubtitle) {
+  
+  // Sandbox Playback Token Bypass
+  const sandboxToken = url.searchParams.get('sandbox');
+  let isSandboxAllowed = false;
+  if (sandboxToken && env.CONFIG_KV) {
+    const validKey = await env.CONFIG_KV.get(`play_token:${sandboxToken}`);
+    if (validKey === bucketKey) {
+      isSandboxAllowed = true;
+    }
+  }
+
+  if (isSubtitle && !isSandboxAllowed) {
     const cf = request.cf || {};
     const country = cf.country;
     const userIp = request.headers.get('cf-connecting-ip') || 'unknown';
@@ -28,6 +39,8 @@ export async function onRequest(context) {
       if (!isAdmin) return new Response('403 Forbidden', { status: 403, headers: { 'Cache-Control': 'no-store' } });
     }
   }
+
+  // Allow head and get
   if (request.method !== 'GET' && request.method !== 'HEAD') return new Response('Method Not Allowed', { status: 405 });
   const isHead = request.method === 'HEAD';
   const object = isHead ? await env.MEDIA_BUCKET.head(bucketKey) : await env.MEDIA_BUCKET.get(bucketKey);

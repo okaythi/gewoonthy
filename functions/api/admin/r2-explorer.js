@@ -2,11 +2,12 @@ export async function onRequest({ env }) {
   if (!env.MEDIA_BUCKET) return new Response('[]', { headers: { 'Content-Type': 'application/json' } });
   
   try {
-    const listed = await env.MEDIA_BUCKET.list();
+    const listed = await env.MEDIA_BUCKET.list({ prefix: 'media/' });
     let files = listed.objects.map(obj => ({
       key: obj.key,
       size: obj.size,
-      uploaded: obj.uploaded
+      uploaded: obj.uploaded,
+      hash: obj.customMetadata?.hash || null
     }));
     return new Response(JSON.stringify(files), { headers: { 'Content-Type': 'application/json' } });
   } catch(e) {

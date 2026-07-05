@@ -2,11 +2,13 @@ export async function onRequest({ request, env }) {
   if (request.method !== 'PUT') return new Response('Method not allowed', { status: 405 });
   const url = new URL(request.url);
   const key = url.searchParams.get('key');
+  const hash = url.searchParams.get('hash') || '';
   
   if (env.MEDIA_BUCKET && key) {
     try {
       await env.MEDIA_BUCKET.put(key, request.body, {
-        httpMetadata: { contentType: request.headers.get('Content-Type') || 'application/octet-stream' }
+        httpMetadata: { contentType: request.headers.get('Content-Type') || 'application/octet-stream' },
+        customMetadata: hash ? { hash } : {}
       });
       return new Response('OK', { status: 200 });
     } catch(e) {

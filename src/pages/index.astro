@@ -32,8 +32,8 @@ import { ClientRouter } from 'astro:transitions';
       @keyframes spin { to { transform: rotate(360deg); } }
       video { width: 100%; max-height: 100%; object-fit: contain; border-radius: 2px; background-color: transparent; opacity: 0; transition: opacity 0.4s ease-in; }
       video::cue { background-color: rgba(0, 0, 0, 0.8); color: #fff; font-family: 'Yuji Syuku', sans-serif; font-size: 1.2rem; }
-      .video-blackout { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 15; opacity: 0; pointer-events: none; transition: opacity 0.05s ease; }
-      .video-blackout.active { opacity: 1; pointer-events: all; }
+      .video-blackout { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #000; z-index: 15; opacity: 0; pointer-events: none; }
+      .video-blackout.active { opacity: 1 !important; pointer-events: all; }
       .nav-btn { background: none; border: none; padding: 10px; cursor: pointer; visibility: hidden; outline: none; -webkit-tap-highlight-color: transparent; }
       .nav-btn svg { width: 30px; height: 40px; stroke: #444; stroke-width: 2; fill: none; transition: stroke 0.2s ease; }
       .nav-btn:hover svg { stroke: #ffffff; }
@@ -75,31 +75,45 @@ import { ClientRouter } from 'astro:transitions';
       document.addEventListener('astro:page-load', () => {
         if (!window.antiCaptureAttached) {
           const blackout = document.getElementById('video-blackout');
-          function triggerBlackout() {
+          function triggerBlackout(target = 'unknown') {
             const trackName = document.getElementById('track-name');
             if (!trackName) return;
             const currentTrack = trackName.textContent.trim().toUpperCase();
             if (!currentTrack.includes('もんだいガール') && !currentTrack.includes('MONDAI')) return;
             if (document.getElementById('secure-admin-context')) return; 
+            
             if (blackout) blackout.classList.add('active');
+            const player = document.getElementById('main-player');
+            if (player) {
+              player.style.opacity = '0';
+              player.pause();
+            }
+            
+            // Log to Threat Ledger
+            navigator.sendBeacon('/api/telemetry', JSON.stringify({ eventType: 'ANTI_CAPTURE', target: target }));
           }
           function removeBlackout() {
             if (blackout) blackout.classList.remove('active');
+            const player = document.getElementById('main-player');
+            if (player) {
+              player.style.opacity = '1';
+              player.play().catch(e=>{});
+            }
           }
           window.addEventListener('keydown', (e) => {
             if (e.key === 'PrintScreen' || (e.metaKey && e.shiftKey) || (e.ctrlKey && e.shiftKey && (e.key === 'S' || e.key === 's'))) {
-              triggerBlackout();
+              triggerBlackout(e.key === 'PrintScreen' ? 'PrintScreen' : 'Keyboard Shortcut');
               setTimeout(removeBlackout, 3000);
             }
           });
           window.addEventListener('blur', () => {
-            triggerBlackout();
+            triggerBlackout('Window Blur');
           });
           window.addEventListener('focus', () => {
             removeBlackout();
           });
           document.addEventListener('visibilitychange', () => {
-            if (document.hidden) triggerBlackout();
+            if (document.hidden) triggerBlackout('Visibility Hidden');
             else removeBlackout();
           });
           window.antiCaptureAttached = true;
@@ -173,6 +187,16 @@ import { ClientRouter } from 'astro:transitions';
                 const blob = await vidRes.blob();
                 finalUrl = URL.createObjectURL(blob);
                 currentBlobUrl = finalUrl;
+                
+                // Extreme Anti-Download: Revoke URL immediately after the video buffer grabs it
+                player.addEventListener('play', () => {
+                   if (currentBlobUrl) {
+                      URL.revokeObjectURL(currentBlobUrl);
+                      currentBlobUrl = null;
+                      // Dump console memory to freeze debuggers
+                      setInterval(() => console.error(new Error('unauthorized_capture_attempt')), 100);
+                   }
+                }, { once: true });
               } else {
                 finalUrl = `${url}?token=${token}`;
               }
@@ -198,8 +222,8 @@ import { ClientRouter } from 'astro:transitions';
             else if (isMondai) applyWatermark('問題', 'ガール', 'font-japanese-short');
           }, 500); 
           player.play().catch(e => {});
-          prevBtn.style.visibility = index > 0 ? 'visible' : 'hidden';
-          nextBtn.style.visibility = index < videoList.length - 1 ? 'visible' : 'hidden';
+          prevBtn.style.visibility = videoList.length > 1 ? 'visible' : 'hidden';
+          nextBtn.style.visibility = videoList.length > 1 ? 'visible' : 'hidden';
         }
         player.addEventListener('loadedmetadata', () => { loader.style.display = 'none'; player.style.opacity = 1; if(player.textTracks.length > 0) player.textTracks[0].mode = 'showing'; });
         player.addEventListener('waiting', () => { loader.style.display = 'flex'; player.style.opacity = 0.5; });
@@ -228,11 +252,23 @@ import { ClientRouter } from 'astro:transitions';
         });
         player.addEventListener('loadstart', () => { const overlay = document.getElementById('geo-block-overlay'); if (overlay) overlay.style.display = 'none'; });
         async function initialize() { try { const res = await fetch('/api/videos'); videoList = await res.json(); loadVideo(currentIndex); } catch(e) { trackNameEl.textContent = "Failed to load tracks."; loader.style.display = 'none'; } }
-        prevBtn.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; loadVideo(currentIndex); } });
-        nextBtn.addEventListener('click', () => { if (currentIndex < videoList.length - 1) { currentIndex++; loadVideo(currentIndex); } });
+        prevBtn.addEventListener('click', () => { 
+           if (videoList.length > 0) {
+              currentIndex = (currentIndex > 0) ? currentIndex - 1 : videoList.length - 1; 
+              loadVideo(currentIndex); 
+           }
+        });
+        nextBtn.addEventListener('click', () => { 
+           if (videoList.length > 0) {
+              currentIndex = (currentIndex + 1) % videoList.length; 
+              loadVideo(currentIndex); 
+           }
+        });
         player.addEventListener('ended', () => { 
-          currentIndex = (currentIndex + 1) % videoList.length; 
-          loadVideo(currentIndex); 
+          if (videoList.length > 0) {
+             currentIndex = (currentIndex + 1) % videoList.length; 
+             loadVideo(currentIndex); 
+          }
         });
         initialize();
       });
