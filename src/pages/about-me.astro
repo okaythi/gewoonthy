@@ -1,0 +1,178 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import AntiCapture from '../components/AntiCapture.astro';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>About Me</title>
+    <ClientRouter />
+    <style>
+      :root {
+        --bg: #000;
+        --fg: #f0f0f0;
+        --accent: #888;
+      }
+      body {
+        margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+        min-height: 100dvh;
+        padding-top: env(safe-area-inset-top, 20px);
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+        padding-left: env(safe-area-inset-left, 20px);
+        padding-right: env(safe-area-inset-right, 20px);
+        overflow-x: hidden;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
+      }
+      /* Hardware accelerated nav */
+      .nav {
+        position: fixed;
+        top: 0; left: 0; width: 100%;
+        padding: clamp(1rem, 3vw, 2rem);
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transform: translate3d(0,0,0);
+        z-index: 50;
+        display: flex; justify-content: flex-start;
+      }
+      .back-btn {
+        color: var(--fg); text-decoration: none;
+        display: flex; align-items: center; gap: 8px;
+        font-weight: 600; font-size: clamp(0.9rem, 2vw, 1.1rem);
+        transition: color 0.2s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .back-btn:hover { color: var(--accent); }
+      .back-btn svg { width: 24px; height: 24px; }
+      
+      /* Block styling */
+      .block {
+        margin-bottom: clamp(2rem, 4vw, 4rem);
+        opacity: 0; transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .block.visible { opacity: 1; transform: translateY(0); }
+      
+      /* Typography */
+      .p-block {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+        line-height: 1.6;
+        color: #d9d9d9;
+      }
+      .img-block img {
+        width: 100%;
+        border-radius: 8px;
+        background: #111;
+        object-fit: cover;
+      }
+      .timeline-block {
+        border-left: 2px solid var(--accent);
+        padding-left: clamp(1rem, 3vw, 2rem);
+        margin-left: clamp(0.5rem, 1.5vw, 1rem);
+      }
+      .timeline-date {
+        font-weight: 900;
+        color: var(--accent);
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .empty-state {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 40vh;
+        text-align: center;
+        font-style: italic;
+        color: var(--accent);
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+      }
+      
+      .category-title {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--fg);
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 0.5rem;
+      }
+      
+      .field-row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+      
+      @media (min-width: 600px) {
+        .field-row {
+          flex-direction: row;
+          align-items: baseline;
+        }
+      }
+      
+      .field-label {
+        font-weight: 700;
+        color: var(--accent);
+        min-width: 150px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.25rem;
+      }
+      
+      .field-value {
+        flex: 1;
+        font-size: clamp(1rem, 2vw, 1.1rem);
+        line-height: 1.6;
+        color: #d9d9d9;
+        white-space: pre-wrap;
+      }
+      
+      .pfp-container {
+        display: flex; justify-content: center; margin-bottom: 2rem;
+      }
+      .pfp {
+        width: clamp(100px, 15vw, 150px);
+        height: clamp(100px, 15vw, 150px);
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent);
+        background-color: #111;
+      }
+      
+      @media (pointer: coarse) {
+        .back-btn { padding: 12px; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back
+      </a>
+    </nav>
+    <main class="container" id="content-root">
+      <div class="pfp-container">
+        <img id="about-pfp" src="/media/about_me_pfp.png" class="pfp" alt="thy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%23333\' stroke=\'%23888\' stroke-width=\'1\' stroke-linecap=\'round\' stroke-linejoin=\'round\'><circle cx=\'12\' cy=\'8\' r=\'5\'/><path d=\'M20 21a8 8 0 0 0-16 0\'/></svg>'">
+      </div>
+      <div id="blocks-root" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+        <div class="empty-state">Loading...</div>
+      </div>
+    </main>
+    
+    <AntiCapture />
+
+    <script src="/scripts/about-me.js" is:inline></script>
+  </body>
+</html>
