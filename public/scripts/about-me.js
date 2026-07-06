@@ -3,8 +3,14 @@ document.addEventListener('astro:page-load', async () => {
   if (!root) return;
 
   try {
-    const res = await fetch('/api/about', { credentials: 'same-origin' });
-    const blocks = await res.json();
+    let blocks = null;
+    if (window.__ABOUT_DATA_PROMISE__) {
+       blocks = await window.__ABOUT_DATA_PROMISE__;
+       window.__ABOUT_DATA_PROMISE__ = null;
+    } else {
+       const res = await fetch('/api/about', { credentials: 'same-origin' });
+       blocks = await res.json();
+    }
     
     if (!blocks || blocks.length === 0) {
       root.innerHTML = '<div class="empty-state">Nothing to see here yet... Do I even exist?</div>';
