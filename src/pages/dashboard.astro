@@ -150,9 +150,19 @@ import AntiCapture from '../components/AntiCapture.astro';
       video { max-width: 100%; max-height: 80vh; outline: none; }
       
       /* File Explorer */
-      .file-tree { list-style: none; padding: 0; margin: 0; max-height: 400px; overflow-y: auto; }
-      .file-item { padding: 0.75rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; cursor: context-menu;}
-      .file-item:hover { background: rgba(128,128,128,0.1); }
+      .file-tree { list-style: none; padding: 0; margin: 0; max-height: 500px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.25rem; }
+      .file-item { padding: 0.75rem; border: 1px solid transparent; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, border-radius 0.2s;}
+      .file-item:hover { background: rgba(255,255,255,0.05); border-color: var(--border); border-radius: 8px; }
+      .file-item-art { width: 48px; height: 48px; border-radius: 6px; object-fit: cover; background: #222; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+      .file-item-info { display: flex; flex-direction: column; flex: 1; min-width: 0; justify-content: center; }
+      .file-item-title { font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1rem; line-height: 1.2; margin-bottom: 4px; }
+      .file-item-artist { color: var(--text-secondary); font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1; }
+      .file-item-size { color: var(--text-secondary); font-size: 0.85rem; font-family: monospace; padding-right: 0.5rem; }
+      
+      .file-tree::-webkit-scrollbar { width: 8px; }
+      .file-tree::-webkit-scrollbar-track { background: transparent; }
+      .file-tree::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 4px; }
+      .file-tree::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
       
       /* Uploader */
       .upload-zone {
@@ -639,17 +649,54 @@ import AntiCapture from '../components/AntiCapture.astro';
              if(vaultFiles.length === 0) {
                  tree.innerHTML = '<li style="padding:1rem; text-align:center; color:#888;">No files found in bucket.</li>';
              } else {
-                 tree.innerHTML = vaultFiles.map(f => `
-                   <li class="file-item" data-key="${f.key}">
-                     <div>📄 ${f.key}</div>
-                     <div class="file-meta">${(f.size / 1024 / 1024).toFixed(2)} MB</div>
-                   </li>
-                 `).join('');
+                 tree.innerHTML = vaultFiles.map((f, i) => {
+                   const rawName = f.key.replace('media/', '').replace(/\.[^/.]+$/, '');
+                   return `
+                     <li class="file-item" data-key="${f.key}">
+                       <img class="file-item-art" id="vault-art-${i}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><rect width='48' height='48' fill='%23333'/><text x='24' y='28' font-family='sans-serif' font-size='12' fill='%23666' text-anchor='middle'>🎵</text></svg>" alt="art" />
+                       <div class="file-item-info">
+                         <div class="file-item-title" id="vault-title-${i}">${rawName}</div>
+                         <div class="file-item-artist" id="vault-artist-${i}">Loading metadata...</div>
+                       </div>
+                       <div class="file-item-size">${(f.size / 1024 / 1024).toFixed(2)} MB</div>
+                     </li>
+                   `;
+                 }).join('');
+                 
+                 // Fetch metadata in parallel
+                 vaultFiles.forEach(async (f, i) => {
+                     const query = f.key.replace('media/', '').replace(/\.[^/.]+$/, '');
+                     try {
+                        const mRes = await fetch('/api/suggest-metadata', { method: 'POST', body: JSON.stringify({ query }), credentials: 'same-origin' });
+                        if (mRes.ok) {
+                           const data = await mRes.json();
+                           if (data.track && data.track !== 'Unknown Track') {
+                              document.getElementById(`vault-title-${i}`).textContent = data.track;
+                              document.getElementById(`vault-artist-${i}`).textContent = data.artist;
+                              if (data.artwork) {
+                                 document.getElementById(`vault-art-${i}`).src = data.artwork;
+                              }
+                           } else {
+                              document.getElementById(`vault-artist-${i}`).textContent = 'Unknown Artist';
+                           }
+                        } else {
+                           document.getElementById(`vault-artist-${i}`).textContent = 'Unknown Artist';
+                        }
+                     } catch(e) {
+                        const el = document.getElementById(`vault-artist-${i}`);
+                        if (el) el.textContent = 'Unknown Artist';
+                     }
+                 });
                  
                  document.querySelectorAll('.file-item').forEach(li => {
+                   li.addEventListener('click', (e) => {
+                     window.currentFileKey = li.dataset.key;
+                     const btnCtxPlay = document.getElementById('ctx-play');
+                     if(btnCtxPlay) btnCtxPlay.click();
+                   });
                    li.addEventListener('contextmenu', (e) => {
                      e.preventDefault();
-                     currentFileKey = li.dataset.key;
+                     window.currentFileKey = li.dataset.key;
                      ctxMenu.style.display = 'block';
                      ctxMenu.style.left = e.pageX + 'px';
                      ctxMenu.style.top = e.pageY + 'px';
