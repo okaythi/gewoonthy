@@ -3,7 +3,8 @@ export async function onRequest({ env }) {
   
   try {
     const listed = await env.MEDIA_BUCKET.list();
-    let files = listed.objects.map(obj => ({
+    let objects = listed.objects.filter(o => /\\.(mp4|webm|mkv)$/i.test(o.key));
+    let files = objects.map(obj => ({
       key: obj.key,
       size: obj.size,
       uploaded: obj.uploaded,
