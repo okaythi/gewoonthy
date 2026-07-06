@@ -92,7 +92,7 @@ import MobileNav from '../components/MobileNav.astro';
            --mobile-bottom-pad = 56px (tab bar, border-box) + safe-area-inset-bottom.
            Defined in MobileNav's is:global style block.             */
         .container {
-          padding-top: env(safe-area-inset-top, 12px);
+          padding-top: 0;
           padding-bottom: var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px)));
           padding-left: 0;
           padding-right: 0;
@@ -103,17 +103,27 @@ import MobileNav from '../components/MobileNav.astro';
           overflow: hidden;
         }
 
-        /* Top title: show on mobile, compact */
+        /* Top title: show on mobile, centered below notch */
         .top-section {
-          display: block !important;
+          display: flex !important;
           flex: 0 0 auto;
-          padding: 8px 18px 4px;
+          /* The height includes the OS top status bar/notch + a 44px safe zone */
+          height: calc(env(safe-area-inset-top, 24px) + 44px);
+          padding-top: env(safe-area-inset-top, 24px);
+          padding-bottom: 0;
+          padding-left: 18px;
+          padding-right: 18px;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
         }
         h2 {
-          font-size: 0.8rem;
-          letter-spacing: 0.3px;
-          opacity: 0.5;
-          font-weight: 700;
+          font-size: 0.65rem;
+          letter-spacing: 0.5px;
+          opacity: 0.45;
+          font-weight: 600;
+          margin: 0;
+          text-align: center;
         }
 
         /* Player: fills all remaining space */
