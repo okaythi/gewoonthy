@@ -89,11 +89,11 @@ import MobileNav from '../components/MobileNav.astro';
         .left-nav { display: none !important; }
 
         /* Container: reserve bottom space for the fixed tab bar.
-           This is the KEY fix: padding-bottom pushes flex children
-           above the tab bar WITHOUT relying on any CSS variable.    */
+           --mobile-bottom-pad = 56px (tab bar, border-box) + safe-area-inset-bottom.
+           Defined in MobileNav's is:global style block.             */
         .container {
           padding-top: env(safe-area-inset-top, 12px);
-          padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+          padding-bottom: var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px)));
           padding-left: 0;
           padding-right: 0;
           justify-content: flex-start;
@@ -143,11 +143,12 @@ import MobileNav from '../components/MobileNav.astro';
           border-radius: 0;
         }
 
-        /* Bottom strip: simple padding, container already clears the tab bar */
+        /* Bottom strip: sits at bottom of content area, which is already
+           above the tab bar thanks to container padding-bottom.         */
         .bottom-section {
           flex: 0 0 auto;
           text-align: left;
-          padding: 10px 18px 12px;
+          padding: 10px 18px 14px;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -182,8 +183,8 @@ import MobileNav from '../components/MobileNav.astro';
           display: flex;
           position: fixed;
           right: max(env(safe-area-inset-right, 0px), 16px);
-          /* Just above the bottom strip, which itself sits above the tab bar */
-          bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 52px);
+          /* Sits above the bottom-section strip */
+          bottom: calc(var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px))) + 52px);
           width: 42px; height: 42px;
           border-radius: 50%;
           background: rgba(30, 30, 30, 0.9);

@@ -84,6 +84,11 @@ const { current } = Astro.props;
       -webkit-tap-highlight-color: transparent;
       transition: color 0.2s ease;
       position: relative;
+      /* box-sizing: border-box makes min-height the TOTAL height
+         (including padding), so the tab bar renders at exactly 56px.
+         Without this, content-box makes total = 56 + 10 + 10 = 76px,
+         which is what was burying the track name under the bar. */
+      box-sizing: border-box;
       min-height: 56px;
       /* Ensure tap target ≥ 44pt (Apple HIG) */
       min-width: 44px;
@@ -168,7 +173,8 @@ const { current } = Astro.props;
   /* ============================================ */
   @media (max-width: 767px) {
     :root {
-      /* Tab bar height: 56px tab content + safe-area-inset-bottom */
+      /* Tab bar total height = 56px (border-box, includes 10px top/bottom padding).
+         All pages use --mobile-bottom-pad for their padding-bottom clearance. */
       --tab-h: 56px;
       --mobile-bottom-pad: calc(var(--tab-h) + env(safe-area-inset-bottom, 0px));
     }

@@ -132,7 +132,7 @@ import MobileNav from '../components/MobileNav.astro';
         main {
           width: 100%;
           /* Reserve space for tab bar + safe area at bottom */
-          padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 1rem);
+          padding-bottom: calc(var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px))) + 1rem);
           padding-top: env(safe-area-inset-top, 1rem);
           box-sizing: border-box;
         }
