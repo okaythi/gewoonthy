@@ -499,6 +499,31 @@ import AntiCapture from '../components/AntiCapture.astro';
           <h1>Headless About Editor</h1>
           <button id="btn-save-about" class="btn">Deploy About Page</button>
         </div>
+        <div class="dashboard-grid full" style="margin-bottom: 2rem;">
+          <div class="card" style="display:flex; justify-content:center; align-items:center; padding: 4rem 2rem; background: var(--bg-main);">
+             <div style="position:relative;">
+                <div style="position:relative; width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                   <img id="dashboard-pfp-preview" src="/api/pfp" style="width: 100%; height: 100%; object-fit: cover;" alt="Profile Picture" />
+                   
+                   <!-- Edit PFP button (top-left, half-overlapping) -->
+                   <div id="btn-edit-pfp" style="position:absolute; top:2px; left:2px; background:#444; border:1px solid #555; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:14px; transition:0.2s; z-index:10;" title="Change Profile Picture">✏️</div>
+                   
+                   <!-- Delete PFP button (bottom-left, half-overlapping) -->
+                   <div id="btn-delete-pfp" style="position:absolute; bottom:2px; left:2px; background:#dd3333; border:1px solid #ff5555; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:14px; transition:0.2s; z-index:10;" title="Delete Profile Picture">🗑️</div>
+                </div>
+                
+                <!-- Status Bubble -->
+                <div id="dashboard-status-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px); max-width:180px; min-width:80px; background: #2a2a2a; border:1px solid #444; border-radius: 16px; padding: 8px 30px 8px 12px; font-size:13px; color:#eee; box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-wrap:break-word;">
+                   <span id="dashboard-status-text">...</span>
+                   <!-- Edit Status button -->
+                   <div id="btn-edit-status" style="position:absolute; top:4px; right:6px; font-size:12px; cursor:pointer; opacity:0.6; transition:0.2s;" title="Edit Status">✏️</div>
+                   <!-- Delete Status button -->
+                   <div id="btn-delete-status" style="position:absolute; bottom:4px; right:6px; font-size:12px; cursor:pointer; opacity:0.6; transition:0.2s;" title="Delete Status">🗑️</div>
+                </div>
+             </div>
+          </div>
+        </div>
+
         <div class="dashboard-grid full">
           <div class="card">
             <h2>Profile Data Matrix</h2>
@@ -536,7 +561,23 @@ import AntiCapture from '../components/AntiCapture.astro';
         <video id="sandbox-player" controls autoplay controlslist="nodownload noplaybackrate" disablePictureInPicture></video>
       </div>
     </div>
+    </main>
 
+    <!-- PFP Crop Modal -->
+    <div id="crop-modal" class="modal">
+      <div class="modal-content" style="background:#111; padding:2rem; width:400px; display:flex; flex-direction:column; align-items:center; gap:1rem;">
+        <h2 style="margin:0;">Adjust Picture</h2>
+        <div style="position:relative; width: 300px; height: 300px; background:#000; overflow:hidden; border-radius:50%; border:1px solid var(--border);">
+           <canvas id="crop-canvas" width="300" height="300" style="cursor:move; touch-action:none;"></canvas>
+        </div>
+        <p style="font-size:0.8rem; color:#aaa; margin:0;">Drag and scroll to adjust.</p>
+        <div style="display:flex; gap:1rem; width:100%;">
+          <button class="btn" style="flex:1; background:#444;" onclick="document.getElementById('crop-modal').style.display='none'">Cancel</button>
+          <button class="btn" id="btn-save-crop" style="flex:1;">Save Picture</button>
+        </div>
+      </div>
+    </div>
+    <input type="file" id="pfp-upload-input" accept="image/*" style="display:none" />
 
     <AntiCapture />
     <script type="module">
@@ -1212,7 +1253,119 @@ import AntiCapture from '../components/AntiCapture.astro';
          } catch(e){}
       }
 
+      // --- PFP and Status Bubble Logic ---
+      const loadStatusBubble = async () => {
+         try {
+            const res = await fetch('/api/admin/about', { credentials: 'same-origin' });
+            if(!res.ok) return;
+            const data = await res.json();
+            const statusBlock = data.find(b => b.id === 0 || b.type === 'status');
+            const statusTextEl = document.getElementById('dashboard-status-text');
+            if (statusBlock && statusBlock.content) {
+               statusTextEl.textContent = statusBlock.content;
+            } else {
+               statusTextEl.textContent = "What's on your mind?";
+            }
+         } catch(e) {}
+      };
+
+      document.getElementById('btn-edit-status').addEventListener('click', async () => {
+         const newText = prompt("Enter new status (max 128 chars):", document.getElementById('dashboard-status-text').textContent);
+         if (newText !== null) {
+            const content = newText.substring(0, 128);
+            await fetch('/api/admin/status', {
+               method: 'POST', body: JSON.stringify({ content }), credentials: 'same-origin'
+            });
+            await loadStatusBubble();
+         }
+      });
+
+      document.getElementById('btn-delete-status').addEventListener('click', async () => {
+         if (confirm("Delete status?")) {
+            await fetch('/api/admin/status', {
+               method: 'POST', body: JSON.stringify({ content: "" }), credentials: 'same-origin'
+            });
+            await loadStatusBubble();
+         }
+      });
+
+      document.getElementById('btn-delete-pfp').addEventListener('click', async () => {
+         if(confirm("Are you sure you want to delete your profile picture? It will revert to the fallback.")) {
+            await fetch('/api/admin/pfp-upload', { method: 'DELETE', credentials: 'same-origin' });
+            document.getElementById('dashboard-pfp-preview').src = "/api/pfp?t=" + Date.now();
+         }
+      });
+
+      const pfpInput = document.getElementById('pfp-upload-input');
+      document.getElementById('btn-edit-pfp').addEventListener('click', () => pfpInput.click());
+      
+      let pfpFile = null;
+      let pfpScale = 1;
+      let pfpPanX = 0;
+      let pfpPanY = 0;
+      const cropCanvas = document.getElementById('crop-canvas');
+      const cropCtx = cropCanvas.getContext('2d');
+      
+      pfpInput.addEventListener('change', (e) => {
+         if (!e.target.files.length) return;
+         pfpFile = e.target.files[0];
+         document.getElementById('crop-modal').style.display = 'flex';
+         
+         const img = new Image();
+         img.onload = () => {
+            pfpScale = Math.max(300 / img.width, 300 / img.height);
+            pfpPanX = (300 - img.width * pfpScale) / 2;
+            pfpPanY = (300 - img.height * pfpScale) / 2;
+            const draw = () => {
+               cropCtx.clearRect(0,0,300,300);
+               cropCtx.drawImage(img, pfpPanX, pfpPanY, img.width * pfpScale, img.height * pfpScale);
+            };
+            draw();
+            
+            let isDragging = false;
+            let startX, startY;
+            cropCanvas.onmousedown = (ev) => { isDragging = true; startX = ev.clientX - pfpPanX; startY = ev.clientY - pfpPanY; };
+            cropCanvas.onmousemove = (ev) => { if(isDragging) { pfpPanX = ev.clientX - startX; pfpPanY = ev.clientY - startY; draw(); } };
+            window.addEventListener('mouseup', () => isDragging = false);
+            cropCanvas.onwheel = (ev) => {
+               ev.preventDefault();
+               const zoom = Math.exp(-ev.deltaY * 0.005);
+               const newScale = pfpScale * zoom;
+               if(newScale < Math.max(300/img.width, 300/img.height)) return;
+               pfpPanX = ev.offsetX - (ev.offsetX - pfpPanX) * zoom;
+               pfpPanY = ev.offsetY - (ev.offsetY - pfpPanY) * zoom;
+               pfpScale = newScale;
+               draw();
+            };
+         };
+         img.src = URL.createObjectURL(pfpFile);
+      });
+
+      document.getElementById('btn-save-crop').addEventListener('click', async () => {
+         if (!pfpFile) return;
+         const btn = document.getElementById('btn-save-crop');
+         btn.textContent = 'Uploading...';
+         
+         // Extract cropped image as Blob
+         const blob = await new Promise(res => cropCanvas.toBlob(res, pfpFile.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.9));
+         
+         const fd = new FormData();
+         fd.append('file', blob, pfpFile.type === 'image/png' ? 'pfp.png' : 'pfp.jpg');
+         fd.append('originalFile', pfpFile);
+         
+         try {
+            await fetch('/api/admin/pfp-upload', { method: 'POST', body: fd, credentials: 'same-origin' });
+            document.getElementById('crop-modal').style.display = 'none';
+            document.getElementById('dashboard-pfp-preview').src = "/api/pfp?t=" + Date.now();
+         } catch(e) {
+            alert('Upload failed: ' + e.message);
+         }
+         btn.textContent = 'Save Picture';
+         pfpFile = null;
+      });
+
       loadAll();
+      loadStatusBubble();
 
       // ============================================
       // MOBILE: Sidebar Drawer

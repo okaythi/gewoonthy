@@ -16,8 +16,14 @@ document.addEventListener('astro:page-load', async () => {
 
     // Group by category
     const groups = {};
+    let statusText = null;
+    let cropCoords = null;
     blocks.forEach(b => {
-       if (b.type === 'field') {
+       if (b.type === 'status' || b.id === 0) {
+          statusText = b.content;
+       } else if (b.type === 'pfp_crop' || b.id === -1) {
+          try { cropCoords = JSON.parse(b.content); } catch(e) {}
+       } else if (b.type === 'field') {
           try {
              const c = JSON.parse(b.content);
              if (c.category) {
@@ -54,7 +60,6 @@ document.addEventListener('astro:page-load', async () => {
     
     root.appendChild(fragment);
 
-    // Intersection Observer for scroll virtualization & fade-in animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -64,6 +69,25 @@ document.addEventListener('astro:page-load', async () => {
     }, { rootMargin: '50px 0px', threshold: 0.1 });
 
     document.querySelectorAll('.block').forEach(el => observer.observe(el));
+
+    // Apply status bubble
+    if (statusText) {
+       const bubble = document.getElementById('about-status-bubble');
+       const textEl = document.getElementById('about-status-text');
+       if (bubble && textEl) {
+          textEl.textContent = statusText;
+          bubble.style.display = 'block';
+       }
+    }
+    
+    // Apply crop coordinates
+    if (cropCoords) {
+       const pfpImg = document.getElementById('about-pfp');
+       if (pfpImg) {
+          pfpImg.style.objectPosition = `${cropCoords.x}px ${cropCoords.y}px`;
+          if (cropCoords.zoom) pfpImg.style.transform = `scale(${cropCoords.zoom})`;
+       }
+    }
 
   } catch(e) {
     root.innerHTML = '<div class="empty-state">Nothing to see here yet... Do I even exist?</div>';

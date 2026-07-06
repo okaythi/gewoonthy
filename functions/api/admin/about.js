@@ -13,8 +13,8 @@ export async function onRequest({ request, env }) {
       const ip = request.headers.get('cf-connecting-ip') || 'unknown';
       const timeBrussels = new Date().toLocaleString("en-BE", {timeZone: "Europe/Brussels"});
 
-      // Bulk replace blocks
-      await env.ABOUT_ME.prepare(`DELETE FROM about_blocks`).run();
+      // Bulk replace blocks, but preserve status (id=0) and pfp_crop (id=-1)
+      await env.ABOUT_ME.prepare(`DELETE FROM about_blocks WHERE id NOT IN (0, -1)`).run();
       
       const stmts = blocks.map((b, i) => 
         env.ABOUT_ME.prepare(`INSERT INTO about_blocks (type, content, order_index, edited_by_ip, updated_at) VALUES (?, ?, ?, ?, ?)`).bind(b.type, b.content, i, ip, timeBrussels)
