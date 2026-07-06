@@ -34,7 +34,10 @@ export async function onRequest({ request, env }) {
       }
       
       return new Response(JSON.stringify(parsedResults), {
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 
+           'Content-Type': 'application/json',
+           'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate'
+        }
       });
     }
 

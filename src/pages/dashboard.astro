@@ -805,7 +805,7 @@ import AntiCapture from '../components/AntiCapture.astro';
 
       const loadFriends = async () => {
          try {
-            const res = await fetch('/api/close-friends', { credentials: 'include' });
+            const res = await fetch('/api/close-friends?t=' + Date.now(), { credentials: 'include', cache: 'no-store' });
             if (res.ok) {
                const friends = await res.json();
                if (friends.length === 0) {
