@@ -513,7 +513,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                 </div>
                 
                 <!-- Status Bubble -->
-                <div id="dashboard-status-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px); max-width:180px; min-width:80px; background: #2a2a2a; border:1px solid #444; border-radius: 16px; padding: 8px 30px 8px 12px; font-size:13px; color:#eee; box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-wrap:break-word;">
+                <div id="dashboard-status-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px); width:max-content; max-width:200px; min-width:80px; background: #2a2a2a; border:1px solid #444; border-radius: 16px; padding: 10px 32px 10px 16px; font-size:13px; color:#eee; box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-wrap:break-word; line-height:1.4;">
                    <span id="dashboard-status-text">...</span>
                    <!-- Edit Status button -->
                    <div id="btn-edit-status" style="position:absolute; top:4px; right:6px; font-size:12px; cursor:pointer; opacity:0.6; transition:0.2s;" title="Edit Status">✏️</div>
@@ -564,10 +564,10 @@ import AntiCapture from '../components/AntiCapture.astro';
 
 
     <!-- PFP Crop Modal -->
-    <div id="crop-modal" class="modal">
-      <div class="modal-content" style="background:#111; padding:2rem; width:400px; display:flex; flex-direction:column; align-items:center; gap:1rem;">
+    <div id="crop-modal" class="modal-overlay" style="display:none; justify-content:center; align-items:center; z-index:10000;">
+      <div class="modal-content" style="background:#111; padding:2rem; width:400px; display:flex; flex-direction:column; align-items:center; gap:1rem; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8);">
         <h2 style="margin:0;">Adjust Picture</h2>
-        <div style="position:relative; width: 300px; height: 300px; background:#000; overflow:hidden; border-radius:50%; border:1px solid var(--border);">
+        <div style="position:relative; width: 300px; height: 300px; background:#000; overflow:hidden; border-radius:50%; border:2px solid #555;">
            <canvas id="crop-canvas" width="300" height="300" style="cursor:move; touch-action:none;"></canvas>
         </div>
         <p style="font-size:0.8rem; color:#aaa; margin:0;">Drag and scroll to adjust.</p>
