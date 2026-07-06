@@ -63,7 +63,7 @@ def extract_user_data(user, is_friend, friend_since, profile=None):
             bid = str(getattr(b, 'id', '')).lower()
             desc = str(getattr(b, 'description', '')).lower()
             if 'legacy' in bid or 'legacy' in desc: badges.append("username.png")
-            elif 'quest' in bid or 'quest' in desc: badges.append("quest.png")
+            elif 'quest' in bid or 'quest' in desc: badges.append("quest.svg")
             elif 'orb' in bid or 'orb' in desc: badges.append("orb.svg")
             elif 'gifting' in bid or 'cadeau' in desc or 'gift' in desc:
                 if 'mecenas' in desc or 'patron' in desc: badges.append("patron.png")
