@@ -173,6 +173,32 @@ import AntiCapture from '../components/AntiCapture.astro';
       
       .search-result-item:hover { background: rgba(255,255,255,0.1) !important; }
 
+      /* Thought Bubble */
+      .thought-bubble {
+        position: absolute; top: -10px; left: calc(100% - 10px);
+        width: max-content; max-width: 200px; min-width: 80px;
+        background: #2a2a2a; border: 1px solid #444; border-radius: 20px;
+        padding: 10px 16px; font-size: 13px; color: #eee;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-wrap: break-word;
+        line-height: 1.4; z-index: 10; font-family: 'Inter', sans-serif;
+      }
+      .thought-bubble::before {
+        content: ''; position: absolute; bottom: -6px; left: 16px;
+        width: 12px; height: 12px; background: #2a2a2a; border: 1px solid #444;
+        border-radius: 50%; box-shadow: inset -2px -2px 4px rgba(0,0,0,0.3);
+      }
+      .thought-bubble::after {
+        content: ''; position: absolute; bottom: -16px; left: 6px;
+        width: 6px; height: 6px; background: #2a2a2a; border: 1px solid #444;
+        border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
+      }
+      .thought-bubble-btn {
+        position: absolute; right: -8px; cursor: pointer; opacity: 0; transition: 0.2s;
+        background: #111; border-radius: 50%; padding: 4px; border: 1px solid #555;
+        display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; font-size: 10px;
+      }
+      .thought-bubble:hover .thought-bubble-btn { opacity: 1; }
+
       /* ============================================================ */
       /* MOBILE-NATIVE: Dashboard Drawer Sidebar (≤ 767px)           */
       /* ============================================================ */
@@ -516,12 +542,12 @@ import AntiCapture from '../components/AntiCapture.astro';
                 </div>
                 
                 <!-- Status Bubble -->
-                <div id="dashboard-status-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px); width:max-content; max-width:200px; min-width:80px; background: #2a2a2a; border:1px solid #444; border-radius: 16px; padding: 10px 32px 10px 16px; font-size:13px; color:#eee; box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-wrap:break-word; line-height:1.4;">
+                <div id="dashboard-status-bubble" class="thought-bubble" style="display:none;">
                    <span id="dashboard-status-text">...</span>
                    <!-- Edit Status button -->
-                   <div id="btn-edit-status" style="position:absolute; top:4px; right:6px; font-size:12px; cursor:pointer; opacity:0.6; transition:0.2s;" title="Edit Status">✏️</div>
+                   <div id="btn-edit-status" class="thought-bubble-btn" style="top:-8px;" title="Edit Status">✏️</div>
                    <!-- Delete Status button -->
-                   <div id="btn-delete-status" style="position:absolute; bottom:4px; right:6px; font-size:12px; cursor:pointer; opacity:0.6; transition:0.2s;" title="Delete Status">🗑️</div>
+                   <div id="btn-delete-status" class="thought-bubble-btn" style="bottom:-8px;" title="Delete Status">🗑️</div>
                 </div>
              </div>
           </div>
@@ -1262,12 +1288,30 @@ import AntiCapture from '../components/AntiCapture.astro';
             const res = await fetch('/api/admin/about', { credentials: 'same-origin' });
             if(!res.ok) return;
             const data = await res.json();
+            
+            // Status bubble
             const statusBlock = data.find(b => b.id === 0 || b.type === 'status');
             const statusTextEl = document.getElementById('dashboard-status-text');
             if (statusBlock && statusBlock.content) {
                statusTextEl.textContent = statusBlock.content;
             } else {
                statusTextEl.textContent = "What's on your mind?";
+            }
+            
+            // PFP Crop
+            const cropBlock = data.find(b => b.id === -1 || b.type === 'pfp_crop');
+            if (cropBlock && cropBlock.content) {
+               try {
+                  const crop = JSON.parse(cropBlock.content);
+                  const img = document.getElementById('dashboard-pfp-preview');
+                  img.style.position = 'absolute';
+                  img.style.left = crop.x + '%';
+                  img.style.top = crop.y + '%';
+                  img.style.width = crop.w + '%';
+                  img.style.height = crop.h + '%';
+                  img.style.maxWidth = 'none';
+                  img.style.objectFit = 'fill';
+               } catch(e) {}
             }
          } catch(e) {}
       };
@@ -1306,6 +1350,8 @@ import AntiCapture from '../components/AntiCapture.astro';
       let pfpScale = 1;
       let pfpPanX = 0;
       let pfpPanY = 0;
+      let pfpImgWidth = 0;
+      let pfpImgHeight = 0;
       const cropCanvas = document.getElementById('crop-canvas');
       const cropCtx = cropCanvas.getContext('2d');
       
@@ -1316,6 +1362,8 @@ import AntiCapture from '../components/AntiCapture.astro';
          
          const img = new Image();
          img.onload = () => {
+            pfpImgWidth = img.width;
+            pfpImgHeight = img.height;
             pfpScale = Math.max(300 / img.width, 300 / img.height);
             pfpPanX = (300 - img.width * pfpScale) / 2;
             pfpPanY = (300 - img.height * pfpScale) / 2;
@@ -1349,17 +1397,28 @@ import AntiCapture from '../components/AntiCapture.astro';
          const btn = document.getElementById('btn-save-crop');
          btn.textContent = 'Uploading...';
          
-         // Extract cropped image as Blob
-         const blob = await new Promise(res => cropCanvas.toBlob(res, pfpFile.type === 'image/png' ? 'image/png' : 'image/jpeg', 0.9));
-         
          const fd = new FormData();
-         fd.append('file', blob, pfpFile.type === 'image/png' ? 'pfp.png' : 'pfp.jpg');
-         fd.append('originalFile', pfpFile);
+         fd.append('file', pfpFile);
          
          try {
             await fetch('/api/admin/pfp-upload', { method: 'POST', body: fd, credentials: 'same-origin' });
+            
+            // Save crop coords
+            const cropCoords = {
+               x: (pfpPanX / 300) * 100,
+               y: (pfpPanY / 300) * 100,
+               w: ((pfpImgWidth * pfpScale) / 300) * 100,
+               h: ((pfpImgHeight * pfpScale) / 300) * 100
+            };
+            await fetch('/api/admin/pfp-crop', { 
+               method: 'POST', 
+               body: JSON.stringify({ content: JSON.stringify(cropCoords) }), 
+               credentials: 'same-origin' 
+            });
+            
             document.getElementById('crop-modal').style.display = 'none';
             document.getElementById('dashboard-pfp-preview').src = "/api/pfp?t=" + Date.now();
+            await loadStatusBubble(); // re-apply crop coords to preview
          } catch(e) {
             alert('Upload failed: ' + e.message);
          }

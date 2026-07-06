@@ -84,8 +84,13 @@ document.addEventListener('astro:page-load', async () => {
     if (cropCoords) {
        const pfpImg = document.getElementById('about-pfp');
        if (pfpImg) {
-          pfpImg.style.objectPosition = `${cropCoords.x}px ${cropCoords.y}px`;
-          if (cropCoords.zoom) pfpImg.style.transform = `scale(${cropCoords.zoom})`;
+          pfpImg.style.position = 'absolute';
+          pfpImg.style.left = cropCoords.x + '%';
+          pfpImg.style.top = cropCoords.y + '%';
+          pfpImg.style.width = cropCoords.w + '%';
+          pfpImg.style.height = cropCoords.h + '%';
+          pfpImg.style.maxWidth = 'none';
+          pfpImg.style.objectFit = 'fill';
        }
     }
 

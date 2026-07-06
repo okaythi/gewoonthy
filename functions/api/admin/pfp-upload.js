@@ -16,16 +16,16 @@ export async function onRequest({ request, env }) {
   
   try {
     const formData = await request.formData();
-    const file = formData.get('file'); // The cropped version
-    const originalFile = formData.get('originalFile'); // The full version
-    if (!file || !originalFile) return new Response('Files not provided', { status: 400 });
+    const file = formData.get('file');
+    if (!file) return new Response('No file provided', { status: 400 });
     
     const ext = file.name.split('.').pop().toLowerCase();
-    const origExt = originalFile.name.split('.').pop().toLowerCase();
+    const allowed = ['png', 'jpg', 'jpeg', 'gif', 'webp'];
+    if (!allowed.includes(ext)) return new Response('Invalid file type', { status: 400 });
 
-    // Delete existing vanity/pfp.* and vanity/pfp-original.*
-    const existing = await env.MEDIA_BUCKET.list({ prefix: 'vanity/pfp' });
-    const keysToDelete = existing.objects.map(o => o.key).filter(k => k.startsWith('vanity/pfp.') || k.startsWith('vanity/pfp-original.'));
+    // Delete existing vanity/pfp.*
+    const existing = await env.MEDIA_BUCKET.list({ prefix: 'vanity/pfp.' });
+    const keysToDelete = existing.objects.map(o => o.key);
     if (keysToDelete.length > 0) {
       await Promise.all(keysToDelete.map(k => env.MEDIA_BUCKET.delete(k)));
     }
@@ -34,11 +34,6 @@ export async function onRequest({ request, env }) {
     const newKey = `vanity/pfp.${ext}`;
     await env.MEDIA_BUCKET.put(newKey, file.stream(), {
       httpMetadata: { contentType: file.type }
-    });
-
-    const origKey = `vanity/pfp-original.${origExt}`;
-    await env.MEDIA_BUCKET.put(origKey, originalFile.stream(), {
-      httpMetadata: { contentType: originalFile.type }
     });
     
     return new Response(JSON.stringify({ success: true, key: newKey }), {
