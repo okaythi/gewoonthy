@@ -53,7 +53,8 @@ import MobileNav from '../components/MobileNav.astro';
         }
         /* Consent toast clears tab bar */
         .consent-toast {
-          bottom: calc(var(--mobile-bottom-pad, 72px) + 1rem);
+          bottom: calc(70px + env(safe-area-inset-bottom, 0px)) !important;
+          z-index: 10000;
         }
         /* Quote slightly larger on phones */
         blockquote {
