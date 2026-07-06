@@ -8,6 +8,31 @@ export async function onRequest({ request, env }) {
          ...r,
          badges: JSON.parse(r.badges || '[]')
       }));
+      
+      try {
+         const userIds = parsedResults.map(r => r.user_id).join(',');
+         if (userIds) {
+            const freshRes = await fetch(`https://gewoonthy.onrender.com/api/get_users?ids=${userIds}`);
+            if (freshRes.ok) {
+               const freshUsers = await freshRes.json();
+               const freshMap = {};
+               for (const f of freshUsers) freshMap[f.user_id] = f;
+               
+               for (const r of parsedResults) {
+                  const fresh = freshMap[r.user_id];
+                  if (fresh) {
+                     r.username = fresh.username;
+                     r.display_name = fresh.display_name;
+                     r.avatar_url = fresh.avatar_url;
+                     r.badges = fresh.badges;
+                  }
+               }
+            }
+         }
+      } catch (err) {
+         // Silently fallback to DB data if bot is down
+      }
+      
       return new Response(JSON.stringify(parsedResults), {
         headers: { 'Content-Type': 'application/json' }
       });

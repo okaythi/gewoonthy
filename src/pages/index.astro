@@ -109,7 +109,7 @@ import AntiCapture from '../components/AntiCapture.astro';
         <div class="video-container">
           <div id="loader" class="loader"><div class="spinner"></div><span>LOADING...</span></div>
           <div id="video-blackout" class="video-blackout"></div>
-          <video id="main-player" controls autoplay playsinline controlslist="nodownload" oncontextmenu="return false;"></video>
+          <video id="main-player" controls autoplay playsinline controlslist="nodownload noplaybackrate" disablePictureInPicture oncontextmenu="return false;"></video>
         </div>
         <button id="next-btn" class="nav-btn" aria-label="Next"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
       </div>
@@ -261,6 +261,7 @@ import AntiCapture from '../components/AntiCapture.astro';
 
         const player = document.getElementById('main-player');
         if (!player) return; 
+        player.volume = 0.45;
         const loader = document.getElementById('loader');
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');

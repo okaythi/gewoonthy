@@ -24,11 +24,7 @@ def search_members():
     members = []
     seen_ids = set()
     
-    def add_user_to_results(user, is_friend, friend_since):
-        if user.id in seen_ids:
-            return
-        seen_ids.add(user.id)
-        
+    def extract_user_data(user, is_friend, friend_since):
         badges = []
         flags = getattr(user, 'public_flags', None)
         if flags:
@@ -54,15 +50,22 @@ def search_members():
             badges.append("premium")
             
         avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
-        members.append({
+        return {
             "id": str(user.id),
+            "user_id": str(user.id),
             "username": user.name,
             "display_name": user.display_name,
             "avatar_url": avatar_url,
             "is_friend": is_friend,
             "friend_since": friend_since,
             "badges": badges
-        })
+        }
+
+    def add_user_to_results(user, is_friend, friend_since):
+        if user.id in seen_ids:
+            return
+        seen_ids.add(user.id)
+        members.append(extract_user_data(user, is_friend, friend_since))
 
     # 1. Search in guild members
     guild_id = 238393736478851074
@@ -89,6 +92,26 @@ def search_members():
                     break
 
     return jsonify(members)
+
+@app.route('/api/get_users', methods=['GET'])
+def get_users():
+    ids_str = request.args.get('ids', '')
+    if not ids_str:
+        return jsonify([])
+    
+    user_ids = [int(i.strip()) for i in ids_str.split(',') if i.strip().isdigit()]
+    users_data = []
+    
+    for uid in user_ids:
+        user = client.get_user(uid)
+        if user:
+            relationship = next((r for r in client.friends if r.user.id == user.id), None)
+            is_friend = relationship is not None
+            friend_since = relationship.since.isoformat() if relationship and relationship.since else None
+            
+            users_data.append(extract_user_data(user, is_friend, friend_since))
+            
+    return jsonify(users_data)
 
 def run_server():
     # Use standard HTTP port 3000
