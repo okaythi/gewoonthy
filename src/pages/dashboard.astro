@@ -502,8 +502,11 @@ import AntiCapture from '../components/AntiCapture.astro';
         <div class="dashboard-grid full" style="margin-bottom: 2rem;">
           <div class="card" style="display:flex; justify-content:center; align-items:center; padding: 4rem 2rem; background: var(--bg-main);">
              <div style="position:relative;">
-                <div style="position:relative; width: 130px; height: 130px; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                   <img id="dashboard-pfp-preview" src="/api/pfp" style="width: 100%; height: 100%; object-fit: cover;" alt="Profile Picture" />
+                <div style="position:relative; width: 130px; height: 130px;">
+                   <!-- Image Container with overflow hidden -->
+                   <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                       <img id="dashboard-pfp-preview" src="/api/pfp" style="width: 100%; height: 100%; object-fit: cover;" alt="Profile Picture" />
+                   </div>
                    
                    <!-- Edit PFP button (top-left, half-overlapping) -->
                    <div id="btn-edit-pfp" style="position:absolute; top:2px; left:2px; background:#444; border:1px solid #555; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:14px; transition:0.2s; z-index:10;" title="Change Profile Picture">✏️</div>

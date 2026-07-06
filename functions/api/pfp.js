@@ -3,7 +3,7 @@ export async function onRequest({ env }) {
   
   try {
     const listed = await env.MEDIA_BUCKET.list({ prefix: 'vanity/pfp.' });
-    let targetKey = listed.objects.length > 0 ? listed.objects[0].key : 'vanity/fallback_pfp.png';
+    let targetKey = listed.objects.length > 0 ? listed.objects[0].key : 'vanity/fallback.png';
     
     const obj = await env.MEDIA_BUCKET.get(targetKey);
     if (!obj) {
