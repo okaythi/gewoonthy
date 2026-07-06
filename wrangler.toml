@@ -15,3 +15,8 @@ database_id = "d9f6e4e8-0fbf-4f54-bb0f-a5179c737fc3"
 binding = "PROFESSIONAL_PROFILE"
 database_name = "thy_professional"
 database_id = "33137698-8481-4fdd-8fc0-d5166f0b6baf"
+
+[[d1_databases]]
+binding = "QUOTE_DB"
+database_name = "thy_quote"
+database_id = "4901f464-e4c1-4b13-8cfb-d98c25785023"
