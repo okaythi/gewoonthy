@@ -151,13 +151,13 @@ import AntiCapture from '../components/AntiCapture.astro';
       
       /* File Explorer */
       .file-tree { list-style: none; padding: 0; margin: 0; max-height: 500px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.25rem; }
-      .file-tree .file-item { padding: 0.75rem; border: 1px solid transparent; border-bottom: 1px solid var(--border); display: flex !important; flex-direction: row !important; align-items: center !important; gap: 1rem; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, border-radius 0.2s;}
-      .file-tree .file-item:hover { background: rgba(255,255,255,0.05); border-color: var(--border); border-radius: 8px; }
-      .file-tree .file-item-art { width: 48px !important; height: 48px !important; min-width: 48px !important; min-height: 48px !important; border-radius: 6px; object-fit: cover; background: #222; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-      .file-tree .file-item-info { display: flex; flex-direction: column; flex: 1; min-width: 0; justify-content: center; }
-      .file-tree .file-item-title { font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1rem; line-height: 1.2; margin-bottom: 4px; }
-      .file-tree .file-item-artist { color: var(--text-secondary); font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1; }
-      .file-tree .file-item-size { color: var(--text-secondary); font-size: 0.85rem; font-family: monospace; padding-right: 0.5rem; }
+      .file-tree :global(.file-item) { padding: 0.75rem; border: 1px solid transparent; border-bottom: 1px solid var(--border); display: flex !important; flex-direction: row !important; align-items: center !important; gap: 1rem; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, border-radius 0.2s;}
+      .file-tree :global(.file-item:hover) { background: rgba(255,255,255,0.05); border-color: var(--border); border-radius: 8px; }
+      .file-tree :global(.file-item-art) { width: 48px !important; height: 48px !important; min-width: 48px !important; min-height: 48px !important; border-radius: 6px; object-fit: cover; background: #222; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+      .file-tree :global(.file-item-info) { display: flex; flex-direction: column; flex: 1; min-width: 0; justify-content: center; }
+      .file-tree :global(.file-item-title) { font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1rem; line-height: 1.2; margin-bottom: 4px; }
+      .file-tree :global(.file-item-artist) { color: var(--text-secondary); font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1; }
+      .file-tree :global(.file-item-size) { color: var(--text-secondary); font-size: 0.85rem; font-family: monospace; padding-right: 0.5rem; }
       
       .file-tree::-webkit-scrollbar { width: 8px; }
       .file-tree::-webkit-scrollbar-track { background: transparent; }
