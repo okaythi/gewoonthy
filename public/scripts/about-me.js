@@ -134,7 +134,7 @@ document.addEventListener('astro:page-load', async () => {
       if (linkContainer) {
         linkContainer.innerHTML = `
           <a href="/professional" class="block visible" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--glass-bg); border: 1px solid var(--border); padding: 0.6rem 1.2rem; border-radius: 30px; color: var(--fg); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;">
-            Academics <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Professional <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         `;
         // add hover effect via JS since it's injected
