@@ -3,21 +3,15 @@ document.addEventListener('astro:page-load', async () => {
   const root = document.getElementById('blocks-root');
   if (!root) return;
 
+  let blocks = null;
+  let profBlocks = null;
+
   try {
-    let blocks = null;
-    let profBlocks = null;
     if (window.__PRELOADED_ABOUT_DATA__) {
        blocks = window.__PRELOADED_ABOUT_DATA__;
     } else {
        const res = await fetch('/api/about', { credentials: 'same-origin' });
        blocks = await res.json();
-    }
-    
-    if (window.__PRELOADED_PROF_DATA__) {
-       profBlocks = window.__PRELOADED_PROF_DATA__;
-    } else {
-       const profRes = await fetch('/api/professional', { credentials: 'same-origin' });
-       profBlocks = await profRes.json();
     }
     
     if (!blocks || blocks.length === 0) {
@@ -125,6 +119,13 @@ document.addEventListener('astro:page-load', async () => {
 
   // Academics Link Injection
   try {
+    if (window.__PRELOADED_PROF_DATA__) {
+       profBlocks = window.__PRELOADED_PROF_DATA__;
+    } else {
+       const profRes = await fetch('/api/professional', { credentials: 'same-origin' });
+       profBlocks = await profRes.json();
+    }
+    
     // Render academics button if there are professional blocks
     if (profBlocks && profBlocks.length > 0) {
       const linkContainer = document.getElementById('academics-link-container');

@@ -13,6 +13,9 @@ export async function onRequest({ request, env, next }) {
      try {
        const { results } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks ORDER BY order_index ASC").all();
        preloadedScript = `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_ABOUT_DATA__ = ${JSON.stringify(results).replace(/</g, '\\u003c')};</script>`;
+       
+       const { results: profResults } = await env.PROFESSIONAL_PROFILE.prepare("SELECT id FROM professional_blocks LIMIT 1").all();
+       preloadedScript += `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_PROF_DATA__ = ${JSON.stringify(profResults).replace(/</g, '\\u003c')};</script>`;
      } catch(e) {}
   } else if (url.pathname === '/professional' || url.pathname === '/professional/') {
      try {
