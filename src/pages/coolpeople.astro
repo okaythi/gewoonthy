@@ -46,6 +46,37 @@ import MobileNav from '../components/MobileNav.astro';
       .back-btn svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
       .back-btn:hover svg { transform: translateX(-4px); }
       
+
+      
+      @media (pointer: coarse) {
+        .back-btn { padding: 12px; }
+      }
+
+      /* ===== MOBILE-NATIVE: compact grid ===== */
+      @media (max-width: 767px) {
+        /* Nav hidden — tab bar handles navigation */
+        .nav { display: none !important; }
+
+        body {
+          align-items: flex-start;
+          justify-content: flex-start;
+          min-height: 100dvh;
+          overflow-x: hidden;
+          overflow-y: auto;
+        }
+
+        main {
+          width: 100%;
+          /* Reserve space for tab bar + safe area at bottom */
+          padding-bottom: calc(var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px))) + 1rem);
+          padding-top: env(safe-area-inset-top, 1rem);
+          box-sizing: border-box;
+        }
+      }
+    </style>
+
+    <style is:global>
+      /* DESKTOP STYLES (Dynamic elements) */
       .friends-grid {
         display: flex;
         flex-wrap: wrap;
@@ -111,64 +142,38 @@ import MobileNav from '../components/MobileNav.astro';
       .badge-icon:hover {
         transform: translateY(-2px) scale(1.1);
       }
-      
-      @media (pointer: coarse) {
-        .back-btn { padding: 12px; }
-      }
 
-      /* ===== MOBILE-NATIVE: compact grid ===== */
+      /* MOBILE OVERRIDES */
       @media (max-width: 767px) {
-        /* Nav hidden — tab bar handles navigation */
-        .nav { display: none !important; }
-
-        body {
-          align-items: flex-start;
-          justify-content: flex-start;
-          min-height: 100dvh;
-          overflow-x: hidden;
-          overflow-y: auto;
+        .friends-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem 1.5rem;
+          padding: 1.5rem;
+          max-width: 100%;
+          margin: 0;
+          justify-items: center;
         }
 
-        main {
+        .friend-card {
           width: 100%;
-          /* Reserve space for tab bar + safe area at bottom */
-          padding-bottom: calc(var(--mobile-bottom-pad, calc(56px + env(safe-area-inset-bottom, 0px))) + 1rem);
-          padding-top: env(safe-area-inset-top, 1rem);
-          box-sizing: border-box;
+          max-width: 130px;
         }
-      }
-    </style>
 
-    <style is:global>
-      /* 2-column grid on phones */
-      .friends-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem 1.5rem;
-        padding: 1.5rem;
-        max-width: 100%;
-        margin: 0;
-        justify-items: center;
-      }
+        .friend-avatar {
+          width: 90px;
+          height: 90px;
+        }
 
-      .friend-card {
-        width: 100%;
-        max-width: 130px;
-      }
+        .friend-username {
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
 
-      .friend-avatar {
-        width: 90px;
-        height: 90px;
-      }
-
-      .friend-username {
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-
-      .badge-icon {
-        width: 20px;
-        height: 20px;
+        .badge-icon {
+          width: 20px;
+          height: 20px;
+        }
       }
     </style>
   </head>
