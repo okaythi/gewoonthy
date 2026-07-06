@@ -15,6 +15,79 @@ CORS(app)
 def home():
     return "Bot is alive!"
 
+import time
+import asyncio
+
+profile_cache = {}
+
+async def fetch_profile_safe(user_id):
+    now = time.time()
+    if user_id in profile_cache and (now - profile_cache[user_id]['time']) < 3600:
+        return profile_cache[user_id]['profile']
+    try:
+        profile = await client.fetch_user_profile(user_id)
+        profile_cache[user_id] = {'time': now, 'profile': profile}
+        return profile
+    except Exception as e:
+        print(f"Failed to fetch profile for {user_id}: {e}")
+        return None
+
+def extract_user_data(user, is_friend, friend_since, profile=None):
+    badges = []
+    flags = getattr(user, 'public_flags', None)
+    if flags:
+        if getattr(flags, 'staff', False): badges.append("staff.svg")
+        if getattr(flags, 'partner', False): badges.append("partner.svg")
+        if getattr(flags, 'hypesquad', False): badges.append("hypesquad_events.svg")
+        if getattr(flags, 'bug_hunter', False): badges.append("bug_hunter.svg")
+        if getattr(flags, 'hypesquad_bravery', False): badges.append("hypesquad_bravery.svg")
+        if getattr(flags, 'hypesquad_brilliance', False): badges.append("hypesquad_brilliance.svg")
+        if getattr(flags, 'hypesquad_balance', False): badges.append("hypesquad_balance.svg")
+        if getattr(flags, 'early_supporter', False): badges.append("early_supporter.svg")
+        if getattr(flags, 'bug_hunter_level_2', False): badges.append("bug_hunter_level_2.svg")
+        if getattr(flags, 'verified_bot_developer', False): badges.append("verified_bot_developer.svg")
+        if getattr(flags, 'discord_certified_moderator', False): badges.append("discord-mod.svg")
+        if getattr(flags, 'active_developer', False): badges.append("active-developer.svg")
+        
+    is_nitro = False
+    if getattr(user, 'premium_since', None): is_nitro = True
+    elif user.avatar and user.avatar.is_animated(): is_nitro = True
+    elif getattr(user, 'banner', None): is_nitro = True
+    
+    if profile:
+        if getattr(profile, 'premium_since', None): is_nitro = True
+        if getattr(profile, 'premium_guild_since', None): is_nitro = True
+        if getattr(profile, 'legacy_username', None): badges.append("username.png")
+        
+        for b in profile.badges:
+            bid = str(getattr(b, 'id', '')).lower()
+            desc = str(getattr(b, 'description', '')).lower()
+            if 'legacy' in bid or 'legacy' in desc: badges.append("username.png")
+            elif 'quest' in bid or 'quest' in desc: badges.append("quest.svg")
+            elif 'champion' in bid or 'champion' in desc: badges.append("champion.png")
+            elif 'hero' in bid or 'hero' in desc: badges.append("hero.png")
+            elif 'legend' in bid or 'legend' in desc: badges.append("legend.png")
+            elif 'luminary' in bid or 'luminary' in desc: badges.append("luminary.png")
+            elif 'patron' in bid or 'patron' in desc: badges.append("patron.png")
+
+    if is_nitro:
+        badges.append("premium.svg")
+        
+    # Remove duplicates preserving order
+    badges = list(dict.fromkeys(badges))
+        
+    avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
+    return {
+        "id": str(user.id),
+        "user_id": str(user.id),
+        "username": user.name,
+        "display_name": user.display_name,
+        "avatar_url": avatar_url,
+        "is_friend": is_friend,
+        "friend_since": friend_since,
+        "badges": badges
+    }
+
 @app.route('/api/search_members', methods=['GET'])
 def search_members():
     q = request.args.get('q', '').lower()
@@ -23,43 +96,6 @@ def search_members():
 
     members = []
     seen_ids = set()
-    
-    def extract_user_data(user, is_friend, friend_since):
-        badges = []
-        flags = getattr(user, 'public_flags', None)
-        if flags:
-            if getattr(flags, 'staff', False): badges.append("staff")
-            if getattr(flags, 'partner', False): badges.append("partner")
-            if getattr(flags, 'hypesquad', False): badges.append("hypesquad_events")
-            if getattr(flags, 'bug_hunter', False): badges.append("bug_hunter")
-            if getattr(flags, 'hypesquad_bravery', False): badges.append("hypesquad_bravery")
-            if getattr(flags, 'hypesquad_brilliance', False): badges.append("hypesquad_brilliance")
-            if getattr(flags, 'hypesquad_balance', False): badges.append("hypesquad_balance")
-            if getattr(flags, 'early_supporter', False): badges.append("early_supporter")
-            if getattr(flags, 'bug_hunter_level_2', False): badges.append("bug_hunter_level_2")
-            if getattr(flags, 'verified_bot_developer', False): badges.append("verified_bot_developer")
-            if getattr(flags, 'discord_certified_moderator', False): badges.append("discord-mod")
-            if getattr(flags, 'active_developer', False): badges.append("active-developer")
-            
-        is_nitro = False
-        if getattr(user, 'premium_since', None): is_nitro = True
-        elif user.avatar and user.avatar.is_animated(): is_nitro = True
-        elif getattr(user, 'banner', None): is_nitro = True
-        
-        if is_nitro:
-            badges.append("premium")
-            
-        avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
-        return {
-            "id": str(user.id),
-            "user_id": str(user.id),
-            "username": user.name,
-            "display_name": user.display_name,
-            "avatar_url": avatar_url,
-            "is_friend": is_friend,
-            "friend_since": friend_since,
-            "badges": badges
-        }
 
     def add_user_to_results(user, is_friend, friend_since):
         if user.id in seen_ids:
@@ -105,11 +141,18 @@ def get_users():
     for uid in user_ids:
         user = client.get_user(uid)
         if user:
+            future = asyncio.run_coroutine_threadsafe(fetch_profile_safe(uid), client.loop)
+            try:
+                profile = future.result(timeout=10)
+            except Exception as e:
+                print(f"Timeout fetching profile: {e}")
+                profile = None
+                
             relationship = next((r for r in client.friends if r.user.id == user.id), None)
             is_friend = relationship is not None
             friend_since = relationship.since.isoformat() if relationship and relationship.since else None
             
-            users_data.append(extract_user_data(user, is_friend, friend_since))
+            users_data.append(extract_user_data(user, is_friend, friend_since, profile))
             
     return jsonify(users_data)
 

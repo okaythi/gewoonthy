@@ -138,7 +138,12 @@ import AntiCapture from '../components/AntiCapture.astro';
                let friends = await res.json();
                friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
                grid.innerHTML = friends.map((f, i) => {
-                  const badgesHtml = (f.badges || []).map(b => `<img src="/media/badges/${b}.svg" class="badge-icon" alt="${b}" title="${b.replace(/_/g, ' ')}">`).join('');
+                  const badgesHtml = (f.badges || []).map(b => {
+                      const isFull = b.includes('.');
+                      const file = isFull ? b : `${b}.svg`;
+                      const name = isFull ? b.split('.')[0] : b;
+                      return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
+                  }).join('');
                   return `
                   <div class="friend-card" style="animation-delay: ${i * 0.05}s">
                      <img src="${f.avatar_url}" class="friend-avatar" alt="${f.display_name || f.username}">
