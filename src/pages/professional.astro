@@ -23,7 +23,8 @@ import MobileNav from '../components/MobileNav.astro';
         --glass-hover: rgba(255, 255, 255, 0.04);
       }
       body {
-        margin: 0; padding: 0; background: var(--bg); color: var(--fg);
+        margin: 0; padding: 0;
+        background: var(--bg); color: var(--fg);
         font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
         min-height: 100dvh;
         padding-top: env(safe-area-inset-top, 20px);
@@ -38,13 +39,19 @@ import MobileNav from '../components/MobileNav.astro';
         padding: clamp(2rem, 5vw, 6rem) clamp(1rem, 3vw, 2rem);
       }
       /* Desktop Navigation */
-      .left-nav { position: fixed; bottom: max(4vh, 30px); left: 4vw; z-index: 100; display: flex; align-items: center; gap: 15px; }
-      .nav-link { display: flex; align-items: center; justify-content: center; color: #444; text-decoration: none; transition: color 0.2s ease, transform 0.2s ease; -webkit-tap-highlight-color: transparent; }
-      .nav-link:hover { color: #ffffff; transform: scale(1.05); }
-      .nav-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .left-nav { position: fixed;
+        bottom: max(4vh, 30px); left: 4vw; z-index: 100; display: flex; align-items: center; gap: 15px;
+      }
+      .nav-link { display: flex; align-items: center; justify-content: center; color: #444; text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease; -webkit-tap-highlight-color: transparent; }
+      .nav-link:hover { color: #ffffff;
+        transform: scale(1.05); }
+      .nav-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2;
+        fill: none; stroke-linecap: round; stroke-linejoin: round; }
       
       .pfp-container {
-        display: flex; justify-content: center; margin-bottom: 4rem;
+        display: flex;
+        justify-content: center; margin-bottom: 4rem;
         position: relative;
       }
       .pfp-container::before {
@@ -80,10 +87,12 @@ import MobileNav from '../components/MobileNav.astro';
       
       /* Block styling */
       .block {
-        opacity: 0; transform: translateY(15px);
+        opacity: 0;
+        transform: translateY(15px);
         transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .block.visible { opacity: 1; transform: translateY(0); }
+      .block.visible { opacity: 1; transform: translateY(0);
+      }
       
       .category-title {
         font-size: 0.8rem;
@@ -184,7 +193,8 @@ import MobileNav from '../components/MobileNav.astro';
       /* ===== MOBILE-NATIVE ===== */
       @media (max-width: 767px) {
         /* Top nav hidden — tab bar replaces navigation */
-        .left-nav { display: none !important; }
+        .left-nav { display: none !important;
+        }
 
         /* Container: no top padding needed (no fixed nav) + clear tab bar */
         .container {
@@ -202,29 +212,37 @@ import MobileNav from '../components/MobileNav.astro';
       
       /* Thought Bubble */
       .thought-bubble {
-        position: absolute; top: -10px; left: calc(100% - 10px);
-        width: fit-content; max-width: 280px; min-width: 40px;
+        position: absolute;
+        top: -10px; left: calc(100% - 10px);
+        width: max-content; max-width: 280px; min-width: 40px;
         background: #2a2a2a; border: 1px solid #444; border-radius: 20px;
         padding: 10px 14px; font-size: 13px; color: #eee;
         box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-break: break-word;
-        line-height: 1.4; z-index: 10; font-family: 'Inter', sans-serif;
+        line-height: 1.4; z-index: 10;
+        font-family: 'Inter', sans-serif;
       }
       .thought-bubble::before {
-        content: ''; position: absolute; bottom: -6px; left: 16px;
+        content: '';
+        position: absolute; bottom: -6px; left: 16px;
         width: 12px; height: 12px; background: #2a2a2a; border: 1px solid #444;
-        border-radius: 50%; box-shadow: inset -2px -2px 4px rgba(0,0,0,0.3);
+        border-radius: 50%;
+        box-shadow: inset -2px -2px 4px rgba(0,0,0,0.3);
       }
       .thought-bubble::after {
-        content: ''; position: absolute; bottom: -16px; left: 6px;
+        content: '';
+        position: absolute; bottom: -16px; left: 6px;
         width: 6px; height: 6px; background: #2a2a2a; border: 1px solid #444;
-        border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
+        border-radius: 50%;
+        box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
       }
       
       .back-btn {
-        display: inline-flex; align-items: center; justify-content: center;
+        display: inline-flex;
+        align-items: center; justify-content: center;
         background: transparent; border: 1px solid var(--border);
         padding: 0.5rem 1.2rem; border-radius: 30px; color: var(--accent);
-        text-decoration: none; font-size: 0.75rem; font-weight: 600;
+        text-decoration: none;
+        font-size: 0.75rem; font-weight: 600;
         text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;
       }
       .back-btn:hover {
@@ -245,7 +263,6 @@ import MobileNav from '../components/MobileNav.astro';
          <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden;">
             <img id="about-pfp" src="/api/pfp" alt="thy" style="width:100%; height:100%; object-fit:cover;">
          </div>
-         <!-- Status Bubble -->
          <div id="about-status-bubble" class="thought-bubble" style="display:none; position:absolute; top:-10px; left:calc(100% - 10px);">
             <span id="about-status-text">...</span>
          </div>
