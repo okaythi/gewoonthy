@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
+import MobileNav from '../components/MobileNav.astro';
 ---
 <html lang="en">
   <head>
@@ -196,6 +197,25 @@ import AntiCapture from '../components/AntiCapture.astro';
       @media (pointer: coarse) {
         .back-btn { padding: 12px; }
       }
+
+      /* ===== MOBILE-NATIVE ===== */
+      @media (max-width: 767px) {
+        /* Top nav hidden — tab bar replaces navigation */
+        .nav { display: none !important; }
+
+        /* Container: no top padding needed (no fixed nav) + clear tab bar */
+        .container {
+          padding-top: max(env(safe-area-inset-top, 0px), 2rem);
+          padding-bottom: calc(var(--mobile-bottom-pad, 72px) + 2rem);
+          padding-left: max(env(safe-area-inset-left, 0px), 1rem);
+          padding-right: max(env(safe-area-inset-right, 0px), 1rem);
+        }
+
+        /* Single column on phones */
+        .fields-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -217,5 +237,6 @@ import AntiCapture from '../components/AntiCapture.astro';
     <AntiCapture />
 
     <script src="/scripts/about-me.js" is:inline></script>
+    <MobileNav current="about" />
   </body>
 </html>

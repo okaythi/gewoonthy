@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
+import MobileNav from '../components/MobileNav.astro';
 ---
 <html lang="en">
   <head>
@@ -114,6 +115,84 @@ import AntiCapture from '../components/AntiCapture.astro';
       @media (pointer: coarse) {
         .back-btn { padding: 12px; }
       }
+
+      /* ===== MOBILE-NATIVE: Full-screen snap-scroll carousel ===== */
+      @media (max-width: 767px) {
+        /* Nav hidden — tab bar handles navigation */
+        .nav { display: none !important; }
+
+        /* Body: stretch to fill, no centering */
+        body {
+          align-items: stretch;
+          justify-content: flex-start;
+          overflow: hidden;
+        }
+
+        main {
+          width: 100%;
+          overflow: hidden;
+        }
+
+        /* Grid becomes a horizontal snap-scroll rail */
+        .friends-grid {
+          display: flex;
+          flex-wrap: nowrap;
+          gap: 0;
+          padding: 0;
+          max-width: 100%;
+          width: 100%;
+          /* Height = full screen minus tab bar + home indicator */
+          height: calc(100dvh - var(--mobile-bottom-pad, 72px));
+          /* Respect top notch */
+          padding-top: env(safe-area-inset-top, 0px);
+          overflow-x: auto;
+          overflow-y: hidden;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          align-items: center;
+          justify-content: flex-start;
+          /* Hide scrollbar — gesture-only */
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        .friends-grid::-webkit-scrollbar { display: none; }
+
+        /* Each friend card = full viewport width */
+        .friend-card {
+          min-width: 100vw;
+          width: 100vw;
+          flex-shrink: 0;
+          scroll-snap-align: center;
+          padding: max(env(safe-area-inset-top, 0px), 3rem) max(env(safe-area-inset-right, 0px), 2rem) 2rem max(env(safe-area-inset-left, 0px), 2rem);
+          gap: 1.6rem;
+          /* Override individual card animation — snap handles the reveal */
+          animation: none;
+          opacity: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .friend-avatar {
+          width: 140px;
+          height: 140px;
+        }
+
+        .friend-username {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        .badges-container {
+          gap: 10px;
+        }
+
+        .badge-icon {
+          width: 28px;
+          height: 28px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -142,7 +221,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                       const isFull = b.includes('.');
                       const file = isFull ? b : `${b}.svg`;
                       const name = isFull ? b.split('.')[0] : b;
-                      return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
+                      return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">` ;
                   }).join('');
                   return `
                   <div class="friend-card" style="animation-delay: ${i * 0.05}s">
@@ -158,5 +237,6 @@ import AntiCapture from '../components/AntiCapture.astro';
          }
       });
     </script>
+    <MobileNav current="friends" />
   </body>
 </html>

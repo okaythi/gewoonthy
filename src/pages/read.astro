@@ -1,12 +1,13 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
+import MobileNav from '../components/MobileNav.astro';
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Read - Thy</title>
     <ClientRouter />
     <!-- Cloudflare Web Analytics --><script defer async src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad29414c138e4d91a3f01c8b348f91a1"}'></script><!-- End Cloudflare Web Analytics -->
@@ -35,6 +36,30 @@ import AntiCapture from '../components/AntiCapture.astro';
       .consent-actions button { background: transparent; border: none; color: #d9d9d9; cursor: pointer; font-family: inherit; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; padding: 0; transition: color 0.2s ease; }
       .consent-actions button:hover { color: #ffffff; }
       @media (max-width: 768px) { .consent-toast { width: 90vw; border-radius: 12px; flex-direction: column; gap: 0.75rem; text-align: center; white-space: normal; padding: 1rem; bottom: calc(2dvh + env(safe-area-inset-bottom)); } }
+
+      /* ===== MOBILE-NATIVE ===== */
+      @media (max-width: 767px) {
+        body {
+          /* Respect top notch/Dynamic Island */
+          padding: env(safe-area-inset-top, 4dvh) env(safe-area-inset-right, 4vw) 0 env(safe-area-inset-left, 4vw);
+          /* Clear tab bar + home indicator at bottom */
+          padding-bottom: calc(var(--mobile-bottom-pad, 72px) + 2dvh);
+        }
+        /* Back button hidden — tab bar handles navigation */
+        .back-btn { display: none !important; }
+        /* Lang picker becomes a subtle floating chip top-right */
+        .top-bar {
+          justify-content: flex-end;
+        }
+        /* Consent toast clears tab bar */
+        .consent-toast {
+          bottom: calc(var(--mobile-bottom-pad, 72px) + 1rem);
+        }
+        /* Quote slightly larger on phones */
+        blockquote {
+          font-size: clamp(1.3rem, 5vw, 1.8rem);
+        }
+      }
     </style>
   </head>
   <body>
@@ -56,5 +81,6 @@ import AntiCapture from '../components/AntiCapture.astro';
       <div class="consent-actions"><button id="consent-accept">Accept</button><button id="consent-decline">Decline</button></div>
     </div>
     <script src="/scripts/read.js" is:inline></script>
+    <MobileNav current="read" />
   </body>
 </html>

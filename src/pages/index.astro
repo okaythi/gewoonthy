@@ -1,12 +1,13 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
+import MobileNav from '../components/MobileNav.astro';
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Thy</title>
     <ClientRouter />
     <!-- Cloudflare Web Analytics --><script defer async src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ad29414c138e4d91a3f01c8b348f91a1"}'></script><!-- End Cloudflare Web Analytics -->
@@ -79,6 +80,176 @@ import AntiCapture from '../components/AntiCapture.astro';
       @media (max-width: 1024px) { .watermark-wrapper { display: none !important; } }
       @media (max-width: 768px) { .container { justify-content: center; gap: 2rem; padding: 2dvh 2vw; } .player-wrapper { flex: 0 0 auto; height: auto; gap: 0.25rem; grid-template-columns: 30px 1fr 30px; } .video-container { height: auto; } video { max-height: 50dvh; } .nav-btn { padding: 5px; } .nav-btn svg { width: 20px; height: 30px; } .left-nav { bottom: env(safe-area-inset-bottom, 3dvh); left: 3vw; } .suggestion-wrapper { display: none !important; } }
       @media (pointer: coarse) { .nav-btn, .nav-link, .suggest-btn { padding: 12px; min-width: 44px; min-height: 44px; } }
+
+      /* ============================================================ */
+      /* MOBILE-NATIVE: phones ≤ 767px                               */
+      /* Every rule here is additive — desktop layout is untouched.  */
+      /* ============================================================ */
+      @media (max-width: 767px) {
+        /* Desktop nav replaced by bottom tab bar */
+        .left-nav { display: none !important; }
+        /* Quote header hidden — no room on mobile */
+        .top-section { display: none !important; }
+
+        /* Container: respect top notch, fill full height */
+        .container {
+          padding: env(safe-area-inset-top, 0px) 0 0 0;
+          justify-content: flex-start;
+          gap: 0;
+          height: 100dvh;
+          overflow: hidden;
+        }
+
+        /* Player fills all remaining vertical space */
+        .player-wrapper {
+          grid-template-columns: 1fr;
+          flex: 1 1 auto;
+          min-height: 0;
+          height: 0;
+          gap: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+
+        /* Prev/next buttons hidden — swipe replaces them */
+        .nav-btn { display: none !important; }
+
+        /* Video container fills the player */
+        .video-container {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+        }
+
+        /* Video fills its container, no rounding */
+        video {
+          max-height: 100%;
+          width: 100%;
+          border-radius: 0;
+        }
+
+        /* Bottom strip: track name + clear tab bar + safe area */
+        .bottom-section {
+          flex: 0 0 auto;
+          text-align: left;
+          padding: 10px 18px;
+          padding-bottom: calc(10px + var(--mobile-bottom-pad, 72px));
+          border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .track-info {
+          max-width: 100%;
+          font-size: 0.75rem;
+          line-height: 1.4;
+        }
+
+        .loader { font-size: 0.85rem; letter-spacing: 2px; }
+      }
+
+      /* ============================================================ */
+      /* FAB + Suggestion Bottom Sheet (mobile only)                  */
+      /* ============================================================ */
+      .suggest-fab { display: none; }
+      .suggest-sheet { display: none; }
+      .sheet-backdrop {
+        position: fixed; inset: 0; z-index: 550;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.3s ease;
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        /* FAB: sits just above tab bar, right side */
+        .suggest-fab {
+          display: flex;
+          position: fixed;
+          right: max(env(safe-area-inset-right, 0px), 18px);
+          bottom: calc(var(--mobile-bottom-pad, 72px) + 14px);
+          width: 46px; height: 46px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.18);
+          color: #fff;
+          align-items: center; justify-content: center;
+          cursor: pointer;
+          z-index: 400;
+          backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+          -webkit-tap-highlight-color: transparent;
+          transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .suggest-fab:active { transform: scale(0.9); }
+        .suggest-fab svg {
+          width: 20px; height: 20px;
+          stroke: currentColor; stroke-width: 2.5; fill: none;
+          stroke-linecap: round; stroke-linejoin: round;
+        }
+
+        /* Bottom sheet: slides up from below */
+        .suggest-sheet {
+          display: block;
+          position: fixed;
+          left: 0; right: 0; bottom: 0;
+          z-index: 600;
+          background: rgba(10, 10, 10, 0.98);
+          backdrop-filter: blur(40px) saturate(180%);
+          -webkit-backdrop-filter: blur(40px) saturate(180%);
+          border-top: 1px solid rgba(255, 255, 255, 0.09);
+          border-radius: 22px 22px 0 0;
+          padding: 12px 20px;
+          padding-bottom: max(env(safe-area-inset-bottom, 0px), 20px);
+          padding-left: max(env(safe-area-inset-left, 0px), 20px);
+          padding-right: max(env(safe-area-inset-right, 0px), 20px);
+          transform: translateY(100%);
+          transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
+        }
+        .suggest-sheet.open { transform: translateY(0); }
+
+        .sheet-handle {
+          width: 38px; height: 4px;
+          background: rgba(255,255,255,0.2);
+          border-radius: 2px;
+          margin: 0 auto 18px;
+        }
+        .sheet-title {
+          font-size: 0.85rem; font-weight: 700;
+          color: #ffffff; margin: 0 0 14px;
+          letter-spacing: 1px; text-transform: uppercase;
+        }
+        .sheet-input {
+          width: 100%; box-sizing: border-box;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.1);
+          color: #fff; padding: 13px 16px;
+          border-radius: 12px;
+          font-family: inherit; font-size: 0.9rem;
+          outline: none; margin-bottom: 12px;
+          -webkit-tap-highlight-color: transparent;
+          transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .sheet-input:focus {
+          border-color: rgba(255,255,255,0.28);
+          background: rgba(255,255,255,0.09);
+        }
+        .sheet-submit {
+          width: 100%; background: #ffffff; color: #000;
+          border: none; padding: 14px;
+          border-radius: 12px;
+          font-family: inherit; font-weight: 700;
+          font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;
+          cursor: pointer;
+          -webkit-tap-highlight-color: transparent;
+          transition: opacity 0.2s ease, transform 0.15s ease;
+        }
+        .sheet-submit:active { opacity: 0.8; transform: scale(0.98); }
+        .sheet-submit:disabled { opacity: 0.5; }
+
+        .sheet-backdrop { display: block; }
+        .sheet-backdrop.open { opacity: 1; pointer-events: all; }
+      }
     </style>
   </head>
   <body>
@@ -86,6 +257,25 @@ import AntiCapture from '../components/AntiCapture.astro';
        <a href="/read" class="nav-link" aria-label="Read" title="Read"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></a>
        <a href="/about-me" class="nav-link" aria-label="About Me" title="About Me"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
        <a href="/coolpeople" class="nav-link" aria-label="Cool People" title="Cool People"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></a>
+    </div>
+
+    <!-- Mobile: Bottom Tab Bar -->
+    <MobileNav current="home" />
+
+    <!-- Mobile: Suggestion FAB -->
+    <button id="suggest-fab" class="suggest-fab" aria-label="Suggest a song">
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+    </button>
+
+    <!-- Mobile: Sheet backdrop -->
+    <div id="sheet-backdrop" class="sheet-backdrop"></div>
+
+    <!-- Mobile: Suggestion Bottom Sheet -->
+    <div id="suggest-sheet" class="suggest-sheet" role="dialog" aria-modal="true" aria-label="Suggest a song">
+      <div class="sheet-handle"></div>
+      <div class="sheet-title">Suggest a Song</div>
+      <input type="text" id="sheet-input" class="sheet-input" placeholder="Spotify URL, YouTube link, or track name..." autocomplete="off" />
+      <button id="sheet-submit" class="sheet-submit">Submit</button>
     </div>
     
 
@@ -415,6 +605,84 @@ import AntiCapture from '../components/AntiCapture.astro';
              loadVideo(currentIndex); 
           }
         });
+
+        // ============================================
+        // MOBILE: Swipe left/right to navigate tracks
+        // ============================================
+        const videoContainer = document.querySelector('.video-container');
+        if (videoContainer) {
+          let _tx = 0, _ty = 0;
+          videoContainer.addEventListener('touchstart', (e) => {
+            _tx = e.changedTouches[0].clientX;
+            _ty = e.changedTouches[0].clientY;
+          }, { passive: true });
+          videoContainer.addEventListener('touchend', (e) => {
+            const dx = e.changedTouches[0].clientX - _tx;
+            const dy = e.changedTouches[0].clientY - _ty;
+            // Only trigger on predominantly horizontal swipe > 60px
+            if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+              if (videoList.length > 0) {
+                if (dx < 0) {
+                  currentIndex = (currentIndex + 1) % videoList.length;
+                } else {
+                  currentIndex = currentIndex > 0 ? currentIndex - 1 : videoList.length - 1;
+                }
+                loadVideo(currentIndex);
+              }
+            }
+          }, { passive: true });
+        }
+
+        // ============================================
+        // MOBILE: FAB + Suggestion Bottom Sheet
+        // ============================================
+        const suggestFab    = document.getElementById('suggest-fab');
+        const suggestSheet  = document.getElementById('suggest-sheet');
+        const sheetBackdrop = document.getElementById('sheet-backdrop');
+        const sheetInput    = document.getElementById('sheet-input');
+        const sheetSubmit   = document.getElementById('sheet-submit');
+
+        const openSheet = () => {
+          suggestSheet?.classList.add('open');
+          sheetBackdrop?.classList.add('open');
+          setTimeout(() => sheetInput?.focus(), 420);
+        };
+        const closeSheet = () => {
+          suggestSheet?.classList.remove('open');
+          sheetBackdrop?.classList.remove('open');
+        };
+
+        suggestFab?.addEventListener('click', openSheet);
+        sheetBackdrop?.addEventListener('click', closeSheet);
+
+        async function handleSheetSubmit() {
+          const query = sheetInput?.value.trim();
+          if (!query) return;
+          if (honeypot && honeypot.value) return; // bot trap
+          if (Date.now() - window.suggestionLastTime > 300000) { window.suggestionSubmissionCount = 0; window.suggestionLastTime = Date.now(); }
+          if (window.suggestionSubmissionCount >= 5) { alert('Limit reached.'); return; }
+          if (sheetSubmit) { sheetSubmit.textContent = 'Searching...'; sheetSubmit.disabled = true; }
+          try {
+            const res = await fetch('/api/suggest-metadata', { method: 'POST', body: JSON.stringify({ query }), credentials: 'same-origin' });
+            if (res.ok) {
+              const data = await res.json();
+              if (data.track && data.track !== 'Unknown Track') {
+                document.getElementById('modal-track').textContent = data.track;
+                document.getElementById('modal-artist').textContent = data.artist;
+                const art = document.getElementById('modal-art');
+                if (data.artwork) { art.src = data.artwork; art.style.display = 'block'; } else { art.style.display = 'none'; }
+                closeSheet();
+                modal.showModal();
+              } else { alert('Could not find that track.'); }
+            } else { alert('Could not find that track.'); }
+          } catch { alert('Network error.'); }
+          if (sheetInput) sheetInput.value = '';
+          if (sheetSubmit) { sheetSubmit.textContent = 'Submit'; sheetSubmit.disabled = false; }
+        }
+
+        sheetSubmit?.addEventListener('click', handleSheetSubmit);
+        sheetInput?.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); handleSheetSubmit(); } });
+
         initialize();
       });
     </script>
