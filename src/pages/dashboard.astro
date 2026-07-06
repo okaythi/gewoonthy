@@ -805,7 +805,7 @@ import AntiCapture from '../components/AntiCapture.astro';
 
       const loadFriends = async () => {
          try {
-            const res = await fetch('/api/admin/close-friends', { credentials: 'include' });
+            const res = await fetch('/api/close-friends', { credentials: 'include' });
             if (res.ok) {
                const friends = await res.json();
                if (friends.length === 0) {
@@ -839,7 +839,7 @@ import AntiCapture from '../components/AntiCapture.astro';
          if (btn) {
             const userId = btn.getAttribute('data-userid');
             try {
-               const res = await fetch('/api/admin/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
+               const res = await fetch('/api/close-friends', { method: 'DELETE', body: JSON.stringify({ user_id: userId }), credentials: 'include' });
                if (!res.ok) alert('Failed to remove friend: ' + await res.text());
             } catch (err) {
                alert('Error removing friend: ' + err.message);
@@ -850,7 +850,7 @@ import AntiCapture from '../components/AntiCapture.astro';
 
       window.addFriend = async (user) => {
          try {
-            const res = await fetch('/api/admin/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
+            const res = await fetch('/api/close-friends', { method: 'POST', body: JSON.stringify(user), credentials: 'include' });
             if (!res.ok) {
                alert('Failed to add friend: ' + await res.text());
             }
