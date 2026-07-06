@@ -151,9 +151,9 @@ import AntiCapture from '../components/AntiCapture.astro';
       
       /* File Explorer */
       .file-tree { list-style: none; padding: 0; margin: 0; max-height: 500px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.25rem; }
-      .file-item { padding: 0.75rem; border: 1px solid transparent; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, border-radius 0.2s;}
+      .file-item { padding: 0.75rem; border: 1px solid transparent; border-bottom: 1px solid var(--border); display: flex !important; flex-direction: row !important; align-items: center !important; gap: 1rem; font-size: 0.9rem; cursor: pointer; transition: background 0.2s, border-color 0.2s, border-radius 0.2s;}
       .file-item:hover { background: rgba(255,255,255,0.05); border-color: var(--border); border-radius: 8px; }
-      .file-item-art { width: 48px; height: 48px; border-radius: 6px; object-fit: cover; background: #222; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+      .file-item-art { width: 48px !important; height: 48px !important; min-width: 48px !important; min-height: 48px !important; border-radius: 6px; object-fit: cover; background: #222; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
       .file-item-info { display: flex; flex-direction: column; flex: 1; min-width: 0; justify-content: center; }
       .file-item-title { font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1rem; line-height: 1.2; margin-bottom: 4px; }
       .file-item-artist { color: var(--text-secondary); font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1; }
@@ -673,7 +673,7 @@ import AntiCapture from '../components/AntiCapture.astro';
                            if (data.track && data.track !== 'Unknown Track') {
                               document.getElementById(`vault-title-${i}`).textContent = data.track;
                               document.getElementById(`vault-artist-${i}`).textContent = data.artist;
-                              if (data.artwork) {
+                              if (data.artwork && query.toUpperCase() !== 'INORI') {
                                  document.getElementById(`vault-art-${i}`).src = data.artwork;
                               }
                            } else {
