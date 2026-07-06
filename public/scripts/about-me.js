@@ -1,4 +1,5 @@
 document.addEventListener('astro:page-load', async () => {
+  if (window.location.pathname !== '/' && window.location.pathname !== '') return;
   const root = document.getElementById('blocks-root');
   if (!root) return;
 
