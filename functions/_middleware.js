@@ -12,18 +12,18 @@ export async function onRequest({ request, env, next }) {
   if (url.pathname === '/' || url.pathname === '') {
      try {
        const { results } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks ORDER BY order_index ASC").all();
-       preloadedScript = `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_ABOUT_DATA__ = ${JSON.stringify(results).replace(/</g, '\\u003c')};</script>`;
+       preloadedScript = `<script id="preloaded-about-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
        
        const { results: profResults } = await env.PROFESSIONAL_PROFILE.prepare("SELECT id FROM professional_blocks LIMIT 1").all();
-       preloadedScript += `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_PROF_DATA__ = ${JSON.stringify(profResults).replace(/</g, '\\u003c')};</script>`;
+       preloadedScript += `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(profResults).replace(/</g, '\\u003c')}</script>`;
      } catch(e) {}
   } else if (url.pathname === '/professional' || url.pathname === '/professional/') {
      try {
        const { results } = await env.PROFESSIONAL_PROFILE.prepare("SELECT * FROM professional_blocks ORDER BY order_index ASC").all();
-       preloadedScript = `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_PROF_DATA__ = ${JSON.stringify(results).replace(/</g, '\\u003c')};</script>`;
+       preloadedScript = `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
        
        const { results: aboutRes } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks WHERE type IN ('status', 'pfp_crop')").all();
-       preloadedScript += `<script nonce="[NONCE_PLACEHOLDER]">window.__PRELOADED_PROF_ABOUT_DATA__ = ${JSON.stringify(aboutRes).replace(/</g, '\\u003c')};</script>`;
+       preloadedScript += `<script id="preloaded-prof-about-data" type="application/json">${JSON.stringify(aboutRes).replace(/</g, '\\u003c')}</script>`;
      } catch(e) {}
   }
 
@@ -33,10 +33,6 @@ export async function onRequest({ request, env, next }) {
   // 3. Generate Nonce for CSP
   const nonce = crypto.randomUUID().replace(/-/g, '').slice(0, 16);
   
-  if (preloadedScript) {
-     preloadedScript = preloadedScript.replace(/\[NONCE_PLACEHOLDER\]/g, nonce);
-  }
-
   // Create a new response to modify headers and body
   const newResponse = new Response(response.body, response);
 

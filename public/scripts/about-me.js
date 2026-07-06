@@ -7,8 +7,9 @@ document.addEventListener('astro:page-load', async () => {
   let profBlocks = null;
 
   try {
-    if (window.__PRELOADED_ABOUT_DATA__) {
-       blocks = window.__PRELOADED_ABOUT_DATA__;
+    const aboutScript = document.getElementById('preloaded-about-data');
+    if (aboutScript) {
+       blocks = JSON.parse(aboutScript.textContent);
     } else {
        const res = await fetch('/api/about', { credentials: 'same-origin' });
        blocks = await res.json();
@@ -119,8 +120,9 @@ document.addEventListener('astro:page-load', async () => {
 
   // Academics Link Injection
   try {
-    if (window.__PRELOADED_PROF_DATA__) {
-       profBlocks = window.__PRELOADED_PROF_DATA__;
+    const profScript = document.getElementById('preloaded-prof-data');
+    if (profScript) {
+       profBlocks = JSON.parse(profScript.textContent);
     } else {
        const profRes = await fetch('/api/professional', { credentials: 'same-origin' });
        profBlocks = await profRes.json();

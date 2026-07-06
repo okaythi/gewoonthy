@@ -5,8 +5,9 @@ document.addEventListener('astro:page-load', async () => {
 
   try {
     let blocks = null;
-    if (window.__PRELOADED_PROF_DATA__) {
-       blocks = window.__PRELOADED_PROF_DATA__;
+    const profScript = document.getElementById('preloaded-prof-data');
+    if (profScript) {
+       blocks = JSON.parse(profScript.textContent);
     } else {
        const res = await fetch('/api/professional', { credentials: 'same-origin' });
        blocks = await res.json();
@@ -32,8 +33,9 @@ document.addEventListener('astro:page-load', async () => {
     let cropCoords = null;
     
     let aboutBlocks = [];
-    if (window.__PRELOADED_PROF_ABOUT_DATA__) {
-       aboutBlocks = window.__PRELOADED_PROF_ABOUT_DATA__;
+    const aboutScript = document.getElementById('preloaded-prof-about-data');
+    if (aboutScript) {
+       aboutBlocks = JSON.parse(aboutScript.textContent);
     }
     aboutBlocks.forEach(b => {
        if (b.type === 'status' || b.id === 0) {
