@@ -116,81 +116,56 @@ import MobileNav from '../components/MobileNav.astro';
         .back-btn { padding: 12px; }
       }
 
-      /* ===== MOBILE-NATIVE: Full-screen snap-scroll carousel ===== */
+      /* ===== MOBILE-NATIVE: compact grid ===== */
       @media (max-width: 767px) {
         /* Nav hidden — tab bar handles navigation */
         .nav { display: none !important; }
 
-        /* Body: stretch to fill, no centering */
         body {
-          align-items: stretch;
+          align-items: flex-start;
           justify-content: flex-start;
-          overflow: hidden;
+          min-height: 100dvh;
+          overflow-x: hidden;
+          overflow-y: auto;
         }
 
         main {
           width: 100%;
-          overflow: hidden;
+          /* Reserve space for tab bar + safe area at bottom */
+          padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 1rem);
+          padding-top: env(safe-area-inset-top, 1rem);
+          box-sizing: border-box;
         }
 
-        /* Grid becomes a horizontal snap-scroll rail */
+        /* 2-column grid on phones */
         .friends-grid {
-          display: flex;
-          flex-wrap: nowrap;
-          gap: 0;
-          padding: 0;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem 1.5rem;
+          padding: 1.5rem;
           max-width: 100%;
-          width: 100%;
-          /* Height = full screen minus tab bar + home indicator */
-          height: calc(100dvh - var(--mobile-bottom-pad, 72px));
-          /* Respect top notch */
-          padding-top: env(safe-area-inset-top, 0px);
-          overflow-x: auto;
-          overflow-y: hidden;
-          scroll-snap-type: x mandatory;
-          -webkit-overflow-scrolling: touch;
-          align-items: center;
-          justify-content: flex-start;
-          /* Hide scrollbar — gesture-only */
-          scrollbar-width: none;
-          -ms-overflow-style: none;
+          margin: 0;
+          justify-items: center;
         }
-        .friends-grid::-webkit-scrollbar { display: none; }
 
-        /* Each friend card = full viewport width */
         .friend-card {
-          min-width: 100vw;
-          width: 100vw;
-          flex-shrink: 0;
-          scroll-snap-align: center;
-          padding: max(env(safe-area-inset-top, 0px), 3rem) max(env(safe-area-inset-right, 0px), 2rem) 2rem max(env(safe-area-inset-left, 0px), 2rem);
-          gap: 1.6rem;
-          /* Override individual card animation — snap handles the reveal */
-          animation: none;
-          opacity: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+          width: 100%;
+          max-width: 130px;
         }
 
         .friend-avatar {
-          width: 140px;
-          height: 140px;
+          width: 90px;
+          height: 90px;
         }
 
         .friend-username {
-          font-size: 1.5rem;
+          font-size: 0.9rem;
           font-weight: 600;
         }
 
-        .badges-container {
-          gap: 10px;
-        }
-
         .badge-icon {
-          width: 28px;
-          height: 28px;
+          width: 20px;
+          height: 20px;
         }
       }
     </style>
@@ -208,34 +183,37 @@ import MobileNav from '../components/MobileNav.astro';
     
     <AntiCapture />
     <script>
-      document.addEventListener('astro:page-load', async () => {
-         const grid = document.getElementById('friends-grid');
-         if (!grid) return;
-         try {
-            const res = await fetch('/api/close-friends?t=' + Date.now(), { cache: 'no-store' });
-            if (res.ok) {
-               let friends = await res.json();
-               friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
-               grid.innerHTML = friends.map((f, i) => {
-                  const badgesHtml = (f.badges || []).map(b => {
-                      const isFull = b.includes('.');
-                      const file = isFull ? b : `${b}.svg`;
-                      const name = isFull ? b.split('.')[0] : b;
-                      return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">` ;
-                  }).join('');
-                  return `
-                  <div class="friend-card" style="animation-delay: ${i * 0.05}s">
-                     <img src="${f.avatar_url}" class="friend-avatar" alt="${f.display_name || f.username}">
-                     <div class="friend-username">${f.display_name || f.username}</div>
-                     <div class="badges-container">${badgesHtml}</div>
-                  </div>
-                  `;
-               }).join('');
-            }
-         } catch(e) {
-            console.error("Failed to load friends", e);
-         }
-      });
+      async function loadFriends() {
+        const grid = document.getElementById('friends-grid');
+        if (!grid || grid.dataset.loaded) return;
+        try {
+          const res = await fetch('/api/close-friends?t=' + Date.now(), { cache: 'no-store' });
+          if (res.ok) {
+            let friends = await res.json();
+            friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
+            grid.innerHTML = friends.map((f, i) => {
+              const badgesHtml = (f.badges || []).map(b => {
+                const isFull = b.includes('.');
+                const file = isFull ? b : `${b}.svg`;
+                const name = isFull ? b.split('.')[0] : b;
+                return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
+              }).join('');
+              return `<div class="friend-card" style="animation-delay: ${i * 0.05}s">
+                <img src="${f.avatar_url}" class="friend-avatar" alt="${f.display_name || f.username}">
+                <div class="friend-username">${f.display_name || f.username}</div>
+                <div class="badges-container">${badgesHtml}</div>
+              </div>`;
+            }).join('');
+            grid.dataset.loaded = '1';
+          }
+        } catch(e) {
+          console.error('Failed to load friends', e);
+        }
+      }
+      // Run immediately (handles direct load + browser back)
+      loadFriends();
+      // Also run on every Astro page transition into this page
+      document.addEventListener('astro:page-load', loadFriends);
     </script>
     <MobileNav current="friends" />
   </body>

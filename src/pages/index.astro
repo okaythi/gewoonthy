@@ -88,12 +88,18 @@ import MobileNav from '../components/MobileNav.astro';
         /* Desktop sidebar nav hidden — tab bar handles navigation */
         .left-nav { display: none !important; }
 
-        /* Container: full height, flex column, no overflow */
+        /* Container: reserve bottom space for the fixed tab bar.
+           This is the KEY fix: padding-bottom pushes flex children
+           above the tab bar WITHOUT relying on any CSS variable.    */
         .container {
-          padding: env(safe-area-inset-top, 12px) 0 0 0;
+          padding-top: env(safe-area-inset-top, 12px);
+          padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+          padding-left: 0;
+          padding-right: 0;
           justify-content: flex-start;
           gap: 0;
           height: 100dvh;
+          box-sizing: border-box;
           overflow: hidden;
         }
 
@@ -101,16 +107,16 @@ import MobileNav from '../components/MobileNav.astro';
         .top-section {
           display: block !important;
           flex: 0 0 auto;
-          padding: 10px 18px 6px;
+          padding: 8px 18px 4px;
         }
         h2 {
-          font-size: 0.85rem;
+          font-size: 0.8rem;
           letter-spacing: 0.3px;
-          opacity: 0.6;
+          opacity: 0.5;
           font-weight: 700;
         }
 
-        /* Player: fills all remaining space between title and bottom strip */
+        /* Player: fills all remaining space */
         .player-wrapper {
           grid-template-columns: 1fr;
           flex: 1 1 auto;
@@ -130,19 +136,18 @@ import MobileNav from '../components/MobileNav.astro';
           max-width: 100%;
         }
 
-        /* Video fills its container edge-to-edge, no rounding */
+        /* Video fills edge-to-edge, no rounding */
         video {
           max-height: 100%;
           width: 100%;
           border-radius: 0;
         }
 
-        /* Bottom strip: fixed height, sits ABOVE the tab bar */
+        /* Bottom strip: simple padding, container already clears the tab bar */
         .bottom-section {
           flex: 0 0 auto;
           text-align: left;
-          /* 52px strip + 8px safe-area gap + 56px tab bar + env(safe-area-inset-bottom) */
-          padding: 10px 18px calc(56px + env(safe-area-inset-bottom, 0px) + 10px);
+          padding: 10px 18px 12px;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -173,13 +178,12 @@ import MobileNav from '../components/MobileNav.astro';
       }
 
       @media (max-width: 767px) {
-        /* FAB: overlays the bottom strip, left of center, above track text */
         .suggest-fab {
           display: flex;
           position: fixed;
           right: max(env(safe-area-inset-right, 0px), 16px);
-          /* sits 56px tab bar + safe area + 14px gap above bottom */
-          bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 58px);
+          /* Just above the bottom strip, which itself sits above the tab bar */
+          bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 52px);
           width: 42px; height: 42px;
           border-radius: 50%;
           background: rgba(30, 30, 30, 0.9);
