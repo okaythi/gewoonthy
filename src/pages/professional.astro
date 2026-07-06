@@ -8,10 +8,9 @@ import MobileNav from '../components/MobileNav.astro';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Thy</title>
+    <title>Professional Profile</title>
     <script>
       // Kick off the fetch immediately before DOM parses to save precious seconds
-      window.__ABOUT_DATA_PROMISE__ = fetch('/api/about', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
       window.__PROFESSIONAL_DATA_PROMISE__ = fetch('/api/professional', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
     </script>
     <ClientRouter />
@@ -149,38 +148,7 @@ import MobileNav from '../components/MobileNav.astro';
         opacity: 1;
       }
       
-      .playlist-banner {
-        display: flex; align-items: center; justify-content: space-between; 
-        padding: 0.8rem 1.2rem; margin: 0 auto 3rem auto; 
-        background: var(--glass-bg); border: 1px solid var(--border); 
-        border-radius: 30px; text-decoration: none; 
-        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); 
-        max-width: 500px;
-        position: relative; overflow: hidden;
-      }
-      .playlist-banner::before {
-        content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-        background: radial-gradient(circle at top left, rgba(255,255,255,0.03), transparent 70%);
-        opacity: 0; transition: opacity 0.4s ease;
-      }
-      .playlist-banner::after {
-        content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
-        animation: shimmerSweep 7s infinite cubic-bezier(0.25, 1, 0.5, 1);
-        pointer-events: none;
-      }
-      @keyframes shimmerSweep {
-        0% { left: -100%; }
-        40% { left: 200%; }
-        100% { left: 200%; }
-      }
-      .playlist-banner:hover {
-        background: var(--glass-hover); border-color: rgba(255,255,255,0.15);
-        transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-      }
-      .playlist-banner:hover::before { opacity: 1; }
-      .playlist-banner:hover .arrow-icon { transform: translateX(3px); color: var(--fg); }
-      
+
       .field-label {
         font-weight: 600;
         color: var(--accent);
@@ -271,27 +239,14 @@ import MobileNav from '../components/MobileNav.astro';
             <span id="about-status-text">...</span>
          </div>
       </div>
-      <a href="/songs" class="block visible playlist-banner">
-         <div style="display: flex; align-items: center; gap: 0.8rem; overflow: hidden;">
-            <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-               <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: var(--fg); stroke-width: 2; fill: var(--fg); stroke-linecap: round; stroke-linejoin: round; transform: translateX(1px);"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-            </div>
-            <div style="display: flex; flex-direction: column;">
-               <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--fg); position: relative; z-index: 1;">Playlist</span>
-               <span style="font-size: 0.7rem; color: var(--accent); font-weight: 400; line-height: 1.4; white-space: normal; position: relative; z-index: 1;">My top songs in rotation (they change periodically and you can even suggest some cool ones !)</span>
-            </div>
-         </div>
-         <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform 0.3s ease, color 0.3s ease; color: var(--accent); margin-left: 0.5rem;" class="arrow-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+
       <div id="blocks-root">
         <div class="empty-state">Loading...</div>
       </div>
-      <div id="academics-link-container" style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 3rem;"></div>
     </main>
     
     <AntiCapture />
-
-    <script src="/scripts/about-me.js" is:inline></script>
+    <script src="/scripts/professional.js" is:inline></script>
     <MobileNav current="home" />
   </body>
 </html>

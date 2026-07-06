@@ -2,18 +2,23 @@ document.addEventListener('astro:page-load', async () => {
   const root = document.getElementById('blocks-root');
   if (!root) return;
 
-  try {
     let blocks = null;
-    if (window.__ABOUT_DATA_PROMISE__) {
-       blocks = await window.__ABOUT_DATA_PROMISE__;
-       window.__ABOUT_DATA_PROMISE__ = null;
+    if (window.__PROFESSIONAL_DATA_PROMISE__) {
+       blocks = await window.__PROFESSIONAL_DATA_PROMISE__;
+       window.__PROFESSIONAL_DATA_PROMISE__ = null;
     } else {
-       const res = await fetch('/api/about', { credentials: 'same-origin' });
+       const res = await fetch('/api/professional', { credentials: 'same-origin' });
        blocks = await res.json();
     }
     
     if (!blocks || blocks.length === 0) {
-      root.innerHTML = '<div class="empty-state">Nothing to see here yet... Do I even exist?</div>';
+      document.querySelector('.content-wrapper').innerHTML = `
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60vh; text-align: center;">
+          <h1 style="font-size: 4rem; margin: 0; color: var(--fg); letter-spacing: -2px;">404</h1>
+          <p style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">This profile hasn't been set up yet.</p>
+          <a href="/" style="margin-top: 2rem; color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; transition: border-color 0.2s ease;">Return home</a>
+        </div>
+      `;
       return;
     }
 
@@ -114,31 +119,4 @@ document.addEventListener('astro:page-load', async () => {
         pfp.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>';
      });
   }
-
-  // Academics Link Injection
-  try {
-    let profBlocks = null;
-    if (window.__PROFESSIONAL_DATA_PROMISE__) {
-       profBlocks = await window.__PROFESSIONAL_DATA_PROMISE__;
-       window.__PROFESSIONAL_DATA_PROMISE__ = null;
-    } else {
-       const profRes = await fetch('/api/professional', { credentials: 'same-origin' });
-       profBlocks = await profRes.json();
-    }
-    
-    if (profBlocks && profBlocks.length > 0) {
-      const linkContainer = document.getElementById('academics-link-container');
-      if (linkContainer) {
-        linkContainer.innerHTML = `
-          <a href="/professional" class="block visible" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--glass-bg); border: 1px solid var(--border); padding: 0.6rem 1.2rem; border-radius: 30px; color: var(--fg); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;">
-            Academics <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        `;
-        // add hover effect via JS since it's injected
-        const link = linkContainer.querySelector('a');
-        link.addEventListener('mouseenter', () => { link.style.background = 'var(--glass-hover)'; link.style.borderColor = 'rgba(255,255,255,0.15)'; });
-        link.addEventListener('mouseleave', () => { link.style.background = 'var(--glass-bg)'; link.style.borderColor = 'var(--border)'; });
-      }
-    }
-  } catch(e) {}
 });

@@ -561,7 +561,7 @@ import AntiCapture from '../components/AntiCapture.astro';
             </p>
             <div id="about-blocks-container" style="display:flex; flex-direction:column; gap:20px;"></div>
             
-            <div style="margin-top:30px; padding-top:20px; border-top: 1px solid var(--border);">
+             <div style="margin-top:30px; padding-top:20px; border-top: 1px solid var(--border);">
                <h3 style="margin-top:0; font-size:1rem;">Add Custom Field</h3>
                <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
                  <input type="text" id="new-field-category" placeholder="Category (e.g. Favorites)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
@@ -569,7 +569,28 @@ import AntiCapture from '../components/AntiCapture.astro';
                  <input type="text" id="new-field-value" placeholder="Value (e.g. Interstellar)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px; flex:1;">
                  <button class="btn" id="btn-add-custom-field">+ Add Field</button>
                </div>
-            </div>
+             </div>
+             
+             <!-- ACADEMICS SECTION -->
+             <div style="margin-top:40px; padding-top:20px; border-top: 2px solid var(--border);">
+               <h2 style="font-size: 1.5rem; margin-top:0; margin-bottom: 5px;">Academic & Professional Data</h2>
+               <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:20px;">
+                 These fields power the "Academics ->" link on your main profile and the `/professional` page.
+               </p>
+               <button class="btn" id="btn-load-academic-presets">Load Academic Preset Fields</button>
+               <div id="prof-blocks-container" style="display:flex; flex-direction:column; gap:20px; margin-top:20px;"></div>
+               
+               <div style="margin-top:30px; padding-top:20px; border-top: 1px solid var(--border);">
+                  <h3 style="margin-top:0; font-size:1rem;">Add Custom Academic Field</h3>
+                  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                    <input type="text" id="new-prof-category" placeholder="Category (e.g. Education)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
+                    <input type="text" id="new-prof-label" placeholder="Label (e.g. Degree)" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px;">
+                    <input type="text" id="new-prof-value" placeholder="Value" style="background:var(--bg-main); color:#fff; padding:8px; border:1px solid var(--border); border-radius:4px; flex:1;">
+                    <button class="btn" id="btn-add-prof-field">+ Add Academic Field</button>
+                  </div>
+               </div>
+             </div>
+
           </div>
         </div>
       </div>
@@ -1189,6 +1210,43 @@ import AntiCapture from '../components/AntiCapture.astro';
       };
       document.getElementById('btn-add-custom-field').addEventListener('click', window.addCustomField);
 
+      document.getElementById('btn-load-academic-presets').addEventListener('click', () => {
+         const presets = [
+            { type: 'prof_field', content: JSON.stringify({ category: 'Education', label: 'Degree', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Experience', label: 'Role', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Languages', label: 'Fluent', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Core Competencies', label: 'Skills', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Philosophy & Logic', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Programming & Tech', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Linguistics & Musicology', value: '' }) },
+            { type: 'prof_field', content: JSON.stringify({ category: 'Achievements', label: 'Title / When / Accredited by', value: '' }) }
+         ];
+         // Only add if not already present
+         presets.forEach(p => {
+             const pc = JSON.parse(p.content);
+             const exists = aboutBlocks.find(b => {
+                if(b.type !== 'prof_field') return false;
+                try {
+                   const c = JSON.parse(b.content);
+                   return c.category === pc.category && c.label === pc.label;
+                } catch(e){ return false; }
+             });
+             if(!exists) aboutBlocks.push(p);
+         });
+         renderAboutBlocks();
+      });
+
+      document.getElementById('btn-add-prof-field').addEventListener('click', () => {
+         const cat = document.getElementById('new-prof-category').value.trim();
+         const lab = document.getElementById('new-prof-label').value.trim();
+         const val = document.getElementById('new-prof-value').value.trim();
+         if(!cat || !lab) { alert('Category and Label are required'); return; }
+         aboutBlocks.push({ type: 'prof_field', content: JSON.stringify({ category: cat, label: lab, value: val }) });
+         renderAboutBlocks();
+         document.getElementById('new-prof-label').value = '';
+         document.getElementById('new-prof-value').value = '';
+      });
+
       window.removeAboutBlock = (index) => {
          aboutBlocks.splice(index, 1);
          renderAboutBlocks();
@@ -1205,12 +1263,17 @@ import AntiCapture from '../components/AntiCapture.astro';
       function renderAboutBlocks() {
          // Group by category for rendering in editor
          const groups = {};
+         const profGroups = {};
+         
          aboutBlocks.forEach((b, i) => {
             try {
                const c = JSON.parse(b.content);
                if(b.type === 'field' && c.category) {
                   if(!groups[c.category]) groups[c.category] = [];
                   groups[c.category].push({ index: i, ...c });
+               } else if (b.type === 'prof_field' && c.category) {
+                  if(!profGroups[c.category]) profGroups[c.category] = [];
+                  profGroups[c.category].push({ index: i, ...c });
                }
             } catch(e) {}
          });
@@ -1238,6 +1301,27 @@ import AntiCapture from '../components/AntiCapture.astro';
             html += `</div></div>`;
          }
          blocksContainer.innerHTML = html;
+
+         let profHtml = '';
+         for (const [category, fields] of Object.entries(profGroups)) {
+            profHtml += `<div style="background:var(--glass-bg); padding:15px; border-radius:8px; border:1px solid var(--border);">`;
+            profHtml += `<h3 style="margin-top:0; margin-bottom:15px; font-size:0.9rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">${category}</h3>`;
+            profHtml += `<div style="display:grid; grid-template-columns: 1fr; gap:10px;">`;
+            
+            fields.forEach(f => {
+               const inputHtml = `<textarea data-index="${f.index}" class="about-field-input" style="flex:1; min-height:40px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`;
+                 
+               profHtml += `
+                  <div style="display:flex; align-items:flex-start; gap:15px; background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">
+                     <div style="width:120px; font-weight:600; font-size:0.9rem; padding-top:8px;">${f.label}</div>
+                     ${inputHtml}
+                     <button data-index="${f.index}" class="btn-danger about-field-remove" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
+                  </div>
+               `;
+            });
+            profHtml += `</div></div>`;
+         }
+         document.getElementById('prof-blocks-container').innerHTML = profHtml;
 
          // Attach event listeners to avoid CSP inline script violation
          document.querySelectorAll('.about-field-input').forEach(el => {

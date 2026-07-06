@@ -4,7 +4,7 @@ export async function onRequest({ request, env }) {
   try {
     if (!env.ABOUT_ME) return new Response('[]', { status: 500 });
     const { results } = await env.ABOUT_ME.prepare(
-      `SELECT id, type, content, order_index FROM about_blocks WHERE type != 'prof_field' ORDER BY order_index ASC`
+      `SELECT id, type, content, order_index FROM about_blocks WHERE type = 'prof_field' ORDER BY order_index ASC`
     ).all();
     
     // Add stale-while-revalidate edge caching
