@@ -2,6 +2,48 @@
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
 import MobileNav from '../components/MobileNav.astro';
+
+let statusText = null;
+let cropCoords = null;
+let groups = {};
+let hasBlocks = false;
+
+try {
+  const env = Astro.locals.runtime?.env;
+  if (env && env.ABOUT_ME) {
+    const { results } = await env.ABOUT_ME.prepare(`SELECT * FROM about_blocks WHERE type IN ('status', 'pfp_crop')`).all();
+    results.forEach(b => {
+       if (b.type === 'status' || b.id === 0) {
+          statusText = b.content;
+       } else if (b.type === 'pfp_crop' || b.id === -1) {
+          try { cropCoords = JSON.parse(b.content); } catch(e) {}
+       }
+    });
+  }
+  
+  if (env && env.PROFESSIONAL_PROFILE) {
+    const { results } = await env.PROFESSIONAL_PROFILE.prepare(`SELECT * FROM professional_blocks ORDER BY order_index ASC`).all();
+    hasBlocks = results && results.length > 0;
+    results.forEach(b => {
+       if (b.type === 'field') {
+          try {
+             const c = JSON.parse(b.content);
+             if (c.category) {
+                if(!groups[c.category]) groups[c.category] = [];
+                groups[c.category].push(c);
+             }
+          } catch(e) {}
+       }
+    });
+  }
+} catch (e) {
+  console.error("SSR Error:", e);
+}
+
+let pfpStyle = "width:100%; height:100%; object-fit:cover;";
+if (cropCoords) {
+  pfpStyle = `position:absolute; left:${cropCoords.x}%; top:${cropCoords.y}%; width:${cropCoords.w}%; height:${cropCoords.h}%; max-width:none; object-fit:fill; image-rendering:high-quality; transform:translateZ(0); will-change:transform;`;
+}
 ---
 <html lang="en">
   <head>
@@ -9,10 +51,6 @@ import MobileNav from '../components/MobileNav.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Professional Profile</title>
-    <script>
-      // Kick off the fetch immediately before DOM parses to save precious seconds
-      window.__PROFESSIONAL_DATA_PROMISE__ = fetch('/api/professional', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
-    </script>
     <ClientRouter />
     <style is:global>
       :root {
@@ -45,7 +83,7 @@ import MobileNav from '../components/MobileNav.astro';
       .nav-link svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
       
       .pfp-container {
-        display: flex; justify-content: center; margin-bottom: 4rem;
+        display: flex; justify-content: center; margin-bottom: 1.5rem;
         position: relative;
       }
       .pfp-container::before {
@@ -57,20 +95,6 @@ import MobileNav from '../components/MobileNav.astro';
         background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
         border-radius: 50%;
         z-index: -1;
-      }
-      .pfp {
-        width: clamp(100px, 15vw, 130px);
-        height: clamp(100px, 15vw, 130px);
-        border-radius: 50%;
-        object-fit: cover;
-        background-color: #111;
-        border: 1px solid var(--border);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-      }
-      .pfp:hover {
-        transform: scale(1.05) translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.05);
       }
       
       #blocks-root {
@@ -147,7 +171,6 @@ import MobileNav from '../components/MobileNav.astro';
       .field-card:hover::before {
         opacity: 1;
       }
-      
 
       .field-label {
         font-weight: 600;
@@ -184,18 +207,13 @@ import MobileNav from '../components/MobileNav.astro';
       
       /* ===== MOBILE-NATIVE ===== */
       @media (max-width: 767px) {
-        /* Top nav hidden — tab bar replaces navigation */
         .left-nav { display: none !important; }
-
-        /* Container: no top padding needed (no fixed nav) + clear tab bar */
         .container {
           padding-top: max(env(safe-area-inset-top, 0px), 2rem);
           padding-bottom: calc(var(--mobile-bottom-pad, 72px) + 2rem);
           padding-left: max(env(safe-area-inset-left, 0px), 1rem);
           padding-right: max(env(safe-area-inset-right, 0px), 1rem);
         }
-
-        /* Single column on phones */
         .fields-grid {
           grid-template-columns: 1fr;
         }
@@ -220,7 +238,6 @@ import MobileNav from '../components/MobileNav.astro';
         width: 6px; height: 6px; background: #2a2a2a; border: 1px solid #444;
         border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
       }
-
     </style>
   </head>
   <body>
@@ -230,22 +247,88 @@ import MobileNav from '../components/MobileNav.astro';
        <a href="/coolpeople" class="nav-link" aria-label="Cool People" title="Cool People"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></a>
     </div>
     <main class="container">
-      <div class="pfp-container" style="position:relative; width:130px; height:130px; margin: 0 auto 3rem auto;">
-         <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden;">
-            <img id="about-pfp" src="/api/pfp" alt="thy" style="width:100%; height:100%; object-fit:cover;">
+      <div class="pfp-container" style="position:relative; width:130px; height:130px; margin: 0 auto 1.5rem auto;">
+         <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid var(--border);">
+            <img id="about-pfp" src="/api/pfp" alt="thy" style={pfpStyle}>
          </div>
-         <!-- Status Bubble -->
-         <div id="about-status-bubble" class="thought-bubble" style="display:none; position:absolute; top:-10px; left:calc(100% - 10px);">
-            <span id="about-status-text">...</span>
-         </div>
+         {statusText && (
+           <div id="about-status-bubble" class="thought-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px);">
+              <span id="about-status-text">{statusText}</span>
+           </div>
+         )}
       </div>
+
+      <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+        <a href="/" class="back-btn">
+          <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to main profile
+        </a>
+      </div>
+
       <div id="blocks-root">
-        <div class="empty-state">Loading...</div>
+        {!hasBlocks && (
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 50vh; text-align: center;">
+            <h1 style="font-size: 4rem; margin: 0; color: var(--fg); letter-spacing: -2px;">404</h1>
+            <p style="color: var(--accent); margin-top: 1rem; font-size: 1rem;">This profile hasn't been set up yet.</p>
+            <a href="/" style="margin-top: 2rem; color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; transition: border-color 0.2s ease;">Return home</a>
+          </div>
+        )}
+        
+        {Object.entries(groups).map(([category, fields]) => {
+          const validFields = fields.filter(f => f.value && f.value.trim() !== '');
+          if (validFields.length === 0) return null;
+          return (
+            <div class="block">
+              <div class="category-title">{category}</div>
+              <div class="fields-grid">
+                {validFields.map(f => {
+                  const isBio = f.label.toLowerCase().includes('bio') || (f.value && f.value.length > 100);
+                  const cardClass = isBio ? 'field-card is-bio' : 'field-card';
+                  return (
+                    <div class={cardClass}>
+                      <div class="field-label">{f.label}</div>
+                      <div class="field-value">{f.value}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </main>
     
     <AntiCapture />
-    <script src="/scripts/professional.js" is:inline></script>
     <MobileNav current="home" />
+
+    <style is:inline>
+      .back-btn {
+        display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; 
+        border: 1px solid var(--border); padding: 0.5rem 1.2rem; border-radius: 30px; 
+        color: var(--accent); text-decoration: none; font-size: 0.75rem; font-weight: 600; 
+        text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;
+      }
+      .back-btn:hover { background: var(--glass-hover); border-color: rgba(255,255,255,0.15); color: var(--fg); transform: translateX(-3px); }
+    </style>
+
+    <script is:inline>
+      document.addEventListener('astro:page-load', () => {
+        const pfp = document.getElementById('about-pfp');
+        if (pfp) {
+           pfp.addEventListener('error', () => {
+              pfp.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>';
+           });
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { rootMargin: '50px 0px', threshold: 0.1 });
+        document.querySelectorAll('.block').forEach(el => observer.observe(el));
+      });
+    </script>
   </body>
 </html>
