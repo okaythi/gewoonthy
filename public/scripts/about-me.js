@@ -91,6 +91,9 @@ document.addEventListener('astro:page-load', async () => {
           pfpImg.style.height = cropCoords.h + '%';
           pfpImg.style.maxWidth = 'none';
           pfpImg.style.objectFit = 'fill';
+          pfpImg.style.imageRendering = 'high-quality';
+          pfpImg.style.transform = 'translateZ(0)';
+          pfpImg.style.willChange = 'transform';
        }
     }
 

@@ -1312,8 +1312,10 @@ import AntiCapture from '../components/AntiCapture.astro';
                   img.style.top = crop.y + '%';
                   img.style.width = crop.w + '%';
                   img.style.height = crop.h + '%';
-                  img.style.maxWidth = 'none';
                   img.style.objectFit = 'fill';
+                  img.style.imageRendering = 'high-quality';
+                  img.style.transform = 'translateZ(0)';
+                  img.style.willChange = 'transform';
                } catch(e) {}
             }
          } catch(e) {}
