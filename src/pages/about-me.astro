@@ -211,6 +211,12 @@ import MobileNav from '../components/MobileNav.astro';
           padding-right: max(env(safe-area-inset-right, 0px), 1rem);
         }
 
+        /* Single column on phones */
+        .fields-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      
       /* Thought Bubble */
       .thought-bubble {
         position: absolute; top: -10px; left: calc(100% - 10px);
@@ -231,11 +237,6 @@ import MobileNav from '../components/MobileNav.astro';
         border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
       }
 
-        /* Single column on phones */
-        .fields-grid {
-          grid-template-columns: 1fr;
-        }
-      }
     </style>
   </head>
   <body>
@@ -247,7 +248,7 @@ import MobileNav from '../components/MobileNav.astro';
     </nav>
     <main class="container" id="content-root">
       <div class="pfp-container" style="position:relative; width:130px; height:130px; margin: 0 auto 3rem auto;">
-         <div style="width:100%; height:100%; border-radius:50%; overflow:hidden;">
+         <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden;">
             <img id="about-pfp" src="/api/pfp" alt="thy" style="width:100%; height:100%; object-fit:cover;">
          </div>
          <!-- Status Bubble -->
