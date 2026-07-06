@@ -182,8 +182,8 @@ import MobileNav from '../components/MobileNav.astro';
     </main>
     
     <AntiCapture />
-    <script>
-      async function loadFriends() {
+    <script is:inline data-astro-rerun>
+      (async function() {
         const grid = document.getElementById('friends-grid');
         if (!grid || grid.dataset.loaded) return;
         try {
@@ -209,11 +209,7 @@ import MobileNav from '../components/MobileNav.astro';
         } catch(e) {
           console.error('Failed to load friends', e);
         }
-      }
-      // Run immediately (handles direct load + browser back)
-      loadFriends();
-      // Also run on every Astro page transition into this page
-      document.addEventListener('astro:page-load', loadFriends);
+      })();
     </script>
     <MobileNav current="friends" />
   </body>
