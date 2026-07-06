@@ -5,9 +5,8 @@ document.addEventListener('astro:page-load', async () => {
 
   try {
     let blocks = null;
-    if (window.__PROFESSIONAL_DATA_PROMISE__) {
-       blocks = await window.__PROFESSIONAL_DATA_PROMISE__;
-       window.__PROFESSIONAL_DATA_PROMISE__ = null;
+    if (window.__PRELOADED_PROF_DATA__) {
+       blocks = window.__PRELOADED_PROF_DATA__;
     } else {
        const res = await fetch('/api/professional', { credentials: 'same-origin' });
        blocks = await res.json();
@@ -31,12 +30,21 @@ document.addEventListener('astro:page-load', async () => {
     const groups = {};
     let statusText = null;
     let cropCoords = null;
-    blocks.forEach(b => {
+    
+    let aboutBlocks = [];
+    if (window.__PRELOADED_PROF_ABOUT_DATA__) {
+       aboutBlocks = window.__PRELOADED_PROF_ABOUT_DATA__;
+    }
+    aboutBlocks.forEach(b => {
        if (b.type === 'status' || b.id === 0) {
           statusText = b.content;
        } else if (b.type === 'pfp_crop' || b.id === -1) {
           try { cropCoords = JSON.parse(b.content); } catch(e) {}
-       } else if (b.type === 'field') {
+       }
+    });
+
+    blocks.forEach(b => {
+       if (b.type === 'field') {
           try {
              const c = JSON.parse(b.content);
              if (c.category) {

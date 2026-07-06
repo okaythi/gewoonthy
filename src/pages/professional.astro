@@ -10,8 +10,7 @@ import MobileNav from '../components/MobileNav.astro';
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Professional Profile</title>
     <script>
-      // Kick off the fetch immediately before DOM parses to save precious seconds
-      window.__PROFESSIONAL_DATA_PROMISE__ = fetch('/api/professional', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
+      // Data is preloaded by Cloudflare Pages Middleware HTMLRewriter
     </script>
     <ClientRouter />
     <style is:global>
@@ -81,8 +80,8 @@ import MobileNav from '../components/MobileNav.astro';
       
       /* Block styling */
       .block {
-        opacity: 0; transform: translateY(30px);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity: 0; transform: translateY(15px);
+        transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .block.visible { opacity: 1; transform: translateY(0); }
       
@@ -220,6 +219,18 @@ import MobileNav from '../components/MobileNav.astro';
         width: 6px; height: 6px; background: #2a2a2a; border: 1px solid #444;
         border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
       }
+      
+      .back-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        background: transparent; border: 1px solid var(--border);
+        padding: 0.5rem 1.2rem; border-radius: 30px; color: var(--accent);
+        text-decoration: none; font-size: 0.75rem; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;
+      }
+      .back-btn:hover {
+        background: var(--glass-hover); border-color: rgba(255,255,255,0.15);
+        color: var(--fg); transform: translateX(-3px);
+      }
 
     </style>
   </head>
@@ -238,6 +249,12 @@ import MobileNav from '../components/MobileNav.astro';
          <div id="about-status-bubble" class="thought-bubble" style="display:none; position:absolute; top:-10px; left:calc(100% - 10px);">
             <span id="about-status-text">...</span>
          </div>
+      </div>
+      <div style="display: flex; justify-content: center; margin-bottom: 4rem;">
+        <a href="/" class="back-btn block">
+          <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; margin-right: 0.5rem;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to main profile
+        </a>
       </div>
       <div id="blocks-root">
         <div class="empty-state">Loading...</div>

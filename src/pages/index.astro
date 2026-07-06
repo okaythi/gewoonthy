@@ -10,9 +10,7 @@ import MobileNav from '../components/MobileNav.astro';
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Thy</title>
     <script>
-      // Kick off the fetch immediately before DOM parses to save precious seconds
-      window.__ABOUT_DATA_PROMISE__ = fetch('/api/about', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
-      window.__PROFESSIONAL_DATA_PROMISE__ = fetch('/api/professional', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
+      // Data is preloaded by Cloudflare Pages Middleware HTMLRewriter
     </script>
     <ClientRouter />
     <style is:global>
@@ -82,8 +80,8 @@ import MobileNav from '../components/MobileNav.astro';
       
       /* Block styling */
       .block {
-        opacity: 0; transform: translateY(30px);
-        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity: 0; transform: translateY(15px);
+        transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .block.visible { opacity: 1; transform: translateY(0); }
       
