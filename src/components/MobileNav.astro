@@ -1,18 +1,27 @@
 ---
 interface Props {
-  current: 'home' | 'read' | 'about' | 'friends';
+  current: 'home' | 'listen' | 'read' | 'friends';
 }
 const { current } = Astro.props;
 ---
 
 <nav id="mobile-tab-bar" class="mobile-tab-bar" role="tablist" aria-label="Main navigation">
-  <a href="/" class={`tab-item${current === 'home' ? ' active' : ''}`} role="tab" aria-selected={current === 'home'} aria-label="Home">
+  <a href="/" class={`tab-item${current === 'home' ? ' active' : ''}`} role="tab" aria-selected={current === 'home'} aria-label="About">
+    <span class="tab-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </span>
+    <span class="tab-label">About</span>
+  </a>
+  <a href="/songs" class={`tab-item${current === 'listen' ? ' active' : ''}`} role="tab" aria-selected={current === 'listen'} aria-label="Listen">
     <span class="tab-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="5 3 19 12 5 21 5 3"/>
       </svg>
     </span>
-    <span class="tab-label">Home</span>
+    <span class="tab-label">Listen</span>
   </a>
   <a href="/read" class={`tab-item${current === 'read' ? ' active' : ''}`} role="tab" aria-selected={current === 'read'} aria-label="Read">
     <span class="tab-icon">
@@ -22,15 +31,6 @@ const { current } = Astro.props;
       </svg>
     </span>
     <span class="tab-label">Read</span>
-  </a>
-  <a href="/about-me" class={`tab-item${current === 'about' ? ' active' : ''}`} role="tab" aria-selected={current === 'about'} aria-label="About">
-    <span class="tab-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-        <circle cx="12" cy="7" r="4"/>
-      </svg>
-    </span>
-    <span class="tab-label">About</span>
   </a>
   <a href="/coolpeople" class={`tab-item${current === 'friends' ? ' active' : ''}`} role="tab" aria-selected={current === 'friends'} aria-label="Friends">
     <span class="tab-icon">
