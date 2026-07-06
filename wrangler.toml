@@ -10,3 +10,8 @@ database_id = "8ded3741-1c5e-43cb-be18-4af280f97a6f"
 binding = "ABOUT_ME"
 database_name = "thy_aboutme"
 database_id = "d9f6e4e8-0fbf-4f54-bb0f-a5179c737fc3"
+
+[[d1_databases]]
+binding = "PROFESSIONAL_PROFILE"
+database_name = "thy_professional"
+database_id = "33137698-8481-4fdd-8fc0-d5166f0b6baf"

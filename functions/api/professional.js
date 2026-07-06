@@ -1,20 +1,19 @@
-export async function onRequest({ request, env }) {
-  if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
-
+export async function onRequest(context) {
+  const { env } = context;
   try {
-    if (!env.ABOUT_ME) return new Response('[]', { status: 500 });
-    const { results } = await env.ABOUT_ME.prepare(
-      `SELECT id, type, content, order_index FROM about_blocks WHERE type = 'prof_field' ORDER BY order_index ASC`
+    if (!env.PROFESSIONAL_PROFILE) return new Response('[]', { status: 500 });
+    const { results } = await env.PROFESSIONAL_PROFILE.prepare(
+      `SELECT id, type, content, order_index FROM professional_blocks ORDER BY order_index ASC`
     ).all();
     
     // Add stale-while-revalidate edge caching
-    return new Response(JSON.stringify(results), { 
-      headers: { 
+    return new Response(JSON.stringify(results), {
+      headers: {
         'Content-Type': 'application/json',
-        'Cache-Control': 'public, max-age=60, stale-while-revalidate=86400'
-      } 
+        'Cache-Control': 'public, max-age=60, s-maxage=3600, stale-while-revalidate=86400'
+      }
     });
-  } catch (err) {
+  } catch (error) {
     return new Response('[]', { status: 500 });
   }
 }

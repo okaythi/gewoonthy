@@ -573,10 +573,15 @@ import AntiCapture from '../components/AntiCapture.astro';
              
              <!-- ACADEMICS SECTION -->
              <div style="margin-top:40px; padding-top:20px; border-top: 2px solid var(--border);">
-               <h2 style="font-size: 1.5rem; margin-top:0; margin-bottom: 5px;">Academic & Professional Data</h2>
-               <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:20px;">
-                 These fields power the "Academics ->" link on your main profile and the `/professional` page.
-               </p>
+               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+                  <div>
+                     <h2 style="font-size: 1.5rem; margin-top:0; margin-bottom: 5px;">Academic & Professional Data</h2>
+                     <p style="color:var(--text-secondary); font-size:0.9rem; margin:0;">
+                       These fields power the "Academics ->" link on your main profile and the `/professional` page.
+                     </p>
+                  </div>
+                  <button id="btn-save-prof" class="btn">Deploy Professional Profile</button>
+               </div>
                <button class="btn" id="btn-load-academic-presets">Load Academic Preset Fields</button>
                <div id="prof-blocks-container" style="display:flex; flex-direction:column; gap:20px; margin-top:20px;"></div>
                
@@ -1171,13 +1176,8 @@ import AntiCapture from '../components/AntiCapture.astro';
          { category: 'Personal', label: 'Occupation', value: '' },
          { category: 'Personal', label: 'Languages', value: '' },
          { category: 'Bio', label: 'Short Bio', value: '' },
-         { category: 'Bio', label: 'Long Bio', value: '' },
-         { category: 'Interests', label: 'Hobbies', value: '' },
-         { category: 'Interests', label: 'Favorite Music Genres', value: '' },
-         { category: 'Interests', label: 'Favorite Movies', value: '' },
-         { category: 'Links', label: 'GitHub', value: '' },
-         { category: 'Links', label: 'Twitter / X', value: '' },
-         { category: 'Links', label: 'LinkedIn', value: '' },
+         { category: 'Overview', label: 'Name', value: 'Thy' },
+         { category: 'Overview', label: 'Bio', value: 'I write code and think about things.' },
          { category: 'Setup', label: 'OS', value: '' },
          { category: 'Setup', label: 'Editor', value: '' }
       ];
@@ -1187,13 +1187,24 @@ import AntiCapture from '../components/AntiCapture.astro';
             const res = await fetch('/api/admin/about', { credentials: 'same-origin' });
             if(res.ok) {
                const data = await res.json();
-               // If db is completely empty, initialize with default fields
-               if (data.length === 0) {
+               // Filter out status and pfp blocks from the editor view
+               const fieldsData = data.filter(b => b.id > 0 && b.type === 'field');
+               if (fieldsData.length === 0) {
                   aboutBlocks = defaultFields.map(f => ({ type: 'field', content: JSON.stringify(f) }));
                } else {
-                  aboutBlocks = data;
+                  aboutBlocks = fieldsData;
                }
                renderAboutBlocks();
+            }
+         } catch(e){}
+      };
+
+      window.loadProfBlocks = async () => {
+         try {
+            const res = await fetch('/api/admin/professional', { credentials: 'same-origin' });
+            if(res.ok) {
+               profBlocks = await res.json();
+               renderProfBlocks();
             }
          } catch(e){}
       };
@@ -1212,28 +1223,27 @@ import AntiCapture from '../components/AntiCapture.astro';
 
       document.getElementById('btn-load-academic-presets').addEventListener('click', () => {
          const presets = [
-            { type: 'prof_field', content: JSON.stringify({ category: 'Education', label: 'Degree', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Experience', label: 'Role', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Languages', label: 'Fluent', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Core Competencies', label: 'Skills', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Philosophy & Logic', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Programming & Tech', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Other Skills', label: 'Linguistics & Musicology', value: '' }) },
-            { type: 'prof_field', content: JSON.stringify({ category: 'Achievements', label: 'Title / When / Accredited by', value: '' }) }
+            { type: 'field', content: JSON.stringify({ category: 'Education', label: 'Degree', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Experience', label: 'Role', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Languages', label: 'Fluent', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Core Competencies', label: 'Skills', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Other Skills', label: 'Philosophy & Logic', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Other Skills', label: 'Programming & Tech', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Other Skills', label: 'Linguistics & Musicology', value: '' }) },
+            { type: 'field', content: JSON.stringify({ category: 'Achievements', label: 'Title / When / Accredited by', value: '' }) }
          ];
          // Only add if not already present
          presets.forEach(p => {
              const pc = JSON.parse(p.content);
-             const exists = aboutBlocks.find(b => {
-                if(b.type !== 'prof_field') return false;
+             const exists = profBlocks.find(b => {
                 try {
                    const c = JSON.parse(b.content);
                    return c.category === pc.category && c.label === pc.label;
                 } catch(e){ return false; }
              });
-             if(!exists) aboutBlocks.push(p);
+             if(!exists) profBlocks.push(p);
          });
-         renderAboutBlocks();
+         renderProfBlocks();
       });
 
       document.getElementById('btn-add-prof-field').addEventListener('click', () => {
@@ -1241,8 +1251,8 @@ import AntiCapture from '../components/AntiCapture.astro';
          const lab = document.getElementById('new-prof-label').value.trim();
          const val = document.getElementById('new-prof-value').value.trim();
          if(!cat || !lab) { alert('Category and Label are required'); return; }
-         aboutBlocks.push({ type: 'prof_field', content: JSON.stringify({ category: cat, label: lab, value: val }) });
-         renderAboutBlocks();
+         profBlocks.push({ type: 'field', content: JSON.stringify({ category: cat, label: lab, value: val }) });
+         renderProfBlocks();
          document.getElementById('new-prof-label').value = '';
          document.getElementById('new-prof-value').value = '';
       });
@@ -1250,6 +1260,11 @@ import AntiCapture from '../components/AntiCapture.astro';
       window.removeAboutBlock = (index) => {
          aboutBlocks.splice(index, 1);
          renderAboutBlocks();
+      };
+      
+      window.removeProfBlock = (index) => {
+         profBlocks.splice(index, 1);
+         renderProfBlocks();
       };
 
       window.updateAboutBlock = (index, key, value) => {
@@ -1259,11 +1274,17 @@ import AntiCapture from '../components/AntiCapture.astro';
             aboutBlocks[index].content = JSON.stringify(c);
          } catch(e){}
       };
+      
+      window.updateProfBlock = (index, key, value) => {
+         try {
+            const c = JSON.parse(profBlocks[index].content);
+            c[key] = value;
+            profBlocks[index].content = JSON.stringify(c);
+         } catch(e){}
+      };
 
       function renderAboutBlocks() {
-         // Group by category for rendering in editor
          const groups = {};
-         const profGroups = {};
          
          aboutBlocks.forEach((b, i) => {
             try {
@@ -1271,9 +1292,6 @@ import AntiCapture from '../components/AntiCapture.astro';
                if(b.type === 'field' && c.category) {
                   if(!groups[c.category]) groups[c.category] = [];
                   groups[c.category].push({ index: i, ...c });
-               } else if (b.type === 'prof_field' && c.category) {
-                  if(!profGroups[c.category]) profGroups[c.category] = [];
-                  profGroups[c.category].push({ index: i, ...c });
                }
             } catch(e) {}
          });
@@ -1302,28 +1320,6 @@ import AntiCapture from '../components/AntiCapture.astro';
          }
          blocksContainer.innerHTML = html;
 
-         let profHtml = '';
-         for (const [category, fields] of Object.entries(profGroups)) {
-            profHtml += `<div style="background:var(--glass-bg); padding:15px; border-radius:8px; border:1px solid var(--border);">`;
-            profHtml += `<h3 style="margin-top:0; margin-bottom:15px; font-size:0.9rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">${category}</h3>`;
-            profHtml += `<div style="display:grid; grid-template-columns: 1fr; gap:10px;">`;
-            
-            fields.forEach(f => {
-               const inputHtml = `<textarea data-index="${f.index}" class="about-field-input" style="flex:1; min-height:40px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`;
-                 
-               profHtml += `
-                  <div style="display:flex; align-items:flex-start; gap:15px; background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">
-                     <div style="width:120px; font-weight:600; font-size:0.9rem; padding-top:8px;">${f.label}</div>
-                     ${inputHtml}
-                     <button data-index="${f.index}" class="btn-danger about-field-remove" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
-                  </div>
-               `;
-            });
-            profHtml += `</div></div>`;
-         }
-         document.getElementById('prof-blocks-container').innerHTML = profHtml;
-
-         // Attach event listeners to avoid CSP inline script violation
          document.querySelectorAll('.about-field-input').forEach(el => {
             el.addEventListener('input', (e) => {
                const idx = parseInt(e.target.getAttribute('data-index'), 10);
@@ -1334,6 +1330,53 @@ import AntiCapture from '../components/AntiCapture.astro';
             el.addEventListener('click', (e) => {
                const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
                removeAboutBlock(idx);
+            });
+         });
+      }
+
+      function renderProfBlocks() {
+         const profGroups = {};
+         profBlocks.forEach((b, i) => {
+            try {
+               const c = JSON.parse(b.content);
+               if(b.type === 'field' && c.category) {
+                  if(!profGroups[c.category]) profGroups[c.category] = [];
+                  profGroups[c.category].push({ index: i, ...c });
+               }
+            } catch(e) {}
+         });
+
+         let profHtml = '';
+         for (const [category, fields] of Object.entries(profGroups)) {
+            profHtml += `<div style="background:var(--glass-bg); padding:15px; border-radius:8px; border:1px solid var(--border);">`;
+            profHtml += `<h3 style="margin-top:0; margin-bottom:15px; font-size:0.9rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:1px;">${category}</h3>`;
+            profHtml += `<div style="display:grid; grid-template-columns: 1fr; gap:10px;">`;
+            
+            fields.forEach(f => {
+               const inputHtml = `<textarea data-index="${f.index}" class="prof-field-input" style="flex:1; min-height:40px; padding:8px; background:var(--bg-main); color:#fff; border:1px solid #333; border-radius:4px;">${f.value}</textarea>`;
+                 
+               profHtml += `
+                  <div style="display:flex; align-items:flex-start; gap:15px; background:rgba(0,0,0,0.3); padding:10px; border-radius:6px;">
+                     <div style="width:120px; font-weight:600; font-size:0.9rem; padding-top:8px;">${f.label}</div>
+                     ${inputHtml}
+                     <button data-index="${f.index}" class="btn-danger prof-field-remove" style="background:transparent; border:none; cursor:pointer; padding:8px;" title="Remove field">❌</button>
+                  </div>
+               `;
+            });
+            profHtml += `</div></div>`;
+         }
+         document.getElementById('prof-blocks-container').innerHTML = profHtml;
+
+         document.querySelectorAll('.prof-field-input').forEach(el => {
+            el.addEventListener('input', (e) => {
+               const idx = parseInt(e.target.getAttribute('data-index'), 10);
+               updateProfBlock(idx, 'value', e.target.value);
+            });
+         });
+         document.querySelectorAll('.prof-field-remove').forEach(el => {
+            el.addEventListener('click', (e) => {
+               const idx = parseInt(e.currentTarget.getAttribute('data-index'), 10);
+               removeProfBlock(idx);
             });
          });
       }
@@ -1351,12 +1394,26 @@ import AntiCapture from '../components/AntiCapture.astro';
          alert('About page instantly deployed via D1 zero-code mutation!');
       });
 
+      document.getElementById('btn-save-prof').addEventListener('click', async () => {
+         const btn = document.getElementById('btn-save-prof');
+         const original = btn.textContent;
+         btn.textContent = 'Deploying...';
+         await fetch('/api/admin/professional', {
+            method: 'POST',
+            body: JSON.stringify(profBlocks),
+            credentials: 'same-origin'
+         });
+         btn.textContent = original;
+         alert('Professional profile deployed instantly!');
+      });
+
       async function loadAll() {
          await loadVault();
          await loadQuotes();
          await loadThreats();
          await loadSuggestions();
          await loadAboutBlocks();
+         await loadProfBlocks();
          
          // Dummy charts
          try {
