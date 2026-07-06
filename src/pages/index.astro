@@ -83,58 +83,67 @@ import MobileNav from '../components/MobileNav.astro';
 
       /* ============================================================ */
       /* MOBILE-NATIVE: phones ≤ 767px                               */
-      /* Every rule here is additive — desktop layout is untouched.  */
       /* ============================================================ */
       @media (max-width: 767px) {
-        /* Desktop nav replaced by bottom tab bar */
+        /* Desktop sidebar nav hidden — tab bar handles navigation */
         .left-nav { display: none !important; }
-        /* Quote header hidden — no room on mobile */
-        .top-section { display: none !important; }
 
-        /* Container: respect top notch, fill full height */
+        /* Container: full height, flex column, no overflow */
         .container {
-          padding: env(safe-area-inset-top, 0px) 0 0 0;
+          padding: env(safe-area-inset-top, 12px) 0 0 0;
           justify-content: flex-start;
           gap: 0;
           height: 100dvh;
           overflow: hidden;
         }
 
-        /* Player fills all remaining vertical space */
+        /* Top title: show on mobile, compact */
+        .top-section {
+          display: block !important;
+          flex: 0 0 auto;
+          padding: 10px 18px 6px;
+        }
+        h2 {
+          font-size: 0.85rem;
+          letter-spacing: 0.3px;
+          opacity: 0.6;
+          font-weight: 700;
+        }
+
+        /* Player: fills all remaining space between title and bottom strip */
         .player-wrapper {
           grid-template-columns: 1fr;
           flex: 1 1 auto;
           min-height: 0;
-          height: 0;
           gap: 0;
           padding: 0;
           overflow: hidden;
         }
 
-        /* Prev/next buttons hidden — swipe replaces them */
+        /* Prev/next nav buttons hidden — swipe replaces them */
         .nav-btn { display: none !important; }
 
-        /* Video container fills the player */
+        /* Video container fills the player area */
         .video-container {
           width: 100%;
           height: 100%;
           max-width: 100%;
         }
 
-        /* Video fills its container, no rounding */
+        /* Video fills its container edge-to-edge, no rounding */
         video {
           max-height: 100%;
           width: 100%;
           border-radius: 0;
         }
 
-        /* Bottom strip: track name + clear tab bar + safe area */
+        /* Bottom strip: fixed height, sits ABOVE the tab bar */
         .bottom-section {
           flex: 0 0 auto;
           text-align: left;
-          padding: 10px 18px;
-          padding-bottom: calc(10px + var(--mobile-bottom-pad, 72px));
-          border-top: 1px solid rgba(255, 255, 255, 0.04);
+          /* 52px strip + 8px safe-area gap + 56px tab bar + env(safe-area-inset-bottom) */
+          padding: 10px 18px calc(56px + env(safe-area-inset-bottom, 0px) + 10px);
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .track-info {
@@ -142,6 +151,9 @@ import MobileNav from '../components/MobileNav.astro';
           font-size: 0.75rem;
           line-height: 1.4;
         }
+
+        /* Hide the desktop suggest button on mobile */
+        .suggestion-wrapper { display: none !important; }
 
         .loader { font-size: 0.85rem; letter-spacing: 2px; }
       }
@@ -161,16 +173,17 @@ import MobileNav from '../components/MobileNav.astro';
       }
 
       @media (max-width: 767px) {
-        /* FAB: sits just above tab bar, right side */
+        /* FAB: overlays the bottom strip, left of center, above track text */
         .suggest-fab {
           display: flex;
           position: fixed;
-          right: max(env(safe-area-inset-right, 0px), 18px);
-          bottom: calc(var(--mobile-bottom-pad, 72px) + 14px);
-          width: 46px; height: 46px;
+          right: max(env(safe-area-inset-right, 0px), 16px);
+          /* sits 56px tab bar + safe area + 14px gap above bottom */
+          bottom: calc(56px + env(safe-area-inset-bottom, 0px) + 58px);
+          width: 42px; height: 42px;
           border-radius: 50%;
-          background: rgba(255, 255, 255, 0.1);
-          border: 1px solid rgba(255, 255, 255, 0.18);
+          background: rgba(30, 30, 30, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.15);
           color: #fff;
           align-items: center; justify-content: center;
           cursor: pointer;
@@ -178,7 +191,7 @@ import MobileNav from '../components/MobileNav.astro';
           backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
           -webkit-tap-highlight-color: transparent;
           transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
         }
         .suggest-fab:active { transform: scale(0.9); }
         .suggest-fab svg {
