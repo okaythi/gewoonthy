@@ -2,44 +2,6 @@
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
 import MobileNav from '../components/MobileNav.astro';
-
-let statusText = null;
-let cropCoords = null;
-let groups = {};
-let hasProfBlocks = false;
-
-try {
-  const env = Astro.locals.runtime?.env;
-  if (env && env.ABOUT_ME) {
-    const { results } = await env.ABOUT_ME.prepare(`SELECT * FROM about_blocks ORDER BY order_index ASC`).all();
-    results.forEach(b => {
-       if (b.type === 'status' || b.id === 0) {
-          statusText = b.content;
-       } else if (b.type === 'pfp_crop' || b.id === -1) {
-          try { cropCoords = JSON.parse(b.content); } catch(e) {}
-       } else if (b.type === 'field') {
-          try {
-             const c = JSON.parse(b.content);
-             if (c.category) {
-                if(!groups[c.category]) groups[c.category] = [];
-                groups[c.category].push(c);
-             }
-          } catch(e) {}
-       }
-    });
-  }
-  if (env && env.PROFESSIONAL_PROFILE) {
-     const { results } = await env.PROFESSIONAL_PROFILE.prepare(`SELECT id FROM professional_blocks LIMIT 1`).all();
-     hasProfBlocks = results.length > 0;
-  }
-} catch (e) {
-  console.error("SSR Error:", e);
-}
-
-let pfpStyle = "width:100%; height:100%; object-fit:cover;";
-if (cropCoords) {
-  pfpStyle = `position:absolute; left:${cropCoords.x}%; top:${cropCoords.y}%; width:${cropCoords.w}%; height:${cropCoords.h}%; max-width:none; object-fit:fill; image-rendering:high-quality; transform:translateZ(0); will-change:transform;`;
-}
 ---
 <html lang="en">
   <head>
@@ -47,6 +9,11 @@ if (cropCoords) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <title>Thy</title>
+    <script>
+      // Kick off the fetch immediately before DOM parses to save precious seconds
+      window.__ABOUT_DATA_PROMISE__ = fetch('/api/about', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
+      window.__PROFESSIONAL_DATA_PROMISE__ = fetch('/api/professional', { credentials: 'same-origin' }).then(r => r.json()).catch(() => null);
+    </script>
     <ClientRouter />
     <style is:global>
       :root {
@@ -91,6 +58,20 @@ if (cropCoords) {
         background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
         border-radius: 50%;
         z-index: -1;
+      }
+      .pfp {
+        width: clamp(100px, 15vw, 130px);
+        height: clamp(100px, 15vw, 130px);
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #111;
+        border: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+      }
+      .pfp:hover {
+        transform: scale(1.05) translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.05);
       }
       
       #blocks-root {
@@ -235,13 +216,18 @@ if (cropCoords) {
       
       /* ===== MOBILE-NATIVE ===== */
       @media (max-width: 767px) {
+        /* Top nav hidden — tab bar replaces navigation */
         .left-nav { display: none !important; }
+
+        /* Container: no top padding needed (no fixed nav) + clear tab bar */
         .container {
           padding-top: max(env(safe-area-inset-top, 0px), 2rem);
           padding-bottom: calc(var(--mobile-bottom-pad, 72px) + 2rem);
           padding-left: max(env(safe-area-inset-left, 0px), 1rem);
           padding-right: max(env(safe-area-inset-right, 0px), 1rem);
         }
+
+        /* Single column on phones */
         .fields-grid {
           grid-template-columns: 1fr;
         }
@@ -266,6 +252,7 @@ if (cropCoords) {
         width: 6px; height: 6px; background: #2a2a2a; border: 1px solid #444;
         border-radius: 50%; box-shadow: inset -1px -1px 2px rgba(0,0,0,0.3);
       }
+
     </style>
   </head>
   <body>
@@ -276,17 +263,15 @@ if (cropCoords) {
     </div>
     <main class="container" id="content-root">
       <div class="pfp-container" style="position:relative; width:130px; height:130px; margin: 0 auto 3rem auto;">
-         <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid var(--border);">
-            <img id="about-pfp" src="/api/pfp" alt="thy" style={pfpStyle}>
+         <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden;">
+            <img id="about-pfp" src="/api/pfp" alt="thy" style="width:100%; height:100%; object-fit:cover;">
          </div>
-         {statusText && (
-           <div id="about-status-bubble" class="thought-bubble" style="position:absolute; top:-10px; left:calc(100% - 10px);">
-              <span id="about-status-text">{statusText}</span>
-           </div>
-         )}
+         <!-- Status Bubble -->
+         <div id="about-status-bubble" class="thought-bubble" style="display:none; position:absolute; top:-10px; left:calc(100% - 10px);">
+            <span id="about-status-text">...</span>
+         </div>
       </div>
-      
-      <a href="/songs" class="block playlist-banner">
+      <a href="/songs" class="block visible playlist-banner">
          <div style="display: flex; align-items: center; gap: 0.8rem; overflow: hidden;">
             <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
                <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: var(--fg); stroke-width: 2; fill: var(--fg); stroke-linecap: round; stroke-linejoin: round; transform: translateX(1px);"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -298,73 +283,15 @@ if (cropCoords) {
          </div>
          <svg viewBox="0 0 24 24" style="width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform 0.3s ease, color 0.3s ease; color: var(--accent); margin-left: 0.5rem;" class="arrow-icon"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      
       <div id="blocks-root">
-        {Object.entries(groups).length === 0 && <div class="empty-state">Nothing to see here yet...</div>}
-        
-        {Object.entries(groups).map(([category, fields]) => {
-          const validFields = fields.filter(f => f.value && f.value.trim() !== '');
-          if (validFields.length === 0) return null;
-          return (
-            <div class="block">
-              <div class="category-title">{category}</div>
-              <div class="fields-grid">
-                {validFields.map(f => {
-                  const isBio = f.label.toLowerCase().includes('bio') || (f.value && f.value.length > 100);
-                  const cardClass = isBio ? 'field-card is-bio' : 'field-card';
-                  return (
-                    <div class={cardClass}>
-                      <div class="field-label">{f.label}</div>
-                      <div class="field-value">{f.value}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+        <div class="empty-state">Loading...</div>
       </div>
-      
-      {hasProfBlocks && (
-        <div id="academics-link-container" style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 3rem;">
-          <a href="/professional" class="block academics-btn">
-            Academics <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      )}
+      <div id="academics-link-container" style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 3rem;"></div>
     </main>
     
     <AntiCapture />
-    <MobileNav current="home" />
 
-    <style is:inline>
-      .academics-btn {
-        display: inline-flex; align-items: center; gap: 0.5rem; background: var(--glass-bg); 
-        border: 1px solid var(--border); padding: 0.6rem 1.2rem; border-radius: 30px; 
-        color: var(--fg); text-decoration: none; font-size: 0.85rem; font-weight: 600; 
-        text-transform: uppercase; letter-spacing: 1px; transition: all 0.2s ease;
-      }
-      .academics-btn:hover { background: var(--glass-hover); border-color: rgba(255,255,255,0.15); }
-    </style>
-    
-    <script is:inline>
-      document.addEventListener('astro:page-load', () => {
-        const pfp = document.getElementById('about-pfp');
-        if (pfp) {
-           pfp.addEventListener('error', () => {
-              pfp.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23888"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>';
-           });
-        }
-        
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, { rootMargin: '50px 0px', threshold: 0.1 });
-        document.querySelectorAll('.block').forEach(el => observer.observe(el));
-      });
-    </script>
+    <script src="/scripts/about-me.js" is:inline></script>
+    <MobileNav current="home" />
   </body>
 </html>
