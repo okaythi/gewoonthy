@@ -20,3 +20,8 @@ database_id = "33137698-8481-4fdd-8fc0-d5166f0b6baf"
 binding = "QUOTE_DB"
 database_name = "thy_quote"
 database_id = "4901f464-e4c1-4b13-8cfb-d98c25785023"
+
+[[d1_databases]]
+binding = "USERS"
+database_name = "thy_users"
+database_id = "605757b1-c6a5-471e-a289-34204f4e5660"

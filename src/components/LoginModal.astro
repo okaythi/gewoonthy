@@ -1,0 +1,300 @@
+---
+// LoginModal.astro
+---
+
+<div id="auth-modal" class="auth-modal-overlay">
+  <div class="auth-modal-content glass-card">
+    <button id="close-modal-btn" class="close-btn" aria-label="Close" title="Close">
+      <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    </button>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Login</button>
+      <button class="auth-tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form" class="auth-form active">
+      <div class="form-group">
+        <label for="login-username">Username or Email</label>
+        <input type="text" id="login-username" placeholder="your handle" required />
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="auth-submit-btn">Enter</button>
+      <p id="login-error" class="auth-error"></p>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signup-form" class="auth-form">
+      <div class="form-group">
+        <label for="signup-username">Username</label>
+        <div class="input-with-action">
+          <input type="text" id="signup-username" placeholder="Generating..." readonly required />
+          <button type="button" id="generate-username-btn" class="icon-btn" aria-label="Generate" title="Generate New">
+             <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.84 6.72 2.24"></path><path d="M21 3v9h-9"></path></svg>
+          </button>
+        </div>
+        <small>Adjective + Noun (Dutch)</small>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="••••••••" required />
+      </div>
+      <button type="submit" class="auth-submit-btn">Create Identity</button>
+      <p id="signup-error" class="auth-error"></p>
+    </form>
+  </div>
+</div>
+
+<style>
+  .auth-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .auth-modal-overlay.visible {
+    display: flex;
+    opacity: 1;
+  }
+  .auth-modal-content {
+    background: var(--glass-bg, rgba(255,255,255,0.03));
+    border: 1px solid var(--border, rgba(255,255,255,0.1));
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  }
+  .auth-modal-overlay.visible .auth-modal-content {
+    transform: translateY(0) scale(1);
+  }
+  .close-btn {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: transparent; border: none; cursor: pointer;
+    color: var(--accent, #a3a3a3); padding: 5px; border-radius: 50%;
+    transition: all 0.2s;
+  }
+  .close-btn:hover {
+    color: var(--fg, #f0f0f0);
+    background: rgba(255,255,255,0.1);
+  }
+  .close-btn svg {
+    width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; stroke-linecap: round;
+  }
+  
+  .auth-tabs {
+    display: flex; gap: 15px; margin-bottom: 25px;
+    border-bottom: 1px solid var(--border, rgba(255,255,255,0.1));
+    padding-bottom: 10px;
+  }
+  .auth-tab {
+    background: none; border: none; font-size: 1rem; cursor: pointer;
+    color: var(--accent, #a3a3a3); font-weight: 500; font-family: inherit;
+    transition: color 0.2s;
+  }
+  .auth-tab.active {
+    color: var(--fg, #f0f0f0);
+    font-weight: 700;
+  }
+  .auth-form {
+    display: none; flex-direction: column; gap: 1.5rem;
+  }
+  .auth-form.active {
+    display: flex;
+  }
+  .form-group {
+    display: flex; flex-direction: column; gap: 0.5rem;
+  }
+  .form-group label {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent, #a3a3a3); font-weight: 600;
+  }
+  .form-group input {
+    background: rgba(0,0,0,0.3); border: 1px solid var(--border, rgba(255,255,255,0.1));
+    border-radius: 8px; padding: 12px 15px; color: var(--fg, #f0f0f0); font-family: inherit;
+    font-size: 1rem; outline: none; transition: border-color 0.2s;
+  }
+  .form-group input:focus {
+    border-color: rgba(255,255,255,0.4);
+  }
+  .input-with-action {
+    display: flex; gap: 10px; align-items: center;
+  }
+  .input-with-action input {
+    flex: 1;
+  }
+  .icon-btn {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--border, rgba(255,255,255,0.1));
+    border-radius: 8px; width: 42px; height: 42px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--fg, #f0f0f0); transition: all 0.2s;
+  }
+  .icon-btn:hover {
+    background: rgba(255,255,255,0.15);
+  }
+  .icon-btn svg {
+    width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round;
+  }
+  .form-group small {
+    color: var(--accent, #a3a3a3); font-size: 0.7rem; font-style: italic;
+  }
+  .auth-submit-btn {
+    background: var(--fg, #f0f0f0); color: var(--bg, #050505);
+    border: none; border-radius: 8px; padding: 14px; font-size: 1rem;
+    font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .auth-submit-btn:hover {
+    transform: translateY(-2px); box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+  }
+  .auth-error {
+    color: #ff6b6b; font-size: 0.85rem; margin: 0; min-height: 20px;
+  }
+</style>
+
+<script>
+  import { supabase, syncSessionToTelemetry } from '../lib/supabase.js';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('auth-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const tabs = document.querySelectorAll('.auth-tab');
+    const forms = document.querySelectorAll('.auth-form');
+    
+    // Setup tabs
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        forms.forEach(f => f.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(`${tab.dataset.tab}-form`).classList.add('active');
+      });
+    });
+
+    // Close logic
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('visible');
+      setTimeout(() => { modal.style.display = 'none'; }, 300);
+    });
+    
+    // Generate Dutch Username logic
+    const genBtn = document.getElementById('generate-username-btn');
+    const signupUsername = document.getElementById('signup-username');
+    
+    const generateUsername = async () => {
+      try {
+        genBtn.style.opacity = '0.5';
+        
+        // Fetch 2 random English words since reliable Dutch APIs without auth are scarce
+        const res = await fetch('https://random-word-api.herokuapp.com/word?number=2');
+        if (res.ok) {
+          const words = await res.json();
+          const num = Math.floor(Math.random() * 999);
+          // Capitalize first letters for aesthetics
+          const word1 = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+          const word2 = words[1].charAt(0).toUpperCase() + words[1].slice(1);
+          signupUsername.value = `${word1}${word2}${num}`;
+        } else {
+          throw new Error('API failed');
+        }
+      } catch (e) {
+        console.error(e);
+        // Fallback if API fails
+        const fallbackWords = ['Cool', 'Fast', 'Brave', 'Smart', 'Tiger', 'Lion', 'Eagle'];
+        const word1 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+        const word2 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+        const num = Math.floor(Math.random() * 999);
+        signupUsername.value = `${word1}${word2}${num}`;
+      } finally {
+        genBtn.style.opacity = '1';
+      }
+    };
+
+    if (genBtn) {
+      genBtn.addEventListener('click', generateUsername);
+    }
+    
+    // Supabase Auth Logic
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+    
+    signupForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const username = signupUsername.value;
+      const pwd = document.getElementById('signup-password').value;
+      const proxyEmail = `${username}@gewoonthy.local`;
+      const errEl = document.getElementById('signup-error');
+      errEl.textContent = 'Creating identity...';
+      
+      const { data, error } = await supabase.auth.signUp({
+        email: proxyEmail,
+        password: pwd,
+        options: {
+          data: {
+            username: username
+          }
+        }
+      });
+      
+      if (error) {
+        errEl.textContent = error.message;
+      } else {
+        errEl.textContent = 'Success!';
+        await syncSessionToTelemetry(data.session, { username });
+        window.location.reload();
+      }
+    });
+
+    loginForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const identifier = document.getElementById('login-username').value;
+      const pwd = document.getElementById('login-password').value;
+      const errEl = document.getElementById('login-error');
+      errEl.textContent = 'Authenticating...';
+      
+      let email = identifier;
+      // If no @ symbol, assume proxy email
+      if (!identifier.includes('@')) {
+        email = `${identifier}@gewoonthy.local`;
+      }
+
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email,
+        password: pwd
+      });
+      
+      if (error) {
+        errEl.textContent = error.message;
+      } else {
+        errEl.textContent = 'Success!';
+        await syncSessionToTelemetry(data.session);
+        window.location.reload();
+      }
+    });
+
+    // Listen for custom open event
+    window.addEventListener('openAuthModal', () => {
+      modal.style.display = 'flex';
+      // Force reflow
+      modal.offsetHeight;
+      modal.classList.add('visible');
+      if (!signupUsername.value) {
+        generateUsername();
+      }
+    });
+  });
+</script>

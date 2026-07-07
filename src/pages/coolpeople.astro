@@ -2,6 +2,8 @@
 import { ClientRouter } from 'astro:transitions';
 import AntiCapture from '../components/AntiCapture.astro';
 import MobileNav from '../components/MobileNav.astro';
+import AuthButton from '../components/AuthButton.astro';
+import LoginModal from '../components/LoginModal.astro';
 ---
 <html lang="en">
   <head>
@@ -170,6 +172,8 @@ import MobileNav from '../components/MobileNav.astro';
     </main>
     
     <AntiCapture />
+    <AuthButton />
+    <LoginModal />
     <MobileNav current="friends" />
   </body>
 </html>
