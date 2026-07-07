@@ -2,8 +2,8 @@
 // LoginModal.astro
 ---
 
-<div id="auth-modal" class="auth-modal-overlay">
-  <div class="auth-modal-content glass-card">
+<dialog id="auth-modal" class="auth-modal-content glass-card">
+  <div class="auth-modal-inner">
     <button id="close-modal-btn" class="close-btn" aria-label="Close" title="Close">
       <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
     </button>
@@ -47,26 +47,11 @@
       <p id="signup-error" class="auth-error"></p>
     </form>
   </div>
-</div>
+</dialog>
 
 <style>
-  .auth-modal-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Dim background without blur to prevent nesting bugs */
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .auth-modal-overlay.visible {
-    display: flex;
-    opacity: 1;
-  }
-  .auth-modal-content {
-    /* Apple Liquid Glass style with very strong blur */
+  /* Native Dialog Reset and Top Layer Placement */
+  dialog.auth-modal-content {
     background: rgba(25, 25, 25, 0.45);
     backdrop-filter: blur(45px) saturate(200%);
     -webkit-backdrop-filter: blur(45px) saturate(200%);
@@ -76,12 +61,27 @@
     padding: 2.5rem;
     width: 90%;
     max-width: 400px;
-    position: relative;
-    transform: translateY(20px) scale(0.95);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    margin: auto; /* Auto margin centers a dialog */
+    color: var(--fg, #f0f0f0);
   }
-  .auth-modal-overlay.visible .auth-modal-content {
-    transform: translateY(0) scale(1);
+  
+  /* Dim the background but don't apply blur to the backdrop to avoid browser bugs */
+  dialog.auth-modal-content::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Remove default black border in some browsers */
+  dialog {
+    outline: none;
+  }
+  
+  /* Animation for dialog */
+  dialog[open] {
+    animation: modal-enter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes modal-enter {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
   }
   .close-btn {
     position: absolute;
@@ -188,8 +188,7 @@
 
     // Close logic
     closeBtn.addEventListener('click', () => {
-      modal.classList.remove('visible');
-      setTimeout(() => { modal.style.display = 'none'; }, 300);
+      modal.close();
     });
     
     // Generate Dutch Username logic
@@ -289,10 +288,7 @@
 
     // Listen for custom open event
     window.addEventListener('openAuthModal', () => {
-      modal.style.display = 'flex';
-      // Force reflow
-      modal.offsetHeight;
-      modal.classList.add('visible');
+      modal.showModal();
       if (!signupUsername.value) {
         generateUsername();
       }
