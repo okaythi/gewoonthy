@@ -3,7 +3,6 @@
 ---
 
 <dialog id="auth-modal" class="auth-modal-dialog">
-  <div class="auth-modal-content glass-card">
     <button id="close-modal-btn" class="close-btn" aria-label="Close" title="Close">
       <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
     </button>
@@ -46,65 +45,58 @@
       <button type="submit" class="auth-submit-btn">Create Identity</button>
       <p id="signup-error" class="auth-error"></p>
     </form>
-  </div>
 </dialog>
 
 <style is:global>
-  /* Native Dialog Reset and Top Layer Placement */
+  /* Native Dialog with Liquid Glass */
   dialog.auth-modal-dialog {
-    padding: 0;
-    border: none;
-    background: transparent;
-    margin: auto; /* Auto margin centers a dialog */
-    outline: none;
-    overflow: visible; /* Ensure shadows and pseudo elements show */
-  }
-  
-  .auth-modal-content {
-    position: relative;
     border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(25, 25, 25, 0.45);
+    backdrop-filter: blur(45px) saturate(200%);
+    -webkit-backdrop-filter: blur(45px) saturate(200%);
     border-radius: 24px;
     padding: 2.5rem;
     width: 90vw;
     max-width: 400px;
+    margin: auto;
+    outline: none;
     color: var(--fg, #f0f0f0);
-    z-index: 1;
-  }
-  
-  /* Bulletproof hardware-accelerated liquid glass */
-  .auth-modal-content::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: rgba(25, 25, 25, 0.45);
-    backdrop-filter: blur(45px) saturate(200%);
-    -webkit-backdrop-filter: blur(45px) saturate(200%);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    z-index: -1;
-    /* Force independent compositor layer to bypass stacking context bugs */
-    transform: translateZ(0);
+    
+    /* Base/closed state for transitions */
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+    transition-property: opacity, transform, display, overlay;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-behavior: allow-discrete;
   }
   
-  /* Dim the background but don't apply blur to the backdrop to avoid browser bugs */
+  /* Open state */
+  dialog.auth-modal-dialog[open] {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    
+    @starting-style {
+      opacity: 0;
+      transform: scale(0.95) translateY(20px);
+    }
+  }
+  
+  /* Backdrop transition */
   dialog.auth-modal-dialog::backdrop {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.0);
+    transition-property: background, display, overlay;
+    transition-duration: 0.4s;
+    transition-behavior: allow-discrete;
   }
   
-  /* Animation for dialog inner content instead of dialog itself to preserve backdrop-filter */
-  dialog[open] .auth-modal-content {
-    animation: modal-enter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-  dialog[open]::backdrop {
-    animation: backdrop-enter 0.4s ease-out forwards;
-  }
-  @keyframes modal-enter {
-    from { opacity: 0; transform: translateY(20px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
-  }
-  @keyframes backdrop-enter {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  dialog.auth-modal-dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+    
+    @starting-style {
+      background: rgba(0, 0, 0, 0.0);
+    }
   }
   .close-btn {
     position: absolute;
