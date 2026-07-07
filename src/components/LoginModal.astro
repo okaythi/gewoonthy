@@ -53,9 +53,7 @@
   .auth-modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.6); /* Dim background without blur to prevent nesting bugs */
     display: none;
     align-items: center;
     justify-content: center;
@@ -68,18 +66,19 @@
     opacity: 1;
   }
   .auth-modal-content {
-    background: var(--glass-bg, rgba(10, 10, 10, 0.85));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border, rgba(255,255,255,0.1));
-    border-radius: 20px;
+    /* Apple Liquid Glass style with very strong blur */
+    background: rgba(25, 25, 25, 0.45);
+    backdrop-filter: blur(45px) saturate(200%);
+    -webkit-backdrop-filter: blur(45px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
     padding: 2.5rem;
     width: 90%;
     max-width: 400px;
     position: relative;
     transform: translateY(20px) scale(0.95);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
   }
   .auth-modal-overlay.visible .auth-modal-content {
     transform: translateY(0) scale(1);
