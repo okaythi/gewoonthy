@@ -218,11 +218,10 @@
         const res = await fetch('https://random-word-api.herokuapp.com/word?number=2');
         if (res.ok) {
           const words = await res.json();
-          const num = Math.floor(Math.random() * 999);
           // Capitalize first letters for aesthetics
           const word1 = words[0].charAt(0).toUpperCase() + words[0].slice(1);
           const word2 = words[1].charAt(0).toUpperCase() + words[1].slice(1);
-          signupUsername.value = `${word1}${word2}${num}`;
+          signupUsername.value = `${word1}${word2}`;
         } else {
           throw new Error('API failed');
         }
@@ -232,8 +231,7 @@
         const fallbackWords = ['Cool', 'Fast', 'Brave', 'Smart', 'Tiger', 'Lion', 'Eagle'];
         const word1 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
         const word2 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
-        const num = Math.floor(Math.random() * 999);
-        signupUsername.value = `${word1}${word2}${num}`;
+        signupUsername.value = `${word1}${word2}`;
       } finally {
         genBtn.style.opacity = '1';
       }
@@ -251,7 +249,7 @@
       e.preventDefault();
       const username = signupUsername.value;
       const pwd = document.getElementById('signup-password').value;
-      const proxyEmail = `${username}@gewoonthy.local`;
+      const proxyEmail = `${username}@thiago.qzz.io`;
       const errEl = document.getElementById('signup-error');
       errEl.textContent = 'Creating identity...';
       
@@ -284,7 +282,7 @@
       let email = identifier;
       // If no @ symbol, assume proxy email
       if (!identifier.includes('@')) {
-        email = `${identifier}@gewoonthy.local`;
+        email = `${identifier}@thiago.qzz.io`;
       }
 
       const { data, error } = await supabase.auth.signInWithPassword({
