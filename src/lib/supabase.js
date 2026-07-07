@@ -21,10 +21,10 @@ export async function syncSessionToTelemetry(session, extraData = {}) {
     await fetch('/api/auth/sync', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${session.access_token}`
       },
       body: JSON.stringify({
-        session,
         ...extraData
       })
     });

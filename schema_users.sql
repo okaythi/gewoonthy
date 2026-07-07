@@ -9,5 +9,6 @@ CREATE TABLE users (
   account_creation_location TEXT,
   current_login_location TEXT,
   current_ip TEXT,
-  active_devices TEXT
+  active_devices TEXT,
+  role TEXT DEFAULT 'Verified'
 );

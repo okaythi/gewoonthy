@@ -267,6 +267,7 @@
         errEl.textContent = error.message;
       } else {
         errEl.textContent = 'Success!';
+        document.cookie = `sb-auth-token=${data.session.access_token}; path=/; max-age=3600; Secure; SameSite=Lax`;
         await syncSessionToTelemetry(data.session, { username });
         window.location.reload();
       }
@@ -294,6 +295,7 @@
         errEl.textContent = error.message;
       } else {
         errEl.textContent = 'Success!';
+        document.cookie = `sb-auth-token=${data.session.access_token}; path=/; max-age=3600; Secure; SameSite=Lax`;
         await syncSessionToTelemetry(data.session);
         window.location.reload();
       }

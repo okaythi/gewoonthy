@@ -43,6 +43,8 @@ document.addEventListener('astro:page-load', async () => {
        }
     });
 
+    const hasAuthCookie = document.cookie.includes('sb-auth-token=');
+
     for (const [category, fields] of Object.entries(groups)) {
        const validFields = fields.filter(f => f.value && f.value.trim() !== '');
        if (validFields.length === 0) continue;
@@ -54,11 +56,18 @@ document.addEventListener('astro:page-load', async () => {
        html += `<div class="fields-grid">`;
        validFields.forEach(f => {
           const isBio = f.label.toLowerCase().includes('bio') || (f.value && f.value.length > 100);
+          const isLocation = f.label.toLowerCase() === 'location';
           const cardClass = isBio ? 'field-card is-bio' : 'field-card';
+          let valStyle = '';
+          let displayValue = f.value;
+          if (isLocation && !hasAuthCookie) {
+             valStyle = 'filter: blur(8px); user-select: none;';
+             displayValue = 'Get Pwned';
+          }
           html += `
              <div class="${cardClass}">
                <div class="field-label">${f.label}</div>
-               <div class="field-value">${f.value}</div>
+               <div class="field-value" style="${valStyle}">${displayValue}</div>
              </div>
           `;
        });
@@ -141,6 +150,20 @@ document.addEventListener('astro:page-load', async () => {
         const link = linkContainer.querySelector('a');
         link.addEventListener('mouseenter', () => { link.style.background = 'var(--glass-hover)'; link.style.borderColor = 'rgba(255,255,255,0.15)'; });
         link.addEventListener('mouseleave', () => { link.style.background = 'var(--glass-bg)'; link.style.borderColor = 'var(--border)'; });
+        
+        const hasAuthCookie = document.cookie.includes('sb-auth-token=');
+        if (!hasAuthCookie) {
+           link.addEventListener('click', (e) => {
+              e.preventDefault();
+              link.classList.add('shake-anim');
+              const origHtml = link.innerHTML;
+              link.innerHTML = 'You must log in!';
+              setTimeout(() => {
+                 link.classList.remove('shake-anim');
+                 link.innerHTML = origHtml;
+              }, 5000);
+           });
+        }
       }
     }
   } catch(e) {}

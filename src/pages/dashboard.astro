@@ -176,7 +176,7 @@ import AntiCapture from '../components/AntiCapture.astro';
       /* Thought Bubble */
       .thought-bubble {
         position: absolute; top: -10px; left: calc(100% - 10px);
-        width: fit-content; max-width: 280px; min-width: 40px;
+        width: fit-content; max-width: 130px; min-width: 40px;
         background: #2a2a2a; border: 1px solid #444; border-radius: 20px;
         padding: 10px 14px; font-size: 13px; color: #eee;
         box-shadow: 0 4px 10px rgba(0,0,0,0.5); word-break: break-word;
@@ -314,12 +314,47 @@ import AntiCapture from '../components/AntiCapture.astro';
       <div class="nav-item" data-target="vault">📂 Media Vault</div>
       <div class="nav-item" data-target="friends-manager">👥 Friends</div>
       <div class="nav-item" data-target="about-editor">📖 Profile Settings</div>
+      <div class="nav-item" data-target="users">👤 Users</div>
       <div class="nav-item" data-target="config">⚙️ Config</div>
       
       <div class="theme-switch" id="theme-switch">🌓 Toggle Theme</div>
     </div>
     
     <div class="main-content">
+      
+      <!-- USERS SECTION -->
+      <div id="users" class="section">
+        <div class="header">
+          <h1>User Management</h1>
+          <button onclick="loadUsers()" class="btn">Refresh</button>
+        </div>
+        <div class="dashboard-grid full">
+          <div class="card">
+            <h2>Registered Users</h2>
+            <div style="overflow-x:auto;">
+              <table class="data-table" id="users-table">
+                <thead>
+                  <tr>
+                    <th>PFP</th>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Last Login</th>
+                    <th>Creation Location</th>
+                    <th>Current Location</th>
+                    <th>Current IP</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td colspan="10" style="text-align:center;">Loading...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
       
       <!-- ANALYTICS SECTION -->
       <div id="analytics" class="section active">
@@ -1415,6 +1450,7 @@ import AntiCapture from '../components/AntiCapture.astro';
          await loadSuggestions();
          await loadAboutBlocks();
          await loadProfBlocks();
+         await loadUsers();
          
          // Dummy charts
          try {
@@ -1423,6 +1459,69 @@ import AntiCapture from '../components/AntiCapture.astro';
             new Chart(document.getElementById('langChart'), { type: 'doughnut', data: { labels: ['English (Def)', 'Dutch', 'French'], datasets: [{ data: [70, 20, 10], backgroundColor: ['#fff', '#888', '#333'], borderWidth: 0 }] }, options: { responsive: true, maintainAspectRatio: false } });
          } catch(e){}
       }
+
+      async function loadUsers() {
+         const tbody = document.querySelector('#users-table tbody');
+         try {
+            const res = await fetch('/api/admin/users');
+            if (!res.ok) throw new Error('Failed to load users');
+            const data = await res.json();
+            
+            tbody.innerHTML = data.users.map(u => `
+              <tr>
+                <td><img src="${u.profile_picture_url || 'https://media.thiago.qzz.io/media/vanity/fallback.png'}" style="width:32px; height:32px; border-radius:50%; object-fit:cover;"></td>
+                <td><small>${u.user_id.split('-')[0]}...</small></td>
+                <td class="editable" onclick="editUser('${u.user_id}', 'username', '${u.username}')">${u.username || '<span class="missing">Set</span>'}</td>
+                <td class="editable" onclick="editUser('${u.user_id}', 'email', '${u.email}')">${u.email || '<span class="missing">Set</span>'}</td>
+                <td>
+                  <select onchange="updateUserRole('${u.user_id}', this.value)" style="background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border); border-radius:4px; padding:4px;">
+                    <option value="Verified" ${u.role === 'Verified' ? 'selected' : ''}>Verified</option>
+                    <option value="Admin" ${u.role === 'Admin' ? 'selected' : ''}>Admin</option>
+                  </select>
+                </td>
+                <td>${u.last_login_time ? new Date(u.last_login_time).toLocaleString() : 'Never'}</td>
+                <td class="editable" onclick="editUser('${u.user_id}', 'account_creation_location', '${u.account_creation_location || ''}')">${u.account_creation_location || '-'}</td>
+                <td class="editable" onclick="editUser('${u.user_id}', 'current_login_location', '${u.current_login_location || ''}')">${u.current_login_location || '-'}</td>
+                <td class="editable" onclick="editUser('${u.user_id}', 'current_ip', '${u.current_ip || ''}')">${u.current_ip || '-'}</td>
+                <td><button onclick="editUser('${u.user_id}', 'profile_picture_url', '${u.profile_picture_url || ''}')" style="background:transparent; border:1px solid var(--border); color:var(--text-primary); cursor:pointer; padding:2px 8px; border-radius:4px;">Edit PFP</button></td>
+              </tr>
+            `).join('');
+         } catch(e) {
+            tbody.innerHTML = `<tr><td colspan="10" style="color:var(--danger);text-align:center;">${e.message}</td></tr>`;
+         }
+      }
+
+      window.updateUserRole = async (userId, role) => {
+         try {
+            const res = await fetch('/api/admin/users', {
+               method: 'PUT',
+               headers: { 'Content-Type': 'application/json' },
+               body: JSON.stringify({ userId, field: 'role', value: role })
+            });
+            if (!res.ok) throw new Error('Update failed');
+            alert('Role updated successfully.');
+         } catch(e) {
+            alert(e.message);
+            loadUsers();
+         }
+      };
+
+      window.editUser = async (userId, field, currentValue) => {
+         const val = prompt(`Enter new value for ${field}:`, currentValue);
+         if (val !== null && val !== currentValue) {
+            try {
+               const res = await fetch('/api/admin/users', {
+                  method: 'PUT',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ userId, field, value: val })
+               });
+               if (!res.ok) throw new Error('Update failed');
+               loadUsers();
+            } catch(e) {
+               alert(e.message);
+            }
+         }
+      };
 
       // --- PFP and Status Bubble Logic ---
       const loadStatusBubble = async () => {

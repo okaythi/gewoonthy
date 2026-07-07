@@ -181,32 +181,3 @@ const { current } = Astro.props;
   }
 </style>
 
-<script is:inline>
-  document.addEventListener('astro:page-load', async () => {
-    const grid = document.getElementById('friends-grid');
-    if (!grid || grid.dataset.loaded) return;
-    try {
-      const res = await fetch('/api/close-friends?t=' + Date.now(), { cache: 'no-store' });
-      if (res.ok) {
-        let friends = await res.json();
-        friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
-        grid.innerHTML = friends.map((f, i) => {
-          const badgesHtml = (f.badges || []).map(b => {
-            const isFull = b.includes('.');
-            const file = isFull ? b : `${b}.svg`;
-            const name = isFull ? b.split('.')[0] : b;
-            return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
-          }).join('');
-          return `<div class="friend-card" style="animation-delay: ${i * 0.05}s">
-            <img src="${f.avatar_url}" class="friend-avatar" alt="${f.display_name || f.username}">
-            <div class="friend-username">${f.display_name || f.username}</div>
-            <div class="badges-container">${badgesHtml}</div>
-          </div>`;
-        }).join('');
-        grid.dataset.loaded = '1';
-      }
-    } catch(e) {
-      console.error('Failed to load friends', e);
-    }
-  });
-</script>
