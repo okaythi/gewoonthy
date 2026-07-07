@@ -30,6 +30,10 @@ export async function onRequest(context) {
     
     const [header, payload, signature] = parts;
     
+    function padBase64(str) {
+      return str + '='.repeat((4 - str.length % 4) % 4);
+    }
+    
     // 1. Verify Signature
     const encoder = new TextEncoder();
     const data = encoder.encode(`${header}.${payload}`);
@@ -41,7 +45,7 @@ export async function onRequest(context) {
       ['verify']
     );
     
-    const sigBytes = atob(signature.replace(/-/g, '+').replace(/_/g, '/'));
+    const sigBytes = atob(padBase64(signature.replace(/-/g, '+').replace(/_/g, '/')));
     const sigArray = new Uint8Array(sigBytes.length);
     for (let i = 0; i < sigBytes.length; i++) {
       sigArray[i] = sigBytes.charCodeAt(i);
@@ -53,7 +57,7 @@ export async function onRequest(context) {
     }
 
     // 2. Decode payload & Check expiration
-    const jsonPayload = decodeURIComponent(atob(payload.replace(/-/g, '+').replace(/_/g, '/')).split('').map(function(c) {
+    const jsonPayload = decodeURIComponent(atob(padBase64(payload.replace(/-/g, '+').replace(/_/g, '/'))).split('').map(function(c) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
     const parsedPayload = JSON.parse(jsonPayload);

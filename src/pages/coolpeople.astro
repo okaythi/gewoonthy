@@ -176,7 +176,7 @@ import LoginModal from '../components/LoginModal.astro';
     <LoginModal />
     <MobileNav current="friends" />
 
-    <script is:inline>
+    <script>
       const loadFriends = async () => {
         const grid = document.getElementById('friends-grid');
         if (!grid || grid.dataset.loaded) return;
@@ -185,13 +185,40 @@ import LoginModal from '../components/LoginModal.astro';
           if (res.ok) {
             let friends = await res.json();
             friends.sort((a, b) => (a.username || '').localeCompare(b.username || ''));
+            
+            // Map Dutch strings to standard R2 bucket filenames
+            const badgeMap = {
+              'Actieve ontwikkelaar': 'Active_Developer',
+              'HypeSquad-dapperheid': 'HypeSquad_Bravery',
+              'HypeSquad-briljantheid': 'HypeSquad_Brilliance',
+              'HypeSquad-balans': 'HypeSquad_Balance',
+              'Abonnee': 'Nitro_Subscriber',
+              'Serverbooster': 'Server_Booster',
+              'HypeSquad-evenementen': 'HypeSquad_Events',
+              'Vroege supporter': 'Early_Supporter',
+              'Bug Hunter': 'Bug_Hunter',
+              'Bug Hunter (niveau 2)': 'Bug_Hunter_Tier_2',
+              'Partner': 'Partnered_Server_Owner'
+            };
+            
             grid.innerHTML = friends.map((f, i) => {
               const badgesHtml = (f.badges || []).map(b => {
                 const isFull = b.includes('.');
-                const file = isFull ? b : `${b}.svg`;
-                const name = isFull ? b.split('.')[0] : b;
-                return `<img src="/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
+                let name = isFull ? b.split('.')[0] : b;
+                
+                // If it matches a known Dutch badge, map it to English file base
+                if (!isFull && badgeMap[name]) {
+                   name = badgeMap[name];
+                } else if (!isFull) {
+                   // Fallback for spaces replacing with underscores just in case
+                   name = name.replace(/ /g, '_');
+                }
+                
+                const file = isFull ? b : `${name}.svg`;
+                
+                return `<img src="https://media.thiago.qzz.io/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
               }).join('');
+              
               return `<div class="friend-card" style="animation-delay: ${i * 0.05}s">
                 <img src="${f.avatar_url}" class="friend-avatar" alt="${f.display_name || f.username}">
                 <div class="friend-username">${f.display_name || f.username}</div>
@@ -205,10 +232,6 @@ import LoginModal from '../components/LoginModal.astro';
         }
       };
 
-      // Run on initial load
-      loadFriends();
-
-      // Run on Astro view transition page load
       document.addEventListener('astro:page-load', loadFriends);
     </script>
   </body>

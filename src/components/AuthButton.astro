@@ -121,57 +121,66 @@
 <script>
   import { supabase } from '../lib/supabase.js';
 
+  // Event Delegation (runs ONCE when module is loaded)
+  document.addEventListener('click', async (e) => {
+    // Open login modal if not logged in
+    const trigger = e.target.closest('#auth-trigger');
+    const dropdown = document.getElementById('auth-dropdown');
+    
+    // Check if logged in (basic cookie check for synchronous UI logic)
+    const isLoggedIn = document.cookie.includes('sb-auth-token=');
+    
+    if (trigger) {
+      if (!isLoggedIn) {
+        window.dispatchEvent(new Event('openAuthModal'));
+      } else {
+        if (dropdown) {
+          dropdown.classList.toggle('show');
+        }
+      }
+    } else {
+      // Clicked outside, hide dropdown
+      if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+      }
+    }
+
+    // Logout action
+    if (e.target.closest('#btn-logout')) {
+      document.cookie = 'sb-auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      await supabase.auth.signOut();
+      window.location.reload();
+    }
+  });
+
+  // State Hydration (runs on every page load/transition)
   document.addEventListener('astro:page-load', async () => {
-    const trigger = document.getElementById('auth-trigger');
     const loginIcon = document.getElementById('auth-icon-login');
     const pfpIcon = document.getElementById('auth-icon-pfp');
-    const dropdown = document.getElementById('auth-dropdown');
-    const btnLogout = document.getElementById('btn-logout');
     const btnAdminUsers = document.getElementById('btn-admin-users');
 
-    // Check Session
+    // Check Session properly
     const { data: { session } } = await supabase.auth.getSession();
     
     if (session) {
       // Logged in
-      loginIcon.style.display = 'none';
-      pfpIcon.style.display = 'block';
+      if (loginIcon) loginIcon.style.display = 'none';
+      if (pfpIcon) pfpIcon.style.display = 'block';
       
       const role = session.user.user_metadata?.role;
-      if (role === 'Admin') {
+      if (role === 'Admin' && btnAdminUsers) {
         btnAdminUsers.style.display = 'flex';
-        btnAdminUsers.onclick = () => window.location.href = '/dashboard/users';
+        btnAdminUsers.onclick = () => window.location.href = '/dashboard';
       }
       
       // Update PFP if available in metadata
       const pfpUrl = session.user.user_metadata?.profile_picture_url;
-      if (pfpUrl) pfpIcon.src = pfpUrl;
-      
-      trigger.onclick = (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle('show');
-      };
-      
-      document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target) && !trigger.contains(e.target)) {
-          dropdown.classList.remove('show');
-        }
-      });
-      
-      btnLogout.addEventListener('click', async () => {
-        document.cookie = 'sb-auth-token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        await supabase.auth.signOut();
-        window.location.reload();
-      });
+      if (pfpUrl && pfpIcon) pfpIcon.src = pfpUrl;
       
     } else {
       // Not logged in
-      loginIcon.style.display = 'block';
-      pfpIcon.style.display = 'none';
-      
-      trigger.onclick = () => {
-        window.dispatchEvent(new Event('openAuthModal'));
-      };
+      if (loginIcon) loginIcon.style.display = 'block';
+      if (pfpIcon) pfpIcon.style.display = 'none';
     }
   });
 </script>

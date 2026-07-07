@@ -185,106 +185,110 @@
 <script>
   import { supabase, syncSessionToTelemetry } from '../lib/supabase.js';
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('auth-modal');
-    const closeBtn = document.getElementById('close-modal-btn');
-    const tabs = document.querySelectorAll('.auth-tab');
-    const forms = document.querySelectorAll('.auth-form');
-    
-    // Setup tabs
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        forms.forEach(f => f.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById(`${tab.dataset.tab}-form`).classList.add('active');
+  // State Hydration (runs on every page load)
+  let isAuthModalListenerAttached = false;
+  
+  document.addEventListener('astro:page-load', () => {
+    // Listen for custom open event ONLY ONCE
+    if (!isAuthModalListenerAttached) {
+      window.addEventListener('openAuthModal', () => {
+        const currentModal = document.getElementById('auth-modal');
+        const currentUsernameInput = document.getElementById('signup-username');
+        if (currentModal) currentModal.showModal();
+        if (currentUsernameInput && !currentUsernameInput.value) {
+          generateUsername();
+        }
       });
-    });
+      isAuthModalListenerAttached = true;
+    }
+  });
 
-    // Close logic
-    closeBtn.addEventListener('click', () => {
-      modal.close();
-    });
-    
-    // Generate Dutch Username logic
+  // Event Delegation for UI interactions (runs ONCE when module loads)
+  const generateUsername = async () => {
     const genBtn = document.getElementById('generate-username-btn');
     const signupUsername = document.getElementById('signup-username');
+    if (!signupUsername) return;
     
-    const generateUsername = async () => {
-      try {
-        genBtn.style.opacity = '0.5';
-        
-        // Fetch 2 random English words since reliable Dutch APIs without auth are scarce
-        const res = await fetch('https://random-word-api.herokuapp.com/word?number=2');
-        if (res.ok) {
-          const words = await res.json();
-          // Capitalize first letters for aesthetics
-          const word1 = words[0].charAt(0).toUpperCase() + words[0].slice(1);
-          const word2 = words[1].charAt(0).toUpperCase() + words[1].slice(1);
-          signupUsername.value = `${word1}${word2}`;
-        } else {
-          throw new Error('API failed');
-        }
-      } catch (e) {
-        console.error(e);
-        // Fallback if API fails
-        const fallbackWords = ['Cool', 'Fast', 'Brave', 'Smart', 'Tiger', 'Lion', 'Eagle'];
-        const word1 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
-        const word2 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+    try {
+      if (genBtn) genBtn.style.opacity = '0.5';
+      const res = await fetch('https://random-word-api.herokuapp.com/word?number=2');
+      if (res.ok) {
+        const words = await res.json();
+        const word1 = words[0].charAt(0).toUpperCase() + words[0].slice(1);
+        const word2 = words[1].charAt(0).toUpperCase() + words[1].slice(1);
         signupUsername.value = `${word1}${word2}`;
-      } finally {
-        genBtn.style.opacity = '1';
+      } else {
+        throw new Error('API failed');
       }
-    };
-
-    if (genBtn) {
-      genBtn.addEventListener('click', generateUsername);
+    } catch (e) {
+      const fallbackWords = ['Cool', 'Fast', 'Brave', 'Smart', 'Tiger', 'Lion', 'Eagle'];
+      const word1 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+      const word2 = fallbackWords[Math.floor(Math.random() * fallbackWords.length)];
+      signupUsername.value = `${word1}${word2}`;
+    } finally {
+      if (genBtn) genBtn.style.opacity = '1';
     }
-    
-    // Supabase Auth Logic
-    const signupForm = document.getElementById('signup-form');
-    const loginForm = document.getElementById('login-form');
-    
-    signupForm?.addEventListener('submit', async (e) => {
+  };
+
+  document.addEventListener('click', (e) => {
+    // Tab Switching
+    const tab = e.target.closest('.auth-tab');
+    if (tab) {
+      document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+      tab.classList.add('active');
+      const form = document.getElementById(`${tab.dataset.tab}-form`);
+      if (form) form.classList.add('active');
+    }
+
+    // Close Button
+    if (e.target.closest('#close-modal-btn')) {
+      const modal = document.getElementById('auth-modal');
+      if (modal) modal.close();
+    }
+
+    // Generate Username Button
+    if (e.target.closest('#generate-username-btn')) {
+      generateUsername();
+    }
+  });
+
+  document.addEventListener('submit', async (e) => {
+    const signupForm = e.target.closest('#signup-form');
+    const loginForm = e.target.closest('#login-form');
+
+    if (signupForm) {
       e.preventDefault();
-      const username = signupUsername.value;
-      const pwd = document.getElementById('signup-password').value;
+      const username = document.getElementById('signup-username')?.value || '';
+      const pwd = document.getElementById('signup-password')?.value || '';
       const proxyEmail = `${username}@thiago.qzz.io`;
       const errEl = document.getElementById('signup-error');
-      errEl.textContent = 'Creating identity...';
+      if (errEl) errEl.textContent = 'Creating identity...';
       
       const { data, error } = await supabase.auth.signUp({
         email: proxyEmail,
         password: pwd,
-        options: {
-          data: {
-            username: username
-          }
-        }
+        options: { data: { username } }
       });
       
       if (error) {
-        errEl.textContent = error.message;
+        if (errEl) errEl.textContent = error.message;
       } else {
-        errEl.textContent = 'Success!';
+        if (errEl) errEl.textContent = 'Success!';
         document.cookie = `sb-auth-token=${data.session.access_token}; path=/; max-age=3600; Secure; SameSite=Lax`;
         await syncSessionToTelemetry(data.session, { username });
         window.location.reload();
       }
-    });
+    }
 
-    loginForm?.addEventListener('submit', async (e) => {
+    if (loginForm) {
       e.preventDefault();
-      const identifier = document.getElementById('login-username').value;
-      const pwd = document.getElementById('login-password').value;
+      const identifier = document.getElementById('login-username')?.value || '';
+      const pwd = document.getElementById('login-password')?.value || '';
       const errEl = document.getElementById('login-error');
-      errEl.textContent = 'Authenticating...';
+      if (errEl) errEl.textContent = 'Authenticating...';
       
-      let email = identifier;
-      // If no @ symbol, assume proxy email
-      if (!identifier.includes('@')) {
-        email = `${identifier}@thiago.qzz.io`;
-      }
+      let email = identifier.includes('@') ? identifier : `${identifier}@thiago.qzz.io`;
 
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email,
@@ -292,21 +296,13 @@
       });
       
       if (error) {
-        errEl.textContent = error.message;
+        if (errEl) errEl.textContent = error.message;
       } else {
-        errEl.textContent = 'Success!';
+        if (errEl) errEl.textContent = 'Success!';
         document.cookie = `sb-auth-token=${data.session.access_token}; path=/; max-age=3600; Secure; SameSite=Lax`;
         await syncSessionToTelemetry(data.session);
         window.location.reload();
       }
-    });
-
-    // Listen for custom open event
-    window.addEventListener('openAuthModal', () => {
-      modal.showModal();
-      if (!signupUsername.value) {
-        generateUsername();
-      }
-    });
+    }
   });
 </script>

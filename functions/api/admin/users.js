@@ -14,43 +14,63 @@ export async function onRequest({ request, env }) {
     }
   }
 
-  if (request.method === 'PUT') {
+  if (request.method === 'PATCH') {
     try {
       const body = await request.json();
-      const { userId, field, value } = body;
+      const { userId, username, email, role, account_creation_location, current_login_location, current_ip } = body;
 
-      const allowedFields = ['username', 'email', 'profile_picture_url', 'role', 'account_creation_location', 'current_login_location', 'current_ip'];
-      if (!allowedFields.includes(field)) {
-        return new Response('Invalid field', { status: 400 });
-      }
+      if (!userId) return new Response(JSON.stringify({ error: 'Missing userId' }), { status: 400 });
 
-      // 1. Update D1
-      await db.prepare(`UPDATE users SET ${field} = ? WHERE user_id = ?`)
-        .bind(value, userId)
+      // 1. Update D1 synchronously
+      await db.prepare(`UPDATE users SET username=?, email=?, role=?, account_creation_location=?, current_login_location=?, current_ip=? WHERE user_id=?`)
+        .bind(username || '', email || '', role || 'Guest', account_creation_location || '', current_login_location || '', current_ip || '', userId)
         .run();
 
-      // 2. Sync to Supabase if it's a metadata field or email
-      if (['username', 'profile_picture_url', 'role', 'email'].includes(field)) {
-        const supabaseUrl = 'https://coxzzkfdssrgjplstnmo.supabase.co';
-        const serviceKey = env.SUPABASE_SERVICE_ROLE_KEY; 
+      // 2. Sync to Supabase metadata and email
+      const supabaseUrl = 'https://coxzzkfdssrgjplstnmo.supabase.co';
+      const serviceKey = env.SUPABASE_SERVICE_ROLE_KEY; 
 
-        if (serviceKey) {
-          const updateBody = field === 'email' 
-            ? { email: value } 
-            : { user_metadata: { [field]: value } };
-
-          await fetch(`${supabaseUrl}/auth/v1/admin/users/${userId}`, {
-            method: 'PUT',
-            headers: {
-              'Authorization': `Bearer ${serviceKey}`,
-              'apikey': serviceKey,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(updateBody)
-          });
-        } else {
-          console.warn('No SUPABASE_SERVICE_ROLE_KEY found, skipped Supabase sync.');
+      if (serviceKey) {
+        // Fetch current user from Supabase to preserve existing metadata (like PFP)
+        const currentRes = await fetch(`${supabaseUrl}/auth/v1/admin/users/${userId}`, {
+          method: 'GET',
+          headers: { 'Authorization': `Bearer ${serviceKey}`, 'apikey': serviceKey }
+        });
+        
+        let existingMetadata = {};
+        if (currentRes.ok) {
+           const userData = await currentRes.json();
+           existingMetadata = userData.user_metadata || {};
         }
+
+        const updateBody = {
+          email: email,
+          user_metadata: {
+             ...existingMetadata,
+             username: username,
+             role: role
+          }
+        };
+
+        const updateRes = await fetch(`${supabaseUrl}/auth/v1/admin/users/${userId}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `Bearer ${serviceKey}`,
+            'apikey': serviceKey,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(updateBody)
+        });
+
+        if (!updateRes.ok) {
+           const err = await updateRes.text();
+           console.error('Supabase sync failed:', err);
+           // Even if Supabase sync fails slightly (e.g. invalid email format), we still updated D1. 
+           // But let's return an error so the admin knows.
+           return new Response(JSON.stringify({ error: `D1 updated, but Supabase sync failed: ${err}` }), { status: 500 });
+        }
+      } else {
+        console.warn('No SUPABASE_SERVICE_ROLE_KEY found, skipped Supabase sync.');
       }
 
       return new Response(JSON.stringify({ success: true }), { 
@@ -58,7 +78,7 @@ export async function onRequest({ request, env }) {
         headers: { 'content-type': 'application/json' } 
       });
     } catch(e) {
-      return new Response(JSON.stringify({ error: e.message }), { status: 500 });
+      return new Response(JSON.stringify({ error: e.message }), { status: 500, headers: {'content-type': 'application/json'} });
     }
   }
 

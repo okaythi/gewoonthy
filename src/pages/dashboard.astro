@@ -122,16 +122,26 @@ import AntiCapture from '../components/AntiCapture.astro';
       
       /* Data Tables */
       .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-      .data-table th, .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); }
-      .data-table th { color: var(--text-secondary); font-weight: 600; }
+      .data-table th, .data-table td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; }
+      .data-table th { color: var(--text-secondary); font-weight: 600; white-space: nowrap; }
       .data-table tr:hover { background: rgba(128,128,128,0.05); }
       
-      /* Inline Editing */
-      .editable { cursor: pointer; border-bottom: 1px dashed var(--text-secondary); }
-      .editable:hover { background: rgba(255,255,255,0.1); }
-      .missing { color: var(--danger); font-weight: bold; }
+      .inline-edit-input, .inline-edit-select {
+        background: rgba(0,0,0,0.2); border: 1px solid var(--border); color: var(--text-primary);
+        padding: 6px 8px; border-radius: 4px; font-size: 0.85rem; width: 100%; font-family: inherit;
+        transition: border-color 0.2s;
+      }
+      .inline-edit-input:focus, .inline-edit-select:focus { border-color: var(--accent); outline: none; }
+      .inline-edit-select { appearance: none; cursor: pointer; }
       
-      /* Context Menu */
+      /* Desktop/Mobile views */
+      .mobile-users-view { display: none; }
+      .desktop-users-view { display: block; }
+      @media (max-width: 1024px) {
+         .desktop-users-view { display: none; }
+         .mobile-users-view { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 50vh; color: var(--text-secondary); text-align: center; gap: 1rem; }
+         .mobile-users-view svg { width: 48px; height: 48px; stroke: currentColor; stroke-width: 1.5; fill: none; }
+      }
       .context-menu {
         display: none; position: absolute; background: var(--bg-main);
         border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem 0;
@@ -324,35 +334,41 @@ import AntiCapture from '../components/AntiCapture.astro';
       
       <!-- USERS SECTION -->
       <div id="users" class="section">
-        <div class="header">
-          <h1>User Management</h1>
-          <button onclick="loadUsers()" class="btn">Refresh</button>
-        </div>
-        <div class="dashboard-grid full">
-          <div class="card">
-            <h2>Registered Users</h2>
-            <div style="overflow-x:auto;">
-              <table class="data-table" id="users-table">
-                <thead>
-                  <tr>
-                    <th>PFP</th>
-                    <th>User ID</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Last Login</th>
-                    <th>Creation Location</th>
-                    <th>Current Location</th>
-                    <th>Current IP</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td colspan="10" style="text-align:center;">Loading...</td></tr>
-                </tbody>
-              </table>
+        <!-- Desktop View -->
+        <div class="desktop-users-view">
+          <div class="header">
+            <h1>User Management</h1>
+            <button onclick="loadUsers()" class="btn">Refresh</button>
+          </div>
+          <div class="dashboard-grid full">
+            <div class="card">
+              <h2>Registered Users</h2>
+              <div style="overflow-x:auto;">
+                <table class="data-table" id="users-table">
+                  <thead>
+                    <tr>
+                      <th>PFP / ID</th>
+                      <th>Username</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Creation Loc.</th>
+                      <th>Current Loc.</th>
+                      <th>Current IP</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td colspan="8" style="text-align:center;">Loading...</td></tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
+        </div>
+        <!-- Mobile Empty State -->
+        <div class="mobile-users-view">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <div>User Management requires a desktop environment.</div>
         </div>
       </div>
       
@@ -1468,58 +1484,77 @@ import AntiCapture from '../components/AntiCapture.astro';
             const data = await res.json();
             
             tbody.innerHTML = data.users.map(u => `
-              <tr>
-                <td><img src="${u.profile_picture_url || 'https://media.thiago.qzz.io/media/vanity/fallback.png'}" style="width:32px; height:32px; border-radius:50%; object-fit:cover;"></td>
-                <td><small>${u.user_id.split('-')[0]}...</small></td>
-                <td class="editable" onclick="editUser('${u.user_id}', 'username', '${u.username}')">${u.username || '<span class="missing">Set</span>'}</td>
-                <td class="editable" onclick="editUser('${u.user_id}', 'email', '${u.email}')">${u.email || '<span class="missing">Set</span>'}</td>
+              <tr id="user-row-${u.user_id}">
                 <td>
-                  <select onchange="updateUserRole('${u.user_id}', this.value)" style="background:var(--glass-bg); color:var(--text-primary); border:1px solid var(--border); border-radius:4px; padding:4px;">
+                  <div style="display:flex; align-items:center; gap:10px;">
+                    <img src="${u.profile_picture_url || 'https://media.thiago.qzz.io/media/vanity/fallback.png'}" style="width:36px; height:36px; border-radius:50%; object-fit:cover; border:1px solid var(--border);">
+                    <div style="display:flex; flex-direction:column; line-height:1.2;">
+                       <small style="color:var(--text-secondary); font-family:monospace;">${u.user_id.split('-')[0]}</small>
+                       <small style="color:var(--text-secondary); font-size:0.7rem;">${u.last_login_time ? new Date(u.last_login_time).toLocaleDateString() : 'Never'}</small>
+                    </div>
+                  </div>
+                </td>
+                <td><input type="text" class="inline-edit-input" id="edit-username-${u.user_id}" value="${u.username || ''}" placeholder="Username" /></td>
+                <td><input type="email" class="inline-edit-input" id="edit-email-${u.user_id}" value="${u.email || ''}" placeholder="Email" /></td>
+                <td>
+                  <select class="inline-edit-select" id="edit-role-${u.user_id}">
+                    <option value="Guest" ${u.role === 'Guest' ? 'selected' : ''}>Guest</option>
                     <option value="Verified" ${u.role === 'Verified' ? 'selected' : ''}>Verified</option>
                     <option value="Admin" ${u.role === 'Admin' ? 'selected' : ''}>Admin</option>
                   </select>
                 </td>
-                <td>${u.last_login_time ? new Date(u.last_login_time).toLocaleString() : 'Never'}</td>
-                <td class="editable" onclick="editUser('${u.user_id}', 'account_creation_location', '${u.account_creation_location || ''}')">${u.account_creation_location || '-'}</td>
-                <td class="editable" onclick="editUser('${u.user_id}', 'current_login_location', '${u.current_login_location || ''}')">${u.current_login_location || '-'}</td>
-                <td class="editable" onclick="editUser('${u.user_id}', 'current_ip', '${u.current_ip || ''}')">${u.current_ip || '-'}</td>
-                <td><button onclick="editUser('${u.user_id}', 'profile_picture_url', '${u.profile_picture_url || ''}')" style="background:transparent; border:1px solid var(--border); color:var(--text-primary); cursor:pointer; padding:2px 8px; border-radius:4px;">Edit PFP</button></td>
+                <td><input type="text" class="inline-edit-input" id="edit-cloc-${u.user_id}" value="${u.account_creation_location || ''}" placeholder="Creation Location" /></td>
+                <td><input type="text" class="inline-edit-input" id="edit-lloc-${u.user_id}" value="${u.current_login_location || ''}" placeholder="Current Location" /></td>
+                <td><input type="text" class="inline-edit-input" id="edit-ip-${u.user_id}" value="${u.current_ip || ''}" placeholder="IP Address" /></td>
+                <td style="white-space:nowrap;">
+                  <button onclick="saveUserRow('${u.user_id}')" id="save-btn-${u.user_id}" class="btn" style="padding: 6px 14px; font-size:0.8rem;">Save</button>
+                  <span id="save-status-${u.user_id}" style="margin-left: 8px; font-size: 1.1rem; opacity: 0; transition: opacity 0.3s; vertical-align: middle;">✅</span>
+                </td>
               </tr>
             `).join('');
          } catch(e) {
-            tbody.innerHTML = `<tr><td colspan="10" style="color:var(--danger);text-align:center;">${e.message}</td></tr>`;
+            tbody.innerHTML = `<tr><td colspan="8" style="color:var(--danger);text-align:center;">${e.message}</td></tr>`;
          }
       }
 
-      window.updateUserRole = async (userId, role) => {
+      window.saveUserRow = async (userId) => {
+         const btn = document.getElementById(`save-btn-${userId}`);
+         const statusIcon = document.getElementById(`save-status-${userId}`);
+         
+         const payload = {
+            userId,
+            username: document.getElementById(`edit-username-${userId}`).value,
+            email: document.getElementById(`edit-email-${userId}`).value,
+            role: document.getElementById(`edit-role-${userId}`).value,
+            account_creation_location: document.getElementById(`edit-cloc-${userId}`).value,
+            current_login_location: document.getElementById(`edit-lloc-${userId}`).value,
+            current_ip: document.getElementById(`edit-ip-${userId}`).value
+         };
+
          try {
+            btn.textContent = 'Saving...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+            
             const res = await fetch('/api/admin/users', {
-               method: 'PUT',
+               method: 'PATCH',
                headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ userId, field: 'role', value: role })
+               body: JSON.stringify(payload)
             });
-            if (!res.ok) throw new Error('Update failed');
-            alert('Role updated successfully.');
+            if (!res.ok) {
+               const err = await res.json();
+               throw new Error(err.error || 'Update failed');
+            }
+            
+            // Show checkmark
+            statusIcon.style.opacity = '1';
+            setTimeout(() => { statusIcon.style.opacity = '0'; }, 3000);
          } catch(e) {
             alert(e.message);
-            loadUsers();
-         }
-      };
-
-      window.editUser = async (userId, field, currentValue) => {
-         const val = prompt(`Enter new value for ${field}:`, currentValue);
-         if (val !== null && val !== currentValue) {
-            try {
-               const res = await fetch('/api/admin/users', {
-                  method: 'PUT',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ userId, field, value: val })
-               });
-               if (!res.ok) throw new Error('Update failed');
-               loadUsers();
-            } catch(e) {
-               alert(e.message);
-            }
+         } finally {
+            btn.textContent = 'Save';
+            btn.disabled = false;
+            btn.style.opacity = '1';
          }
       };
 
