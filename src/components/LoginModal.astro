@@ -53,9 +53,9 @@
   .auth-modal-overlay {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: none;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,9 @@
     opacity: 1;
   }
   .auth-modal-content {
-    background: var(--glass-bg, rgba(255,255,255,0.03));
+    background: var(--glass-bg, rgba(10, 10, 10, 0.85));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border, rgba(255,255,255,0.1));
     border-radius: 20px;
     padding: 2.5rem;
