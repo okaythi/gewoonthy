@@ -93,6 +93,15 @@ const pageTitle = "Under maintenance...";
       justify-content: center;
     }
 
+    .player-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+    }
+
     .custom-player-wrapper {
       position: relative;
       width: auto;
@@ -358,43 +367,45 @@ const pageTitle = "Under maintenance...";
 
     <div class="video-wrapper">
       <div class="video-container">
-        <div class="custom-player-wrapper" id="player-wrapper">
-          <video 
-            id="anthem-video"
-            src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
-            controls 
-            controlsList="nodownload noremoteplayback noplaybackrate"
-            disablePictureInPicture
-            playsinline
-            preload="auto"
-            autoplay
-          ></video>
-          <div class="custom-controls" id="custom-controls">
-            <button id="cc-play" title="Play/Pause">
-              <svg viewBox="0 0 24 24" id="icon-play"><path d="M5 3l14 9-14 9v-18z"></path></svg>
-            </button>
-            <div class="cc-progress-container">
-              <input type="range" id="cc-progress" min="0" max="100" value="0" step="0.1" style="--val: 0%">
+        <div class="player-stack">
+          <div class="custom-player-wrapper" id="player-wrapper">
+            <video 
+              id="anthem-video"
+              src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
+              controls 
+              controlsList="nodownload noremoteplayback noplaybackrate"
+              disablePictureInPicture
+              playsinline
+              preload="auto"
+              autoplay
+            ></video>
+            <div class="custom-controls" id="custom-controls">
+              <button id="cc-play" title="Play/Pause">
+                <svg viewBox="0 0 24 24" id="icon-play"><path d="M5 3l14 9-14 9v-18z"></path></svg>
+              </button>
+              <div class="cc-progress-container">
+                <input type="range" id="cc-progress" min="0" max="100" value="0" step="0.1" style="--val: 0%">
+              </div>
+              <div class="cc-time" id="cc-time">0:00 / 0:00</div>
+              <button id="cc-mute" title="Mute/Unmute">
+                <svg viewBox="0 0 24 24" id="icon-vol"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </button>
+              <div class="cc-volume-container">
+                <input type="range" id="cc-volume" min="0" max="1" step="0.01" value="0.35" style="--val: 35%">
+              </div>
+              <button id="cc-fullscreen" title="Fullscreen">
+                <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+              </button>
             </div>
-            <div class="cc-time" id="cc-time">0:00 / 0:00</div>
-            <button id="cc-mute" title="Mute/Unmute">
-              <svg viewBox="0 0 24 24" id="icon-vol"><path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          </div>
+          <div class="vote-controls">
+            <button id="btn-like" class="vote-btn" title="Like">
+              <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
             </button>
-            <div class="cc-volume-container">
-              <input type="range" id="cc-volume" min="0" max="1" step="0.01" value="0.35" style="--val: 35%">
-            </div>
-            <button id="cc-fullscreen" title="Fullscreen">
-              <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            <button id="btn-dislike" class="vote-btn" title="Dislike">
+              <svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path></svg>
             </button>
           </div>
-        </div>
-        <div class="vote-controls">
-          <button id="btn-like" class="vote-btn" title="Like">
-            <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-          </button>
-          <button id="btn-dislike" class="vote-btn" title="Dislike">
-            <svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path></svg>
-          </button>
         </div>
       </div>
     </div>
