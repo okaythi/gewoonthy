@@ -237,7 +237,7 @@ const pageTitle = "Under maintenance...";
           <img id="mini-pfp" src="/api/pfp" alt="PFP" />
           <div id="mini-status" class="status-dot"></div>
         </div>
-        <span>Contact me on Discord: okaythi</span>
+        <span>Contact me on Discord: <span id="discord-username">okaythi</span></span>
       </div>
       
       <a href="https://github.com/okaythi" class="github-link" target="_blank" rel="noopener noreferrer" title="GitHub">
@@ -253,6 +253,7 @@ const pageTitle = "Under maintenance...";
       // 1. Fetch live presence
       const pfp = document.getElementById('mini-pfp');
       const stat = document.getElementById('mini-status');
+      const usernameSpan = document.getElementById('discord-username');
       const colors = { online: '#23a559', idle: '#f0b232', dnd: '#f23f43', offline: '#80848e' };
       
       const updatePresence = async () => {
@@ -262,6 +263,7 @@ const pageTitle = "Under maintenance...";
               const data = await res.json();
               if (data.avatar_url && pfp) pfp.src = data.avatar_url;
               if (data.status && stat) stat.style.backgroundColor = colors[data.status] || colors.offline;
+              if (data.username && usernameSpan) usernameSpan.textContent = data.username;
           }
         } catch (e) {}
       };
