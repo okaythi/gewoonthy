@@ -7,7 +7,7 @@ export async function onRequest({ request, env, next }) {
 
   // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
   const url = new URL(request.url);
-  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && url.pathname !== '/') {
+  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && !url.pathname.startsWith('/sync-lyrics') && url.pathname !== '/') {
     const rewriteReq = new Request(new URL(url.origin + '/'), request);
     return env.ASSETS.fetch(rewriteReq);
   }

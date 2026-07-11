@@ -1,6 +1,6 @@
 {"message":"connected.","label":"vite","level":"info"}
-{"message":"Generated 2ms","label":"types","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
 {"message":"connected.","label":"vite","level":"info"}
 {"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
-{"message":" astro  v7.0.4 ready in 5614 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":" astro  v7.0.4 ready in 17061 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}

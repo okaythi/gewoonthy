@@ -1,0 +1,377 @@
+---
+const pageTitle = "Lyrics Sync Tool";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --fg: #ffffff;
+      --accent: #23a559;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      padding: 1rem 2rem;
+      background: #111;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .instructions {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    
+    button:hover { background: #444; }
+    
+    button.primary { background: var(--accent); }
+    button.primary:hover { background: #2bd171; }
+    button.danger { background: #d93a3a; }
+    button.danger:hover { background: #f24b4b; }
+
+    .status {
+      font-size: 0.9rem;
+      color: var(--accent);
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .status.show { opacity: 1; }
+
+    .workspace {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .video-pane {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: #000;
+      border-right: 1px solid #222;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      outline: none;
+    }
+
+    .lyrics-pane {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      background: #0a0a0a;
+      outline: none; /* for focus */
+      position: relative;
+    }
+
+    .lyrics-pane:focus {
+      box-shadow: inset 0 0 0 2px var(--accent);
+    }
+
+    .focus-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    /* Only show overlay and capture clicks when NOT focused */
+    .lyrics-pane:not(:focus) .focus-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .verses-container {
+      flex: 1;
+      overflow-y: auto;
+      padding-right: 1rem;
+      position: relative;
+    }
+
+    .verse {
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      font-weight: 700;
+      color: rgba(255,255,255,0.2);
+    }
+
+    .word {
+      display: inline-block;
+      white-space: pre-wrap;
+      cursor: pointer;
+      padding: 0.1rem 0;
+      border-radius: 4px;
+      transition: color 0.1s, transform 0.1s, background 0.1s;
+      color: #333; /* Unsynced */
+    }
+
+    .word:hover {
+      background: rgba(255,255,255,0.1);
+      color: #aaa;
+    }
+
+    .word.active {
+      color: #fff;
+      transform: scale(1.1);
+      text-shadow: 0 0 10px rgba(255,255,255,0.8);
+      border-bottom: 2px solid var(--accent);
+    }
+    
+    .word.synced {
+      color: #fff;
+    }
+    
+    .word.synced.active {
+      color: #fff;
+    }
+
+    .time-badge {
+      display: block;
+      font-size: 0.7rem;
+      color: #555;
+      font-weight: normal;
+      margin-bottom: -0.5rem;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="header">
+    <h1>Lyrics Sync Tool</h1>
+    <div class="instructions">Focus right panel. Press SPACE to sync current word. (Saves to memory, click Save to write file)</div>
+    <div class="toolbar">
+      <span class="status" id="save-status">Saved to File!</span>
+      <button class="danger" id="btn-clear">Wipe Timestamps</button>
+      <button class="primary" id="btn-save">Save to File</button>
+    </div>
+  </div>
+
+  <div class="workspace">
+    <div class="video-pane">
+      <div class="video-wrapper">
+        <video 
+          id="sync-video"
+          src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
+          controls 
+          playsinline
+          preload="auto"
+        ></video>
+      </div>
+    </div>
+    
+    <div class="lyrics-pane" tabindex="0" id="lyrics-pane">
+      <div class="focus-overlay" id="focus-overlay">CLICK HERE TO FOCUS</div>
+      <div class="verses-container" id="verses-container"></div>
+    </div>
+  </div>
+
+  <script>
+    import { lyricsData, GLOBAL_OFFSET } from '../data/lyrics.ts';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const vid = document.getElementById('sync-video');
+      const pane = document.getElementById('lyrics-pane');
+      const container = document.getElementById('verses-container');
+      const status = document.getElementById('save-status');
+      const overlay = document.getElementById('focus-overlay');
+      const btnSave = document.getElementById('btn-save');
+      const btnClear = document.getElementById('btn-clear');
+      
+      let localLyrics = JSON.parse(JSON.stringify(lyricsData)); // clone
+      let currentV = 0;
+      let currentW = 0;
+      
+      // Focus overlay click handler
+      overlay.addEventListener('click', () => {
+        pane.focus();
+      });
+
+      // Clear all timestamps
+      btnClear.addEventListener('click', () => {
+        if(confirm('Are you sure you want to wipe ALL existing timestamps? You will have to re-sync the whole song.')) {
+          localLyrics.forEach(v => {
+             v.verseStart = 0;
+             v.verseEnd = 0;
+             v.words.forEach(w => {
+                 w.start = 0;
+                 w.end = 0;
+             });
+          });
+          currentV = 0;
+          currentW = 0;
+          vid.currentTime = 0;
+          render();
+        }
+      });
+      
+      const render = () => {
+        container.innerHTML = localLyrics.map((verse, vIdx) => `
+          <div class="verse" id="v-${vIdx}">
+            <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
+            ${verse.words.map((w, wIdx) => {
+              const isSynced = w.start && w.start !== 0;
+              const isActive = vIdx === currentV && wIdx === currentW;
+              const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
+              return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
+            }).join('')}
+          </div>
+        `).join('');
+        
+        // Add click listeners to seek
+        document.querySelectorAll('.word').forEach(el => {
+          el.addEventListener('click', (e) => {
+            const v = parseInt(el.getAttribute('data-v'));
+            const w = parseInt(el.getAttribute('data-w'));
+            currentV = v;
+            currentW = w;
+            
+            const targetTime = localLyrics[v].words[w].start || (localLyrics[v].verseStart || 0);
+            if (targetTime) {
+              vid.currentTime = targetTime + GLOBAL_OFFSET;
+            }
+            render();
+            pane.focus();
+          });
+        });
+        
+        // Scroll active into view
+        const activeEl = document.getElementById(`w-${currentV}-${currentW}`);
+        if (activeEl) {
+          activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      };
+      
+      render();
+      
+      // Save to file ONLY when clicking the button
+      btnSave.addEventListener('click', async () => {
+        try {
+          const payload = {
+            globalOffset: GLOBAL_OFFSET,
+            lyricsData: localLyrics
+          };
+          const res = await fetch('http://localhost:4322/save', {
+            method: 'POST',
+            body: JSON.stringify(payload)
+          });
+          if (res.ok) {
+            status.classList.add('show');
+            setTimeout(() => status.classList.remove('show'), 2000);
+          }
+        } catch (e) {
+          console.error("Save failed", e);
+          alert('Save failed! Is the background sync server running?');
+        }
+      });
+
+      pane.addEventListener('keydown', (e) => {
+        if (e.code === 'Space') {
+          e.preventDefault(); // prevent scroll
+          
+          if (currentV >= localLyrics.length) return;
+          
+          const time = vid.currentTime - GLOBAL_OFFSET;
+          
+          // Update current word start
+          localLyrics[currentV].words[currentW].start = parseFloat(time.toFixed(3));
+          
+          // If first word, update verse start
+          if (currentW === 0) {
+            localLyrics[currentV].verseStart = parseFloat(time.toFixed(3));
+          }
+          
+          // If there's a previous word, set its end time
+          if (currentW > 0) {
+            localLyrics[currentV].words[currentW - 1].end = parseFloat(time.toFixed(3));
+          } else if (currentV > 0) {
+            const prevV = localLyrics[currentV - 1];
+            prevV.words[prevV.words.length - 1].end = parseFloat(time.toFixed(3));
+            prevV.verseEnd = parseFloat(time.toFixed(3));
+          }
+          
+          // Advance index
+          currentW++;
+          if (currentW >= localLyrics[currentV].words.length) {
+            localLyrics[currentV].verseEnd = parseFloat(time.toFixed(3)) + 2; // rough guess for last word
+            currentW = 0;
+            currentV++;
+          }
+          
+          render();
+        }
+      });
+      
+    });
+  </script>
+</body>
+</html>
