@@ -136,13 +136,60 @@ const pageTitle = "Under maintenance...";
       transition: color 0.2s;
     }
 
-    .github-link:hover {
-      color: var(--fg);
-    }
-
     .github-link svg {
       width: 24px;
       height: 24px;
+      fill: currentColor;
+    }
+
+    /* Vote UI */
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .vote-controls {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+      padding-right: 4px;
+    }
+
+    .vote-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      color: var(--fg-dim);
+      transition: color 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vote-btn:hover {
+      color: var(--fg);
+    }
+
+    .vote-btn:active {
+      transform: scale(0.9);
+    }
+
+    .vote-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .vote-btn.active svg {
       fill: currentColor;
     }
   </style>
@@ -156,16 +203,26 @@ const pageTitle = "Under maintenance...";
     </div>
 
     <div class="video-wrapper">
-      <video 
-        id="anthem-video"
-        src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
-        controls 
-        controlsList="nodownload noremoteplayback noplaybackrate"
-        disablePictureInPicture
-        playsinline
-        preload="auto"
-        autoplay
-      ></video>
+      <div class="video-container">
+        <video 
+          id="anthem-video"
+          src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
+          controls 
+          controlsList="nodownload noremoteplayback noplaybackrate"
+          disablePictureInPicture
+          playsinline
+          preload="auto"
+          autoplay
+        ></video>
+        <div class="vote-controls">
+          <button id="btn-like" class="vote-btn" title="Like">
+            <svg viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+          </button>
+          <button id="btn-dislike" class="vote-btn" title="Dislike">
+            <svg viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path></svg>
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="footer">
@@ -186,34 +243,70 @@ const pageTitle = "Under maintenance...";
   </div>
 
   <script>
-    // 1. Fetch live presence
     document.addEventListener('DOMContentLoaded', async () => {
+      // 1. Fetch live presence
       const pfp = document.getElementById('mini-pfp');
       const stat = document.getElementById('mini-status');
       const colors = { online: '#23a559', idle: '#f0b232', dnd: '#f23f43', offline: '#80848e' };
       
-      try {
-        const res = await fetch('https://gewoonthy.onrender.com/api/me');
-        if (res.ok) {
-            const data = await res.json();
-            if (data.avatar_url && pfp) pfp.src = data.avatar_url;
-            if (data.status && stat) stat.style.backgroundColor = colors[data.status] || colors.offline;
-        }
-      } catch (e) {}
+      const updatePresence = async () => {
+        try {
+          const res = await fetch('https://gewoonthy.onrender.com/api/me');
+          if (res.ok) {
+              const data = await res.json();
+              if (data.avatar_url && pfp) pfp.src = data.avatar_url;
+              if (data.status && stat) stat.style.backgroundColor = colors[data.status] || colors.offline;
+          }
+        } catch (e) {}
+      };
+      
+      await updatePresence();
+      setInterval(updatePresence, 15000);
 
       // 2. Setup video volume
       const vid = document.getElementById('anthem-video');
       if (vid) {
-        vid.volume = 0.45;
-        // Autoplay attempt
-        vid.play().catch(e => {
-            // Autoplay with sound blocked by browser, wait for user interaction
-        });
+        vid.volume = 0.35;
+        vid.play().catch(e => {});
       }
+
+      // 3. Vote System
+      const btnLike = document.getElementById('btn-like');
+      const btnDislike = document.getElementById('btn-dislike');
+      const fileName = 'Bring Me The Horizon - Go To Hell, For Heavens Sake.mp4';
+      
+      const updateVoteUI = (l, d) => {
+        if(l) btnLike.classList.add('active'); else btnLike.classList.remove('active');
+        if(d) btnDislike.classList.add('active'); else btnDislike.classList.remove('active');
+      };
+
+      try {
+        const res = await fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`);
+        if (res.ok) {
+          const { liked, desliked } = await res.json();
+          updateVoteUI(liked, desliked);
+        }
+      } catch (e) {}
+
+      const castVote = async (action) => {
+        try {
+          const res = await fetch('/api/vote', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ file_name: fileName, action })
+          });
+          if (res.ok) {
+            const { liked, desliked } = await res.json();
+            updateVoteUI(liked, desliked);
+          }
+        } catch(e) {}
+      };
+
+      btnLike.addEventListener('click', () => castVote('like'));
+      btnDislike.addEventListener('click', () => castVote('dislike'));
     });
 
-    // 3. Absolute Hell Anti-DevTools / Anti-Copy
-    // Disable right click, F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+Shift+J, Ctrl+U
+    // 4. Absolute Hell Anti-DevTools / Anti-Copy
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', e => {
       if (e.keyCode === 123 || 
@@ -224,12 +317,12 @@ const pageTitle = "Under maintenance...";
       }
     });
     
-    // Aggressive debugger loop silently
+    // Check if devtools open via screen differential (no memory leak)
     setInterval(() => {
-      const before = new Date().getTime();
-      debugger;
-      const after = new Date().getTime();
-    }, 1000);
+      if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+         document.body.innerHTML = '';
+      }
+    }, 2000);
   </script>
 </body>
 </html>
