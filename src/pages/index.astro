@@ -20,6 +20,10 @@ const pageTitle = "Under maintenance...";
       --fg-dim: rgba(255, 255, 255, 0.6);
     }
     
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    
     html, body {
       margin: 0;
       padding: 0;
@@ -47,7 +51,7 @@ const pageTitle = "Under maintenance...";
 
     .header {
       text-align: center;
-      padding: 2.5rem 1rem 1rem 1rem;
+      padding: 4rem 1rem 1rem 1rem;
       flex-shrink: 0;
       display: flex;
       flex-direction: column;
