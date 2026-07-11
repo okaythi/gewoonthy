@@ -91,6 +91,8 @@ const pageTitle = "Under maintenance...";
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-height: 0;
+      min-width: 0;
     }
 
     .player-stack {
@@ -100,6 +102,8 @@ const pageTitle = "Under maintenance...";
       width: auto;
       height: 100%;
       max-width: 100%;
+      min-height: 0;
+      min-width: 0;
     }
 
     .custom-player-wrapper {
@@ -114,6 +118,9 @@ const pageTitle = "Under maintenance...";
       background-color: #050505;
       overflow: hidden;
       display: flex;
+      min-height: 0;
+      min-width: 0;
+      container-type: inline-size;
     }
 
     .custom-player-wrapper video {
@@ -121,6 +128,7 @@ const pageTitle = "Under maintenance...";
       height: 100%;
       object-fit: contain;
       outline: none;
+      cursor: pointer;
     }
 
     .custom-controls {
@@ -136,6 +144,7 @@ const pageTitle = "Under maintenance...";
       opacity: 0;
       transition: opacity 0.3s ease;
       z-index: 10;
+      overflow: hidden;
     }
 
     .custom-player-wrapper:hover .custom-controls,
@@ -241,6 +250,12 @@ const pageTitle = "Under maintenance...";
       background: #fff;
       border: none;
       box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+    
+    @container (max-width: 400px) {
+      .cc-time, .cc-volume-container, #cc-mute {
+        display: none !important;
+      }
     }
 
     @media (pointer: coarse) {
@@ -494,9 +509,12 @@ const pageTitle = "Under maintenance...";
           
           let isDragging = false;
           
-          playBtn.addEventListener('click', () => {
+          const togglePlay = () => {
             vid.paused ? vid.play() : vid.pause();
-          });
+          };
+          
+          playBtn.addEventListener('click', togglePlay);
+          vid.addEventListener('click', togglePlay);
           
           vid.addEventListener('play', () => {
             playIcon.innerHTML = '<path d="M6 4h4v16H6zm8 0h4v16h-4z"/>';
