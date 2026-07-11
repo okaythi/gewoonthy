@@ -120,7 +120,6 @@ const pageTitle = "Under maintenance...";
       display: flex;
       min-height: 0;
       min-width: 0;
-      container-type: inline-size;
     }
 
     .custom-player-wrapper video {
@@ -252,7 +251,7 @@ const pageTitle = "Under maintenance...";
       box-shadow: 0 0 5px rgba(0,0,0,0.5);
     }
     
-    @container (max-width: 400px) {
+    @media (max-width: 600px) {
       .cc-time, .cc-volume-container, #cc-mute {
         display: none !important;
       }
