@@ -3,3 +3,7 @@ dist/
 .env
 .DS_Store
 .wrangler/
+README.md
+AGENTS.md
+CLAUDE.md
+.agents/
