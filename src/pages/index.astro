@@ -145,24 +145,9 @@ const pageTitle = "Under maintenance...";
       height: 24px;
       fill: currentColor;
     }
-
-    /* Aggressive anti-devtools overlay */
-    #anti-inspect {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100dvh;
-      background: black;
-      color: red;
-      z-index: 999999;
-      align-items: center;
-      justify-content: center;
-      font-family: monospace;
-      font-size: 2rem;
-    }
   </style>
 </head>
 <body oncontextmenu="return false;">
-  <div id="anti-inspect"><h1>NICE TRY.</h1></div>
   
   <div class="container">
     <div class="header">
@@ -179,6 +164,7 @@ const pageTitle = "Under maintenance...";
         disablePictureInPicture
         playsinline
         preload="auto"
+        autoplay
       ></video>
     </div>
 
@@ -207,16 +193,11 @@ const pageTitle = "Under maintenance...";
       const colors = { online: '#23a559', idle: '#f0b232', dnd: '#f23f43', offline: '#80848e' };
       
       try {
-        const apiUrl = 'https://media.thiago.qzz.io'; // Note: The user mentioned PUBLIC_BOT_API_URL before, but we can just use the proxy or fetch directly.
-        // Wait, if it's running locally or deployed, we should use import.meta.env
-        const url = import.meta.env?.PUBLIC_BOT_API_URL || '';
-        if(url) {
-            const res = await fetch(`${url}/api/me`);
-            if (res.ok) {
-                const data = await res.json();
-                if (data.avatar_url) pfp.src = data.avatar_url;
-                if (data.status) stat.style.backgroundColor = colors[data.status] || colors.offline;
-            }
+        const res = await fetch('https://gewoonthy.onrender.com/api/me');
+        if (res.ok) {
+            const data = await res.json();
+            if (data.avatar_url && pfp) pfp.src = data.avatar_url;
+            if (data.status && stat) stat.style.backgroundColor = colors[data.status] || colors.offline;
         }
       } catch (e) {}
 
@@ -239,19 +220,15 @@ const pageTitle = "Under maintenance...";
          (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67 || e.keyCode === 74)) ||
          (e.ctrlKey && e.keyCode === 85)) {
         e.preventDefault();
-        document.getElementById('anti-inspect').style.display = 'flex';
         return false;
       }
     });
     
-    // Aggressive debugger loop
+    // Aggressive debugger loop silently
     setInterval(() => {
       const before = new Date().getTime();
       debugger;
       const after = new Date().getTime();
-      if (after - before > 100) {
-        document.getElementById('anti-inspect').style.display = 'flex';
-      }
     }, 1000);
   </script>
 </body>
