@@ -280,7 +280,20 @@ const pageTitle = "Under maintenance...";
       const vid = document.getElementById('anthem-video');
       if (vid) {
         vid.volume = 0.35;
-        vid.play().catch(e => {});
+        const playPromise = vid.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            const playOnInteract = () => {
+              vid.play().catch(() => {});
+              ['click', 'keydown', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
+                document.removeEventListener(evt, playOnInteract);
+              });
+            };
+            ['click', 'keydown', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
+              document.addEventListener(evt, playOnInteract, { once: true, passive: true });
+            });
+          });
+        }
       }
 
       // 3. Vote System
