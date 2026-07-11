@@ -96,6 +96,19 @@ def extract_user_data(user, is_friend, friend_since, profile=None):
         "badges": badges
     }
 
+@app.route('/api/me', methods=['GET'])
+def get_me():
+    guild = client.get_guild(238393736478851074)
+    member = guild.get_member(client.user.id) if guild else None
+    status = str(member.status) if member else 'offline'
+    
+    return jsonify({
+        "username": client.user.name,
+        "display_name": client.user.display_name,
+        "avatar_url": str(client.user.avatar.url) if client.user.avatar else str(client.user.default_avatar.url),
+        "status": status
+    })
+
 @app.route('/api/search_members', methods=['GET'])
 def search_members():
     q = request.args.get('q', '').lower()
