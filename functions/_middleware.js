@@ -5,8 +5,14 @@ export async function onRequest({ request, env, next }) {
     return new Response('Access Denied. Traffic from your region is blocked.', { status: 403 });
   }
 
-  // Pre-fetch Data logic for instant loading (HTMLRewriter injection)
+  // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
   const url = new URL(request.url);
+  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && url.pathname !== '/') {
+    const rewriteReq = new Request(new URL(url.origin + '/'), request);
+    return env.ASSETS.fetch(rewriteReq);
+  }
+
+  // Pre-fetch Data logic for instant loading (HTMLRewriter injection)
   let preloadedScript = '';
   
   if (url.pathname === '/' || url.pathname === '') {
