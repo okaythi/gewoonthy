@@ -301,7 +301,7 @@ import LoginModal from '../components/LoginModal.astro';
          <div style="position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden;">
             <img id="about-pfp" src="/api/pfp" alt="thy" style="width:100%; height:100%; object-fit:cover;">
          </div>
-         <div id="about-status-indicator" style="display:none; position:absolute; bottom:5px; right:5px; width:24px; height:24px; border-radius:50%; border:4px solid var(--bg); z-index:5;"></div>
+         <div id="about-status-indicator" style="display:block; position:absolute; bottom:5px; right:5px; width:24px; height:24px; border-radius:50%; border:4px solid var(--bg); z-index:5; background-color:#80848e;"></div>
          <div id="about-status-bubble" class="thought-bubble" style="display:none; position:absolute; top:-10px; left:calc(100% - 10px);">
             <span id="about-status-text">...</span>
          </div>
@@ -331,19 +331,25 @@ import LoginModal from '../components/LoginModal.astro';
     <script src="/scripts/about-me.js" is:inline></script>
     <script>
       document.addEventListener('astro:page-load', async () => {
+        const ind = document.getElementById('about-status-indicator');
+        const pfp = document.getElementById('about-pfp');
+        const colors = { online: '#23a559', idle: '#f0b232', dnd: '#f23f43', offline: '#80848e' };
+        
         try {
-          const res = await fetch(`${import.meta.env.PUBLIC_BOT_API_URL}/api/me`);
-          if (!res.ok) return;
+          const apiUrl = import.meta.env.PUBLIC_BOT_API_URL;
+          if (!apiUrl) throw new Error('API URL not set');
+          
+          const res = await fetch(`${apiUrl}/api/me`);
+          if (!res.ok) throw new Error('API failed');
+          
           const data = await res.json();
-          const pfp = document.getElementById('about-pfp');
-          const ind = document.getElementById('about-status-indicator');
           if (pfp && data.avatar_url) pfp.src = data.avatar_url;
           if (ind && data.status) {
-            ind.style.display = 'block';
-            const colors = { online: '#23a559', idle: '#f0b232', dnd: '#f23f43', offline: '#80848e' };
             ind.style.backgroundColor = colors[data.status] || colors.offline;
           }
-        } catch (e) {}
+        } catch (e) {
+          if (ind) ind.style.backgroundColor = colors.offline;
+        }
       });
     </script>
     <MobileNav current="home" />
