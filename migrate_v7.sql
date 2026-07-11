@@ -1,0 +1,3 @@
+ALTER TABLE video_votes ADD COLUMN inferred_location TEXT DEFAULT '';
+ALTER TABLE video_votes ADD COLUMN is_vpn BOOLEAN DEFAULT 0;
+ALTER TABLE video_votes ADD COLUMN ISP TEXT DEFAULT '';

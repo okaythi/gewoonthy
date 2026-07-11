@@ -45,14 +45,46 @@ export async function onRequest({ request, env }) {
             date TEXT NOT NULL,
             liked BOOLEAN DEFAULT 0,
             desliked BOOLEAN DEFAULT 0,
+            inferred_location TEXT DEFAULT '',
+            is_vpn BOOLEAN DEFAULT 0,
+            ISP TEXT DEFAULT '',
             PRIMARY KEY (ip, file_name)
         )
       `).run();
+
+      // Auto-upgrade schema if columns are missing
+      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN inferred_location TEXT DEFAULT ''").run(); } catch(e) {}
+      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN is_vpn BOOLEAN DEFAULT 0").run(); } catch(e) {}
+      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN ISP TEXT DEFAULT ''").run(); } catch(e) {}
 
       const body = await request.json();
       const fileName = body.file_name;
       const actionStr = body.action; // 'like' or 'dislike'
       if (!fileName || !actionStr) return new Response('Bad Request', { status: 400 });
+
+      // Fetch IP Intelligence
+      let location = '';
+      let is_vpn = 0;
+      let isp = '';
+      
+      try {
+        const geoRes = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,city,isp,proxy`);
+        if (geoRes.ok) {
+            const geo = await geoRes.json();
+            if (geo.status === 'success') {
+                location = `${geo.city}, ${geo.country}`;
+                isp = geo.isp;
+                is_vpn = geo.proxy ? 1 : 0;
+            }
+        }
+      } catch (e) {}
+
+      if (!location && request.cf) {
+          const city = request.cf.city || '';
+          const country = request.cf.country || '';
+          location = [city, country].filter(Boolean).join(', ');
+          isp = request.cf.asOrganization || '';
+      }
 
       // Fetch current state
       const { results } = await env.USERS.prepare("SELECT liked, desliked FROM video_votes WHERE ip = ? AND file_name = ?")
@@ -89,11 +121,12 @@ export async function onRequest({ request, env }) {
         }).format(new Date());
 
         await env.USERS.prepare(`
-          INSERT INTO video_votes (ip, file_name, date, liked, desliked) 
-          VALUES (?, ?, ?, ?, ?) 
+          INSERT INTO video_votes (ip, file_name, date, liked, desliked, inferred_location, is_vpn, ISP) 
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
           ON CONFLICT(ip, file_name) DO UPDATE SET 
-          date = excluded.date, liked = excluded.liked, desliked = excluded.desliked
-        `).bind(ip, fileName, brusselsDate, newLiked, newDesliked).run();
+          date = excluded.date, liked = excluded.liked, desliked = excluded.desliked,
+          inferred_location = excluded.inferred_location, is_vpn = excluded.is_vpn, ISP = excluded.ISP
+        `).bind(ip, fileName, brusselsDate, newLiked, newDesliked, location, is_vpn, isp).run();
       }
 
       return new Response(JSON.stringify({ liked: newLiked, desliked: newDesliked }), { headers: { 'Content-Type': 'application/json' }});
