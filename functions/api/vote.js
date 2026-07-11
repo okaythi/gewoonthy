@@ -11,6 +11,18 @@ export async function onRequest({ request, env }) {
     if (!fileName) return new Response('Missing file_name', { status: 400 });
     
     try {
+      // Auto-initialize the table if it doesn't exist yet
+      await env.USERS.prepare(`
+        CREATE TABLE IF NOT EXISTS video_votes (
+            ip TEXT NOT NULL,
+            file_name TEXT NOT NULL,
+            date TEXT NOT NULL,
+            liked BOOLEAN DEFAULT 0,
+            desliked BOOLEAN DEFAULT 0,
+            PRIMARY KEY (ip, file_name)
+        )
+      `).run();
+
       const { results } = await env.USERS.prepare("SELECT liked, desliked FROM video_votes WHERE ip = ? AND file_name = ?")
         .bind(ip, fileName).all();
         
@@ -25,6 +37,18 @@ export async function onRequest({ request, env }) {
 
   if (request.method === 'POST') {
     try {
+      // Auto-initialize the table if it doesn't exist yet
+      await env.USERS.prepare(`
+        CREATE TABLE IF NOT EXISTS video_votes (
+            ip TEXT NOT NULL,
+            file_name TEXT NOT NULL,
+            date TEXT NOT NULL,
+            liked BOOLEAN DEFAULT 0,
+            desliked BOOLEAN DEFAULT 0,
+            PRIMARY KEY (ip, file_name)
+        )
+      `).run();
+
       const body = await request.json();
       const fileName = body.file_name;
       const actionStr = body.action; // 'like' or 'dislike'
