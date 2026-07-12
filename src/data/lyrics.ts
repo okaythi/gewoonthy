@@ -6004,241 +6004,11 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 3.53,
-        "verseEnd": 8.53,
+        "verseStart": 1.3,
+        "verseEnd": 6.3,
         "words": [
           {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Grelo",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "não",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "precisa",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muito",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "não",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 5.78,
-        "verseEnd": 10.780000000000001,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "peço",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "a",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Deus",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muita",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "saúde",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 7.47,
-        "verseEnd": 12.469999999999999,
-        "words": [
-          {
-            "word": "E",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "que",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ele",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "continue",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "aí",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nos",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "abençoando",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 9.25,
-        "verseEnd": 14.25,
-        "words": [
-          {
-            "word": "Pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "que",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "a",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "gente",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "consiga",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 10.66,
-        "verseEnd": 15.66,
-        "words": [
-          {
-            "word": "Um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dos",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "menino",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 14.21,
-        "verseEnd": 19.21,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
+            "word": "Fé",
             "start": 0,
             "end": 0
           },
@@ -6250,11 +6020,83 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 15.66,
-        "verseEnd": 20.66,
+        "verseStart": 1.86,
+        "verseEnd": 6.86,
         "words": [
           {
-            "word": "É",
+            "word": "Hahaha",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "aquele",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jeitão",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 6.07,
+        "verseEnd": 11.07,
+        "words": [
+          {
+            "word": "Tropa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pista",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ainda",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 8.81,
+        "verseEnd": 13.81,
+        "words": [
+          {
+            "word": "Peitou",
             "start": 0,
             "end": 0
           },
@@ -6264,18 +6106,95 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "Grelo",
+            "word": "trem",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ficou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fudido",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uh",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 30.29,
-        "verseEnd": 35.29,
+        "verseStart": 10.48,
+        "verseEnd": 15.48,
         "words": [
           {
-            "word": "Lavei",
+            "word": "TrickNyck",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muito",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jugg",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jugg",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 11.95,
+        "verseEnd": 16.95,
+        "words": [
+          {
+            "word": "Huh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 14.01,
+        "verseEnd": 19.009999999999998,
+        "words": [
+          {
+            "word": "Ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "joga",
             "start": 0,
             "end": 0
           },
@@ -6285,109 +6204,110 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "rosto",
+            "word": "vulgo",
             "start": 0,
             "end": 0
           },
           {
-            "word": "nas",
+            "word": "no",
             "start": 0,
             "end": 0
           },
           {
-            "word": "águas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "sagradas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pia",
+            "word": "Google",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 33.67,
-        "verseEnd": 38.67,
+        "verseStart": 15.43,
+        "verseEnd": 20.43,
         "words": [
           {
-            "word": "Eu",
+            "word": "A",
             "start": 0,
             "end": 0
           },
           {
-            "word": "já",
+            "word": "minha",
             "start": 0,
             "end": 0
           },
           {
-            "word": "tô",
+            "word": "bag",
             "start": 0,
             "end": 0
           },
           {
-            "word": "pronto",
+            "word": "tá",
             "start": 0,
             "end": 0
           },
           {
-            "word": "pra",
+            "word": "cheia",
             "start": 0,
             "end": 0
           },
           {
-            "word": "matar",
+            "word": "de",
             "start": 0,
             "end": 0
           },
           {
-            "word": "meu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leão",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "do",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dia",
+            "word": "fumo",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 37.95,
-        "verseEnd": 42.95,
+        "verseStart": 17.22,
+        "verseEnd": 22.22,
         "words": [
           {
-            "word": "Deus",
+            "word": "Esses",
             "start": 0,
             "end": 0
           },
           {
-            "word": "abençoe",
+            "word": "polícia",
             "start": 0,
             "end": 0
           },
           {
-            "word": "nóis",
+            "word": "tão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ficando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "puto",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 18.78,
+        "verseEnd": 23.78,
+        "words": [
+          {
+            "word": "Porque",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "faço",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nota",
             "start": 0,
             "end": 0
           },
@@ -6397,104 +6317,38 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "a",
+            "word": "nem",
             "start": 0,
             "end": 0
           },
           {
-            "word": "nossa",
+            "word": "sou",
             "start": 0,
             "end": 0
           },
           {
-            "word": "correria",
+            "word": "vagabundo",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 43.53,
-        "verseEnd": 48.53,
+        "verseStart": 20.99,
+        "verseEnd": 25.99,
         "words": [
           {
-            "word": "Hoje",
+            "word": "Yo",
             "start": 0,
             "end": 0
           },
           {
-            "word": "eu",
+            "word": "não",
             "start": 0,
             "end": 0
           },
           {
-            "word": "levantei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "cama",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "tomei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "meu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "café",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 47.05,
-        "verseEnd": 52.05,
-        "words": [
-          {
-            "word": "Dei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "beijo",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "eu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "coisei",
+            "word": "fecho",
             "start": 0,
             "end": 0
           },
@@ -6504,120 +6358,23 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "a",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
+            "word": "bote",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 50.8,
-        "verseEnd": 55.8,
+        "verseStart": 22.29,
+        "verseEnd": 27.29,
         "words": [
           {
-            "word": "Tudo",
+            "word": "Desde",
             "start": 0,
             "end": 0
           },
           {
-            "word": "isso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "foi",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "graça",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "irmão",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 53.78,
-        "verseEnd": 58.78,
-        "words": [
-          {
-            "word": "As",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "coisas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "boas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "são",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "graça",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "irmão",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 58.55,
-        "verseEnd": 63.55,
-        "words": [
-          {
-            "word": "A",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "vida",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "boa",
+            "word": "novin",
             "start": 0,
             "end": 0
           },
@@ -6627,7 +6384,7 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "preciso",
+            "word": "gosto",
             "start": 0,
             "end": 0
           },
@@ -6637,1227 +6394,23 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "muito",
+            "word": "X",
             "start": 0,
             "end": 0
           },
           {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ser",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "feliz",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "não",
+            "word": "9",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 64.29,
-        "verseEnd": 69.29,
+        "verseStart": 23.89,
+        "verseEnd": 28.89,
         "words": [
           {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 67.84,
-        "verseEnd": 72.84,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 71.69,
-        "verseEnd": 76.69,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 74.71000000000001,
-        "verseEnd": 79.71000000000001,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 78.26,
-        "verseEnd": 83.26,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 81.55,
-        "verseEnd": 86.55,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 85.27,
-        "verseEnd": 90.27,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 88.72,
-        "verseEnd": 93.72,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 97.56,
-        "verseEnd": 102.56,
-        "words": [
-          {
-            "word": "É",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Grelo",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 106.84,
-        "verseEnd": 111.84,
-        "words": [
-          {
-            "word": "Lavei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "meu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "rosto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "águas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "sagradas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pia",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 110.13,
-        "verseEnd": 115.13,
-        "words": [
-          {
-            "word": "Eu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "já",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "tô",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pronto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "matar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "meu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leão",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "do",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dia",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 114.34,
-        "verseEnd": 119.34,
-        "words": [
-          {
-            "word": "Deus",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "abençoe",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nóis",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "a",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nossa",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "correria",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 120.1,
-        "verseEnd": 125.1,
-        "words": [
-          {
-            "word": "Hoje",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "eu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "levantei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "cama",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "tomei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "meu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "café",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 123.6,
-        "verseEnd": 128.6,
-        "words": [
-          {
-            "word": "Dei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "beijo",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "nas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "eu",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "coisei",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "com",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "a",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 127.01,
-        "verseEnd": 132.01,
-        "words": [
-          {
-            "word": "Tudo",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "isso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "foi",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "graça",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "irmão",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 130.12,
-        "verseEnd": 135.12,
-        "words": [
-          {
-            "word": "As",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "coisas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "boas",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "são",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "graça",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "irmão",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 135.04,
-        "verseEnd": 140.04,
-        "words": [
-          {
-            "word": "A",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "vida",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "boa",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "não",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muito",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ser",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "feliz",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "não",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 140.6,
-        "verseEnd": 145.6,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 144.49,
-        "verseEnd": 149.49,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 147.78,
-        "verseEnd": 152.78,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 151.25,
-        "verseEnd": 156.25,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 154.7,
-        "verseEnd": 159.7,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 158.44,
-        "verseEnd": 163.44,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "da",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 161.95,
-        "verseEnd": 166.95,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 165.46,
-        "verseEnd": 170.46,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "quem",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
+            "word": "Minha",
             "start": 0,
             "end": 0
           },
@@ -7867,114 +6420,1111 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ponto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "forte",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 25.32,
+        "verseEnd": 30.32,
+        "words": [
+          {
+            "word": "Na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "visão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "área",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pros",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cria",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "loki",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ha",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ha",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 28.03,
+        "verseEnd": 33.03,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cartão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "clonado",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 29.08,
+        "verseEnd": 34.08,
+        "words": [
+          {
+            "word": "Meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bonde",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "todo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gastando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vida",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 30.65,
+        "verseEnd": 35.65,
+        "words": [
+          {
+            "word": "Fumando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "flores",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vivendo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "conquista",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 32.65,
+        "verseEnd": 37.65,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bordão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tropa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pista",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "huh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 34.8,
+        "verseEnd": 39.8,
+        "words": [
+          {
+            "word": "Que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "aqui",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "no",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Rio",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "escroto",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 36.79,
+        "verseEnd": 41.79,
+        "words": [
+          {
+            "word": "Ter",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cria",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cabelo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "roxo",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 38.32,
+        "verseEnd": 43.32,
+        "words": [
+          {
+            "word": "Nós",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "platinado",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "luzes",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 39.99,
+        "verseEnd": 44.99,
+        "words": [
+          {
+            "word": "212",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nosso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "perfume",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "otário",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 41.95,
+        "verseEnd": 46.95,
+        "words": [
+          {
+            "word": "Tenho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "skunk",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "grego",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dentro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "slick",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 43.82,
+        "verseEnd": 48.82,
+        "words": [
+          {
+            "word": "No",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cap",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "no",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cap",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "corte",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "disfarçado",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 45.31,
+        "verseEnd": 50.31,
+        "words": [
+          {
+            "word": "Que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nós",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nikiti",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 47.12,
+        "verseEnd": 52.12,
+        "words": [
+          {
+            "word": "Sou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chefe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chefe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "menor",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bolado",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 49.09,
+        "verseEnd": 54.09,
+        "words": [
+          {
+            "word": "Tenho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uma",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "amiga",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ninfomaníaca",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 50.67,
+        "verseEnd": 55.67,
+        "words": [
+          {
+            "word": "Sempre",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "liga",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "foder",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 52.55,
+        "verseEnd": 57.55,
+        "words": [
+          {
+            "word": "Sabe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "amo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vida",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bandida",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 54.14,
+        "verseEnd": 59.14,
+        "words": [
+          {
+            "word": "Nós",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fode",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fumando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "usando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "MD",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 56.01,
+        "verseEnd": 61.01,
+        "words": [
+          {
+            "word": "Há",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muito",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tempo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fico",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "triste",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 57.75,
+        "verseEnd": 62.75,
+        "words": [
+          {
+            "word": "Pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sair",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bad",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bebo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "whisky",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 59.6,
+        "verseEnd": 64.6,
+        "words": [
+          {
+            "word": "Corto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cabelo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baile",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 60.88,
+        "verseEnd": 65.88,
+        "words": [
+          {
+            "word": "Eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fumo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "paki",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "uso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bico",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "verde",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 62.86,
+        "verseEnd": 67.86,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 64.78,
+        "verseEnd": 69.78,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 66.34,
+        "verseEnd": 71.34,
+        "words": [
+          {
+            "word": "Tropa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pista",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sempre",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trajada",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 68.08,
+        "verseEnd": 73.08,
+        "words": [
+          {
+            "word": "Marola",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "no",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baile",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "XRE",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 69.83,
+        "verseEnd": 74.83,
+        "words": [
+          {
+            "word": "Tem",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "whisky",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Buchanan's",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pros",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cria",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "morro",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 71.65,
+        "verseEnd": 76.65,
+        "words": [
+          {
+            "word": "Garrafa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "verde",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gelo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "coco",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 73.26,
+        "verseEnd": 78.26,
+        "words": [
+          {
+            "word": "Nós",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "marola",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nós",
+            "start": 0,
+            "end": 0
+          },
+          {
             "word": "vai",
             "start": 0,
             "end": 0
           },
           {
-            "word": "cantar",
+            "word": "no",
             "start": 0,
             "end": 0
           },
           {
-            "word": "assim",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ó",
+            "word": "shopping",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 168.7,
-        "verseEnd": 173.7,
+        "verseStart": 75.01,
+        "verseEnd": 80.01,
         "words": [
           {
-            "word": "Só",
+            "word": "Na",
             "start": 0,
             "end": 0
           },
           {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 172.78,
-        "verseEnd": 177.78,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
+            "word": "visão",
             "start": 0,
             "end": 0
           },
@@ -7984,201 +7534,17 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "muié",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 176.21,
-        "verseEnd": 181.21,
-        "words": [
-          {
-            "word": "O",
+            "word": "Nike",
             "start": 0,
             "end": 0
           },
           {
-            "word": "resto",
+            "word": "ou",
             "start": 0,
             "end": 0
           },
           {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 179.69,
-        "verseEnd": 184.69,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "resto",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "é",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 182.76,
-        "verseEnd": 187.76,
-        "words": [
-          {
-            "word": "Só",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "preciso",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "de",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "dinheiro",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "pra",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "comprar",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "um",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "mé",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 185.84,
-        "verseEnd": 190.84,
-        "words": [
-          {
-            "word": "O",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "leitinho",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "das",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "criança",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "e",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "o",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Modess",
+            "word": "traje",
             "start": 0,
             "end": 0
           },
@@ -8188,23 +7554,79 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "muié",
+            "word": "Lacoste",
             "start": 0,
             "end": 0
           }
         ]
       },
       {
-        "verseStart": 189.8,
-        "verseEnd": 194.8,
+        "verseStart": 76.75,
+        "verseEnd": 81.75,
         "words": [
           {
-            "word": "O",
+            "word": "Se",
             "start": 0,
             "end": 0
           },
           {
-            "word": "resto",
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 78.75,
+        "verseEnd": 83.75,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
             "start": 0,
             "end": 0
           },
@@ -8214,12 +7636,44 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
-            "word": "só",
+            "word": "já",
             "start": 0,
             "end": 0
           },
           {
-            "word": "fé",
+            "word": "é",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 81.33,
+        "verseEnd": 86.33,
+        "words": [
+          {
+            "word": "Yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 82.38,
+        "verseEnd": 87.38,
+        "words": [
+          {
+            "word": "Uh",
             "start": 0,
             "end": 0
           },
@@ -8246,16 +7700,72 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 193.09,
-        "verseEnd": 198.09,
+        "verseStart": 83.94,
+        "verseEnd": 88.94,
         "words": [
           {
-            "word": "O",
+            "word": "Se",
             "start": 0,
             "end": 0
           },
           {
-            "word": "resto",
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 85.49,
+        "verseEnd": 90.49,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
             "start": 0,
             "end": 0
           },
@@ -8265,12 +7775,611 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 0
           },
           {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 87.12,
+        "verseEnd": 92.12,
+        "words": [
+          {
+            "word": "Tropa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pista",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sempre",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trajada",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 88.94,
+        "verseEnd": 93.94,
+        "words": [
+          {
+            "word": "Marola",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "no",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baile",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "XRE",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 90.78,
+        "verseEnd": 95.78,
+        "words": [
+          {
+            "word": "Foda",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Bape",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tô",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Cyclone",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 92.25,
+        "verseEnd": 97.25,
+        "words": [
+          {
+            "word": "Ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sabe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bobeira",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 94.43,
+        "verseEnd": 99.43,
+        "words": [
+          {
+            "word": "No",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "slick",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tem",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ice",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 95.53,
+        "verseEnd": 100.53,
+        "words": [
+          {
+            "word": "Até",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chefe",
+            "start": 0,
+            "end": 0
+          },
+          {
             "word": "só",
             "start": 0,
             "end": 0
           },
           {
-            "word": "fé",
+            "word": "coloquei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "molha",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ceda",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 97.78,
+        "verseEnd": 102.78,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 99.55,
+        "verseEnd": 104.55,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "La",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 101.15,
+        "verseEnd": 106.15,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 102.87,
+        "verseEnd": 107.87,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "La",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 104.72,
+        "verseEnd": 109.72,
+        "words": [
+          {
+            "word": "Gostou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Air",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Max",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "97",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 106.41,
+        "verseEnd": 111.41,
+        "words": [
+          {
+            "word": "Tô",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "virando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chefe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "labe",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 108.00999999999999,
+        "verseEnd": 113.00999999999999,
+        "words": [
+          {
+            "word": "Na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "praia",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Barra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Juliet",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 109.14,
+        "verseEnd": 114.14,
+        "words": [
+          {
+            "word": "Fumando",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "paki",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "com",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "lady",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 111.75999999999999,
+        "verseEnd": 116.75999999999999,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 113.42,
+        "verseEnd": 118.42,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "La",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 115.02000000000001,
+        "verseEnd": 120.02000000000001,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 117.22999999999999,
+        "verseEnd": 122.22999999999999,
+        "words": [
+          {
+            "word": "De",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Lacoste",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "La",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 118.50999999999999,
+        "verseEnd": 123.50999999999999,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
             "start": 0,
             "end": 0
           },
@@ -8297,9 +8406,271 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 197.13,
-        "verseEnd": 202.13,
+        "verseStart": 120.27,
+        "verseEnd": 125.27,
         "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 122.82,
+        "verseEnd": 127.82,
+        "words": [
+          {
+            "word": "Yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 125.63,
+        "verseEnd": 130.63,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 127.13,
+        "verseEnd": 132.13,
+        "words": [
+          {
+            "word": "Se",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ela",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 128.88,
+        "verseEnd": 133.88,
+        "words": [
+          {
+            "word": "Tropa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tá",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "na",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pista",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sempre",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trajada",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 130.75,
+        "verseEnd": 135.75,
+        "words": [
+          {
+            "word": "Marola",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "no",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baile",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "XRE",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 132,
+        "verseEnd": 137,
+        "words": [
+          {
+            "word": "Peitou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trem",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ficou",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fudido",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 133.45,
+        "verseEnd": 138.45,
+        "words": [
+          {
+            "word": "Aquele",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jeitão",
+            "start": 0,
+            "end": 0
+          },
           {
             "word": "Muita",
             "start": 0,
@@ -8309,29 +8680,15 @@ export const songsDictionary: Record<string, SongData> = {
             "word": "fé",
             "start": 0,
             "end": 0
-          },
+          }
+        ]
+      },
+      {
+        "verseStart": 138.89,
+        "verseEnd": 143.89,
+        "words": [
           {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "fé",
+            "word": "Só",
             "start": 0,
             "end": 0
           },
