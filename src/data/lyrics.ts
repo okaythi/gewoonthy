@@ -5999,5 +5999,2349 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       }
     ]
+  },
+  "MARTELIN - SÓ FÉ.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 3.53,
+        "verseEnd": 8.53,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Grelo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "precisa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muito",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 5.78,
+        "verseEnd": 10.780000000000001,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "peço",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Deus",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muita",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "saúde",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 7.47,
+        "verseEnd": 12.469999999999999,
+        "words": [
+          {
+            "word": "E",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ele",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "continue",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "aí",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nos",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "abençoando",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 9.25,
+        "verseEnd": 14.25,
+        "words": [
+          {
+            "word": "Pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gente",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "consiga",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 10.66,
+        "verseEnd": 15.66,
+        "words": [
+          {
+            "word": "Um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dos",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "menino",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 14.21,
+        "verseEnd": 19.21,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 15.66,
+        "verseEnd": 20.66,
+        "words": [
+          {
+            "word": "É",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Grelo",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 30.29,
+        "verseEnd": 35.29,
+        "words": [
+          {
+            "word": "Lavei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "rosto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "águas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sagradas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pia",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 33.67,
+        "verseEnd": 38.67,
+        "words": [
+          {
+            "word": "Eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tô",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pronto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "matar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dia",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 37.95,
+        "verseEnd": 42.95,
+        "words": [
+          {
+            "word": "Deus",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "abençoe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nóis",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nossa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "correria",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 43.53,
+        "verseEnd": 48.53,
+        "words": [
+          {
+            "word": "Hoje",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "levantei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cama",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tomei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "café",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 47.05,
+        "verseEnd": 52.05,
+        "words": [
+          {
+            "word": "Dei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beijo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "coisei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "com",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 50.8,
+        "verseEnd": 55.8,
+        "words": [
+          {
+            "word": "Tudo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "isso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "foi",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "graça",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "irmão",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 53.78,
+        "verseEnd": 58.78,
+        "words": [
+          {
+            "word": "As",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "coisas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "boas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "são",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "graça",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "irmão",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 58.55,
+        "verseEnd": 63.55,
+        "words": [
+          {
+            "word": "A",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vida",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "boa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muito",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ser",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "feliz",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 64.29,
+        "verseEnd": 69.29,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 67.84,
+        "verseEnd": 72.84,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 71.69,
+        "verseEnd": 76.69,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 74.71000000000001,
+        "verseEnd": 79.71000000000001,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 78.26,
+        "verseEnd": 83.26,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 81.55,
+        "verseEnd": 86.55,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 85.27,
+        "verseEnd": 90.27,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 88.72,
+        "verseEnd": 93.72,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 97.56,
+        "verseEnd": 102.56,
+        "words": [
+          {
+            "word": "É",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Grelo",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 106.84,
+        "verseEnd": 111.84,
+        "words": [
+          {
+            "word": "Lavei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "rosto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "águas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sagradas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pia",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 110.13,
+        "verseEnd": 115.13,
+        "words": [
+          {
+            "word": "Eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "já",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tô",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pronto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "matar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leão",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dia",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 114.34,
+        "verseEnd": 119.34,
+        "words": [
+          {
+            "word": "Deus",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "abençoe",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nóis",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nossa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "correria",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 120.1,
+        "verseEnd": 125.1,
+        "words": [
+          {
+            "word": "Hoje",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "levantei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cama",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tomei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "meu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "café",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 123.6,
+        "verseEnd": 128.6,
+        "words": [
+          {
+            "word": "Dei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beijo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "nas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eu",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "coisei",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "com",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 127.01,
+        "verseEnd": 132.01,
+        "words": [
+          {
+            "word": "Tudo",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "isso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "foi",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "graça",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "irmão",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 130.12,
+        "verseEnd": 135.12,
+        "words": [
+          {
+            "word": "As",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "coisas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "boas",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "são",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "graça",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "irmão",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 135.04,
+        "verseEnd": 140.04,
+        "words": [
+          {
+            "word": "A",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vida",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "boa",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muito",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ser",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "feliz",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "não",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 140.6,
+        "verseEnd": 145.6,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 144.49,
+        "verseEnd": 149.49,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 147.78,
+        "verseEnd": 152.78,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 151.25,
+        "verseEnd": 156.25,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 154.7,
+        "verseEnd": 159.7,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 158.44,
+        "verseEnd": 163.44,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 161.95,
+        "verseEnd": 166.95,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 165.46,
+        "verseEnd": 170.46,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quem",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "humildade",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vai",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cantar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "assim",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ó",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 168.7,
+        "verseEnd": 173.7,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 172.78,
+        "verseEnd": 177.78,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 176.21,
+        "verseEnd": 181.21,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 179.69,
+        "verseEnd": 184.69,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 182.76,
+        "verseEnd": 187.76,
+        "words": [
+          {
+            "word": "Só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "preciso",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dinheiro",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pra",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comprar",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "um",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 185.84,
+        "verseEnd": 190.84,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leitinho",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "das",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "criança",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "o",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Modess",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "muié",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 189.8,
+        "verseEnd": 194.8,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 193.09,
+        "verseEnd": 198.09,
+        "words": [
+          {
+            "word": "O",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "resto",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "é",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "só",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 197.13,
+        "verseEnd": 202.13,
+        "words": [
+          {
+            "word": "Muita",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fé",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };
