@@ -56,7 +56,7 @@ const pageTitle = "I'm cooking something here...";
 
     h1 {
       font-family: 'Cinzel Decorative', serif;
-      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-size: clamp(1.32rem, 3.77vw, 2.07rem);
       margin: 0;
       font-weight: 700;
       letter-spacing: 0.05em;
@@ -348,7 +348,7 @@ const pageTitle = "I'm cooking something here...";
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      font-size: 1.125rem;
+      font-size: 0.675rem;
       color: var(--fg);
       font-weight: 500;
       letter-spacing: 0.02em;
@@ -356,8 +356,8 @@ const pageTitle = "I'm cooking something here...";
 
     .pfp-mini-container {
       position: relative;
-      width: 32px;
-      height: 32px;
+      width: 19px;
+      height: 19px;
     }
 
     .pfp-mini-container img {
@@ -372,8 +372,8 @@ const pageTitle = "I'm cooking something here...";
       position: absolute;
       bottom: -2px;
       right: -2px;
-      width: 12px;
-      height: 12px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background-color: #80848e; /* Default offline */
       border: 2px solid var(--bg);
@@ -392,8 +392,8 @@ const pageTitle = "I'm cooking something here...";
     }
 
     .github-link svg {
-      width: 40px;
-      height: 40px;
+      width: 24px;
+      height: 24px;
       fill: currentColor;
     }
 
@@ -570,7 +570,6 @@ const pageTitle = "I'm cooking something here...";
           <div class="custom-player-wrapper" id="player-wrapper">
             <video 
               id="anthem-video"
-              src="" 
               controls 
               crossorigin="anonymous"
               controlsList="nodownload noremoteplayback noplaybackrate"
@@ -578,7 +577,9 @@ const pageTitle = "I'm cooking something here...";
               playsinline
               preload="auto"
               autoplay
-            ></video>
+            >
+              <source id="anthem-source" src="" type="video/mp4" />
+            </video>
             <div class="custom-controls" id="custom-controls">
               <button id="cc-play" title="Play/Pause">
                 <svg viewBox="0 0 24 24" id="icon-play"><path d="M5 3l14 9-14 9v-18z"></path></svg>
@@ -724,7 +725,8 @@ const pageTitle = "I'm cooking something here...";
       
       if (vid) {
         vid.volume = 0.35;
-        vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+        const sourceEl = document.getElementById('anthem-source');
+        if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
 
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
@@ -1089,7 +1091,9 @@ const pageTitle = "I'm cooking something here...";
             currentSideWordRightEl = null;
           }
 
-          vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          vid.pause();
+          const sourceEl = document.getElementById('anthem-source');
+          if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           vid.load();
           safePlay();
 
