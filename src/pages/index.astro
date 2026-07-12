@@ -583,6 +583,7 @@ const pageTitle = "I'm cooking something here...";
               id="anthem-video"
               src="" 
               controls 
+              crossorigin="anonymous"
               controlsList="nodownload noremoteplayback noplaybackrate"
               disablePictureInPicture
               playsinline
@@ -1146,7 +1147,6 @@ const pageTitle = "I'm cooking something here...";
       const ctxRight = canvasRight?.getContext('2d');
       
       const initAudio = () => {
-        if (vid.crossOrigin !== 'anonymous') return; // Prevents muting the video if CORS is missing
         if (!audioCtx) {
           audioCtx = new (window.AudioContext || window.webkitAudioContext)();
           analyser = audioCtx.createAnalyser();
