@@ -165,10 +165,10 @@ const pageTitle = "I'm cooking something here...";
     }
 
     :global(.word.active) {
-      transform: scale(1.15);
-      color: #fff;
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-      -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+      transform: scale(1.15) !important;
+      color: #fff !important;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+      -webkit-text-stroke: 1px rgba(255,255,255,0.2) !important;
     }
 
     :global(.unmute-overlay) {
@@ -781,7 +781,9 @@ const pageTitle = "I'm cooking something here...";
             }
           }
           
+          let verseChanged = false;
           if (newVerseIndex !== activeVerseIndex) {
+            verseChanged = true;
             document.querySelectorAll('.verse.active').forEach(v => v.classList.remove('active'));
             if (newVerseIndex !== -1) {
               const newVerse = document.getElementById(`verse-${newVerseIndex}`);
@@ -790,7 +792,7 @@ const pageTitle = "I'm cooking something here...";
             activeVerseIndex = newVerseIndex;
           }
           
-          if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
+          if (newWordIndex !== activeWordIndex || verseChanged) {
             document.querySelectorAll('.word.active').forEach(w => w.classList.remove('active'));
             
             if (newWordIndex !== -1 && newVerseIndex !== -1) {
