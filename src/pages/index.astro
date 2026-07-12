@@ -100,7 +100,7 @@ const pageTitle = "I'm cooking something here...";
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      width: auto;
+      width: fit-content;
       height: 100%;
       max-width: 100%;
       min-height: 0;
@@ -567,6 +567,7 @@ const pageTitle = "I'm cooking something here...";
             <audio id="anthem-audio" crossorigin="anonymous"></audio>
             <video 
               id="anthem-video"
+              src=""
               controls 
               crossorigin="anonymous"
               controlsList="nodownload noremoteplayback noplaybackrate"
@@ -575,7 +576,6 @@ const pageTitle = "I'm cooking something here...";
               preload="auto"
               autoplay
             >
-              <source id="anthem-source" src="" type="video/mp4" />
             </video>
             <div class="custom-controls" id="custom-controls">
               <button id="cc-play" title="Play/Pause">
@@ -732,8 +732,7 @@ const pageTitle = "I'm cooking something here...";
       
       if (vid) {
         vid.volume = 0.35;
-        const sourceEl = document.getElementById('anthem-source');
-        if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+        vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
         if (audioEl) {
           audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           audioEl.load();
@@ -1103,8 +1102,9 @@ const pageTitle = "I'm cooking something here...";
           }
 
           vid.pause();
-          const sourceEl = document.getElementById('anthem-source');
-          if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          vid.removeAttribute('src');
+          vid.load();
+          vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           if (audioEl) {
             audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
             audioEl.load();
