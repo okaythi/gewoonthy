@@ -717,6 +717,7 @@ const pageTitle = "Under maintenance...";
         const isDesktop = !window.matchMedia("(pointer: coarse)").matches;
         let currentSideWordLeftEl = null;
         let currentSideWordRightEl = null;
+        let lastTopPos = 50;
 
         const updateLyrics = () => {
           const time = vid.currentTime - (typeof GLOBAL_OFFSET !== 'undefined' ? GLOBAL_OFFSET : 0);
@@ -762,15 +763,17 @@ const pageTitle = "Under maintenance...";
               if (newWord) newWord.classList.add('active');
               
               lastWordTime = Date.now();
+              lyricsContainer.style.opacity = '1';
               
               // Custom Gabrielle Bridge Logic
               if (isDesktop && selectedVideo === 'Gabrielle - 5 fine frøkner.mp4') {
                 const currentVerseText = lyricsData[newVerseIndex].words.map(w => w.word).join('');
                 const bridgePhrases = [
-                  "Du får meg til å kjøre meg opp",
-                  "Det e ingenting som kan kjøre meg ned",
-                  "Du får alt til å sprenge i kok",
-                  "Det e ingen andre eg heller gjør det her med"
+                  "kjøre meg opp",
+                  "kjøre meg ned",
+                  "sprenge i kok",
+                  "ingen andre eg heller",
+                  "spiller ingen rolle"
                 ];
                 
                 const isBridge = bridgePhrases.some(p => currentVerseText.toLowerCase().includes(p.toLowerCase()));
@@ -796,7 +799,15 @@ const pageTitle = "Under maintenance...";
                     // Randomize size and position for BOTH sides (identical to each other)
                     const baseSize = 2 + Math.random() * 3; 
                     const finalSize = wordText.length > 8 ? baseSize / 1.5 : baseSize;
-                    const topPos = (Math.random() * 70 + 10) + '%';
+                    
+                    let newTopPos;
+                    let attempts = 0;
+                    do {
+                      newTopPos = Math.random() * 70 + 10;
+                      attempts++;
+                    } while (Math.abs(newTopPos - lastTopPos) < 20 && attempts < 10);
+                    lastTopPos = newTopPos;
+                    const topPos = newTopPos + '%';
                     
                     const wordElLeft = document.createElement('div');
                     wordElLeft.className = 'gab-side-word';
