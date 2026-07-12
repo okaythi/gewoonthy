@@ -416,6 +416,52 @@ const pageTitle = "I'm cooking something here...";
       z-index: 5;
     }
 
+    .left-controls {
+      display: flex;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 16px;
+      padding-left: 8px;
+    }
+
+    .shuffle-btn {
+      background: none;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      color: var(--fg-dim);
+      transition: color 0.2s, background-color 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: inherit;
+    }
+
+    .shuffle-btn:hover {
+      color: var(--fg);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .shuffle-btn:active {
+      transform: scale(0.95);
+    }
+
+    .shuffle-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .vote-controls {
       display: flex;
       gap: 16px;
@@ -553,6 +599,12 @@ const pageTitle = "I'm cooking something here...";
             </div>
           </div>
           <div class="player-bottom-row">
+            <div class="left-controls">
+              <button id="btn-shuffle" class="shuffle-btn" title="Shuffle song">
+                <svg viewBox="0 0 24 24"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"></path></svg>
+                <span>Shuffle song</span>
+              </button>
+            </div>
             <div class="lyrics-container" id="lyrics-container"></div>
             <div class="vote-controls">
               <button id="btn-like" class="vote-btn" title="Like">
@@ -642,10 +694,10 @@ const pageTitle = "I'm cooking something here...";
       localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
 
       // Setup data
-      const songData = songsDictionary[selectedVideo];
-      const lyricsData = songData.lyricsData;
-      const GLOBAL_OFFSET = songData.globalOffset || 0;
-      const subtitle = songData.subtitle || 'In the meantime, check out this banger:';
+      let songData = songsDictionary[selectedVideo];
+      let lyricsData = songData.lyricsData;
+      let GLOBAL_OFFSET = songData.globalOffset || 0;
+      let subtitle = songData.subtitle || 'In the meantime, check out this banger:';
       
       const subtitleEl = document.getElementById('anthem-subtitle');
       if (subtitleEl) subtitleEl.textContent = subtitle;
@@ -991,7 +1043,7 @@ const pageTitle = "I'm cooking something here...";
       // 3. Vote System
       const btnLike = document.getElementById('btn-like');
       const btnDislike = document.getElementById('btn-dislike');
-      const fileName = selectedVideo;
+      let fileName = selectedVideo;
       
       const updateVoteUI = (l, d) => {
         if(l) btnLike.classList.add('active'); else btnLike.classList.remove('active');
@@ -1023,9 +1075,59 @@ const pageTitle = "I'm cooking something here...";
 
       btnLike.addEventListener('click', () => castVote('like'));
       btnDislike.addEventListener('click', () => castVote('dislike'));
+
+      const btnShuffle = document.getElementById('btn-shuffle');
+      if (btnShuffle) {
+        btnShuffle.addEventListener('click', () => {
+          let rem = availableVideos.filter(v => v !== selectedVideo);
+          if (rem.length === 0) rem = availableVideos;
+          const next = rem[Math.floor(Math.random() * rem.length)];
+          playedVideos.push(next);
+          localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
+
+          selectedVideo = next;
+          fileName = next;
+          songData = songsDictionary[selectedVideo];
+          lyricsData = songData.lyricsData;
+          GLOBAL_OFFSET = songData.globalOffset || 0;
+          subtitle = songData.subtitle || 'In the meantime, check out this banger:';
+          
+          if (subtitleEl) subtitleEl.textContent = subtitle;
+
+          lyricsContainer.innerHTML = '';
+          activeVerseIndex = -1;
+          activeWordIndex = -1;
+          lyricsContainer.style.opacity = '1';
+
+          if (lyricsContainer && typeof lyricsData !== 'undefined') {
+            lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
+              <div class="verse" id="verse-${vIdx}">
+                ${verse.words.map((w, wIdx) => `<span class="word" id="word-${vIdx}-${wIdx}">${w.word} </span>`).join('')}
+              </div>
+            `).join('');
+          }
+
+          if (currentSideWordLeftEl) {
+            currentSideWordLeftEl.remove();
+            currentSideWordLeftEl = null;
+          }
+          if (currentSideWordRightEl) {
+            currentSideWordRightEl.remove();
+            currentSideWordRightEl = null;
+          }
+
+          vid.src = `https://pub-84d4fa711ce34676be048da075e8e815.r2.dev/${encodeURIComponent(selectedVideo)}`;
+          vid.load();
+          vid.play().catch(()=>{});
+
+          fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`, { cache: 'no-store' })
+            .then(r => r.ok ? r.json() : {liked:false, desliked:false})
+            .then(d => updateVoteUI(d.liked, d.desliked))
+            .catch(() => updateVoteUI(false, false));
+        });
+      }
     });
 
-    // 4. Absolute Hell Anti-DevTools / Anti-Copy
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', e => {
       if (e.keyCode === 123 || 
