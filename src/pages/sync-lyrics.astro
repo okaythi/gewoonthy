@@ -8,7 +8,7 @@ const pageTitle = "Lyrics Sync Tool";
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{pageTitle}</title>
-  <style>
+  <style is:global>
     :root {
       --bg: #050505;
       --fg: #ffffff;
@@ -188,6 +188,7 @@ const pageTitle = "Lyrics Sync Tool";
       padding: 0.1rem 0;
       border-radius: 4px;
       transition: color 0.1s, transform 0.1s, background 0.1s;
+      margin-right: 1em;
       color: #333; /* Unsynced */
     }
 
@@ -226,7 +227,7 @@ const pageTitle = "Lyrics Sync Tool";
     <div class="header-left">
       <h1>{pageTitle}</h1>
       <select id="song-selector" class="song-selector"></select>
-      <div class="instructions">Focus right panel. Press SPACE to sync current word.</div>
+      <div class="instructions">Focus right panel. Press SPACE to sync. BACKSPACE to delete word. SHIFT+BACKSPACE to delete verse.</div>
     </div>
     <div class="toolbar">
       <span class="status" id="save-status">Saved to File!</span>
@@ -275,7 +276,7 @@ const pageTitle = "Lyrics Sync Tool";
       
       const loadSong = (key) => {
         currentSongKey = key;
-        vid.src = \`https://media.thiago.qzz.io/media/\${encodeURIComponent(key)}\`;
+        vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(key)}`;
         const songData = songsDictionary[key];
         globalOffset = songData.globalOffset || 0;
         localLyrics = JSON.parse(JSON.stringify(songData.lyricsData)); // clone
@@ -309,6 +310,16 @@ const pageTitle = "Lyrics Sync Tool";
         pane.focus();
       });
 
+      // Play video when pane is focused or clicked
+      const playVideo = () => {
+        if (vid.paused) {
+          vid.play().catch(e => console.log('Autoplay blocked:', e));
+        }
+      };
+      
+      pane.addEventListener('focus', playVideo);
+      pane.addEventListener('click', playVideo);
+
       // Clear all timestamps
       btnClear.addEventListener('click', () => {
         if(confirm('Are you sure you want to wipe ALL existing timestamps? You will have to re-sync the whole song.')) {
@@ -327,18 +338,18 @@ const pageTitle = "Lyrics Sync Tool";
         }
       });
       
-      const render = () => {
-        container.innerHTML = localLyrics.map((verse, vIdx) => \`
-          <div class="verse" id="v-\${vIdx}">
-            <span class="time-badge">\${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
-            \${verse.words.map((w, wIdx) => {
+      function render() {
+        container.innerHTML = localLyrics.map((verse, vIdx) => `
+          <div class="verse" id="v-${vIdx}">
+            <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
+            ${verse.words.map((w, wIdx) => {
               const isSynced = w.start && w.start !== 0;
               const isActive = vIdx === currentV && wIdx === currentW;
-              const classes = \`word \${isActive ? 'active' : ''} \${isSynced ? 'synced' : ''}\`;
-              return \`<span class="\${classes}" data-v="\${vIdx}" data-w="\${wIdx}" id="w-\${vIdx}-\${wIdx}">\${w.word}</span>\`;
+              const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
+              return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
             }).join('')}
           </div>
-        \`).join('');
+        `).join('');
         
         // Add click listeners to seek
         document.querySelectorAll('.word').forEach(el => {
@@ -358,7 +369,7 @@ const pageTitle = "Lyrics Sync Tool";
         });
         
         // Scroll active into view
-        const activeEl = document.getElementById(\`w-\${currentV}-\${currentW}\`);
+        const activeEl = document.getElementById(`w-${currentV}-${currentW}`);
         if (activeEl) {
           activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -419,6 +430,25 @@ const pageTitle = "Lyrics Sync Tool";
             currentV++;
           }
           
+          render();
+        } else if (e.code === 'Backspace') {
+          e.preventDefault();
+          if (currentV >= localLyrics.length) return;
+          
+          if (e.shiftKey) {
+            // Delete entire verse
+            localLyrics.splice(currentV, 1);
+            currentW = 0;
+          } else {
+            // Delete current word
+            localLyrics[currentV].words.splice(currentW, 1);
+            
+            // If verse is now empty, delete it
+            if (localLyrics[currentV].words.length === 0) {
+              localLyrics.splice(currentV, 1);
+              currentW = 0;
+            }
+          }
           render();
         }
       });

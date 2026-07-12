@@ -26,56 +26,51 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "For ",
             "start": 28.57,
-            "end": 28.915
+            "end": 28.95
           },
           {
             "word": "the ",
-            "start": 28.915,
-            "end": 29.261
+            "start": 28.95,
+            "end": 29.33
           },
           {
             "word": "love ",
-            "start": 29.261,
-            "end": 29.606
+            "start": 29.33,
+            "end": 29.71
           },
           {
             "word": "of ",
-            "start": 29.606,
-            "end": 29.952
+            "start": 29.71,
+            "end": 30.09
           },
           {
-            "word": "God ",
-            "start": 29.952,
-            "end": 30.297
-          },
-          {
-            "word": ", ",
-            "start": 30.297,
-            "end": 30.643
+            "word": "God, ",
+            "start": 30.09,
+            "end": 30.47
           },
           {
             "word": "will ",
-            "start": 30.643,
-            "end": 30.988
+            "start": 30.47,
+            "end": 30.85
           },
           {
             "word": "you ",
-            "start": 30.988,
-            "end": 31.334
+            "start": 30.85,
+            "end": 31.23
           },
           {
             "word": "bite ",
-            "start": 31.334,
-            "end": 31.679
+            "start": 31.23,
+            "end": 31.61
           },
           {
             "word": "your ",
-            "start": 31.679,
-            "end": 32.025
+            "start": 31.61,
+            "end": 31.99
           },
           {
             "word": "tongue",
-            "start": 32.025,
+            "start": 31.99,
             "end": 32.37
           }
         ]
@@ -87,36 +82,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Before ",
             "start": 32.37,
-            "end": 32.851
+            "end": 32.932
           },
           {
             "word": "we ",
-            "start": 32.851,
-            "end": 33.333
+            "start": 32.932,
+            "end": 33.493
           },
           {
             "word": "make ",
-            "start": 33.333,
-            "end": 33.814
+            "start": 33.493,
+            "end": 34.055
           },
           {
             "word": "you ",
-            "start": 33.814,
-            "end": 34.296
+            "start": 34.055,
+            "end": 34.617
           },
           {
             "word": "swallow ",
-            "start": 34.296,
-            "end": 34.777
+            "start": 34.617,
+            "end": 35.178
           },
           {
-            "word": "it ",
-            "start": 34.777,
-            "end": 35.259
-          },
-          {
-            "word": "?",
-            "start": 35.259,
+            "word": "it?",
+            "start": 35.178,
             "end": 35.74
           }
         ]
@@ -272,56 +262,51 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "So ",
             "start": 49.23,
-            "end": 49.594
+            "end": 49.63
           },
           {
             "word": "desperate ",
-            "start": 49.594,
-            "end": 49.957
+            "start": 49.63,
+            "end": 50.03
           },
           {
             "word": "and ",
-            "start": 49.957,
-            "end": 50.321
+            "start": 50.03,
+            "end": 50.43
           },
           {
-            "word": "pathetic ",
-            "start": 50.321,
-            "end": 50.685
-          },
-          {
-            "word": ", ",
-            "start": 50.685,
-            "end": 51.048
+            "word": "pathetic, ",
+            "start": 50.43,
+            "end": 50.83
           },
           {
             "word": "I'm ",
-            "start": 51.048,
-            "end": 51.412
+            "start": 50.83,
+            "end": 51.23
           },
           {
             "word": "begging ",
-            "start": 51.412,
-            "end": 51.775
+            "start": 51.23,
+            "end": 51.63
           },
           {
             "word": "you ",
-            "start": 51.775,
-            "end": 52.139
+            "start": 51.63,
+            "end": 52.03
           },
           {
             "word": "to ",
-            "start": 52.139,
-            "end": 52.503
+            "start": 52.03,
+            "end": 52.43
           },
           {
             "word": "spare ",
-            "start": 52.503,
-            "end": 52.866
+            "start": 52.43,
+            "end": 52.83
           },
           {
             "word": "me",
-            "start": 52.866,
+            "start": 52.83,
             "end": 53.23
           }
         ]
@@ -392,14 +377,9 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 61.88
           },
           {
-            "word": "bones ",
+            "word": "bones?",
             "start": 61.88,
             "end": 62.68
-          },
-          {
-            "word": "?",
-            "start": 62.68,
-            "end": 63.48
           }
         ]
       },
@@ -543,36 +523,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 74.22,
-            "end": 74.754
+            "end": 74.843
           },
           {
             "word": "to ",
-            "start": 74.754,
-            "end": 75.289
+            "start": 74.843,
+            "end": 75.467
           },
           {
-            "word": "hell ",
-            "start": 75.289,
-            "end": 75.823
-          },
-          {
-            "word": ", ",
-            "start": 75.823,
-            "end": 76.357
+            "word": "hell, ",
+            "start": 75.467,
+            "end": 76.09
           },
           {
             "word": "for ",
-            "start": 76.357,
-            "end": 76.891
+            "start": 76.09,
+            "end": 76.713
           },
           {
             "word": "heaven's ",
-            "start": 76.891,
-            "end": 77.426
+            "start": 76.713,
+            "end": 77.337
           },
           {
             "word": "sake",
-            "start": 77.426,
+            "start": 77.337,
             "end": 77.96
           }
         ]
@@ -717,36 +692,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 88.13,
-            "end": 88.673
+            "end": 88.763
           },
           {
             "word": "to ",
-            "start": 88.673,
-            "end": 89.216
+            "start": 88.763,
+            "end": 89.397
           },
           {
-            "word": "hell ",
-            "start": 89.216,
-            "end": 89.759
-          },
-          {
-            "word": ", ",
-            "start": 89.759,
-            "end": 90.301
+            "word": "hell, ",
+            "start": 89.397,
+            "end": 90.03
           },
           {
             "word": "for ",
-            "start": 90.301,
-            "end": 90.844
+            "start": 90.03,
+            "end": 90.663
           },
           {
             "word": "heaven's ",
-            "start": 90.844,
-            "end": 91.387
+            "start": 90.663,
+            "end": 91.297
           },
           {
             "word": "sake",
-            "start": 91.387,
+            "start": 91.297,
             "end": 91.93
           }
         ]
@@ -758,36 +728,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 95.16,
-            "end": 95.641
+            "end": 95.722
           },
           {
             "word": "to ",
-            "start": 95.641,
-            "end": 96.123
+            "start": 95.722,
+            "end": 96.283
           },
           {
-            "word": "hell ",
-            "start": 96.123,
-            "end": 96.604
-          },
-          {
-            "word": ", ",
-            "start": 96.604,
-            "end": 97.086
+            "word": "hell, ",
+            "start": 96.283,
+            "end": 96.845
           },
           {
             "word": "for ",
-            "start": 97.086,
-            "end": 97.567
+            "start": 96.845,
+            "end": 97.407
           },
           {
             "word": "heaven's ",
-            "start": 97.567,
-            "end": 98.049
+            "start": 97.407,
+            "end": 97.968
           },
           {
             "word": "sake",
-            "start": 98.049,
+            "start": 97.968,
             "end": 98.53
           }
         ]
@@ -799,56 +764,46 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "No ",
             "start": 102.06,
-            "end": 102.374
+            "end": 102.443
           },
           {
             "word": "one ",
-            "start": 102.374,
-            "end": 102.687
+            "start": 102.443,
+            "end": 102.827
           },
           {
             "word": "wants ",
-            "start": 102.687,
-            "end": 103.001
+            "start": 102.827,
+            "end": 103.21
           },
           {
             "word": "to ",
-            "start": 103.001,
-            "end": 103.315
+            "start": 103.21,
+            "end": 103.593
           },
           {
             "word": "hear ",
-            "start": 103.315,
-            "end": 103.628
+            "start": 103.593,
+            "end": 103.977
           },
           {
-            "word": "you ",
-            "start": 103.628,
-            "end": 103.942
-          },
-          {
-            "word": "( ",
-            "start": 103.942,
-            "end": 104.255
+            "word": "you ( ",
+            "start": 103.977,
+            "end": 104.36
           },
           {
             "word": "save ",
-            "start": 104.255,
-            "end": 104.569
+            "start": 104.36,
+            "end": 104.743
           },
           {
             "word": "your ",
-            "start": 104.569,
-            "end": 104.883
+            "start": 104.743,
+            "end": 105.127
           },
           {
-            "word": "breath ",
-            "start": 104.883,
-            "end": 105.196
-          },
-          {
-            "word": ")",
-            "start": 105.196,
+            "word": "breath)",
+            "start": 105.127,
             "end": 105.51
           }
         ]
@@ -896,66 +851,56 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "So ",
             "start": 108.39,
-            "end": 108.685
+            "end": 108.739
           },
           {
             "word": "desperate ",
-            "start": 108.685,
-            "end": 108.981
+            "start": 108.739,
+            "end": 109.088
           },
           {
             "word": "and ",
-            "start": 108.981,
-            "end": 109.276
+            "start": 109.088,
+            "end": 109.437
           },
           {
-            "word": "pathetic ",
-            "start": 109.276,
-            "end": 109.572
-          },
-          {
-            "word": ", ",
-            "start": 109.572,
-            "end": 109.867
+            "word": "pathetic, ",
+            "start": 109.437,
+            "end": 109.786
           },
           {
             "word": "you ",
-            "start": 109.867,
-            "end": 110.162
+            "start": 109.786,
+            "end": 110.135
           },
           {
             "word": "think ",
-            "start": 110.162,
-            "end": 110.458
+            "start": 110.135,
+            "end": 110.485
           },
           {
             "word": "that ",
-            "start": 110.458,
-            "end": 110.753
+            "start": 110.485,
+            "end": 110.834
           },
           {
             "word": "no ",
-            "start": 110.753,
-            "end": 111.048
+            "start": 110.834,
+            "end": 111.183
           },
           {
             "word": "one ",
-            "start": 111.048,
-            "end": 111.344
+            "start": 111.183,
+            "end": 111.532
           },
           {
             "word": "sees ",
-            "start": 111.344,
-            "end": 111.639
+            "start": 111.532,
+            "end": 111.881
           },
           {
-            "word": "this ",
-            "start": 111.639,
-            "end": 111.935
-          },
-          {
-            "word": "?",
-            "start": 111.935,
+            "word": "this?",
+            "start": 111.881,
             "end": 112.23
           }
         ]
@@ -967,51 +912,46 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "I ",
             "start": 112.23,
-            "end": 112.629
+            "end": 112.673
           },
           {
             "word": "think ",
-            "start": 112.629,
-            "end": 113.028
+            "start": 112.673,
+            "end": 113.117
           },
           {
             "word": "it's ",
-            "start": 113.028,
-            "end": 113.427
+            "start": 113.117,
+            "end": 113.56
           },
           {
             "word": "time ",
-            "start": 113.427,
-            "end": 113.826
+            "start": 113.56,
+            "end": 114.003
           },
           {
             "word": "you ",
-            "start": 113.826,
-            "end": 114.225
+            "start": 114.003,
+            "end": 114.447
           },
           {
             "word": "knew ",
-            "start": 114.225,
-            "end": 114.624
+            "start": 114.447,
+            "end": 114.89
           },
           {
             "word": "the ",
-            "start": 114.624,
-            "end": 115.023
+            "start": 114.89,
+            "end": 115.333
           },
           {
-            "word": "truth ",
-            "start": 115.023,
-            "end": 115.422
-          },
-          {
-            "word": ", ",
-            "start": 115.422,
-            "end": 115.821
+            "word": "truth, ",
+            "start": 115.333,
+            "end": 115.777
           },
           {
             "word": "yeah",
-            "start": 115.821,
+            "start": 115.777,
             "end": 116.22
           }
         ]
@@ -1156,36 +1096,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 126.43,
-            "end": 126.961
+            "end": 127.05
           },
           {
             "word": "to ",
-            "start": 126.961,
-            "end": 127.493
+            "start": 127.05,
+            "end": 127.67
           },
           {
-            "word": "hell ",
-            "start": 127.493,
-            "end": 128.024
-          },
-          {
-            "word": ", ",
-            "start": 128.024,
-            "end": 128.556
+            "word": "hell, ",
+            "start": 127.67,
+            "end": 128.29
           },
           {
             "word": "for ",
-            "start": 128.556,
-            "end": 129.087
+            "start": 128.29,
+            "end": 128.91
           },
           {
             "word": "heaven's ",
-            "start": 129.087,
-            "end": 129.619
+            "start": 128.91,
+            "end": 129.53
           },
           {
             "word": "sake",
-            "start": 129.619,
+            "start": 129.53,
             "end": 130.15
           }
         ]
@@ -1330,36 +1265,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 140.39,
-            "end": 140.904
+            "end": 140.99
           },
           {
             "word": "to ",
-            "start": 140.904,
-            "end": 141.419
+            "start": 140.99,
+            "end": 141.59
           },
           {
-            "word": "hell ",
-            "start": 141.419,
-            "end": 141.933
-          },
-          {
-            "word": ", ",
-            "start": 141.933,
-            "end": 142.447
+            "word": "hell, ",
+            "start": 141.59,
+            "end": 142.19
           },
           {
             "word": "for ",
-            "start": 142.447,
-            "end": 142.961
+            "start": 142.19,
+            "end": 142.79
           },
           {
             "word": "heaven's ",
-            "start": 142.961,
-            "end": 143.476
+            "start": 142.79,
+            "end": 143.39
           },
           {
             "word": "sake",
-            "start": 143.476,
+            "start": 143.39,
             "end": 143.99
           }
         ]
@@ -1399,14 +1329,9 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 148.79
           },
           {
-            "word": "bones ",
+            "word": "bones?",
             "start": 148.79,
             "end": 149.59
-          },
-          {
-            "word": "?",
-            "start": 149.59,
-            "end": 150.39
           }
         ]
       },
@@ -1438,46 +1363,41 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "You're ",
             "start": 168.36,
-            "end": 168.757
+            "end": 168.806
           },
           {
             "word": "not ",
-            "start": 168.757,
-            "end": 169.153
+            "start": 168.806,
+            "end": 169.252
           },
           {
             "word": "a ",
-            "start": 169.153,
-            "end": 169.55
+            "start": 169.252,
+            "end": 169.699
           },
           {
-            "word": "shepherd ",
-            "start": 169.55,
-            "end": 169.947
-          },
-          {
-            "word": ", ",
-            "start": 169.947,
-            "end": 170.343
+            "word": "shepherd, ",
+            "start": 169.699,
+            "end": 170.145
           },
           {
             "word": "you're ",
-            "start": 170.343,
-            "end": 170.74
+            "start": 170.145,
+            "end": 170.591
           },
           {
             "word": "just ",
-            "start": 170.74,
-            "end": 171.137
+            "start": 170.591,
+            "end": 171.038
           },
           {
             "word": "a ",
-            "start": 171.137,
-            "end": 171.533
+            "start": 171.038,
+            "end": 171.484
           },
           {
             "word": "sheep",
-            "start": 171.533,
+            "start": 171.484,
             "end": 171.93
           }
         ]
@@ -1564,68 +1484,58 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 184.15,
         "words": [
           {
-            "word": "Feed ",
+            "word": "Feed ' ",
             "start": 178.64,
-            "end": 179.064
-          },
-          {
-            "word": "' ",
-            "start": 179.064,
-            "end": 179.488
+            "end": 179.141
           },
           {
             "word": "em ",
-            "start": 179.488,
-            "end": 179.912
+            "start": 179.141,
+            "end": 179.642
           },
           {
             "word": "to ",
-            "start": 179.912,
-            "end": 180.335
+            "start": 179.642,
+            "end": 180.143
           },
           {
             "word": "the ",
-            "start": 180.335,
-            "end": 180.759
+            "start": 180.143,
+            "end": 180.644
           },
           {
             "word": "sharks ",
-            "start": 180.759,
-            "end": 181.183
+            "start": 180.644,
+            "end": 181.145
           },
           {
             "word": "and ",
-            "start": 181.183,
-            "end": 181.607
+            "start": 181.145,
+            "end": 181.645
           },
           {
-            "word": "throw ",
-            "start": 181.607,
-            "end": 182.031
-          },
-          {
-            "word": "' ",
-            "start": 182.031,
-            "end": 182.455
+            "word": "throw ' ",
+            "start": 181.645,
+            "end": 182.146
           },
           {
             "word": "em ",
-            "start": 182.455,
-            "end": 182.878
+            "start": 182.146,
+            "end": 182.647
           },
           {
             "word": "to ",
-            "start": 182.878,
-            "end": 183.302
+            "start": 182.647,
+            "end": 183.148
           },
           {
             "word": "the ",
-            "start": 183.302,
-            "end": 183.726
+            "start": 183.148,
+            "end": 183.649
           },
           {
             "word": "wolves",
-            "start": 183.726,
+            "start": 183.649,
             "end": 184.15
           }
         ]
@@ -1770,36 +1680,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 206.4,
-            "end": 206.934
+            "end": 207.023
           },
           {
             "word": "to ",
-            "start": 206.934,
-            "end": 207.469
+            "start": 207.023,
+            "end": 207.647
           },
           {
-            "word": "hell ",
-            "start": 207.469,
-            "end": 208.003
-          },
-          {
-            "word": ", ",
-            "start": 208.003,
-            "end": 208.537
+            "word": "hell, ",
+            "start": 207.647,
+            "end": 208.27
           },
           {
             "word": "for ",
-            "start": 208.537,
-            "end": 209.071
+            "start": 208.27,
+            "end": 208.893
           },
           {
             "word": "heaven's ",
-            "start": 209.071,
-            "end": 209.606
+            "start": 208.893,
+            "end": 209.517
           },
           {
             "word": "sake",
-            "start": 209.606,
+            "start": 209.517,
             "end": 210.14
           }
         ]
@@ -1944,36 +1849,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 220.36,
-            "end": 220.861
+            "end": 220.945
           },
           {
             "word": "to ",
-            "start": 220.861,
-            "end": 221.363
+            "start": 220.945,
+            "end": 221.53
           },
           {
-            "word": "hell ",
-            "start": 221.363,
-            "end": 221.864
-          },
-          {
-            "word": ", ",
-            "start": 221.864,
-            "end": 222.366
+            "word": "hell, ",
+            "start": 221.53,
+            "end": 222.115
           },
           {
             "word": "for ",
-            "start": 222.366,
-            "end": 222.867
+            "start": 222.115,
+            "end": 222.7
           },
           {
             "word": "heaven's ",
-            "start": 222.867,
-            "end": 223.369
+            "start": 222.7,
+            "end": 223.285
           },
           {
             "word": "sake",
-            "start": 223.369,
+            "start": 223.285,
             "end": 223.87
           }
         ]
@@ -1985,36 +1885,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 223.87,
-            "end": 224.37
+            "end": 224.453
           },
           {
             "word": "to ",
-            "start": 224.37,
-            "end": 224.87
+            "start": 224.453,
+            "end": 225.037
           },
           {
-            "word": "hell ",
-            "start": 224.87,
-            "end": 225.37
-          },
-          {
-            "word": ", ",
-            "start": 225.37,
-            "end": 225.87
+            "word": "hell, ",
+            "start": 225.037,
+            "end": 225.62
           },
           {
             "word": "for ",
-            "start": 225.87,
-            "end": 226.37
+            "start": 225.62,
+            "end": 226.203
           },
           {
             "word": "heaven's ",
-            "start": 226.37,
-            "end": 226.87
+            "start": 226.203,
+            "end": 226.787
           },
           {
             "word": "sake",
-            "start": 226.87,
+            "start": 226.787,
             "end": 227.37
           }
         ]
@@ -2026,36 +1921,31 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 227.37,
-            "end": 227.85
+            "end": 227.93
           },
           {
             "word": "to ",
-            "start": 227.85,
-            "end": 228.33
+            "start": 227.93,
+            "end": 228.49
           },
           {
-            "word": "hell ",
-            "start": 228.33,
-            "end": 228.81
-          },
-          {
-            "word": ", ",
-            "start": 228.81,
-            "end": 229.29
+            "word": "hell, ",
+            "start": 228.49,
+            "end": 229.05
           },
           {
             "word": "for ",
-            "start": 229.29,
-            "end": 229.77
+            "start": 229.05,
+            "end": 229.61
           },
           {
             "word": "heaven's ",
-            "start": 229.77,
-            "end": 230.25
+            "start": 229.61,
+            "end": 230.17
           },
           {
             "word": "sake",
-            "start": 230.25,
+            "start": 230.17,
             "end": 230.73
           }
         ]
@@ -2067,1712 +1957,2179 @@ export const songsDictionary: Record<string, SongData> = {
           {
             "word": "Go ",
             "start": 230.73,
-            "end": 231.146
+            "end": 231.215
           },
           {
             "word": "to ",
-            "start": 231.146,
-            "end": 231.561
+            "start": 231.215,
+            "end": 231.7
           },
           {
-            "word": "hell ",
-            "start": 231.561,
-            "end": 231.977
-          },
-          {
-            "word": ", ",
-            "start": 231.977,
-            "end": 232.393
+            "word": "hell, ",
+            "start": 231.7,
+            "end": 232.185
           },
           {
             "word": "for ",
-            "start": 232.393,
-            "end": 232.809
+            "start": 232.185,
+            "end": 232.67
           },
           {
             "word": "heaven's ",
-            "start": 232.809,
-            "end": 233.224
+            "start": 232.67,
+            "end": 233.155
           },
           {
             "word": "sake",
-            "start": 233.224,
+            "start": 233.155,
             "end": 233.64
           }
         ]
       }
     ]
   },
-  "The Chemical Brothers - Eve Of Destruction.mp4": {
+  "IC3PEAK - Boo-Hoo.mp4": {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 0.02,
-        "verseEnd": 2.59,
+        "verseStart": 2.32,
+        "verseEnd": 8.27,
         "words": [
           {
-            "word": "The ",
-            "start": 0.02,
-            "end": 0.662
+            "word": "Плак- ",
+            "start": 2.32,
+            "end": 3.12
           },
           {
-            "word": "eve ",
-            "start": 0.662,
-            "end": 1.305
+            "word": "плак, ",
+            "start": 3.12,
+            "end": 3.92
           },
           {
-            "word": "of ",
-            "start": 1.305,
-            "end": 1.947
+            "word": "плак- ",
+            "start": 3.92,
+            "end": 4.72
           },
           {
-            "word": "destruction",
-            "start": 1.947,
-            "end": 2.59
+            "word": "плак",
+            "start": 4.72,
+            "end": 5.52
           }
         ]
       },
       {
-        "verseStart": 2.59,
-        "verseEnd": 6.96,
+        "verseStart": 8.27,
+        "verseEnd": 12.21,
         "words": [
           {
-            "word": "The ",
-            "start": 2.59,
-            "end": 3.39
+            "word": "Плак- ",
+            "start": 8.27,
+            "end": 9.07
           },
           {
-            "word": "eve ",
-            "start": 3.39,
-            "end": 4.19
+            "word": "плак, ",
+            "start": 9.07,
+            "end": 9.87
           },
           {
-            "word": "of ",
-            "start": 4.19,
-            "end": 4.99
+            "word": "плак- ",
+            "start": 9.87,
+            "end": 10.67
           },
           {
-            "word": "destruction",
-            "start": 4.99,
-            "end": 5.79
+            "word": "плак",
+            "start": 10.67,
+            "end": 11.47
           }
         ]
       },
       {
-        "verseStart": 6.96,
-        "verseEnd": 11.42,
+        "verseStart": 12.21,
+        "verseEnd": 15.15,
         "words": [
           {
-            "word": "The ",
-            "start": 6.96,
-            "end": 7.76
+            "word": "Я ",
+            "start": 12.21,
+            "end": 12.504
           },
           {
-            "word": "eve ",
-            "start": 7.76,
-            "end": 8.56
+            "word": "тебе ",
+            "start": 12.504,
+            "end": 12.798
           },
           {
-            "word": "of ",
-            "start": 8.56,
-            "end": 9.36
+            "word": "писала ",
+            "start": 12.798,
+            "end": 13.092
           },
           {
-            "word": "destruction",
-            "start": 9.36,
-            "end": 10.16
+            "word": "и ",
+            "start": 13.092,
+            "end": 13.386
+          },
+          {
+            "word": "ждала ",
+            "start": 13.386,
+            "end": 13.68
+          },
+          {
+            "word": "тебя ",
+            "start": 13.68,
+            "end": 13.974
+          },
+          {
+            "word": "в ",
+            "start": 13.974,
+            "end": 14.268
+          },
+          {
+            "word": "ночи ( ",
+            "start": 14.268,
+            "end": 14.562
+          },
+          {
+            "word": "плак- ",
+            "start": 14.562,
+            "end": 14.856
+          },
+          {
+            "word": "плак)",
+            "start": 14.856,
+            "end": 15.15
           }
         ]
       },
       {
-        "verseStart": 11.42,
-        "verseEnd": 14.23,
+        "verseStart": 15.15,
+        "verseEnd": 18.28,
         "words": [
           {
-            "word": "The ",
-            "start": 11.42,
-            "end": 12.123
+            "word": "Ты ",
+            "start": 15.15,
+            "end": 15.498
           },
           {
-            "word": "eve ",
-            "start": 12.123,
-            "end": 12.825
+            "word": "не ",
+            "start": 15.498,
+            "end": 15.846
           },
           {
-            "word": "of ",
-            "start": 12.825,
-            "end": 13.527
+            "word": "отвечаешь ",
+            "start": 15.846,
+            "end": 16.193
           },
           {
-            "word": "destruction",
-            "start": 13.527,
-            "end": 14.23
+            "word": "больше ",
+            "start": 16.193,
+            "end": 16.541
+          },
+          {
+            "word": "на ",
+            "start": 16.541,
+            "end": 16.889
+          },
+          {
+            "word": "мои ",
+            "start": 16.889,
+            "end": 17.237
+          },
+          {
+            "word": "звонки ( ",
+            "start": 17.237,
+            "end": 17.584
+          },
+          {
+            "word": "плак- ",
+            "start": 17.584,
+            "end": 17.932
+          },
+          {
+            "word": "плак)",
+            "start": 17.932,
+            "end": 18.28
           }
         ]
       },
       {
-        "verseStart": 14.23,
-        "verseEnd": 17.85,
+        "verseStart": 18.28,
+        "verseEnd": 21.43,
         "words": [
           {
-            "word": "The ",
-            "start": 14.23,
-            "end": 15.03
+            "word": "Каждый ",
+            "start": 18.28,
+            "end": 18.674
           },
           {
-            "word": "eve ",
-            "start": 15.03,
-            "end": 15.83
+            "word": "вечер ",
+            "start": 18.674,
+            "end": 19.068
           },
           {
-            "word": "of ",
-            "start": 15.83,
-            "end": 16.63
+            "word": "оставляю ",
+            "start": 19.068,
+            "end": 19.461
           },
           {
-            "word": "destruction",
-            "start": 16.63,
-            "end": 17.43
+            "word": "под ",
+            "start": 19.461,
+            "end": 19.855
+          },
+          {
+            "word": "подушкой ",
+            "start": 19.855,
+            "end": 20.249
+          },
+          {
+            "word": "зуб ( ",
+            "start": 20.249,
+            "end": 20.642
+          },
+          {
+            "word": "плак- ",
+            "start": 20.642,
+            "end": 21.036
+          },
+          {
+            "word": "плак)",
+            "start": 21.036,
+            "end": 21.43
           }
         ]
       },
       {
-        "verseStart": 17.85,
-        "verseEnd": 21.6,
+        "verseStart": 21.43,
+        "verseEnd": 24.49,
         "words": [
           {
-            "word": "The ",
-            "start": 17.85,
-            "end": 18.65
+            "word": "Умоляю ",
+            "start": 21.43,
+            "end": 21.867
           },
           {
-            "word": "eve ",
-            "start": 18.65,
-            "end": 19.45
+            "word": "небеса ",
+            "start": 21.867,
+            "end": 22.304
           },
           {
-            "word": "of ",
-            "start": 19.45,
-            "end": 20.25
+            "word": "назад ",
+            "start": 22.304,
+            "end": 22.741
           },
           {
-            "word": "destruction",
-            "start": 20.25,
-            "end": 21.05
+            "word": "тебя ",
+            "start": 22.741,
+            "end": 23.179
+          },
+          {
+            "word": "вернуть ( ",
+            "start": 23.179,
+            "end": 23.616
+          },
+          {
+            "word": "плак- ",
+            "start": 23.616,
+            "end": 24.053
+          },
+          {
+            "word": "плак)",
+            "start": 24.053,
+            "end": 24.49
           }
         ]
       },
       {
-        "verseStart": 21.6,
-        "verseEnd": 26.41,
+        "verseStart": 24.49,
+        "verseEnd": 27.45,
         "words": [
           {
-            "word": "The ",
-            "start": 21.6,
-            "end": 22.4
+            "word": "Я ",
+            "start": 24.49,
+            "end": 24.786
           },
           {
-            "word": "eve ",
-            "start": 22.4,
-            "end": 23.2
+            "word": "была ",
+            "start": 24.786,
+            "end": 25.082
           },
           {
-            "word": "of ",
-            "start": 23.2,
-            "end": 24
+            "word": "хорошей, ",
+            "start": 25.082,
+            "end": 25.378
           },
           {
-            "word": "destruction",
-            "start": 24,
-            "end": 24.8
+            "word": "а ",
+            "start": 25.378,
+            "end": 25.674
+          },
+          {
+            "word": "плохой ",
+            "start": 25.674,
+            "end": 25.97
+          },
+          {
+            "word": "я ",
+            "start": 25.97,
+            "end": 26.266
+          },
+          {
+            "word": "не ",
+            "start": 26.266,
+            "end": 26.562
+          },
+          {
+            "word": "была ( ",
+            "start": 26.562,
+            "end": 26.858
+          },
+          {
+            "word": "плак- ",
+            "start": 26.858,
+            "end": 27.154
+          },
+          {
+            "word": "плак)",
+            "start": 27.154,
+            "end": 27.45
           }
         ]
       },
       {
-        "verseStart": 26.41,
-        "verseEnd": 30.44,
+        "verseStart": 27.45,
+        "verseEnd": 30.46,
         "words": [
           {
-            "word": "The ",
-            "start": 26.41,
-            "end": 26.813
+            "word": "Я ",
+            "start": 27.45,
+            "end": 27.751
           },
           {
-            "word": "eve ",
-            "start": 26.813,
-            "end": 27.216
+            "word": "всю ",
+            "start": 27.751,
+            "end": 28.052
           },
           {
-            "word": "of ",
-            "start": 27.216,
-            "end": 27.619
+            "word": "жизнь, ",
+            "start": 28.052,
+            "end": 28.353
           },
           {
-            "word": "destruction ",
-            "start": 27.619,
-            "end": 28.022
+            "word": "как ",
+            "start": 28.353,
+            "end": 28.654
           },
           {
-            "word": "( ",
-            "start": 28.022,
-            "end": 28.425
+            "word": "паинька, ",
+            "start": 28.654,
+            "end": 28.955
           },
           {
-            "word": "Human ",
-            "start": 28.425,
-            "end": 28.828
+            "word": "по ",
+            "start": 28.955,
+            "end": 29.256
           },
           {
-            "word": "minds ",
-            "start": 28.828,
-            "end": 29.231
+            "word": "правилам ",
+            "start": 29.256,
+            "end": 29.557
           },
           {
-            "word": "are ",
-            "start": 29.231,
-            "end": 29.634
+            "word": "жила ( ",
+            "start": 29.557,
+            "end": 29.858
           },
           {
-            "word": "simplified ",
-            "start": 29.634,
-            "end": 30.037
+            "word": "плак- ",
+            "start": 29.858,
+            "end": 30.159
           },
           {
-            "word": ")",
-            "start": 30.037,
-            "end": 30.44
+            "word": "плак)",
+            "start": 30.159,
+            "end": 30.46
           }
         ]
       },
       {
-        "verseStart": 30.44,
-        "verseEnd": 34.5,
+        "verseStart": 30.46,
+        "verseEnd": 33.51,
         "words": [
           {
-            "word": "The ",
-            "start": 30.44,
-            "end": 30.891
+            "word": "Надоело ",
+            "start": 30.46,
+            "end": 30.896
           },
           {
-            "word": "eve ",
-            "start": 30.891,
-            "end": 31.342
+            "word": "плакать, ",
+            "start": 30.896,
+            "end": 31.331
           },
           {
-            "word": "of ",
-            "start": 31.342,
-            "end": 31.793
+            "word": "надоело ",
+            "start": 31.331,
+            "end": 31.767
           },
           {
-            "word": "destruction ",
-            "start": 31.793,
-            "end": 32.244
+            "word": "мне ",
+            "start": 31.767,
+            "end": 32.203
           },
           {
-            "word": "( ",
-            "start": 32.244,
-            "end": 32.696
+            "word": "страдать ( ",
+            "start": 32.203,
+            "end": 32.639
           },
           {
-            "word": "Sacrifice ",
-            "start": 32.696,
-            "end": 33.147
+            "word": "плак- ",
+            "start": 32.639,
+            "end": 33.074
           },
           {
-            "word": "is ",
-            "start": 33.147,
-            "end": 33.598
-          },
-          {
-            "word": "justified ",
-            "start": 33.598,
-            "end": 34.049
-          },
-          {
-            "word": ")",
-            "start": 34.049,
-            "end": 34.5
+            "word": "плак)",
+            "start": 33.074,
+            "end": 33.51
           }
         ]
       },
       {
-        "verseStart": 34.5,
-        "verseEnd": 38.04,
+        "verseStart": 33.51,
+        "verseEnd": 36.88,
         "words": [
           {
-            "word": "The ",
-            "start": 34.5,
-            "end": 34.854
+            "word": "Всё ",
+            "start": 33.51,
+            "end": 33.884
           },
           {
-            "word": "eve ",
-            "start": 34.854,
-            "end": 35.208
+            "word": "равно ",
+            "start": 33.884,
+            "end": 34.259
           },
           {
-            "word": "of ",
-            "start": 35.208,
-            "end": 35.562
+            "word": "не ",
+            "start": 34.259,
+            "end": 34.633
           },
           {
-            "word": "destruction ",
-            "start": 35.562,
-            "end": 35.916
+            "word": "выйдет ",
+            "start": 34.633,
+            "end": 35.008
           },
           {
-            "word": "( ",
-            "start": 35.916,
-            "end": 36.27
+            "word": "свою ",
+            "start": 35.008,
+            "end": 35.382
           },
           {
-            "word": "Human ",
-            "start": 36.27,
-            "end": 36.624
+            "word": "смерть ",
+            "start": 35.382,
+            "end": 35.757
           },
           {
-            "word": "minds ",
-            "start": 36.624,
-            "end": 36.978
+            "word": "предугадать ( ",
+            "start": 35.757,
+            "end": 36.131
           },
           {
-            "word": "are ",
-            "start": 36.978,
-            "end": 37.332
+            "word": "плак- ",
+            "start": 36.131,
+            "end": 36.506
           },
           {
-            "word": "simplified ",
-            "start": 37.332,
-            "end": 37.686
-          },
-          {
-            "word": ")",
-            "start": 37.686,
-            "end": 38.04
+            "word": "плак)",
+            "start": 36.506,
+            "end": 36.88
           }
         ]
       },
       {
-        "verseStart": 38.04,
-        "verseEnd": 41.22,
+        "verseStart": 36.88,
+        "verseEnd": 40.08,
         "words": [
           {
-            "word": "The ",
-            "start": 38.04,
-            "end": 38.393
+            "word": "Ла- ",
+            "start": 36.88,
+            "end": 37.28
           },
           {
-            "word": "eve ",
-            "start": 38.393,
-            "end": 38.747
+            "word": "ла- ",
+            "start": 37.28,
+            "end": 37.68
           },
           {
-            "word": "of ",
-            "start": 38.747,
-            "end": 39.1
+            "word": "ла- ",
+            "start": 37.68,
+            "end": 38.08
           },
           {
-            "word": "destruction ",
-            "start": 39.1,
-            "end": 39.453
+            "word": "ла- ",
+            "start": 38.08,
+            "end": 38.48
           },
           {
-            "word": "( ",
-            "start": 39.453,
-            "end": 39.807
+            "word": "ла- ",
+            "start": 38.48,
+            "end": 38.88
           },
           {
-            "word": "Sacrifice ",
-            "start": 39.807,
-            "end": 40.16
+            "word": "а- ",
+            "start": 38.88,
+            "end": 39.28
           },
           {
-            "word": "is ",
-            "start": 40.16,
-            "end": 40.513
+            "word": "а- ",
+            "start": 39.28,
+            "end": 39.68
           },
           {
-            "word": "justified ",
-            "start": 40.513,
-            "end": 40.867
-          },
-          {
-            "word": ")",
-            "start": 40.867,
-            "end": 41.22
+            "word": "а",
+            "start": 39.68,
+            "end": 40.08
           }
         ]
       },
       {
-        "verseStart": 41.22,
-        "verseEnd": 45.07,
+        "verseStart": 40.08,
+        "verseEnd": 43.19,
         "words": [
           {
-            "word": "The ",
-            "start": 41.22,
-            "end": 41.605
+            "word": "Ла- ",
+            "start": 40.08,
+            "end": 40.469
           },
           {
-            "word": "eve ",
-            "start": 41.605,
-            "end": 41.99
+            "word": "ла- ",
+            "start": 40.469,
+            "end": 40.858
           },
           {
-            "word": "of ",
-            "start": 41.99,
-            "end": 42.375
+            "word": "ла- ",
+            "start": 40.858,
+            "end": 41.246
           },
           {
-            "word": "destruction ",
-            "start": 42.375,
-            "end": 42.76
+            "word": "ла- ",
+            "start": 41.246,
+            "end": 41.635
           },
           {
-            "word": "( ",
-            "start": 42.76,
-            "end": 43.145
+            "word": "ла- ",
+            "start": 41.635,
+            "end": 42.024
           },
           {
-            "word": "Human ",
-            "start": 43.145,
-            "end": 43.53
+            "word": "а- ",
+            "start": 42.024,
+            "end": 42.412
           },
           {
-            "word": "minds ",
-            "start": 43.53,
-            "end": 43.915
+            "word": "а- ",
+            "start": 42.412,
+            "end": 42.801
           },
           {
-            "word": "are ",
-            "start": 43.915,
-            "end": 44.3
-          },
-          {
-            "word": "simplified ",
-            "start": 44.3,
-            "end": 44.685
-          },
-          {
-            "word": ")",
-            "start": 44.685,
-            "end": 45.07
+            "word": "а",
+            "start": 42.801,
+            "end": 43.19
           }
         ]
       },
       {
-        "verseStart": 45.07,
-        "verseEnd": 48.51,
+        "verseStart": 43.19,
+        "verseEnd": 46.01,
         "words": [
           {
-            "word": "The ",
-            "start": 45.07,
-            "end": 45.452
+            "word": "Ла- ",
+            "start": 43.19,
+            "end": 43.542
           },
           {
-            "word": "eve ",
-            "start": 45.452,
-            "end": 45.834
+            "word": "ла- ",
+            "start": 43.542,
+            "end": 43.895
           },
           {
-            "word": "of ",
-            "start": 45.834,
-            "end": 46.217
+            "word": "ла- ",
+            "start": 43.895,
+            "end": 44.247
           },
           {
-            "word": "destruction ",
-            "start": 46.217,
-            "end": 46.599
+            "word": "ла- ",
+            "start": 44.247,
+            "end": 44.6
           },
           {
-            "word": "( ",
-            "start": 46.599,
-            "end": 46.981
+            "word": "ла- ",
+            "start": 44.6,
+            "end": 44.953
           },
           {
-            "word": "Sacrifice ",
-            "start": 46.981,
-            "end": 47.363
+            "word": "а- ",
+            "start": 44.953,
+            "end": 45.305
           },
           {
-            "word": "is ",
-            "start": 47.363,
-            "end": 47.746
+            "word": "а- ",
+            "start": 45.305,
+            "end": 45.657
           },
           {
-            "word": "justified ",
-            "start": 47.746,
-            "end": 48.128
-          },
-          {
-            "word": ")",
-            "start": 48.128,
-            "end": 48.51
+            "word": "а",
+            "start": 45.657,
+            "end": 46.01
           }
         ]
       },
       {
-        "verseStart": 48.51,
-        "verseEnd": 51.93,
+        "verseStart": 46.01,
+        "verseEnd": 48.9,
         "words": [
           {
-            "word": "The ",
-            "start": 48.51,
-            "end": 48.852
+            "word": "Ла- ",
+            "start": 46.01,
+            "end": 46.371
           },
           {
-            "word": "eve ",
-            "start": 48.852,
-            "end": 49.194
+            "word": "ла- ",
+            "start": 46.371,
+            "end": 46.733
           },
           {
-            "word": "of ",
-            "start": 49.194,
-            "end": 49.536
+            "word": "ла- ",
+            "start": 46.733,
+            "end": 47.094
           },
           {
-            "word": "destruction ",
-            "start": 49.536,
-            "end": 49.878
+            "word": "ла- ",
+            "start": 47.094,
+            "end": 47.455
           },
           {
-            "word": "( ",
-            "start": 49.878,
-            "end": 50.22
+            "word": "ла- ",
+            "start": 47.455,
+            "end": 47.816
           },
           {
-            "word": "Human ",
-            "start": 50.22,
-            "end": 50.562
+            "word": "а- ",
+            "start": 47.816,
+            "end": 48.177
           },
           {
-            "word": "minds ",
-            "start": 50.562,
-            "end": 50.904
+            "word": "а- ",
+            "start": 48.177,
+            "end": 48.539
           },
           {
-            "word": "are ",
-            "start": 50.904,
-            "end": 51.246
-          },
-          {
-            "word": "simplified ",
-            "start": 51.246,
-            "end": 51.588
-          },
-          {
-            "word": ")",
-            "start": 51.588,
-            "end": 51.93
+            "word": "а",
+            "start": 48.539,
+            "end": 48.9
           }
         ]
       },
       {
-        "verseStart": 51.93,
-        "verseEnd": 55.62,
+        "verseStart": 48.9,
+        "verseEnd": 51.62,
         "words": [
           {
-            "word": "The ",
-            "start": 51.93,
-            "end": 52.34
+            "word": "Мама ",
+            "start": 48.9,
+            "end": 49.444
           },
           {
-            "word": "eve ",
-            "start": 52.34,
-            "end": 52.75
+            "word": "говорила ",
+            "start": 49.444,
+            "end": 49.988
           },
           {
-            "word": "of ",
-            "start": 52.75,
-            "end": 53.16
+            "word": "мне: \" ",
+            "start": 49.988,
+            "end": 50.532
           },
           {
-            "word": "destruction ",
-            "start": 53.16,
-            "end": 53.57
+            "word": "Слушайся ",
+            "start": 50.532,
+            "end": 51.076
           },
           {
-            "word": "( ",
-            "start": 53.57,
-            "end": 53.98
-          },
-          {
-            "word": "Sacrifice ",
-            "start": 53.98,
-            "end": 54.39
-          },
-          {
-            "word": "is ",
-            "start": 54.39,
-            "end": 54.8
-          },
-          {
-            "word": "justified ",
-            "start": 54.8,
-            "end": 55.21
-          },
-          {
-            "word": ")",
-            "start": 55.21,
-            "end": 55.62
+            "word": "мужа\"",
+            "start": 51.076,
+            "end": 51.62
           }
         ]
       },
       {
-        "verseStart": 55.62,
-        "verseEnd": 59.73,
+        "verseStart": 51.62,
+        "verseEnd": 54.79,
         "words": [
           {
-            "word": "The ",
-            "start": 55.62,
-            "end": 56.031
+            "word": "Я ",
+            "start": 51.62,
+            "end": 52.148
           },
           {
-            "word": "eve ",
-            "start": 56.031,
-            "end": 56.442
+            "word": "не ",
+            "start": 52.148,
+            "end": 52.677
           },
           {
-            "word": "of ",
-            "start": 56.442,
-            "end": 56.853
+            "word": "послушна, ",
+            "start": 52.677,
+            "end": 53.205
           },
           {
-            "word": "destruction ",
-            "start": 56.853,
-            "end": 57.264
+            "word": "я ",
+            "start": 53.205,
+            "end": 53.733
           },
           {
-            "word": "( ",
-            "start": 57.264,
-            "end": 57.675
+            "word": "делаю ",
+            "start": 53.733,
+            "end": 54.262
           },
           {
-            "word": "Human ",
-            "start": 57.675,
-            "end": 58.086
-          },
-          {
-            "word": "minds ",
-            "start": 58.086,
-            "end": 58.497
-          },
-          {
-            "word": "are ",
-            "start": 58.497,
-            "end": 58.908
-          },
-          {
-            "word": "simplified ",
-            "start": 58.908,
-            "end": 59.319
-          },
-          {
-            "word": ")",
-            "start": 59.319,
-            "end": 59.73
+            "word": "хуже",
+            "start": 54.262,
+            "end": 54.79
           }
         ]
       },
       {
-        "verseStart": 59.73,
-        "verseEnd": 60.81,
+        "verseStart": 54.79,
+        "verseEnd": 57.86,
         "words": [
           {
-            "word": "The ",
-            "start": 59.73,
-            "end": 59.85
+            "word": "Делаю ",
+            "start": 54.79,
+            "end": 55.302
           },
           {
-            "word": "eve ",
-            "start": 59.85,
-            "end": 59.97
+            "word": "не ",
+            "start": 55.302,
+            "end": 55.813
           },
           {
-            "word": "of ",
-            "start": 59.97,
-            "end": 60.09
+            "word": "так, ",
+            "start": 55.813,
+            "end": 56.325
           },
           {
-            "word": "destruction ",
-            "start": 60.09,
-            "end": 60.21
+            "word": "как ",
+            "start": 56.325,
+            "end": 56.837
           },
           {
-            "word": "( ",
-            "start": 60.21,
-            "end": 60.33
+            "word": "наказывал ",
+            "start": 56.837,
+            "end": 57.348
           },
           {
-            "word": "Sacrifice ",
-            "start": 60.33,
-            "end": 60.45
-          },
-          {
-            "word": "is ",
-            "start": 60.45,
-            "end": 60.57
-          },
-          {
-            "word": "justified ",
-            "start": 60.57,
-            "end": 60.69
-          },
-          {
-            "word": ")",
-            "start": 60.69,
-            "end": 60.81
+            "word": "папа",
+            "start": 57.348,
+            "end": 57.86
           }
         ]
       },
       {
-        "verseStart": 60.81,
-        "verseEnd": 82.24,
+        "verseStart": 57.86,
+        "verseEnd": 60.92,
         "words": [
           {
-            "word": "The ",
-            "start": 60.81,
-            "end": 61.61
+            "word": "Вместо ",
+            "start": 57.86,
+            "end": 58.472
           },
           {
-            "word": "eve ",
-            "start": 61.61,
-            "end": 62.41
+            "word": "звезды ",
+            "start": 58.472,
+            "end": 59.084
           },
           {
-            "word": "of ",
-            "start": 62.41,
-            "end": 63.21
+            "word": "я ",
+            "start": 59.084,
+            "end": 59.696
           },
           {
-            "word": "destruction",
-            "start": 63.21,
-            "end": 64.01
+            "word": "хватаю ",
+            "start": 59.696,
+            "end": 60.308
+          },
+          {
+            "word": "гранату",
+            "start": 60.308,
+            "end": 60.92
           }
         ]
       },
       {
-        "verseStart": 82.24,
-        "verseEnd": 91.48,
+        "verseStart": 60.92,
+        "verseEnd": 63.83,
         "words": [
           {
-            "word": "Human ",
+            "word": "Мама ",
+            "start": 60.92,
+            "end": 61.502
+          },
+          {
+            "word": "говорила ",
+            "start": 61.502,
+            "end": 62.084
+          },
+          {
+            "word": "мне: \" ",
+            "start": 62.084,
+            "end": 62.666
+          },
+          {
+            "word": "Слушайся ",
+            "start": 62.666,
+            "end": 63.248
+          },
+          {
+            "word": "мужа\"",
+            "start": 63.248,
+            "end": 63.83
+          }
+        ]
+      },
+      {
+        "verseStart": 63.83,
+        "verseEnd": 66.85,
+        "words": [
+          {
+            "word": "Я ",
+            "start": 63.83,
+            "end": 64.333
+          },
+          {
+            "word": "не ",
+            "start": 64.333,
+            "end": 64.837
+          },
+          {
+            "word": "послушна, ",
+            "start": 64.837,
+            "end": 65.34
+          },
+          {
+            "word": "я ",
+            "start": 65.34,
+            "end": 65.843
+          },
+          {
+            "word": "делаю ",
+            "start": 65.843,
+            "end": 66.347
+          },
+          {
+            "word": "хуже",
+            "start": 66.347,
+            "end": 66.85
+          }
+        ]
+      },
+      {
+        "verseStart": 66.85,
+        "verseEnd": 70,
+        "words": [
+          {
+            "word": "Делаю ",
+            "start": 66.85,
+            "end": 67.375
+          },
+          {
+            "word": "не ",
+            "start": 67.375,
+            "end": 67.9
+          },
+          {
+            "word": "так, ",
+            "start": 67.9,
+            "end": 68.425
+          },
+          {
+            "word": "как ",
+            "start": 68.425,
+            "end": 68.95
+          },
+          {
+            "word": "наказывал ",
+            "start": 68.95,
+            "end": 69.475
+          },
+          {
+            "word": "папа",
+            "start": 69.475,
+            "end": 70
+          }
+        ]
+      },
+      {
+        "verseStart": 70,
+        "verseEnd": 73.21000000000001,
+        "words": [
+          {
+            "word": "Вместо ",
+            "start": 70,
+            "end": 70.642
+          },
+          {
+            "word": "звезды ",
+            "start": 70.642,
+            "end": 71.284
+          },
+          {
+            "word": "я ",
+            "start": 71.284,
+            "end": 71.926
+          },
+          {
+            "word": "хватаю ",
+            "start": 71.926,
+            "end": 72.568
+          },
+          {
+            "word": "гранату",
+            "start": 72.568,
+            "end": 73.21
+          }
+        ]
+      },
+      {
+        "verseStart": 73.21000000000001,
+        "verseEnd": 79.03999999999999,
+        "words": [
+          {
+            "word": "Я ",
+            "start": 73.21,
+            "end": 74.01
+          },
+          {
+            "word": "хотела ",
+            "start": 74.01,
+            "end": 74.81
+          },
+          {
+            "word": "бы ",
+            "start": 74.81,
+            "end": 75.61
+          },
+          {
+            "word": "тебя, ",
+            "start": 75.61,
+            "end": 76.41
+          },
+          {
+            "word": "как ",
+            "start": 76.41,
+            "end": 77.21
+          },
+          {
+            "word": "тогда, ",
+            "start": 77.21,
+            "end": 78.01
+          },
+          {
+            "word": "обнять",
+            "start": 78.01,
+            "end": 78.81
+          }
+        ]
+      },
+      {
+        "verseStart": 79.03999999999999,
+        "verseEnd": 85,
+        "words": [
+          {
+            "word": "Но ",
+            "start": 79.04,
+            "end": 79.84
+          },
+          {
+            "word": "для ",
+            "start": 79.84,
+            "end": 80.64
+          },
+          {
+            "word": "этого ",
+            "start": 80.64,
+            "end": 81.44
+          },
+          {
+            "word": "придётся ",
+            "start": 81.44,
+            "end": 82.24
+          },
+          {
+            "word": "тело ",
             "start": 82.24,
             "end": 83.04
           },
           {
-            "word": "minds ",
+            "word": "раскопать",
             "start": 83.04,
             "end": 83.84
-          },
-          {
-            "word": "are ",
-            "start": 83.84,
-            "end": 84.64
-          },
-          {
-            "word": "simplified",
-            "start": 84.64,
-            "end": 85.44
           }
         ]
       },
       {
-        "verseStart": 91.48,
-        "verseEnd": 93.1,
+        "verseStart": 85,
+        "verseEnd": 91.24,
         "words": [
           {
-            "word": "We ",
-            "start": 91.48,
-            "end": 91.804
+            "word": "Твои ",
+            "start": 85,
+            "end": 85.78
           },
           {
-            "word": "can't ",
-            "start": 91.804,
-            "end": 92.128
+            "word": "кости ",
+            "start": 85.78,
+            "end": 86.56
           },
           {
-            "word": "afford ",
-            "start": 92.128,
-            "end": 92.452
+            "word": "ледяные ",
+            "start": 86.56,
+            "end": 87.34
           },
           {
-            "word": "the ",
-            "start": 92.452,
-            "end": 92.776
+            "word": "где- ",
+            "start": 87.34,
+            "end": 88.12
           },
           {
-            "word": "water",
-            "start": 92.776,
-            "end": 93.1
+            "word": "то ",
+            "start": 88.12,
+            "end": 88.9
+          },
+          {
+            "word": "там ",
+            "start": 88.9,
+            "end": 89.68
+          },
+          {
+            "word": "на ",
+            "start": 89.68,
+            "end": 90.46
+          },
+          {
+            "word": "дне",
+            "start": 90.46,
+            "end": 91.24
           }
         ]
       },
       {
-        "verseStart": 93.1,
-        "verseEnd": 95.08,
+        "verseStart": 91.24,
+        "verseEnd": 99.42,
         "words": [
           {
-            "word": "Sacrifice ",
-            "start": 93.1,
-            "end": 93.76
+            "word": "Прорастут ",
+            "start": 91.24,
+            "end": 92.04
           },
           {
-            "word": "is ",
-            "start": 93.76,
-            "end": 94.42
+            "word": "цветы ",
+            "start": 92.04,
+            "end": 92.84
           },
           {
-            "word": "justified",
-            "start": 94.42,
-            "end": 95.08
+            "word": "в ",
+            "start": 92.84,
+            "end": 93.64
+          },
+          {
+            "word": "этой ",
+            "start": 93.64,
+            "end": 94.44
+          },
+          {
+            "word": "оплаканной ",
+            "start": 94.44,
+            "end": 95.24
+          },
+          {
+            "word": "земле",
+            "start": 95.24,
+            "end": 96.04
           }
         ]
       },
       {
-        "verseStart": 95.08,
-        "verseEnd": 96.78,
+        "verseStart": 99.42,
+        "verseEnd": 105.57,
         "words": [
           {
-            "word": "Everyone ",
-            "start": 95.08,
-            "end": 95.42
+            "word": "Плак- ",
+            "start": 99.42,
+            "end": 100.22
           },
           {
-            "word": "is ",
-            "start": 95.42,
-            "end": 95.76
+            "word": "плак, ",
+            "start": 100.22,
+            "end": 101.02
           },
           {
-            "word": "left ",
-            "start": 95.76,
-            "end": 96.1
+            "word": "плак- ",
+            "start": 101.02,
+            "end": 101.82
           },
           {
-            "word": "to ",
-            "start": 96.1,
-            "end": 96.44
-          },
-          {
-            "word": "die",
-            "start": 96.44,
-            "end": 96.78
+            "word": "плак",
+            "start": 101.82,
+            "end": 102.62
           }
         ]
       },
       {
-        "verseStart": 96.78,
-        "verseEnd": 99.05,
+        "verseStart": 105.57,
+        "verseEnd": 109.50999999999999,
         "words": [
           {
-            "word": "Human ",
-            "start": 96.78,
-            "end": 97.347
+            "word": "Плак- ",
+            "start": 105.57,
+            "end": 106.37
           },
           {
-            "word": "minds ",
-            "start": 97.347,
-            "end": 97.915
+            "word": "плак, ",
+            "start": 106.37,
+            "end": 107.17
           },
           {
-            "word": "are ",
-            "start": 97.915,
-            "end": 98.483
+            "word": "плак- ",
+            "start": 107.17,
+            "end": 107.97
           },
           {
-            "word": "simplified",
-            "start": 98.483,
-            "end": 99.05
+            "word": "плак",
+            "start": 107.97,
+            "end": 108.77
           }
         ]
       },
       {
-        "verseStart": 99.05,
-        "verseEnd": 100.84,
+        "verseStart": 109.50999999999999,
+        "verseEnd": 112.43,
         "words": [
           {
-            "word": "Keep ",
-            "start": 99.05,
-            "end": 99.306
+            "word": "Растекаются ",
+            "start": 109.51,
+            "end": 109.875
           },
           {
-            "word": "runnin ",
-            "start": 99.306,
-            "end": 99.561
+            "word": "по ",
+            "start": 109.875,
+            "end": 110.24
           },
           {
-            "word": "' ",
-            "start": 99.561,
-            "end": 99.817
+            "word": "всей ",
+            "start": 110.24,
+            "end": 110.605
           },
           {
-            "word": ", ",
-            "start": 99.817,
-            "end": 100.073
+            "word": "стене ",
+            "start": 110.605,
+            "end": 110.97
           },
           {
-            "word": "keep ",
-            "start": 100.073,
-            "end": 100.329
+            "word": "твои ",
+            "start": 110.97,
+            "end": 111.335
           },
           {
-            "word": "runnin ",
-            "start": 100.329,
-            "end": 100.584
+            "word": "мозги ( ",
+            "start": 111.335,
+            "end": 111.7
           },
           {
-            "word": "'",
-            "start": 100.584,
-            "end": 100.84
+            "word": "плак- ",
+            "start": 111.7,
+            "end": 112.065
+          },
+          {
+            "word": "плак)",
+            "start": 112.065,
+            "end": 112.43
           }
         ]
       },
       {
-        "verseStart": 100.84,
-        "verseEnd": 102.28999999999999,
+        "verseStart": 112.43,
+        "verseEnd": 115.42,
         "words": [
           {
-            "word": "Sacrifice ",
-            "start": 100.84,
-            "end": 101.323
-          },
-          {
-            "word": "is ",
-            "start": 101.323,
-            "end": 101.807
-          },
-          {
-            "word": "justified",
-            "start": 101.807,
-            "end": 102.29
-          }
-        ]
-      },
-      {
-        "verseStart": 102.28999999999999,
-        "verseEnd": 104.24000000000001,
-        "words": [
-          {
-            "word": "Keep ",
-            "start": 102.29,
-            "end": 102.569
-          },
-          {
-            "word": "runnin ",
-            "start": 102.569,
-            "end": 102.847
-          },
-          {
-            "word": "' ",
-            "start": 102.847,
-            "end": 103.126
-          },
-          {
-            "word": ", ",
-            "start": 103.126,
-            "end": 103.404
-          },
-          {
-            "word": "keep ",
-            "start": 103.404,
-            "end": 103.683
-          },
-          {
-            "word": "runnin ",
-            "start": 103.683,
-            "end": 103.961
-          },
-          {
-            "word": "'",
-            "start": 103.961,
-            "end": 104.24
-          }
-        ]
-      },
-      {
-        "verseStart": 104.24000000000001,
-        "verseEnd": 108.11,
-        "words": [
-          {
-            "word": "Maybe ",
-            "start": 104.24,
-            "end": 105.014
-          },
-          {
-            "word": "I'll ",
-            "start": 105.014,
-            "end": 105.788
-          },
-          {
-            "word": "find ",
-            "start": 105.788,
-            "end": 106.562
-          },
-          {
-            "word": "a ",
-            "start": 106.562,
-            "end": 107.336
-          },
-          {
-            "word": "friend",
-            "start": 107.336,
-            "end": 108.11
-          }
-        ]
-      },
-      {
-        "verseStart": 108.11,
-        "verseEnd": 111.99000000000001,
-        "words": [
-          {
-            "word": "Maybe ",
-            "start": 108.11,
-            "end": 108.886
-          },
-          {
-            "word": "I'll ",
-            "start": 108.886,
-            "end": 109.662
-          },
-          {
-            "word": "find ",
-            "start": 109.662,
-            "end": 110.438
-          },
-          {
-            "word": "a ",
-            "start": 110.438,
-            "end": 111.214
-          },
-          {
-            "word": "friend",
-            "start": 111.214,
-            "end": 111.99
-          }
-        ]
-      },
-      {
-        "verseStart": 111.99000000000001,
-        "verseEnd": 115.85,
-        "words": [
-          {
-            "word": "Maybe ",
-            "start": 111.99,
+            "word": "Очень ",
+            "start": 112.43,
             "end": 112.762
           },
           {
-            "word": "I'll ",
+            "word": "разозлилась ",
             "start": 112.762,
-            "end": 113.534
+            "end": 113.094
           },
           {
-            "word": "find ",
-            "start": 113.534,
-            "end": 114.306
+            "word": "на ",
+            "start": 113.094,
+            "end": 113.427
           },
           {
-            "word": "a ",
-            "start": 114.306,
-            "end": 115.078
+            "word": "тебя, ",
+            "start": 113.427,
+            "end": 113.759
           },
           {
-            "word": "friend",
-            "start": 115.078,
-            "end": 115.85
+            "word": "ты ",
+            "start": 113.759,
+            "end": 114.091
+          },
+          {
+            "word": "уж ",
+            "start": 114.091,
+            "end": 114.423
+          },
+          {
+            "word": "прости ( ",
+            "start": 114.423,
+            "end": 114.756
+          },
+          {
+            "word": "плак- ",
+            "start": 114.756,
+            "end": 115.088
+          },
+          {
+            "word": "плак)",
+            "start": 115.088,
+            "end": 115.42
           }
         ]
       },
       {
-        "verseStart": 115.85,
-        "verseEnd": 134.82,
+        "verseStart": 115.42,
+        "verseEnd": 118.53,
         "words": [
           {
-            "word": "To ",
-            "start": 115.85,
-            "end": 116.65
+            "word": "Сотый ",
+            "start": 115.42,
+            "end": 115.731
           },
           {
-            "word": "spend ",
-            "start": 116.65,
-            "end": 117.45
+            "word": "раз ",
+            "start": 115.731,
+            "end": 116.042
           },
           {
-            "word": "the ",
-            "start": 117.45,
-            "end": 118.25
+            "word": "во ",
+            "start": 116.042,
+            "end": 116.353
           },
           {
-            "word": "weekend",
-            "start": 118.25,
-            "end": 119.05
+            "word": "сне ",
+            "start": 116.353,
+            "end": 116.664
+          },
+          {
+            "word": "я ",
+            "start": 116.664,
+            "end": 116.975
+          },
+          {
+            "word": "наблюдаю ",
+            "start": 116.975,
+            "end": 117.286
+          },
+          {
+            "word": "твой ",
+            "start": 117.286,
+            "end": 117.597
+          },
+          {
+            "word": "конец ( ",
+            "start": 117.597,
+            "end": 117.908
+          },
+          {
+            "word": "плак- ",
+            "start": 117.908,
+            "end": 118.219
+          },
+          {
+            "word": "плак)",
+            "start": 118.219,
+            "end": 118.53
           }
         ]
       },
       {
-        "verseStart": 134.82,
-        "verseEnd": 137.22,
+        "verseStart": 118.53,
+        "verseEnd": 121.61,
         "words": [
           {
-            "word": "Brothers ",
-            "start": 134.82,
-            "end": 135.42
+            "word": "И ",
+            "start": 118.53,
+            "end": 118.81
           },
           {
-            "word": "and ",
-            "start": 135.42,
-            "end": 136.02
+            "word": "не ",
+            "start": 118.81,
+            "end": 119.09
           },
           {
-            "word": "the ",
-            "start": 136.02,
-            "end": 136.62
+            "word": "так ",
+            "start": 119.09,
+            "end": 119.37
           },
           {
-            "word": "suicide",
-            "start": 136.62,
-            "end": 137.22
+            "word": "уж ",
+            "start": 119.37,
+            "end": 119.65
+          },
+          {
+            "word": "страшно, ",
+            "start": 119.65,
+            "end": 119.93
+          },
+          {
+            "word": "в ",
+            "start": 119.93,
+            "end": 120.21
+          },
+          {
+            "word": "самом ",
+            "start": 120.21,
+            "end": 120.49
+          },
+          {
+            "word": "деле, ",
+            "start": 120.49,
+            "end": 120.77
+          },
+          {
+            "word": "умереть ( ",
+            "start": 120.77,
+            "end": 121.05
+          },
+          {
+            "word": "плак- ",
+            "start": 121.05,
+            "end": 121.33
+          },
+          {
+            "word": "плак)",
+            "start": 121.33,
+            "end": 121.61
           }
         ]
       },
       {
-        "verseStart": 137.22,
-        "verseEnd": 141.34,
+        "verseStart": 121.61,
+        "verseEnd": 124.44,
         "words": [
           {
-            "word": "What's ",
-            "start": 137.22,
-            "end": 137.735
+            "word": "Я ",
+            "start": 121.61,
+            "end": 121.893
           },
           {
-            "word": "to ",
-            "start": 137.735,
-            "end": 138.25
+            "word": "была ",
+            "start": 121.893,
+            "end": 122.176
           },
           {
-            "word": "try ",
-            "start": 138.25,
-            "end": 138.765
+            "word": "хорошей, ",
+            "start": 122.176,
+            "end": 122.459
           },
           {
-            "word": "out ",
-            "start": 138.765,
-            "end": 139.28
+            "word": "а ",
+            "start": 122.459,
+            "end": 122.742
           },
           {
-            "word": "? ",
-            "start": 139.28,
-            "end": 139.795
+            "word": "плохой ",
+            "start": 122.742,
+            "end": 123.025
           },
           {
-            "word": "Hear ",
-            "start": 139.795,
-            "end": 140.31
+            "word": "я ",
+            "start": 123.025,
+            "end": 123.308
           },
           {
-            "word": "me ",
-            "start": 140.31,
-            "end": 140.825
+            "word": "не ",
+            "start": 123.308,
+            "end": 123.591
           },
           {
-            "word": "now",
-            "start": 140.825,
-            "end": 141.34
+            "word": "была ( ",
+            "start": 123.591,
+            "end": 123.874
+          },
+          {
+            "word": "плак- ",
+            "start": 123.874,
+            "end": 124.157
+          },
+          {
+            "word": "плак)",
+            "start": 124.157,
+            "end": 124.44
           }
         ]
       },
       {
-        "verseStart": 141.34,
-        "verseEnd": 145.78,
+        "verseStart": 124.44,
+        "verseEnd": 127.68,
         "words": [
           {
-            "word": "He ",
-            "start": 141.34,
-            "end": 142.14
+            "word": "И ",
+            "start": 124.44,
+            "end": 124.764
           },
           {
-            "word": "guideline ",
-            "start": 142.14,
-            "end": 142.94
+            "word": "всю ",
+            "start": 124.764,
+            "end": 125.088
           },
           {
-            "word": ", ",
-            "start": 142.94,
-            "end": 143.74
+            "word": "жизнь ",
+            "start": 125.088,
+            "end": 125.412
           },
           {
-            "word": "he ",
-            "start": 143.74,
-            "end": 144.54
+            "word": "как ",
+            "start": 125.412,
+            "end": 125.736
           },
           {
-            "word": "guideline",
-            "start": 144.54,
-            "end": 145.34
+            "word": "паинька, ",
+            "start": 125.736,
+            "end": 126.06
+          },
+          {
+            "word": "по ",
+            "start": 126.06,
+            "end": 126.384
+          },
+          {
+            "word": "правилам ",
+            "start": 126.384,
+            "end": 126.708
+          },
+          {
+            "word": "жила ( ",
+            "start": 126.708,
+            "end": 127.032
+          },
+          {
+            "word": "плак- ",
+            "start": 127.032,
+            "end": 127.356
+          },
+          {
+            "word": "плак)",
+            "start": 127.356,
+            "end": 127.68
           }
         ]
       },
       {
-        "verseStart": 145.78,
-        "verseEnd": 150.15,
+        "verseStart": 127.68,
+        "verseEnd": 130.7,
         "words": [
           {
-            "word": "Eve ",
-            "start": 145.78,
-            "end": 146.58
+            "word": "Надоело ",
+            "start": 127.68,
+            "end": 128.111
           },
           {
-            "word": "of ",
-            "start": 146.58,
-            "end": 147.38
+            "word": "плакать, ",
+            "start": 128.111,
+            "end": 128.543
           },
           {
-            "word": "destruction",
-            "start": 147.38,
-            "end": 148.18
+            "word": "надоело ",
+            "start": 128.543,
+            "end": 128.974
+          },
+          {
+            "word": "мне ",
+            "start": 128.974,
+            "end": 129.406
+          },
+          {
+            "word": "страдать ( ",
+            "start": 129.406,
+            "end": 129.837
+          },
+          {
+            "word": "плак- ",
+            "start": 129.837,
+            "end": 130.269
+          },
+          {
+            "word": "плак)",
+            "start": 130.269,
+            "end": 130.7
           }
         ]
       },
       {
-        "verseStart": 150.15,
-        "verseEnd": 155.07999999999998,
+        "verseStart": 130.7,
+        "verseEnd": 134.08,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 150.15,
-            "end": 150.95
+            "word": "Всё ",
+            "start": 130.7,
+            "end": 131.076
           },
           {
-            "word": "I'll ",
-            "start": 150.95,
-            "end": 151.75
+            "word": "равно ",
+            "start": 131.076,
+            "end": 131.451
           },
           {
-            "word": "find ",
-            "start": 151.75,
-            "end": 152.55
+            "word": "не ",
+            "start": 131.451,
+            "end": 131.827
           },
           {
-            "word": "a ",
-            "start": 152.55,
-            "end": 153.35
+            "word": "выйдет ",
+            "start": 131.827,
+            "end": 132.202
           },
           {
-            "word": "friend",
-            "start": 153.35,
-            "end": 154.15
+            "word": "свою ",
+            "start": 132.202,
+            "end": 132.578
+          },
+          {
+            "word": "смерть ",
+            "start": 132.578,
+            "end": 132.953
+          },
+          {
+            "word": "предугадать ( ",
+            "start": 132.953,
+            "end": 133.329
+          },
+          {
+            "word": "плак- ",
+            "start": 133.329,
+            "end": 133.704
+          },
+          {
+            "word": "плак)",
+            "start": 133.704,
+            "end": 134.08
           }
         ]
       },
       {
-        "verseStart": 155.07999999999998,
-        "verseEnd": 158.34,
+        "verseStart": 134.08,
+        "verseEnd": 136.88,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 155.08,
-            "end": 155.732
+            "word": "Мама ",
+            "start": 134.08,
+            "end": 134.64
           },
           {
-            "word": "I'll ",
-            "start": 155.732,
-            "end": 156.384
+            "word": "говорила ",
+            "start": 134.64,
+            "end": 135.2
           },
           {
-            "word": "find ",
-            "start": 156.384,
-            "end": 157.036
+            "word": "мне: \" ",
+            "start": 135.2,
+            "end": 135.76
           },
           {
-            "word": "a ",
-            "start": 157.036,
-            "end": 157.688
+            "word": "Слушайся ",
+            "start": 135.76,
+            "end": 136.32
           },
           {
-            "word": "friend",
-            "start": 157.688,
-            "end": 158.34
+            "word": "мужа\"",
+            "start": 136.32,
+            "end": 136.88
           }
         ]
       },
       {
-        "verseStart": 158.34,
-        "verseEnd": 162.44,
+        "verseStart": 136.88,
+        "verseEnd": 139.85,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 158.34,
-            "end": 159.14
+            "word": "Я ",
+            "start": 136.88,
+            "end": 137.375
           },
           {
-            "word": "I'll ",
-            "start": 159.14,
-            "end": 159.94
+            "word": "не ",
+            "start": 137.375,
+            "end": 137.87
           },
           {
-            "word": "find ",
-            "start": 159.94,
-            "end": 160.74
+            "word": "послушна, ",
+            "start": 137.87,
+            "end": 138.365
           },
           {
-            "word": "a ",
-            "start": 160.74,
-            "end": 161.54
+            "word": "я ",
+            "start": 138.365,
+            "end": 138.86
           },
           {
-            "word": "friend",
-            "start": 161.54,
-            "end": 162.34
+            "word": "делаю ",
+            "start": 138.86,
+            "end": 139.355
+          },
+          {
+            "word": "хуже",
+            "start": 139.355,
+            "end": 139.85
           }
         ]
       },
       {
-        "verseStart": 162.44,
-        "verseEnd": 209.09,
+        "verseStart": 139.85,
+        "verseEnd": 142.95,
         "words": [
           {
-            "word": "To ",
-            "start": 162.44,
-            "end": 163.24
+            "word": "Делаю ",
+            "start": 139.85,
+            "end": 140.367
           },
           {
-            "word": "spend ",
-            "start": 163.24,
-            "end": 164.04
+            "word": "не ",
+            "start": 140.367,
+            "end": 140.883
           },
           {
-            "word": "the ",
-            "start": 164.04,
-            "end": 164.84
+            "word": "так, ",
+            "start": 140.883,
+            "end": 141.4
           },
           {
-            "word": "weekend",
-            "start": 164.84,
-            "end": 165.64
+            "word": "как ",
+            "start": 141.4,
+            "end": 141.917
+          },
+          {
+            "word": "наказывал ",
+            "start": 141.917,
+            "end": 142.433
+          },
+          {
+            "word": "папа",
+            "start": 142.433,
+            "end": 142.95
           }
         ]
       },
       {
-        "verseStart": 209.09,
-        "verseEnd": 222.89,
+        "verseStart": 142.95,
+        "verseEnd": 146.09,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 209.09,
-            "end": 209.89
+            "word": "Вместо ",
+            "start": 142.95,
+            "end": 143.578
           },
           {
-            "word": "I'll ",
-            "start": 209.89,
-            "end": 210.69
+            "word": "звезды ",
+            "start": 143.578,
+            "end": 144.206
           },
           {
-            "word": "find ",
-            "start": 210.69,
-            "end": 211.49
+            "word": "я ",
+            "start": 144.206,
+            "end": 144.834
           },
           {
-            "word": "a ",
-            "start": 211.49,
-            "end": 212.29
+            "word": "хватаю ",
+            "start": 144.834,
+            "end": 145.462
           },
           {
-            "word": "friend",
-            "start": 212.29,
-            "end": 213.09
+            "word": "гранату",
+            "start": 145.462,
+            "end": 146.09
           }
         ]
       },
       {
-        "verseStart": 222.89,
-        "verseEnd": 227.25,
+        "verseStart": 146.09,
+        "verseEnd": 149.04,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 222.89,
-            "end": 223.69
+            "word": "Мама ",
+            "start": 146.09,
+            "end": 146.68
           },
           {
-            "word": "I'll ",
-            "start": 223.69,
-            "end": 224.49
+            "word": "говорила ",
+            "start": 146.68,
+            "end": 147.27
           },
           {
-            "word": "find ",
-            "start": 224.49,
-            "end": 225.29
+            "word": "мне: \" ",
+            "start": 147.27,
+            "end": 147.86
           },
           {
-            "word": "a ",
-            "start": 225.29,
-            "end": 226.09
+            "word": "Слушайся ",
+            "start": 147.86,
+            "end": 148.45
           },
           {
-            "word": "friend",
-            "start": 226.09,
-            "end": 226.89
+            "word": "мужа\"",
+            "start": 148.45,
+            "end": 149.04
           }
         ]
       },
       {
-        "verseStart": 227.25,
-        "verseEnd": 230.94,
+        "verseStart": 149.04,
+        "verseEnd": 152.01,
         "words": [
           {
-            "word": "Maybe ",
-            "start": 227.25,
-            "end": 227.988
+            "word": "Я ",
+            "start": 149.04,
+            "end": 149.535
           },
           {
-            "word": "I'll ",
-            "start": 227.988,
-            "end": 228.726
+            "word": "не ",
+            "start": 149.535,
+            "end": 150.03
           },
           {
-            "word": "find ",
-            "start": 228.726,
-            "end": 229.464
+            "word": "послушна, ",
+            "start": 150.03,
+            "end": 150.525
           },
           {
-            "word": "a ",
-            "start": 229.464,
-            "end": 230.202
+            "word": "я ",
+            "start": 150.525,
+            "end": 151.02
           },
           {
-            "word": "friend",
-            "start": 230.202,
-            "end": 230.94
+            "word": "делаю ",
+            "start": 151.02,
+            "end": 151.515
+          },
+          {
+            "word": "хуже",
+            "start": 151.515,
+            "end": 152.01
           }
         ]
       },
       {
-        "verseStart": 230.94,
-        "verseEnd": 234.41,
+        "verseStart": 152.01,
+        "verseEnd": 155.19,
         "words": [
           {
-            "word": "To ",
-            "start": 230.94,
-            "end": 231.74
+            "word": "Делаю ",
+            "start": 152.01,
+            "end": 152.54
           },
           {
-            "word": "spend ",
-            "start": 231.74,
-            "end": 232.54
+            "word": "не ",
+            "start": 152.54,
+            "end": 153.07
           },
           {
-            "word": "the ",
-            "start": 232.54,
-            "end": 233.34
+            "word": "так, ",
+            "start": 153.07,
+            "end": 153.6
           },
           {
-            "word": "weekend",
-            "start": 233.34,
-            "end": 234.14
+            "word": "как ",
+            "start": 153.6,
+            "end": 154.13
+          },
+          {
+            "word": "наказывал ",
+            "start": 154.13,
+            "end": 154.66
+          },
+          {
+            "word": "папа",
+            "start": 154.66,
+            "end": 155.19
           }
         ]
       },
       {
-        "verseStart": 234.41,
-        "verseEnd": 238.73,
+        "verseStart": 155.19,
+        "verseEnd": 158.55,
         "words": [
           {
-            "word": "The ",
-            "start": 234.41,
-            "end": 235.21
+            "word": "Вместо ",
+            "start": 155.19,
+            "end": 155.862
           },
           {
-            "word": "eve ",
-            "start": 235.21,
-            "end": 236.01
+            "word": "звезды ",
+            "start": 155.862,
+            "end": 156.534
           },
           {
-            "word": "of ",
-            "start": 236.01,
-            "end": 236.81
+            "word": "я ",
+            "start": 156.534,
+            "end": 157.206
           },
           {
-            "word": "destruction",
-            "start": 236.81,
-            "end": 237.61
+            "word": "хватаю ",
+            "start": 157.206,
+            "end": 157.878
+          },
+          {
+            "word": "гранату",
+            "start": 157.878,
+            "end": 158.55
           }
         ]
       },
       {
-        "verseStart": 238.73,
-        "verseEnd": 242.56,
+        "verseStart": 158.55,
+        "verseEnd": 161.63,
         "words": [
           {
-            "word": "The ",
-            "start": 238.73,
-            "end": 239.53
+            "word": "Ла- ",
+            "start": 158.55,
+            "end": 158.935
           },
           {
-            "word": "eve ",
-            "start": 239.53,
-            "end": 240.33
+            "word": "ла- ",
+            "start": 158.935,
+            "end": 159.32
           },
           {
-            "word": "of ",
-            "start": 240.33,
-            "end": 241.13
+            "word": "ла- ",
+            "start": 159.32,
+            "end": 159.705
           },
           {
-            "word": "destruction",
-            "start": 241.13,
-            "end": 241.93
+            "word": "ла- ",
+            "start": 159.705,
+            "end": 160.09
+          },
+          {
+            "word": "ла- ",
+            "start": 160.09,
+            "end": 160.475
+          },
+          {
+            "word": "а- ",
+            "start": 160.475,
+            "end": 160.86
+          },
+          {
+            "word": "а- ",
+            "start": 160.86,
+            "end": 161.245
+          },
+          {
+            "word": "а",
+            "start": 161.245,
+            "end": 161.63
           }
         ]
       },
       {
-        "verseStart": 242.56,
-        "verseEnd": 246.65,
+        "verseStart": 161.63,
+        "verseEnd": 164.52,
         "words": [
           {
-            "word": "The ",
-            "start": 242.56,
-            "end": 243.36
+            "word": "Ла- ",
+            "start": 161.63,
+            "end": 161.991
           },
           {
-            "word": "eve ",
-            "start": 243.36,
-            "end": 244.16
+            "word": "ла- ",
+            "start": 161.991,
+            "end": 162.352
           },
           {
-            "word": "of ",
-            "start": 244.16,
-            "end": 244.96
+            "word": "ла- ",
+            "start": 162.352,
+            "end": 162.714
           },
           {
-            "word": "destruction",
-            "start": 244.96,
-            "end": 245.76
+            "word": "ла- ",
+            "start": 162.714,
+            "end": 163.075
+          },
+          {
+            "word": "ла- ",
+            "start": 163.075,
+            "end": 163.436
+          },
+          {
+            "word": "а- ",
+            "start": 163.436,
+            "end": 163.798
+          },
+          {
+            "word": "а- ",
+            "start": 163.798,
+            "end": 164.159
+          },
+          {
+            "word": "а",
+            "start": 164.159,
+            "end": 164.52
           }
         ]
       },
       {
-        "verseStart": 246.65,
-        "verseEnd": 250.55,
+        "verseStart": 164.52,
+        "verseEnd": 167.54,
         "words": [
           {
-            "word": "The ",
-            "start": 246.65,
-            "end": 247.45
+            "word": "Ла- ",
+            "start": 164.52,
+            "end": 164.898
           },
           {
-            "word": "eve ",
-            "start": 247.45,
-            "end": 248.25
+            "word": "ла- ",
+            "start": 164.898,
+            "end": 165.275
           },
           {
-            "word": "of ",
-            "start": 248.25,
-            "end": 249.05
+            "word": "ла- ",
+            "start": 165.275,
+            "end": 165.653
           },
           {
-            "word": "destruction",
-            "start": 249.05,
-            "end": 249.85
+            "word": "ла- ",
+            "start": 165.653,
+            "end": 166.03
+          },
+          {
+            "word": "ла- ",
+            "start": 166.03,
+            "end": 166.407
+          },
+          {
+            "word": "а- ",
+            "start": 166.407,
+            "end": 166.785
+          },
+          {
+            "word": "а- ",
+            "start": 166.785,
+            "end": 167.162
+          },
+          {
+            "word": "а",
+            "start": 167.162,
+            "end": 167.54
           }
         ]
       },
       {
-        "verseStart": 250.55,
-        "verseEnd": 254.5,
+        "verseStart": 167.54,
+        "verseEnd": 170.48,
         "words": [
           {
-            "word": "The ",
-            "start": 250.55,
-            "end": 251.35
+            "word": "Ла- ",
+            "start": 167.54,
+            "end": 167.907
           },
           {
-            "word": "eve ",
-            "start": 251.35,
-            "end": 252.15
+            "word": "ла- ",
+            "start": 167.907,
+            "end": 168.275
           },
           {
-            "word": "of ",
-            "start": 252.15,
-            "end": 252.95
+            "word": "ла- ",
+            "start": 168.275,
+            "end": 168.642
           },
           {
-            "word": "destruction",
-            "start": 252.95,
-            "end": 253.75
+            "word": "ла- ",
+            "start": 168.642,
+            "end": 169.01
+          },
+          {
+            "word": "ла- ",
+            "start": 169.01,
+            "end": 169.377
+          },
+          {
+            "word": "а- ",
+            "start": 169.377,
+            "end": 169.745
+          },
+          {
+            "word": "а- ",
+            "start": 169.745,
+            "end": 170.112
+          },
+          {
+            "word": "а",
+            "start": 170.112,
+            "end": 170.48
           }
         ]
       },
       {
-        "verseStart": 254.5,
-        "verseEnd": 258.36,
+        "verseStart": 170.48,
+        "verseEnd": 176.34,
         "words": [
           {
-            "word": "The ",
-            "start": 254.5,
-            "end": 255.3
+            "word": "Я ",
+            "start": 170.48,
+            "end": 171.28
           },
           {
-            "word": "eve ",
-            "start": 255.3,
-            "end": 256.1
+            "word": "хотела ",
+            "start": 171.28,
+            "end": 172.08
           },
           {
-            "word": "of ",
-            "start": 256.1,
-            "end": 256.9
+            "word": "бы ",
+            "start": 172.08,
+            "end": 172.88
           },
           {
-            "word": "destruction",
-            "start": 256.9,
-            "end": 257.7
+            "word": "тебя, ",
+            "start": 172.88,
+            "end": 173.68
+          },
+          {
+            "word": "как ",
+            "start": 173.68,
+            "end": 174.48
+          },
+          {
+            "word": "тогда, ",
+            "start": 174.48,
+            "end": 175.28
+          },
+          {
+            "word": "обнять",
+            "start": 175.28,
+            "end": 176.08
           }
         ]
       },
       {
-        "verseStart": 258.36,
-        "verseEnd": 261.7,
+        "verseStart": 176.34,
+        "verseEnd": 182.08,
         "words": [
           {
-            "word": "The ",
-            "start": 258.36,
-            "end": 259.16
+            "word": "Но ",
+            "start": 176.34,
+            "end": 177.14
           },
           {
-            "word": "eve ",
-            "start": 259.16,
-            "end": 259.96
+            "word": "для ",
+            "start": 177.14,
+            "end": 177.94
           },
           {
-            "word": "of ",
-            "start": 259.96,
-            "end": 260.76
+            "word": "этого ",
+            "start": 177.94,
+            "end": 178.74
           },
           {
-            "word": "destruction",
-            "start": 260.76,
-            "end": 261.56
+            "word": "придётся ",
+            "start": 178.74,
+            "end": 179.54
+          },
+          {
+            "word": "тело ",
+            "start": 179.54,
+            "end": 180.34
+          },
+          {
+            "word": "раскопать",
+            "start": 180.34,
+            "end": 181.14
           }
         ]
       },
       {
-        "verseStart": 261.7,
-        "verseEnd": 265.69,
+        "verseStart": 182.08,
+        "verseEnd": 188.34,
         "words": [
           {
-            "word": "The ",
-            "start": 261.7,
-            "end": 262.5
+            "word": "Твои ",
+            "start": 182.08,
+            "end": 182.863
           },
           {
-            "word": "eve ",
-            "start": 262.5,
-            "end": 263.3
+            "word": "кости ",
+            "start": 182.863,
+            "end": 183.645
           },
           {
-            "word": "of ",
-            "start": 263.3,
-            "end": 264.1
+            "word": "ледяные ",
+            "start": 183.645,
+            "end": 184.428
           },
           {
-            "word": "destruction",
-            "start": 264.1,
-            "end": 264.9
+            "word": "где- ",
+            "start": 184.428,
+            "end": 185.21
+          },
+          {
+            "word": "то ",
+            "start": 185.21,
+            "end": 185.993
+          },
+          {
+            "word": "там ",
+            "start": 185.993,
+            "end": 186.775
+          },
+          {
+            "word": "на ",
+            "start": 186.775,
+            "end": 187.558
+          },
+          {
+            "word": "дне",
+            "start": 187.558,
+            "end": 188.34
+          }
+        ]
+      },
+      {
+        "verseStart": 188.34,
+        "verseEnd": 193.21,
+        "words": [
+          {
+            "word": "Прорастут ",
+            "start": 188.34,
+            "end": 189.14
+          },
+          {
+            "word": "цветы ",
+            "start": 189.14,
+            "end": 189.94
+          },
+          {
+            "word": "в ",
+            "start": 189.94,
+            "end": 190.74
+          },
+          {
+            "word": "этой ",
+            "start": 190.74,
+            "end": 191.54
+          },
+          {
+            "word": "оплаканной ",
+            "start": 191.54,
+            "end": 192.34
+          },
+          {
+            "word": "земле",
+            "start": 192.34,
+            "end": 193.14
           }
         ]
       }
@@ -3786,73 +4143,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 5.24,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 0.14,
-            "end": 0.504
+            "end": 0.778
           },
           {
-            "word": "- ",
-            "start": 0.504,
-            "end": 0.869
+            "word": "U- ",
+            "start": 0.778,
+            "end": 1.415
           },
           {
-            "word": "U ",
-            "start": 0.869,
-            "end": 1.233
-          },
-          {
-            "word": "- ",
-            "start": 1.233,
-            "end": 1.597
-          },
-          {
-            "word": "C ",
-            "start": 1.597,
-            "end": 1.961
-          },
-          {
-            "word": "- ",
-            "start": 1.961,
-            "end": 2.326
+            "word": "C- ",
+            "start": 1.415,
+            "end": 2.053
           },
           {
             "word": "K ",
-            "start": 2.326,
+            "start": 2.053,
             "end": 2.69
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 2.69,
-            "end": 3.054
+            "end": 3.328
           },
           {
-            "word": "- ",
-            "start": 3.054,
-            "end": 3.419
+            "word": "U- ",
+            "start": 3.328,
+            "end": 3.965
           },
           {
-            "word": "U ",
-            "start": 3.419,
-            "end": 3.783
-          },
-          {
-            "word": "- ",
-            "start": 3.783,
-            "end": 4.147
-          },
-          {
-            "word": "C ",
-            "start": 4.147,
-            "end": 4.511
-          },
-          {
-            "word": "- ",
-            "start": 4.511,
-            "end": 4.876
+            "word": "C- ",
+            "start": 3.965,
+            "end": 4.603
           },
           {
             "word": "K",
-            "start": 4.876,
+            "start": 4.603,
             "end": 5.24
           }
         ]
@@ -3862,74 +4189,44 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 22.42,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 5.24,
             "end": 6.04
           },
           {
-            "word": "- ",
+            "word": "U- ",
             "start": 6.04,
             "end": 6.84
           },
           {
-            "word": "U ",
+            "word": "C- ",
             "start": 6.84,
             "end": 7.64
           },
           {
-            "word": "- ",
+            "word": "K ",
             "start": 7.64,
             "end": 8.44
           },
           {
-            "word": "C ",
+            "word": "L- ",
             "start": 8.44,
             "end": 9.24
           },
           {
-            "word": "- ",
+            "word": "U- ",
             "start": 9.24,
             "end": 10.04
           },
           {
-            "word": "K ",
+            "word": "C- ",
             "start": 10.04,
             "end": 10.84
           },
           {
-            "word": "L ",
+            "word": "K",
             "start": 10.84,
             "end": 11.64
-          },
-          {
-            "word": "- ",
-            "start": 11.64,
-            "end": 12.44
-          },
-          {
-            "word": "U ",
-            "start": 12.44,
-            "end": 13.24
-          },
-          {
-            "word": "- ",
-            "start": 13.24,
-            "end": 14.04
-          },
-          {
-            "word": "C ",
-            "start": 14.04,
-            "end": 14.84
-          },
-          {
-            "word": "- ",
-            "start": 14.84,
-            "end": 15.64
-          },
-          {
-            "word": "K",
-            "start": 15.64,
-            "end": 16.44
           }
         ]
       },
@@ -4172,29 +4469,19 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 50.73
           },
           {
-            "word": "見上げる ",
+            "word": "見上げる ( ",
             "start": 50.73,
             "end": 51.53
           },
           {
-            "word": "( ",
+            "word": "きらきら ",
             "start": 51.53,
             "end": 52.33
           },
           {
-            "word": "きらきら ",
+            "word": "キラー)",
             "start": 52.33,
             "end": 53.13
-          },
-          {
-            "word": "キラー ",
-            "start": 53.13,
-            "end": 53.93
-          },
-          {
-            "word": ")",
-            "start": 53.93,
-            "end": 54.73
           }
         ]
       },
@@ -4203,48 +4490,23 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 59.57,
         "words": [
           {
-            "word": "( ",
+            "word": "(One, ",
             "start": 58.01,
-            "end": 58.183
+            "end": 58.4
           },
           {
-            "word": "One ",
-            "start": 58.183,
-            "end": 58.357
+            "word": "two, ",
+            "start": 58.4,
+            "end": 58.79
           },
           {
-            "word": ", ",
-            "start": 58.357,
-            "end": 58.53
+            "word": "three, ",
+            "start": 58.79,
+            "end": 59.18
           },
           {
-            "word": "two ",
-            "start": 58.53,
-            "end": 58.703
-          },
-          {
-            "word": ", ",
-            "start": 58.703,
-            "end": 58.877
-          },
-          {
-            "word": "three ",
-            "start": 58.877,
-            "end": 59.05
-          },
-          {
-            "word": ", ",
-            "start": 59.05,
-            "end": 59.223
-          },
-          {
-            "word": "four ",
-            "start": 59.223,
-            "end": 59.397
-          },
-          {
-            "word": ")",
-            "start": 59.397,
+            "word": "four)",
+            "start": 59.18,
             "end": 59.57
           }
         ]
@@ -4362,48 +4624,23 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 71.92,
         "words": [
           {
-            "word": "( ",
+            "word": "(One, ",
             "start": 70.46,
-            "end": 70.622
+            "end": 70.825
           },
           {
-            "word": "One ",
-            "start": 70.622,
-            "end": 70.784
+            "word": "two, ",
+            "start": 70.825,
+            "end": 71.19
           },
           {
-            "word": ", ",
-            "start": 70.784,
-            "end": 70.947
+            "word": "three, ",
+            "start": 71.19,
+            "end": 71.555
           },
           {
-            "word": "two ",
-            "start": 70.947,
-            "end": 71.109
-          },
-          {
-            "word": ", ",
-            "start": 71.109,
-            "end": 71.271
-          },
-          {
-            "word": "three ",
-            "start": 71.271,
-            "end": 71.433
-          },
-          {
-            "word": ", ",
-            "start": 71.433,
-            "end": 71.596
-          },
-          {
-            "word": "four ",
-            "start": 71.596,
-            "end": 71.758
-          },
-          {
-            "word": ")",
-            "start": 71.758,
+            "word": "four)",
+            "start": 71.555,
             "end": 71.92
           }
         ]
@@ -4521,29 +4758,19 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 83.58
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 83.58,
             "end": 84.38
           },
           {
-            "word": "( ",
+            "word": "きらきら ",
             "start": 84.38,
             "end": 85.18
           },
           {
-            "word": "きらきら ",
+            "word": "キラー)",
             "start": 85.18,
             "end": 85.98
-          },
-          {
-            "word": "キラー ",
-            "start": 85.98,
-            "end": 86.78
-          },
-          {
-            "word": ")",
-            "start": 86.78,
-            "end": 87.58
           }
         ]
       },
@@ -4557,24 +4784,14 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 89.02
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 89.02,
             "end": 89.82
           },
           {
-            "word": "( ",
+            "word": "マジカルパワー)",
             "start": 89.82,
             "end": 90.62
-          },
-          {
-            "word": "マジカルパワー ",
-            "start": 90.62,
-            "end": 91.42
-          },
-          {
-            "word": ")",
-            "start": 91.42,
-            "end": 92.22
           }
         ]
       },
@@ -4604,73 +4821,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 101.3,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 95.96,
-            "end": 96.341
+            "end": 96.628
           },
           {
-            "word": "- ",
-            "start": 96.341,
-            "end": 96.723
+            "word": "U- ",
+            "start": 96.628,
+            "end": 97.295
           },
           {
-            "word": "U ",
-            "start": 96.723,
-            "end": 97.104
-          },
-          {
-            "word": "- ",
-            "start": 97.104,
-            "end": 97.486
-          },
-          {
-            "word": "C ",
-            "start": 97.486,
-            "end": 97.867
-          },
-          {
-            "word": "- ",
-            "start": 97.867,
-            "end": 98.249
+            "word": "C- ",
+            "start": 97.295,
+            "end": 97.963
           },
           {
             "word": "K ",
-            "start": 98.249,
+            "start": 97.963,
             "end": 98.63
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 98.63,
-            "end": 99.011
+            "end": 99.297
           },
           {
-            "word": "- ",
-            "start": 99.011,
-            "end": 99.393
+            "word": "U- ",
+            "start": 99.297,
+            "end": 99.965
           },
           {
-            "word": "U ",
-            "start": 99.393,
-            "end": 99.774
-          },
-          {
-            "word": "- ",
-            "start": 99.774,
-            "end": 100.156
-          },
-          {
-            "word": "C ",
-            "start": 100.156,
-            "end": 100.537
-          },
-          {
-            "word": "- ",
-            "start": 100.537,
-            "end": 100.919
+            "word": "C- ",
+            "start": 99.965,
+            "end": 100.632
           },
           {
             "word": "K",
-            "start": 100.919,
+            "start": 100.632,
             "end": 101.3
           }
         ]
@@ -4680,73 +4867,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 107.49000000000001,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 101.3,
-            "end": 101.742
+            "end": 102.074
           },
           {
-            "word": "- ",
-            "start": 101.742,
-            "end": 102.184
+            "word": "U- ",
+            "start": 102.074,
+            "end": 102.847
           },
           {
-            "word": "U ",
-            "start": 102.184,
-            "end": 102.626
-          },
-          {
-            "word": "- ",
-            "start": 102.626,
-            "end": 103.069
-          },
-          {
-            "word": "C ",
-            "start": 103.069,
-            "end": 103.511
-          },
-          {
-            "word": "- ",
-            "start": 103.511,
-            "end": 103.953
+            "word": "C- ",
+            "start": 102.847,
+            "end": 103.621
           },
           {
             "word": "K ",
-            "start": 103.953,
+            "start": 103.621,
             "end": 104.395
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 104.395,
-            "end": 104.837
+            "end": 105.169
           },
           {
-            "word": "- ",
-            "start": 104.837,
-            "end": 105.279
+            "word": "U- ",
+            "start": 105.169,
+            "end": 105.943
           },
           {
-            "word": "U ",
-            "start": 105.279,
-            "end": 105.721
-          },
-          {
-            "word": "- ",
-            "start": 105.721,
-            "end": 106.164
-          },
-          {
-            "word": "C ",
-            "start": 106.164,
-            "end": 106.606
-          },
-          {
-            "word": "- ",
-            "start": 106.606,
-            "end": 107.048
+            "word": "C- ",
+            "start": 105.943,
+            "end": 106.716
           },
           {
             "word": "K",
-            "start": 107.048,
+            "start": 106.716,
             "end": 107.49
           }
         ]
@@ -5005,29 +5162,19 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 136.62
           },
           {
-            "word": "見上げる ",
+            "word": "見上げる ( ",
             "start": 136.62,
             "end": 137.42
           },
           {
-            "word": "( ",
+            "word": "きらきら ",
             "start": 137.42,
             "end": 138.22
           },
           {
-            "word": "きらきら ",
+            "word": "キラー)",
             "start": 138.22,
             "end": 139.02
-          },
-          {
-            "word": "キラー ",
-            "start": 139.02,
-            "end": 139.82
-          },
-          {
-            "word": ")",
-            "start": 139.82,
-            "end": 140.62
           }
         ]
       },
@@ -5036,48 +5183,23 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 143.57,
         "words": [
           {
-            "word": "( ",
+            "word": "(One, ",
             "start": 141.98,
-            "end": 142.157
+            "end": 142.377
           },
           {
-            "word": "One ",
-            "start": 142.157,
-            "end": 142.333
+            "word": "two, ",
+            "start": 142.377,
+            "end": 142.775
           },
           {
-            "word": ", ",
-            "start": 142.333,
-            "end": 142.51
+            "word": "three, ",
+            "start": 142.775,
+            "end": 143.172
           },
           {
-            "word": "two ",
-            "start": 142.51,
-            "end": 142.687
-          },
-          {
-            "word": ", ",
-            "start": 142.687,
-            "end": 142.863
-          },
-          {
-            "word": "three ",
-            "start": 142.863,
-            "end": 143.04
-          },
-          {
-            "word": ", ",
-            "start": 143.04,
-            "end": 143.217
-          },
-          {
-            "word": "four ",
-            "start": 143.217,
-            "end": 143.393
-          },
-          {
-            "word": ")",
-            "start": 143.393,
+            "word": "four)",
+            "start": 143.172,
             "end": 143.57
           }
         ]
@@ -5195,48 +5317,23 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 155.52,
         "words": [
           {
-            "word": "( ",
+            "word": "(One, ",
             "start": 154.06,
-            "end": 154.222
+            "end": 154.425
           },
           {
-            "word": "One ",
-            "start": 154.222,
-            "end": 154.384
+            "word": "two, ",
+            "start": 154.425,
+            "end": 154.79
           },
           {
-            "word": ", ",
-            "start": 154.384,
-            "end": 154.547
+            "word": "three, ",
+            "start": 154.79,
+            "end": 155.155
           },
           {
-            "word": "two ",
-            "start": 154.547,
-            "end": 154.709
-          },
-          {
-            "word": ", ",
-            "start": 154.709,
-            "end": 154.871
-          },
-          {
-            "word": "three ",
-            "start": 154.871,
-            "end": 155.033
-          },
-          {
-            "word": ", ",
-            "start": 155.033,
-            "end": 155.196
-          },
-          {
-            "word": "four ",
-            "start": 155.196,
-            "end": 155.358
-          },
-          {
-            "word": ")",
-            "start": 155.358,
+            "word": "four)",
+            "start": 155.155,
             "end": 155.52
           }
         ]
@@ -5354,29 +5451,19 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 167.39
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 167.39,
             "end": 168.19
           },
           {
-            "word": "( ",
+            "word": "きらきら ",
             "start": 168.19,
             "end": 168.99
           },
           {
-            "word": "きらきら ",
+            "word": "キラー)",
             "start": 168.99,
             "end": 169.79
-          },
-          {
-            "word": "キラー ",
-            "start": 169.79,
-            "end": 170.59
-          },
-          {
-            "word": ")",
-            "start": 170.59,
-            "end": 171.39
           }
         ]
       },
@@ -5390,24 +5477,14 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 174.23
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 174.23,
             "end": 175.03
           },
           {
-            "word": "( ",
+            "word": "マジカルパワー)",
             "start": 175.03,
             "end": 175.83
-          },
-          {
-            "word": "マジカルパワー ",
-            "start": 175.83,
-            "end": 176.63
-          },
-          {
-            "word": ")",
-            "start": 176.63,
-            "end": 177.43
           }
         ]
       },
@@ -5437,73 +5514,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 185.34,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 179.99,
-            "end": 180.372
+            "end": 180.659
           },
           {
-            "word": "- ",
-            "start": 180.372,
-            "end": 180.754
+            "word": "U- ",
+            "start": 180.659,
+            "end": 181.328
           },
           {
-            "word": "U ",
-            "start": 180.754,
-            "end": 181.136
-          },
-          {
-            "word": "- ",
-            "start": 181.136,
-            "end": 181.519
-          },
-          {
-            "word": "C ",
-            "start": 181.519,
-            "end": 181.901
-          },
-          {
-            "word": "- ",
-            "start": 181.901,
-            "end": 182.283
+            "word": "C- ",
+            "start": 181.328,
+            "end": 181.996
           },
           {
             "word": "K ",
-            "start": 182.283,
+            "start": 181.996,
             "end": 182.665
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 182.665,
-            "end": 183.047
+            "end": 183.334
           },
           {
-            "word": "- ",
-            "start": 183.047,
-            "end": 183.429
+            "word": "U- ",
+            "start": 183.334,
+            "end": 184.002
           },
           {
-            "word": "U ",
-            "start": 183.429,
-            "end": 183.811
-          },
-          {
-            "word": "- ",
-            "start": 183.811,
-            "end": 184.194
-          },
-          {
-            "word": "C ",
-            "start": 184.194,
-            "end": 184.576
-          },
-          {
-            "word": "- ",
-            "start": 184.576,
-            "end": 184.958
+            "word": "C- ",
+            "start": 184.002,
+            "end": 184.671
           },
           {
             "word": "K",
-            "start": 184.958,
+            "start": 184.671,
             "end": 185.34
           }
         ]
@@ -5513,73 +5560,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 191.5,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 185.34,
-            "end": 185.78
+            "end": 186.11
           },
           {
-            "word": "- ",
-            "start": 185.78,
-            "end": 186.22
+            "word": "U- ",
+            "start": 186.11,
+            "end": 186.88
           },
           {
-            "word": "U ",
-            "start": 186.22,
-            "end": 186.66
-          },
-          {
-            "word": "- ",
-            "start": 186.66,
-            "end": 187.1
-          },
-          {
-            "word": "C ",
-            "start": 187.1,
-            "end": 187.54
-          },
-          {
-            "word": "- ",
-            "start": 187.54,
-            "end": 187.98
+            "word": "C- ",
+            "start": 186.88,
+            "end": 187.65
           },
           {
             "word": "K ",
-            "start": 187.98,
+            "start": 187.65,
             "end": 188.42
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 188.42,
-            "end": 188.86
+            "end": 189.19
           },
           {
-            "word": "- ",
-            "start": 188.86,
-            "end": 189.3
+            "word": "U- ",
+            "start": 189.19,
+            "end": 189.96
           },
           {
-            "word": "U ",
-            "start": 189.3,
-            "end": 189.74
-          },
-          {
-            "word": "- ",
-            "start": 189.74,
-            "end": 190.18
-          },
-          {
-            "word": "C ",
-            "start": 190.18,
-            "end": 190.62
-          },
-          {
-            "word": "- ",
-            "start": 190.62,
-            "end": 191.06
+            "word": "C- ",
+            "start": 189.96,
+            "end": 190.73
           },
           {
             "word": "K",
-            "start": 191.06,
+            "start": 190.73,
             "end": 191.5
           }
         ]
@@ -5697,48 +5714,23 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 203.46,
         "words": [
           {
-            "word": "( ",
+            "word": "(One, ",
             "start": 201.96,
-            "end": 202.127
+            "end": 202.335
           },
           {
-            "word": "One ",
-            "start": 202.127,
-            "end": 202.293
+            "word": "two, ",
+            "start": 202.335,
+            "end": 202.71
           },
           {
-            "word": ", ",
-            "start": 202.293,
-            "end": 202.46
+            "word": "three, ",
+            "start": 202.71,
+            "end": 203.085
           },
           {
-            "word": "two ",
-            "start": 202.46,
-            "end": 202.627
-          },
-          {
-            "word": ", ",
-            "start": 202.627,
-            "end": 202.793
-          },
-          {
-            "word": "three ",
-            "start": 202.793,
-            "end": 202.96
-          },
-          {
-            "word": ", ",
-            "start": 202.96,
-            "end": 203.127
-          },
-          {
-            "word": "four ",
-            "start": 203.127,
-            "end": 203.293
-          },
-          {
-            "word": ")",
-            "start": 203.293,
+            "word": "four)",
+            "start": 203.085,
             "end": 203.46
           }
         ]
@@ -5856,29 +5848,19 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 215.58
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 215.58,
             "end": 216.38
           },
           {
-            "word": "( ",
+            "word": "きらきら ",
             "start": 216.38,
             "end": 217.18
           },
           {
-            "word": "きらきら ",
+            "word": "キラー)",
             "start": 217.18,
             "end": 217.98
-          },
-          {
-            "word": "キラー ",
-            "start": 217.98,
-            "end": 218.78
-          },
-          {
-            "word": ")",
-            "start": 218.78,
-            "end": 219.58
           }
         ]
       },
@@ -5892,24 +5874,14 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 221.57
           },
           {
-            "word": "キラー ",
+            "word": "キラー ( ",
             "start": 221.57,
             "end": 222.37
           },
           {
-            "word": "( ",
+            "word": "マジカルパワー)",
             "start": 222.37,
             "end": 223.17
-          },
-          {
-            "word": "マジカルパワー ",
-            "start": 223.17,
-            "end": 223.97
-          },
-          {
-            "word": ")",
-            "start": 223.97,
-            "end": 224.77
           }
         ]
       },
@@ -5939,73 +5911,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 233.47,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 227.33,
-            "end": 227.769
+            "end": 228.097
           },
           {
-            "word": "- ",
-            "start": 227.769,
-            "end": 228.207
+            "word": "U- ",
+            "start": 228.097,
+            "end": 228.865
           },
           {
-            "word": "U ",
-            "start": 228.207,
-            "end": 228.646
-          },
-          {
-            "word": "- ",
-            "start": 228.646,
-            "end": 229.084
-          },
-          {
-            "word": "C ",
-            "start": 229.084,
-            "end": 229.523
-          },
-          {
-            "word": "- ",
-            "start": 229.523,
-            "end": 229.961
+            "word": "C- ",
+            "start": 228.865,
+            "end": 229.632
           },
           {
             "word": "K ",
-            "start": 229.961,
+            "start": 229.632,
             "end": 230.4
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 230.4,
-            "end": 230.839
+            "end": 231.167
           },
           {
-            "word": "- ",
-            "start": 230.839,
-            "end": 231.277
+            "word": "U- ",
+            "start": 231.167,
+            "end": 231.935
           },
           {
-            "word": "U ",
-            "start": 231.277,
-            "end": 231.716
-          },
-          {
-            "word": "- ",
-            "start": 231.716,
-            "end": 232.154
-          },
-          {
-            "word": "C ",
-            "start": 232.154,
-            "end": 232.593
-          },
-          {
-            "word": "- ",
-            "start": 232.593,
-            "end": 233.031
+            "word": "C- ",
+            "start": 231.935,
+            "end": 232.702
           },
           {
             "word": "K",
-            "start": 233.031,
+            "start": 232.702,
             "end": 233.47
           }
         ]
@@ -6015,73 +5957,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 239.59,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 233.47,
-            "end": 233.907
+            "end": 234.235
           },
           {
-            "word": "- ",
-            "start": 233.907,
-            "end": 234.344
+            "word": "U- ",
+            "start": 234.235,
+            "end": 235
           },
           {
-            "word": "U ",
-            "start": 234.344,
-            "end": 234.781
-          },
-          {
-            "word": "- ",
-            "start": 234.781,
-            "end": 235.219
-          },
-          {
-            "word": "C ",
-            "start": 235.219,
-            "end": 235.656
-          },
-          {
-            "word": "- ",
-            "start": 235.656,
-            "end": 236.093
+            "word": "C- ",
+            "start": 235,
+            "end": 235.765
           },
           {
             "word": "K ",
-            "start": 236.093,
+            "start": 235.765,
             "end": 236.53
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 236.53,
-            "end": 236.967
+            "end": 237.295
           },
           {
-            "word": "- ",
-            "start": 236.967,
-            "end": 237.404
+            "word": "U- ",
+            "start": 237.295,
+            "end": 238.06
           },
           {
-            "word": "U ",
-            "start": 237.404,
-            "end": 237.841
-          },
-          {
-            "word": "- ",
-            "start": 237.841,
-            "end": 238.279
-          },
-          {
-            "word": "C ",
-            "start": 238.279,
-            "end": 238.716
-          },
-          {
-            "word": "- ",
-            "start": 238.716,
-            "end": 239.153
+            "word": "C- ",
+            "start": 238.06,
+            "end": 238.825
           },
           {
             "word": "K",
-            "start": 239.153,
+            "start": 238.825,
             "end": 239.59
           }
         ]
@@ -6091,73 +6003,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 245.04,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 239.59,
-            "end": 239.979
+            "end": 240.271
           },
           {
-            "word": "- ",
-            "start": 239.979,
-            "end": 240.369
+            "word": "U- ",
+            "start": 240.271,
+            "end": 240.952
           },
           {
-            "word": "U ",
-            "start": 240.369,
-            "end": 240.758
-          },
-          {
-            "word": "- ",
-            "start": 240.758,
-            "end": 241.147
-          },
-          {
-            "word": "C ",
-            "start": 241.147,
-            "end": 241.536
-          },
-          {
-            "word": "- ",
-            "start": 241.536,
-            "end": 241.926
+            "word": "C- ",
+            "start": 240.952,
+            "end": 241.634
           },
           {
             "word": "K ",
-            "start": 241.926,
+            "start": 241.634,
             "end": 242.315
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 242.315,
-            "end": 242.704
+            "end": 242.996
           },
           {
-            "word": "- ",
-            "start": 242.704,
-            "end": 243.094
+            "word": "U- ",
+            "start": 242.996,
+            "end": 243.678
           },
           {
-            "word": "U ",
-            "start": 243.094,
-            "end": 243.483
-          },
-          {
-            "word": "- ",
-            "start": 243.483,
-            "end": 243.872
-          },
-          {
-            "word": "C ",
-            "start": 243.872,
-            "end": 244.261
-          },
-          {
-            "word": "- ",
-            "start": 244.261,
-            "end": 244.651
+            "word": "C- ",
+            "start": 243.678,
+            "end": 244.359
           },
           {
             "word": "K",
-            "start": 244.651,
+            "start": 244.359,
             "end": 245.04
           }
         ]
@@ -6167,73 +6049,43 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 248.04,
         "words": [
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 245.04,
-            "end": 245.254
+            "end": 245.415
           },
           {
-            "word": "- ",
-            "start": 245.254,
-            "end": 245.469
+            "word": "U- ",
+            "start": 245.415,
+            "end": 245.79
           },
           {
-            "word": "U ",
-            "start": 245.469,
-            "end": 245.683
-          },
-          {
-            "word": "- ",
-            "start": 245.683,
-            "end": 245.897
-          },
-          {
-            "word": "C ",
-            "start": 245.897,
-            "end": 246.111
-          },
-          {
-            "word": "- ",
-            "start": 246.111,
-            "end": 246.326
+            "word": "C- ",
+            "start": 245.79,
+            "end": 246.165
           },
           {
             "word": "K ",
-            "start": 246.326,
+            "start": 246.165,
             "end": 246.54
           },
           {
-            "word": "L ",
+            "word": "L- ",
             "start": 246.54,
-            "end": 246.754
+            "end": 246.915
           },
           {
-            "word": "- ",
-            "start": 246.754,
-            "end": 246.969
+            "word": "U- ",
+            "start": 246.915,
+            "end": 247.29
           },
           {
-            "word": "U ",
-            "start": 246.969,
-            "end": 247.183
-          },
-          {
-            "word": "- ",
-            "start": 247.183,
-            "end": 247.397
-          },
-          {
-            "word": "C ",
-            "start": 247.397,
-            "end": 247.611
-          },
-          {
-            "word": "- ",
-            "start": 247.611,
-            "end": 247.826
+            "word": "C- ",
+            "start": 247.29,
+            "end": 247.665
           },
           {
             "word": "K",
-            "start": 247.826,
+            "start": 247.665,
             "end": 248.04
           }
         ]
