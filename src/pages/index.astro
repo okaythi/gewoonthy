@@ -466,7 +466,7 @@ const pageTitle = "Under maintenance...";
   <div class="container">
     <div class="header">
       <h1>{pageTitle}</h1>
-      <p class="subtitle">In the meantime, here's a good anthem:</p>
+      <p class="subtitle" id="anthem-subtitle">In the meantime, here's a good anthem:</p>
     </div>
 
     <div class="video-wrapper">
@@ -586,6 +586,10 @@ const pageTitle = "Under maintenance...";
       const songData = songsDictionary[selectedVideo];
       const lyricsData = songData.lyricsData;
       const GLOBAL_OFFSET = songData.globalOffset || 0;
+      const subtitle = songData.subtitle || 'In the meantime, check out this banger:';
+      
+      const subtitleEl = document.getElementById('anthem-subtitle');
+      if (subtitleEl) subtitleEl.textContent = subtitle;
 
       // 2. Setup video player
       const vid = document.getElementById('anthem-video');

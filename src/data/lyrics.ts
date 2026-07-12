@@ -12,6 +12,7 @@ export interface Verse {
 
 export interface SongData {
   globalOffset: number;
+  subtitle?: string;
   lyricsData: Verse[];
 }
 
@@ -1986,7 +1987,8 @@ export const songsDictionary: Record<string, SongData> = {
           }
         ]
       }
-    ]
+    ],
+    "subtitle": "🇬🇧 ● but in the meantime, check out this banger ● 🇬🇧"
   },
   "IC3PEAK - Boo-Hoo.mp4": {
     "globalOffset": 0,
@@ -4041,7 +4043,8 @@ export const songsDictionary: Record<string, SongData> = {
           }
         ]
       }
-    ]
+    ],
+    "subtitle": "🇷🇺 ● но тем временем, зацени этот разъёб ● 🇷🇺"
   },
   "きゃりーぱみゅぱみゅ - きらきらキラー.mp4": {
     "globalOffset": 0,
@@ -5998,7 +6001,8 @@ export const songsDictionary: Record<string, SongData> = {
           }
         ]
       }
-    ]
+    ],
+    "subtitle": "🇯🇵 ● その間に、この神曲でも聴いときな ● 🇯🇵"
   },
   "MARTELIN - SÓ FÉ.mp4": {
     "globalOffset": 0,
@@ -8699,6 +8703,1691 @@ export const songsDictionary: Record<string, SongData> = {
           }
         ]
       }
-    ]
+    ],
+    "subtitle": "🇧🇷 ● mas enquanto isso, pega a visão dessa pedrada ● 🇧🇷"
+  },
+  "Jessi (제시) - 눈누난나 (NUNU NANA.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 2.99,
+        "verseEnd": 7.99,
+        "words": [
+          {
+            "word": "I'm",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trying",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "something",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I'm",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trying",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "something",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 7.57,
+        "verseEnd": 12.57,
+        "words": [
+          {
+            "word": "So",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "come",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "with",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fly",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 10.38,
+        "verseEnd": 15.38,
+        "words": [
+          {
+            "word": "Away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 16.78,
+        "verseEnd": 21.78,
+        "words": [
+          {
+            "word": "그래서",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "난",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "눈누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 21.7,
+        "verseEnd": 26.7,
+        "words": [
+          {
+            "word": "눈누누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 26.33,
+        "verseEnd": 31.33,
+        "words": [
+          {
+            "word": "Put",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "em",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "in",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "air",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 28.47,
+        "verseEnd": 33.47,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 30.26,
+        "verseEnd": 35.260000000000005,
+        "words": [
+          {
+            "word": "Like",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "this",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 33.26,
+        "verseEnd": 38.26,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 34.81,
+        "verseEnd": 39.81,
+        "words": [
+          {
+            "word": "에에에에이",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 36.54,
+        "verseEnd": 41.54,
+        "words": [
+          {
+            "word": "나를",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "지금",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "원해",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 38.32,
+        "verseEnd": 43.32,
+        "words": [
+          {
+            "word": "Gimme",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gimme",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 39.67,
+        "verseEnd": 44.67,
+        "words": [
+          {
+            "word": "Gimme",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gimme",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 40.71,
+        "verseEnd": 45.71,
+        "words": [
+          {
+            "word": "Baby",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baby",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "want",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "it",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 42.95,
+        "verseEnd": 47.95,
+        "words": [
+          {
+            "word": "이리로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "이리로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "이리로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "이리",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "온",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 45.48,
+        "verseEnd": 50.48,
+        "words": [
+          {
+            "word": "유난",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "떨지",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "마",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "그만",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 47.03,
+        "verseEnd": 52.03,
+        "words": [
+          {
+            "word": "원한다면",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "솔직해져",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "봐",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "too",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "much",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 49.39,
+        "verseEnd": 54.39,
+        "words": [
+          {
+            "word": "우",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "baby",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "와서",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "가져가",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 51.65,
+        "verseEnd": 56.65,
+        "words": [
+          {
+            "word": "I",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "could",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "everything",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "anything",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 53.56,
+        "verseEnd": 58.56,
+        "words": [
+          {
+            "word": "Baby",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "can",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "handle",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "it",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 55.11,
+        "verseEnd": 60.11,
+        "words": [
+          {
+            "word": "뭐라",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "하던",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "still",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "don't",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "what",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 59.48,
+        "verseEnd": 64.47999999999999,
+        "words": [
+          {
+            "word": "맘대로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "계속",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "떠들어",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "they",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "talk",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "about",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 64.48,
+        "verseEnd": 69.48,
+        "words": [
+          {
+            "word": "뭐라노",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "뭐라카노",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "F",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "U",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 71.78999999999999,
+        "verseEnd": 76.78999999999999,
+        "words": [
+          {
+            "word": "그래서",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "난",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "눈누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 76.82,
+        "verseEnd": 81.82,
+        "words": [
+          {
+            "word": "눈누누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 81.21000000000001,
+        "verseEnd": 86.21000000000001,
+        "words": [
+          {
+            "word": "Put",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "em",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "in",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "air",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 83.32,
+        "verseEnd": 88.32,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 85.19,
+        "verseEnd": 90.19,
+        "words": [
+          {
+            "word": "Like",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "this",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 88.16,
+        "verseEnd": 93.16,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 89.72,
+        "verseEnd": 94.72,
+        "words": [
+          {
+            "word": "에에에에이",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 92.53,
+        "verseEnd": 97.53,
+        "words": [
+          {
+            "word": "I'm",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "still",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Jessi",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "from",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "block",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 94.35,
+        "verseEnd": 99.35,
+        "words": [
+          {
+            "word": "You",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "know",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "got",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "keys",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "lock",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 96.2,
+        "verseEnd": 101.2,
+        "words": [
+          {
+            "word": "안",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "봐",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "남의",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "눈치",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "just",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "do",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 98.31,
+        "verseEnd": 103.31,
+        "words": [
+          {
+            "word": "날",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "보기",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "위해",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "들어",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "뒤꿈치",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 100.84,
+        "verseEnd": 105.84,
+        "words": [
+          {
+            "word": "Wake",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bless",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "looking",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fresh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 103.2,
+        "verseEnd": 108.2,
+        "words": [
+          {
+            "word": "어딜",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "가든",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "flex",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "got",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "S",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "on",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chest",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 105.34,
+        "verseEnd": 110.34,
+        "words": [
+          {
+            "word": "싸이",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "오빠",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "말했지",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "꼴리는",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "대로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "해",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 107.62,
+        "verseEnd": 112.62,
+        "words": [
+          {
+            "word": "No",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "red",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "lights",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "올림픽대로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "aye",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 110.37,
+        "verseEnd": 115.37,
+        "words": [
+          {
+            "word": "뭐라",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "하던",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "still",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "don't",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "what",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 114.41,
+        "verseEnd": 119.41,
+        "words": [
+          {
+            "word": "맘대로",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "계속",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "떠들어",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "they",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "talk",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "about",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 119.13,
+        "verseEnd": 124.13,
+        "words": [
+          {
+            "word": "뭐라노",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "뭐라카노",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "F",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "U",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 126.52,
+        "verseEnd": 131.51999999999998,
+        "words": [
+          {
+            "word": "그래서",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "난",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "눈누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 131.64,
+        "verseEnd": 136.64,
+        "words": [
+          {
+            "word": "눈누누난나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 136.01,
+        "verseEnd": 141.01,
+        "words": [
+          {
+            "word": "Put",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "em",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "in",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "air",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 138.34,
+        "verseEnd": 143.34,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 140.18,
+        "verseEnd": 145.18,
+        "words": [
+          {
+            "word": "Like",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "this",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 142.91,
+        "verseEnd": 147.91,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 144.68,
+        "verseEnd": 149.68,
+        "words": [
+          {
+            "word": "에에에에이",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 148.88,
+        "verseEnd": 153.88,
+        "words": [
+          {
+            "word": "I'm",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trying",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "something",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I'm",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trying",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "give",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "something",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "more",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 153.85,
+        "verseEnd": 158.85,
+        "words": [
+          {
+            "word": "So",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "come",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "with",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fly",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 156.65,
+        "verseEnd": 161.65,
+        "words": [
+          {
+            "word": "Away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 167.69,
+        "verseEnd": 172.69,
+        "words": [
+          {
+            "word": "그래서",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "난",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "눈누난나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 172.84,
+        "verseEnd": 177.84,
+        "words": [
+          {
+            "word": "눈누누난나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 177.21,
+        "verseEnd": 182.21,
+        "words": [
+          {
+            "word": "Put",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "em",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "in",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "air",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 179.49,
+        "verseEnd": 184.49,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 181.15,
+        "verseEnd": 186.15,
+        "words": [
+          {
+            "word": "Like",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "this",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "나나나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "yeah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 183.52,
+        "verseEnd": 188.52,
+        "words": [
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "누나",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 185.72,
+        "verseEnd": 190.72,
+        "words": [
+          {
+            "word": "에에에에이",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      }
+    ],
+    "subtitle": "🇰🇷 ● 그동안 이 띵곡 한 번 들어봐 ● 🇰🇷"
   }
 };
