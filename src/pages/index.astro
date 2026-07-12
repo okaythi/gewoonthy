@@ -1121,7 +1121,8 @@ const pageTitle = "I'm cooking something here...";
           const source = audioCtx.createMediaElementSource(vid);
           source.connect(analyser);
           analyser.connect(audioCtx.destination);
-          analyser.fftSize = 256;
+          analyser.fftSize = 512;
+          analyser.smoothingTimeConstant = 0.85;
           bufferLength = analyser.frequencyBinCount;
           dataArray = new Uint8Array(bufferLength);
           drawVisualizer();
@@ -1158,30 +1159,52 @@ const pageTitle = "I'm cooking something here...";
         
         ctxLeft.clearRect(0, 0, wL, hL);
         ctxRight.clearRect(0, 0, wR, hR);
+        const timeScale = Date.now() / 20;
         
-        const barHeightLeft = hL / bufferLength;
-        const barHeightRight = hR / bufferLength;
+        // Dynamic bar spacing for a sleeker look
+        const totalBars = Math.floor(bufferLength * 0.75); // Cut off highest frequencies which are often empty
+        const barHeightLeft = hL / totalBars;
+        const barHeightRight = hR / totalBars;
+        const gap = 1.5;
         
-        for(let i = 0; i < bufferLength; i++) {
+        ctxLeft.shadowBlur = 12;
+        ctxRight.shadowBlur = 12;
+        
+        for(let i = 0; i < totalBars; i++) {
           const val = dataArray[i];
-          const pct = val / 255;
-          const barWidthLeft = wL * pct;
-          const barWidthRight = wR * pct;
+          // Apply a non-linear curve to make it look more dynamic
+          const pct = Math.pow(val / 255, 1.5);
+          
+          // Minimum width for presence, maximum 40% of screen
+          const barWidthLeft = Math.max(2, wL * 0.4 * pct);
+          const barWidthRight = Math.max(2, wR * 0.4 * pct);
           
           if (isGlobalBridge) {
-            const hue = (i / bufferLength) * 360;
-            ctxLeft.fillStyle = `hsl(${hue}, 100%, 60%)`;
-            ctxRight.fillStyle = `hsl(${hue}, 100%, 60%)`;
+            const hue = ((i / totalBars) * 360 + timeScale) % 360;
+            const color = `hsl(${hue}, 100%, 65%)`;
+            ctxLeft.fillStyle = color;
+            ctxLeft.shadowColor = color;
+            ctxRight.fillStyle = color;
+            ctxRight.shadowColor = color;
           } else {
-            ctxLeft.fillStyle = `rgba(255, 255, 255, ${0.1 + pct * 0.7})`;
-            ctxRight.fillStyle = `rgba(255, 255, 255, ${0.1 + pct * 0.7})`;
+            const opacity = 0.2 + pct * 0.8;
+            const color = `rgba(255, 255, 255, ${opacity})`;
+            ctxLeft.fillStyle = color;
+            ctxLeft.shadowColor = `rgba(255, 255, 255, ${opacity * 0.5})`;
+            ctxRight.fillStyle = color;
+            ctxRight.shadowColor = `rgba(255, 255, 255, ${opacity * 0.5})`;
           }
           
-          const yL = hL - (i * barHeightLeft) - barHeightLeft;
-          ctxLeft.fillRect(0, yL, barWidthLeft, barHeightLeft - 1);
+          const yL = hL - (i * barHeightLeft) - barHeightLeft + (gap / 2);
+          const drawH = Math.max(1, barHeightLeft - gap);
           
-          const yR = hR - (i * barHeightRight) - barHeightRight;
-          ctxRight.fillRect(wR - barWidthRight, yR, barWidthRight, barHeightRight - 1);
+          // Draw left side (spawns from left edge)
+          ctxLeft.fillRect(0, yL, barWidthLeft, drawH);
+          
+          // Draw right side (spawns from right edge)
+          const yR = hR - (i * barHeightRight) - barHeightRight + (gap / 2);
+          const drawHR = Math.max(1, barHeightRight - gap);
+          ctxRight.fillRect(wR - barWidthRight, yR, barWidthRight, drawHR);
         }
       };
 
