@@ -710,6 +710,21 @@ const pageTitle = "I'm cooking something here...";
       const vid = document.getElementById('anthem-video');
       const wrapper = document.getElementById('player-wrapper');
       const lyricsContainer = document.getElementById('lyrics-container');
+
+      const safePlay = async () => {
+        try {
+          await vid.play();
+        } catch (e) {
+          vid.muted = true;
+          try {
+            await vid.play();
+            const volIcon = document.getElementById('icon-vol');
+            const volume = document.getElementById('cc-volume');
+            if (volIcon) volIcon.innerHTML = '<path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
+            if (volume) { volume.value = 0; volume.style.setProperty('--val', '0%'); }
+          } catch (err) {}
+        }
+      };
       
       if (vid) {
         vid.volume = 0.35;
@@ -723,45 +738,11 @@ const pageTitle = "I'm cooking something here...";
           `).join('');
         }
 
-        const attemptAutoplay = async () => {
-          try {
-            await vid.play();
-          } catch (e) {
-            vid.muted = true;
-            try {
-              await vid.play();
-              const overlay = document.createElement('div');
-              overlay.className = 'unmute-overlay';
-              overlay.innerHTML = '<div class="unmute-btn">Click to Unmute</div>';
-              wrapper.appendChild(overlay);
-              
-              const unmute = (e) => {
-                e.stopPropagation();
-                vid.muted = false;
-                vid.volume = 0.35;
-                const volIcon = document.getElementById('icon-vol');
-                const volume = document.getElementById('cc-volume');
-                if (volIcon) volIcon.innerHTML = '<path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"/>';
-                if (volume) { volume.value = 0.35; volume.style.setProperty('--val', '35%'); }
-                overlay.remove();
-              };
-              
-              overlay.addEventListener('click', unmute, { once: true });
-            } catch (err) {
-              const playOnInteract = () => {
-                 vid.play().catch(() => {});
-                 ['click', 'keydown', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
-                   document.removeEventListener(evt, playOnInteract);
-                 });
-              };
-              ['click', 'keydown', 'mousemove', 'touchstart', 'scroll'].forEach(evt => {
-                document.addEventListener(evt, playOnInteract, { once: true, passive: true });
-              });
-            }
-          }
-        };
-
-        attemptAutoplay();
+        if (vid.readyState >= 2) {
+          safePlay();
+        } else {
+          vid.addEventListener('loadeddata', safePlay, { once: true });
+        }
 
         // Karaoke Engine
         let activeVerseIndex = -1;
@@ -801,21 +782,16 @@ const pageTitle = "I'm cooking something here...";
           }
           
           if (newVerseIndex !== activeVerseIndex) {
-            if (activeVerseIndex !== -1) {
-              const oldVerse = document.getElementById(`verse-${activeVerseIndex}`);
-              if (oldVerse) oldVerse.classList.remove('active');
-            }
+            document.querySelectorAll('.verse.active').forEach(v => v.classList.remove('active'));
             if (newVerseIndex !== -1) {
               const newVerse = document.getElementById(`verse-${newVerseIndex}`);
               if (newVerse) newVerse.classList.add('active');
             }
+            activeVerseIndex = newVerseIndex;
           }
           
           if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
-            if (activeWordIndex !== -1 && activeVerseIndex !== -1) {
-              const oldWord = document.getElementById(`word-${activeVerseIndex}-${activeWordIndex}`);
-              if (oldWord) oldWord.classList.remove('active');
-            }
+            document.querySelectorAll('.word.active').forEach(w => w.classList.remove('active'));
             
             if (newWordIndex !== -1 && newVerseIndex !== -1) {
               const newWord = document.getElementById(`word-${newVerseIndex}-${newWordIndex}`);
@@ -833,7 +809,6 @@ const pageTitle = "I'm cooking something here...";
                 if (isBridge && sideLeft && sideRight) {
                   lyricsContainer.style.opacity = '0';
                   
-                  // Clean up previous words
                   if (currentSideWordLeftEl) {
                     currentSideWordLeftEl.classList.add('fade-out');
                     const toRemove = currentSideWordLeftEl;
@@ -845,10 +820,8 @@ const pageTitle = "I'm cooking something here...";
                     setTimeout(() => toRemove.remove(), 600);
                   }
                   
-                  // Create new BAM word
                   const wordText = lyricsData[newVerseIndex].words[newWordIndex].word.trim();
                   if (wordText) {
-                    // Randomize size and position for BOTH sides (identical to each other)
                     const baseSize = 2 + Math.random() * 3; 
                     const finalSize = wordText.length > 8 ? baseSize / 1.5 : baseSize;
                     
@@ -920,16 +893,15 @@ const pageTitle = "I'm cooking something here...";
           animationFrameId = requestAnimationFrame(updateLyrics);
         };
         
+        // Start the loop unconditionally
+        animationFrameId = requestAnimationFrame(updateLyrics);
+        
         vid.addEventListener('play', () => {
           if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-          if (!animationFrameId) animationFrameId = requestAnimationFrame(updateLyrics);
         });
         
         vid.addEventListener('pause', () => {
-          if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-            animationFrameId = null;
-          }
+          // No longer canceling the animation frame here to keep updateLyrics running
         });
         
         vid.addEventListener('seeked', () => {
@@ -1118,8 +1090,11 @@ const pageTitle = "I'm cooking something here...";
           }
 
           vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
-          vid.load();
-          vid.play().catch(()=>{});
+          if (vid.readyState >= 2) {
+            safePlay();
+          } else {
+            vid.addEventListener('loadeddata', safePlay, { once: true });
+          }
 
           fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`, { cache: 'no-store' })
             .then(r => r.ok ? r.json() : {liked:false, desliked:false})
