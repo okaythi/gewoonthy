@@ -109,9 +109,11 @@ const pageTitle = "I'm cooking something here...";
 
     .custom-player-wrapper {
       position: relative;
-      width: 100%;
+      width: auto;
       height: auto;
+      aspect-ratio: 16 / 9;
       max-width: 100%;
+      max-height: calc(100dvh - 280px);
       box-shadow: 0 4px 30px rgba(255,255,255,0.05);
       border-radius: 8px;
       background-color: #050505;
@@ -701,7 +703,7 @@ const pageTitle = "I'm cooking something here...";
       if (subtitleEl) subtitleEl.textContent = subtitle;
 
       // 2. Setup video player
-      const vid = document.getElementById('anthem-video');
+      let vid = document.getElementById('anthem-video');
       const audioEl = document.getElementById('anthem-audio');
       const wrapper = document.getElementById('player-wrapper');
       const lyricsContainer = document.getElementById('lyrics-container');
@@ -1073,7 +1075,11 @@ const pageTitle = "I'm cooking something here...";
 
       const btnShuffle = document.getElementById('btn-shuffle');
       if (btnShuffle) {
+        let isShuffling = false;
         btnShuffle.addEventListener('click', () => {
+          if (isShuffling) return;
+          isShuffling = true;
+          
           let rem = availableVideos.filter(v => v !== selectedVideo);
           if (rem.length === 0) rem = availableVideos;
           const next = rem[Math.floor(Math.random() * rem.length)];
@@ -1112,24 +1118,36 @@ const pageTitle = "I'm cooking something here...";
           }
 
           vid.pause();
-          vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          if (audioEl) audioEl.pause();
+          
+          vid.src = '';
+          vid.load();
           if (audioEl) {
-            audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+            audioEl.src = '';
             audioEl.load();
           }
-          
-          if (selectedVideo.includes('IC3PEAK')) {
-            const wrapper = document.querySelector('.custom-player-wrapper');
-            if (wrapper) wrapper.style.aspectRatio = '4 / 3';
-            vid.style.objectFit = 'cover';
-          } else {
-            const wrapper = document.querySelector('.custom-player-wrapper');
-            if (wrapper) wrapper.style.aspectRatio = '16 / 9';
-            vid.style.objectFit = 'contain';
-          }
-          
-          vid.load();
-          safePlay();
+
+          setTimeout(() => {
+            vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+            if (audioEl) {
+              audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+              audioEl.load();
+            }
+            
+            if (selectedVideo.includes('IC3PEAK')) {
+              const wrapper = document.querySelector('.custom-player-wrapper');
+              if (wrapper) wrapper.style.aspectRatio = '4 / 3';
+              vid.style.objectFit = 'cover';
+            } else {
+              const wrapper = document.querySelector('.custom-player-wrapper');
+              if (wrapper) wrapper.style.aspectRatio = '16 / 9';
+              vid.style.objectFit = 'contain';
+            }
+            
+            vid.load();
+            safePlay();
+            isShuffling = false;
+          }, 150);
 
           fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`, { cache: 'no-store' })
             .then(r => r.ok ? r.json() : {liked:false, desliked:false})
