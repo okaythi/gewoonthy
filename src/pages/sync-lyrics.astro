@@ -348,6 +348,7 @@ const pageTitle = "Lyrics Sync Tool";
         container.innerHTML = localLyrics.map((verse, vIdx) => `
           <div class="verse" id="v-${vIdx}">
             <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
+            ${verse.speaker ? `<span class="speaker" style="color: #aaa; margin-right: 0.5em;">${verse.speaker}</span>` : ''}
             ${verse.words.map((w, wIdx) => {
             const isSynced = w.start && w.start !== 0;
             const isActive = vIdx === playingV && wIdx === playingW;

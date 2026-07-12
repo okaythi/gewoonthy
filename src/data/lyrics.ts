@@ -7,6 +7,7 @@ export interface Word {
 export interface Verse {
   verseStart: number;
   verseEnd: number;
+  speaker?: string;
   words: Word[];
 }
 
@@ -14894,5 +14895,9445 @@ export const songsDictionary: Record<string, SongData> = {
       }
     ],
     "subtitle": "🇳🇴 ● men i mellomtiden, sjekk ut denne bangeren ● 🇳🇴"
+  },
+  "Zaterdag.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 25.216,
+        "verseEnd": 27.296,
+        "words": [
+          {
+            "word": "Zoterdagavend ",
+            "start": 25.216,
+            "end": 26.071
+          },
+          {
+            "word": "genne ",
+            "start": 26.071,
+            "end": 26.235
+          },
+          {
+            "word": "kik ",
+            "start": 26.235,
+            "end": 26.563
+          },
+          {
+            "word": "in '",
+            "start": 26.563,
+            "end": 26.728
+          },
+          {
+            "word": "t ",
+            "start": 26.728,
+            "end": 26.971
+          },
+          {
+            "word": "bad",
+            "start": 26.971,
+            "end": 27.296
+          }
+        ]
+      },
+      {
+        "verseStart": 27.296,
+        "verseEnd": 29.217,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 27.296,
+            "end": 27.419
+          },
+          {
+            "word": "er ",
+            "start": 27.419,
+            "end": 27.623
+          },
+          {
+            "word": "groeie ",
+            "start": 27.623,
+            "end": 27.826
+          },
+          {
+            "word": "al ",
+            "start": 27.826,
+            "end": 27.99
+          },
+          {
+            "word": "sjampionne ",
+            "start": 27.99,
+            "end": 28.152
+          },
+          {
+            "word": "uit ",
+            "start": 28.152,
+            "end": 28.437
+          },
+          {
+            "word": "me ",
+            "start": 28.437,
+            "end": 28.725
+          },
+          {
+            "word": "gat",
+            "start": 28.725,
+            "end": 29.217
+          }
+        ]
+      },
+      {
+        "verseStart": 29.217,
+        "verseEnd": 31.342,
+        "words": [
+          {
+            "word": "Mennen ",
+            "start": 29.217,
+            "end": 29.422
+          },
+          {
+            "word": "okselgeur ",
+            "start": 29.422,
+            "end": 29.869
+          },
+          {
+            "word": "is ",
+            "start": 29.869,
+            "end": 30.441
+          },
+          {
+            "word": "nemie ",
+            "start": 30.441,
+            "end": 30.567
+          },
+          {
+            "word": "te ",
+            "start": 30.567,
+            "end": 30.772
+          },
+          {
+            "word": "doen",
+            "start": 30.772,
+            "end": 31.342
+          }
+        ]
+      },
+      {
+        "verseStart": 31.342,
+        "verseEnd": 33.346,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 31.342,
+            "end": 31.464
+          },
+          {
+            "word": "spoat ",
+            "start": 31.464,
+            "end": 31.668
+          },
+          {
+            "word": "deodorant ",
+            "start": 31.668,
+            "end": 32.201
+          },
+          {
+            "word": "in ",
+            "start": 32.201,
+            "end": 32.486
+          },
+          {
+            "word": "elke ",
+            "start": 32.486,
+            "end": 32.65
+          },
+          {
+            "word": "schoen",
+            "start": 32.65,
+            "end": 33.346
+          }
+        ]
+      },
+      {
+        "verseStart": 33.346,
+        "verseEnd": 35.471,
+        "words": [
+          {
+            "word": "'",
+            "start": 33.346,
+            "end": 33.508
+          },
+          {
+            "word": "k ",
+            "start": 33.508,
+            "end": 33.84
+          },
+          {
+            "word": "Was ",
+            "start": 33.84,
+            "end": 34.004
+          },
+          {
+            "word": "men ",
+            "start": 34.004,
+            "end": 34.127
+          },
+          {
+            "word": "hoor ",
+            "start": 34.127,
+            "end": 34.332
+          },
+          {
+            "word": "want '",
+            "start": 34.332,
+            "end": 34.536
+          },
+          {
+            "word": "t ",
+            "start": 34.536,
+            "end": 34.699
+          },
+          {
+            "word": "is ",
+            "start": 34.699,
+            "end": 34.984
+          },
+          {
+            "word": "wee ",
+            "start": 34.984,
+            "end": 35.228
+          },
+          {
+            "word": "vettig",
+            "start": 35.228,
+            "end": 35.471
+          }
+        ]
+      },
+      {
+        "verseStart": 35.471,
+        "verseEnd": 37.688,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 35.471,
+            "end": 35.72
+          },
+          {
+            "word": "zin ",
+            "start": 35.72,
+            "end": 35.845
+          },
+          {
+            "word": "oept ",
+            "start": 35.845,
+            "end": 36.01
+          },
+          {
+            "word": "uur, ",
+            "start": 36.01,
+            "end": 36.462
+          },
+          {
+            "word": "twintig ",
+            "start": 36.462,
+            "end": 36.624
+          },
+          {
+            "word": "uur ",
+            "start": 36.624,
+            "end": 36.909
+          },
+          {
+            "word": "dertig",
+            "start": 36.909,
+            "end": 37.688
+          }
+        ]
+      },
+      {
+        "verseStart": 37.688,
+        "verseEnd": 39.816,
+        "words": [
+          {
+            "word": "Da ",
+            "start": 37.688,
+            "end": 37.932
+          },
+          {
+            "word": "is ",
+            "start": 37.932,
+            "end": 38.018
+          },
+          {
+            "word": "dus ",
+            "start": 38.018,
+            "end": 38.183
+          },
+          {
+            "word": "nog ",
+            "start": 38.183,
+            "end": 38.264
+          },
+          {
+            "word": "taad ",
+            "start": 38.264,
+            "end": 38.467
+          },
+          {
+            "word": "veu ",
+            "start": 38.467,
+            "end": 38.711
+          },
+          {
+            "word": "wa ",
+            "start": 38.711,
+            "end": 38.873
+          },
+          {
+            "word": "puiste ",
+            "start": 38.873,
+            "end": 39.118
+          },
+          {
+            "word": "uit ",
+            "start": 39.118,
+            "end": 39.28
+          },
+          {
+            "word": "te ",
+            "start": 39.28,
+            "end": 39.402
+          },
+          {
+            "word": "pitse",
+            "start": 39.402,
+            "end": 39.816
+          }
+        ]
+      },
+      {
+        "verseStart": 39.816,
+        "verseEnd": 41.37,
+        "words": [
+          {
+            "word": "En ",
+            "start": 39.816,
+            "end": 39.979
+          },
+          {
+            "word": "binne ",
+            "start": 39.979,
+            "end": 40.223
+          },
+          {
+            "word": "het ",
+            "start": 40.223,
+            "end": 40.347
+          },
+          {
+            "word": "urreke ",
+            "start": 40.347,
+            "end": 40.718
+          },
+          {
+            "word": "zenne ",
+            "start": 40.718,
+            "end": 41.084
+          },
+          {
+            "word": "kik ",
+            "start": 41.084,
+            "end": 41.206
+          },
+          {
+            "word": "ritse",
+            "start": 41.206,
+            "end": 41.37
+          }
+        ]
+      },
+      {
+        "verseStart": 41.37,
+        "verseEnd": 44.021,
+        "words": [
+          {
+            "word": "Jo ",
+            "start": 41.37,
+            "end": 42.021
+          },
+          {
+            "word": "zoterdagovend, ",
+            "start": 42.021,
+            "end": 42.88
+          },
+          {
+            "word": "men ",
+            "start": 42.88,
+            "end": 43.004
+          },
+          {
+            "word": "hoor ",
+            "start": 43.004,
+            "end": 43.166
+          },
+          {
+            "word": "in ",
+            "start": 43.166,
+            "end": 43.289
+          },
+          {
+            "word": "de ",
+            "start": 43.289,
+            "end": 43.369
+          },
+          {
+            "word": "ploei",
+            "start": 43.369,
+            "end": 44.021
+          }
+        ]
+      },
+      {
+        "verseStart": 44.021,
+        "verseEnd": 45.889,
+        "words": [
+          {
+            "word": "Op ",
+            "start": 44.021,
+            "end": 44.143
+          },
+          {
+            "word": "en ",
+            "start": 44.143,
+            "end": 44.225
+          },
+          {
+            "word": "top ",
+            "start": 44.225,
+            "end": 44.346
+          },
+          {
+            "word": "in ",
+            "start": 44.346,
+            "end": 44.711
+          },
+          {
+            "word": "kostum, ",
+            "start": 44.711,
+            "end": 44.996
+          },
+          {
+            "word": "da ",
+            "start": 44.996,
+            "end": 45.158
+          },
+          {
+            "word": "zirre ",
+            "start": 45.158,
+            "end": 45.321
+          },
+          {
+            "word": "zoe",
+            "start": 45.321,
+            "end": 45.889
+          }
+        ]
+      },
+      {
+        "verseStart": 45.889,
+        "verseEnd": 48.22,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 45.889,
+            "end": 46.053
+          },
+          {
+            "word": "zen ",
+            "start": 46.053,
+            "end": 46.217
+          },
+          {
+            "word": "de ",
+            "start": 46.217,
+            "end": 46.38
+          },
+          {
+            "word": "playboy, ",
+            "start": 46.38,
+            "end": 47.111
+          },
+          {
+            "word": "ik ",
+            "start": 47.111,
+            "end": 47.233
+          },
+          {
+            "word": "weet ",
+            "start": 47.233,
+            "end": 47.355
+          },
+          {
+            "word": "da ",
+            "start": 47.355,
+            "end": 47.483
+          },
+          {
+            "word": "van ",
+            "start": 47.483,
+            "end": 47.607
+          },
+          {
+            "word": "men ",
+            "start": 47.607,
+            "end": 47.771
+          },
+          {
+            "word": "age",
+            "start": 47.771,
+            "end": 48.22
+          }
+        ]
+      },
+      {
+        "verseStart": 48.22,
+        "verseEnd": 50.309,
+        "words": [
+          {
+            "word": "Mo ",
+            "start": 48.22,
+            "end": 48.341
+          },
+          {
+            "word": "over ",
+            "start": 48.341,
+            "end": 48.505
+          },
+          {
+            "word": "maan ",
+            "start": 48.505,
+            "end": 48.628
+          },
+          {
+            "word": "witte ",
+            "start": 48.628,
+            "end": 48.795
+          },
+          {
+            "word": "kase ",
+            "start": 48.795,
+            "end": 48.917
+          },
+          {
+            "word": "moette ",
+            "start": 48.917,
+            "end": 49.412
+          },
+          {
+            "word": "ga ",
+            "start": 49.412,
+            "end": 49.615
+          },
+          {
+            "word": "zwage",
+            "start": 49.615,
+            "end": 50.309
+          }
+        ]
+      },
+      {
+        "verseStart": 50.309,
+        "verseEnd": 52.264,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 50.309,
+            "end": 50.432
+          },
+          {
+            "word": "bewonder ",
+            "start": 50.432,
+            "end": 50.676
+          },
+          {
+            "word": "nog ",
+            "start": 50.676,
+            "end": 50.798
+          },
+          {
+            "word": "ne ",
+            "start": 50.798,
+            "end": 50.921
+          },
+          {
+            "word": "kie ",
+            "start": 50.921,
+            "end": 51.326
+          },
+          {
+            "word": "mennen ",
+            "start": 51.326,
+            "end": 51.489
+          },
+          {
+            "word": "age ",
+            "start": 51.489,
+            "end": 51.734
+          },
+          {
+            "word": "kop",
+            "start": 51.734,
+            "end": 52.264
+          }
+        ]
+      },
+      {
+        "verseStart": 52.264,
+        "verseEnd": 54.388,
+        "words": [
+          {
+            "word": "Veu ",
+            "start": 52.264,
+            "end": 52.428
+          },
+          {
+            "word": "te ",
+            "start": 52.428,
+            "end": 52.55
+          },
+          {
+            "word": "zien ",
+            "start": 52.55,
+            "end": 52.754
+          },
+          {
+            "word": "is '",
+            "start": 52.754,
+            "end": 52.881
+          },
+          {
+            "word": "t ",
+            "start": 52.881,
+            "end": 52.962
+          },
+          {
+            "word": "goe ",
+            "start": 52.962,
+            "end": 53.084
+          },
+          {
+            "word": "of ",
+            "start": 53.084,
+            "end": 53.328
+          },
+          {
+            "word": "is '",
+            "start": 53.328,
+            "end": 53.492
+          },
+          {
+            "word": "t ",
+            "start": 53.492,
+            "end": 53.818
+          },
+          {
+            "word": "een ",
+            "start": 53.818,
+            "end": 53.941
+          },
+          {
+            "word": "flop",
+            "start": 53.941,
+            "end": 54.388
+          }
+        ]
+      },
+      {
+        "verseStart": 54.388,
+        "verseEnd": 56.387,
+        "words": [
+          {
+            "word": "'",
+            "start": 54.388,
+            "end": 54.55
+          },
+          {
+            "word": "k ",
+            "start": 54.55,
+            "end": 54.672
+          },
+          {
+            "word": "Zen ",
+            "start": 54.672,
+            "end": 54.795
+          },
+          {
+            "word": "kleir ",
+            "start": 54.795,
+            "end": 55.002
+          },
+          {
+            "word": "veu '",
+            "start": 55.002,
+            "end": 55.126
+          },
+          {
+            "word": "t ",
+            "start": 55.126,
+            "end": 55.289
+          },
+          {
+            "word": "kafee, ",
+            "start": 55.289,
+            "end": 55.533
+          },
+          {
+            "word": "dus ",
+            "start": 55.533,
+            "end": 55.696
+          },
+          {
+            "word": "goe ",
+            "start": 55.696,
+            "end": 55.94
+          },
+          {
+            "word": "gezind",
+            "start": 55.94,
+            "end": 56.387
+          }
+        ]
+      },
+      {
+        "verseStart": 56.387,
+        "verseEnd": 58.432,
+        "words": [
+          {
+            "word": "En ",
+            "start": 56.387,
+            "end": 56.55
+          },
+          {
+            "word": "azzek ",
+            "start": 56.55,
+            "end": 56.795
+          },
+          {
+            "word": "binnekoom ",
+            "start": 56.795,
+            "end": 57.043
+          },
+          {
+            "word": "krakik ",
+            "start": 57.043,
+            "end": 57.41
+          },
+          {
+            "word": "derekt ",
+            "start": 57.41,
+            "end": 57.696
+          },
+          {
+            "word": "men ",
+            "start": 57.696,
+            "end": 57.98
+          },
+          {
+            "word": "pint",
+            "start": 57.98,
+            "end": 58.432
+          }
+        ]
+      },
+      {
+        "verseStart": 58.432,
+        "verseEnd": 60.762,
+        "words": [
+          {
+            "word": "Mo ",
+            "start": 58.432,
+            "end": 58.594
+          },
+          {
+            "word": "zukte ",
+            "start": 58.594,
+            "end": 58.922
+          },
+          {
+            "word": "nen ",
+            "start": 58.922,
+            "end": 59.085
+          },
+          {
+            "word": "Bob ",
+            "start": 59.085,
+            "end": 59.494
+          },
+          {
+            "word": "mook ",
+            "start": 59.494,
+            "end": 59.822
+          },
+          {
+            "word": "ik ",
+            "start": 59.822,
+            "end": 59.943
+          },
+          {
+            "word": "maa ",
+            "start": 59.943,
+            "end": 60.066
+          },
+          {
+            "word": "uit ",
+            "start": 60.066,
+            "end": 60.188
+          },
+          {
+            "word": "de ",
+            "start": 60.188,
+            "end": 60.309
+          },
+          {
+            "word": "voete",
+            "start": 60.309,
+            "end": 60.762
+          }
+        ]
+      },
+      {
+        "verseStart": 60.762,
+        "verseEnd": 62.721,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 60.762,
+            "end": 60.884
+          },
+          {
+            "word": "drink ",
+            "start": 60.884,
+            "end": 60.966
+          },
+          {
+            "word": "zoterdags ",
+            "start": 60.966,
+            "end": 61.088
+          },
+          {
+            "word": "liever ",
+            "start": 61.088,
+            "end": 61.373
+          },
+          {
+            "word": "e ",
+            "start": 61.373,
+            "end": 61.7
+          },
+          {
+            "word": "stuk ",
+            "start": 61.7,
+            "end": 61.903
+          },
+          {
+            "word": "in ",
+            "start": 61.903,
+            "end": 62.067
+          },
+          {
+            "word": "men ",
+            "start": 62.067,
+            "end": 62.189
+          },
+          {
+            "word": "kloete",
+            "start": 62.189,
+            "end": 62.721
+          }
+        ]
+      },
+      {
+        "verseStart": 62.721,
+        "verseEnd": 64.68,
+        "words": [
+          {
+            "word": "Bob ",
+            "start": 62.721,
+            "end": 62.966
+          },
+          {
+            "word": "hie ",
+            "start": 62.966,
+            "end": 63.089
+          },
+          {
+            "word": "Bob ",
+            "start": 63.089,
+            "end": 63.294
+          },
+          {
+            "word": "doo, ",
+            "start": 63.294,
+            "end": 63.783
+          },
+          {
+            "word": "tes ",
+            "start": 63.783,
+            "end": 63.945
+          },
+          {
+            "word": "allemoo ",
+            "start": 63.945,
+            "end": 64.272
+          },
+          {
+            "word": "iet ",
+            "start": 64.272,
+            "end": 64.394
+          },
+          {
+            "word": "vies",
+            "start": 64.394,
+            "end": 64.68
+          }
+        ]
+      },
+      {
+        "verseStart": 64.68,
+        "verseEnd": 66.521,
+        "words": [
+          {
+            "word": "Azzek ",
+            "start": 64.68,
+            "end": 65.008
+          },
+          {
+            "word": "oep ",
+            "start": 65.008,
+            "end": 65.257
+          },
+          {
+            "word": "ne ",
+            "start": 65.257,
+            "end": 65.42
+          },
+          {
+            "word": "boem ",
+            "start": 65.42,
+            "end": 65.704
+          },
+          {
+            "word": "peir ",
+            "start": 65.704,
+            "end": 65.786
+          },
+          {
+            "word": "komek ",
+            "start": 65.786,
+            "end": 65.907
+          },
+          {
+            "word": "toch ",
+            "start": 65.907,
+            "end": 66.192
+          },
+          {
+            "word": "oept ",
+            "start": 66.192,
+            "end": 66.395
+          },
+          {
+            "word": "nies",
+            "start": 66.395,
+            "end": 66.521
+          }
+        ]
+      },
+      {
+        "verseStart": 66.521,
+        "verseEnd": 69.581,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 66.521,
+            "end": 67.668
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 67.668,
+            "end": 69.581
+          }
+        ]
+      },
+      {
+        "verseStart": 69.581,
+        "verseEnd": 71.428,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 69.581,
+            "end": 69.791
+          },
+          {
+            "word": "gon ",
+            "start": 69.791,
+            "end": 69.913
+          },
+          {
+            "word": "fieste ",
+            "start": 69.913,
+            "end": 70.035
+          },
+          {
+            "word": "en ",
+            "start": 70.035,
+            "end": 70.201
+          },
+          {
+            "word": "as ",
+            "start": 70.201,
+            "end": 70.322
+          },
+          {
+            "word": "da ",
+            "start": 70.322,
+            "end": 70.484
+          },
+          {
+            "word": "nog ",
+            "start": 70.484,
+            "end": 70.607
+          },
+          {
+            "word": "ni ",
+            "start": 70.607,
+            "end": 70.932
+          },
+          {
+            "word": "mag",
+            "start": 70.932,
+            "end": 71.428
+          }
+        ]
+      },
+      {
+        "verseStart": 71.428,
+        "verseEnd": 73.261,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 71.428,
+            "end": 72.163
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 72.163,
+            "end": 73.261
+          }
+        ]
+      },
+      {
+        "verseStart": 73.261,
+        "verseEnd": 75.39,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 73.261,
+            "end": 73.424
+          },
+          {
+            "word": "zoterdag ",
+            "start": 73.424,
+            "end": 73.915
+          },
+          {
+            "word": "is '",
+            "start": 73.915,
+            "end": 74.366
+          },
+          {
+            "word": "t ",
+            "start": 74.366,
+            "end": 74.53
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 74.53,
+            "end": 75.39
+          }
+        ]
+      },
+      {
+        "verseStart": 75.39,
+        "verseEnd": 77.55,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 75.39,
+            "end": 76.246
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 76.246,
+            "end": 77.55
+          }
+        ]
+      },
+      {
+        "verseStart": 77.55,
+        "verseEnd": 79.634,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 77.55,
+            "end": 77.753
+          },
+          {
+            "word": "gon ",
+            "start": 77.753,
+            "end": 77.875
+          },
+          {
+            "word": "fieste ",
+            "start": 77.875,
+            "end": 78.043
+          },
+          {
+            "word": "en ",
+            "start": 78.043,
+            "end": 78.368
+          },
+          {
+            "word": "as ",
+            "start": 78.368,
+            "end": 78.49
+          },
+          {
+            "word": "da ",
+            "start": 78.49,
+            "end": 78.611
+          },
+          {
+            "word": "nog ",
+            "start": 78.611,
+            "end": 78.856
+          },
+          {
+            "word": "ni ",
+            "start": 78.856,
+            "end": 79.019
+          },
+          {
+            "word": "mag",
+            "start": 79.019,
+            "end": 79.634
+          }
+        ]
+      },
+      {
+        "verseStart": 79.634,
+        "verseEnd": 81.639,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 79.634,
+            "end": 80.419
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 80.419,
+            "end": 81.639
+          }
+        ]
+      },
+      {
+        "verseStart": 81.639,
+        "verseEnd": 84.09,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 81.639,
+            "end": 81.721
+          },
+          {
+            "word": "zoterdag ",
+            "start": 81.721,
+            "end": 82.536
+          },
+          {
+            "word": "is '",
+            "start": 82.536,
+            "end": 82.617
+          },
+          {
+            "word": "t ",
+            "start": 82.617,
+            "end": 82.862
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 82.862,
+            "end": 84.09
+          }
+        ]
+      },
+      {
+        "verseStart": 84.09,
+        "verseEnd": 85.85,
+        "words": [
+          {
+            "word": "Der ",
+            "start": 84.09,
+            "end": 84.213
+          },
+          {
+            "word": "is ",
+            "start": 84.213,
+            "end": 84.377
+          },
+          {
+            "word": "een ",
+            "start": 84.377,
+            "end": 84.499
+          },
+          {
+            "word": "foaf, ",
+            "start": 84.499,
+            "end": 84.828
+          },
+          {
+            "word": "do ",
+            "start": 84.828,
+            "end": 84.951
+          },
+          {
+            "word": "gonnek ",
+            "start": 84.951,
+            "end": 85.235
+          },
+          {
+            "word": "is ",
+            "start": 85.235,
+            "end": 85.396
+          },
+          {
+            "word": "binne",
+            "start": 85.396,
+            "end": 85.85
+          }
+        ]
+      },
+      {
+        "verseStart": 85.85,
+        "verseEnd": 87.93,
+        "words": [
+          {
+            "word": "Over ",
+            "start": 85.85,
+            "end": 85.973
+          },
+          {
+            "word": "die ",
+            "start": 85.973,
+            "end": 86.176
+          },
+          {
+            "word": "honderd ",
+            "start": 86.176,
+            "end": 86.299
+          },
+          {
+            "word": "frank ",
+            "start": 86.299,
+            "end": 86.461
+          },
+          {
+            "word": "inkom ",
+            "start": 86.461,
+            "end": 86.665
+          },
+          {
+            "word": "moete ",
+            "start": 86.665,
+            "end": 86.991
+          },
+          {
+            "word": "ni ",
+            "start": 86.991,
+            "end": 87.155
+          },
+          {
+            "word": "beginne",
+            "start": 87.155,
+            "end": 87.93
+          }
+        ]
+      },
+      {
+        "verseStart": 87.93,
+        "verseEnd": 90.055,
+        "words": [
+          {
+            "word": "Ha ",
+            "start": 87.93,
+            "end": 88.135
+          },
+          {
+            "word": "hei ",
+            "start": 88.135,
+            "end": 88.379
+          },
+          {
+            "word": "twie ",
+            "start": 88.379,
+            "end": 88.627
+          },
+          {
+            "word": "oege ",
+            "start": 88.627,
+            "end": 88.872
+          },
+          {
+            "word": "en ",
+            "start": 88.872,
+            "end": 89.076
+          },
+          {
+            "word": "ik ",
+            "start": 89.076,
+            "end": 89.403
+          },
+          {
+            "word": "twie ",
+            "start": 89.403,
+            "end": 89.566
+          },
+          {
+            "word": "doame",
+            "start": 89.566,
+            "end": 90.055
+          }
+        ]
+      },
+      {
+        "verseStart": 90.055,
+        "verseEnd": 92.099,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 90.055,
+            "end": 90.259
+          },
+          {
+            "word": "koom ",
+            "start": 90.259,
+            "end": 90.382
+          },
+          {
+            "word": "hie ",
+            "start": 90.382,
+            "end": 90.545
+          },
+          {
+            "word": "ni ",
+            "start": 90.545,
+            "end": 90.666
+          },
+          {
+            "word": "veu ",
+            "start": 90.666,
+            "end": 90.789
+          },
+          {
+            "word": "de ",
+            "start": 90.789,
+            "end": 90.911
+          },
+          {
+            "word": "foaf, ",
+            "start": 90.911,
+            "end": 91.073
+          },
+          {
+            "word": "mo ",
+            "start": 91.073,
+            "end": 91.2
+          },
+          {
+            "word": "veu ",
+            "start": 91.2,
+            "end": 91.367
+          },
+          {
+            "word": "de ",
+            "start": 91.367,
+            "end": 91.53
+          },
+          {
+            "word": "proame",
+            "start": 91.53,
+            "end": 92.099
+          }
+        ]
+      },
+      {
+        "verseStart": 92.099,
+        "verseEnd": 94.387,
+        "words": [
+          {
+            "word": "Hilde ",
+            "start": 92.099,
+            "end": 92.222
+          },
+          {
+            "word": "of ",
+            "start": 92.222,
+            "end": 92.426
+          },
+          {
+            "word": "Hilda, ",
+            "start": 92.426,
+            "end": 93.161
+          },
+          {
+            "word": "ik ",
+            "start": 93.161,
+            "end": 93.286
+          },
+          {
+            "word": "schaar ",
+            "start": 93.286,
+            "end": 93.489
+          },
+          {
+            "word": "ze ",
+            "start": 93.489,
+            "end": 93.611
+          },
+          {
+            "word": "baa ",
+            "start": 93.611,
+            "end": 93.733
+          },
+          {
+            "word": "de ",
+            "start": 93.733,
+            "end": 93.977
+          },
+          {
+            "word": "kol",
+            "start": 93.977,
+            "end": 94.387
+          }
+        ]
+      },
+      {
+        "verseStart": 94.387,
+        "verseEnd": 96.231,
+        "words": [
+          {
+            "word": "Het ",
+            "start": 94.387,
+            "end": 94.51
+          },
+          {
+            "word": "spelt ",
+            "start": 94.51,
+            "end": 94.675
+          },
+          {
+            "word": "veu ",
+            "start": 94.675,
+            "end": 94.842
+          },
+          {
+            "word": "ma ",
+            "start": 94.842,
+            "end": 95.005
+          },
+          {
+            "word": "allemoo ",
+            "start": 95.005,
+            "end": 95.453
+          },
+          {
+            "word": "genne ",
+            "start": 95.453,
+            "end": 95.617
+          },
+          {
+            "word": "rol",
+            "start": 95.617,
+            "end": 96.231
+          }
+        ]
+      },
+      {
+        "verseStart": 96.231,
+        "verseEnd": 98.397,
+        "words": [
+          {
+            "word": "Nie ",
+            "start": 96.231,
+            "end": 96.361
+          },
+          {
+            "word": "zoterdags ",
+            "start": 96.361,
+            "end": 96.934
+          },
+          {
+            "word": "lig ",
+            "start": 96.934,
+            "end": 97.179
+          },
+          {
+            "word": "ik ",
+            "start": 97.179,
+            "end": 97.341
+          },
+          {
+            "word": "ni ",
+            "start": 97.341,
+            "end": 97.462
+          },
+          {
+            "word": "in ",
+            "start": 97.462,
+            "end": 97.584
+          },
+          {
+            "word": "maa ",
+            "start": 97.584,
+            "end": 97.868
+          },
+          {
+            "word": "bed",
+            "start": 97.868,
+            "end": 98.397
+          }
+        ]
+      },
+      {
+        "verseStart": 98.397,
+        "verseEnd": 100.403,
+        "words": [
+          {
+            "word": "En ",
+            "start": 98.397,
+            "end": 98.561
+          },
+          {
+            "word": "oep ",
+            "start": 98.561,
+            "end": 98.848
+          },
+          {
+            "word": "den ",
+            "start": 98.848,
+            "end": 98.969
+          },
+          {
+            "word": "tellevies ",
+            "start": 98.969,
+            "end": 99.38
+          },
+          {
+            "word": "is '",
+            "start": 99.38,
+            "end": 99.501
+          },
+          {
+            "word": "t ",
+            "start": 99.501,
+            "end": 99.624
+          },
+          {
+            "word": "ok ",
+            "start": 99.624,
+            "end": 99.707
+          },
+          {
+            "word": "ni ",
+            "start": 99.707,
+            "end": 99.871
+          },
+          {
+            "word": "vet",
+            "start": 99.871,
+            "end": 100.403
+          }
+        ]
+      },
+      {
+        "verseStart": 100.403,
+        "verseEnd": 102.198,
+        "words": [
+          {
+            "word": "Ge ",
+            "start": 100.403,
+            "end": 100.689
+          },
+          {
+            "word": "moet ",
+            "start": 100.689,
+            "end": 101.056
+          },
+          {
+            "word": "ni ",
+            "start": 101.056,
+            "end": 101.179
+          },
+          {
+            "word": "probere ",
+            "start": 101.179,
+            "end": 101.302
+          },
+          {
+            "word": "van ",
+            "start": 101.302,
+            "end": 101.464
+          },
+          {
+            "word": "het ",
+            "start": 101.464,
+            "end": 101.587
+          },
+          {
+            "word": "maa ",
+            "start": 101.587,
+            "end": 101.912
+          },
+          {
+            "word": "te ",
+            "start": 101.912,
+            "end": 102.035
+          },
+          {
+            "word": "belette",
+            "start": 102.035,
+            "end": 102.198
+          }
+        ]
+      },
+      {
+        "verseStart": 102.198,
+        "verseEnd": 104.73,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 102.198,
+            "end": 103.058
+          },
+          {
+            "word": "zoterdags ",
+            "start": 103.058,
+            "end": 103.181
+          },
+          {
+            "word": "en ",
+            "start": 103.181,
+            "end": 103.384
+          },
+          {
+            "word": "stapke ",
+            "start": 103.384,
+            "end": 103.547
+          },
+          {
+            "word": "in ",
+            "start": 103.547,
+            "end": 103.709
+          },
+          {
+            "word": "de ",
+            "start": 103.709,
+            "end": 103.871
+          },
+          {
+            "word": "wereld ",
+            "start": 103.871,
+            "end": 104.12
+          },
+          {
+            "word": "te ",
+            "start": 104.12,
+            "end": 104.283
+          },
+          {
+            "word": "zette",
+            "start": 104.283,
+            "end": 104.73
+          }
+        ]
+      },
+      {
+        "verseStart": 104.73,
+        "verseEnd": 106.651,
+        "words": [
+          {
+            "word": "Me ",
+            "start": 104.73,
+            "end": 104.853
+          },
+          {
+            "word": "toeverwoter ",
+            "start": 104.853,
+            "end": 105.263
+          },
+          {
+            "word": "van ",
+            "start": 105.263,
+            "end": 105.385
+          },
+          {
+            "word": "den ",
+            "start": 105.385,
+            "end": 105.551
+          },
+          {
+            "word": "interbrew",
+            "start": 105.551,
+            "end": 106.651
+          }
+        ]
+      },
+      {
+        "verseStart": 106.651,
+        "verseEnd": 108.896,
+        "words": [
+          {
+            "word": "Of ",
+            "start": 106.651,
+            "end": 106.855
+          },
+          {
+            "word": "de ",
+            "start": 106.855,
+            "end": 107.019
+          },
+          {
+            "word": "nectar ",
+            "start": 107.019,
+            "end": 107.183
+          },
+          {
+            "word": "van ",
+            "start": 107.183,
+            "end": 107.349
+          },
+          {
+            "word": "den ",
+            "start": 107.349,
+            "end": 107.471
+          },
+          {
+            "word": "hocht, ",
+            "start": 107.471,
+            "end": 107.755
+          },
+          {
+            "word": "dadis ",
+            "start": 107.755,
+            "end": 107.959
+          },
+          {
+            "word": "al ",
+            "start": 107.959,
+            "end": 108.081
+          },
+          {
+            "word": "eve ",
+            "start": 108.081,
+            "end": 108.326
+          },
+          {
+            "word": "goe",
+            "start": 108.326,
+            "end": 108.896
+          }
+        ]
+      },
+      {
+        "verseStart": 108.896,
+        "verseEnd": 110.98,
+        "words": [
+          {
+            "word": "Eve ",
+            "start": 108.896,
+            "end": 109.059
+          },
+          {
+            "word": "goe ",
+            "start": 109.059,
+            "end": 109.346
+          },
+          {
+            "word": "veu ",
+            "start": 109.346,
+            "end": 109.467
+          },
+          {
+            "word": "de ",
+            "start": 109.467,
+            "end": 109.59
+          },
+          {
+            "word": "stress ",
+            "start": 109.59,
+            "end": 109.874
+          },
+          {
+            "word": "en ",
+            "start": 109.874,
+            "end": 109.997
+          },
+          {
+            "word": "den ",
+            "start": 109.997,
+            "end": 110.489
+          },
+          {
+            "word": "dynamik",
+            "start": 110.489,
+            "end": 110.98
+          }
+        ]
+      },
+      {
+        "verseStart": 110.98,
+        "verseEnd": 112.977,
+        "words": [
+          {
+            "word": "Veu ",
+            "start": 110.98,
+            "end": 111.101
+          },
+          {
+            "word": "oeve ",
+            "start": 111.101,
+            "end": 111.223
+          },
+          {
+            "word": "piston ",
+            "start": 111.223,
+            "end": 111.917
+          },
+          {
+            "word": "en ",
+            "start": 111.917,
+            "end": 112.08
+          },
+          {
+            "word": "den ",
+            "start": 112.08,
+            "end": 112.245
+          },
+          {
+            "word": "ellentrik",
+            "start": 112.245,
+            "end": 112.977
+          }
+        ]
+      },
+      {
+        "verseStart": 112.977,
+        "verseEnd": 115.226,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 112.977,
+            "end": 113.14
+          },
+          {
+            "word": "nor ",
+            "start": 113.14,
+            "end": 113.263
+          },
+          {
+            "word": "haas ",
+            "start": 113.263,
+            "end": 113.511
+          },
+          {
+            "word": "goon ",
+            "start": 113.511,
+            "end": 113.836
+          },
+          {
+            "word": "moette ",
+            "start": 113.836,
+            "end": 114.043
+          },
+          {
+            "word": "ma ",
+            "start": 114.043,
+            "end": 114.288
+          },
+          {
+            "word": "direct ",
+            "start": 114.288,
+            "end": 114.533
+          },
+          {
+            "word": "nog ",
+            "start": 114.533,
+            "end": 114.656
+          },
+          {
+            "word": "ni ",
+            "start": 114.656,
+            "end": 114.82
+          },
+          {
+            "word": "klappe",
+            "start": 114.82,
+            "end": 115.226
+          }
+        ]
+      },
+      {
+        "verseStart": 115.226,
+        "verseEnd": 117.428,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 115.226,
+            "end": 115.349
+          },
+          {
+            "word": "gen ",
+            "start": 115.349,
+            "end": 115.594
+          },
+          {
+            "word": "jest ",
+            "start": 115.594,
+            "end": 115.715
+          },
+          {
+            "word": "nog ",
+            "start": 115.715,
+            "end": 115.841
+          },
+          {
+            "word": "wa ",
+            "start": 115.841,
+            "end": 116.004
+          },
+          {
+            "word": "pinkes ",
+            "start": 116.004,
+            "end": 116.166
+          },
+          {
+            "word": "in ",
+            "start": 116.166,
+            "end": 116.329
+          },
+          {
+            "word": "men ",
+            "start": 116.329,
+            "end": 116.653
+          },
+          {
+            "word": "kamezole ",
+            "start": 116.653,
+            "end": 116.775
+          },
+          {
+            "word": "kappe",
+            "start": 116.775,
+            "end": 117.428
+          }
+        ]
+      },
+      {
+        "verseStart": 117.428,
+        "verseEnd": 119.468,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 117.428,
+            "end": 118.209
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 118.209,
+            "end": 119.468
+          }
+        ]
+      },
+      {
+        "verseStart": 119.468,
+        "verseEnd": 121.593,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 119.468,
+            "end": 119.63
+          },
+          {
+            "word": "gon ",
+            "start": 119.63,
+            "end": 119.875
+          },
+          {
+            "word": "fieste ",
+            "start": 119.875,
+            "end": 120.247
+          },
+          {
+            "word": "en ",
+            "start": 120.247,
+            "end": 120.491
+          },
+          {
+            "word": "as ",
+            "start": 120.491,
+            "end": 120.614
+          },
+          {
+            "word": "da ",
+            "start": 120.614,
+            "end": 120.819
+          },
+          {
+            "word": "nog ",
+            "start": 120.819,
+            "end": 120.983
+          },
+          {
+            "word": "ni ",
+            "start": 120.983,
+            "end": 121.104
+          },
+          {
+            "word": "mag",
+            "start": 121.104,
+            "end": 121.593
+          }
+        ]
+      },
+      {
+        "verseStart": 121.593,
+        "verseEnd": 123.593,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 121.593,
+            "end": 122.658
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 122.658,
+            "end": 123.593
+          }
+        ]
+      },
+      {
+        "verseStart": 123.593,
+        "verseEnd": 125.671,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 123.593,
+            "end": 123.715
+          },
+          {
+            "word": "zoterdag ",
+            "start": 123.715,
+            "end": 124.367
+          },
+          {
+            "word": "is '",
+            "start": 124.367,
+            "end": 124.489
+          },
+          {
+            "word": "t ",
+            "start": 124.489,
+            "end": 124.691
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 124.691,
+            "end": 125.671
+          }
+        ]
+      },
+      {
+        "verseStart": 125.671,
+        "verseEnd": 127.682,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 125.671,
+            "end": 126.535
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 126.535,
+            "end": 127.682
+          }
+        ]
+      },
+      {
+        "verseStart": 127.682,
+        "verseEnd": 129.975,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 127.682,
+            "end": 127.804
+          },
+          {
+            "word": "gon ",
+            "start": 127.804,
+            "end": 128.291
+          },
+          {
+            "word": "fieste ",
+            "start": 128.291,
+            "end": 128.616
+          },
+          {
+            "word": "en ",
+            "start": 128.616,
+            "end": 128.779
+          },
+          {
+            "word": "as ",
+            "start": 128.779,
+            "end": 128.942
+          },
+          {
+            "word": "da ",
+            "start": 128.942,
+            "end": 129.065
+          },
+          {
+            "word": "nog ",
+            "start": 129.065,
+            "end": 129.228
+          },
+          {
+            "word": "ni ",
+            "start": 129.228,
+            "end": 129.394
+          },
+          {
+            "word": "mag",
+            "start": 129.394,
+            "end": 129.975
+          }
+        ]
+      },
+      {
+        "verseStart": 129.975,
+        "verseEnd": 131.85,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 129.975,
+            "end": 130.751
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 130.751,
+            "end": 131.85
+          }
+        ]
+      },
+      {
+        "verseStart": 131.85,
+        "verseEnd": 134.01,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 131.85,
+            "end": 132.093
+          },
+          {
+            "word": "zoterdag ",
+            "start": 132.093,
+            "end": 132.791
+          },
+          {
+            "word": "is '",
+            "start": 132.791,
+            "end": 132.912
+          },
+          {
+            "word": "t ",
+            "start": 132.912,
+            "end": 133.075
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 133.075,
+            "end": 134.01
+          }
+        ]
+      },
+      {
+        "verseStart": 134.01,
+        "verseEnd": 136.053,
+        "words": [
+          {
+            "word": "Het ",
+            "start": 134.01,
+            "end": 134.133
+          },
+          {
+            "word": "broebelt ",
+            "start": 134.133,
+            "end": 134.418
+          },
+          {
+            "word": "in ",
+            "start": 134.418,
+            "end": 134.54
+          },
+          {
+            "word": "men ",
+            "start": 134.54,
+            "end": 134.785
+          },
+          {
+            "word": "strop ",
+            "start": 134.785,
+            "end": 134.988
+          },
+          {
+            "word": "en ",
+            "start": 134.988,
+            "end": 135.151
+          },
+          {
+            "word": "alles ",
+            "start": 135.151,
+            "end": 135.483
+          },
+          {
+            "word": "droat",
+            "start": 135.483,
+            "end": 136.053
+          }
+        ]
+      },
+      {
+        "verseStart": 136.053,
+        "verseEnd": 138.182,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 136.053,
+            "end": 136.175
+          },
+          {
+            "word": "moet ",
+            "start": 136.175,
+            "end": 136.461
+          },
+          {
+            "word": "no ",
+            "start": 136.461,
+            "end": 136.581
+          },
+          {
+            "word": "de ",
+            "start": 136.581,
+            "end": 136.708
+          },
+          {
+            "word": "koer, ",
+            "start": 136.708,
+            "end": 137.033
+          },
+          {
+            "word": "alles ",
+            "start": 137.033,
+            "end": 137.277
+          },
+          {
+            "word": "moet ",
+            "start": 137.277,
+            "end": 137.606
+          },
+          {
+            "word": "eroat",
+            "start": 137.606,
+            "end": 138.182
+          }
+        ]
+      },
+      {
+        "verseStart": 138.182,
+        "verseEnd": 140.191,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 138.182,
+            "end": 138.263
+          },
+          {
+            "word": "geubel ",
+            "start": 138.263,
+            "end": 138.509
+          },
+          {
+            "word": "currywest ",
+            "start": 138.509,
+            "end": 139.002
+          },
+          {
+            "word": "en ",
+            "start": 139.002,
+            "end": 139.332
+          },
+          {
+            "word": "wa ",
+            "start": 139.332,
+            "end": 139.455
+          },
+          {
+            "word": "soep ",
+            "start": 139.455,
+            "end": 139.659
+          },
+          {
+            "word": "van ",
+            "start": 139.659,
+            "end": 139.781
+          },
+          {
+            "word": "testrak",
+            "start": 139.781,
+            "end": 140.191
+          }
+        ]
+      },
+      {
+        "verseStart": 140.191,
+        "verseEnd": 142.391,
+        "words": [
+          {
+            "word": "'",
+            "start": 140.191,
+            "end": 140.353
+          },
+          {
+            "word": "t ",
+            "start": 140.353,
+            "end": 140.476
+          },
+          {
+            "word": "Lei ",
+            "start": 140.476,
+            "end": 140.68
+          },
+          {
+            "word": "allemoo ",
+            "start": 140.68,
+            "end": 140.923
+          },
+          {
+            "word": "te ",
+            "start": 140.923,
+            "end": 141.086
+          },
+          {
+            "word": "drave ",
+            "start": 141.086,
+            "end": 141.208
+          },
+          {
+            "word": "in ",
+            "start": 141.208,
+            "end": 141.33
+          },
+          {
+            "word": "de ",
+            "start": 141.33,
+            "end": 141.453
+          },
+          {
+            "word": "GFT-",
+            "start": 141.453,
+            "end": 141.821
+          },
+          {
+            "word": "bak",
+            "start": 141.821,
+            "end": 142.391
+          }
+        ]
+      },
+      {
+        "verseStart": 142.391,
+        "verseEnd": 144.605,
+        "words": [
+          {
+            "word": "Azzek ",
+            "start": 142.391,
+            "end": 142.555
+          },
+          {
+            "word": "paas '",
+            "start": 142.555,
+            "end": 142.844
+          },
+          {
+            "word": "t ",
+            "start": 142.844,
+            "end": 143.005
+          },
+          {
+            "word": "es ",
+            "start": 143.005,
+            "end": 143.09
+          },
+          {
+            "word": "gedoon, ",
+            "start": 143.09,
+            "end": 143.334
+          },
+          {
+            "word": "kraak ",
+            "start": 143.334,
+            "end": 143.501
+          },
+          {
+            "word": "nog ",
+            "start": 143.501,
+            "end": 143.743
+          },
+          {
+            "word": "een ",
+            "start": 143.743,
+            "end": 143.947
+          },
+          {
+            "word": "drets ",
+            "start": 143.947,
+            "end": 144.07
+          },
+          {
+            "word": "oep ",
+            "start": 144.07,
+            "end": 144.155
+          },
+          {
+            "word": "men ",
+            "start": 144.155,
+            "end": 144.318
+          },
+          {
+            "word": "hum",
+            "start": 144.318,
+            "end": 144.605
+          }
+        ]
+      },
+      {
+        "verseStart": 144.605,
+        "verseEnd": 146.407,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 144.605,
+            "end": 144.728
+          },
+          {
+            "word": "val ",
+            "start": 144.728,
+            "end": 144.89
+          },
+          {
+            "word": "over ",
+            "start": 144.89,
+            "end": 145.053
+          },
+          {
+            "word": "men ",
+            "start": 145.053,
+            "end": 145.257
+          },
+          {
+            "word": "voete, ",
+            "start": 145.257,
+            "end": 145.462
+          },
+          {
+            "word": "das ",
+            "start": 145.462,
+            "end": 145.585
+          },
+          {
+            "word": "ni ",
+            "start": 145.585,
+            "end": 145.707
+          },
+          {
+            "word": "het ",
+            "start": 145.707,
+            "end": 145.911
+          },
+          {
+            "word": "slum",
+            "start": 145.911,
+            "end": 146.407
+          }
+        ]
+      },
+      {
+        "verseStart": 146.407,
+        "verseEnd": 148.651,
+        "words": [
+          {
+            "word": "Het ",
+            "start": 146.407,
+            "end": 146.611
+          },
+          {
+            "word": "weud ",
+            "start": 146.611,
+            "end": 146.937
+          },
+          {
+            "word": "teveul, ",
+            "start": 146.937,
+            "end": 147.546
+          },
+          {
+            "word": "ik ",
+            "start": 147.546,
+            "end": 147.669
+          },
+          {
+            "word": "begin ",
+            "start": 147.669,
+            "end": 147.791
+          },
+          {
+            "word": "het ",
+            "start": 147.791,
+            "end": 147.954
+          },
+          {
+            "word": "te ",
+            "start": 147.954,
+            "end": 148.116
+          },
+          {
+            "word": "vuule",
+            "start": 148.116,
+            "end": 148.651
+          }
+        ]
+      },
+      {
+        "verseStart": 148.651,
+        "verseEnd": 150.689,
+        "words": [
+          {
+            "word": "Mo ",
+            "start": 148.651,
+            "end": 148.773
+          },
+          {
+            "word": "jest ",
+            "start": 148.773,
+            "end": 148.895
+          },
+          {
+            "word": "de ",
+            "start": 148.895,
+            "end": 149.017
+          },
+          {
+            "word": "kotssmook ",
+            "start": 149.017,
+            "end": 149.302
+          },
+          {
+            "word": "me ",
+            "start": 149.302,
+            "end": 149.425
+          },
+          {
+            "word": "nog ",
+            "start": 149.425,
+            "end": 149.628
+          },
+          {
+            "word": "e ",
+            "start": 149.628,
+            "end": 149.75
+          },
+          {
+            "word": "pinke ",
+            "start": 149.75,
+            "end": 149.954
+          },
+          {
+            "word": "wegspuule",
+            "start": 149.954,
+            "end": 150.689
+          }
+        ]
+      },
+      {
+        "verseStart": 150.689,
+        "verseEnd": 152.732,
+        "words": [
+          {
+            "word": "En ",
+            "start": 150.689,
+            "end": 150.811
+          },
+          {
+            "word": "ik ",
+            "start": 150.811,
+            "end": 151.095
+          },
+          {
+            "word": "val ",
+            "start": 151.095,
+            "end": 151.381
+          },
+          {
+            "word": "in '",
+            "start": 151.381,
+            "end": 151.544
+          },
+          {
+            "word": "t ",
+            "start": 151.544,
+            "end": 151.788
+          },
+          {
+            "word": "sloop ",
+            "start": 151.788,
+            "end": 151.91
+          },
+          {
+            "word": "in ",
+            "start": 151.91,
+            "end": 152.033
+          },
+          {
+            "word": "den ",
+            "start": 152.033,
+            "end": 152.364
+          },
+          {
+            "word": "assenbak",
+            "start": 152.364,
+            "end": 152.732
+          }
+        ]
+      },
+      {
+        "verseStart": 152.732,
+        "verseEnd": 154.85,
+        "words": [
+          {
+            "word": "Geft ",
+            "start": 152.732,
+            "end": 152.895
+          },
+          {
+            "word": "na ",
+            "start": 152.895,
+            "end": 153.058
+          },
+          {
+            "word": "toe, ",
+            "start": 153.058,
+            "end": 153.139
+          },
+          {
+            "word": "ik ",
+            "start": 153.139,
+            "end": 153.343
+          },
+          {
+            "word": "zen ",
+            "start": 153.343,
+            "end": 153.506
+          },
+          {
+            "word": "agelek ",
+            "start": 153.506,
+            "end": 153.79
+          },
+          {
+            "word": "toch ",
+            "start": 153.79,
+            "end": 154.197
+          },
+          {
+            "word": "ne ",
+            "start": 154.197,
+            "end": 154.359
+          },
+          {
+            "word": "krak",
+            "start": 154.359,
+            "end": 154.85
+          }
+        ]
+      },
+      {
+        "verseStart": 154.85,
+        "verseEnd": 156.852,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 154.85,
+            "end": 155.013
+          },
+          {
+            "word": "gen ",
+            "start": 155.013,
+            "end": 155.298
+          },
+          {
+            "word": "no ",
+            "start": 155.298,
+            "end": 155.462
+          },
+          {
+            "word": "mennen ",
+            "start": 155.462,
+            "end": 155.624
+          },
+          {
+            "word": "toas ",
+            "start": 155.624,
+            "end": 155.747
+          },
+          {
+            "word": "wo ",
+            "start": 155.747,
+            "end": 155.91
+          },
+          {
+            "word": "de ",
+            "start": 155.91,
+            "end": 156.033
+          },
+          {
+            "word": "stella ",
+            "start": 156.033,
+            "end": 156.322
+          },
+          {
+            "word": "sto",
+            "start": 156.322,
+            "end": 156.852
+          }
+        ]
+      },
+      {
+        "verseStart": 156.852,
+        "verseEnd": 159.016,
+        "words": [
+          {
+            "word": "Ge ",
+            "start": 156.852,
+            "end": 156.974
+          },
+          {
+            "word": "wet ",
+            "start": 156.974,
+            "end": 157.137
+          },
+          {
+            "word": "wel ",
+            "start": 157.137,
+            "end": 157.299
+          },
+          {
+            "word": "wo ",
+            "start": 157.299,
+            "end": 157.467
+          },
+          {
+            "word": "dien ",
+            "start": 157.467,
+            "end": 157.63
+          },
+          {
+            "word": "oemgekapte ",
+            "start": 157.63,
+            "end": 158.16
+          },
+          {
+            "word": "boem ",
+            "start": 158.16,
+            "end": 158.324
+          },
+          {
+            "word": "sto",
+            "start": 158.324,
+            "end": 159.016
+          }
+        ]
+      },
+      {
+        "verseStart": 159.016,
+        "verseEnd": 161.172,
+        "words": [
+          {
+            "word": "Ik ",
+            "start": 159.016,
+            "end": 159.138
+          },
+          {
+            "word": "pak ",
+            "start": 159.138,
+            "end": 159.259
+          },
+          {
+            "word": "den ",
+            "start": 159.259,
+            "end": 159.341
+          },
+          {
+            "word": "trap ",
+            "start": 159.341,
+            "end": 159.585
+          },
+          {
+            "word": "no ",
+            "start": 159.585,
+            "end": 159.709
+          },
+          {
+            "word": "bove, ",
+            "start": 159.709,
+            "end": 159.752
+          },
+          {
+            "word": "mo ",
+            "start": 159.752,
+            "end": 160.239
+          },
+          {
+            "word": "ha ",
+            "start": 160.239,
+            "end": 160.401
+          },
+          {
+            "word": "luipt ",
+            "start": 160.401,
+            "end": 160.562
+          },
+          {
+            "word": "mier ",
+            "start": 160.562,
+            "end": 160.685
+          },
+          {
+            "word": "no ",
+            "start": 160.685,
+            "end": 160.767
+          },
+          {
+            "word": "benee",
+            "start": 160.767,
+            "end": 161.172
+          }
+        ]
+      },
+      {
+        "verseStart": 161.172,
+        "verseEnd": 163.33,
+        "words": [
+          {
+            "word": "Daddis ",
+            "start": 161.172,
+            "end": 161.335
+          },
+          {
+            "word": "al ",
+            "start": 161.335,
+            "end": 161.457
+          },
+          {
+            "word": "van ",
+            "start": 161.457,
+            "end": 161.578
+          },
+          {
+            "word": "veurige ",
+            "start": 161.578,
+            "end": 161.7
+          },
+          {
+            "word": "zoterdag ",
+            "start": 161.7,
+            "end": 162.147
+          },
+          {
+            "word": "gelee",
+            "start": 162.147,
+            "end": 163.33
+          }
+        ]
+      },
+      {
+        "verseStart": 163.33,
+        "verseEnd": 165.291,
+        "words": [
+          {
+            "word": "Dat ",
+            "start": 163.33,
+            "end": 163.452
+          },
+          {
+            "word": "den ",
+            "start": 163.452,
+            "end": 163.58
+          },
+          {
+            "word": "trap ",
+            "start": 163.58,
+            "end": 163.743
+          },
+          {
+            "word": "nemie ",
+            "start": 163.743,
+            "end": 163.905
+          },
+          {
+            "word": "doe ",
+            "start": 163.905,
+            "end": 164.271
+          },
+          {
+            "word": "wat ",
+            "start": 164.271,
+            "end": 164.434
+          },
+          {
+            "word": "da ",
+            "start": 164.434,
+            "end": 164.677
+          },
+          {
+            "word": "gaa ",
+            "start": 164.677,
+            "end": 164.8
+          },
+          {
+            "word": "verwacht",
+            "start": 164.8,
+            "end": 165.291
+          }
+        ]
+      },
+      {
+        "verseStart": 165.291,
+        "verseEnd": 167.401,
+        "words": [
+          {
+            "word": "Da ",
+            "start": 165.291,
+            "end": 165.414
+          },
+          {
+            "word": "kunde ",
+            "start": 165.414,
+            "end": 165.785
+          },
+          {
+            "word": "veu ",
+            "start": 165.785,
+            "end": 165.907
+          },
+          {
+            "word": "hemme ",
+            "start": 165.907,
+            "end": 166.156
+          },
+          {
+            "word": "oep ",
+            "start": 166.156,
+            "end": 166.503
+          },
+          {
+            "word": "ne ",
+            "start": 166.503,
+            "end": 166.747
+          },
+          {
+            "word": "zoterdagnacht",
+            "start": 166.747,
+            "end": 167.401
+          }
+        ]
+      },
+      {
+        "verseStart": 167.401,
+        "verseEnd": 169.771,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 167.401,
+            "end": 168.342
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 168.342,
+            "end": 169.771
+          }
+        ]
+      },
+      {
+        "verseStart": 169.771,
+        "verseEnd": 171.685,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 169.771,
+            "end": 169.853
+          },
+          {
+            "word": "gon ",
+            "start": 169.853,
+            "end": 170.015
+          },
+          {
+            "word": "fieste ",
+            "start": 170.015,
+            "end": 170.501
+          },
+          {
+            "word": "en ",
+            "start": 170.501,
+            "end": 170.624
+          },
+          {
+            "word": "as ",
+            "start": 170.624,
+            "end": 170.746
+          },
+          {
+            "word": "da ",
+            "start": 170.746,
+            "end": 170.827
+          },
+          {
+            "word": "nog ",
+            "start": 170.827,
+            "end": 170.989
+          },
+          {
+            "word": "ni ",
+            "start": 170.989,
+            "end": 171.111
+          },
+          {
+            "word": "mag",
+            "start": 171.111,
+            "end": 171.685
+          }
+        ]
+      },
+      {
+        "verseStart": 171.685,
+        "verseEnd": 173.721,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 171.685,
+            "end": 172.46
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 172.46,
+            "end": 173.721
+          }
+        ]
+      },
+      {
+        "verseStart": 173.721,
+        "verseEnd": 175.921,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 173.721,
+            "end": 173.883
+          },
+          {
+            "word": "zoterdag ",
+            "start": 173.883,
+            "end": 174.576
+          },
+          {
+            "word": "is '",
+            "start": 174.576,
+            "end": 174.7
+          },
+          {
+            "word": "t ",
+            "start": 174.7,
+            "end": 174.821
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 174.821,
+            "end": 175.921
+          }
+        ]
+      },
+      {
+        "verseStart": 175.921,
+        "verseEnd": 177.854,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 175.921,
+            "end": 176.741
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 176.741,
+            "end": 177.854
+          }
+        ]
+      },
+      {
+        "verseStart": 177.854,
+        "verseEnd": 180.141,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 177.854,
+            "end": 178.058
+          },
+          {
+            "word": "gon ",
+            "start": 178.058,
+            "end": 178.345
+          },
+          {
+            "word": "fieste ",
+            "start": 178.345,
+            "end": 178.796
+          },
+          {
+            "word": "en ",
+            "start": 178.796,
+            "end": 178.959
+          },
+          {
+            "word": "as ",
+            "start": 178.959,
+            "end": 179.081
+          },
+          {
+            "word": "da ",
+            "start": 179.081,
+            "end": 179.203
+          },
+          {
+            "word": "nog ",
+            "start": 179.203,
+            "end": 179.448
+          },
+          {
+            "word": "ni ",
+            "start": 179.448,
+            "end": 179.57
+          },
+          {
+            "word": "mag",
+            "start": 179.57,
+            "end": 180.141
+          }
+        ]
+      },
+      {
+        "verseStart": 180.141,
+        "verseEnd": 182.105,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 180.141,
+            "end": 180.923
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 180.923,
+            "end": 182.105
+          }
+        ]
+      },
+      {
+        "verseStart": 182.105,
+        "verseEnd": 184.272,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 182.105,
+            "end": 182.227
+          },
+          {
+            "word": "zoterdag ",
+            "start": 182.227,
+            "end": 182.596
+          },
+          {
+            "word": "is '",
+            "start": 182.596,
+            "end": 182.682
+          },
+          {
+            "word": "t ",
+            "start": 182.682,
+            "end": 183.049
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 183.049,
+            "end": 184.272
+          }
+        ]
+      },
+      {
+        "verseStart": 184.272,
+        "verseEnd": 186.272,
+        "words": [
+          {
+            "word": "Joepiao, ",
+            "start": 184.272,
+            "end": 185.131
+          },
+          {
+            "word": "Jupilerajee",
+            "start": 185.131,
+            "end": 186.272
+          }
+        ]
+      },
+      {
+        "verseStart": 186.272,
+        "verseEnd": 190.401,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 186.272,
+            "end": 186.515
+          },
+          {
+            "word": "gon ",
+            "start": 186.515,
+            "end": 186.759
+          },
+          {
+            "word": "fieste ",
+            "start": 186.759,
+            "end": 187.211
+          },
+          {
+            "word": "en ",
+            "start": 187.211,
+            "end": 187.334
+          },
+          {
+            "word": "as ",
+            "start": 187.334,
+            "end": 187.497
+          },
+          {
+            "word": "da ",
+            "start": 187.497,
+            "end": 187.742
+          },
+          {
+            "word": "nog ",
+            "start": 187.742,
+            "end": 187.905
+          },
+          {
+            "word": "ni ",
+            "start": 187.905,
+            "end": 187.987
+          },
+          {
+            "word": "mag",
+            "start": 187.987,
+            "end": 190.401
+          }
+        ]
+      },
+      {
+        "verseStart": 190.401,
+        "verseEnd": 194.817,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 190.401,
+            "end": 190.77
+          },
+          {
+            "word": "zoterdag ",
+            "start": 190.77,
+            "end": 190.934
+          },
+          {
+            "word": "is '",
+            "start": 190.934,
+            "end": 191.426
+          },
+          {
+            "word": "t ",
+            "start": 191.426,
+            "end": 191.593
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 191.593,
+            "end": 194.817
+          }
+        ]
+      },
+      {
+        "verseStart": 194.817,
+        "verseEnd": 198.85,
+        "words": [
+          {
+            "word": "Welle ",
+            "start": 194.817,
+            "end": 194.939
+          },
+          {
+            "word": "gon ",
+            "start": 194.939,
+            "end": 195.187
+          },
+          {
+            "word": "fieste ",
+            "start": 195.187,
+            "end": 195.525
+          },
+          {
+            "word": "en ",
+            "start": 195.525,
+            "end": 195.651
+          },
+          {
+            "word": "as ",
+            "start": 195.651,
+            "end": 195.814
+          },
+          {
+            "word": "da ",
+            "start": 195.814,
+            "end": 195.982
+          },
+          {
+            "word": "nog ",
+            "start": 195.982,
+            "end": 196.146
+          },
+          {
+            "word": "ni ",
+            "start": 196.146,
+            "end": 196.27
+          },
+          {
+            "word": "mag",
+            "start": 196.27,
+            "end": 198.85
+          }
+        ]
+      },
+      {
+        "verseStart": 198.85,
+        "verseEnd": 201.92,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 198.85,
+            "end": 199.055
+          },
+          {
+            "word": "zoterdag ",
+            "start": 199.055,
+            "end": 199.629
+          },
+          {
+            "word": "is '",
+            "start": 199.629,
+            "end": 199.751
+          },
+          {
+            "word": "t ",
+            "start": 199.751,
+            "end": 199.92
+          },
+          {
+            "word": "krapoelekesdag",
+            "start": 199.92,
+            "end": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Joël Legendre à Soirée Canadienne.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 0.106,
+        "verseEnd": 5.411,
+        "words": [
+          {
+            "word": "<i>Maintenant </i>",
+            "start": 0.106,
+            "end": 0.269
+          },
+          {
+            "word": "<i>on </i>",
+            "start": 0.269,
+            "end": 0.475
+          },
+          {
+            "word": "<i>a </i>",
+            "start": 0.475,
+            "end": 0.72
+          },
+          {
+            "word": "<i>un </i>",
+            "start": 0.72,
+            "end": 0.924
+          },
+          {
+            "word": "<i>tout </i>",
+            "start": 0.924,
+            "end": 1.087
+          },
+          {
+            "word": "<i>jeune </i>",
+            "start": 1.087,
+            "end": 1.25
+          },
+          {
+            "word": "<i>homme, </i>",
+            "start": 1.25,
+            "end": 1.453
+          },
+          {
+            "word": "<i>euh, </i>",
+            "start": 1.453,
+            "end": 1.983
+          },
+          {
+            "word": "<i>qui </i>",
+            "start": 1.983,
+            "end": 2.106
+          },
+          {
+            "word": "<i>est </i>",
+            "start": 2.106,
+            "end": 2.269
+          },
+          {
+            "word": "<i>plein </i>",
+            "start": 2.269,
+            "end": 2.351
+          },
+          {
+            "word": "<i>de </i>",
+            "start": 2.351,
+            "end": 2.472
+          },
+          {
+            "word": "<i>vie, </i>",
+            "start": 2.472,
+            "end": 2.92
+          },
+          {
+            "word": "<i>vous </i>",
+            "start": 2.92,
+            "end": 3.001
+          },
+          {
+            "word": "<i>allez </i>",
+            "start": 3.001,
+            "end": 3.123
+          },
+          {
+            "word": "<i>voir. </i>",
+            "start": 3.123,
+            "end": 3.818
+          },
+          {
+            "word": "<i>C'est </i>",
+            "start": 3.818,
+            "end": 3.981
+          },
+          {
+            "word": "<i>Joël </i>",
+            "start": 3.981,
+            "end": 4.347
+          },
+          {
+            "word": "<i>Legendre. </i>",
+            "start": 4.347,
+            "end": 4.878
+          },
+          {
+            "word": "<i>Bonsoir </i>",
+            "start": 4.878,
+            "end": 5.085
+          },
+          {
+            "word": "<i>Joël.</i>",
+            "start": 5.085,
+            "end": 5.411
+          }
+        ],
+        "speaker": "<i>Louis:</i>"
+      },
+      {
+        "verseStart": 5.411,
+        "verseEnd": 6.146,
+        "words": [
+          {
+            "word": "<i>Bonsoir.</i>",
+            "start": 5.411,
+            "end": 6.146
+          }
+        ],
+        "speaker": "<i>Joël:</i>"
+      },
+      {
+        "verseStart": 6.146,
+        "verseEnd": 16.325,
+        "words": [
+          {
+            "word": "<i>La </i>",
+            "start": 6.146,
+            "end": 6.309
+          },
+          {
+            "word": "<i>chanson </i>",
+            "start": 6.309,
+            "end": 6.472
+          },
+          {
+            "word": "<i>qu'tu </i>",
+            "start": 6.472,
+            "end": 6.635
+          },
+          {
+            "word": "<i>fais </i>",
+            "start": 6.635,
+            "end": 6.799
+          },
+          {
+            "word": "<i>c'est </i>",
+            "start": 6.799,
+            "end": 7.17
+          },
+          {
+            "word": "<i>une </i>",
+            "start": 7.17,
+            "end": 7.292
+          },
+          {
+            "word": "<i>chanson </i>",
+            "start": 7.292,
+            "end": 7.416
+          },
+          {
+            "word": "<i>folklorique </i>",
+            "start": 7.416,
+            "end": 8.359
+          },
+          {
+            "word": "<i>mais </i>",
+            "start": 8.359,
+            "end": 8.522
+          },
+          {
+            "word": "<i>qui </i>",
+            "start": 8.522,
+            "end": 8.644
+          },
+          {
+            "word": "<i>a </i>",
+            "start": 8.644,
+            "end": 8.725
+          },
+          {
+            "word": "<i>une </i>",
+            "start": 8.725,
+            "end": 8.848
+          },
+          {
+            "word": "<i>allure </i>",
+            "start": 8.848,
+            "end": 9.052
+          },
+          {
+            "word": "<i>de </i>",
+            "start": 9.052,
+            "end": 9.218
+          },
+          {
+            "word": "<i>folklore </i>",
+            "start": 9.218,
+            "end": 9.955
+          },
+          {
+            "word": "<i>contemporain. </i>",
+            "start": 9.955,
+            "end": 11.549
+          },
+          {
+            "word": "<i>C'est </i>",
+            "start": 11.549,
+            "end": 11.715
+          },
+          {
+            "word": "<i>l'allure </i>",
+            "start": 11.715,
+            "end": 11.842
+          },
+          {
+            "word": "<i>qu'on </i>",
+            "start": 11.842,
+            "end": 12.009
+          },
+          {
+            "word": "<i>lui </i>",
+            "start": 12.009,
+            "end": 12.093
+          },
+          {
+            "word": "<i>a </i>",
+            "start": 12.093,
+            "end": 12.265
+          },
+          {
+            "word": "<i>donnée, </i>",
+            "start": 12.265,
+            "end": 12.433
+          },
+          {
+            "word": "<i>euh, </i>",
+            "start": 12.433,
+            "end": 13.289
+          },
+          {
+            "word": "<i>avec </i>",
+            "start": 13.289,
+            "end": 13.455
+          },
+          {
+            "word": "<i>une </i>",
+            "start": 13.455,
+            "end": 13.619
+          },
+          {
+            "word": "<i>chanson </i>",
+            "start": 13.619,
+            "end": 14.113
+          },
+          {
+            "word": "<i>fort </i>",
+            "start": 14.113,
+            "end": 14.235
+          },
+          {
+            "word": "<i>populaire </i>",
+            "start": 14.235,
+            "end": 14.317
+          },
+          {
+            "word": "<i>actuellement. </i>",
+            "start": 14.317,
+            "end": 14.603
+          },
+          {
+            "word": "<i>C'est </i>",
+            "start": 14.603,
+            "end": 15.138
+          },
+          {
+            "word": "<i>quoi </i>",
+            "start": 15.138,
+            "end": 15.261
+          },
+          {
+            "word": "<i>déjà </i>",
+            "start": 15.261,
+            "end": 15.423
+          },
+          {
+            "word": "<i>la </i>",
+            "start": 15.423,
+            "end": 15.59
+          },
+          {
+            "word": "<i>chanson ?</i>",
+            "start": 15.59,
+            "end": 16.325
+          }
+        ],
+        "speaker": "<i>Louis:</i>"
+      },
+      {
+        "verseStart": 16.325,
+        "verseEnd": 17.021,
+        "words": [
+          {
+            "word": "<i>M'en </i>",
+            "start": 16.325,
+            "end": 16.448
+          },
+          {
+            "word": "<i>revenant </i>",
+            "start": 16.448,
+            "end": 16.529
+          },
+          {
+            "word": "<i>de </i>",
+            "start": 16.529,
+            "end": 16.653
+          },
+          {
+            "word": "<i>Sainte-</i>",
+            "start": 16.653,
+            "end": 16.818
+          },
+          {
+            "word": "<i>Hélène.</i>",
+            "start": 16.818,
+            "end": 17.021
+          }
+        ],
+        "speaker": "<i>Joël:</i>"
+      },
+      {
+        "verseStart": 17.021,
+        "verseEnd": 22.538,
+        "words": [
+          {
+            "word": "<i>Bon, </i>",
+            "start": 17.021,
+            "end": 17.78
+          },
+          {
+            "word": "<i>on </i>",
+            "start": 17.78,
+            "end": 17.983
+          },
+          {
+            "word": "<i>va </i>",
+            "start": 17.983,
+            "end": 18.065
+          },
+          {
+            "word": "<i>revenir </i>",
+            "start": 18.065,
+            "end": 18.23
+          },
+          {
+            "word": "<i>de </i>",
+            "start": 18.23,
+            "end": 18.315
+          },
+          {
+            "word": "<i>Sainte-</i>",
+            "start": 18.315,
+            "end": 18.441
+          },
+          {
+            "word": "<i>Hélène, </i>",
+            "start": 18.441,
+            "end": 18.562
+          },
+          {
+            "word": "<i>mais </i>",
+            "start": 18.562,
+            "end": 18.645
+          },
+          {
+            "word": "<i>on </i>",
+            "start": 18.645,
+            "end": 18.857
+          },
+          {
+            "word": "<i>retournera </i>",
+            "start": 18.857,
+            "end": 19.022
+          },
+          {
+            "word": "<i>à </i>",
+            "start": 19.022,
+            "end": 19.145
+          },
+          {
+            "word": "<i>Sainte-</i>",
+            "start": 19.145,
+            "end": 19.43
+          },
+          {
+            "word": "<i>Hélène </i>",
+            "start": 19.43,
+            "end": 19.675
+          },
+          {
+            "word": "<i>après </i>",
+            "start": 19.675,
+            "end": 19.839
+          },
+          {
+            "word": "<i>ça. </i>",
+            "start": 19.839,
+            "end": 20.615
+          },
+          {
+            "word": "<i>On </i>",
+            "start": 20.615,
+            "end": 20.737
+          },
+          {
+            "word": "<i>y </i>",
+            "start": 20.737,
+            "end": 21.107
+          },
+          {
+            "word": "<i>va !</i>",
+            "start": 21.107,
+            "end": 22.538
+          }
+        ],
+        "speaker": "<i>Louis:</i>"
+      },
+      {
+        "verseStart": 22.538,
+        "verseEnd": 24.264,
+        "words": [
+          {
+            "word": "M'en ",
+            "start": 22.538,
+            "end": 22.745
+          },
+          {
+            "word": "revenant ",
+            "start": 22.745,
+            "end": 22.868
+          },
+          {
+            "word": "de ",
+            "start": 22.868,
+            "end": 22.95
+          },
+          {
+            "word": "Sainte-",
+            "start": 22.95,
+            "end": 23.568
+          },
+          {
+            "word": "Hélène",
+            "start": 23.568,
+            "end": 24.264
+          }
+        ]
+      },
+      {
+        "verseStart": 24.264,
+        "verseEnd": 26.16,
+        "words": [
+          {
+            "word": "Ferme ",
+            "start": 24.264,
+            "end": 24.553
+          },
+          {
+            "word": "donc ",
+            "start": 24.553,
+            "end": 24.675
+          },
+          {
+            "word": "ta ",
+            "start": 24.675,
+            "end": 24.758
+          },
+          {
+            "word": "boite, ",
+            "start": 24.758,
+            "end": 25.044
+          },
+          {
+            "word": "laisse-",
+            "start": 25.044,
+            "end": 25.168
+          },
+          {
+            "word": "moé ",
+            "start": 25.168,
+            "end": 25.334
+          },
+          {
+            "word": "donc ",
+            "start": 25.334,
+            "end": 25.666
+          },
+          {
+            "word": "chanter",
+            "start": 25.666,
+            "end": 26.16
+          }
+        ]
+      },
+      {
+        "verseStart": 26.16,
+        "verseEnd": 28.037,
+        "words": [
+          {
+            "word": "(M'en ",
+            "start": 26.16,
+            "end": 26.446
+          },
+          {
+            "word": "revenant ",
+            "start": 26.446,
+            "end": 26.936
+          },
+          {
+            "word": "de ",
+            "start": 26.936,
+            "end": 27.14
+          },
+          {
+            "word": "Sainte-",
+            "start": 27.14,
+            "end": 27.384
+          },
+          {
+            "word": "Hélène)",
+            "start": 27.384,
+            "end": 28.037
+          }
+        ]
+      },
+      {
+        "verseStart": 28.037,
+        "verseEnd": 29.964,
+        "words": [
+          {
+            "word": "(Ferme ",
+            "start": 28.037,
+            "end": 28.321
+          },
+          {
+            "word": "donc ",
+            "start": 28.321,
+            "end": 28.485
+          },
+          {
+            "word": "ta ",
+            "start": 28.485,
+            "end": 28.568
+          },
+          {
+            "word": "boite, ",
+            "start": 28.568,
+            "end": 28.771
+          },
+          {
+            "word": "laisse-",
+            "start": 28.771,
+            "end": 28.894
+          },
+          {
+            "word": "moé ",
+            "start": 28.894,
+            "end": 29.017
+          },
+          {
+            "word": "donc ",
+            "start": 29.017,
+            "end": 29.304
+          },
+          {
+            "word": "chanter)",
+            "start": 29.304,
+            "end": 29.964
+          }
+        ]
+      },
+      {
+        "verseStart": 29.964,
+        "verseEnd": 31.526,
+        "words": [
+          {
+            "word": "Trois ",
+            "start": 29.964,
+            "end": 30.213
+          },
+          {
+            "word": "beaux ",
+            "start": 30.213,
+            "end": 30.336
+          },
+          {
+            "word": "canards ",
+            "start": 30.336,
+            "end": 30.459
+          },
+          {
+            "word": "s'en ",
+            "start": 30.459,
+            "end": 30.667
+          },
+          {
+            "word": "vont ",
+            "start": 30.667,
+            "end": 31.074
+          },
+          {
+            "word": "baignant",
+            "start": 31.074,
+            "end": 31.526
+          }
+        ]
+      },
+      {
+        "verseStart": 31.526,
+        "verseEnd": 32.934,
+        "words": [
+          {
+            "word": "Touchez ",
+            "start": 31.526,
+            "end": 31.69
+          },
+          {
+            "word": "haut, ",
+            "start": 31.69,
+            "end": 32.06
+          },
+          {
+            "word": "touchez ",
+            "start": 32.06,
+            "end": 32.191
+          },
+          {
+            "word": "bas, ",
+            "start": 32.191,
+            "end": 32.481
+          },
+          {
+            "word": "touchez-",
+            "start": 32.481,
+            "end": 32.604
+          },
+          {
+            "word": "y",
+            "start": 32.604,
+            "end": 32.934
+          }
+        ]
+      },
+      {
+        "verseStart": 32.934,
+        "verseEnd": 34.575,
+        "words": [
+          {
+            "word": "Touchez-",
+            "start": 32.934,
+            "end": 33.056
+          },
+          {
+            "word": "y ",
+            "start": 33.056,
+            "end": 33.138
+          },
+          {
+            "word": "pas, ",
+            "start": 33.138,
+            "end": 33.382
+          },
+          {
+            "word": "laissez ",
+            "start": 33.382,
+            "end": 33.505
+          },
+          {
+            "word": "ça ",
+            "start": 33.505,
+            "end": 33.631
+          },
+          {
+            "word": "là, ",
+            "start": 33.631,
+            "end": 33.753
+          },
+          {
+            "word": "maman ",
+            "start": 33.753,
+            "end": 33.875
+          },
+          {
+            "word": "veut ",
+            "start": 33.875,
+            "end": 34.122
+          },
+          {
+            "word": "pas",
+            "start": 34.122,
+            "end": 34.575
+          }
+        ]
+      },
+      {
+        "verseStart": 34.575,
+        "verseEnd": 36.124,
+        "words": [
+          {
+            "word": "J'la ",
+            "start": 34.575,
+            "end": 34.697
+          },
+          {
+            "word": "dévire ",
+            "start": 34.697,
+            "end": 34.819
+          },
+          {
+            "word": "de ",
+            "start": 34.819,
+            "end": 34.901
+          },
+          {
+            "word": "bord, ",
+            "start": 34.901,
+            "end": 35.349
+          },
+          {
+            "word": "pis ",
+            "start": 35.349,
+            "end": 35.47
+          },
+          {
+            "word": "j'y ",
+            "start": 35.47,
+            "end": 35.838
+          },
+          {
+            "word": "touche ",
+            "start": 35.838,
+            "end": 36.002
+          },
+          {
+            "word": "encore",
+            "start": 36.002,
+            "end": 36.124
+          }
+        ]
+      },
+      {
+        "verseStart": 36.124,
+        "verseEnd": 38.293,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 36.124,
+            "end": 36.613
+          },
+          {
+            "word": "vu ",
+            "start": 36.613,
+            "end": 36.735
+          },
+          {
+            "word": "le ",
+            "start": 36.735,
+            "end": 36.86
+          },
+          {
+            "word": "loup, ",
+            "start": 36.86,
+            "end": 37.186
+          },
+          {
+            "word": "le ",
+            "start": 37.186,
+            "end": 37.308
+          },
+          {
+            "word": "renard, ",
+            "start": 37.308,
+            "end": 37.431
+          },
+          {
+            "word": "le ",
+            "start": 37.431,
+            "end": 37.675
+          },
+          {
+            "word": "lièvre",
+            "start": 37.675,
+            "end": 38.293
+          }
+        ]
+      },
+      {
+        "verseStart": 38.293,
+        "verseEnd": 40.216,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 38.293,
+            "end": 38.618
+          },
+          {
+            "word": "vu ",
+            "start": 38.618,
+            "end": 38.74
+          },
+          {
+            "word": "le ",
+            "start": 38.74,
+            "end": 38.821
+          },
+          {
+            "word": "loup, ",
+            "start": 38.821,
+            "end": 39.065
+          },
+          {
+            "word": "le ",
+            "start": 39.065,
+            "end": 39.19
+          },
+          {
+            "word": "renard ",
+            "start": 39.19,
+            "end": 39.516
+          },
+          {
+            "word": "passer",
+            "start": 39.516,
+            "end": 40.216
+          }
+        ]
+      },
+      {
+        "verseStart": 40.216,
+        "verseEnd": 42.067,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 40.216,
+            "end": 40.461
+          },
+          {
+            "word": "vu ",
+            "start": 40.461,
+            "end": 40.584
+          },
+          {
+            "word": "le ",
+            "start": 40.584,
+            "end": 40.706
+          },
+          {
+            "word": "loup, ",
+            "start": 40.706,
+            "end": 40.91
+          },
+          {
+            "word": "le ",
+            "start": 40.91,
+            "end": 41.077
+          },
+          {
+            "word": "renard, ",
+            "start": 41.077,
+            "end": 41.371
+          },
+          {
+            "word": "le ",
+            "start": 41.371,
+            "end": 41.657
+          },
+          {
+            "word": "lièvre)",
+            "start": 41.657,
+            "end": 42.067
+          }
+        ]
+      },
+      {
+        "verseStart": 42.067,
+        "verseEnd": 43.92,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 42.067,
+            "end": 42.312
+          },
+          {
+            "word": "vu ",
+            "start": 42.312,
+            "end": 42.479
+          },
+          {
+            "word": "le ",
+            "start": 42.479,
+            "end": 42.562
+          },
+          {
+            "word": "loup, ",
+            "start": 42.562,
+            "end": 42.81
+          },
+          {
+            "word": "le ",
+            "start": 42.81,
+            "end": 43.059
+          },
+          {
+            "word": "renard ",
+            "start": 43.059,
+            "end": 43.267
+          },
+          {
+            "word": "passer)",
+            "start": 43.267,
+            "end": 43.92
+          }
+        ]
+      },
+      {
+        "verseStart": 43.92,
+        "verseEnd": 45.763,
+        "words": [
+          {
+            "word": "Trois ",
+            "start": 43.92,
+            "end": 44.164
+          },
+          {
+            "word": "beaux ",
+            "start": 44.164,
+            "end": 44.329
+          },
+          {
+            "word": "canards ",
+            "start": 44.329,
+            "end": 44.411
+          },
+          {
+            "word": "s'en ",
+            "start": 44.411,
+            "end": 44.655
+          },
+          {
+            "word": "vont ",
+            "start": 44.655,
+            "end": 45.065
+          },
+          {
+            "word": "baignant",
+            "start": 45.065,
+            "end": 45.763
+          }
+        ]
+      },
+      {
+        "verseStart": 45.763,
+        "verseEnd": 47.691,
+        "words": [
+          {
+            "word": "Ferme ",
+            "start": 45.763,
+            "end": 46.008
+          },
+          {
+            "word": "donc ",
+            "start": 46.008,
+            "end": 46.131
+          },
+          {
+            "word": "ta ",
+            "start": 46.131,
+            "end": 46.253
+          },
+          {
+            "word": "boite, ",
+            "start": 46.253,
+            "end": 46.502
+          },
+          {
+            "word": "laisse-",
+            "start": 46.502,
+            "end": 46.747
+          },
+          {
+            "word": "moé ",
+            "start": 46.747,
+            "end": 46.991
+          },
+          {
+            "word": "donc ",
+            "start": 46.991,
+            "end": 47.202
+          },
+          {
+            "word": "chanter",
+            "start": 47.202,
+            "end": 47.691
+          }
+        ]
+      },
+      {
+        "verseStart": 47.691,
+        "verseEnd": 49.499,
+        "words": [
+          {
+            "word": "(Trois ",
+            "start": 47.691,
+            "end": 47.895
+          },
+          {
+            "word": "beaux ",
+            "start": 47.895,
+            "end": 48.27
+          },
+          {
+            "word": "canards ",
+            "start": 48.27,
+            "end": 48.513
+          },
+          {
+            "word": "s'en ",
+            "start": 48.513,
+            "end": 48.758
+          },
+          {
+            "word": "vont ",
+            "start": 48.758,
+            "end": 48.961
+          },
+          {
+            "word": "baignant)",
+            "start": 48.961,
+            "end": 49.499
+          }
+        ]
+      },
+      {
+        "verseStart": 49.499,
+        "verseEnd": 51.411,
+        "words": [
+          {
+            "word": "(Ferme ",
+            "start": 49.499,
+            "end": 49.785
+          },
+          {
+            "word": "donc ",
+            "start": 49.785,
+            "end": 49.907
+          },
+          {
+            "word": "ta ",
+            "start": 49.907,
+            "end": 50.028
+          },
+          {
+            "word": "boite, ",
+            "start": 50.028,
+            "end": 50.272
+          },
+          {
+            "word": "laisse-",
+            "start": 50.272,
+            "end": 50.395
+          },
+          {
+            "word": "moé ",
+            "start": 50.395,
+            "end": 50.476
+          },
+          {
+            "word": "donc ",
+            "start": 50.476,
+            "end": 50.801
+          },
+          {
+            "word": "chanter)",
+            "start": 50.801,
+            "end": 51.411
+          }
+        ]
+      },
+      {
+        "verseStart": 51.411,
+        "verseEnd": 53.122,
+        "words": [
+          {
+            "word": "Le ",
+            "start": 51.411,
+            "end": 51.655
+          },
+          {
+            "word": "fils ",
+            "start": 51.655,
+            "end": 51.777
+          },
+          {
+            "word": "du ",
+            "start": 51.777,
+            "end": 51.9
+          },
+          {
+            "word": "roi ",
+            "start": 51.9,
+            "end": 52.144
+          },
+          {
+            "word": "s'en ",
+            "start": 52.144,
+            "end": 52.389
+          },
+          {
+            "word": "va ",
+            "start": 52.389,
+            "end": 52.591
+          },
+          {
+            "word": "chassant",
+            "start": 52.591,
+            "end": 53.122
+          }
+        ]
+      },
+      {
+        "verseStart": 53.122,
+        "verseEnd": 54.308,
+        "words": [
+          {
+            "word": "Touchez ",
+            "start": 53.122,
+            "end": 53.325
+          },
+          {
+            "word": "haut, ",
+            "start": 53.325,
+            "end": 53.615
+          },
+          {
+            "word": "touchez ",
+            "start": 53.615,
+            "end": 53.697
+          },
+          {
+            "word": "bas, ",
+            "start": 53.697,
+            "end": 54.022
+          },
+          {
+            "word": "touchez-",
+            "start": 54.022,
+            "end": 54.145
+          },
+          {
+            "word": "y",
+            "start": 54.145,
+            "end": 54.308
+          }
+        ]
+      },
+      {
+        "verseStart": 54.308,
+        "verseEnd": 56.071,
+        "words": [
+          {
+            "word": "Touchez-",
+            "start": 54.308,
+            "end": 54.514
+          },
+          {
+            "word": "y ",
+            "start": 54.514,
+            "end": 54.637
+          },
+          {
+            "word": "pas, ",
+            "start": 54.637,
+            "end": 54.841
+          },
+          {
+            "word": "laissez ",
+            "start": 54.841,
+            "end": 54.966
+          },
+          {
+            "word": "ça ",
+            "start": 54.966,
+            "end": 55.089
+          },
+          {
+            "word": "là, ",
+            "start": 55.089,
+            "end": 55.252
+          },
+          {
+            "word": "maman ",
+            "start": 55.252,
+            "end": 55.537
+          },
+          {
+            "word": "veut ",
+            "start": 55.537,
+            "end": 55.62
+          },
+          {
+            "word": "pas",
+            "start": 55.62,
+            "end": 56.071
+          }
+        ]
+      },
+      {
+        "verseStart": 56.071,
+        "verseEnd": 57.92,
+        "words": [
+          {
+            "word": "J'la ",
+            "start": 56.071,
+            "end": 56.192
+          },
+          {
+            "word": "dévire ",
+            "start": 56.192,
+            "end": 56.318
+          },
+          {
+            "word": "de ",
+            "start": 56.318,
+            "end": 56.44
+          },
+          {
+            "word": "bord ",
+            "start": 56.44,
+            "end": 56.767
+          },
+          {
+            "word": "pis ",
+            "start": 56.767,
+            "end": 56.89
+          },
+          {
+            "word": "j'y ",
+            "start": 56.89,
+            "end": 56.972
+          },
+          {
+            "word": "touche ",
+            "start": 56.972,
+            "end": 57.221
+          },
+          {
+            "word": "encore",
+            "start": 57.221,
+            "end": 57.92
+          }
+        ]
+      },
+      {
+        "verseStart": 57.92,
+        "verseEnd": 59.84,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 57.92,
+            "end": 58.162
+          },
+          {
+            "word": "vu ",
+            "start": 58.162,
+            "end": 58.286
+          },
+          {
+            "word": "le ",
+            "start": 58.286,
+            "end": 58.409
+          },
+          {
+            "word": "loup, ",
+            "start": 58.409,
+            "end": 58.655
+          },
+          {
+            "word": "le ",
+            "start": 58.655,
+            "end": 58.776
+          },
+          {
+            "word": "renard, ",
+            "start": 58.776,
+            "end": 59.143
+          },
+          {
+            "word": "le ",
+            "start": 59.143,
+            "end": 59.309
+          },
+          {
+            "word": "lièvre",
+            "start": 59.309,
+            "end": 59.84
+          }
+        ]
+      },
+      {
+        "verseStart": 59.84,
+        "verseEnd": 61.716,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 59.84,
+            "end": 60.084
+          },
+          {
+            "word": "vu ",
+            "start": 60.084,
+            "end": 60.207
+          },
+          {
+            "word": "le ",
+            "start": 60.207,
+            "end": 60.33
+          },
+          {
+            "word": "loup, ",
+            "start": 60.33,
+            "end": 60.452
+          },
+          {
+            "word": "le ",
+            "start": 60.452,
+            "end": 60.657
+          },
+          {
+            "word": "renard ",
+            "start": 60.657,
+            "end": 60.943
+          },
+          {
+            "word": "passer",
+            "start": 60.943,
+            "end": 61.716
+          }
+        ]
+      },
+      {
+        "verseStart": 61.716,
+        "verseEnd": 63.56,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 61.716,
+            "end": 61.961
+          },
+          {
+            "word": "vu ",
+            "start": 61.961,
+            "end": 62.083
+          },
+          {
+            "word": "le ",
+            "start": 62.083,
+            "end": 62.207
+          },
+          {
+            "word": "loup, ",
+            "start": 62.207,
+            "end": 62.411
+          },
+          {
+            "word": "le ",
+            "start": 62.411,
+            "end": 62.533
+          },
+          {
+            "word": "renard, ",
+            "start": 62.533,
+            "end": 62.905
+          },
+          {
+            "word": "le ",
+            "start": 62.905,
+            "end": 63.109
+          },
+          {
+            "word": "lièvre)",
+            "start": 63.109,
+            "end": 63.56
+          }
+        ]
+      },
+      {
+        "verseStart": 63.56,
+        "verseEnd": 65.414,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 63.56,
+            "end": 63.811
+          },
+          {
+            "word": "vu ",
+            "start": 63.811,
+            "end": 63.934
+          },
+          {
+            "word": "le ",
+            "start": 63.934,
+            "end": 64.097
+          },
+          {
+            "word": "loup, ",
+            "start": 64.097,
+            "end": 64.302
+          },
+          {
+            "word": "le ",
+            "start": 64.302,
+            "end": 64.424
+          },
+          {
+            "word": "renard ",
+            "start": 64.424,
+            "end": 64.88
+          },
+          {
+            "word": "passer)",
+            "start": 64.88,
+            "end": 65.414
+          }
+        ]
+      },
+      {
+        "verseStart": 65.414,
+        "verseEnd": 67.318,
+        "words": [
+          {
+            "word": "Le ",
+            "start": 65.414,
+            "end": 65.659
+          },
+          {
+            "word": "fils ",
+            "start": 65.659,
+            "end": 65.821
+          },
+          {
+            "word": "du ",
+            "start": 65.821,
+            "end": 65.945
+          },
+          {
+            "word": "roi ",
+            "start": 65.945,
+            "end": 66.148
+          },
+          {
+            "word": "s'en ",
+            "start": 66.148,
+            "end": 66.361
+          },
+          {
+            "word": "va ",
+            "start": 66.361,
+            "end": 66.607
+          },
+          {
+            "word": "chassant",
+            "start": 66.607,
+            "end": 67.318
+          }
+        ]
+      },
+      {
+        "verseStart": 67.318,
+        "verseEnd": 69.209,
+        "words": [
+          {
+            "word": "Ferme ",
+            "start": 67.318,
+            "end": 67.528
+          },
+          {
+            "word": "donc ",
+            "start": 67.528,
+            "end": 67.69
+          },
+          {
+            "word": "ta ",
+            "start": 67.69,
+            "end": 67.933
+          },
+          {
+            "word": "boite, ",
+            "start": 67.933,
+            "end": 68.099
+          },
+          {
+            "word": "laisse-",
+            "start": 68.099,
+            "end": 68.221
+          },
+          {
+            "word": "moé ",
+            "start": 68.221,
+            "end": 68.466
+          },
+          {
+            "word": "donc ",
+            "start": 68.466,
+            "end": 68.634
+          },
+          {
+            "word": "chanter",
+            "start": 68.634,
+            "end": 69.209
+          }
+        ]
+      },
+      {
+        "verseStart": 69.209,
+        "verseEnd": 71.053,
+        "words": [
+          {
+            "word": "(Le ",
+            "start": 69.209,
+            "end": 69.413
+          },
+          {
+            "word": "fils ",
+            "start": 69.413,
+            "end": 69.536
+          },
+          {
+            "word": "du ",
+            "start": 69.536,
+            "end": 69.662
+          },
+          {
+            "word": "roi ",
+            "start": 69.662,
+            "end": 69.866
+          },
+          {
+            "word": "s'en ",
+            "start": 69.866,
+            "end": 70.113
+          },
+          {
+            "word": "va ",
+            "start": 70.113,
+            "end": 70.398
+          },
+          {
+            "word": "chassant)",
+            "start": 70.398,
+            "end": 71.053
+          }
+        ]
+      },
+      {
+        "verseStart": 71.053,
+        "verseEnd": 72.898,
+        "words": [
+          {
+            "word": "(Ferme ",
+            "start": 71.053,
+            "end": 71.259
+          },
+          {
+            "word": "donc ",
+            "start": 71.259,
+            "end": 71.422
+          },
+          {
+            "word": "ta ",
+            "start": 71.422,
+            "end": 71.504
+          },
+          {
+            "word": "boite, ",
+            "start": 71.504,
+            "end": 71.752
+          },
+          {
+            "word": "laisse-",
+            "start": 71.752,
+            "end": 71.874
+          },
+          {
+            "word": "moé ",
+            "start": 71.874,
+            "end": 71.996
+          },
+          {
+            "word": "donc ",
+            "start": 71.996,
+            "end": 72.241
+          },
+          {
+            "word": "chanter)",
+            "start": 72.241,
+            "end": 72.898
+          }
+        ]
+      },
+      {
+        "verseStart": 72.898,
+        "verseEnd": 74.578,
+        "words": [
+          {
+            "word": "Avec ",
+            "start": 72.898,
+            "end": 73.145
+          },
+          {
+            "word": "son ",
+            "start": 73.145,
+            "end": 73.392
+          },
+          {
+            "word": "beau ",
+            "start": 73.392,
+            "end": 73.64
+          },
+          {
+            "word": "fusil ",
+            "start": 73.64,
+            "end": 74.09
+          },
+          {
+            "word": "d'argent",
+            "start": 74.09,
+            "end": 74.578
+          }
+        ]
+      },
+      {
+        "verseStart": 74.578,
+        "verseEnd": 75.805,
+        "words": [
+          {
+            "word": "Touchez ",
+            "start": 74.578,
+            "end": 74.741
+          },
+          {
+            "word": "haut, ",
+            "start": 74.741,
+            "end": 75.068
+          },
+          {
+            "word": "touchez ",
+            "start": 75.068,
+            "end": 75.314
+          },
+          {
+            "word": "bas, ",
+            "start": 75.314,
+            "end": 75.518
+          },
+          {
+            "word": "touchez-",
+            "start": 75.518,
+            "end": 75.64
+          },
+          {
+            "word": "y",
+            "start": 75.64,
+            "end": 75.805
+          }
+        ]
+      },
+      {
+        "verseStart": 75.805,
+        "verseEnd": 77.607,
+        "words": [
+          {
+            "word": "Touchez-",
+            "start": 75.805,
+            "end": 76.05
+          },
+          {
+            "word": "y ",
+            "start": 76.05,
+            "end": 76.214
+          },
+          {
+            "word": "pas, ",
+            "start": 76.214,
+            "end": 76.417
+          },
+          {
+            "word": "laissez ",
+            "start": 76.417,
+            "end": 76.539
+          },
+          {
+            "word": "ça ",
+            "start": 76.539,
+            "end": 76.66
+          },
+          {
+            "word": "là, ",
+            "start": 76.66,
+            "end": 76.783
+          },
+          {
+            "word": "maman ",
+            "start": 76.783,
+            "end": 76.905
+          },
+          {
+            "word": "veut ",
+            "start": 76.905,
+            "end": 77.149
+          },
+          {
+            "word": "pas",
+            "start": 77.149,
+            "end": 77.607
+          }
+        ]
+      },
+      {
+        "verseStart": 77.607,
+        "verseEnd": 79.493,
+        "words": [
+          {
+            "word": "J'la ",
+            "start": 77.607,
+            "end": 77.689
+          },
+          {
+            "word": "dévire ",
+            "start": 77.689,
+            "end": 77.812
+          },
+          {
+            "word": "de ",
+            "start": 77.812,
+            "end": 77.935
+          },
+          {
+            "word": "bord, ",
+            "start": 77.935,
+            "end": 78.302
+          },
+          {
+            "word": "pis ",
+            "start": 78.302,
+            "end": 78.424
+          },
+          {
+            "word": "j'y ",
+            "start": 78.424,
+            "end": 78.506
+          },
+          {
+            "word": "touche ",
+            "start": 78.506,
+            "end": 78.792
+          },
+          {
+            "word": "encore",
+            "start": 78.792,
+            "end": 79.493
+          }
+        ]
+      },
+      {
+        "verseStart": 79.493,
+        "verseEnd": 81.33,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 79.493,
+            "end": 79.697
+          },
+          {
+            "word": "vu ",
+            "start": 79.697,
+            "end": 79.82
+          },
+          {
+            "word": "le ",
+            "start": 79.82,
+            "end": 79.942
+          },
+          {
+            "word": "loup, ",
+            "start": 79.942,
+            "end": 80.187
+          },
+          {
+            "word": "le ",
+            "start": 80.187,
+            "end": 80.391
+          },
+          {
+            "word": "renard, ",
+            "start": 80.391,
+            "end": 80.638
+          },
+          {
+            "word": "le ",
+            "start": 80.638,
+            "end": 80.841
+          },
+          {
+            "word": "lièvre",
+            "start": 80.841,
+            "end": 81.33
+          }
+        ]
+      },
+      {
+        "verseStart": 81.33,
+        "verseEnd": 83.254,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 81.33,
+            "end": 81.575
+          },
+          {
+            "word": "vu ",
+            "start": 81.575,
+            "end": 81.737
+          },
+          {
+            "word": "le ",
+            "start": 81.737,
+            "end": 81.863
+          },
+          {
+            "word": "loup, ",
+            "start": 81.863,
+            "end": 82.07
+          },
+          {
+            "word": "le ",
+            "start": 82.07,
+            "end": 82.274
+          },
+          {
+            "word": "renard ",
+            "start": 82.274,
+            "end": 82.519
+          },
+          {
+            "word": "passer",
+            "start": 82.519,
+            "end": 83.254
+          }
+        ]
+      },
+      {
+        "verseStart": 83.254,
+        "verseEnd": 85.179,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 83.254,
+            "end": 83.5
+          },
+          {
+            "word": "vu ",
+            "start": 83.5,
+            "end": 83.626
+          },
+          {
+            "word": "le ",
+            "start": 83.626,
+            "end": 83.748
+          },
+          {
+            "word": "loup, ",
+            "start": 83.748,
+            "end": 83.992
+          },
+          {
+            "word": "le ",
+            "start": 83.992,
+            "end": 84.237
+          },
+          {
+            "word": "renard, ",
+            "start": 84.237,
+            "end": 84.44
+          },
+          {
+            "word": "le ",
+            "start": 84.44,
+            "end": 84.687
+          },
+          {
+            "word": "lièvre)",
+            "start": 84.687,
+            "end": 85.179
+          }
+        ]
+      },
+      {
+        "verseStart": 85.179,
+        "verseEnd": 86.977,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 85.179,
+            "end": 85.383
+          },
+          {
+            "word": "vu ",
+            "start": 85.383,
+            "end": 85.549
+          },
+          {
+            "word": "le ",
+            "start": 85.549,
+            "end": 85.63
+          },
+          {
+            "word": "loup, ",
+            "start": 85.63,
+            "end": 85.875
+          },
+          {
+            "word": "le ",
+            "start": 85.875,
+            "end": 86.119
+          },
+          {
+            "word": "renard ",
+            "start": 86.119,
+            "end": 86.323
+          },
+          {
+            "word": "passer)",
+            "start": 86.323,
+            "end": 86.977
+          }
+        ]
+      },
+      {
+        "verseStart": 86.977,
+        "verseEnd": 88.859,
+        "words": [
+          {
+            "word": "Avec ",
+            "start": 86.977,
+            "end": 87.22
+          },
+          {
+            "word": "son ",
+            "start": 87.22,
+            "end": 87.466
+          },
+          {
+            "word": "beau ",
+            "start": 87.466,
+            "end": 87.715
+          },
+          {
+            "word": "fusil ",
+            "start": 87.715,
+            "end": 88.165
+          },
+          {
+            "word": "d'argent",
+            "start": 88.165,
+            "end": 88.859
+          }
+        ]
+      },
+      {
+        "verseStart": 88.859,
+        "verseEnd": 90.741,
+        "words": [
+          {
+            "word": "Ferme ",
+            "start": 88.859,
+            "end": 89.102
+          },
+          {
+            "word": "donc ",
+            "start": 89.102,
+            "end": 89.226
+          },
+          {
+            "word": "ta ",
+            "start": 89.226,
+            "end": 89.349
+          },
+          {
+            "word": "boite, ",
+            "start": 89.349,
+            "end": 89.556
+          },
+          {
+            "word": "laisse-",
+            "start": 89.556,
+            "end": 89.801
+          },
+          {
+            "word": "moé ",
+            "start": 89.801,
+            "end": 90.045
+          },
+          {
+            "word": "donc ",
+            "start": 90.045,
+            "end": 90.25
+          },
+          {
+            "word": "chanter",
+            "start": 90.25,
+            "end": 90.741
+          }
+        ]
+      },
+      {
+        "verseStart": 90.741,
+        "verseEnd": 92.671,
+        "words": [
+          {
+            "word": "(Avec ",
+            "start": 90.741,
+            "end": 90.987
+          },
+          {
+            "word": "son ",
+            "start": 90.987,
+            "end": 91.232
+          },
+          {
+            "word": "beau ",
+            "start": 91.232,
+            "end": 91.477
+          },
+          {
+            "word": "fusil ",
+            "start": 91.477,
+            "end": 91.93
+          },
+          {
+            "word": "d'argent)",
+            "start": 91.93,
+            "end": 92.671
+          }
+        ]
+      },
+      {
+        "verseStart": 92.671,
+        "verseEnd": 94.51,
+        "words": [
+          {
+            "word": "(Ferme ",
+            "start": 92.671,
+            "end": 92.916
+          },
+          {
+            "word": "donc ",
+            "start": 92.916,
+            "end": 93.04
+          },
+          {
+            "word": "ta ",
+            "start": 93.04,
+            "end": 93.162
+          },
+          {
+            "word": "boite, ",
+            "start": 93.162,
+            "end": 93.367
+          },
+          {
+            "word": "laisse-",
+            "start": 93.367,
+            "end": 93.613
+          },
+          {
+            "word": "moé ",
+            "start": 93.613,
+            "end": 93.818
+          },
+          {
+            "word": "donc ",
+            "start": 93.818,
+            "end": 94.061
+          },
+          {
+            "word": "chanter)",
+            "start": 94.061,
+            "end": 94.51
+          }
+        ]
+      },
+      {
+        "verseStart": 94.51,
+        "verseEnd": 96.191,
+        "words": [
+          {
+            "word": "Visa ",
+            "start": 94.51,
+            "end": 94.754
+          },
+          {
+            "word": "le ",
+            "start": 94.754,
+            "end": 95
+          },
+          {
+            "word": "noir, ",
+            "start": 95,
+            "end": 95.246
+          },
+          {
+            "word": "tua ",
+            "start": 95.246,
+            "end": 95.7
+          },
+          {
+            "word": "le ",
+            "start": 95.7,
+            "end": 95.945
+          },
+          {
+            "word": "blanc",
+            "start": 95.945,
+            "end": 96.191
+          }
+        ]
+      },
+      {
+        "verseStart": 96.191,
+        "verseEnd": 97.586,
+        "words": [
+          {
+            "word": "Touchez ",
+            "start": 96.191,
+            "end": 96.397
+          },
+          {
+            "word": "haut, ",
+            "start": 96.397,
+            "end": 96.687
+          },
+          {
+            "word": "touchez ",
+            "start": 96.687,
+            "end": 96.931
+          },
+          {
+            "word": "bas, ",
+            "start": 96.931,
+            "end": 97.137
+          },
+          {
+            "word": "touchez-",
+            "start": 97.137,
+            "end": 97.34
+          },
+          {
+            "word": "y",
+            "start": 97.34,
+            "end": 97.586
+          }
+        ]
+      },
+      {
+        "verseStart": 97.586,
+        "verseEnd": 99.226,
+        "words": [
+          {
+            "word": "Touchez-",
+            "start": 97.586,
+            "end": 97.709
+          },
+          {
+            "word": "y ",
+            "start": 97.709,
+            "end": 97.832
+          },
+          {
+            "word": "pas, ",
+            "start": 97.832,
+            "end": 98.081
+          },
+          {
+            "word": "laissez ",
+            "start": 98.081,
+            "end": 98.244
+          },
+          {
+            "word": "ça ",
+            "start": 98.244,
+            "end": 98.407
+          },
+          {
+            "word": "là, ",
+            "start": 98.407,
+            "end": 98.572
+          },
+          {
+            "word": "maman ",
+            "start": 98.572,
+            "end": 98.694
+          },
+          {
+            "word": "veut ",
+            "start": 98.694,
+            "end": 98.817
+          },
+          {
+            "word": "pas",
+            "start": 98.817,
+            "end": 99.226
+          }
+        ]
+      },
+      {
+        "verseStart": 99.226,
+        "verseEnd": 101.074,
+        "words": [
+          {
+            "word": "J'la ",
+            "start": 99.226,
+            "end": 99.349
+          },
+          {
+            "word": "dévire ",
+            "start": 99.349,
+            "end": 99.431
+          },
+          {
+            "word": "de ",
+            "start": 99.431,
+            "end": 99.555
+          },
+          {
+            "word": "bord ",
+            "start": 99.555,
+            "end": 99.677
+          },
+          {
+            "word": "pis ",
+            "start": 99.677,
+            "end": 99.964
+          },
+          {
+            "word": "j'y ",
+            "start": 99.964,
+            "end": 100.13
+          },
+          {
+            "word": "touche ",
+            "start": 100.13,
+            "end": 100.377
+          },
+          {
+            "word": "encore",
+            "start": 100.377,
+            "end": 101.074
+          }
+        ]
+      },
+      {
+        "verseStart": 101.074,
+        "verseEnd": 102.995,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 101.074,
+            "end": 101.32
+          },
+          {
+            "word": "vu ",
+            "start": 101.32,
+            "end": 101.442
+          },
+          {
+            "word": "le ",
+            "start": 101.442,
+            "end": 101.564
+          },
+          {
+            "word": "loup, ",
+            "start": 101.564,
+            "end": 101.769
+          },
+          {
+            "word": "le ",
+            "start": 101.769,
+            "end": 101.891
+          },
+          {
+            "word": "renard, ",
+            "start": 101.891,
+            "end": 102.013
+          },
+          {
+            "word": "le ",
+            "start": 102.013,
+            "end": 102.502
+          },
+          {
+            "word": "lièvre",
+            "start": 102.502,
+            "end": 102.995
+          }
+        ]
+      },
+      {
+        "verseStart": 102.995,
+        "verseEnd": 104.853,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 102.995,
+            "end": 103.2
+          },
+          {
+            "word": "vu ",
+            "start": 103.2,
+            "end": 103.324
+          },
+          {
+            "word": "le ",
+            "start": 103.324,
+            "end": 103.445
+          },
+          {
+            "word": "loup, ",
+            "start": 103.445,
+            "end": 103.691
+          },
+          {
+            "word": "le ",
+            "start": 103.691,
+            "end": 103.939
+          },
+          {
+            "word": "renard ",
+            "start": 103.939,
+            "end": 104.146
+          },
+          {
+            "word": "passer",
+            "start": 104.146,
+            "end": 104.853
+          }
+        ]
+      },
+      {
+        "verseStart": 104.853,
+        "verseEnd": 106.735,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 104.853,
+            "end": 105.097
+          },
+          {
+            "word": "vu ",
+            "start": 105.097,
+            "end": 105.221
+          },
+          {
+            "word": "le ",
+            "start": 105.221,
+            "end": 105.344
+          },
+          {
+            "word": "loup, ",
+            "start": 105.344,
+            "end": 105.588
+          },
+          {
+            "word": "le ",
+            "start": 105.588,
+            "end": 105.875
+          },
+          {
+            "word": "renard, ",
+            "start": 105.875,
+            "end": 106.119
+          },
+          {
+            "word": "le ",
+            "start": 106.119,
+            "end": 106.322
+          },
+          {
+            "word": "lièvre)",
+            "start": 106.322,
+            "end": 106.735
+          }
+        ]
+      },
+      {
+        "verseStart": 106.735,
+        "verseEnd": 109.886,
+        "words": [
+          {
+            "word": "(J'ai ",
+            "start": 106.735,
+            "end": 106.985
+          },
+          {
+            "word": "vu ",
+            "start": 106.985,
+            "end": 107.112
+          },
+          {
+            "word": "le ",
+            "start": 107.112,
+            "end": 107.234
+          },
+          {
+            "word": "loup, ",
+            "start": 107.234,
+            "end": 107.438
+          },
+          {
+            "word": "le ",
+            "start": 107.438,
+            "end": 107.683
+          },
+          {
+            "word": "renard ",
+            "start": 107.683,
+            "end": 107.886
+          },
+          {
+            "word": "passer)",
+            "start": 107.886,
+            "end": 0
+          }
+        ]
+      }
+    ]
+  },
+  "LUCKHAOS - É a União Flasco.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 11.18,
+        "verseEnd": 12.118,
+        "words": [
+          {
+            "word": "ちゃ ",
+            "start": 11.18,
+            "end": 11.303
+          },
+          {
+            "word": "ちゃ",
+            "start": 11.303,
+            "end": 11.425
+          },
+          {
+            "word": "っと ",
+            "start": 11.425,
+            "end": 11.547
+          },
+          {
+            "word": "や",
+            "start": 11.547,
+            "end": 11.629
+          },
+          {
+            "word": "ろか",
+            "start": 11.629,
+            "end": 12.118
+          }
+        ],
+        "speaker": "<i>Girl:</i>"
+      },
+      {
+        "verseStart": 12.118,
+        "verseEnd": 14.208,
+        "words": [
+          {
+            "word": "É ",
+            "start": 12.118,
+            "end": 12.24
+          },
+          {
+            "word": "a ",
+            "start": 12.24,
+            "end": 12.363
+          },
+          {
+            "word": "união ",
+            "start": 12.363,
+            "end": 12.611
+          },
+          {
+            "word": "Flasco, ",
+            "start": 12.611,
+            "end": 13.182
+          },
+          {
+            "word": "mano, ",
+            "start": 13.182,
+            "end": 13.308
+          },
+          {
+            "word": "é ",
+            "start": 13.308,
+            "end": 13.434
+          },
+          {
+            "word": "sem ",
+            "start": 13.434,
+            "end": 13.597
+          },
+          {
+            "word": "caô",
+            "start": 13.597,
+            "end": 14.208
+          }
+        ]
+      },
+      {
+        "verseStart": 14.208,
+        "verseEnd": 15.714,
+        "words": [
+          {
+            "word": "Batendo ",
+            "start": 14.208,
+            "end": 14.33
+          },
+          {
+            "word": "punheta ",
+            "start": 14.33,
+            "end": 14.98
+          },
+          {
+            "word": "com ",
+            "start": 14.98,
+            "end": 15.103
+          },
+          {
+            "word": "pau ",
+            "start": 15.103,
+            "end": 15.306
+          },
+          {
+            "word": "no ",
+            "start": 15.306,
+            "end": 15.469
+          },
+          {
+            "word": "ventilador",
+            "start": 15.469,
+            "end": 15.714
+          }
+        ]
+      },
+      {
+        "verseStart": 15.714,
+        "verseEnd": 17.757,
+        "words": [
+          {
+            "word": "E ",
+            "start": 15.714,
+            "end": 15.877
+          },
+          {
+            "word": "se ",
+            "start": 15.877,
+            "end": 15.999
+          },
+          {
+            "word": "essa ",
+            "start": 15.999,
+            "end": 16.121
+          },
+          {
+            "word": "mina ",
+            "start": 16.121,
+            "end": 16.286
+          },
+          {
+            "word": "falar ",
+            "start": 16.286,
+            "end": 16.449
+          },
+          {
+            "word": "merda, ",
+            "start": 16.449,
+            "end": 16.694
+          },
+          {
+            "word": "vai ",
+            "start": 16.694,
+            "end": 16.898
+          },
+          {
+            "word": "ficar ",
+            "start": 16.898,
+            "end": 17.102
+          },
+          {
+            "word": "sem ",
+            "start": 17.102,
+            "end": 17.309
+          },
+          {
+            "word": "cabelo",
+            "start": 17.309,
+            "end": 17.757
+          }
+        ]
+      },
+      {
+        "verseStart": 17.757,
+        "verseEnd": 19.775,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 17.757,
+            "end": 17.882
+          },
+          {
+            "word": "vou ",
+            "start": 17.882,
+            "end": 18.009
+          },
+          {
+            "word": "raspar ",
+            "start": 18.009,
+            "end": 18.131
+          },
+          {
+            "word": "a ",
+            "start": 18.131,
+            "end": 18.254
+          },
+          {
+            "word": "cabeça ",
+            "start": 18.254,
+            "end": 18.457
+          },
+          {
+            "word": "dela, ",
+            "start": 18.457,
+            "end": 18.624
+          },
+          {
+            "word": "sem ",
+            "start": 18.624,
+            "end": 18.831
+          },
+          {
+            "word": "usar ",
+            "start": 18.831,
+            "end": 19.118
+          },
+          {
+            "word": "barbeador",
+            "start": 19.118,
+            "end": 19.775
+          }
+        ]
+      },
+      {
+        "verseStart": 19.775,
+        "verseEnd": 22.269,
+        "words": [
+          {
+            "word": "É ",
+            "start": 19.775,
+            "end": 19.898
+          },
+          {
+            "word": "a ",
+            "start": 19.898,
+            "end": 20.02
+          },
+          {
+            "word": "união ",
+            "start": 20.02,
+            "end": 20.224
+          },
+          {
+            "word": "Flasco, ",
+            "start": 20.224,
+            "end": 21.252
+          },
+          {
+            "word": "Câmera ",
+            "start": 21.252,
+            "end": 21.659
+          },
+          {
+            "word": "Privê",
+            "start": 21.659,
+            "end": 22.269
+          }
+        ]
+      },
+      {
+        "verseStart": 22.269,
+        "verseEnd": 23.834,
+        "words": [
+          {
+            "word": "Tu ",
+            "start": 22.269,
+            "end": 22.392
+          },
+          {
+            "word": "responde ",
+            "start": 22.392,
+            "end": 22.515
+          },
+          {
+            "word": "o ",
+            "start": 22.515,
+            "end": 22.636
+          },
+          {
+            "word": "chat ",
+            "start": 22.636,
+            "end": 22.759
+          },
+          {
+            "word": "enquanto ",
+            "start": 22.759,
+            "end": 23.01
+          },
+          {
+            "word": "eu ",
+            "start": 23.01,
+            "end": 23.256
+          },
+          {
+            "word": "meto ",
+            "start": 23.256,
+            "end": 23.504
+          },
+          {
+            "word": "ni ",
+            "start": 23.504,
+            "end": 23.708
+          },
+          {
+            "word": "você",
+            "start": 23.708,
+            "end": 23.834
+          }
+        ]
+      },
+      {
+        "verseStart": 23.834,
+        "verseEnd": 25.838,
+        "words": [
+          {
+            "word": "Magé ",
+            "start": 23.834,
+            "end": 23.956
+          },
+          {
+            "word": "é ",
+            "start": 23.956,
+            "end": 24.083
+          },
+          {
+            "word": "do ",
+            "start": 24.083,
+            "end": 24.246
+          },
+          {
+            "word": "lado ",
+            "start": 24.246,
+            "end": 24.368
+          },
+          {
+            "word": "da ",
+            "start": 24.368,
+            "end": 24.49
+          },
+          {
+            "word": "minha ",
+            "start": 24.49,
+            "end": 24.612
+          },
+          {
+            "word": "casa, ",
+            "start": 24.612,
+            "end": 24.694
+          },
+          {
+            "word": "nessa ",
+            "start": 24.694,
+            "end": 24.859
+          },
+          {
+            "word": "porra ",
+            "start": 24.859,
+            "end": 25.026
+          },
+          {
+            "word": "caiu ",
+            "start": 25.026,
+            "end": 25.392
+          },
+          {
+            "word": "ET",
+            "start": 25.392,
+            "end": 25.838
+          }
+        ]
+      },
+      {
+        "verseStart": 25.838,
+        "verseEnd": 27.837,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 25.838,
+            "end": 25.96
+          },
+          {
+            "word": "eles ",
+            "start": 25.96,
+            "end": 26.082
+          },
+          {
+            "word": "brotar ",
+            "start": 26.082,
+            "end": 26.204
+          },
+          {
+            "word": "chei' ",
+            "start": 26.204,
+            "end": 26.326
+          },
+          {
+            "word": "de ",
+            "start": 26.326,
+            "end": 26.49
+          },
+          {
+            "word": "cutcharra, ",
+            "start": 26.49,
+            "end": 26.615
+          },
+          {
+            "word": "eu ",
+            "start": 26.615,
+            "end": 26.818
+          },
+          {
+            "word": "como ",
+            "start": 26.818,
+            "end": 27.023
+          },
+          {
+            "word": "eles ",
+            "start": 27.023,
+            "end": 27.268
+          },
+          {
+            "word": "e ",
+            "start": 27.268,
+            "end": 27.512
+          },
+          {
+            "word": "você",
+            "start": 27.512,
+            "end": 27.837
+          }
+        ]
+      },
+      {
+        "verseStart": 27.837,
+        "verseEnd": 30.366,
+        "words": [
+          {
+            "word": "É ",
+            "start": 27.837,
+            "end": 27.961
+          },
+          {
+            "word": "a ",
+            "start": 27.961,
+            "end": 28.084
+          },
+          {
+            "word": "união ",
+            "start": 28.084,
+            "end": 28.287
+          },
+          {
+            "word": "Flasco, ",
+            "start": 28.287,
+            "end": 29.308
+          },
+          {
+            "word": "vai ",
+            "start": 29.308,
+            "end": 29.511
+          },
+          {
+            "word": "tomar ",
+            "start": 29.511,
+            "end": 29.633
+          },
+          {
+            "word": "no ",
+            "start": 29.633,
+            "end": 29.795
+          },
+          {
+            "word": "cu",
+            "start": 29.795,
+            "end": 30.366
+          }
+        ]
+      },
+      {
+        "verseStart": 30.366,
+        "verseEnd": 31.601,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 30.366,
+            "end": 30.488
+          },
+          {
+            "word": "tu ",
+            "start": 30.488,
+            "end": 30.61
+          },
+          {
+            "word": "é ",
+            "start": 30.61,
+            "end": 31.026
+          },
+          {
+            "word": "Fluminense, ",
+            "start": 31.026,
+            "end": 31.149
+          },
+          {
+            "word": "mano, ",
+            "start": 31.149,
+            "end": 31.23
+          },
+          {
+            "word": "chupa ",
+            "start": 31.23,
+            "end": 31.351
+          },
+          {
+            "word": "meu ",
+            "start": 31.351,
+            "end": 31.475
+          },
+          {
+            "word": "piru",
+            "start": 31.475,
+            "end": 31.601
+          }
+        ]
+      },
+      {
+        "verseStart": 31.601,
+        "verseEnd": 33.925,
+        "words": [
+          {
+            "word": "Só ",
+            "start": 31.601,
+            "end": 31.708
+          },
+          {
+            "word": "tem ",
+            "start": 31.708,
+            "end": 31.834
+          },
+          {
+            "word": "maluco ",
+            "start": 31.834,
+            "end": 32.002
+          },
+          {
+            "word": "abafa-",
+            "start": 32.002,
+            "end": 32.208
+          },
+          {
+            "word": "crack ",
+            "start": 32.208,
+            "end": 32.86
+          },
+          {
+            "word": "nessa ",
+            "start": 32.86,
+            "end": 33.022
+          },
+          {
+            "word": "porra ",
+            "start": 33.022,
+            "end": 33.476
+          },
+          {
+            "word": "dessa ",
+            "start": 33.476,
+            "end": 33.639
+          },
+          {
+            "word": "equipe",
+            "start": 33.639,
+            "end": 33.925
+          }
+        ]
+      },
+      {
+        "verseStart": 33.925,
+        "verseEnd": 36.057,
+        "words": [
+          {
+            "word": "É ",
+            "start": 33.925,
+            "end": 34.09
+          },
+          {
+            "word": "o ",
+            "start": 34.09,
+            "end": 34.253
+          },
+          {
+            "word": "trem-",
+            "start": 34.253,
+            "end": 34.335
+          },
+          {
+            "word": "bala ",
+            "start": 34.335,
+            "end": 34.539
+          },
+          {
+            "word": "da ",
+            "start": 34.539,
+            "end": 34.706
+          },
+          {
+            "word": "colina ",
+            "start": 34.706,
+            "end": 34.91
+          },
+          {
+            "word": "carregando ",
+            "start": 34.91,
+            "end": 35.444
+          },
+          {
+            "word": "AR-",
+            "start": 35.444,
+            "end": 35.772
+          },
+          {
+            "word": "15",
+            "start": 35.772,
+            "end": 36.057
+          }
+        ]
+      },
+      {
+        "verseStart": 36.057,
+        "verseEnd": 38.308,
+        "words": [
+          {
+            "word": "É ",
+            "start": 36.057,
+            "end": 36.18
+          },
+          {
+            "word": "a ",
+            "start": 36.18,
+            "end": 36.304
+          },
+          {
+            "word": "união ",
+            "start": 36.304,
+            "end": 36.47
+          },
+          {
+            "word": "Flasco, ",
+            "start": 36.47,
+            "end": 37.082
+          },
+          {
+            "word": "nova ",
+            "start": 37.082,
+            "end": 37.372
+          },
+          {
+            "word": "Ordem ",
+            "start": 37.372,
+            "end": 37.616
+          },
+          {
+            "word": "Mundial",
+            "start": 37.616,
+            "end": 38.308
+          }
+        ]
+      },
+      {
+        "verseStart": 38.308,
+        "verseEnd": 40.069,
+        "words": [
+          {
+            "word": "Os ",
+            "start": 38.308,
+            "end": 38.553
+          },
+          {
+            "word": "botafoguense ",
+            "start": 38.553,
+            "end": 38.883
+          },
+          {
+            "word": "tudo ",
+            "start": 38.883,
+            "end": 39.213
+          },
+          {
+            "word": "mamando ",
+            "start": 39.213,
+            "end": 39.458
+          },
+          {
+            "word": "o ",
+            "start": 39.458,
+            "end": 39.661
+          },
+          {
+            "word": "meu ",
+            "start": 39.661,
+            "end": 39.865
+          },
+          {
+            "word": "pau",
+            "start": 39.865,
+            "end": 40.069
+          }
+        ]
+      },
+      {
+        "verseStart": 40.069,
+        "verseEnd": 42.08,
+        "words": [
+          {
+            "word": "E, ",
+            "start": 40.069,
+            "end": 40.232
+          },
+          {
+            "word": "pra ",
+            "start": 40.232,
+            "end": 40.355
+          },
+          {
+            "word": "tu ",
+            "start": 40.355,
+            "end": 40.478
+          },
+          {
+            "word": "namorar ",
+            "start": 40.478,
+            "end": 40.643
+          },
+          {
+            "word": "comigo, ",
+            "start": 40.643,
+            "end": 41.013
+          },
+          {
+            "word": "vai ",
+            "start": 41.013,
+            "end": 41.177
+          },
+          {
+            "word": "ter ",
+            "start": 41.177,
+            "end": 41.341
+          },
+          {
+            "word": "que ",
+            "start": 41.341,
+            "end": 41.504
+          },
+          {
+            "word": "fazer ",
+            "start": 41.504,
+            "end": 41.708
+          },
+          {
+            "word": "anal",
+            "start": 41.708,
+            "end": 42.08
+          }
+        ]
+      },
+      {
+        "verseStart": 42.08,
+        "verseEnd": 44.018,
+        "words": [
+          {
+            "word": "E, ",
+            "start": 42.08,
+            "end": 42.201
+          },
+          {
+            "word": "se ",
+            "start": 42.201,
+            "end": 42.369
+          },
+          {
+            "word": "tiver ",
+            "start": 42.369,
+            "end": 42.491
+          },
+          {
+            "word": "dor ",
+            "start": 42.491,
+            "end": 42.697
+          },
+          {
+            "word": "de ",
+            "start": 42.697,
+            "end": 42.819
+          },
+          {
+            "word": "barriga, ",
+            "start": 42.819,
+            "end": 42.941
+          },
+          {
+            "word": "tu ",
+            "start": 42.941,
+            "end": 43.103
+          },
+          {
+            "word": "vai ",
+            "start": 43.103,
+            "end": 43.266
+          },
+          {
+            "word": "cagar ",
+            "start": 43.266,
+            "end": 43.434
+          },
+          {
+            "word": "no ",
+            "start": 43.434,
+            "end": 43.683
+          },
+          {
+            "word": "meu ",
+            "start": 43.683,
+            "end": 43.848
+          },
+          {
+            "word": "pau",
+            "start": 43.848,
+            "end": 44.018
+          }
+        ]
+      },
+      {
+        "verseStart": 44.018,
+        "verseEnd": 46.514,
+        "words": [
+          {
+            "word": "É ",
+            "start": 44.018,
+            "end": 44.181
+          },
+          {
+            "word": "a ",
+            "start": 44.181,
+            "end": 44.347
+          },
+          {
+            "word": "união ",
+            "start": 44.347,
+            "end": 44.515
+          },
+          {
+            "word": "Flasco, ",
+            "start": 44.515,
+            "end": 45.494
+          },
+          {
+            "word": "bota ",
+            "start": 45.494,
+            "end": 45.739
+          },
+          {
+            "word": "o ",
+            "start": 45.739,
+            "end": 45.943
+          },
+          {
+            "word": "Gabigol",
+            "start": 45.943,
+            "end": 46.514
+          }
+        ]
+      },
+      {
+        "verseStart": 46.514,
+        "verseEnd": 48.086,
+        "words": [
+          {
+            "word": "Ribamar ",
+            "start": 46.514,
+            "end": 46.885
+          },
+          {
+            "word": "cheirado, ",
+            "start": 46.885,
+            "end": 47.215
+          },
+          {
+            "word": "nesse ",
+            "start": 47.215,
+            "end": 47.463
+          },
+          {
+            "word": "jogo, ",
+            "start": 47.463,
+            "end": 47.708
+          },
+          {
+            "word": "acelerou",
+            "start": 47.708,
+            "end": 48.086
+          }
+        ]
+      },
+      {
+        "verseStart": 48.086,
+        "verseEnd": 50.144,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 48.086,
+            "end": 48.251
+          },
+          {
+            "word": "tem ",
+            "start": 48.251,
+            "end": 48.373
+          },
+          {
+            "word": "traveco ",
+            "start": 48.373,
+            "end": 48.501
+          },
+          {
+            "word": "nessa ",
+            "start": 48.501,
+            "end": 48.668
+          },
+          {
+            "word": "festa, ",
+            "start": 48.668,
+            "end": 49.12
+          },
+          {
+            "word": "por ",
+            "start": 49.12,
+            "end": 49.284
+          },
+          {
+            "word": "que ",
+            "start": 49.284,
+            "end": 49.407
+          },
+          {
+            "word": "ninguém ",
+            "start": 49.407,
+            "end": 49.733
+          },
+          {
+            "word": "me ",
+            "start": 49.733,
+            "end": 49.937
+          },
+          {
+            "word": "avisou?",
+            "start": 49.937,
+            "end": 50.144
+          }
+        ]
+      },
+      {
+        "verseStart": 50.144,
+        "verseEnd": 51.984,
+        "words": [
+          {
+            "word": "O ",
+            "start": 50.144,
+            "end": 50.267
+          },
+          {
+            "word": "meu ",
+            "start": 50.267,
+            "end": 50.43
+          },
+          {
+            "word": "flow ",
+            "start": 50.43,
+            "end": 50.592
+          },
+          {
+            "word": "tá ",
+            "start": 50.592,
+            "end": 50.714
+          },
+          {
+            "word": "tipo ",
+            "start": 50.714,
+            "end": 50.796
+          },
+          {
+            "word": "Ronaldo, ",
+            "start": 50.796,
+            "end": 50.919
+          },
+          {
+            "word": "se ",
+            "start": 50.919,
+            "end": 51.122
+          },
+          {
+            "word": "tem ",
+            "start": 51.122,
+            "end": 51.245
+          },
+          {
+            "word": "bunda, ",
+            "start": 51.245,
+            "end": 51.448
+          },
+          {
+            "word": "eu ",
+            "start": 51.448,
+            "end": 51.613
+          },
+          {
+            "word": "meto ",
+            "start": 51.613,
+            "end": 51.821
+          },
+          {
+            "word": "gol",
+            "start": 51.821,
+            "end": 51.984
+          }
+        ]
+      },
+      {
+        "verseStart": 51.984,
+        "verseEnd": 54.572,
+        "words": [
+          {
+            "word": "É ",
+            "start": 51.984,
+            "end": 52.323
+          },
+          {
+            "word": "a ",
+            "start": 52.323,
+            "end": 52.527
+          },
+          {
+            "word": "união ",
+            "start": 52.527,
+            "end": 52.693
+          },
+          {
+            "word": "Flasco, ",
+            "start": 52.693,
+            "end": 53.51
+          },
+          {
+            "word": "puta ",
+            "start": 53.51,
+            "end": 53.795
+          },
+          {
+            "word": "que ",
+            "start": 53.795,
+            "end": 54.04
+          },
+          {
+            "word": "pariu",
+            "start": 54.04,
+            "end": 54.572
+          }
+        ]
+      },
+      {
+        "verseStart": 54.572,
+        "verseEnd": 56.245,
+        "words": [
+          {
+            "word": "Tua ",
+            "start": 54.572,
+            "end": 54.695
+          },
+          {
+            "word": "boca ",
+            "start": 54.695,
+            "end": 54.818
+          },
+          {
+            "word": "é ",
+            "start": 54.818,
+            "end": 54.982
+          },
+          {
+            "word": "um ",
+            "start": 54.982,
+            "end": 55.104
+          },
+          {
+            "word": "colete ",
+            "start": 55.104,
+            "end": 55.266
+          },
+          {
+            "word": "e ",
+            "start": 55.266,
+            "end": 55.43
+          },
+          {
+            "word": "o ",
+            "start": 55.43,
+            "end": 55.593
+          },
+          {
+            "word": "meu ",
+            "start": 55.593,
+            "end": 55.674
+          },
+          {
+            "word": "pau ",
+            "start": 55.674,
+            "end": 55.797
+          },
+          {
+            "word": "é ",
+            "start": 55.797,
+            "end": 55.96
+          },
+          {
+            "word": "um ",
+            "start": 55.96,
+            "end": 56.123
+          },
+          {
+            "word": "fuzil",
+            "start": 56.123,
+            "end": 56.245
+          }
+        ]
+      },
+      {
+        "verseStart": 56.245,
+        "verseEnd": 58.124,
+        "words": [
+          {
+            "word": "Não ",
+            "start": 56.245,
+            "end": 56.368
+          },
+          {
+            "word": "vem ",
+            "start": 56.368,
+            "end": 56.49
+          },
+          {
+            "word": "falar ",
+            "start": 56.49,
+            "end": 56.616
+          },
+          {
+            "word": "Inglês ",
+            "start": 56.616,
+            "end": 56.738
+          },
+          {
+            "word": "pra ",
+            "start": 56.738,
+            "end": 56.861
+          },
+          {
+            "word": "mim, ",
+            "start": 56.861,
+            "end": 56.983
+          },
+          {
+            "word": "meu ",
+            "start": 56.983,
+            "end": 57.105
+          },
+          {
+            "word": "mano, ",
+            "start": 57.105,
+            "end": 57.269
+          },
+          {
+            "word": "eu ",
+            "start": 57.269,
+            "end": 57.432
+          },
+          {
+            "word": "moro ",
+            "start": 57.432,
+            "end": 57.676
+          },
+          {
+            "word": "no ",
+            "start": 57.676,
+            "end": 57.921
+          },
+          {
+            "word": "Brasil",
+            "start": 57.921,
+            "end": 58.124
+          }
+        ]
+      },
+      {
+        "verseStart": 58.124,
+        "verseEnd": 60.17,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 58.124,
+            "end": 58.287
+          },
+          {
+            "word": "tô ",
+            "start": 58.287,
+            "end": 58.369
+          },
+          {
+            "word": "embrazado ",
+            "start": 58.369,
+            "end": 58.617
+          },
+          {
+            "word": "de ",
+            "start": 58.617,
+            "end": 58.78
+          },
+          {
+            "word": "Skol ",
+            "start": 58.78,
+            "end": 58.944
+          },
+          {
+            "word": "com ",
+            "start": 58.944,
+            "end": 59.147
+          },
+          {
+            "word": "funk ",
+            "start": 59.147,
+            "end": 59.31
+          },
+          {
+            "word": "do ",
+            "start": 59.31,
+            "end": 59.513
+          },
+          {
+            "word": "Buffalo ",
+            "start": 59.513,
+            "end": 59.677
+          },
+          {
+            "word": "Bill",
+            "start": 59.677,
+            "end": 60.17
+          }
+        ]
+      },
+      {
+        "verseStart": 60.17,
+        "verseEnd": 62.659,
+        "words": [
+          {
+            "word": "É ",
+            "start": 60.17,
+            "end": 60.332
+          },
+          {
+            "word": "a ",
+            "start": 60.332,
+            "end": 60.455
+          },
+          {
+            "word": "união ",
+            "start": 60.455,
+            "end": 60.62
+          },
+          {
+            "word": "Flasco, ",
+            "start": 60.62,
+            "end": 61.556
+          },
+          {
+            "word": "tô ",
+            "start": 61.556,
+            "end": 61.801
+          },
+          {
+            "word": "passando ",
+            "start": 61.801,
+            "end": 62.046
+          },
+          {
+            "word": "o ",
+            "start": 62.046,
+            "end": 62.128
+          },
+          {
+            "word": "aço",
+            "start": 62.128,
+            "end": 62.659
+          }
+        ]
+      },
+      {
+        "verseStart": 62.659,
+        "verseEnd": 64.29,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 62.659,
+            "end": 62.868
+          },
+          {
+            "word": "tá ",
+            "start": 62.868,
+            "end": 63.111
+          },
+          {
+            "word": "respirando, ",
+            "start": 63.111,
+            "end": 63.395
+          },
+          {
+            "word": "eu ",
+            "start": 63.395,
+            "end": 63.517
+          },
+          {
+            "word": "taco-",
+            "start": 63.517,
+            "end": 63.68
+          },
+          {
+            "word": "lhe ",
+            "start": 63.68,
+            "end": 63.883
+          },
+          {
+            "word": "o ",
+            "start": 63.883,
+            "end": 64.006
+          },
+          {
+            "word": "vapo ",
+            "start": 64.006,
+            "end": 64.128
+          },
+          {
+            "word": "vapo",
+            "start": 64.128,
+            "end": 64.29
+          }
+        ]
+      },
+      {
+        "verseStart": 64.29,
+        "verseEnd": 66.136,
+        "words": [
+          {
+            "word": "E, ",
+            "start": 64.29,
+            "end": 64.412
+          },
+          {
+            "word": "se ",
+            "start": 64.412,
+            "end": 64.577
+          },
+          {
+            "word": "não '",
+            "start": 64.577,
+            "end": 64.743
+          },
+          {
+            "word": "tiver ",
+            "start": 64.743,
+            "end": 64.866
+          },
+          {
+            "word": "respirando, ",
+            "start": 64.866,
+            "end": 64.947
+          },
+          {
+            "word": "eu ",
+            "start": 64.947,
+            "end": 65.112
+          },
+          {
+            "word": "vejo ",
+            "start": 65.112,
+            "end": 65.276
+          },
+          {
+            "word": "se ",
+            "start": 65.276,
+            "end": 65.439
+          },
+          {
+            "word": "o ",
+            "start": 65.439,
+            "end": 65.562
+          },
+          {
+            "word": "corpo ",
+            "start": 65.562,
+            "end": 65.684
+          },
+          {
+            "word": "tá ",
+            "start": 65.684,
+            "end": 65.848
+          },
+          {
+            "word": "quente",
+            "start": 65.848,
+            "end": 66.136
+          }
+        ]
+      },
+      {
+        "verseStart": 66.136,
+        "verseEnd": 68.075,
+        "words": [
+          {
+            "word": "Rima ",
+            "start": 66.136,
+            "end": 66.344
+          },
+          {
+            "word": "de ",
+            "start": 66.344,
+            "end": 66.634
+          },
+          {
+            "word": "necrofilia, ",
+            "start": 66.634,
+            "end": 67.251
+          },
+          {
+            "word": "um ",
+            "start": 67.251,
+            "end": 67.456
+          },
+          {
+            "word": "salve ",
+            "start": 67.456,
+            "end": 67.579
+          },
+          {
+            "word": "pro ",
+            "start": 67.579,
+            "end": 67.826
+          },
+          {
+            "word": "presidente",
+            "start": 67.826,
+            "end": 68.075
+          }
+        ]
+      },
+      {
+        "verseStart": 68.075,
+        "verseEnd": 70.542,
+        "words": [
+          {
+            "word": "É ",
+            "start": 68.075,
+            "end": 68.281
+          },
+          {
+            "word": "a ",
+            "start": 68.281,
+            "end": 68.404
+          },
+          {
+            "word": "união ",
+            "start": 68.404,
+            "end": 68.569
+          },
+          {
+            "word": "Flasco, ",
+            "start": 68.569,
+            "end": 69.434
+          },
+          {
+            "word": "RJ ",
+            "start": 69.434,
+            "end": 69.761
+          },
+          {
+            "word": "até ",
+            "start": 69.761,
+            "end": 69.925
+          },
+          {
+            "word": "o ",
+            "start": 69.925,
+            "end": 70.129
+          },
+          {
+            "word": "Sul",
+            "start": 70.129,
+            "end": 70.542
+          }
+        ]
+      },
+      {
+        "verseStart": 70.542,
+        "verseEnd": 72.265,
+        "words": [
+          {
+            "word": "E ",
+            "start": 70.542,
+            "end": 70.663
+          },
+          {
+            "word": "se ",
+            "start": 70.663,
+            "end": 70.786
+          },
+          {
+            "word": "me ",
+            "start": 70.786,
+            "end": 70.909
+          },
+          {
+            "word": "chamar ",
+            "start": 70.909,
+            "end": 70.99
+          },
+          {
+            "word": "de ",
+            "start": 70.99,
+            "end": 71.158
+          },
+          {
+            "word": "gaúcho, ",
+            "start": 71.158,
+            "end": 71.283
+          },
+          {
+            "word": "eu ",
+            "start": 71.283,
+            "end": 71.446
+          },
+          {
+            "word": "vou ",
+            "start": 71.446,
+            "end": 71.569
+          },
+          {
+            "word": "mandar ",
+            "start": 71.569,
+            "end": 71.692
+          },
+          {
+            "word": "tomar ",
+            "start": 71.692,
+            "end": 71.816
+          },
+          {
+            "word": "no ",
+            "start": 71.816,
+            "end": 72.143
+          },
+          {
+            "word": "cu",
+            "start": 72.143,
+            "end": 72.265
+          }
+        ]
+      },
+      {
+        "verseStart": 72.265,
+        "verseEnd": 74.267,
+        "words": [
+          {
+            "word": "Nóis ",
+            "start": 72.265,
+            "end": 72.428
+          },
+          {
+            "word": "vai ",
+            "start": 72.428,
+            "end": 72.509
+          },
+          {
+            "word": "forçar ",
+            "start": 72.509,
+            "end": 72.631
+          },
+          {
+            "word": "união ",
+            "start": 72.631,
+            "end": 72.754
+          },
+          {
+            "word": "Flasco ",
+            "start": 72.754,
+            "end": 73.288
+          },
+          {
+            "word": "até ",
+            "start": 73.288,
+            "end": 73.45
+          },
+          {
+            "word": "virar ",
+            "start": 73.45,
+            "end": 73.531
+          },
+          {
+            "word": "Caneta ",
+            "start": 73.531,
+            "end": 73.818
+          },
+          {
+            "word": "Azul",
+            "start": 73.818,
+            "end": 74.267
+          }
+        ]
+      },
+      {
+        "verseStart": 74.267,
+        "verseEnd": 76.358,
+        "words": [
+          {
+            "word": "E, ",
+            "start": 74.267,
+            "end": 74.349
+          },
+          {
+            "word": "se ",
+            "start": 74.349,
+            "end": 74.472
+          },
+          {
+            "word": "vier ",
+            "start": 74.472,
+            "end": 74.595
+          },
+          {
+            "word": "encher ",
+            "start": 74.595,
+            "end": 74.72
+          },
+          {
+            "word": "meu ",
+            "start": 74.72,
+            "end": 74.842
+          },
+          {
+            "word": "saco, ",
+            "start": 74.842,
+            "end": 75.209
+          },
+          {
+            "word": "eu ",
+            "start": 75.209,
+            "end": 75.373
+          },
+          {
+            "word": "vou ",
+            "start": 75.373,
+            "end": 75.495
+          },
+          {
+            "word": "floodar ",
+            "start": 75.495,
+            "end": 75.617
+          },
+          {
+            "word": "o ",
+            "start": 75.617,
+            "end": 75.744
+          },
+          {
+            "word": "Vampeta ",
+            "start": 75.744,
+            "end": 75.907
+          },
+          {
+            "word": "nu",
+            "start": 75.907,
+            "end": 76.358
+          }
+        ]
+      },
+      {
+        "verseStart": 76.358,
+        "verseEnd": 78.442,
+        "words": [
+          {
+            "word": "União ",
+            "start": 76.358,
+            "end": 76.502
+          },
+          {
+            "word": "Flasco, ",
+            "start": 76.502,
+            "end": 77.408
+          },
+          {
+            "word": "as ",
+            "start": 77.408,
+            "end": 77.652
+          },
+          {
+            "word": "k-",
+            "start": 77.652,
+            "end": 77.818
+          },
+          {
+            "word": "popper ",
+            "start": 77.818,
+            "end": 77.982
+          },
+          {
+            "word": "são ",
+            "start": 77.982,
+            "end": 78.108
+          },
+          {
+            "word": "bonita",
+            "start": 78.108,
+            "end": 78.442
+          }
+        ]
+      },
+      {
+        "verseStart": 78.442,
+        "verseEnd": 80.381,
+        "words": [
+          {
+            "word": "Pena ",
+            "start": 78.442,
+            "end": 78.565
+          },
+          {
+            "word": "que ",
+            "start": 78.565,
+            "end": 78.729
+          },
+          {
+            "word": "são ",
+            "start": 78.729,
+            "end": 78.893
+          },
+          {
+            "word": "muito ",
+            "start": 78.893,
+            "end": 79.182
+          },
+          {
+            "word": "chata, ",
+            "start": 79.182,
+            "end": 79.426
+          },
+          {
+            "word": "até ",
+            "start": 79.426,
+            "end": 79.548
+          },
+          {
+            "word": "parece ",
+            "start": 79.548,
+            "end": 79.678
+          },
+          {
+            "word": "com ",
+            "start": 79.678,
+            "end": 80.174
+          },
+          {
+            "word": "paulista",
+            "start": 80.174,
+            "end": 80.381
+          }
+        ]
+      },
+      {
+        "verseStart": 80.381,
+        "verseEnd": 82.441,
+        "words": [
+          {
+            "word": "Fica ",
+            "start": 80.381,
+            "end": 80.508
+          },
+          {
+            "word": "spammando ",
+            "start": 80.508,
+            "end": 80.711
+          },
+          {
+            "word": "fancam ",
+            "start": 80.711,
+            "end": 81.33
+          },
+          {
+            "word": "a ",
+            "start": 81.33,
+            "end": 81.493
+          },
+          {
+            "word": "cada ",
+            "start": 81.493,
+            "end": 81.661
+          },
+          {
+            "word": "post ",
+            "start": 81.661,
+            "end": 81.827
+          },
+          {
+            "word": "que ",
+            "start": 81.827,
+            "end": 82.031
+          },
+          {
+            "word": "tweeta",
+            "start": 82.031,
+            "end": 82.441
+          }
+        ]
+      },
+      {
+        "verseStart": 82.441,
+        "verseEnd": 84.396,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 82.441,
+            "end": 82.604
+          },
+          {
+            "word": "tô ",
+            "start": 82.604,
+            "end": 82.726
+          },
+          {
+            "word": "ficando ",
+            "start": 82.726,
+            "end": 82.849
+          },
+          {
+            "word": "muito ",
+            "start": 82.849,
+            "end": 82.976
+          },
+          {
+            "word": "puto ",
+            "start": 82.976,
+            "end": 83.343
+          },
+          {
+            "word": "e ",
+            "start": 83.343,
+            "end": 83.51
+          },
+          {
+            "word": "sua ",
+            "start": 83.51,
+            "end": 83.635
+          },
+          {
+            "word": "mãe ",
+            "start": 83.635,
+            "end": 83.758
+          },
+          {
+            "word": "chupa ",
+            "start": 83.758,
+            "end": 83.964
+          },
+          {
+            "word": "minha ",
+            "start": 83.964,
+            "end": 84.209
+          },
+          {
+            "word": "pica",
+            "start": 84.209,
+            "end": 84.396
+          }
+        ]
+      },
+      {
+        "verseStart": 84.396,
+        "verseEnd": 86.651,
+        "words": [
+          {
+            "word": "União ",
+            "start": 84.396,
+            "end": 84.687
+          },
+          {
+            "word": "Flasco, ",
+            "start": 84.687,
+            "end": 85.512
+          },
+          {
+            "word": "talarico ",
+            "start": 85.512,
+            "end": 85.918
+          },
+          {
+            "word": "desde ",
+            "start": 85.918,
+            "end": 86.243
+          },
+          {
+            "word": "cedo",
+            "start": 86.243,
+            "end": 86.651
+          }
+        ]
+      },
+      {
+        "verseStart": 86.651,
+        "verseEnd": 88.42,
+        "words": [
+          {
+            "word": "O ",
+            "start": 86.651,
+            "end": 86.774
+          },
+          {
+            "word": "que ",
+            "start": 86.774,
+            "end": 86.941
+          },
+          {
+            "word": "eu ",
+            "start": 86.941,
+            "end": 87.068
+          },
+          {
+            "word": "gosto ",
+            "start": 87.068,
+            "end": 87.189
+          },
+          {
+            "word": "da ",
+            "start": 87.189,
+            "end": 87.312
+          },
+          {
+            "word": "sua ",
+            "start": 87.312,
+            "end": 87.394
+          },
+          {
+            "word": "mina ",
+            "start": 87.394,
+            "end": 87.558
+          },
+          {
+            "word": "é ",
+            "start": 87.558,
+            "end": 87.68
+          },
+          {
+            "word": "que ",
+            "start": 87.68,
+            "end": 87.802
+          },
+          {
+            "word": "ela ",
+            "start": 87.802,
+            "end": 87.924
+          },
+          {
+            "word": "não ",
+            "start": 87.924,
+            "end": 88.045
+          },
+          {
+            "word": "tem ",
+            "start": 88.045,
+            "end": 88.167
+          },
+          {
+            "word": "muito ",
+            "start": 88.167,
+            "end": 88.297
+          },
+          {
+            "word": "peito",
+            "start": 88.297,
+            "end": 88.42
+          }
+        ]
+      },
+      {
+        "verseStart": 88.42,
+        "verseEnd": 90.436,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 88.42,
+            "end": 88.542
+          },
+          {
+            "word": "nunca ",
+            "start": 88.542,
+            "end": 88.706
+          },
+          {
+            "word": "te ",
+            "start": 88.706,
+            "end": 89.076
+          },
+          {
+            "word": "falei, ",
+            "start": 89.076,
+            "end": 89.323
+          },
+          {
+            "word": "porque ",
+            "start": 89.323,
+            "end": 89.49
+          },
+          {
+            "word": "tua ",
+            "start": 89.49,
+            "end": 89.616
+          },
+          {
+            "word": "irmã ",
+            "start": 89.616,
+            "end": 89.74
+          },
+          {
+            "word": "pediu ",
+            "start": 89.74,
+            "end": 89.944
+          },
+          {
+            "word": "segredo",
+            "start": 89.944,
+            "end": 90.436
+          }
+        ]
+      },
+      {
+        "verseStart": 90.436,
+        "verseEnd": 92.534,
+        "words": [
+          {
+            "word": "Mas ",
+            "start": 90.436,
+            "end": 90.602
+          },
+          {
+            "word": "nóis ",
+            "start": 90.602,
+            "end": 90.724
+          },
+          {
+            "word": "é ",
+            "start": 90.724,
+            "end": 90.846
+          },
+          {
+            "word": "tipo ",
+            "start": 90.846,
+            "end": 91.174
+          },
+          {
+            "word": "família, ",
+            "start": 91.174,
+            "end": 91.464
+          },
+          {
+            "word": "só ",
+            "start": 91.464,
+            "end": 91.627
+          },
+          {
+            "word": "que ",
+            "start": 91.627,
+            "end": 91.752
+          },
+          {
+            "word": "de ",
+            "start": 91.752,
+            "end": 91.874
+          },
+          {
+            "word": "pornô ",
+            "start": 91.874,
+            "end": 92.038
+          },
+          {
+            "word": "de ",
+            "start": 92.038,
+            "end": 92.284
+          },
+          {
+            "word": "incesto",
+            "start": 92.284,
+            "end": 92.534
+          }
+        ]
+      },
+      {
+        "verseStart": 92.534,
+        "verseEnd": 94.719,
+        "words": [
+          {
+            "word": "União ",
+            "start": 92.534,
+            "end": 92.657
+          },
+          {
+            "word": "Flasco, ",
+            "start": 92.657,
+            "end": 93.65
+          },
+          {
+            "word": "Lucas ",
+            "start": 93.65,
+            "end": 93.853
+          },
+          {
+            "word": "Hype ",
+            "start": 93.853,
+            "end": 94.1
+          },
+          {
+            "word": "com ",
+            "start": 94.1,
+            "end": 94.268
+          },
+          {
+            "word": "LUCKHAOS",
+            "start": 94.268,
+            "end": 94.719
+          }
+        ]
+      },
+      {
+        "verseStart": 94.719,
+        "verseEnd": 96.607,
+        "words": [
+          {
+            "word": "Na ",
+            "start": 94.719,
+            "end": 94.968
+          },
+          {
+            "word": "fila ",
+            "start": 94.968,
+            "end": 95.134
+          },
+          {
+            "word": "do ",
+            "start": 95.134,
+            "end": 95.301
+          },
+          {
+            "word": "banco, ",
+            "start": 95.301,
+            "end": 95.545
+          },
+          {
+            "word": "todo ",
+            "start": 95.545,
+            "end": 95.708
+          },
+          {
+            "word": "mundo ",
+            "start": 95.708,
+            "end": 96.034
+          },
+          {
+            "word": "pega ",
+            "start": 96.034,
+            "end": 96.196
+          },
+          {
+            "word": "o ",
+            "start": 96.196,
+            "end": 96.319
+          },
+          {
+            "word": "pau",
+            "start": 96.319,
+            "end": 96.607
+          }
+        ]
+      },
+      {
+        "verseStart": 96.607,
+        "verseEnd": 98.508,
+        "words": [
+          {
+            "word": "Boomer, ",
+            "start": 96.607,
+            "end": 97.148
+          },
+          {
+            "word": "à ",
+            "start": 97.148,
+            "end": 97.31
+          },
+          {
+            "word": "meia-",
+            "start": 97.31,
+            "end": 97.433
+          },
+          {
+            "word": "noite, ",
+            "start": 97.433,
+            "end": 97.598
+          },
+          {
+            "word": "tá ",
+            "start": 97.598,
+            "end": 97.761
+          },
+          {
+            "word": "usando ",
+            "start": 97.761,
+            "end": 97.885
+          },
+          {
+            "word": "plugue ",
+            "start": 97.885,
+            "end": 98.132
+          },
+          {
+            "word": "anal",
+            "start": 98.132,
+            "end": 98.508
+          }
+        ]
+      },
+      {
+        "verseStart": 98.508,
+        "verseEnd": 100.603,
+        "words": [
+          {
+            "word": "Suruba ",
+            "start": 98.508,
+            "end": 98.634
+          },
+          {
+            "word": "na ",
+            "start": 98.634,
+            "end": 98.962
+          },
+          {
+            "word": "quarentena, ",
+            "start": 98.962,
+            "end": 99.457
+          },
+          {
+            "word": "geral ",
+            "start": 99.457,
+            "end": 99.826
+          },
+          {
+            "word": "pelado ",
+            "start": 99.826,
+            "end": 100.075
+          },
+          {
+            "word": "por ",
+            "start": 100.075,
+            "end": 100.359
+          },
+          {
+            "word": "call",
+            "start": 100.359,
+            "end": 100.603
+          }
+        ]
+      },
+      {
+        "verseStart": 100.603,
+        "verseEnd": 102.932,
+        "words": [
+          {
+            "word": "É ",
+            "start": 100.603,
+            "end": 100.727
+          },
+          {
+            "word": "a ",
+            "start": 100.727,
+            "end": 100.852
+          },
+          {
+            "word": "união ",
+            "start": 100.852,
+            "end": 100.975
+          },
+          {
+            "word": "Flasco, ",
+            "start": 100.975,
+            "end": 101.629
+          },
+          {
+            "word": "é ",
+            "start": 101.629,
+            "end": 101.955
+          },
+          {
+            "word": "a ",
+            "start": 101.955,
+            "end": 102.241
+          },
+          {
+            "word": "novidade",
+            "start": 102.241,
+            "end": 102.932
+          }
+        ]
+      },
+      {
+        "verseStart": 102.932,
+        "verseEnd": 104.58,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 102.932,
+            "end": 103.177
+          },
+          {
+            "word": "ressuscitei ",
+            "start": 103.177,
+            "end": 103.592
+          },
+          {
+            "word": "e ",
+            "start": 103.592,
+            "end": 103.714
+          },
+          {
+            "word": "trouxe ",
+            "start": 103.714,
+            "end": 103.922
+          },
+          {
+            "word": "essa ",
+            "start": 103.922,
+            "end": 104.046
+          },
+          {
+            "word": "merdapostagem",
+            "start": 104.046,
+            "end": 104.58
+          }
+        ]
+      },
+      {
+        "verseStart": 104.58,
+        "verseEnd": 106.676,
+        "words": [
+          {
+            "word": "A ",
+            "start": 104.58,
+            "end": 104.784
+          },
+          {
+            "word": "minha ",
+            "start": 104.784,
+            "end": 104.911
+          },
+          {
+            "word": "piroca ",
+            "start": 104.911,
+            "end": 105.034
+          },
+          {
+            "word": "é ",
+            "start": 105.034,
+            "end": 105.157
+          },
+          {
+            "word": "o ",
+            "start": 105.157,
+            "end": 105.239
+          },
+          {
+            "word": "porta-",
+            "start": 105.239,
+            "end": 105.361
+          },
+          {
+            "word": "mala, ",
+            "start": 105.361,
+            "end": 105.687
+          },
+          {
+            "word": "a ",
+            "start": 105.687,
+            "end": 105.811
+          },
+          {
+            "word": "tua ",
+            "start": 105.811,
+            "end": 105.892
+          },
+          {
+            "word": "bunda ",
+            "start": 105.892,
+            "end": 106.018
+          },
+          {
+            "word": "é ",
+            "start": 106.018,
+            "end": 106.268
+          },
+          {
+            "word": "bagagem",
+            "start": 106.268,
+            "end": 106.676
+          }
+        ]
+      },
+      {
+        "verseStart": 106.676,
+        "verseEnd": 108.568,
+        "words": [
+          {
+            "word": "Tu ",
+            "start": 106.676,
+            "end": 106.843
+          },
+          {
+            "word": "não ",
+            "start": 106.843,
+            "end": 106.964
+          },
+          {
+            "word": "come ",
+            "start": 106.964,
+            "end": 107.093
+          },
+          {
+            "word": "travesti, ",
+            "start": 107.093,
+            "end": 107.377
+          },
+          {
+            "word": "mano, ",
+            "start": 107.377,
+            "end": 107.662
+          },
+          {
+            "word": "isso ",
+            "start": 107.662,
+            "end": 107.868
+          },
+          {
+            "word": "é ",
+            "start": 107.868,
+            "end": 108.075
+          },
+          {
+            "word": "muita ",
+            "start": 108.075,
+            "end": 108.32
+          },
+          {
+            "word": "viadagem",
+            "start": 108.32,
+            "end": 108.568
+          }
+        ]
+      },
+      {
+        "verseStart": 108.568,
+        "verseEnd": 111.026,
+        "words": [
+          {
+            "word": "É ",
+            "start": 108.568,
+            "end": 108.774
+          },
+          {
+            "word": "a ",
+            "start": 108.774,
+            "end": 108.896
+          },
+          {
+            "word": "união ",
+            "start": 108.896,
+            "end": 109.019
+          },
+          {
+            "word": "Flasco, ",
+            "start": 109.019,
+            "end": 109.996
+          },
+          {
+            "word": "uh, ",
+            "start": 109.996,
+            "end": 110.241
+          },
+          {
+            "word": "uh, ",
+            "start": 110.241,
+            "end": 110.49
+          },
+          {
+            "word": "uh",
+            "start": 110.49,
+            "end": 111.026
+          }
+        ]
+      },
+      {
+        "verseStart": 111.026,
+        "verseEnd": 112.626,
+        "words": [
+          {
+            "word": "Quem ",
+            "start": 111.026,
+            "end": 111.191
+          },
+          {
+            "word": "tá ",
+            "start": 111.191,
+            "end": 111.316
+          },
+          {
+            "word": "respirando ",
+            "start": 111.316,
+            "end": 111.73
+          },
+          {
+            "word": "gosta ",
+            "start": 111.73,
+            "end": 111.852
+          },
+          {
+            "word": "de ",
+            "start": 111.852,
+            "end": 111.974
+          },
+          {
+            "word": "lamber ",
+            "start": 111.974,
+            "end": 112.096
+          },
+          {
+            "word": "piru",
+            "start": 112.096,
+            "end": 112.626
+          }
+        ]
+      },
+      {
+        "verseStart": 112.626,
+        "verseEnd": 114.512,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 112.626,
+            "end": 112.713
+          },
+          {
+            "word": "tô ",
+            "start": 112.713,
+            "end": 112.836
+          },
+          {
+            "word": "falando ",
+            "start": 112.836,
+            "end": 112.958
+          },
+          {
+            "word": "muita ",
+            "start": 112.958,
+            "end": 113.08
+          },
+          {
+            "word": "merda ",
+            "start": 113.08,
+            "end": 113.609
+          },
+          {
+            "word": "nesse ",
+            "start": 113.609,
+            "end": 113.731
+          },
+          {
+            "word": "beat ",
+            "start": 113.731,
+            "end": 113.896
+          },
+          {
+            "word": "do ",
+            "start": 113.896,
+            "end": 114.225
+          },
+          {
+            "word": "Haku",
+            "start": 114.225,
+            "end": 114.512
+          }
+        ]
+      },
+      {
+        "verseStart": 114.512,
+        "verseEnd": 116.53,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 114.512,
+            "end": 114.717
+          },
+          {
+            "word": "a ",
+            "start": 114.717,
+            "end": 114.84
+          },
+          {
+            "word": "tua ",
+            "start": 114.84,
+            "end": 114.921
+          },
+          {
+            "word": "raba ",
+            "start": 114.921,
+            "end": 115.045
+          },
+          {
+            "word": "é ",
+            "start": 115.045,
+            "end": 115.288
+          },
+          {
+            "word": "uma ",
+            "start": 115.288,
+            "end": 115.459
+          },
+          {
+            "word": "floresta, ",
+            "start": 115.459,
+            "end": 115.581
+          },
+          {
+            "word": "meu ",
+            "start": 115.581,
+            "end": 115.704
+          },
+          {
+            "word": "pau ",
+            "start": 115.704,
+            "end": 115.83
+          },
+          {
+            "word": "é ",
+            "start": 115.83,
+            "end": 115.994
+          },
+          {
+            "word": "o ",
+            "start": 115.994,
+            "end": 116.24
+          },
+          {
+            "word": "Zoboomafoo",
+            "start": 116.24,
+            "end": 116.53
+          }
+        ]
+      },
+      {
+        "verseStart": 116.53,
+        "verseEnd": 119.067,
+        "words": [
+          {
+            "word": "É ",
+            "start": 116.53,
+            "end": 116.774
+          },
+          {
+            "word": "a ",
+            "start": 116.774,
+            "end": 117.025
+          },
+          {
+            "word": "união ",
+            "start": 117.025,
+            "end": 117.273
+          },
+          {
+            "word": "Flasco, ",
+            "start": 117.273,
+            "end": 118.047
+          },
+          {
+            "word": "passei ",
+            "start": 118.047,
+            "end": 118.25
+          },
+          {
+            "word": "Rexona",
+            "start": 118.25,
+            "end": 119.067
+          }
+        ]
+      },
+      {
+        "verseStart": 119.067,
+        "verseEnd": 120.629,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 119.067,
+            "end": 119.191
+          },
+          {
+            "word": "não ",
+            "start": 119.191,
+            "end": 119.314
+          },
+          {
+            "word": "sou ",
+            "start": 119.314,
+            "end": 119.395
+          },
+          {
+            "word": "boiola ",
+            "start": 119.395,
+            "end": 119.517
+          },
+          {
+            "word": "pra ",
+            "start": 119.517,
+            "end": 119.642
+          },
+          {
+            "word": "ficar ",
+            "start": 119.642,
+            "end": 119.805
+          },
+          {
+            "word": "pickando ",
+            "start": 119.805,
+            "end": 120.218
+          },
+          {
+            "word": "Sona",
+            "start": 120.218,
+            "end": 120.629
+          }
+        ]
+      },
+      {
+        "verseStart": 120.629,
+        "verseEnd": 122.652,
+        "words": [
+          {
+            "word": "Se ",
+            "start": 120.629,
+            "end": 120.794
+          },
+          {
+            "word": "a ",
+            "start": 120.794,
+            "end": 120.92
+          },
+          {
+            "word": "tua ",
+            "start": 120.92,
+            "end": 121.125
+          },
+          {
+            "word": "boca ",
+            "start": 121.125,
+            "end": 121.252
+          },
+          {
+            "word": "é ",
+            "start": 121.252,
+            "end": 121.418
+          },
+          {
+            "word": "um ",
+            "start": 121.418,
+            "end": 121.588
+          },
+          {
+            "word": "forró, ",
+            "start": 121.588,
+            "end": 121.795
+          },
+          {
+            "word": "a ",
+            "start": 121.795,
+            "end": 121.957
+          },
+          {
+            "word": "minha ",
+            "start": 121.957,
+            "end": 122.121
+          },
+          {
+            "word": "piroca ",
+            "start": 122.121,
+            "end": 122.285
+          },
+          {
+            "word": "é ",
+            "start": 122.285,
+            "end": 122.407
+          },
+          {
+            "word": "a ",
+            "start": 122.407,
+            "end": 122.529
+          },
+          {
+            "word": "sanfona",
+            "start": 122.529,
+            "end": 122.652
+          }
+        ]
+      },
+      {
+        "verseStart": 122.652,
+        "verseEnd": 124.724,
+        "words": [
+          {
+            "word": "A ",
+            "start": 122.652,
+            "end": 122.775
+          },
+          {
+            "word": "xota ",
+            "start": 122.775,
+            "end": 122.896
+          },
+          {
+            "word": "dessa ",
+            "start": 122.896,
+            "end": 123.019
+          },
+          {
+            "word": "mina ",
+            "start": 123.019,
+            "end": 123.101
+          },
+          {
+            "word": "é ",
+            "start": 123.101,
+            "end": 123.267
+          },
+          {
+            "word": "verde, ",
+            "start": 123.267,
+            "end": 123.516
+          },
+          {
+            "word": "eu ",
+            "start": 123.516,
+            "end": 123.722
+          },
+          {
+            "word": "acho ",
+            "start": 123.722,
+            "end": 123.89
+          },
+          {
+            "word": "que ",
+            "start": 123.89,
+            "end": 124.015
+          },
+          {
+            "word": "eu ",
+            "start": 124.015,
+            "end": 124.141
+          },
+          {
+            "word": "comi ",
+            "start": 124.141,
+            "end": 124.265
+          },
+          {
+            "word": "a ",
+            "start": 124.265,
+            "end": 124.556
+          },
+          {
+            "word": "Fiona",
+            "start": 124.556,
+            "end": 124.724
+          }
+        ]
+      },
+      {
+        "verseStart": 124.724,
+        "verseEnd": 127.101,
+        "words": [
+          {
+            "word": "É ",
+            "start": 124.724,
+            "end": 124.845
+          },
+          {
+            "word": "a ",
+            "start": 124.845,
+            "end": 125.091
+          },
+          {
+            "word": "união ",
+            "start": 125.091,
+            "end": 125.258
+          },
+          {
+            "word": "Flasco, ",
+            "start": 125.258,
+            "end": 126.038
+          },
+          {
+            "word": "é ",
+            "start": 126.038,
+            "end": 126.284
+          },
+          {
+            "word": "a ",
+            "start": 126.284,
+            "end": 126.489
+          },
+          {
+            "word": "seleção",
+            "start": 126.489,
+            "end": 127.101
+          }
+        ]
+      },
+      {
+        "verseStart": 127.101,
+        "verseEnd": 128.756,
+        "words": [
+          {
+            "word": "Batendo ",
+            "start": 127.101,
+            "end": 127.265
+          },
+          {
+            "word": "punheta, ",
+            "start": 127.265,
+            "end": 127.836
+          },
+          {
+            "word": "mas ",
+            "start": 127.836,
+            "end": 128
+          },
+          {
+            "word": "eu ",
+            "start": 128,
+            "end": 128.122
+          },
+          {
+            "word": "nem ",
+            "start": 128.122,
+            "end": 128.205
+          },
+          {
+            "word": "tô ",
+            "start": 128.205,
+            "end": 128.332
+          },
+          {
+            "word": "com ",
+            "start": 128.332,
+            "end": 128.585
+          },
+          {
+            "word": "tesão",
+            "start": 128.585,
+            "end": 128.756
+          }
+        ]
+      },
+      {
+        "verseStart": 128.756,
+        "verseEnd": 130.703,
+        "words": [
+          {
+            "word": "A ",
+            "start": 128.756,
+            "end": 128.922
+          },
+          {
+            "word": "quarentena ",
+            "start": 128.922,
+            "end": 129.005
+          },
+          {
+            "word": "tá ",
+            "start": 129.005,
+            "end": 129.131
+          },
+          {
+            "word": "chatona ",
+            "start": 129.131,
+            "end": 129.253
+          },
+          {
+            "word": "e ",
+            "start": 129.253,
+            "end": 129.635
+          },
+          {
+            "word": "o ",
+            "start": 129.635,
+            "end": 129.841
+          },
+          {
+            "word": "meu ",
+            "start": 129.841,
+            "end": 130.004
+          },
+          {
+            "word": "pau ",
+            "start": 130.004,
+            "end": 130.166
+          },
+          {
+            "word": "tá ",
+            "start": 130.166,
+            "end": 130.289
+          },
+          {
+            "word": "na ",
+            "start": 130.289,
+            "end": 130.415
+          },
+          {
+            "word": "minha ",
+            "start": 130.415,
+            "end": 130.578
+          },
+          {
+            "word": "mão",
+            "start": 130.578,
+            "end": 130.703
+          }
+        ]
+      },
+      {
+        "verseStart": 130.703,
+        "verseEnd": 132.678,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 130.703,
+            "end": 130.825
+          },
+          {
+            "word": "tô ",
+            "start": 130.825,
+            "end": 130.949
+          },
+          {
+            "word": "no ",
+            "start": 130.949,
+            "end": 131.071
+          },
+          {
+            "word": "meio ",
+            "start": 131.071,
+            "end": 131.193
+          },
+          {
+            "word": "da ",
+            "start": 131.193,
+            "end": 131.317
+          },
+          {
+            "word": "aula ",
+            "start": 131.317,
+            "end": 131.481
+          },
+          {
+            "word": "on-",
+            "start": 131.481,
+            "end": 131.644
+          },
+          {
+            "word": "line ",
+            "start": 131.644,
+            "end": 131.77
+          },
+          {
+            "word": "e ",
+            "start": 131.77,
+            "end": 131.892
+          },
+          {
+            "word": "que ",
+            "start": 131.892,
+            "end": 132.014
+          },
+          {
+            "word": "se ",
+            "start": 132.014,
+            "end": 132.178
+          },
+          {
+            "word": "foda, ",
+            "start": 132.178,
+            "end": 132.342
+          },
+          {
+            "word": "meu ",
+            "start": 132.342,
+            "end": 132.467
+          },
+          {
+            "word": "irmão",
+            "start": 132.467,
+            "end": 132.678
+          }
+        ]
+      },
+      {
+        "verseStart": 132.678,
+        "verseEnd": 135.216,
+        "words": [
+          {
+            "word": "É ",
+            "start": 132.678,
+            "end": 132.886
+          },
+          {
+            "word": "a ",
+            "start": 132.886,
+            "end": 133.008
+          },
+          {
+            "word": "união ",
+            "start": 133.008,
+            "end": 133.174
+          },
+          {
+            "word": "Flasco, ",
+            "start": 133.174,
+            "end": 134.197
+          },
+          {
+            "word": "mano, ",
+            "start": 134.197,
+            "end": 134.319
+          },
+          {
+            "word": "eu ",
+            "start": 134.319,
+            "end": 134.483
+          },
+          {
+            "word": "sou ",
+            "start": 134.483,
+            "end": 134.605
+          },
+          {
+            "word": "real",
+            "start": 134.605,
+            "end": 135.216
+          }
+        ]
+      },
+      {
+        "verseStart": 135.216,
+        "verseEnd": 136.95,
+        "words": [
+          {
+            "word": "Uma ",
+            "start": 135.216,
+            "end": 135.463
+          },
+          {
+            "word": "track ",
+            "start": 135.463,
+            "end": 135.75
+          },
+          {
+            "word": "inteira ",
+            "start": 135.75,
+            "end": 135.997
+          },
+          {
+            "word": "só ",
+            "start": 135.997,
+            "end": 136.12
+          },
+          {
+            "word": "falando ",
+            "start": 136.12,
+            "end": 136.243
+          },
+          {
+            "word": "do ",
+            "start": 136.243,
+            "end": 136.489
+          },
+          {
+            "word": "meu ",
+            "start": 136.489,
+            "end": 136.742
+          },
+          {
+            "word": "pau",
+            "start": 136.742,
+            "end": 136.95
+          }
+        ]
+      },
+      {
+        "verseStart": 136.95,
+        "verseEnd": 138.841,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 136.95,
+            "end": 137.075
+          },
+          {
+            "word": "sou ",
+            "start": 137.075,
+            "end": 137.196
+          },
+          {
+            "word": "o ",
+            "start": 137.196,
+            "end": 137.278
+          },
+          {
+            "word": "melhor ",
+            "start": 137.278,
+            "end": 137.402
+          },
+          {
+            "word": "do ",
+            "start": 137.402,
+            "end": 137.526
+          },
+          {
+            "word": "shit-",
+            "start": 137.526,
+            "end": 137.648
+          },
+          {
+            "word": "trap, ",
+            "start": 137.648,
+            "end": 137.771
+          },
+          {
+            "word": "e ",
+            "start": 137.771,
+            "end": 137.898
+          },
+          {
+            "word": "nunca ",
+            "start": 137.898,
+            "end": 138.061
+          },
+          {
+            "word": "vai ",
+            "start": 138.061,
+            "end": 138.186
+          },
+          {
+            "word": "ter ",
+            "start": 138.186,
+            "end": 138.434
+          },
+          {
+            "word": "discussão",
+            "start": 138.434,
+            "end": 138.841
+          }
+        ]
+      },
+      {
+        "verseStart": 138.841,
+        "verseEnd": 140.813,
+        "words": [
+          {
+            "word": "Esses ",
+            "start": 138.841,
+            "end": 139.003
+          },
+          {
+            "word": "mano ",
+            "start": 139.003,
+            "end": 139.127
+          },
+          {
+            "word": "pensa ",
+            "start": 139.127,
+            "end": 139.249
+          },
+          {
+            "word": "em ",
+            "start": 139.249,
+            "end": 139.497
+          },
+          {
+            "word": "dinheiro, ",
+            "start": 139.497,
+            "end": 139.782
+          },
+          {
+            "word": "eu ",
+            "start": 139.782,
+            "end": 139.949
+          },
+          {
+            "word": "penso ",
+            "start": 139.949,
+            "end": 140.071
+          },
+          {
+            "word": "na ",
+            "start": 140.071,
+            "end": 140.235
+          },
+          {
+            "word": "minha ",
+            "start": 140.235,
+            "end": 140.438
+          },
+          {
+            "word": "diversão",
+            "start": 140.438,
+            "end": 140.813
+          }
+        ]
+      },
+      {
+        "verseStart": 140.813,
+        "verseEnd": 143.386,
+        "words": [
+          {
+            "word": "É ",
+            "start": 140.813,
+            "end": 141.019
+          },
+          {
+            "word": "a ",
+            "start": 141.019,
+            "end": 141.141
+          },
+          {
+            "word": "união ",
+            "start": 141.141,
+            "end": 141.304
+          },
+          {
+            "word": "Flasco, ",
+            "start": 141.304,
+            "end": 142.325
+          },
+          {
+            "word": "esse ",
+            "start": 142.325,
+            "end": 142.446
+          },
+          {
+            "word": "é ",
+            "start": 142.446,
+            "end": 142.568
+          },
+          {
+            "word": "o ",
+            "start": 142.568,
+            "end": 142.731
+          },
+          {
+            "word": "meu ",
+            "start": 142.731,
+            "end": 143.14
+          },
+          {
+            "word": "momento",
+            "start": 143.14,
+            "end": 143.386
+          }
+        ]
+      },
+      {
+        "verseStart": 143.386,
+        "verseEnd": 144.812,
+        "words": [
+          {
+            "word": "Piscando ",
+            "start": 143.386,
+            "end": 143.508
+          },
+          {
+            "word": "o ",
+            "start": 143.508,
+            "end": 143.629
+          },
+          {
+            "word": "meu ",
+            "start": 143.629,
+            "end": 143.712
+          },
+          {
+            "word": "cu, ",
+            "start": 143.712,
+            "end": 143.834
+          },
+          {
+            "word": "a ",
+            "start": 143.834,
+            "end": 143.956
+          },
+          {
+            "word": "pica ",
+            "start": 143.956,
+            "end": 144.078
+          },
+          {
+            "word": "faz ",
+            "start": 144.078,
+            "end": 144.201
+          },
+          {
+            "word": "o ",
+            "start": 144.201,
+            "end": 144.365
+          },
+          {
+            "word": "movimento",
+            "start": 144.365,
+            "end": 144.812
+          }
+        ]
+      },
+      {
+        "verseStart": 144.812,
+        "verseEnd": 146.986,
+        "words": [
+          {
+            "word": "'Cê ",
+            "start": 144.812,
+            "end": 144.935
+          },
+          {
+            "word": "pode ",
+            "start": 144.935,
+            "end": 145.059
+          },
+          {
+            "word": "ter ",
+            "start": 145.059,
+            "end": 145.184
+          },
+          {
+            "word": "várias ",
+            "start": 145.184,
+            "end": 145.51
+          },
+          {
+            "word": "views, ",
+            "start": 145.51,
+            "end": 145.96
+          },
+          {
+            "word": "mesmo ",
+            "start": 145.96,
+            "end": 146.083
+          },
+          {
+            "word": "o ",
+            "start": 146.083,
+            "end": 146.205
+          },
+          {
+            "word": "teu ",
+            "start": 146.205,
+            "end": 146.327
+          },
+          {
+            "word": "som ",
+            "start": 146.327,
+            "end": 146.49
+          },
+          {
+            "word": "sendo ",
+            "start": 146.49,
+            "end": 146.617
+          },
+          {
+            "word": "sem ",
+            "start": 146.617,
+            "end": 146.781
+          },
+          {
+            "word": "graça",
+            "start": 146.781,
+            "end": 146.986
+          }
+        ]
+      },
+      {
+        "verseStart": 146.986,
+        "verseEnd": 148.88,
+        "words": [
+          {
+            "word": "Eu ",
+            "start": 146.986,
+            "end": 147.15
+          },
+          {
+            "word": "sou ",
+            "start": 147.15,
+            "end": 147.273
+          },
+          {
+            "word": "o ",
+            "start": 147.273,
+            "end": 147.401
+          },
+          {
+            "word": "rei ",
+            "start": 147.401,
+            "end": 147.524
+          },
+          {
+            "word": "do ",
+            "start": 147.524,
+            "end": 147.809
+          },
+          {
+            "word": "underground ",
+            "start": 147.809,
+            "end": 147.973
+          },
+          {
+            "word": "e ",
+            "start": 147.973,
+            "end": 148.095
+          },
+          {
+            "word": "bato ",
+            "start": 148.095,
+            "end": 148.177
+          },
+          {
+            "word": "punheta ",
+            "start": 148.177,
+            "end": 148.3
+          },
+          {
+            "word": "na ",
+            "start": 148.3,
+            "end": 148.423
+          },
+          {
+            "word": "praça",
+            "start": 148.423,
+            "end": 148.88
+          }
+        ]
+      },
+      {
+        "verseStart": 148.88,
+        "verseEnd": 151.332,
+        "words": [
+          {
+            "word": "É ",
+            "start": 148.88,
+            "end": 149.002
+          },
+          {
+            "word": "a ",
+            "start": 149.002,
+            "end": 149.124
+          },
+          {
+            "word": "união ",
+            "start": 149.124,
+            "end": 149.332
+          },
+          {
+            "word": "Flasco",
+            "start": 149.332,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };
