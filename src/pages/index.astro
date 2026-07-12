@@ -475,7 +475,7 @@ const pageTitle = "Under maintenance...";
           <div class="custom-player-wrapper" id="player-wrapper">
             <video 
               id="anthem-video"
-              src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
+              src="" 
               controls 
               controlsList="nodownload noremoteplayback noplaybackrate"
               disablePictureInPicture
@@ -535,7 +535,7 @@ const pageTitle = "Under maintenance...";
   </div>
 
   <script>
-    import { lyricsData, GLOBAL_OFFSET } from '../data/lyrics.ts';
+    import { songsDictionary } from '../data/lyrics.ts';
     document.addEventListener('DOMContentLoaded', async () => {
       // 1. Fetch live presence
       const pfp = document.getElementById('mini-pfp');
@@ -558,6 +558,35 @@ const pageTitle = "Under maintenance...";
       await updatePresence();
       setInterval(updatePresence, 15000);
 
+      // Randomize Video Logic
+      const availableVideos = Object.keys(songsDictionary);
+      let playedVideos = [];
+      try {
+        const stored = localStorage.getItem('playedVideos');
+        if (stored) playedVideos = JSON.parse(stored);
+      } catch (e) {}
+
+      // Filter out played videos
+      let remaining = availableVideos.filter(v => !playedVideos.includes(v));
+
+      if (remaining.length === 0) {
+        // We played all of them, time to reset the cycle.
+        // We keep ONLY the last played video in the played list to prevent back-to-back repetition
+        const lastPlayed = playedVideos[playedVideos.length - 1];
+        playedVideos = [lastPlayed];
+        remaining = availableVideos.filter(v => v !== lastPlayed);
+      }
+
+      // Pick random
+      const selectedVideo = remaining[Math.floor(Math.random() * remaining.length)];
+      playedVideos.push(selectedVideo);
+      localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
+
+      // Setup data
+      const songData = songsDictionary[selectedVideo];
+      const lyricsData = songData.lyricsData;
+      const GLOBAL_OFFSET = songData.globalOffset || 0;
+
       // 2. Setup video player
       const vid = document.getElementById('anthem-video');
       const wrapper = document.getElementById('player-wrapper');
@@ -565,6 +594,7 @@ const pageTitle = "Under maintenance...";
       
       if (vid) {
         vid.volume = 0.35;
+        vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
 
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `

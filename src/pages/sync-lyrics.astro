@@ -38,6 +38,12 @@ const pageTitle = "Lyrics Sync Tool";
       flex-shrink: 0;
     }
 
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
     .header h1 {
       margin: 0;
       font-size: 1.2rem;
@@ -46,6 +52,16 @@ const pageTitle = "Lyrics Sync Tool";
     .instructions {
       font-size: 0.9rem;
       color: #aaa;
+    }
+
+    .song-selector {
+      background: #222;
+      color: #fff;
+      border: 1px solid #333;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      cursor: pointer;
     }
 
     .toolbar {
@@ -207,8 +223,11 @@ const pageTitle = "Lyrics Sync Tool";
 <body>
   
   <div class="header">
-    <h1>Lyrics Sync Tool</h1>
-    <div class="instructions">Focus right panel. Press SPACE to sync current word. (Saves to memory, click Save to write file)</div>
+    <div class="header-left">
+      <h1>{pageTitle}</h1>
+      <select id="song-selector" class="song-selector"></select>
+      <div class="instructions">Focus right panel. Press SPACE to sync current word.</div>
+    </div>
     <div class="toolbar">
       <span class="status" id="save-status">Saved to File!</span>
       <button class="danger" id="btn-clear">Wipe Timestamps</button>
@@ -221,7 +240,7 @@ const pageTitle = "Lyrics Sync Tool";
       <div class="video-wrapper">
         <video 
           id="sync-video"
-          src="https://media.thiago.qzz.io/media/Bring%20Me%20The%20Horizon%20-%20Go%20To%20Hell%2C%20For%20Heavens%20Sake.mp4" 
+          src="" 
           controls 
           playsinline
           preload="auto"
@@ -236,7 +255,7 @@ const pageTitle = "Lyrics Sync Tool";
   </div>
 
   <script>
-    import { lyricsData, GLOBAL_OFFSET } from '../data/lyrics.ts';
+    import { songsDictionary } from '../data/lyrics.ts';
     
     document.addEventListener('DOMContentLoaded', () => {
       const vid = document.getElementById('sync-video');
@@ -246,10 +265,44 @@ const pageTitle = "Lyrics Sync Tool";
       const overlay = document.getElementById('focus-overlay');
       const btnSave = document.getElementById('btn-save');
       const btnClear = document.getElementById('btn-clear');
+      const selector = document.getElementById('song-selector');
       
-      let localLyrics = JSON.parse(JSON.stringify(lyricsData)); // clone
+      let currentSongKey = null;
+      let localLyrics = [];
+      let globalOffset = 0;
       let currentV = 0;
       let currentW = 0;
+      
+      const loadSong = (key) => {
+        currentSongKey = key;
+        vid.src = \`https://media.thiago.qzz.io/media/\${encodeURIComponent(key)}\`;
+        const songData = songsDictionary[key];
+        globalOffset = songData.globalOffset || 0;
+        localLyrics = JSON.parse(JSON.stringify(songData.lyricsData)); // clone
+        currentV = 0;
+        currentW = 0;
+        vid.currentTime = 0;
+        render();
+      };
+
+      // Populate dropdown
+      const keys = Object.keys(songsDictionary);
+      keys.forEach(k => {
+        const opt = document.createElement('option');
+        opt.value = k;
+        opt.textContent = k;
+        selector.appendChild(opt);
+      });
+      
+      selector.addEventListener('change', (e) => {
+        loadSong(e.target.value);
+      });
+      
+      // Load first song initially
+      if (keys.length > 0) {
+        selector.value = keys[0];
+        loadSong(keys[0]);
+      }
       
       // Focus overlay click handler
       overlay.addEventListener('click', () => {
@@ -275,17 +328,17 @@ const pageTitle = "Lyrics Sync Tool";
       });
       
       const render = () => {
-        container.innerHTML = localLyrics.map((verse, vIdx) => `
-          <div class="verse" id="v-${vIdx}">
-            <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
-            ${verse.words.map((w, wIdx) => {
+        container.innerHTML = localLyrics.map((verse, vIdx) => \`
+          <div class="verse" id="v-\${vIdx}">
+            <span class="time-badge">\${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
+            \${verse.words.map((w, wIdx) => {
               const isSynced = w.start && w.start !== 0;
               const isActive = vIdx === currentV && wIdx === currentW;
-              const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
-              return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
+              const classes = \`word \${isActive ? 'active' : ''} \${isSynced ? 'synced' : ''}\`;
+              return \`<span class="\${classes}" data-v="\${vIdx}" data-w="\${wIdx}" id="w-\${vIdx}-\${wIdx}">\${w.word}</span>\`;
             }).join('')}
           </div>
-        `).join('');
+        \`).join('');
         
         // Add click listeners to seek
         document.querySelectorAll('.word').forEach(el => {
@@ -297,7 +350,7 @@ const pageTitle = "Lyrics Sync Tool";
             
             const targetTime = localLyrics[v].words[w].start || (localLyrics[v].verseStart || 0);
             if (targetTime) {
-              vid.currentTime = targetTime + GLOBAL_OFFSET;
+              vid.currentTime = targetTime + globalOffset;
             }
             render();
             pane.focus();
@@ -305,19 +358,18 @@ const pageTitle = "Lyrics Sync Tool";
         });
         
         // Scroll active into view
-        const activeEl = document.getElementById(`w-${currentV}-${currentW}`);
+        const activeEl = document.getElementById(\`w-\${currentV}-\${currentW}\`);
         if (activeEl) {
           activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       };
       
-      render();
-      
       // Save to file ONLY when clicking the button
       btnSave.addEventListener('click', async () => {
         try {
           const payload = {
-            globalOffset: GLOBAL_OFFSET,
+            songKey: currentSongKey,
+            globalOffset: globalOffset,
             lyricsData: localLyrics
           };
           const res = await fetch('http://localhost:4322/save', {
@@ -340,7 +392,7 @@ const pageTitle = "Lyrics Sync Tool";
           
           if (currentV >= localLyrics.length) return;
           
-          const time = vid.currentTime - GLOBAL_OFFSET;
+          const time = vid.currentTime - globalOffset;
           
           // Update current word start
           localLyrics[currentV].words[currentW].start = parseFloat(time.toFixed(3));
