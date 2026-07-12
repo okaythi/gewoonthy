@@ -460,6 +460,51 @@ const pageTitle = "Under maintenance...";
     .vote-btn.active svg {
       fill: currentColor;
     }
+
+    .gab-side {
+      display: none;
+    }
+    
+    @media (min-width: 1024px) {
+      .gab-side {
+        display: flex;
+        flex: 1;
+        height: 100%;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .gab-side-word {
+        position: absolute;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        pointer-events: none;
+        white-space: nowrap;
+        animation: bamIn 0.15s cubic-bezier(0.17, 0.89, 0.32, 1.28) forwards;
+        
+        text-shadow: 
+          0 0 10px #ff0018,
+          0 0 20px #ffa52c,
+          0 0 30px #ffff41,
+          0 0 40px #008018,
+          0 0 50px #0000f9,
+          0 0 60px #86007d;
+      }
+      .gab-side-word.fade-out {
+        animation: bamOut 0.6s ease forwards;
+      }
+      @keyframes bamIn {
+        from { transform: scale(0.2) rotate(-5deg); opacity: 0; }
+        to { transform: scale(1) rotate(0deg); opacity: 1; }
+      }
+      @keyframes bamOut {
+        from { transform: scale(1); opacity: 1; }
+        to { transform: scale(0.8); opacity: 0; }
+      }
+    }
   </style>
 </head>
 <body oncontextmenu="return false;">
@@ -471,6 +516,7 @@ const pageTitle = "Under maintenance...";
     </div>
 
     <div class="video-wrapper">
+      <div id="gab-side-left" class="gab-side"></div>
       <div class="video-container">
         <div class="player-stack">
           <div class="custom-player-wrapper" id="player-wrapper">
@@ -516,6 +562,7 @@ const pageTitle = "Under maintenance...";
           </div>
         </div>
       </div>
+      <div id="gab-side-right" class="gab-side"></div>
     </div>
 
     <div class="footer">
@@ -562,24 +609,32 @@ const pageTitle = "Under maintenance...";
       // Randomize Video Logic
       const availableVideos = Object.keys(songsDictionary);
       let playedVideos = [];
+      let isNewVisitor = true;
       try {
         const stored = localStorage.getItem('playedVideos');
-        if (stored) playedVideos = JSON.parse(stored);
+        if (stored) {
+            playedVideos = JSON.parse(stored);
+            if (playedVideos.length > 0) isNewVisitor = false;
+        }
       } catch (e) {}
 
       // Filter out played videos
       let remaining = availableVideos.filter(v => !playedVideos.includes(v));
 
       if (remaining.length === 0) {
-        // We played all of them, time to reset the cycle.
-        // We keep ONLY the last played video in the played list to prevent back-to-back repetition
         const lastPlayed = playedVideos[playedVideos.length - 1];
         playedVideos = [lastPlayed];
         remaining = availableVideos.filter(v => v !== lastPlayed);
       }
 
-      // Pick random
-      const selectedVideo = remaining[Math.floor(Math.random() * remaining.length)];
+      // Pick random or force Gabrielle for new visitors
+      let selectedVideo;
+      if (isNewVisitor && availableVideos.includes('Gabrielle - 5 fine frøkner.mp4')) {
+        selectedVideo = 'Gabrielle - 5 fine frøkner.mp4';
+      } else {
+        selectedVideo = remaining[Math.floor(Math.random() * remaining.length)];
+      }
+      
       playedVideos.push(selectedVideo);
       localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
 
@@ -653,6 +708,13 @@ const pageTitle = "Under maintenance...";
         let activeVerseIndex = -1;
         let activeWordIndex = -1;
         let animationFrameId = null;
+        let inactivityTimer = null;
+        
+        let lastWordTime = Date.now();
+        const sideLeft = document.getElementById('gab-side-left');
+        const sideRight = document.getElementById('gab-side-right');
+        const isDesktop = !window.matchMedia("(pointer: coarse)").matches;
+        let currentSideWordEl = null;
 
         const updateLyrics = () => {
           const time = vid.currentTime - (typeof GLOBAL_OFFSET !== 'undefined' ? GLOBAL_OFFSET : 0);
@@ -696,6 +758,65 @@ const pageTitle = "Under maintenance...";
             if (newWordIndex !== -1 && newVerseIndex !== -1) {
               const newWord = document.getElementById(`word-${newVerseIndex}-${newWordIndex}`);
               if (newWord) newWord.classList.add('active');
+              
+              lastWordTime = Date.now();
+              
+              // Custom Gabrielle Bridge Logic
+              if (isDesktop && selectedVideo === 'Gabrielle - 5 fine frøkner.mp4') {
+                const currentVerseText = lyricsData[newVerseIndex].words.map(w => w.word).join('');
+                const bridgePhrases = [
+                  "Du får meg til å kjøre meg opp",
+                  "Det e ingenting som kan kjøre meg ned",
+                  "Du får alt til å sprenge i kok",
+                  "Det e ingen andre eg heller gjør det her med"
+                ];
+                
+                const isBridge = bridgePhrases.some(p => currentVerseText.toLowerCase().includes(p.toLowerCase()));
+                
+                if (isBridge && sideLeft && sideRight) {
+                  lyricsContainer.style.opacity = '0';
+                  
+                  // Clean up previous word
+                  if (currentSideWordEl) {
+                    currentSideWordEl.classList.add('fade-out');
+                    const toRemove = currentSideWordEl;
+                    setTimeout(() => toRemove.remove(), 600);
+                  }
+                  
+                  // Create new BAM word
+                  const wordText = lyricsData[newVerseIndex].words[newWordIndex].word;
+                  const wordEl = document.createElement('div');
+                  wordEl.className = 'gab-side-word';
+                  wordEl.textContent = wordText;
+                  
+                  // Randomize size and position
+                  const baseSize = 2 + Math.random() * 3; 
+                  const finalSize = wordText.length > 8 ? baseSize / 1.5 : baseSize;
+                  wordEl.style.fontSize = finalSize + 'rem';
+                  wordEl.style.top = (Math.random() * 70 + 10) + '%';
+                  
+                  // Alternate side
+                  const targetSide = (newWordIndex % 2 === 0) ? sideLeft : sideRight;
+                  targetSide.appendChild(wordEl);
+                  
+                  currentSideWordEl = wordEl;
+                } else {
+                  lyricsContainer.style.opacity = '1';
+                }
+              }
+              
+              // 4s inactivity timeout
+              clearTimeout(inactivityTimer);
+              inactivityTimer = setTimeout(() => {
+                if (lyricsContainer) lyricsContainer.style.opacity = '0';
+                if (currentSideWordEl) {
+                  currentSideWordEl.classList.add('fade-out');
+                  const toRemove = currentSideWordEl;
+                  setTimeout(() => toRemove.remove(), 600);
+                  currentSideWordEl = null;
+                }
+              }, 4000);
+              
             }
             activeWordIndex = newWordIndex;
           }
@@ -725,7 +846,6 @@ const pageTitle = "Under maintenance...";
         });
         
         // Custom UI Logic for Desktop
-        const isDesktop = !window.matchMedia("(pointer: coarse)").matches;
         if (isDesktop) {
           vid.removeAttribute('controls');
           
