@@ -12555,2339 +12555,2339 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 11.629,
-        "verseEnd": 15.296,
+        "verseStart": 11.663,
+        "verseEnd": 15.4,
         "words": [
           {
             "word": "Åh ",
-            "start": 11.629,
-            "end": 11.833
+            "start": 11.663,
+            "end": 11.907
           },
           {
             "word": "hosianna, ",
-            "start": 11.833,
-            "end": 13.302
+            "start": 11.907,
+            "end": 13.458
           },
           {
             "word": "Annotate ",
-            "start": 13.302,
-            "end": 13.424
+            "start": 13.458,
+            "end": 13.579
           },
           {
             "word": "Hevenu ",
-            "start": 13.424,
+            "start": 13.579,
             "end": 14.28
           },
           {
             "word": "shalom",
             "start": 14.28,
-            "end": 15.296
+            "end": 15.4
           }
         ]
       },
       {
-        "verseStart": 15.296,
-        "verseEnd": 19.291,
+        "verseStart": 15.4,
+        "verseEnd": 19.322,
         "words": [
           {
             "word": "Fem ",
-            "start": 15.296,
-            "end": 15.865
+            "start": 15.4,
+            "end": 15.85
           },
           {
             "word": "fine ",
-            "start": 15.865,
-            "end": 16.352
+            "start": 15.85,
+            "end": 16.338
           },
           {
             "word": "frøkner ",
-            "start": 16.352,
-            "end": 17.537
+            "start": 16.338,
+            "end": 17.602
           },
           {
             "word": "ska ",
-            "start": 17.537,
-            "end": 17.822
+            "start": 17.602,
+            "end": 17.848
           },
           {
             "word": "aldri ",
-            "start": 17.822,
-            "end": 18.109
+            "start": 17.848,
+            "end": 18.465
           },
           {
             "word": "dra ",
-            "start": 18.109,
-            "end": 18.394
+            "start": 18.465,
+            "end": 18.751
           },
           {
             "word": "hjem",
-            "start": 18.394,
-            "end": 19.291
+            "start": 18.751,
+            "end": 19.322
           }
         ]
       },
       {
-        "verseStart": 19.291,
-        "verseEnd": 22.67,
+        "verseStart": 19.322,
+        "verseEnd": 22.647,
         "words": [
           {
             "word": "Lyden ",
-            "start": 19.291,
-            "end": 20.103
+            "start": 19.322,
+            "end": 20.098
           },
           {
             "word": "av ",
-            "start": 20.103,
-            "end": 20.348
+            "start": 20.098,
+            "end": 20.342
           },
           {
             "word": "noe ",
-            "start": 20.348,
-            "end": 21.124
+            "start": 20.342,
+            "end": 21.075
           },
           {
             "word": "som ",
-            "start": 21.124,
-            "end": 21.369
+            "start": 21.075,
+            "end": 21.323
           },
           {
             "word": "slipper ",
-            "start": 21.369,
-            "end": 21.938
+            "start": 21.323,
+            "end": 21.855
           },
           {
             "word": "oss ",
-            "start": 21.938,
-            "end": 22.1
+            "start": 21.855,
+            "end": 22.099
           },
           {
             "word": "fri",
-            "start": 22.1,
-            "end": 22.67
+            "start": 22.099,
+            "end": 22.647
           }
         ]
       },
       {
-        "verseStart": 22.67,
-        "verseEnd": 27.678,
+        "verseStart": 22.647,
+        "verseEnd": 27.673,
         "words": [
           {
             "word": "Vi ",
-            "start": 22.67,
-            "end": 22.874
+            "start": 22.647,
+            "end": 22.854
           },
           {
             "word": "har'sje ",
-            "start": 22.874,
-            "end": 23.323
+            "start": 22.854,
+            "end": 23.344
           },
           {
             "word": "penger ",
-            "start": 23.323,
-            "end": 23.892
+            "start": 23.344,
+            "end": 23.874
           },
           {
             "word": "men ",
-            "start": 23.892,
-            "end": 24.136
+            "start": 23.874,
+            "end": 24.12
           },
           {
             "word": "vi ",
-            "start": 24.136,
-            "end": 24.38
+            "start": 24.12,
+            "end": 24.365
           },
           {
             "word": "eier ",
-            "start": 24.38,
-            "end": 24.868
+            "start": 24.365,
+            "end": 24.813
           },
           {
             "word": "allting",
-            "start": 24.868,
-            "end": 27.678
+            "start": 24.813,
+            "end": 27.673
           }
         ]
       },
       {
-        "verseStart": 27.678,
-        "verseEnd": 31.833,
+        "verseStart": 27.673,
+        "verseEnd": 31.782,
         "words": [
           {
             "word": "Å ",
-            "start": 27.678,
-            "end": 27.8
+            "start": 27.673,
+            "end": 27.796
           },
           {
             "word": "vi ",
-            "start": 27.8,
-            "end": 28.127
+            "start": 27.796,
+            "end": 27.88
           },
           {
             "word": "trenger ",
-            "start": 28.127,
-            "end": 28.249
+            "start": 27.88,
+            "end": 28.247
           },
           {
             "word": "ikke ",
-            "start": 28.249,
-            "end": 28.332
+            "start": 28.247,
+            "end": 28.37
           },
           {
             "word": "verden, ",
-            "start": 28.332,
-            "end": 29.757
+            "start": 28.37,
+            "end": 29.835
           },
           {
             "word": "for ",
-            "start": 29.757,
-            "end": 29.881
+            "start": 29.835,
+            "end": 29.944
           },
           {
             "word": "meg ",
-            "start": 29.881,
-            "end": 30.084
+            "start": 29.944,
+            "end": 30.029
           },
           {
             "word": "og ",
-            "start": 30.084,
-            "end": 30.167
+            "start": 30.029,
+            "end": 30.153
           },
           {
             "word": "deg ",
-            "start": 30.167,
-            "end": 30.29
+            "start": 30.153,
+            "end": 30.234
           },
           {
             "word": "e ",
-            "start": 30.29,
-            "end": 30.411
+            "start": 30.234,
+            "end": 30.764
           },
           {
             "word": "verden",
-            "start": 30.411,
-            "end": 31.833
+            "start": 30.764,
+            "end": 31.782
           }
         ]
       },
       {
-        "verseStart": 31.833,
-        "verseEnd": 35.377,
+        "verseStart": 31.782,
+        "verseEnd": 35.338,
         "words": [
           {
             "word": "Vi ",
-            "start": 31.833,
-            "end": 31.916
+            "start": 31.782,
+            "end": 31.904
           },
           {
             "word": "trenger ",
-            "start": 31.916,
-            "end": 32.324
+            "start": 31.904,
+            "end": 31.986
           },
           {
             "word": "ikke ",
-            "start": 32.324,
-            "end": 32.406
+            "start": 31.986,
+            "end": 32.068
           },
           {
             "word": "verden, ",
-            "start": 32.406,
-            "end": 33.787
+            "start": 32.068,
+            "end": 33.702
           },
           {
             "word": "for ",
-            "start": 33.787,
-            "end": 33.909
+            "start": 33.702,
+            "end": 33.824
           },
           {
             "word": "meg ",
-            "start": 33.909,
-            "end": 33.991
+            "start": 33.824,
+            "end": 33.905
           },
           {
             "word": "og ",
-            "start": 33.991,
-            "end": 34.152
+            "start": 33.905,
+            "end": 34.028
           },
           {
             "word": "deg ",
-            "start": 34.152,
-            "end": 34.357
+            "start": 34.028,
+            "end": 34.11
           },
           {
             "word": "e ",
-            "start": 34.357,
-            "end": 34.684
+            "start": 34.11,
+            "end": 34.234
           },
           {
             "word": "verden",
-            "start": 34.684,
-            "end": 35.377
+            "start": 34.234,
+            "end": 35.338
           }
         ]
       },
       {
-        "verseStart": 35.377,
-        "verseEnd": 38.611,
+        "verseStart": 35.338,
+        "verseEnd": 38.563,
         "words": [
           {
             "word": "Lyden ",
-            "start": 35.377,
-            "end": 36.108
+            "start": 35.338,
+            "end": 36.113
           },
           {
             "word": "av ",
-            "start": 36.108,
-            "end": 36.312
+            "start": 36.113,
+            "end": 36.318
           },
           {
             "word": "noe ",
-            "start": 36.312,
-            "end": 37.101
+            "start": 36.318,
+            "end": 37.013
           },
           {
             "word": "som ",
-            "start": 37.101,
-            "end": 37.387
+            "start": 37.013,
+            "end": 37.258
           },
           {
             "word": "slipper ",
-            "start": 37.387,
-            "end": 37.834
+            "start": 37.258,
+            "end": 37.543
           },
           {
             "word": "oss ",
-            "start": 37.834,
-            "end": 38.037
+            "start": 37.543,
+            "end": 37.904
           },
           {
             "word": "fri",
-            "start": 38.037,
-            "end": 38.611
+            "start": 37.904,
+            "end": 38.563
           }
         ]
       },
       {
-        "verseStart": 38.611,
-        "verseEnd": 43.305,
+        "verseStart": 38.563,
+        "verseEnd": 43.342,
         "words": [
           {
             "word": "Vi ",
-            "start": 38.611,
-            "end": 38.814
+            "start": 38.563,
+            "end": 39.063
           },
           {
             "word": "har'sje ",
-            "start": 38.814,
-            "end": 39.345
+            "start": 39.063,
+            "end": 39.269
           },
           {
             "word": "penger ",
-            "start": 39.345,
-            "end": 39.877
+            "start": 39.269,
+            "end": 39.472
           },
           {
             "word": "men ",
-            "start": 39.877,
-            "end": 40.124
+            "start": 39.472,
+            "end": 40.048
           },
           {
             "word": "vi ",
-            "start": 40.124,
-            "end": 40.368
+            "start": 40.048,
+            "end": 40.292
           },
           {
             "word": "eier ",
-            "start": 40.368,
-            "end": 40.816
+            "start": 40.292,
+            "end": 40.824
           },
           {
             "word": "allting",
-            "start": 40.816,
-            "end": 43.305
+            "start": 40.824,
+            "end": 43.342
           }
         ]
       },
       {
-        "verseStart": 43.305,
-        "verseEnd": 46.647,
+        "verseStart": 43.342,
+        "verseEnd": 46.663,
         "words": [
           {
             "word": "Du ",
-            "start": 43.305,
-            "end": 43.792
+            "start": 43.342,
+            "end": 43.836
           },
           {
             "word": "får ",
-            "start": 43.792,
-            "end": 44.328
+            "start": 43.836,
+            "end": 44.37
           },
           {
             "word": "meg ",
-            "start": 44.328,
-            "end": 44.896
+            "start": 44.37,
+            "end": 44.899
           },
           {
             "word": "til ",
-            "start": 44.896,
-            "end": 45.1
+            "start": 44.899,
+            "end": 45.144
           },
           {
             "word": "å ",
-            "start": 45.1,
-            "end": 45.425
+            "start": 45.144,
+            "end": 45.401
           },
           {
             "word": "kjøre ",
-            "start": 45.425,
-            "end": 45.874
+            "start": 45.401,
+            "end": 45.89
           },
           {
             "word": "meg ",
-            "start": 45.874,
-            "end": 46.159
+            "start": 45.89,
+            "end": 46.176
           },
           {
             "word": "opp",
-            "start": 46.159,
-            "end": 46.647
+            "start": 46.176,
+            "end": 46.663
           }
         ]
       },
       {
-        "verseStart": 46.647,
-        "verseEnd": 51.336,
+        "verseStart": 46.663,
+        "verseEnd": 51.35,
         "words": [
           {
             "word": "Det ",
-            "start": 46.647,
-            "end": 46.891
+            "start": 46.663,
+            "end": 46.826
           },
           {
             "word": "e ",
-            "start": 46.891,
-            "end": 47.135
+            "start": 46.826,
+            "end": 46.949
           },
           {
             "word": "ingenting ",
-            "start": 47.135,
-            "end": 47.826
+            "start": 46.949,
+            "end": 47.846
           },
           {
             "word": "som ",
-            "start": 47.826,
-            "end": 48.071
+            "start": 47.846,
+            "end": 48.05
           },
           {
             "word": "kan ",
-            "start": 48.071,
-            "end": 48.357
+            "start": 48.05,
+            "end": 48.333
           },
           {
             "word": "kjøre ",
-            "start": 48.357,
-            "end": 48.806
+            "start": 48.333,
+            "end": 48.863
           },
           {
             "word": "meg ",
-            "start": 48.806,
-            "end": 49.293
+            "start": 48.863,
+            "end": 49.392
           },
           {
             "word": "ned",
-            "start": 49.293,
-            "end": 51.336
+            "start": 49.392,
+            "end": 51.35
           }
         ]
       },
       {
-        "verseStart": 51.336,
-        "verseEnd": 54.571,
+        "verseStart": 51.35,
+        "verseEnd": 54.656,
         "words": [
           {
             "word": "Du ",
-            "start": 51.336,
-            "end": 51.867
+            "start": 51.35,
+            "end": 51.882
           },
           {
             "word": "får ",
-            "start": 51.867,
-            "end": 52.355
+            "start": 51.882,
+            "end": 52.423
           },
           {
             "word": "alt ",
-            "start": 52.355,
-            "end": 52.89
+            "start": 52.423,
+            "end": 52.954
           },
           {
             "word": "til ",
-            "start": 52.89,
-            "end": 53.176
+            "start": 52.954,
+            "end": 53.189
           },
           {
             "word": "å ",
-            "start": 53.176,
-            "end": 53.42
+            "start": 53.189,
+            "end": 53.434
           },
           {
             "word": "sprenge ",
-            "start": 53.42,
-            "end": 53.908
+            "start": 53.434,
+            "end": 53.921
           },
           {
             "word": "i ",
-            "start": 53.908,
-            "end": 54.153
+            "start": 53.921,
+            "end": 54.167
           },
           {
             "word": "kok",
-            "start": 54.153,
-            "end": 54.571
+            "start": 54.167,
+            "end": 54.656
           }
         ]
       },
       {
-        "verseStart": 54.571,
-        "verseEnd": 59.406,
+        "verseStart": 54.656,
+        "verseEnd": 59.435,
         "words": [
           {
             "word": "D ",
-            "start": 54.571,
-            "end": 54.653
+            "start": 54.656,
+            "end": 54.779
           },
           {
             "word": "e ",
-            "start": 54.653,
-            "end": 54.898
+            "start": 54.779,
+            "end": 54.944
           },
           {
             "word": "ingen ",
-            "start": 54.898,
-            "end": 55.427
+            "start": 54.944,
+            "end": 55.435
           },
           {
             "word": "andre ",
-            "start": 55.427,
-            "end": 55.917
+            "start": 55.435,
+            "end": 55.883
           },
           {
             "word": "eg ",
-            "start": 55.917,
-            "end": 56.039
+            "start": 55.883,
+            "end": 56.006
           },
           {
             "word": "heller ",
-            "start": 56.039,
-            "end": 56.423
+            "start": 56.006,
+            "end": 56.371
           },
           {
             "word": "gjør ",
-            "start": 56.423,
-            "end": 56.707
+            "start": 56.371,
+            "end": 56.615
           },
           {
             "word": "det ",
-            "start": 56.707,
-            "end": 56.914
+            "start": 56.615,
+            "end": 56.859
           },
           {
             "word": "her ",
-            "start": 56.914,
-            "end": 57.408
+            "start": 56.859,
+            "end": 57.395
           },
           {
             "word": "med",
-            "start": 57.408,
-            "end": 59.406
+            "start": 57.395,
+            "end": 59.435
           }
         ]
       },
       {
-        "verseStart": 59.406,
-        "verseEnd": 62.629,
+        "verseStart": 59.435,
+        "verseEnd": 62.824,
         "words": [
           {
             "word": "Fem ",
-            "start": 0,
-            "end": 0
+            "start": 59.435,
+            "end": 59.888
           },
           {
             "word": "fine ",
-            "start": 0,
-            "end": 0
+            "start": 59.888,
+            "end": 60.378
           },
           {
             "word": "frøkner ",
-            "start": 0,
-            "end": 0
+            "start": 60.378,
+            "end": 60.896
           },
           {
             "word": "oppi ",
-            "start": 0,
-            "end": 0
+            "start": 60.896,
+            "end": 61.385
           },
           {
             "word": "klubben, ",
-            "start": 0,
-            "end": 0
+            "start": 61.385,
+            "end": 61.916
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 61.916,
+            "end": 62.329
           },
           {
             "word": "befaler",
-            "start": 0,
-            "end": 0
+            "start": 62.329,
+            "end": 62.824
           }
         ]
       },
       {
-        "verseStart": 62.629,
-        "verseEnd": 66.588,
+        "verseStart": 62.824,
+        "verseEnd": 66.656,
         "words": [
           {
             "word": "Sku ",
-            "start": 62.629,
-            "end": 62.874
+            "start": 62.824,
+            "end": 63.068
           },
           {
             "word": "det ",
-            "start": 62.874,
-            "end": 63.119
+            "start": 63.068,
+            "end": 63.353
           },
           {
             "word": "helt ",
-            "start": 63.119,
-            "end": 63.368
+            "start": 63.353,
+            "end": 63.883
           },
           {
             "word": "opp ",
-            "start": 63.368,
-            "end": 63.857
+            "start": 63.883,
+            "end": 64.128
           },
           {
             "word": "i ",
-            "start": 63.857,
-            "end": 64.55
+            "start": 64.128,
+            "end": 64.374
           },
           {
             "word": "himmelen",
-            "start": 64.55,
-            "end": 66.588
+            "start": 64.374,
+            "end": 66.656
           }
         ]
       },
       {
-        "verseStart": 66.588,
-        "verseEnd": 70.872,
+        "verseStart": 66.656,
+        "verseEnd": 70.899,
         "words": [
           {
             "word": "Om ",
-            "start": 66.588,
-            "end": 66.832
+            "start": 66.656,
+            "end": 66.904
           },
           {
             "word": "det ",
-            "start": 66.832,
-            "end": 67.117
+            "start": 66.904,
+            "end": 67.151
           },
           {
             "word": "e ",
-            "start": 67.117,
-            "end": 67.364
+            "start": 67.151,
+            "end": 67.398
           },
           {
             "word": "fem ",
-            "start": 67.364,
-            "end": 67.892
+            "start": 67.398,
+            "end": 67.886
           },
           {
             "word": "fine ",
-            "start": 67.892,
-            "end": 68.382
+            "start": 67.886,
+            "end": 68.415
           },
           {
             "word": "fyrer ",
-            "start": 68.382,
-            "end": 68.875
+            "start": 68.415,
+            "end": 68.854
           },
           {
             "word": "spiller ",
-            "start": 68.875,
-            "end": 69.118
+            "start": 68.854,
+            "end": 69.384
           },
           {
             "word": "ingen ",
-            "start": 69.118,
-            "end": 69.815
+            "start": 69.384,
+            "end": 69.834
           },
           {
             "word": "rolle ",
-            "start": 69.815,
-            "end": 70.384
+            "start": 69.834,
+            "end": 70.449
           },
           {
             "word": "på ",
-            "start": 70.384,
-            "end": 70.587
+            "start": 70.449,
+            "end": 70.654
           },
           {
             "word": "det",
-            "start": 70.587,
-            "end": 70.872
+            "start": 70.654,
+            "end": 70.899
           }
         ]
       },
       {
-        "verseStart": 70.872,
-        "verseEnd": 75.352,
+        "verseStart": 70.899,
+        "verseEnd": 75.365,
         "words": [
           {
             "word": "Ingen ",
-            "start": 70.872,
-            "end": 71.324
+            "start": 70.899,
+            "end": 71.358
           },
           {
             "word": "andre ",
-            "start": 71.324,
-            "end": 71.651
+            "start": 71.358,
+            "end": 71.646
           },
           {
             "word": "eg ",
-            "start": 71.651,
-            "end": 71.895
+            "start": 71.646,
+            "end": 71.89
           },
           {
             "word": "heller ",
-            "start": 71.895,
-            "end": 72.301
+            "start": 71.89,
+            "end": 72.419
           },
           {
             "word": "gjør ",
-            "start": 72.301,
-            "end": 72.585
+            "start": 72.419,
+            "end": 72.663
           },
           {
             "word": "det ",
-            "start": 72.585,
-            "end": 72.87
+            "start": 72.663,
+            "end": 72.908
           },
           {
             "word": "her ",
-            "start": 72.87,
-            "end": 73.359
+            "start": 72.908,
+            "end": 73.4
           },
           {
             "word": "med",
-            "start": 73.359,
-            "end": 75.352
+            "start": 73.4,
+            "end": 75.365
           }
         ]
       },
       {
-        "verseStart": 75.352,
-        "verseEnd": 83.756,
+        "verseStart": 75.365,
+        "verseEnd": 83.778,
         "words": [
           {
             "word": "Send ",
-            "start": 75.352,
-            "end": 75.686
+            "start": 75.365,
+            "end": 75.731
           },
           {
             "word": "meg ",
-            "start": 75.686,
-            "end": 76.051
+            "start": 75.731,
+            "end": 76.057
           },
           {
             "word": "den ",
-            "start": 76.051,
-            "end": 76.376
+            "start": 76.057,
+            "end": 76.382
           },
           {
             "word": "derre ",
-            "start": 76.376,
-            "end": 77.067
+            "start": 76.382,
+            "end": 77.118
           },
           {
             "word": "du ",
-            "start": 77.067,
-            "end": 77.352
+            "start": 77.118,
+            "end": 77.404
           },
           {
             "word": "vet ",
-            "start": 77.352,
-            "end": 77.641
+            "start": 77.404,
+            "end": 77.689
           },
           {
             "word": "som ",
-            "start": 77.641,
-            "end": 78.007
+            "start": 77.689,
+            "end": 78.056
           },
           {
             "word": "får ",
-            "start": 78.007,
-            "end": 78.332
+            "start": 78.056,
+            "end": 78.383
           },
           {
             "word": "oss ",
-            "start": 78.332,
-            "end": 78.7
+            "start": 78.383,
+            "end": 78.713
           },
           {
             "word": "til ",
-            "start": 78.7,
-            "end": 79.066
+            "start": 78.713,
+            "end": 79.038
           },
           {
             "word": "å ",
-            "start": 79.066,
-            "end": 79.351
+            "start": 79.038,
+            "end": 79.322
           },
           {
             "word": "kjenne ",
-            "start": 79.351,
-            "end": 80.006
+            "start": 79.322,
+            "end": 80.054
           },
           {
             "word": "det ",
-            "start": 80.006,
-            "end": 80.331
+            "start": 80.054,
+            "end": 80.34
           },
           {
             "word": "brenner ",
-            "start": 80.331,
-            "end": 81.021
+            "start": 80.34,
+            "end": 81.032
           },
           {
             "word": "i ",
-            "start": 81.021,
-            "end": 81.265
+            "start": 81.032,
+            "end": 81.277
           },
           {
             "word": "hele ",
-            "start": 81.265,
-            "end": 81.878
+            "start": 81.277,
+            "end": 81.901
           },
           {
             "word": "vår ",
-            "start": 81.878,
-            "end": 82.123
+            "start": 81.901,
+            "end": 82.105
           },
           {
             "word": "kropp",
-            "start": 82.123,
-            "end": 83.756
+            "start": 82.105,
+            "end": 83.778
           }
         ]
       },
       {
-        "verseStart": 83.756,
-        "verseEnd": 91.299,
+        "verseStart": 83.778,
+        "verseEnd": 91.255,
         "words": [
           {
             "word": "Det ",
-            "start": 0,
-            "end": 0
+            "start": 83.778,
+            "end": 84.049
           },
           {
             "word": "e ",
-            "start": 0,
-            "end": 0
+            "start": 84.049,
+            "end": 84.215
           },
           {
             "word": "som ",
-            "start": 0,
-            "end": 0
+            "start": 84.215,
+            "end": 84.346
           },
           {
             "word": "å ",
-            "start": 0,
-            "end": 0
+            "start": 84.346,
+            "end": 84.551
           },
           {
             "word": "fly ",
-            "start": 0,
-            "end": 0
+            "start": 84.551,
+            "end": 84.717
           },
           {
             "word": "over ",
-            "start": 0,
-            "end": 0
+            "start": 84.717,
+            "end": 84.884
           },
           {
             "word": "hele ",
-            "start": 0,
-            "end": 0
+            "start": 84.884,
+            "end": 85.047
           },
           {
             "word": "vår ",
-            "start": 0,
-            "end": 0
+            "start": 85.047,
+            "end": 85.251
           },
           {
             "word": "by, ",
-            "start": 0,
-            "end": 0
+            "start": 85.251,
+            "end": 85.535
           },
           {
             "word": "denne ",
-            "start": 0,
-            "end": 0
+            "start": 85.535,
+            "end": 85.702
           },
           {
             "word": "sangen ",
-            "start": 0,
-            "end": 0
+            "start": 85.702,
+            "end": 86.069
           },
           {
             "word": "va ",
-            "start": 0,
-            "end": 0
+            "start": 86.069,
+            "end": 86.272
           },
           {
             "word": "fet ",
-            "start": 0,
-            "end": 0
+            "start": 86.272,
+            "end": 86.477
           },
           {
             "word": "så ",
-            "start": 0,
-            "end": 0
+            "start": 86.477,
+            "end": 86.685
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 86.685,
+            "end": 86.887
           },
           {
             "word": "satt ",
-            "start": 0,
-            "end": 0
+            "start": 86.887,
+            "end": 87.051
           },
           {
             "word": "an ",
-            "start": 0,
-            "end": 0
+            "start": 87.051,
+            "end": 87.215
           },
           {
             "word": "på ",
-            "start": 0,
-            "end": 0
+            "start": 87.215,
+            "end": 87.582
           },
           {
             "word": "ny?, ",
-            "start": 0,
-            "end": 0
+            "start": 87.582,
+            "end": 88.04
           },
           {
             "word": "Clubbidubbin, ",
-            "start": 0,
-            "end": 0
+            "start": 88.04,
+            "end": 89.483
           },
           {
             "word": "mine ",
-            "start": 0,
-            "end": 0
+            "start": 89.483,
+            "end": 89.688
           },
           {
             "word": "damer ",
-            "start": 0,
-            "end": 0
+            "start": 89.688,
+            "end": 90.062
           },
           {
             "word": "e ",
-            "start": 0,
-            "end": 0
+            "start": 90.062,
+            "end": 90.225
           },
           {
             "word": "så ",
-            "start": 0,
-            "end": 0
+            "start": 90.225,
+            "end": 90.306
           },
           {
             "word": "stunning",
-            "start": 0,
-            "end": 0
+            "start": 90.306,
+            "end": 91.255
           }
         ]
       },
       {
-        "verseStart": 91.299,
-        "verseEnd": 94.568,
+        "verseStart": 91.255,
+        "verseEnd": 94.582,
         "words": [
           {
             "word": "Kanskje ",
-            "start": 91.299,
-            "end": 92.033
+            "start": 91.255,
+            "end": 92.036
           },
           {
             "word": "vi ",
-            "start": 92.033,
-            "end": 92.322
+            "start": 92.036,
+            "end": 92.325
           },
           {
             "word": "e ",
-            "start": 92.322,
-            "end": 92.689
+            "start": 92.325,
+            "end": 92.662
           },
           {
             "word": "litt ",
-            "start": 92.689,
-            "end": 93.138
+            "start": 92.662,
+            "end": 93.272
           },
           {
             "word": "ufyslige",
-            "start": 93.138,
-            "end": 94.568
+            "start": 93.272,
+            "end": 94.582
           }
         ]
       },
       {
-        "verseStart": 94.568,
-        "verseEnd": 99.341,
+        "verseStart": 94.582,
+        "verseEnd": 99.42,
         "words": [
           {
             "word": "Men ",
-            "start": 94.568,
-            "end": 94.853
+            "start": 94.582,
+            "end": 94.869
           },
           {
             "word": "ka ",
-            "start": 94.853,
-            "end": 95.099
+            "start": 94.869,
+            "end": 95.113
           },
           {
             "word": "gjør ",
-            "start": 95.099,
-            "end": 95.427
+            "start": 95.113,
+            "end": 95.403
           },
           {
             "word": "det ",
-            "start": 95.427,
-            "end": 95.672
+            "start": 95.403,
+            "end": 95.687
           },
           {
             "word": "når ",
-            "start": 95.672,
-            "end": 95.917
+            "start": 95.687,
+            "end": 95.931
           },
           {
             "word": "det'sje ",
-            "start": 95.917,
-            "end": 96.364
+            "start": 95.931,
+            "end": 96.422
           },
           {
             "word": "lenger ",
-            "start": 96.364,
-            "end": 96.611
+            "start": 96.422,
+            "end": 96.667
           },
           {
             "word": "e ",
-            "start": 96.611,
-            "end": 97.225
+            "start": 96.667,
+            "end": 97.29
           },
           {
             "word": "dag",
-            "start": 97.225,
-            "end": 99.341
+            "start": 97.29,
+            "end": 99.42
           }
         ]
       },
       {
-        "verseStart": 99.341,
-        "verseEnd": 102.656,
+        "verseStart": 99.42,
+        "verseEnd": 102.715,
         "words": [
           {
             "word": "Fem ",
-            "start": 99.341,
-            "end": 99.87
+            "start": 99.42,
+            "end": 99.953
           },
           {
             "word": "fine ",
-            "start": 99.87,
-            "end": 100.361
+            "start": 99.953,
+            "end": 100.396
           },
           {
             "word": "frøkner, ",
-            "start": 100.361,
-            "end": 101.353
+            "start": 100.396,
+            "end": 101.372
           },
           {
             "word": "tre ",
-            "start": 101.353,
-            "end": 101.597
+            "start": 101.372,
+            "end": 101.617
           },
           {
             "word": "på ",
-            "start": 101.597,
-            "end": 101.882
+            "start": 101.617,
+            "end": 101.901
           },
           {
             "word": "en ",
-            "start": 101.882,
-            "end": 102.126
+            "start": 101.901,
+            "end": 102.186
           },
           {
             "word": "rad",
-            "start": 102.126,
-            "end": 102.656
+            "start": 102.186,
+            "end": 102.715
           }
         ]
       },
       {
-        "verseStart": 102.656,
-        "verseEnd": 107.339,
+        "verseStart": 102.715,
+        "verseEnd": 107.381,
         "words": [
           {
             "word": "Dem ",
-            "start": 102.656,
-            "end": 102.9
+            "start": 102.715,
+            "end": 102.96
           },
           {
             "word": "står ",
-            "start": 102.9,
-            "end": 103.186
+            "start": 102.96,
+            "end": 103.165
           },
           {
             "word": "aleine ",
-            "start": 103.186,
-            "end": 103.431
+            "start": 103.165,
+            "end": 103.817
           },
           {
             "word": "men ",
-            "start": 103.431,
-            "end": 104.046
+            "start": 103.817,
+            "end": 104.145
           },
           {
             "word": "vi ",
-            "start": 104.046,
-            "end": 104.33
+            "start": 104.145,
+            "end": 104.392
           },
           {
             "word": "gjør ",
-            "start": 104.33,
-            "end": 104.574
+            "start": 104.392,
+            "end": 104.636
           },
           {
             "word": "det ",
-            "start": 104.574,
-            "end": 104.858
+            "start": 104.636,
+            "end": 104.889
           },
           {
             "word": "ilag",
-            "start": 104.858,
-            "end": 107.339
+            "start": 104.889,
+            "end": 107.381
           }
         ]
       },
       {
-        "verseStart": 107.339,
-        "verseEnd": 110.514,
+        "verseStart": 107.381,
+        "verseEnd": 110.726,
         "words": [
           {
             "word": "Du ",
-            "start": 107.339,
-            "end": 107.732
+            "start": 107.381,
+            "end": 107.872
           },
           {
             "word": "får ",
-            "start": 107.732,
-            "end": 108.265
+            "start": 107.872,
+            "end": 108.385
           },
           {
             "word": "meg ",
-            "start": 108.265,
-            "end": 108.843
+            "start": 108.385,
+            "end": 108.914
           },
           {
             "word": "til ",
-            "start": 108.843,
-            "end": 109.127
+            "start": 108.914,
+            "end": 109.163
           },
           {
             "word": "å ",
-            "start": 109.127,
-            "end": 109.372
+            "start": 109.163,
+            "end": 109.457
           },
           {
             "word": "kjøre ",
-            "start": 109.372,
-            "end": 109.862
+            "start": 109.457,
+            "end": 109.907
           },
           {
             "word": "meg ",
-            "start": 109.862,
-            "end": 110.108
+            "start": 109.907,
+            "end": 110.192
           },
           {
             "word": "opp",
-            "start": 110.108,
-            "end": 110.514
+            "start": 110.192,
+            "end": 110.726
           }
         ]
       },
       {
-        "verseStart": 110.514,
-        "verseEnd": 115.326,
+        "verseStart": 110.726,
+        "verseEnd": 115.361,
         "words": [
           {
             "word": "Det ",
-            "start": 110.514,
-            "end": 110.641
+            "start": 110.726,
+            "end": 110.931
           },
           {
             "word": "e ",
-            "start": 110.641,
-            "end": 110.885
+            "start": 110.931,
+            "end": 111.262
           },
           {
             "word": "ingenting ",
-            "start": 110.885,
-            "end": 111.82
+            "start": 111.262,
+            "end": 111.88
           },
           {
             "word": "som ",
-            "start": 111.82,
-            "end": 112.064
+            "start": 111.88,
+            "end": 112.127
           },
           {
             "word": "kan ",
-            "start": 112.064,
-            "end": 112.349
+            "start": 112.127,
+            "end": 112.414
           },
           {
             "word": "kjøre ",
-            "start": 112.349,
-            "end": 112.838
+            "start": 112.414,
+            "end": 112.865
           },
           {
             "word": "meg ",
-            "start": 112.838,
-            "end": 113.369
+            "start": 112.865,
+            "end": 113.402
           },
           {
             "word": "ned",
-            "start": 113.369,
-            "end": 115.326
+            "start": 113.402,
+            "end": 115.361
           }
         ]
       },
       {
-        "verseStart": 115.326,
-        "verseEnd": 118.691,
+        "verseStart": 115.361,
+        "verseEnd": 118.66,
         "words": [
           {
             "word": "Du ",
-            "start": 115.326,
-            "end": 115.858
+            "start": 115.361,
+            "end": 115.854
           },
           {
             "word": "får ",
-            "start": 115.858,
-            "end": 116.389
+            "start": 115.854,
+            "end": 116.4
           },
           {
             "word": "alt ",
-            "start": 116.389,
-            "end": 116.922
+            "start": 116.4,
+            "end": 116.901
           },
           {
             "word": "til ",
-            "start": 116.922,
-            "end": 117.127
+            "start": 116.901,
+            "end": 117.147
           },
           {
             "word": "å ",
-            "start": 117.127,
-            "end": 117.373
+            "start": 117.147,
+            "end": 117.433
           },
           {
             "word": "sprenge ",
-            "start": 117.373,
-            "end": 117.903
+            "start": 117.433,
+            "end": 117.927
           },
           {
             "word": "i ",
-            "start": 117.903,
-            "end": 118.149
+            "start": 117.927,
+            "end": 118.212
           },
           {
             "word": "kok",
-            "start": 118.149,
-            "end": 118.691
+            "start": 118.212,
+            "end": 118.66
           }
         ]
       },
       {
-        "verseStart": 118.691,
-        "verseEnd": 123.307,
+        "verseStart": 118.66,
+        "verseEnd": 123.428,
         "words": [
           {
             "word": "D ",
-            "start": 118.691,
-            "end": 118.893
+            "start": 118.66,
+            "end": 118.741
           },
           {
             "word": "e ",
-            "start": 118.893,
-            "end": 119.021
+            "start": 118.741,
+            "end": 118.947
           },
           {
             "word": "ingen ",
-            "start": 119.021,
-            "end": 119.428
+            "start": 118.947,
+            "end": 119.411
           },
           {
             "word": "andre ",
-            "start": 119.428,
-            "end": 119.876
+            "start": 119.411,
+            "end": 119.819
           },
           {
             "word": "eg ",
-            "start": 119.876,
-            "end": 120.129
+            "start": 119.819,
+            "end": 119.986
           },
           {
             "word": "heller ",
-            "start": 120.129,
-            "end": 120.373
+            "start": 119.986,
+            "end": 120.4
           },
           {
             "word": "gjør ",
-            "start": 120.373,
-            "end": 120.657
+            "start": 120.4,
+            "end": 120.647
           },
           {
             "word": "det ",
-            "start": 120.657,
-            "end": 120.901
+            "start": 120.647,
+            "end": 120.892
           },
           {
             "word": "her ",
-            "start": 120.901,
-            "end": 121.352
+            "start": 120.892,
+            "end": 121.428
           },
           {
             "word": "med",
-            "start": 121.352,
-            "end": 123.307
+            "start": 121.428,
+            "end": 123.428
           }
         ]
       },
       {
-        "verseStart": 123.307,
-        "verseEnd": 126.825,
+        "verseStart": 123.428,
+        "verseEnd": 126.694,
         "words": [
           {
             "word": "Fem ",
-            "start": 0,
-            "end": 0
+            "start": 123.428,
+            "end": 123.885
           },
           {
             "word": "fine ",
-            "start": 0,
-            "end": 0
+            "start": 123.885,
+            "end": 124.394
           },
           {
             "word": "frøkner ",
-            "start": 0,
-            "end": 0
+            "start": 124.394,
+            "end": 124.888
           },
           {
             "word": "oppi ",
-            "start": 0,
-            "end": 0
+            "start": 124.888,
+            "end": 125.417
           },
           {
             "word": "klubben, ",
-            "start": 0,
-            "end": 0
+            "start": 125.417,
+            "end": 125.867
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 125.867,
+            "end": 126.111
           },
           {
             "word": "befaler",
-            "start": 0,
-            "end": 0
+            "start": 126.111,
+            "end": 126.694
           }
         ]
       },
       {
-        "verseStart": 126.825,
-        "verseEnd": 130.623,
+        "verseStart": 126.694,
+        "verseEnd": 130.647,
         "words": [
           {
             "word": "Sku ",
-            "start": 126.825,
-            "end": 127.07
+            "start": 126.694,
+            "end": 126.899
           },
           {
             "word": "det ",
-            "start": 127.07,
-            "end": 127.355
+            "start": 126.899,
+            "end": 127.308
           },
           {
             "word": "helt ",
-            "start": 127.355,
-            "end": 127.888
+            "start": 127.308,
+            "end": 127.471
           },
           {
             "word": "opp ",
-            "start": 127.888,
-            "end": 128.134
+            "start": 127.471,
+            "end": 128.089
           },
           {
             "word": "i ",
-            "start": 128.134,
-            "end": 128.379
+            "start": 128.089,
+            "end": 128.334
           },
           {
             "word": "himmelen",
-            "start": 128.379,
-            "end": 130.623
+            "start": 128.334,
+            "end": 130.647
           }
         ]
       },
       {
-        "verseStart": 130.623,
-        "verseEnd": 134.796,
+        "verseStart": 130.647,
+        "verseEnd": 134.867,
         "words": [
           {
             "word": "Om ",
-            "start": 130.623,
-            "end": 130.868
+            "start": 130.647,
+            "end": 130.89
           },
           {
             "word": "det ",
-            "start": 130.868,
-            "end": 131.161
+            "start": 130.89,
+            "end": 131.136
           },
           {
             "word": "e ",
-            "start": 131.161,
-            "end": 131.405
+            "start": 131.136,
+            "end": 131.385
           },
           {
             "word": "fem ",
-            "start": 131.405,
-            "end": 131.892
+            "start": 131.385,
+            "end": 131.873
           },
           {
             "word": "fine ",
-            "start": 131.892,
-            "end": 132.383
+            "start": 131.873,
+            "end": 132.368
           },
           {
             "word": "fyrer ",
-            "start": 132.383,
-            "end": 132.628
+            "start": 132.368,
+            "end": 132.653
           },
           {
             "word": "spiller ",
-            "start": 132.628,
-            "end": 133.284
+            "start": 132.653,
+            "end": 133.186
           },
           {
             "word": "ingen ",
-            "start": 133.284,
-            "end": 133.774
+            "start": 133.186,
+            "end": 133.845
           },
           {
             "word": "rolle ",
-            "start": 133.774,
-            "end": 134.225
+            "start": 133.845,
+            "end": 134.092
           },
           {
             "word": "på ",
-            "start": 134.225,
-            "end": 134.511
+            "start": 134.092,
+            "end": 134.541
           },
           {
             "word": "det",
-            "start": 134.511,
-            "end": 134.796
+            "start": 134.541,
+            "end": 134.867
           }
         ]
       },
       {
-        "verseStart": 134.796,
-        "verseEnd": 139.271,
+        "verseStart": 134.867,
+        "verseEnd": 139.337,
         "words": [
           {
             "word": "Ingen ",
-            "start": 134.796,
-            "end": 135.131
+            "start": 134.867,
+            "end": 135.111
           },
           {
             "word": "andre ",
-            "start": 135.131,
-            "end": 135.624
+            "start": 135.111,
+            "end": 135.566
           },
           {
             "word": "eg ",
-            "start": 135.624,
-            "end": 135.869
+            "start": 135.566,
+            "end": 135.813
           },
           {
             "word": "heller ",
-            "start": 135.869,
-            "end": 136.154
+            "start": 135.813,
+            "end": 136.343
           },
           {
             "word": "gjør ",
-            "start": 136.154,
-            "end": 136.403
+            "start": 136.343,
+            "end": 136.628
           },
           {
             "word": "det ",
-            "start": 136.403,
-            "end": 136.854
+            "start": 136.628,
+            "end": 136.873
           },
           {
             "word": "her ",
-            "start": 136.854,
-            "end": 137.099
+            "start": 136.873,
+            "end": 137.368
           },
           {
             "word": "med",
-            "start": 137.099,
-            "end": 139.271
+            "start": 137.368,
+            "end": 139.337
           }
         ]
       },
       {
-        "verseStart": 139.271,
-        "verseEnd": 142.753,
+        "verseStart": 139.337,
+        "verseEnd": 142.655,
         "words": [
           {
             "word": "Fem ",
-            "start": 0,
-            "end": 0
+            "start": 139.337,
+            "end": 139.87
           },
           {
             "word": "fine ",
-            "start": 0,
-            "end": 0
+            "start": 139.87,
+            "end": 140.364
           },
           {
             "word": "frøkner ",
-            "start": 0,
-            "end": 0
+            "start": 140.364,
+            "end": 140.895
           },
           {
             "word": "oppi ",
-            "start": 0,
-            "end": 0
+            "start": 140.895,
+            "end": 141.426
           },
           {
             "word": "klubben, ",
-            "start": 0,
-            "end": 0
+            "start": 141.426,
+            "end": 141.873
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 141.873,
+            "end": 142.122
           },
           {
             "word": "befaler",
-            "start": 0,
-            "end": 0
+            "start": 142.122,
+            "end": 142.655
           }
         ]
       },
       {
-        "verseStart": 142.753,
-        "verseEnd": 146.549,
+        "verseStart": 142.655,
+        "verseEnd": 146.581,
         "words": [
           {
             "word": "Sku ",
-            "start": 142.753,
-            "end": 143.042
+            "start": 142.655,
+            "end": 142.982
           },
           {
             "word": "det ",
-            "start": 143.042,
-            "end": 143.327
+            "start": 142.982,
+            "end": 143.348
           },
           {
             "word": "helt ",
-            "start": 143.327,
-            "end": 143.857
+            "start": 143.348,
+            "end": 143.836
           },
           {
             "word": "opp ",
-            "start": 143.857,
-            "end": 144.102
+            "start": 143.836,
+            "end": 144.085
           },
           {
             "word": "i ",
-            "start": 144.102,
-            "end": 144.386
+            "start": 144.085,
+            "end": 144.373
           },
           {
             "word": "himmelen",
-            "start": 144.386,
-            "end": 146.549
+            "start": 144.373,
+            "end": 146.581
           }
         ]
       },
       {
-        "verseStart": 146.549,
-        "verseEnd": 150.847,
+        "verseStart": 146.581,
+        "verseEnd": 150.911,
         "words": [
           {
             "word": "Om ",
-            "start": 146.549,
-            "end": 146.835
+            "start": 146.581,
+            "end": 146.867
           },
           {
             "word": "det ",
-            "start": 146.835,
-            "end": 147.123
+            "start": 146.867,
+            "end": 147.152
           },
           {
             "word": "e ",
-            "start": 147.123,
-            "end": 147.367
+            "start": 147.152,
+            "end": 147.402
           },
           {
             "word": "fem ",
-            "start": 147.367,
+            "start": 147.402,
             "end": 147.894
           },
           {
             "word": "fine ",
             "start": 147.894,
-            "end": 148.423
+            "end": 148.388
           },
           {
             "word": "fyrer ",
-            "start": 148.423,
-            "end": 148.667
+            "start": 148.388,
+            "end": 148.904
           },
           {
             "word": "spiller ",
-            "start": 148.667,
-            "end": 149.116
+            "start": 148.904,
+            "end": 149.152
           },
           {
             "word": "ingen ",
-            "start": 149.116,
-            "end": 149.367
+            "start": 149.152,
+            "end": 149.767
           },
           {
             "word": "rolle ",
-            "start": 149.367,
-            "end": 150.107
+            "start": 149.767,
+            "end": 150.339
           },
           {
             "word": "på ",
-            "start": 150.107,
-            "end": 150.603
+            "start": 150.339,
+            "end": 150.625
           },
           {
             "word": "det",
-            "start": 150.603,
-            "end": 150.847
+            "start": 150.625,
+            "end": 150.911
           }
         ]
       },
       {
-        "verseStart": 150.847,
-        "verseEnd": 155.315,
+        "verseStart": 150.911,
+        "verseEnd": 155.374,
         "words": [
           {
             "word": "Ingen ",
-            "start": 150.847,
-            "end": 151.296
+            "start": 150.911,
+            "end": 151.325
           },
           {
             "word": "andre ",
-            "start": 151.296,
-            "end": 151.669
+            "start": 151.325,
+            "end": 151.609
           },
           {
             "word": "eg ",
-            "start": 151.669,
-            "end": 151.914
+            "start": 151.609,
+            "end": 151.896
           },
           {
             "word": "heller ",
-            "start": 151.914,
-            "end": 152.367
+            "start": 151.896,
+            "end": 152.385
           },
           {
             "word": "gjør ",
-            "start": 152.367,
-            "end": 152.612
+            "start": 152.385,
+            "end": 152.633
           },
           {
             "word": "det ",
-            "start": 152.612,
-            "end": 152.902
+            "start": 152.633,
+            "end": 152.92
           },
           {
             "word": "her ",
-            "start": 152.902,
-            "end": 153.352
+            "start": 152.92,
+            "end": 153.373
           },
           {
             "word": "med",
-            "start": 153.352,
-            "end": 155.315
+            "start": 153.373,
+            "end": 155.374
           }
         ]
       },
       {
-        "verseStart": 155.315,
-        "verseEnd": 158.633,
+        "verseStart": 155.374,
+        "verseEnd": 158.629,
         "words": [
           {
             "word": "Fem ",
-            "start": 155.315,
-            "end": 155.848
+            "start": 155.374,
+            "end": 155.867
           },
           {
             "word": "fine ",
-            "start": 155.848,
-            "end": 156.377
+            "start": 155.867,
+            "end": 156.401
           },
           {
             "word": "frøkner, ",
-            "start": 156.377,
-            "end": 157.397
+            "start": 156.401,
+            "end": 157.344
           },
           {
             "word": "tre ",
-            "start": 157.397,
-            "end": 157.606
+            "start": 157.344,
+            "end": 157.635
           },
           {
             "word": "på ",
-            "start": 157.606,
-            "end": 157.893
+            "start": 157.635,
+            "end": 157.886
           },
           {
             "word": "en ",
-            "start": 157.893,
-            "end": 158.139
+            "start": 157.886,
+            "end": 158.175
           },
           {
             "word": "rad",
-            "start": 158.139,
-            "end": 158.633
+            "start": 158.175,
+            "end": 158.629
           }
         ]
       },
       {
-        "verseStart": 158.633,
-        "verseEnd": 163.334,
+        "verseStart": 158.629,
+        "verseEnd": 163.362,
         "words": [
           {
             "word": "Dem ",
-            "start": 158.633,
-            "end": 158.877
+            "start": 158.629,
+            "end": 158.874
           },
           {
             "word": "står ",
-            "start": 158.877,
+            "start": 158.874,
             "end": 159.124
           },
           {
             "word": "aleine ",
             "start": 159.124,
-            "end": 159.903
+            "end": 159.911
           },
           {
             "word": "men ",
-            "start": 159.903,
-            "end": 160.148
+            "start": 159.911,
+            "end": 160.16
           },
           {
             "word": "vi ",
-            "start": 160.148,
-            "end": 160.392
+            "start": 160.16,
+            "end": 160.406
           },
           {
             "word": "gjør ",
-            "start": 160.392,
-            "end": 160.636
+            "start": 160.406,
+            "end": 160.653
           },
           {
             "word": "det ",
-            "start": 160.636,
-            "end": 160.924
+            "start": 160.653,
+            "end": 160.897
           },
           {
             "word": "ilag",
-            "start": 160.924,
-            "end": 163.334
+            "start": 160.897,
+            "end": 163.362
           }
         ]
       },
       {
-        "verseStart": 163.334,
-        "verseEnd": 166.688,
+        "verseStart": 163.362,
+        "verseEnd": 166.697,
         "words": [
           {
             "word": "Du ",
-            "start": 163.334,
-            "end": 163.866
+            "start": 163.362,
+            "end": 163.854
           },
           {
             "word": "får ",
-            "start": 163.866,
-            "end": 164.362
+            "start": 163.854,
+            "end": 164.428
           },
           {
             "word": "meg ",
-            "start": 164.362,
-            "end": 164.931
+            "start": 164.428,
+            "end": 164.921
           },
           {
             "word": "til ",
-            "start": 164.931,
-            "end": 165.174
+            "start": 164.921,
+            "end": 165.171
           },
           {
             "word": "å ",
-            "start": 165.174,
-            "end": 165.42
+            "start": 165.171,
+            "end": 165.456
           },
           {
             "word": "kjøre ",
-            "start": 165.42,
-            "end": 165.912
+            "start": 165.456,
+            "end": 165.897
           },
           {
             "word": "meg ",
-            "start": 165.912,
-            "end": 166.155
+            "start": 165.897,
+            "end": 166.2
           },
           {
             "word": "opp",
-            "start": 166.155,
-            "end": 166.688
+            "start": 166.2,
+            "end": 166.697
           }
         ]
       },
       {
-        "verseStart": 166.688,
-        "verseEnd": 171.323,
+        "verseStart": 166.697,
+        "verseEnd": 171.344,
         "words": [
           {
             "word": "Det ",
-            "start": 166.688,
-            "end": 166.932
+            "start": 166.697,
+            "end": 166.909
           },
           {
             "word": "e ",
-            "start": 166.932,
-            "end": 167.177
+            "start": 166.909,
+            "end": 167.167
           },
           {
             "word": "ingenting ",
-            "start": 167.177,
-            "end": 167.42
+            "start": 167.167,
+            "end": 167.862
           },
           {
             "word": "som ",
-            "start": 167.42,
-            "end": 168.115
+            "start": 167.862,
+            "end": 168.148
           },
           {
             "word": "kan ",
-            "start": 168.115,
-            "end": 168.321
+            "start": 168.148,
+            "end": 168.393
           },
           {
             "word": "kjøre ",
-            "start": 168.321,
-            "end": 168.824
+            "start": 168.393,
+            "end": 168.887
           },
           {
             "word": "meg ",
-            "start": 168.824,
-            "end": 169.354
+            "start": 168.887,
+            "end": 169.376
           },
           {
             "word": "ned",
-            "start": 169.354,
-            "end": 171.323
+            "start": 169.376,
+            "end": 171.344
           }
         ]
       },
       {
-        "verseStart": 171.323,
-        "verseEnd": 174.652,
+        "verseStart": 171.344,
+        "verseEnd": 174.673,
         "words": [
           {
             "word": "Du ",
-            "start": 171.323,
-            "end": 171.857
+            "start": 171.344,
+            "end": 171.842
           },
           {
             "word": "får ",
-            "start": 171.857,
-            "end": 172.396
+            "start": 171.842,
+            "end": 172.377
           },
           {
             "word": "alt ",
-            "start": 172.396,
-            "end": 172.929
+            "start": 172.377,
+            "end": 172.909
           },
           {
             "word": "til ",
-            "start": 172.929,
-            "end": 173.172
+            "start": 172.909,
+            "end": 173.153
           },
           {
             "word": "å ",
-            "start": 173.172,
-            "end": 173.417
+            "start": 173.153,
+            "end": 173.441
           },
           {
             "word": "sprenge ",
-            "start": 173.417,
-            "end": 173.91
+            "start": 173.441,
+            "end": 173.936
           },
           {
             "word": "i ",
-            "start": 173.91,
-            "end": 174.161
+            "start": 173.936,
+            "end": 174.146
           },
           {
             "word": "kok",
-            "start": 174.161,
-            "end": 174.652
+            "start": 174.146,
+            "end": 174.673
           }
         ]
       },
       {
-        "verseStart": 174.652,
-        "verseEnd": 179.479,
+        "verseStart": 174.673,
+        "verseEnd": 179.367,
         "words": [
           {
             "word": "D ",
-            "start": 174.652,
-            "end": 174.937
+            "start": 174.673,
+            "end": 174.8
           },
           {
             "word": "e ",
-            "start": 174.937,
-            "end": 175.183
+            "start": 174.8,
+            "end": 174.965
           },
           {
             "word": "ingen ",
-            "start": 175.183,
-            "end": 175.426
+            "start": 174.965,
+            "end": 175.376
           },
           {
             "word": "andre ",
-            "start": 175.426,
-            "end": 175.835
+            "start": 175.376,
+            "end": 175.87
           },
           {
             "word": "eg ",
-            "start": 175.835,
-            "end": 176.039
+            "start": 175.87,
+            "end": 176.033
           },
           {
             "word": "heller ",
-            "start": 176.039,
-            "end": 176.256
+            "start": 176.033,
+            "end": 176.364
           },
           {
             "word": "gjør ",
-            "start": 176.256,
-            "end": 176.46
+            "start": 176.364,
+            "end": 176.655
           },
           {
             "word": "det ",
-            "start": 176.46,
-            "end": 176.908
+            "start": 176.655,
+            "end": 176.902
           },
           {
             "word": "her ",
-            "start": 176.908,
-            "end": 177.397
+            "start": 176.902,
+            "end": 177.364
           },
           {
             "word": "med",
-            "start": 177.397,
-            "end": 179.479
+            "start": 177.364,
+            "end": 179.367
           }
         ]
       },
       {
-        "verseStart": 179.479,
-        "verseEnd": 182.876,
+        "verseStart": 179.367,
+        "verseEnd": 182.609,
         "words": [
           {
             "word": "Fem ",
-            "start": 0,
-            "end": 0
+            "start": 179.367,
+            "end": 179.898
           },
           {
             "word": "fine ",
-            "start": 0,
-            "end": 0
+            "start": 179.898,
+            "end": 180.355
           },
           {
             "word": "frøkner ",
-            "start": 0,
-            "end": 0
+            "start": 180.355,
+            "end": 180.847
           },
           {
             "word": "oppi ",
-            "start": 0,
-            "end": 0
+            "start": 180.847,
+            "end": 181.378
           },
           {
             "word": "klubben, ",
-            "start": 0,
-            "end": 0
+            "start": 181.378,
+            "end": 181.867
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 181.867,
+            "end": 182.074
           },
           {
             "word": "befaler",
-            "start": 0,
-            "end": 0
+            "start": 182.074,
+            "end": 182.609
           }
         ]
       },
       {
-        "verseStart": 182.876,
-        "verseEnd": 186.554,
+        "verseStart": 182.609,
+        "verseEnd": 186.58,
         "words": [
           {
             "word": "Sku ",
-            "start": 182.876,
-            "end": 183.125
+            "start": 182.609,
+            "end": 182.914
           },
           {
             "word": "det ",
-            "start": 183.125,
-            "end": 183.411
+            "start": 182.914,
+            "end": 183.29
           },
           {
             "word": "helt ",
-            "start": 183.411,
-            "end": 183.862
+            "start": 183.29,
+            "end": 183.504
           },
           {
             "word": "opp ",
-            "start": 183.862,
-            "end": 184.106
+            "start": 183.504,
+            "end": 184.075
           },
           {
             "word": "i ",
-            "start": 184.106,
-            "end": 184.352
+            "start": 184.075,
+            "end": 184.328
           },
           {
             "word": "himmelen",
-            "start": 184.352,
-            "end": 186.554
+            "start": 184.328,
+            "end": 186.58
           }
         ]
       },
       {
-        "verseStart": 186.554,
-        "verseEnd": 190.848,
+        "verseStart": 186.58,
+        "verseEnd": 190.927,
         "words": [
           {
             "word": "Om ",
-            "start": 186.554,
-            "end": 186.841
+            "start": 186.58,
+            "end": 186.864
           },
           {
             "word": "det ",
-            "start": 186.841,
-            "end": 187.13
+            "start": 186.864,
+            "end": 187.109
           },
           {
             "word": "e ",
-            "start": 187.13,
-            "end": 187.374
+            "start": 187.109,
+            "end": 187.395
           },
           {
             "word": "fem ",
-            "start": 187.374,
-            "end": 187.864
+            "start": 187.395,
+            "end": 187.847
           },
           {
             "word": "fine ",
-            "start": 187.864,
-            "end": 188.352
+            "start": 187.847,
+            "end": 188.376
           },
           {
             "word": "fyrer ",
-            "start": 188.352,
-            "end": 188.843
+            "start": 188.376,
+            "end": 188.873
           },
           {
             "word": "spiller ",
-            "start": 188.843,
-            "end": 189.087
+            "start": 188.873,
+            "end": 189.327
           },
           {
             "word": "ingen ",
-            "start": 189.087,
-            "end": 189.376
+            "start": 189.327,
+            "end": 189.819
           },
           {
             "word": "rolle ",
-            "start": 189.376,
-            "end": 189.825
+            "start": 189.819,
+            "end": 190.391
           },
           {
             "word": "på ",
-            "start": 189.825,
-            "end": 190.313
+            "start": 190.391,
+            "end": 190.635
           },
           {
             "word": "det",
-            "start": 190.313,
-            "end": 190.848
+            "start": 190.635,
+            "end": 190.927
           }
         ]
       },
       {
-        "verseStart": 190.848,
-        "verseEnd": 195.316,
+        "verseStart": 190.927,
+        "verseEnd": 195.309,
         "words": [
           {
             "word": "Ingen ",
-            "start": 190.848,
-            "end": 191.304
+            "start": 190.927,
+            "end": 191.376
           },
           {
             "word": "andre ",
-            "start": 191.304,
-            "end": 191.68
+            "start": 191.376,
+            "end": 191.621
           },
           {
             "word": "eg ",
-            "start": 191.68,
-            "end": 191.887
+            "start": 191.621,
+            "end": 191.906
           },
           {
             "word": "heller ",
-            "start": 191.887,
-            "end": 192.339
+            "start": 191.906,
+            "end": 192.401
           },
           {
             "word": "gjør ",
-            "start": 192.339,
-            "end": 192.587
+            "start": 192.401,
+            "end": 192.609
           },
           {
             "word": "det ",
-            "start": 192.587,
-            "end": 192.872
+            "start": 192.609,
+            "end": 192.896
           },
           {
             "word": "her ",
-            "start": 192.872,
-            "end": 193.362
+            "start": 192.896,
+            "end": 193.345
           },
           {
             "word": "med",
-            "start": 193.362,
-            "end": 195.316
+            "start": 193.345,
+            "end": 195.309
           }
         ]
       },
       {
-        "verseStart": 195.316,
-        "verseEnd": 198.683,
+        "verseStart": 195.309,
+        "verseEnd": 198.668,
         "words": [
           {
             "word": "Fem ",
-            "start": 0,
-            "end": 0
+            "start": 195.309,
+            "end": 195.8
           },
           {
             "word": "fine ",
-            "start": 0,
-            "end": 0
+            "start": 195.8,
+            "end": 196.333
           },
           {
             "word": "frøkner ",
-            "start": 0,
-            "end": 0
+            "start": 196.333,
+            "end": 196.906
           },
           {
             "word": "oppi ",
-            "start": 0,
-            "end": 0
+            "start": 196.906,
+            "end": 197.355
           },
           {
             "word": "klubben, ",
-            "start": 0,
-            "end": 0
+            "start": 197.355,
+            "end": 197.851
           },
           {
             "word": "vi ",
-            "start": 0,
-            "end": 0
+            "start": 197.851,
+            "end": 198.095
           },
           {
             "word": "befaler",
-            "start": 0,
-            "end": 0
+            "start": 198.095,
+            "end": 198.668
           }
         ]
       },
       {
-        "verseStart": 198.683,
-        "verseEnd": 202.618,
+        "verseStart": 198.668,
+        "verseEnd": 202.59,
         "words": [
           {
             "word": "Sku ",
-            "start": 198.683,
-            "end": 198.846
+            "start": 198.668,
+            "end": 198.914
           },
           {
             "word": "det ",
-            "start": 198.846,
-            "end": 199.177
+            "start": 198.914,
+            "end": 199.288
           },
           {
             "word": "helt ",
-            "start": 199.177,
-            "end": 199.747
+            "start": 199.288,
+            "end": 199.929
           },
           {
             "word": "opp ",
-            "start": 199.747,
-            "end": 200.041
+            "start": 199.929,
+            "end": 200.172
           },
           {
             "word": "i ",
-            "start": 200.041,
-            "end": 200.333
+            "start": 200.172,
+            "end": 200.627
           },
           {
             "word": "himmelen",
-            "start": 200.333,
-            "end": 202.618
+            "start": 200.627,
+            "end": 202.59
           }
         ]
       },
       {
-        "verseStart": 202.618,
-        "verseEnd": 206.85,
+        "verseStart": 202.59,
+        "verseEnd": 206.925,
         "words": [
           {
             "word": "Om ",
-            "start": 202.618,
-            "end": 202.869
+            "start": 202.59,
+            "end": 202.877
           },
           {
             "word": "det ",
-            "start": 202.869,
-            "end": 203.16
+            "start": 202.877,
+            "end": 203.123
           },
           {
             "word": "e ",
-            "start": 203.16,
-            "end": 203.406
+            "start": 203.123,
+            "end": 203.408
           },
           {
             "word": "fem ",
-            "start": 203.406,
-            "end": 203.896
+            "start": 203.408,
+            "end": 203.857
           },
           {
             "word": "fine ",
-            "start": 203.896,
-            "end": 204.385
+            "start": 203.857,
+            "end": 204.389
           },
           {
             "word": "fyrer ",
-            "start": 204.385,
-            "end": 204.917
+            "start": 204.389,
+            "end": 204.879
           },
           {
             "word": "spiller ",
-            "start": 204.917,
-            "end": 205.371
+            "start": 204.879,
+            "end": 205.369
           },
           {
             "word": "ingen ",
-            "start": 205.371,
-            "end": 205.617
+            "start": 205.369,
+            "end": 205.654
           },
           {
             "word": "rolle ",
-            "start": 205.617,
-            "end": 206.313
+            "start": 205.654,
+            "end": 206.391
           },
           {
             "word": "på ",
-            "start": 206.313,
-            "end": 206.56
+            "start": 206.391,
+            "end": 206.636
           },
           {
             "word": "det",
-            "start": 206.56,
-            "end": 206.85
+            "start": 206.636,
+            "end": 206.925
           }
         ]
       },
       {
-        "verseStart": 206.85,
-        "verseEnd": 211.276,
+        "verseStart": 206.925,
+        "verseEnd": 211.388,
         "words": [
           {
             "word": "Ingen ",
-            "start": 206.85,
-            "end": 207.141
+            "start": 206.925,
+            "end": 207.331
           },
           {
             "word": "andre ",
-            "start": 207.141,
-            "end": 207.603
+            "start": 207.331,
+            "end": 207.82
           },
           {
             "word": "eg ",
-            "start": 207.603,
-            "end": 207.887
+            "start": 207.82,
+            "end": 208.025
           },
           {
             "word": "heller ",
-            "start": 207.887,
-            "end": 208.132
+            "start": 208.025,
+            "end": 208.41
           },
           {
             "word": "gjør ",
-            "start": 208.132,
-            "end": 208.376
+            "start": 208.41,
+            "end": 208.654
           },
           {
             "word": "det ",
-            "start": 208.376,
-            "end": 208.827
+            "start": 208.654,
+            "end": 208.898
           },
           {
             "word": "her ",
-            "start": 208.827,
-            "end": 209.276
+            "start": 208.898,
+            "end": 209.388
           },
           {
             "word": "med",
-            "start": 209.276,
+            "start": 209.388,
             "end": 0
           }
         ]
