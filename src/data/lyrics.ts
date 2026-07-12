@@ -6004,2697 +6004,2697 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 1.3,
-        "verseEnd": 6.3,
+        "verseStart": 1.695,
+        "verseEnd": 2.469,
         "words": [
           {
             "word": "Fé",
-            "start": 0,
-            "end": 0
+            "start": 1.695,
+            "end": 1.858
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 1.858,
+            "end": 2.469
           }
         ]
       },
       {
-        "verseStart": 1.86,
-        "verseEnd": 6.86,
+        "verseStart": 2.469,
+        "verseEnd": 6.062,
         "words": [
           {
             "word": "Hahaha",
-            "start": 0,
-            "end": 0
+            "start": 2.469,
+            "end": 2.919
           },
           {
             "word": "aquele",
-            "start": 0,
-            "end": 0
+            "start": 2.919,
+            "end": 3.898
           },
           {
             "word": "jeitão",
-            "start": 0,
-            "end": 0
+            "start": 3.898,
+            "end": 6.062
           }
         ]
       },
       {
-        "verseStart": 6.07,
-        "verseEnd": 11.07,
+        "verseStart": 6.062,
+        "verseEnd": 9.698,
         "words": [
           {
             "word": "Tropa",
-            "start": 0,
-            "end": 0
+            "start": 6.062,
+            "end": 6.632
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 6.632,
+            "end": 6.839
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 6.839,
+            "end": 7.166
           },
           {
             "word": "pista",
-            "start": 0,
-            "end": 0
+            "start": 7.166,
+            "end": 7.614
           },
           {
             "word": "ainda",
-            "start": 0,
-            "end": 0
+            "start": 7.614,
+            "end": 8.063
           },
           {
             "word": "Yeah",
-            "start": 0,
-            "end": 0
+            "start": 8.063,
+            "end": 8.597
           },
           {
             "word": "uh",
-            "start": 0,
-            "end": 0
+            "start": 8.597,
+            "end": 9.087
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 9.087,
+            "end": 9.373
           },
           {
             "word": "uh",
-            "start": 0,
-            "end": 0
+            "start": 9.373,
+            "end": 9.698
           }
         ]
       },
       {
-        "verseStart": 8.81,
-        "verseEnd": 13.81,
+        "verseStart": 9.698,
+        "verseEnd": 12.516,
         "words": [
           {
             "word": "Peitou",
-            "start": 0,
-            "end": 0
+            "start": 9.698,
+            "end": 9.902
           },
           {
             "word": "o",
-            "start": 0,
-            "end": 0
+            "start": 9.902,
+            "end": 10.066
           },
           {
             "word": "trem",
-            "start": 0,
-            "end": 0
+            "start": 10.066,
+            "end": 10.229
           },
           {
             "word": "ficou",
-            "start": 0,
-            "end": 0
+            "start": 10.229,
+            "end": 10.351
           },
           {
             "word": "fudido",
-            "start": 0,
-            "end": 0
+            "start": 10.351,
+            "end": 10.761
           },
           {
             "word": "Yeah",
-            "start": 0,
-            "end": 0
+            "start": 10.761,
+            "end": 11.09
           },
           {
             "word": "uh",
-            "start": 0,
-            "end": 0
+            "start": 11.09,
+            "end": 11.417
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 11.417,
+            "end": 11.825
           },
           {
             "word": "uh",
-            "start": 0,
-            "end": 0
+            "start": 11.825,
+            "end": 12.516
           }
         ]
       },
       {
-        "verseStart": 10.48,
-        "verseEnd": 15.48,
+        "verseStart": 12.516,
+        "verseEnd": 13.619,
         "words": [
           {
             "word": "TrickNyck",
-            "start": 0,
-            "end": 0
+            "start": 12.516,
+            "end": 12.68
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 12.68,
+            "end": 12.846
           },
           {
             "word": "muito",
-            "start": 0,
-            "end": 0
+            "start": 12.846,
+            "end": 12.969
           },
           {
             "word": "jugg",
-            "start": 0,
-            "end": 0
+            "start": 12.969,
+            "end": 13.335
           },
           {
             "word": "jugg",
-            "start": 0,
-            "end": 0
+            "start": 13.335,
+            "end": 13.619
           }
         ]
       },
       {
-        "verseStart": 11.95,
-        "verseEnd": 16.95,
+        "verseStart": 13.619,
+        "verseEnd": 14.026,
         "words": [
           {
             "word": "Huh",
-            "start": 0,
-            "end": 0
+            "start": 13.619,
+            "end": 14.026
           }
         ]
       },
       {
-        "verseStart": 14.01,
-        "verseEnd": 19.009999999999998,
+        "verseStart": 14.026,
+        "verseEnd": 15.871,
         "words": [
           {
             "word": "Ela",
-            "start": 0,
-            "end": 0
+            "start": 14.026,
+            "end": 14.31
           },
           {
             "word": "joga",
-            "start": 0,
-            "end": 0
+            "start": 14.31,
+            "end": 14.475
           },
           {
             "word": "meu",
-            "start": 0,
-            "end": 0
+            "start": 14.475,
+            "end": 14.68
           },
           {
             "word": "vulgo",
-            "start": 0,
-            "end": 0
+            "start": 14.68,
+            "end": 15.016
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 15.016,
+            "end": 15.138
           },
           {
             "word": "Google",
-            "start": 0,
-            "end": 0
+            "start": 15.138,
+            "end": 15.871
           }
         ]
       },
       {
-        "verseStart": 15.43,
-        "verseEnd": 20.43,
+        "verseStart": 15.871,
+        "verseEnd": 17.464,
         "words": [
           {
             "word": "A",
-            "start": 0,
-            "end": 0
+            "start": 15.871,
+            "end": 15.994
           },
           {
             "word": "minha",
-            "start": 0,
-            "end": 0
+            "start": 15.994,
+            "end": 16.117
           },
           {
             "word": "bag",
-            "start": 0,
-            "end": 0
+            "start": 16.117,
+            "end": 16.443
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 16.443,
+            "end": 16.566
           },
           {
             "word": "cheia",
-            "start": 0,
-            "end": 0
+            "start": 16.566,
+            "end": 16.85
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 16.85,
+            "end": 16.973
           },
           {
             "word": "fumo",
-            "start": 0,
-            "end": 0
+            "start": 16.973,
+            "end": 17.464
           }
         ]
       },
       {
-        "verseStart": 17.22,
-        "verseEnd": 22.22,
+        "verseStart": 17.464,
+        "verseEnd": 19.178,
         "words": [
           {
             "word": "Esses",
-            "start": 0,
-            "end": 0
+            "start": 17.464,
+            "end": 17.749
           },
           {
             "word": "polícia",
-            "start": 0,
-            "end": 0
+            "start": 17.749,
+            "end": 18.116
           },
           {
             "word": "tão",
-            "start": 0,
-            "end": 0
+            "start": 18.116,
+            "end": 18.279
           },
           {
             "word": "ficando",
-            "start": 0,
-            "end": 0
+            "start": 18.279,
+            "end": 18.605
           },
           {
             "word": "puto",
-            "start": 0,
-            "end": 0
+            "start": 18.605,
+            "end": 19.178
           }
         ]
       },
       {
-        "verseStart": 18.78,
-        "verseEnd": 23.78,
+        "verseStart": 19.178,
+        "verseEnd": 21.183,
         "words": [
           {
             "word": "Porque",
-            "start": 0,
-            "end": 0
+            "start": 19.178,
+            "end": 19.3
           },
           {
             "word": "faço",
-            "start": 0,
-            "end": 0
+            "start": 19.3,
+            "end": 19.424
           },
           {
             "word": "nota",
-            "start": 0,
-            "end": 0
+            "start": 19.424,
+            "end": 19.587
           },
           {
             "word": "e",
-            "start": 0,
-            "end": 0
+            "start": 19.587,
+            "end": 19.874
           },
           {
             "word": "nem",
-            "start": 0,
-            "end": 0
+            "start": 19.874,
+            "end": 20.161
           },
           {
             "word": "sou",
-            "start": 0,
-            "end": 0
+            "start": 20.161,
+            "end": 20.288
           },
           {
             "word": "vagabundo",
-            "start": 0,
-            "end": 0
+            "start": 20.288,
+            "end": 21.183
           }
         ]
       },
       {
-        "verseStart": 20.99,
-        "verseEnd": 25.99,
+        "verseStart": 21.183,
+        "verseEnd": 22.249,
         "words": [
           {
             "word": "Yo",
-            "start": 0,
-            "end": 0
+            "start": 21.183,
+            "end": 21.346
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 21.346,
+            "end": 21.468
           },
           {
             "word": "fecho",
-            "start": 0,
-            "end": 0
+            "start": 21.468,
+            "end": 21.671
           },
           {
             "word": "com",
-            "start": 0,
-            "end": 0
+            "start": 21.671,
+            "end": 21.875
           },
           {
             "word": "bote",
-            "start": 0,
-            "end": 0
+            "start": 21.875,
+            "end": 22.249
           }
         ]
       },
       {
-        "verseStart": 22.29,
-        "verseEnd": 27.29,
+        "verseStart": 22.249,
+        "verseEnd": 23.967,
         "words": [
           {
             "word": "Desde",
-            "start": 0,
-            "end": 0
+            "start": 22.249,
+            "end": 22.535
           },
           {
             "word": "novin",
-            "start": 0,
-            "end": 0
+            "start": 22.535,
+            "end": 22.903
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 22.903,
+            "end": 23.026
           },
           {
             "word": "gosto",
-            "start": 0,
-            "end": 0
+            "start": 23.026,
+            "end": 23.149
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 23.149,
+            "end": 23.316
           },
           {
             "word": "X",
-            "start": 0,
-            "end": 0
+            "start": 23.316,
+            "end": 23.479
           },
           {
             "word": "9",
-            "start": 0,
-            "end": 0
+            "start": 23.479,
+            "end": 23.967
           }
         ]
       },
       {
-        "verseStart": 23.89,
-        "verseEnd": 28.89,
+        "verseStart": 23.967,
+        "verseEnd": 25.693,
         "words": [
           {
             "word": "Minha",
-            "start": 0,
-            "end": 0
+            "start": 23.967,
+            "end": 24.257
           },
           {
             "word": "humildade",
-            "start": 0,
-            "end": 0
+            "start": 24.257,
+            "end": 24.665
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 24.665,
+            "end": 24.791
           },
           {
             "word": "o",
-            "start": 0,
-            "end": 0
+            "start": 24.791,
+            "end": 24.995
           },
           {
             "word": "meu",
-            "start": 0,
-            "end": 0
+            "start": 24.995,
+            "end": 25.158
           },
           {
             "word": "ponto",
-            "start": 0,
-            "end": 0
+            "start": 25.158,
+            "end": 25.281
           },
           {
             "word": "forte",
-            "start": 0,
-            "end": 0
+            "start": 25.281,
+            "end": 25.693
           }
         ]
       },
       {
-        "verseStart": 25.32,
-        "verseEnd": 30.32,
+        "verseStart": 25.693,
+        "verseEnd": 28.21,
         "words": [
           {
             "word": "Na",
-            "start": 0,
-            "end": 0
+            "start": 25.693,
+            "end": 25.86
           },
           {
             "word": "visão",
-            "start": 0,
-            "end": 0
+            "start": 25.86,
+            "end": 26.025
           },
           {
             "word": "da",
-            "start": 0,
-            "end": 0
+            "start": 26.025,
+            "end": 26.153
           },
           {
             "word": "área",
-            "start": 0,
-            "end": 0
+            "start": 26.153,
+            "end": 26.318
           },
           {
             "word": "pros",
-            "start": 0,
-            "end": 0
+            "start": 26.318,
+            "end": 26.485
           },
           {
             "word": "cria",
-            "start": 0,
-            "end": 0
+            "start": 26.485,
+            "end": 26.651
           },
           {
             "word": "tu",
-            "start": 0,
-            "end": 0
+            "start": 26.651,
+            "end": 26.82
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 26.82,
+            "end": 26.984
           },
           {
             "word": "loki",
-            "start": 0,
-            "end": 0
+            "start": 26.984,
+            "end": 27.35
           },
           {
             "word": "ha",
-            "start": 0,
-            "end": 0
+            "start": 27.35,
+            "end": 27.553
           },
           {
             "word": "ha",
-            "start": 0,
-            "end": 0
+            "start": 27.553,
+            "end": 28.21
           }
         ]
       },
       {
-        "verseStart": 28.03,
-        "verseEnd": 33.03,
+        "verseStart": 28.21,
+        "verseEnd": 29.144,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 28.21,
+            "end": 28.331
           },
           {
             "word": "cartão",
-            "start": 0,
-            "end": 0
+            "start": 28.331,
+            "end": 28.615
           },
           {
             "word": "clonado",
-            "start": 0,
-            "end": 0
+            "start": 28.615,
+            "end": 29.144
           }
         ]
       },
       {
-        "verseStart": 29.08,
-        "verseEnd": 34.08,
+        "verseStart": 29.144,
+        "verseEnd": 30.909,
         "words": [
           {
             "word": "Meu",
-            "start": 0,
-            "end": 0
+            "start": 29.144,
+            "end": 29.267
           },
           {
             "word": "bonde",
-            "start": 0,
-            "end": 0
+            "start": 29.267,
+            "end": 29.434
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 29.434,
+            "end": 29.596
           },
           {
             "word": "todo",
-            "start": 0,
-            "end": 0
+            "start": 29.596,
+            "end": 29.883
           },
           {
             "word": "gastando",
-            "start": 0,
-            "end": 0
+            "start": 29.883,
+            "end": 30.252
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 30.252,
+            "end": 30.419
           },
           {
             "word": "vida",
-            "start": 0,
-            "end": 0
+            "start": 30.419,
+            "end": 30.909
           }
         ]
       },
       {
-        "verseStart": 30.65,
-        "verseEnd": 35.65,
+        "verseStart": 30.909,
+        "verseEnd": 32.602,
         "words": [
           {
             "word": "Fumando",
-            "start": 0,
-            "end": 0
+            "start": 30.909,
+            "end": 31.28
           },
           {
             "word": "flores",
-            "start": 0,
-            "end": 0
+            "start": 31.28,
+            "end": 31.615
           },
           {
             "word": "vivendo",
-            "start": 0,
-            "end": 0
+            "start": 31.615,
+            "end": 32.069
           },
           {
             "word": "conquista",
-            "start": 0,
-            "end": 0
+            "start": 32.069,
+            "end": 32.602
           }
         ]
       },
       {
-        "verseStart": 32.65,
-        "verseEnd": 37.65,
+        "verseStart": 32.602,
+        "verseEnd": 35.139,
         "words": [
           {
             "word": "O",
-            "start": 0,
-            "end": 0
+            "start": 32.602,
+            "end": 32.806
           },
           {
             "word": "meu",
-            "start": 0,
-            "end": 0
+            "start": 32.806,
+            "end": 32.969
           },
           {
             "word": "bordão",
-            "start": 0,
-            "end": 0
+            "start": 32.969,
+            "end": 33.3
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 33.3,
+            "end": 33.424
           },
           {
             "word": "tropa",
-            "start": 0,
-            "end": 0
+            "start": 33.424,
+            "end": 33.588
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 33.588,
+            "end": 33.75
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 33.75,
+            "end": 33.952
           },
           {
             "word": "pista",
-            "start": 0,
-            "end": 0
+            "start": 33.952,
+            "end": 34.399
           },
           {
             "word": "huh",
-            "start": 0,
-            "end": 0
+            "start": 34.399,
+            "end": 35.139
           }
         ]
       },
       {
-        "verseStart": 34.8,
-        "verseEnd": 39.8,
+        "verseStart": 35.139,
+        "verseEnd": 36.933,
         "words": [
           {
             "word": "Que",
-            "start": 0,
-            "end": 0
+            "start": 35.139,
+            "end": 35.344
           },
           {
             "word": "aqui",
-            "start": 0,
-            "end": 0
+            "start": 35.344,
+            "end": 35.506
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 35.506,
+            "end": 35.669
           },
           {
             "word": "Rio",
-            "start": 0,
-            "end": 0
+            "start": 35.669,
+            "end": 35.953
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 35.953,
+            "end": 36.117
           },
           {
             "word": "escroto",
-            "start": 0,
-            "end": 0
+            "start": 36.117,
+            "end": 36.933
           }
         ]
       },
       {
-        "verseStart": 36.79,
-        "verseEnd": 41.79,
+        "verseStart": 36.933,
+        "verseEnd": 38.648,
         "words": [
           {
             "word": "Ter",
-            "start": 0,
-            "end": 0
+            "start": 36.933,
+            "end": 37.056
           },
           {
             "word": "cria",
-            "start": 0,
-            "end": 0
+            "start": 37.056,
+            "end": 37.3
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 37.3,
+            "end": 37.423
           },
           {
             "word": "cabelo",
-            "start": 0,
-            "end": 0
+            "start": 37.423,
+            "end": 37.833
           },
           {
             "word": "roxo",
-            "start": 0,
-            "end": 0
+            "start": 37.833,
+            "end": 38.648
           }
         ]
       },
       {
-        "verseStart": 38.32,
-        "verseEnd": 43.32,
+        "verseStart": 38.648,
+        "verseEnd": 39.964,
         "words": [
           {
             "word": "Nós",
-            "start": 0,
-            "end": 0
+            "start": 38.648,
+            "end": 38.77
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 38.77,
+            "end": 38.933
           },
           {
             "word": "platinado",
-            "start": 0,
-            "end": 0
+            "start": 38.933,
+            "end": 39.138
           },
           {
             "word": "ou",
-            "start": 0,
-            "end": 0
+            "start": 39.138,
+            "end": 39.304
           },
           {
             "word": "luzes",
-            "start": 0,
-            "end": 0
+            "start": 39.304,
+            "end": 39.964
           }
         ]
       },
       {
-        "verseStart": 39.99,
-        "verseEnd": 44.99,
+        "verseStart": 39.964,
+        "verseEnd": 42.178,
         "words": [
           {
             "word": "212",
-            "start": 0,
-            "end": 0
+            "start": 39.964,
+            "end": 40.456
           },
           {
             "word": "nosso",
-            "start": 0,
-            "end": 0
+            "start": 40.456,
+            "end": 40.831
           },
           {
             "word": "perfume",
-            "start": 0,
-            "end": 0
+            "start": 40.831,
+            "end": 41.161
           },
           {
             "word": "otário",
-            "start": 0,
-            "end": 0
+            "start": 41.161,
+            "end": 42.178
           }
         ]
       },
       {
-        "verseStart": 41.95,
-        "verseEnd": 46.95,
+        "verseStart": 42.178,
+        "verseEnd": 43.941,
         "words": [
           {
             "word": "Tenho",
-            "start": 0,
-            "end": 0
+            "start": 42.178,
+            "end": 42.422
           },
           {
             "word": "skunk",
-            "start": 0,
-            "end": 0
+            "start": 42.422,
+            "end": 42.709
           },
           {
             "word": "grego",
-            "start": 0,
-            "end": 0
+            "start": 42.709,
+            "end": 43.044
           },
           {
             "word": "dentro",
-            "start": 0,
-            "end": 0
+            "start": 43.044,
+            "end": 43.247
           },
           {
             "word": "do",
-            "start": 0,
-            "end": 0
+            "start": 43.247,
+            "end": 43.532
           },
           {
             "word": "slick",
-            "start": 0,
-            "end": 0
+            "start": 43.532,
+            "end": 43.941
           }
         ]
       },
       {
-        "verseStart": 43.82,
-        "verseEnd": 48.82,
+        "verseStart": 43.941,
+        "verseEnd": 45.545,
         "words": [
           {
             "word": "No",
-            "start": 0,
-            "end": 0
+            "start": 43.941,
+            "end": 44.103
           },
           {
             "word": "cap",
-            "start": 0,
-            "end": 0
+            "start": 44.103,
+            "end": 44.267
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 44.267,
+            "end": 44.428
           },
           {
             "word": "cap",
-            "start": 0,
-            "end": 0
+            "start": 44.428,
+            "end": 44.715
           },
           {
             "word": "corte",
-            "start": 0,
-            "end": 0
+            "start": 44.715,
+            "end": 44.924
           },
           {
             "word": "disfarçado",
-            "start": 0,
-            "end": 0
+            "start": 44.924,
+            "end": 45.545
           }
         ]
       },
       {
-        "verseStart": 45.31,
-        "verseEnd": 50.31,
+        "verseStart": 45.545,
+        "verseEnd": 47.463,
         "words": [
           {
             "word": "Que",
-            "start": 0,
-            "end": 0
+            "start": 45.545,
+            "end": 45.713
           },
           {
             "word": "eu",
-            "start": 0,
-            "end": 0
+            "start": 45.713,
+            "end": 46.047
           },
           {
             "word": "uso",
-            "start": 0,
-            "end": 0
+            "start": 46.047,
+            "end": 46.213
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 46.213,
+            "end": 46.505
           },
           {
             "word": "nós",
-            "start": 0,
-            "end": 0
+            "start": 46.505,
+            "end": 46.631
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 46.631,
+            "end": 46.838
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 46.838,
+            "end": 47.006
           },
           {
             "word": "nikiti",
-            "start": 0,
-            "end": 0
+            "start": 47.006,
+            "end": 47.463
           }
         ]
       },
       {
-        "verseStart": 47.12,
-        "verseEnd": 52.12,
+        "verseStart": 47.463,
+        "verseEnd": 49.181,
         "words": [
           {
             "word": "Sou",
-            "start": 0,
-            "end": 0
+            "start": 47.463,
+            "end": 47.667
           },
           {
             "word": "chefe",
-            "start": 0,
-            "end": 0
+            "start": 47.667,
+            "end": 47.83
           },
           {
             "word": "sou",
-            "start": 0,
-            "end": 0
+            "start": 47.83,
+            "end": 48.033
           },
           {
             "word": "chefe",
-            "start": 0,
-            "end": 0
+            "start": 48.033,
+            "end": 48.196
           },
           {
             "word": "sou",
-            "start": 0,
-            "end": 0
+            "start": 48.196,
+            "end": 48.404
           },
           {
             "word": "menor",
-            "start": 0,
-            "end": 0
+            "start": 48.404,
+            "end": 48.692
           },
           {
             "word": "bolado",
-            "start": 0,
-            "end": 0
+            "start": 48.692,
+            "end": 49.181
           }
         ]
       },
       {
-        "verseStart": 49.09,
-        "verseEnd": 54.09,
+        "verseStart": 49.181,
+        "verseEnd": 50.927,
         "words": [
           {
             "word": "Tenho",
-            "start": 0,
-            "end": 0
+            "start": 49.181,
+            "end": 49.39
           },
           {
             "word": "uma",
-            "start": 0,
-            "end": 0
+            "start": 49.39,
+            "end": 49.636
           },
           {
             "word": "amiga",
-            "start": 0,
-            "end": 0
+            "start": 49.636,
+            "end": 49.843
           },
           {
             "word": "que",
-            "start": 0,
-            "end": 0
+            "start": 49.843,
+            "end": 50.051
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 50.051,
+            "end": 50.465
           },
           {
             "word": "ninfomaníaca",
-            "start": 0,
-            "end": 0
+            "start": 50.465,
+            "end": 50.927
           }
         ]
       },
       {
-        "verseStart": 50.67,
-        "verseEnd": 55.67,
+        "verseStart": 50.927,
+        "verseEnd": 52.611,
         "words": [
           {
             "word": "Sempre",
-            "start": 0,
-            "end": 0
+            "start": 50.927,
+            "end": 51.092
           },
           {
             "word": "me",
-            "start": 0,
-            "end": 0
+            "start": 51.092,
+            "end": 51.302
           },
           {
             "word": "liga",
-            "start": 0,
-            "end": 0
+            "start": 51.302,
+            "end": 51.51
           },
           {
             "word": "quando",
-            "start": 0,
-            "end": 0
+            "start": 51.51,
+            "end": 51.756
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 51.756,
+            "end": 51.959
           },
           {
             "word": "foder",
-            "start": 0,
-            "end": 0
+            "start": 51.959,
+            "end": 52.611
           }
         ]
       },
       {
-        "verseStart": 52.55,
-        "verseEnd": 57.55,
+        "verseStart": 52.611,
+        "verseEnd": 54.369,
         "words": [
           {
             "word": "Sabe",
-            "start": 0,
-            "end": 0
+            "start": 52.611,
+            "end": 52.857
           },
           {
             "word": "que",
-            "start": 0,
-            "end": 0
+            "start": 52.857,
+            "end": 53.061
           },
           {
             "word": "eu",
-            "start": 0,
-            "end": 0
+            "start": 53.061,
+            "end": 53.265
           },
           {
             "word": "amo",
-            "start": 0,
-            "end": 0
+            "start": 53.265,
+            "end": 53.51
           },
           {
             "word": "a",
-            "start": 0,
-            "end": 0
+            "start": 53.51,
+            "end": 53.717
           },
           {
             "word": "vida",
-            "start": 0,
-            "end": 0
+            "start": 53.717,
+            "end": 54.043
           },
           {
             "word": "bandida",
-            "start": 0,
-            "end": 0
+            "start": 54.043,
+            "end": 54.369
           }
         ]
       },
       {
-        "verseStart": 54.14,
-        "verseEnd": 59.14,
+        "verseStart": 54.369,
+        "verseEnd": 56.047,
         "words": [
           {
             "word": "Nós",
-            "start": 0,
-            "end": 0
+            "start": 54.369,
+            "end": 54.572
           },
           {
             "word": "fode",
-            "start": 0,
-            "end": 0
+            "start": 54.572,
+            "end": 54.697
           },
           {
             "word": "fumando",
-            "start": 0,
-            "end": 0
+            "start": 54.697,
+            "end": 54.905
           },
           {
             "word": "e",
-            "start": 0,
-            "end": 0
+            "start": 54.905,
+            "end": 55.23
           },
           {
             "word": "usando",
-            "start": 0,
-            "end": 0
+            "start": 55.23,
+            "end": 55.433
           },
           {
             "word": "MD",
-            "start": 0,
-            "end": 0
+            "start": 55.433,
+            "end": 56.047
           }
         ]
       },
       {
-        "verseStart": 56.01,
-        "verseEnd": 61.01,
+        "verseStart": 56.047,
+        "verseEnd": 57.807,
         "words": [
           {
             "word": "Há",
-            "start": 0,
-            "end": 0
+            "start": 56.047,
+            "end": 56.296
           },
           {
             "word": "muito",
-            "start": 0,
-            "end": 0
+            "start": 56.296,
+            "end": 56.462
           },
           {
             "word": "tempo",
-            "start": 0,
-            "end": 0
+            "start": 56.462,
+            "end": 56.666
           },
           {
             "word": "que",
-            "start": 0,
-            "end": 0
+            "start": 56.666,
+            "end": 56.87
           },
           {
             "word": "eu",
-            "start": 0,
-            "end": 0
+            "start": 56.87,
+            "end": 57.035
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 57.035,
+            "end": 57.238
           },
           {
             "word": "fico",
-            "start": 0,
-            "end": 0
+            "start": 57.238,
+            "end": 57.442
           },
           {
             "word": "triste",
-            "start": 0,
-            "end": 0
+            "start": 57.442,
+            "end": 57.807
           }
         ]
       },
       {
-        "verseStart": 57.75,
-        "verseEnd": 62.75,
+        "verseStart": 57.807,
+        "verseEnd": 59.611,
         "words": [
           {
             "word": "Pra",
-            "start": 0,
-            "end": 0
+            "start": 57.807,
+            "end": 57.977
           },
           {
             "word": "sair",
-            "start": 0,
-            "end": 0
+            "start": 57.977,
+            "end": 58.184
           },
           {
             "word": "da",
-            "start": 0,
-            "end": 0
+            "start": 58.184,
+            "end": 58.347
           },
           {
             "word": "bad",
-            "start": 0,
-            "end": 0
+            "start": 58.347,
+            "end": 58.551
           },
           {
             "word": "eu",
-            "start": 0,
-            "end": 0
+            "start": 58.551,
+            "end": 58.836
           },
           {
             "word": "bebo",
-            "start": 0,
-            "end": 0
+            "start": 58.836,
+            "end": 59.04
           },
           {
             "word": "whisky",
-            "start": 0,
-            "end": 0
+            "start": 59.04,
+            "end": 59.611
           }
         ]
       },
       {
-        "verseStart": 59.6,
-        "verseEnd": 64.6,
+        "verseStart": 59.611,
+        "verseEnd": 60.895,
         "words": [
           {
             "word": "Corto",
-            "start": 0,
-            "end": 0
+            "start": 59.611,
+            "end": 59.815
           },
           {
             "word": "o",
-            "start": 0,
-            "end": 0
+            "start": 59.815,
+            "end": 60.019
           },
           {
             "word": "cabelo",
-            "start": 0,
-            "end": 0
+            "start": 60.019,
+            "end": 60.269
           },
           {
             "word": "pro",
-            "start": 0,
-            "end": 0
+            "start": 60.269,
+            "end": 60.478
           },
           {
             "word": "baile",
-            "start": 0,
-            "end": 0
+            "start": 60.478,
+            "end": 60.895
           }
         ]
       },
       {
-        "verseStart": 60.88,
-        "verseEnd": 65.88,
+        "verseStart": 60.895,
+        "verseEnd": 63.116,
         "words": [
           {
             "word": "Eu",
-            "start": 0,
-            "end": 0
+            "start": 60.895,
+            "end": 61.103
           },
           {
             "word": "fumo",
-            "start": 0,
-            "end": 0
+            "start": 61.103,
+            "end": 61.309
           },
           {
             "word": "paki",
-            "start": 0,
-            "end": 0
+            "start": 61.309,
+            "end": 61.56
           },
           {
             "word": "e",
-            "start": 0,
-            "end": 0
+            "start": 61.56,
+            "end": 61.809
           },
           {
             "word": "uso",
-            "start": 0,
-            "end": 0
+            "start": 61.809,
+            "end": 62.017
           },
           {
             "word": "bico",
-            "start": 0,
-            "end": 0
+            "start": 62.017,
+            "end": 62.222
           },
           {
             "word": "verde",
-            "start": 0,
-            "end": 0
+            "start": 62.222,
+            "end": 63.116
           }
         ]
       },
       {
-        "verseStart": 62.86,
-        "verseEnd": 67.86,
+        "verseStart": 63.116,
+        "verseEnd": 64.876,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 63.116,
+            "end": 63.36
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 63.36,
+            "end": 63.564
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 63.564,
+            "end": 63.775
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 63.775,
+            "end": 64.019
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 64.019,
+            "end": 64.223
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 64.223,
+            "end": 64.427
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 64.427,
+            "end": 64.876
           }
         ]
       },
       {
-        "verseStart": 64.78,
-        "verseEnd": 69.78,
+        "verseStart": 64.876,
+        "verseEnd": 66.484,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 64.876,
+            "end": 64.997
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 64.997,
+            "end": 65.079
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 65.079,
+            "end": 65.329
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 65.329,
+            "end": 65.533
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 65.533,
+            "end": 65.737
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 65.737,
+            "end": 65.941
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 65.941,
+            "end": 66.191
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 66.191,
+            "end": 66.484
           }
         ]
       },
       {
-        "verseStart": 66.34,
-        "verseEnd": 71.34,
+        "verseStart": 66.484,
+        "verseEnd": 68.152,
         "words": [
           {
             "word": "Tropa",
-            "start": 0,
-            "end": 0
+            "start": 66.484,
+            "end": 66.768
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 66.768,
+            "end": 66.89
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 66.89,
+            "end": 67.013
           },
           {
             "word": "pista",
-            "start": 0,
-            "end": 0
+            "start": 67.013,
+            "end": 67.461
           },
           {
             "word": "sempre",
-            "start": 0,
-            "end": 0
+            "start": 67.461,
+            "end": 67.705
           },
           {
             "word": "trajada",
-            "start": 0,
-            "end": 0
+            "start": 67.705,
+            "end": 68.152
           }
         ]
       },
       {
-        "verseStart": 68.08,
-        "verseEnd": 73.08,
+        "verseStart": 68.152,
+        "verseEnd": 70.087,
         "words": [
           {
             "word": "Marola",
-            "start": 0,
-            "end": 0
+            "start": 68.152,
+            "end": 68.527
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 68.527,
+            "end": 68.693
           },
           {
             "word": "baile",
-            "start": 0,
-            "end": 0
+            "start": 68.693,
+            "end": 69.067
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 69.067,
+            "end": 69.312
           },
           {
             "word": "XRE",
-            "start": 0,
-            "end": 0
+            "start": 69.312,
+            "end": 70.087
           }
         ]
       },
       {
-        "verseStart": 69.83,
-        "verseEnd": 74.83,
+        "verseStart": 70.087,
+        "verseEnd": 71.767,
         "words": [
           {
             "word": "Tem",
-            "start": 0,
-            "end": 0
+            "start": 70.087,
+            "end": 70.209
           },
           {
             "word": "whisky",
-            "start": 0,
-            "end": 0
+            "start": 70.209,
+            "end": 70.417
           },
           {
             "word": "Buchanan's",
-            "start": 0,
-            "end": 0
+            "start": 70.417,
+            "end": 70.743
           },
           {
             "word": "pros",
-            "start": 0,
-            "end": 0
+            "start": 70.743,
+            "end": 70.988
           },
           {
             "word": "cria",
-            "start": 0,
-            "end": 0
+            "start": 70.988,
+            "end": 71.237
           },
           {
             "word": "do",
-            "start": 0,
-            "end": 0
+            "start": 71.237,
+            "end": 71.359
           },
           {
             "word": "morro",
-            "start": 0,
-            "end": 0
+            "start": 71.359,
+            "end": 71.767
           }
         ]
       },
       {
-        "verseStart": 71.65,
-        "verseEnd": 76.65,
+        "verseStart": 71.767,
+        "verseEnd": 73.564,
         "words": [
           {
             "word": "Garrafa",
-            "start": 0,
-            "end": 0
+            "start": 71.767,
+            "end": 71.971
           },
           {
             "word": "verde",
-            "start": 0,
-            "end": 0
+            "start": 71.971,
+            "end": 72.219
           },
           {
             "word": "e",
-            "start": 0,
-            "end": 0
+            "start": 72.219,
+            "end": 72.504
           },
           {
             "word": "o",
-            "start": 0,
-            "end": 0
+            "start": 72.504,
+            "end": 72.747
           },
           {
             "word": "gelo",
-            "start": 0,
-            "end": 0
+            "start": 72.747,
+            "end": 72.91
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 72.91,
+            "end": 73.115
           },
           {
             "word": "coco",
-            "start": 0,
-            "end": 0
+            "start": 73.115,
+            "end": 73.564
           }
         ]
       },
       {
-        "verseStart": 73.26,
-        "verseEnd": 78.26,
+        "verseStart": 73.564,
+        "verseEnd": 75.243,
         "words": [
           {
             "word": "Nós",
-            "start": 0,
-            "end": 0
+            "start": 73.564,
+            "end": 73.848
           },
           {
             "word": "marola",
-            "start": 0,
-            "end": 0
+            "start": 73.848,
+            "end": 74.174
           },
           {
             "word": "quando",
-            "start": 0,
-            "end": 0
+            "start": 74.174,
+            "end": 74.341
           },
           {
             "word": "nós",
-            "start": 0,
-            "end": 0
+            "start": 74.341,
+            "end": 74.503
           },
           {
             "word": "vai",
-            "start": 0,
-            "end": 0
+            "start": 74.503,
+            "end": 74.666
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 74.666,
+            "end": 74.831
           },
           {
             "word": "shopping",
-            "start": 0,
-            "end": 0
+            "start": 74.831,
+            "end": 75.243
           }
         ]
       },
       {
-        "verseStart": 75.01,
-        "verseEnd": 80.01,
+        "verseStart": 75.243,
+        "verseEnd": 77.076,
         "words": [
           {
             "word": "Na",
-            "start": 0,
-            "end": 0
+            "start": 75.243,
+            "end": 75.409
           },
           {
             "word": "visão",
-            "start": 0,
-            "end": 0
+            "start": 75.409,
+            "end": 75.573
           },
           {
             "word": "da",
-            "start": 0,
-            "end": 0
+            "start": 75.573,
+            "end": 75.741
           },
           {
             "word": "Nike",
-            "start": 0,
-            "end": 0
+            "start": 75.741,
+            "end": 75.951
           },
           {
             "word": "ou",
-            "start": 0,
-            "end": 0
+            "start": 75.951,
+            "end": 76.118
           },
           {
             "word": "traje",
-            "start": 0,
-            "end": 0
+            "start": 76.118,
+            "end": 76.285
           },
           {
             "word": "da",
-            "start": 0,
-            "end": 0
+            "start": 76.285,
+            "end": 76.543
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 76.543,
+            "end": 77.076
           }
         ]
       },
       {
-        "verseStart": 76.75,
-        "verseEnd": 81.75,
+        "verseStart": 77.076,
+        "verseEnd": 78.774,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 77.076,
+            "end": 77.286
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 77.286,
+            "end": 77.541
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 77.541,
+            "end": 77.745
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 77.745,
+            "end": 77.953
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 77.953,
+            "end": 78.157
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 78.157,
+            "end": 78.367
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 78.367,
+            "end": 78.774
           }
         ]
       },
       {
-        "verseStart": 78.75,
-        "verseEnd": 83.75,
+        "verseStart": 78.774,
+        "verseEnd": 80.584,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 78.774,
+            "end": 78.936
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 78.936,
+            "end": 79.018
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 79.018,
+            "end": 79.222
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 79.222,
+            "end": 79.467
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 79.467,
+            "end": 79.714
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 79.714,
+            "end": 79.88
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 79.88,
+            "end": 80.128
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 80.128,
+            "end": 80.584
           }
         ]
       },
       {
-        "verseStart": 81.33,
-        "verseEnd": 86.33,
+        "verseStart": 80.584,
+        "verseEnd": 82.671,
         "words": [
           {
             "word": "Yeah",
-            "start": 0,
-            "end": 0
+            "start": 80.584,
+            "end": 81.443
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 81.443,
+            "end": 81.855
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 81.855,
+            "end": 82.671
           }
         ]
       },
       {
-        "verseStart": 82.38,
-        "verseEnd": 87.38,
+        "verseStart": 82.671,
+        "verseEnd": 84.044,
         "words": [
           {
             "word": "Uh",
-            "start": 0,
-            "end": 0
+            "start": 82.671,
+            "end": 82.875
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 82.875,
+            "end": 83.123
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 83.123,
+            "end": 83.333
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 83.333,
+            "end": 83.593
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 83.593,
+            "end": 84.044
           }
         ]
       },
       {
-        "verseStart": 83.94,
-        "verseEnd": 88.94,
+        "verseStart": 84.044,
+        "verseEnd": 85.712,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 84.044,
+            "end": 84.209
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 84.209,
+            "end": 84.293
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 84.293,
+            "end": 84.502
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 84.502,
+            "end": 84.831
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 84.831,
+            "end": 85.044
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 85.044,
+            "end": 85.336
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 85.336,
+            "end": 85.712
           }
         ]
       },
       {
-        "verseStart": 85.49,
-        "verseEnd": 90.49,
+        "verseStart": 85.712,
+        "verseEnd": 87.372,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 85.712,
+            "end": 85.836
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 85.836,
+            "end": 85.961
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 85.961,
+            "end": 86.21
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 86.21,
+            "end": 86.419
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 86.419,
+            "end": 86.67
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 86.67,
+            "end": 86.837
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 86.837,
+            "end": 87.087
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 87.087,
+            "end": 87.372
           }
         ]
       },
       {
-        "verseStart": 87.12,
-        "verseEnd": 92.12,
+        "verseStart": 87.372,
+        "verseEnd": 89.01,
         "words": [
           {
             "word": "Tropa",
-            "start": 0,
-            "end": 0
+            "start": 87.372,
+            "end": 87.66
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 87.66,
+            "end": 87.783
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 87.783,
+            "end": 87.906
           },
           {
             "word": "pista",
-            "start": 0,
-            "end": 0
+            "start": 87.906,
+            "end": 88.316
           },
           {
             "word": "sempre",
-            "start": 0,
-            "end": 0
+            "start": 88.316,
+            "end": 88.644
           },
           {
             "word": "trajada",
-            "start": 0,
-            "end": 0
+            "start": 88.644,
+            "end": 89.01
           }
         ]
       },
       {
-        "verseStart": 88.94,
-        "verseEnd": 93.94,
+        "verseStart": 89.01,
+        "verseEnd": 90.854,
         "words": [
           {
             "word": "Marola",
-            "start": 0,
-            "end": 0
+            "start": 89.01,
+            "end": 89.466
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 89.466,
+            "end": 89.632
           },
           {
             "word": "baile",
-            "start": 0,
-            "end": 0
+            "start": 89.632,
+            "end": 89.917
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 89.917,
+            "end": 90.079
           },
           {
             "word": "XRE",
-            "start": 0,
-            "end": 0
+            "start": 90.079,
+            "end": 90.854
           }
         ]
       },
       {
-        "verseStart": 90.78,
-        "verseEnd": 95.78,
+        "verseStart": 90.854,
+        "verseEnd": 92.611,
         "words": [
           {
             "word": "Foda",
-            "start": 0,
-            "end": 0
+            "start": 90.854,
+            "end": 91.058
           },
           {
             "word": "se",
-            "start": 0,
-            "end": 0
+            "start": 91.058,
+            "end": 91.222
           },
           {
             "word": "a",
-            "start": 0,
-            "end": 0
+            "start": 91.222,
+            "end": 91.428
           },
           {
             "word": "Bape",
-            "start": 0,
-            "end": 0
+            "start": 91.428,
+            "end": 91.631
           },
           {
             "word": "tô",
-            "start": 0,
-            "end": 0
+            "start": 91.631,
+            "end": 91.835
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 91.835,
+            "end": 92.079
           },
           {
             "word": "Cyclone",
-            "start": 0,
-            "end": 0
+            "start": 92.079,
+            "end": 92.611
           }
         ]
       },
       {
-        "verseStart": 92.25,
-        "verseEnd": 97.25,
+        "verseStart": 92.611,
+        "verseEnd": 94.416,
         "words": [
           {
             "word": "Ela",
-            "start": 0,
-            "end": 0
+            "start": 92.611,
+            "end": 92.776
           },
           {
             "word": "sabe",
-            "start": 0,
-            "end": 0
+            "start": 92.776,
+            "end": 92.903
           },
           {
             "word": "que",
-            "start": 0,
-            "end": 0
+            "start": 92.903,
+            "end": 93.069
           },
           {
             "word": "eu",
-            "start": 0,
-            "end": 0
+            "start": 93.069,
+            "end": 93.231
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 93.231,
+            "end": 93.437
           },
           {
             "word": "sou",
-            "start": 0,
-            "end": 0
+            "start": 93.437,
+            "end": 93.64
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 93.64,
+            "end": 93.885
           },
           {
             "word": "bobeira",
-            "start": 0,
-            "end": 0
+            "start": 93.885,
+            "end": 94.416
           }
         ]
       },
       {
-        "verseStart": 94.43,
-        "verseEnd": 99.43,
+        "verseStart": 94.416,
+        "verseEnd": 95.726,
         "words": [
           {
             "word": "No",
-            "start": 0,
-            "end": 0
+            "start": 94.416,
+            "end": 94.619
           },
           {
             "word": "slick",
-            "start": 0,
-            "end": 0
+            "start": 94.619,
+            "end": 94.865
           },
           {
             "word": "tem",
-            "start": 0,
-            "end": 0
+            "start": 94.865,
+            "end": 95.194
           },
           {
             "word": "ice",
-            "start": 0,
-            "end": 0
+            "start": 95.194,
+            "end": 95.726
           }
         ]
       },
       {
-        "verseStart": 95.53,
-        "verseEnd": 100.53,
+        "verseStart": 95.726,
+        "verseEnd": 97.886,
         "words": [
           {
             "word": "Até",
-            "start": 0,
-            "end": 0
+            "start": 95.726,
+            "end": 95.971
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 95.971,
+            "end": 96.216
           },
           {
             "word": "chefe",
-            "start": 0,
-            "end": 0
+            "start": 96.216,
+            "end": 96.42
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 96.42,
+            "end": 96.624
           },
           {
             "word": "coloquei",
-            "start": 0,
-            "end": 0
+            "start": 96.624,
+            "end": 97.071
           },
           {
             "word": "molha",
-            "start": 0,
-            "end": 0
+            "start": 97.071,
+            "end": 97.275
           },
           {
             "word": "ceda",
-            "start": 0,
-            "end": 0
+            "start": 97.275,
+            "end": 97.886
           }
         ]
       },
       {
-        "verseStart": 97.78,
-        "verseEnd": 102.78,
+        "verseStart": 97.886,
+        "verseEnd": 99.606,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 97.886,
+            "end": 98.131
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 98.131,
+            "end": 98.334
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 98.334,
+            "end": 98.869
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 98.869,
+            "end": 99.606
           }
         ]
       },
       {
-        "verseStart": 99.55,
-        "verseEnd": 104.55,
+        "verseStart": 99.606,
+        "verseEnd": 101.432,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 99.606,
+            "end": 99.77
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 99.77,
+            "end": 100.517
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 100.517,
+            "end": 100.639
           },
           {
             "word": "La",
-            "start": 0,
-            "end": 0
+            "start": 100.639,
+            "end": 100.766
           },
           {
             "word": "la",
-            "start": 0,
-            "end": 0
+            "start": 100.766,
+            "end": 101.432
           }
         ]
       },
       {
-        "verseStart": 101.15,
-        "verseEnd": 106.15,
+        "verseStart": 101.432,
+        "verseEnd": 103.109,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 101.432,
+            "end": 101.595
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 101.595,
+            "end": 102.253
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 102.253,
+            "end": 102.417
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 102.417,
+            "end": 103.109
           }
         ]
       },
       {
-        "verseStart": 102.87,
-        "verseEnd": 107.87,
+        "verseStart": 103.109,
+        "verseEnd": 104.795,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 103.109,
+            "end": 103.314
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 103.314,
+            "end": 103.978
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 103.978,
+            "end": 104.14
           },
           {
             "word": "La",
-            "start": 0,
-            "end": 0
+            "start": 104.14,
+            "end": 104.267
           },
           {
             "word": "la",
-            "start": 0,
-            "end": 0
+            "start": 104.267,
+            "end": 104.795
           }
         ]
       },
       {
-        "verseStart": 104.72,
-        "verseEnd": 109.72,
+        "verseStart": 104.795,
+        "verseEnd": 106.607,
         "words": [
           {
             "word": "Gostou",
-            "start": 0,
-            "end": 0
+            "start": 104.795,
+            "end": 104.999
           },
           {
             "word": "do",
-            "start": 0,
-            "end": 0
+            "start": 104.999,
+            "end": 105.166
           },
           {
             "word": "meu",
-            "start": 0,
-            "end": 0
+            "start": 105.166,
+            "end": 105.37
           },
           {
             "word": "Air",
-            "start": 0,
-            "end": 0
+            "start": 105.37,
+            "end": 105.537
           },
           {
             "word": "Max",
-            "start": 0,
-            "end": 0
+            "start": 105.537,
+            "end": 105.866
           },
           {
             "word": "97",
-            "start": 0,
-            "end": 0
+            "start": 105.866,
+            "end": 106.607
           }
         ]
       },
       {
-        "verseStart": 106.41,
-        "verseEnd": 111.41,
+        "verseStart": 106.607,
+        "verseEnd": 108.347,
         "words": [
           {
             "word": "Tô",
-            "start": 0,
-            "end": 0
+            "start": 106.607,
+            "end": 106.729
           },
           {
             "word": "virando",
-            "start": 0,
-            "end": 0
+            "start": 106.729,
+            "end": 107.191
           },
           {
             "word": "chefe",
-            "start": 0,
-            "end": 0
+            "start": 107.191,
+            "end": 107.648
           },
           {
             "word": "labe",
-            "start": 0,
-            "end": 0
+            "start": 107.648,
+            "end": 108.347
           }
         ]
       },
       {
-        "verseStart": 108.00999999999999,
-        "verseEnd": 113.00999999999999,
+        "verseStart": 108.347,
+        "verseEnd": 110.034,
         "words": [
           {
             "word": "Na",
-            "start": 0,
-            "end": 0
+            "start": 108.347,
+            "end": 108.51
           },
           {
             "word": "praia",
-            "start": 0,
-            "end": 0
+            "start": 108.51,
+            "end": 108.672
           },
           {
             "word": "da",
-            "start": 0,
-            "end": 0
+            "start": 108.672,
+            "end": 108.795
           },
           {
             "word": "Barra",
-            "start": 0,
-            "end": 0
+            "start": 108.795,
+            "end": 109.172
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 109.172,
+            "end": 109.458
           },
           {
             "word": "Juliet",
-            "start": 0,
-            "end": 0
+            "start": 109.458,
+            "end": 110.034
           }
         ]
       },
       {
-        "verseStart": 109.14,
-        "verseEnd": 114.14,
+        "verseStart": 110.034,
+        "verseEnd": 111.882,
         "words": [
           {
             "word": "Fumando",
-            "start": 0,
-            "end": 0
+            "start": 110.034,
+            "end": 110.653
           },
           {
             "word": "paki",
-            "start": 0,
-            "end": 0
+            "start": 110.653,
+            "end": 111.109
           },
           {
             "word": "com",
-            "start": 0,
-            "end": 0
+            "start": 111.109,
+            "end": 111.231
           },
           {
             "word": "a",
-            "start": 0,
-            "end": 0
+            "start": 111.231,
+            "end": 111.353
           },
           {
             "word": "lady",
-            "start": 0,
-            "end": 0
+            "start": 111.353,
+            "end": 111.882
           }
         ]
       },
       {
-        "verseStart": 111.75999999999999,
-        "verseEnd": 116.75999999999999,
+        "verseStart": 111.882,
+        "verseEnd": 113.554,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 111.882,
+            "end": 112.086
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 112.086,
+            "end": 112.699
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 112.699,
+            "end": 112.821
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 112.821,
+            "end": 113.554
           }
         ]
       },
       {
-        "verseStart": 113.42,
-        "verseEnd": 118.42,
+        "verseStart": 113.554,
+        "verseEnd": 115.323,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 113.554,
+            "end": 113.717
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 113.717,
+            "end": 114.45
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 114.45,
+            "end": 114.572
           },
           {
             "word": "La",
-            "start": 0,
-            "end": 0
+            "start": 114.572,
+            "end": 114.737
           },
           {
             "word": "la",
-            "start": 0,
-            "end": 0
+            "start": 114.737,
+            "end": 115.323
           }
         ]
       },
       {
-        "verseStart": 115.02000000000001,
-        "verseEnd": 120.02000000000001,
+        "verseStart": 115.323,
+        "verseEnd": 117.072,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 115.323,
+            "end": 115.452
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 115.452,
+            "end": 116.202
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 116.202,
+            "end": 116.324
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 116.324,
+            "end": 117.072
           }
         ]
       },
       {
-        "verseStart": 117.22999999999999,
-        "verseEnd": 122.22999999999999,
+        "verseStart": 117.072,
+        "verseEnd": 118.751,
         "words": [
           {
             "word": "De",
-            "start": 0,
-            "end": 0
+            "start": 117.072,
+            "end": 117.237
           },
           {
             "word": "Lacoste",
-            "start": 0,
-            "end": 0
+            "start": 117.237,
+            "end": 117.358
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 117.358,
+            "end": 117.85
           },
           {
             "word": "La",
-            "start": 0,
-            "end": 0
+            "start": 117.85,
+            "end": 118.099
           },
           {
             "word": "la",
-            "start": 0,
-            "end": 0
+            "start": 118.099,
+            "end": 118.751
           }
         ]
       },
       {
-        "verseStart": 118.50999999999999,
-        "verseEnd": 123.50999999999999,
+        "verseStart": 118.751,
+        "verseEnd": 120.559,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 118.751,
+            "end": 118.997
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 118.997,
+            "end": 119.245
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 119.245,
+            "end": 119.494
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 119.494,
+            "end": 119.698
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 119.698,
+            "end": 119.903
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 119.903,
+            "end": 120.108
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 120.108,
+            "end": 120.559
           }
         ]
       },
       {
-        "verseStart": 120.27,
-        "verseEnd": 125.27,
+        "verseStart": 120.559,
+        "verseEnd": 122.906,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 120.559,
+            "end": 120.681
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 120.681,
+            "end": 120.762
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 120.762,
+            "end": 121.007
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 121.007,
+            "end": 121.252
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 121.252,
+            "end": 121.419
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 121.419,
+            "end": 121.626
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 121.626,
+            "end": 121.83
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 121.83,
+            "end": 122.906
           }
         ]
       },
       {
-        "verseStart": 122.82,
-        "verseEnd": 127.82,
+        "verseStart": 122.906,
+        "verseEnd": 125.758,
         "words": [
           {
             "word": "Yeah",
-            "start": 0,
-            "end": 0
+            "start": 122.906,
+            "end": 123.109
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 123.109,
+            "end": 123.314
           },
           {
             "word": "yeah",
-            "start": 0,
-            "end": 0
+            "start": 123.314,
+            "end": 125.758
           }
         ]
       },
       {
-        "verseStart": 125.63,
-        "verseEnd": 130.63,
+        "verseStart": 125.758,
+        "verseEnd": 127.458,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 125.758,
+            "end": 125.963
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 125.963,
+            "end": 126.21
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 126.21,
+            "end": 126.418
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 126.418,
+            "end": 126.629
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 126.629,
+            "end": 126.876
           },
           {
             "word": "só",
-            "start": 0,
-            "end": 0
+            "start": 126.876,
+            "end": 127.082
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 127.082,
+            "end": 127.458
           }
         ]
       },
       {
-        "verseStart": 127.13,
-        "verseEnd": 132.13,
+        "verseStart": 127.458,
+        "verseEnd": 129.102,
         "words": [
           {
             "word": "Se",
-            "start": 0,
-            "end": 0
+            "start": 127.458,
+            "end": 127.584
           },
           {
             "word": "ela",
-            "start": 0,
-            "end": 0
+            "start": 127.584,
+            "end": 127.709
           },
           {
             "word": "não",
-            "start": 0,
-            "end": 0
+            "start": 127.709,
+            "end": 127.912
           },
           {
             "word": "quer",
-            "start": 0,
-            "end": 0
+            "start": 127.912,
+            "end": 128.117
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 128.117,
+            "end": 128.362
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 128.362,
+            "end": 128.565
           },
           {
             "word": "já",
-            "start": 0,
-            "end": 0
+            "start": 128.565,
+            "end": 128.772
           },
           {
             "word": "é",
-            "start": 0,
-            "end": 0
+            "start": 128.772,
+            "end": 129.102
           }
         ]
       },
       {
-        "verseStart": 128.88,
-        "verseEnd": 133.88,
+        "verseStart": 129.102,
+        "verseEnd": 130.799,
         "words": [
           {
             "word": "Tropa",
-            "start": 0,
-            "end": 0
+            "start": 129.102,
+            "end": 129.398
           },
           {
             "word": "tá",
-            "start": 0,
-            "end": 0
+            "start": 129.398,
+            "end": 129.525
           },
           {
             "word": "na",
-            "start": 0,
-            "end": 0
+            "start": 129.525,
+            "end": 129.648
           },
           {
             "word": "pista",
-            "start": 0,
-            "end": 0
+            "start": 129.648,
+            "end": 130.063
           },
           {
             "word": "sempre",
-            "start": 0,
-            "end": 0
+            "start": 130.063,
+            "end": 130.348
           },
           {
             "word": "trajada",
-            "start": 0,
-            "end": 0
+            "start": 130.348,
+            "end": 130.799
           }
         ]
       },
       {
-        "verseStart": 130.75,
-        "verseEnd": 135.75,
+        "verseStart": 130.799,
+        "verseEnd": 132.603,
         "words": [
           {
             "word": "Marola",
-            "start": 0,
-            "end": 0
+            "start": 130.799,
+            "end": 130.963
           },
           {
             "word": "no",
-            "start": 0,
-            "end": 0
+            "start": 130.963,
+            "end": 131.256
           },
           {
             "word": "baile",
-            "start": 0,
-            "end": 0
+            "start": 131.256,
+            "end": 131.668
           },
           {
             "word": "de",
-            "start": 0,
-            "end": 0
+            "start": 131.668,
+            "end": 131.79
           },
           {
             "word": "XRE",
-            "start": 0,
-            "end": 0
+            "start": 131.79,
+            "end": 132.603
           }
         ]
       },
       {
-        "verseStart": 132,
-        "verseEnd": 137,
+        "verseStart": 132.603,
+        "verseEnd": 134.08,
         "words": [
           {
             "word": "Peitou",
-            "start": 0,
-            "end": 0
+            "start": 132.603,
+            "end": 132.888
           },
           {
             "word": "o",
-            "start": 0,
-            "end": 0
+            "start": 132.888,
+            "end": 133.134
           },
           {
             "word": "trem",
-            "start": 0,
-            "end": 0
+            "start": 133.134,
+            "end": 133.423
           },
           {
             "word": "ficou",
-            "start": 0,
-            "end": 0
+            "start": 133.423,
+            "end": 133.586
           },
           {
             "word": "fudido",
-            "start": 0,
-            "end": 0
+            "start": 133.586,
+            "end": 134.08
           }
         ]
       },
       {
-        "verseStart": 133.45,
-        "verseEnd": 138.45,
+        "verseStart": 134.08,
+        "verseEnd": 138.605,
         "words": [
           {
             "word": "Aquele",
-            "start": 0,
-            "end": 0
+            "start": 134.08,
+            "end": 134.202
           },
           {
             "word": "jeitão",
-            "start": 0,
-            "end": 0
+            "start": 134.202,
+            "end": 135.016
           },
           {
             "word": "Muita",
-            "start": 0,
-            "end": 0
+            "start": 135.016,
+            "end": 135.18
           },
           {
             "word": "fé",
-            "start": 0,
-            "end": 0
+            "start": 135.18,
+            "end": 138.605
           }
         ]
       },
       {
-        "verseStart": 138.89,
-        "verseEnd": 143.89,
+        "verseStart": 138.605,
+        "verseEnd": 140.767,
         "words": [
           {
             "word": "Só",
-            "start": 0,
-            "end": 0
+            "start": 138.605,
+            "end": 138.767
           },
           {
             "word": "fé",
-            "start": 0,
+            "start": 138.767,
             "end": 0
           }
         ]
