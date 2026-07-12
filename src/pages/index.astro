@@ -109,23 +109,19 @@ const pageTitle = "I'm cooking something here...";
 
     .custom-player-wrapper {
       position: relative;
-      width: auto;
+      width: 100%;
       height: auto;
       max-width: 100%;
-      max-height: calc(100% - 48px);
-      aspect-ratio: 16 / 9;
       box-shadow: 0 4px 30px rgba(255,255,255,0.05);
       border-radius: 8px;
       background-color: #050505;
       overflow: hidden;
       display: flex;
-      min-height: 0;
-      min-width: 0;
     }
 
     .custom-player-wrapper video {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: contain;
       outline: none;
       cursor: pointer;
@@ -568,6 +564,7 @@ const pageTitle = "I'm cooking something here...";
       <div class="video-container">
         <div class="player-stack">
           <div class="custom-player-wrapper" id="player-wrapper">
+            <audio id="anthem-audio" crossorigin="anonymous"></audio>
             <video 
               id="anthem-video"
               controls 
@@ -705,8 +702,18 @@ const pageTitle = "I'm cooking something here...";
 
       // 2. Setup video player
       const vid = document.getElementById('anthem-video');
+      const audioEl = document.getElementById('anthem-audio');
       const wrapper = document.getElementById('player-wrapper');
       const lyricsContainer = document.getElementById('lyrics-container');
+
+      if (vid && audioEl) {
+        vid.muted = true;
+        
+        vid.addEventListener('play', () => audioEl.play().catch(()=>{}));
+        vid.addEventListener('pause', () => audioEl.pause());
+        vid.addEventListener('seeked', () => { audioEl.currentTime = vid.currentTime; });
+        vid.addEventListener('volumechange', () => { audioEl.volume = vid.volume; audioEl.muted = vid.muted; });
+      }
 
       const safePlay = async () => {
         try {
@@ -727,6 +734,10 @@ const pageTitle = "I'm cooking something here...";
         vid.volume = 0.35;
         const sourceEl = document.getElementById('anthem-source');
         if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+        if (audioEl) {
+          audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          audioEl.load();
+        }
 
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
@@ -1094,6 +1105,10 @@ const pageTitle = "I'm cooking something here...";
           vid.pause();
           const sourceEl = document.getElementById('anthem-source');
           if (sourceEl) sourceEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          if (audioEl) {
+            audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+            audioEl.load();
+          }
           vid.load();
           safePlay();
 
@@ -1116,10 +1131,10 @@ const pageTitle = "I'm cooking something here...";
       const ctxRight = canvasRight?.getContext('2d');
       
       const initAudio = () => {
-        if (!audioCtx) {
+        if (!audioCtx && audioEl) {
           audioCtx = new (window.AudioContext || window.webkitAudioContext)();
           analyser = audioCtx.createAnalyser();
-          const source = audioCtx.createMediaElementSource(vid);
+          const source = audioCtx.createMediaElementSource(audioEl);
           source.connect(analyser);
           analyser.connect(audioCtx.destination);
           analyser.fftSize = 512;
