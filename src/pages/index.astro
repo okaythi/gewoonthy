@@ -399,10 +399,9 @@ const pageTitle = "I'm cooking something here...";
 
 
     .player-bottom-row {
-      display: flex;
+      display: grid;
+      grid-template-columns: 140px 1fr 140px;
       align-items: center;
-      justify-content: center;
-      position: relative;
       width: 100%;
       min-height: 48px;
       margin-top: 12px;
@@ -411,12 +410,8 @@ const pageTitle = "I'm cooking something here...";
 
     .left-controls {
       display: flex;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      justify-content: flex-start;
       margin-left: 16px;
-      padding-left: 8px;
       z-index: 10;
     }
 
@@ -459,12 +454,8 @@ const pageTitle = "I'm cooking something here...";
     .vote-controls {
       display: flex;
       gap: 16px;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      justify-content: flex-end;
       margin-right: 16px;
-      padding-right: 8px;
       z-index: 10;
     }
 
@@ -528,9 +519,12 @@ const pageTitle = "I'm cooking something here...";
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        container-type: inline-size;
       }
       .gab-side-word {
         position: absolute;
+        width: 100%;
+        left: 0;
         font-weight: 900;
         text-transform: uppercase;
         color: #fff;
@@ -740,12 +734,8 @@ const pageTitle = "I'm cooking something here...";
           `).join('');
         }
 
-        if (vid.readyState >= 2) {
-          safePlay();
-        } else {
-          vid.load();
-          vid.addEventListener('loadeddata', safePlay, { once: true });
-        }
+        vid.load();
+        safePlay();
 
         // Karaoke Engine
         let activeVerseIndex = -1;
@@ -842,13 +832,13 @@ const pageTitle = "I'm cooking something here...";
                     const wordElLeft = document.createElement('div');
                     wordElLeft.className = 'gab-side-word';
                     wordElLeft.textContent = wordText;
-                    wordElLeft.style.fontSize = finalSize + 'rem';
+                    wordElLeft.style.fontSize = `min(${finalSize}rem, 80cqw)`;
                     wordElLeft.style.top = topPos;
                     
                     const wordElRight = document.createElement('div');
                     wordElRight.className = 'gab-side-word';
                     wordElRight.textContent = wordText;
-                    wordElRight.style.fontSize = finalSize + 'rem';
+                    wordElRight.style.fontSize = `min(${finalSize}rem, 80cqw)`;
                     wordElRight.style.top = topPos;
                     
                     sideLeft.appendChild(wordElLeft);
@@ -1003,9 +993,14 @@ const pageTitle = "I'm cooking something here...";
           });
           
           fsBtn.addEventListener('click', () => {
-            if (wrapper.requestFullscreen) wrapper.requestFullscreen();
-            else if (wrapper.webkitRequestFullscreen) wrapper.webkitRequestFullscreen();
-            else if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
+            if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+              if (wrapper.requestFullscreen) wrapper.requestFullscreen();
+              else if (wrapper.webkitRequestFullscreen) wrapper.webkitRequestFullscreen();
+              else if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
+            } else {
+              if (document.exitFullscreen) document.exitFullscreen();
+              else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+            }
           });
           
           // Auto-hide controls timeout
@@ -1096,11 +1091,7 @@ const pageTitle = "I'm cooking something here...";
 
           vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           vid.load();
-          if (vid.readyState >= 2) {
-            safePlay();
-          } else {
-            vid.addEventListener('loadeddata', safePlay, { once: true });
-          }
+          safePlay();
 
           fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`, { cache: 'no-store' })
             .then(r => r.ok ? r.json() : {liked:false, desliked:false})
