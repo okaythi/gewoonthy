@@ -417,6 +417,7 @@ const pageTitle = "I'm cooking something here...";
       transform: translateY(-50%);
       margin-left: 16px;
       padding-left: 8px;
+      z-index: 10;
     }
 
     .shuffle-btn {
@@ -464,6 +465,7 @@ const pageTitle = "I'm cooking something here...";
       transform: translateY(-50%);
       margin-right: 16px;
       padding-right: 8px;
+      z-index: 10;
     }
 
     .vote-btn {
@@ -741,6 +743,7 @@ const pageTitle = "I'm cooking something here...";
         if (vid.readyState >= 2) {
           safePlay();
         } else {
+          vid.load();
           vid.addEventListener('loadeddata', safePlay, { once: true });
         }
 
@@ -1092,6 +1095,7 @@ const pageTitle = "I'm cooking something here...";
           }
 
           vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
+          vid.load();
           if (vid.readyState >= 2) {
             safePlay();
           } else {
