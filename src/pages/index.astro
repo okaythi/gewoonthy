@@ -515,6 +515,16 @@ const pageTitle = "I'm cooking something here...";
     }
     
     @media (min-width: 1024px) {
+      .viz-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      }
+      
       .gab-side {
         display: flex;
         flex: 1;
@@ -565,7 +575,7 @@ const pageTitle = "I'm cooking something here...";
     </div>
 
     <div class="video-wrapper">
-      <div id="gab-side-left" class="gab-side"></div>
+      <div id="gab-side-left" class="gab-side"><canvas id="viz-left" class="viz-canvas"></canvas></div>
       <div class="video-container">
         <div class="player-stack">
           <div class="custom-player-wrapper" id="player-wrapper">
@@ -573,6 +583,7 @@ const pageTitle = "I'm cooking something here...";
               id="anthem-video"
               src="" 
               controls 
+              crossorigin="anonymous"
               controlsList="nodownload noremoteplayback noplaybackrate"
               disablePictureInPicture
               playsinline
@@ -617,7 +628,7 @@ const pageTitle = "I'm cooking something here...";
           </div>
         </div>
       </div>
-      <div id="gab-side-right" class="gab-side"></div>
+      <div id="gab-side-right" class="gab-side"><canvas id="viz-right" class="viz-canvas"></canvas></div>
     </div>
 
     <div class="footer">
@@ -773,6 +784,8 @@ const pageTitle = "I'm cooking something here...";
         let currentSideWordRightEl = null;
         let lastTopPos = 50;
 
+        let isGlobalBridge = false;
+
         const updateLyrics = () => {
           const time = vid.currentTime - (typeof GLOBAL_OFFSET !== 'undefined' ? GLOBAL_OFFSET : 0);
           
@@ -820,15 +833,9 @@ const pageTitle = "I'm cooking something here...";
               
               if (isDesktop && selectedVideo === 'Gabrielle - 5 fine frøkner.mp4') {
                 const currentVerseText = lyricsData[newVerseIndex].words.map(w => w.word).join('');
-                const bridgePhrases = [
-                  "kjøre meg opp",
-                  "kjøre meg ned",
-                  "sprenge i kok",
-                  "ingen andre eg heller",
-                  "spiller ingen rolle"
-                ];
-                
+                const bridgePhrases = ["kjøre meg opp", "kjøre meg ned", "sprenge i kok", "ingen andre eg heller", "spiller ingen rolle"];
                 const isBridge = bridgePhrases.some(p => currentVerseText.toLowerCase().includes(p.toLowerCase()));
+                isGlobalBridge = isBridge;
                 
                 if (isBridge && sideLeft && sideRight) {
                   lyricsContainer.style.opacity = '0';
@@ -921,6 +928,7 @@ const pageTitle = "I'm cooking something here...";
         };
         
         vid.addEventListener('play', () => {
+          if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
           if (!animationFrameId) animationFrameId = requestAnimationFrame(updateLyrics);
         });
         
@@ -1126,6 +1134,90 @@ const pageTitle = "I'm cooking something here...";
             .catch(() => updateVoteUI(false, false));
         });
       }
+
+      // 5. Audio Spectrum Visualizer
+      let audioCtx = null;
+      let analyser = null;
+      let dataArray = null;
+      let bufferLength = 0;
+      let vizDrawId = null;
+      const canvasLeft = document.getElementById('viz-left');
+      const canvasRight = document.getElementById('viz-right');
+      const ctxLeft = canvasLeft?.getContext('2d');
+      const ctxRight = canvasRight?.getContext('2d');
+      
+      const initAudio = () => {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          analyser = audioCtx.createAnalyser();
+          const source = audioCtx.createMediaElementSource(vid);
+          source.connect(analyser);
+          analyser.connect(audioCtx.destination);
+          analyser.fftSize = 256;
+          bufferLength = analyser.frequencyBinCount;
+          dataArray = new Uint8Array(bufferLength);
+          drawVisualizer();
+        }
+      };
+
+      const resizeCanvas = () => {
+        if(canvasLeft && sideLeft) {
+          canvasLeft.width = sideLeft.clientWidth;
+          canvasLeft.height = sideLeft.clientHeight;
+        }
+        if(canvasRight && sideRight) {
+          canvasRight.width = sideRight.clientWidth;
+          canvasRight.height = sideRight.clientHeight;
+        }
+      };
+      
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      const drawVisualizer = () => {
+        vizDrawId = requestAnimationFrame(drawVisualizer);
+        if (!isDesktop || selectedVideo !== 'Gabrielle - 5 fine frøkner.mp4' || vid.paused) {
+          if (ctxLeft) ctxLeft.clearRect(0, 0, canvasLeft.width, canvasLeft.height);
+          if (ctxRight) ctxRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
+          return;
+        }
+        
+        analyser.getByteFrequencyData(dataArray);
+        const wL = canvasLeft.width;
+        const hL = canvasLeft.height;
+        const wR = canvasRight.width;
+        const hR = canvasRight.height;
+        
+        ctxLeft.clearRect(0, 0, wL, hL);
+        ctxRight.clearRect(0, 0, wR, hR);
+        
+        const barHeightLeft = hL / bufferLength;
+        const barHeightRight = hR / bufferLength;
+        
+        for(let i = 0; i < bufferLength; i++) {
+          const val = dataArray[i];
+          const pct = val / 255;
+          const barWidthLeft = wL * pct;
+          const barWidthRight = wR * pct;
+          
+          if (isGlobalBridge) {
+            const hue = (i / bufferLength) * 360;
+            ctxLeft.fillStyle = `hsl(${hue}, 100%, 60%)`;
+            ctxRight.fillStyle = `hsl(${hue}, 100%, 60%)`;
+          } else {
+            ctxLeft.fillStyle = `rgba(255, 255, 255, ${0.1 + pct * 0.7})`;
+            ctxRight.fillStyle = `rgba(255, 255, 255, ${0.1 + pct * 0.7})`;
+          }
+          
+          const yL = hL - (i * barHeightLeft) - barHeightLeft;
+          ctxLeft.fillRect(0, yL, barWidthLeft, barHeightLeft - 1);
+          
+          const yR = hR - (i * barHeightRight) - barHeightRight;
+          ctxRight.fillRect(wR - barWidthRight, yR, barWidthRight, barHeightRight - 1);
+        }
+      };
+
+      vid.addEventListener('play', initAudio, { once: true });
     });
 
     document.addEventListener('contextmenu', e => e.preventDefault());
