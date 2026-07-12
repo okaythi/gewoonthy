@@ -737,6 +737,16 @@ const pageTitle = "I'm cooking something here...";
           audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           audioEl.load();
         }
+        
+        if (selectedVideo.includes('IC3PEAK')) {
+          const wrapper = document.querySelector('.custom-player-wrapper');
+          if (wrapper) wrapper.style.aspectRatio = '4 / 3';
+          vid.style.objectFit = 'cover';
+        } else {
+          const wrapper = document.querySelector('.custom-player-wrapper');
+          if (wrapper) wrapper.style.aspectRatio = '16 / 9';
+          vid.style.objectFit = 'contain';
+        }
 
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
@@ -1102,13 +1112,22 @@ const pageTitle = "I'm cooking something here...";
           }
 
           vid.pause();
-          vid.removeAttribute('src');
-          vid.load();
           vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           if (audioEl) {
             audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
             audioEl.load();
           }
+          
+          if (selectedVideo.includes('IC3PEAK')) {
+            const wrapper = document.querySelector('.custom-player-wrapper');
+            if (wrapper) wrapper.style.aspectRatio = '4 / 3';
+            vid.style.objectFit = 'cover';
+          } else {
+            const wrapper = document.querySelector('.custom-player-wrapper');
+            if (wrapper) wrapper.style.aspectRatio = '16 / 9';
+            vid.style.objectFit = 'contain';
+          }
+          
           vid.load();
           safePlay();
 
