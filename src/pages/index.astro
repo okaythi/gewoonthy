@@ -460,7 +460,8 @@ const pageTitle = "Under maintenance...";
     .vote-btn.active svg {
       fill: currentColor;
     }
-
+  </style>
+  <style is:global>
     .gab-side {
       display: none;
     }
@@ -714,7 +715,8 @@ const pageTitle = "Under maintenance...";
         const sideLeft = document.getElementById('gab-side-left');
         const sideRight = document.getElementById('gab-side-right');
         const isDesktop = !window.matchMedia("(pointer: coarse)").matches;
-        let currentSideWordEl = null;
+        let currentSideWordLeftEl = null;
+        let currentSideWordRightEl = null;
 
         const updateLyrics = () => {
           const time = vid.currentTime - (typeof GLOBAL_OFFSET !== 'undefined' ? GLOBAL_OFFSET : 0);
@@ -776,32 +778,58 @@ const pageTitle = "Under maintenance...";
                 if (isBridge && sideLeft && sideRight) {
                   lyricsContainer.style.opacity = '0';
                   
-                  // Clean up previous word
-                  if (currentSideWordEl) {
-                    currentSideWordEl.classList.add('fade-out');
-                    const toRemove = currentSideWordEl;
+                  // Clean up previous words
+                  if (currentSideWordLeftEl) {
+                    currentSideWordLeftEl.classList.add('fade-out');
+                    const toRemove = currentSideWordLeftEl;
+                    setTimeout(() => toRemove.remove(), 600);
+                  }
+                  if (currentSideWordRightEl) {
+                    currentSideWordRightEl.classList.add('fade-out');
+                    const toRemove = currentSideWordRightEl;
                     setTimeout(() => toRemove.remove(), 600);
                   }
                   
                   // Create new BAM word
-                  const wordText = lyricsData[newVerseIndex].words[newWordIndex].word;
-                  const wordEl = document.createElement('div');
-                  wordEl.className = 'gab-side-word';
-                  wordEl.textContent = wordText;
-                  
-                  // Randomize size and position
-                  const baseSize = 2 + Math.random() * 3; 
-                  const finalSize = wordText.length > 8 ? baseSize / 1.5 : baseSize;
-                  wordEl.style.fontSize = finalSize + 'rem';
-                  wordEl.style.top = (Math.random() * 70 + 10) + '%';
-                  
-                  // Alternate side
-                  const targetSide = (newWordIndex % 2 === 0) ? sideLeft : sideRight;
-                  targetSide.appendChild(wordEl);
-                  
-                  currentSideWordEl = wordEl;
+                  const wordText = lyricsData[newVerseIndex].words[newWordIndex].word.trim();
+                  if (wordText) {
+                    // Randomize size and position for BOTH sides (identical to each other)
+                    const baseSize = 2 + Math.random() * 3; 
+                    const finalSize = wordText.length > 8 ? baseSize / 1.5 : baseSize;
+                    const topPos = (Math.random() * 70 + 10) + '%';
+                    
+                    const wordElLeft = document.createElement('div');
+                    wordElLeft.className = 'gab-side-word';
+                    wordElLeft.textContent = wordText;
+                    wordElLeft.style.fontSize = finalSize + 'rem';
+                    wordElLeft.style.top = topPos;
+                    
+                    const wordElRight = document.createElement('div');
+                    wordElRight.className = 'gab-side-word';
+                    wordElRight.textContent = wordText;
+                    wordElRight.style.fontSize = finalSize + 'rem';
+                    wordElRight.style.top = topPos;
+                    
+                    sideLeft.appendChild(wordElLeft);
+                    sideRight.appendChild(wordElRight);
+                    
+                    currentSideWordLeftEl = wordElLeft;
+                    currentSideWordRightEl = wordElRight;
+                  }
                 } else {
                   lyricsContainer.style.opacity = '1';
+                  if (currentSideWordLeftEl) {
+                    currentSideWordLeftEl.classList.add('fade-out');
+                    const toRemove = currentSideWordLeftEl;
+                    setTimeout(() => toRemove.remove(), 600);
+                    currentSideWordLeftEl = null;
+                  }
+                  if (currentSideWordRightEl) {
+                    currentSideWordRightEl.classList.add('fade-out');
+                    const toRemove = currentSideWordRightEl;
+                    setTimeout(() => toRemove.remove(), 600);
+                    currentSideWordRightEl = null;
+                  }
                 }
               }
               
@@ -809,11 +837,17 @@ const pageTitle = "Under maintenance...";
               clearTimeout(inactivityTimer);
               inactivityTimer = setTimeout(() => {
                 if (lyricsContainer) lyricsContainer.style.opacity = '0';
-                if (currentSideWordEl) {
-                  currentSideWordEl.classList.add('fade-out');
-                  const toRemove = currentSideWordEl;
+                if (currentSideWordLeftEl) {
+                  currentSideWordLeftEl.classList.add('fade-out');
+                  const toRemove = currentSideWordLeftEl;
                   setTimeout(() => toRemove.remove(), 600);
-                  currentSideWordEl = null;
+                  currentSideWordLeftEl = null;
+                }
+                if (currentSideWordRightEl) {
+                  currentSideWordRightEl.classList.add('fade-out');
+                  const toRemove = currentSideWordRightEl;
+                  setTimeout(() => toRemove.remove(), 600);
+                  currentSideWordRightEl = null;
                 }
               }, 4000);
               
