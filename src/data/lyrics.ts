@@ -10388,5 +10388,2167 @@ export const songsDictionary: Record<string, SongData> = {
       }
     ],
     "subtitle": "🇰🇷 ● 그동안 이 띵곡 한 번 들어봐 ● 🇰🇷"
+  },
+  "Yamê - Bécane.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 3.31,
+        "verseEnd": 8.31,
+        "words": [
+          {
+            "word": "Bitch ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ça ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fait ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "très ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "très ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "longtemps ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'y ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pense ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "à ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comment ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "se ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mettre ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bien, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "moi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'ai ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ton ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "élan",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 7.49,
+        "verseEnd": 12.49,
+        "words": [
+          {
+            "word": "N'écoute ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jamais ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les \"",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "on ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dit\", ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ceux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "qui ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "jactent ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "n'ont ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vu ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vie ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "au ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "travers ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ton ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "monde",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 11.41,
+        "verseEnd": 16.41,
+        "words": [
+          {
+            "word": "J'ai ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beau ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "parler ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "langue ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mais ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "faut ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "croire ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "qu'ils ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "n'entendent ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "le ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "langage ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "violence",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 15.23,
+        "verseEnd": 20.23,
+        "words": [
+          {
+            "word": "J'me ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "faufile ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bal ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mains, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tu ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "m'as ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vu ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bégayer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quand ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fallait ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "passer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "le ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "lent",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 19.58,
+        "verseEnd": 24.58,
+        "words": [
+          {
+            "word": "Sankara, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Cheikh ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Anta, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "négro, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'ai ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "choisi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mes ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "modèles, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fiable ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comme ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "moteur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "allemand",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 23.35,
+        "verseEnd": 28.35,
+        "words": [
+          {
+            "word": "En ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "indé', ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "carats, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "chico, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oui ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "je ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fais ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quer-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cro ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bien ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "plus ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "grands ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "tes ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "grands",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 27.22,
+        "verseEnd": 32.22,
+        "words": [
+          {
+            "word": "J'les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "té-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ma ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ils ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sont ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "concentrés, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'attends ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "passe, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ils ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "peuvent ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "centrer",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 31.12,
+        "verseEnd": 36.120000000000005,
+        "words": [
+          {
+            "word": "J'suis ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bantu, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "parle ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "basané, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "on ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "n'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pas ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "v'nus ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ici ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pour ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "se ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pavaner",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 35.18,
+        "verseEnd": 40.18,
+        "words": [
+          {
+            "word": "Remballe ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ta ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'ai ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mes ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cc",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 37.79,
+        "verseEnd": 42.79,
+        "words": [
+          {
+            "word": "J'tourne ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "poignée, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'froisse ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "le ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "temps",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 41.4,
+        "verseEnd": 46.4,
+        "words": [
+          {
+            "word": "J'roule ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "comme ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "si ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "quelqu'un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "m'attendait",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 45.73,
+        "verseEnd": 50.73,
+        "words": [
+          {
+            "word": "J'cale ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "l'pétard ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "entre ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mes ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dents, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "m'bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "m'bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 51.96,
+        "verseEnd": 56.96,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'fume ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beuh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 57.96,
+        "verseEnd": 62.96,
+        "words": [
+          {
+            "word": "J'm'en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bats ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "couilles ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "si ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dangereux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sa ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mère",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 60.89,
+        "verseEnd": 65.89,
+        "words": [
+          {
+            "word": "J'vois ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 62.52,
+        "verseEnd": 67.52000000000001,
+        "words": [
+          {
+            "word": "La ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "crie ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "et ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "l'enfer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gros ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 67.78,
+        "verseEnd": 72.78,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "didi, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'fume ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beuh, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "hum",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 73.98,
+        "verseEnd": 78.98,
+        "words": [
+          {
+            "word": "J'm'en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bats ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "couilles ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "si ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dangereux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sa ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mère",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 76.66,
+        "verseEnd": 81.66,
+        "words": [
+          {
+            "word": "J'vois ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 78.44,
+        "verseEnd": 83.44,
+        "words": [
+          {
+            "word": "La ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "crie ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "et ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "l'enfer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gros ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 89.53,
+        "verseEnd": 94.53,
+        "words": [
+          {
+            "word": "L'akra ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "aide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "à ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "focaliser",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 92.94,
+        "verseEnd": 97.94,
+        "words": [
+          {
+            "word": "La ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "haine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'ressens ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mes ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "pensées, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "hum",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 97.87,
+        "verseEnd": 102.87,
+        "words": [
+          {
+            "word": "Dans ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ce ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "business ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "balisé, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 102.55,
+        "verseEnd": 107.55,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wou-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 110.28999999999999,
+        "verseEnd": 115.28999999999999,
+        "words": [
+          {
+            "word": "Et ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wou-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ou-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ah-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ah",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 118.88,
+        "verseEnd": 123.88,
+        "words": [
+          {
+            "word": "Cane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'fume ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beuh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 123.33,
+        "verseEnd": 128.32999999999998,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "euh, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "euh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 131.46,
+        "verseEnd": 136.46,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "da, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'fume ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "beuh, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "han",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 138.1,
+        "verseEnd": 143.1,
+        "words": [
+          {
+            "word": "J'm'en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bats ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "couilles ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "si ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dangereux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sa ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mère",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 140.47,
+        "verseEnd": 145.47,
+        "words": [
+          {
+            "word": "J'vois ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 142.28,
+        "verseEnd": 147.28,
+        "words": [
+          {
+            "word": "La ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "crie ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "et ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "l'enfer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gros ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 147.01,
+        "verseEnd": 152.01,
+        "words": [
+          {
+            "word": "J'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "la ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "di-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "didi, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "didi-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "i-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "i, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "han",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 153.67000000000002,
+        "verseEnd": 158.67000000000002,
+        "words": [
+          {
+            "word": "J'm'en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bats ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "les ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "couilles ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "si ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "c'est ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "dangereux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sa ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mère",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 155.91,
+        "verseEnd": 160.91,
+        "words": [
+          {
+            "word": "J'vois ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "que ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "des ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "barreaux ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "en ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 158.15,
+        "verseEnd": 163.15,
+        "words": [
+          {
+            "word": "La ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bécane ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "crie ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "et ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "j'sors ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "de ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "l'enfer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sur ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "un ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "gros ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fer, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 169.94,
+        "verseEnd": 174.94,
+        "words": [
+          {
+            "word": "Bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "bah ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ouais",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      }
+    ],
+    "subtitle": "🇫🇷 ● en attendant, écoute cette pépite ● 🇫🇷"
   }
 };
