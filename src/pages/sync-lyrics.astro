@@ -273,6 +273,8 @@ const pageTitle = "Lyrics Sync Tool";
       let globalOffset = 0;
       let currentV = 0;
       let currentW = 0;
+      let playingV = -1;
+      let playingW = -1;
       
       const loadSong = (key) => {
         currentSongKey = key;
@@ -282,6 +284,8 @@ const pageTitle = "Lyrics Sync Tool";
         localLyrics = JSON.parse(JSON.stringify(songData.lyricsData)); // clone
         currentV = 0;
         currentW = 0;
+        playingV = -1;
+        playingW = -1;
         vid.currentTime = 0;
         render();
       };
@@ -333,6 +337,8 @@ const pageTitle = "Lyrics Sync Tool";
           });
           currentV = 0;
           currentW = 0;
+          playingV = -1;
+          playingW = -1;
           vid.currentTime = 0;
           render();
         }
@@ -343,10 +349,10 @@ const pageTitle = "Lyrics Sync Tool";
           <div class="verse" id="v-${vIdx}">
             <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
             ${verse.words.map((w, wIdx) => {
-              const isSynced = w.start && w.start !== 0;
-              const isActive = vIdx === currentV && wIdx === currentW;
-              const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
-              return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
+            const isSynced = w.start && w.start !== 0;
+            const isActive = vIdx === playingV && wIdx === playingW;
+            const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
+            return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
             }).join('')}
           </div>
         `).join('');
@@ -358,6 +364,8 @@ const pageTitle = "Lyrics Sync Tool";
             const w = parseInt(el.getAttribute('data-w'));
             currentV = v;
             currentW = w;
+            playingV = -1;
+            playingW = -1;
             
             const targetTime = localLyrics[v].words[w].start || (localLyrics[v].verseStart || 0);
             if (targetTime) {
@@ -368,8 +376,10 @@ const pageTitle = "Lyrics Sync Tool";
           });
         });
         
-        // Scroll active into view
-        const activeEl = document.getElementById(`w-${currentV}-${currentW}`);
+        // Scroll active or next into view
+        const targetV = playingV !== -1 ? playingV : currentV;
+        const targetW = playingW !== -1 ? playingW : currentW;
+        const activeEl = document.getElementById(`w-${targetV}-${targetW}`);
         if (activeEl) {
           activeEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -404,6 +414,9 @@ const pageTitle = "Lyrics Sync Tool";
           if (currentV >= localLyrics.length) return;
           
           const time = vid.currentTime - globalOffset;
+          
+          playingV = currentV;
+          playingW = currentW;
           
           // Update current word start
           localLyrics[currentV].words[currentW].start = parseFloat(time.toFixed(3));

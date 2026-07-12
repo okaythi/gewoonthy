@@ -20,1968 +20,1968 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 34.062,
-        "verseEnd": 38.223,
+        "verseStart": 34.071,
+        "verseEnd": 37.694,
         "words": [
           {
             "word": "For ",
-            "start": 34.062,
-            "end": 34.719
+            "start": 34.071,
+            "end": 34.275
           },
           {
             "word": "the ",
-            "start": 34.719,
-            "end": 35.005
+            "start": 34.275,
+            "end": 34.52
           },
           {
             "word": "love ",
-            "start": 35.005,
-            "end": 35.249
+            "start": 34.52,
+            "end": 34.805
           },
           {
             "word": "of ",
-            "start": 35.249,
-            "end": 35.777
+            "start": 34.805,
+            "end": 35.13
           },
           {
             "word": "God, ",
-            "start": 35.777,
-            "end": 36.023
+            "start": 35.13,
+            "end": 35.74
           },
           {
             "word": "will ",
-            "start": 36.023,
-            "end": 36.226
+            "start": 35.74,
+            "end": 35.983
           },
           {
             "word": "you ",
-            "start": 36.226,
-            "end": 36.513
+            "start": 35.983,
+            "end": 36.186
           },
           {
             "word": "bite ",
-            "start": 36.513,
-            "end": 36.838
+            "start": 36.186,
+            "end": 36.471
           },
           {
             "word": "your ",
-            "start": 36.838,
-            "end": 37.693
+            "start": 36.471,
+            "end": 36.797
           },
           {
             "word": "tongue",
-            "start": 37.693,
-            "end": 38.223
+            "start": 36.797,
+            "end": 37.694
           }
         ]
       },
       {
-        "verseStart": 38.223,
-        "verseEnd": 41.449,
+        "verseStart": 37.694,
+        "verseEnd": 41.167,
         "words": [
           {
             "word": "Before ",
-            "start": 38.223,
-            "end": 38.426
+            "start": 37.694,
+            "end": 37.938
           },
           {
             "word": "we ",
-            "start": 38.426,
-            "end": 38.67
+            "start": 37.938,
+            "end": 38.142
           },
           {
             "word": "make ",
-            "start": 38.67,
-            "end": 38.914
+            "start": 38.142,
+            "end": 38.388
           },
           {
             "word": "you ",
-            "start": 38.914,
-            "end": 39.49
+            "start": 38.388,
+            "end": 38.632
           },
           {
             "word": "swallow ",
-            "start": 39.49,
-            "end": 41.204
+            "start": 38.632,
+            "end": 38.876
           },
           {
             "word": "it?",
-            "start": 41.204,
-            "end": 41.449
+            "start": 38.876,
+            "end": 41.167
           }
         ]
       },
       {
-        "verseStart": 41.449,
-        "verseEnd": 47.57,
+        "verseStart": 41.167,
+        "verseEnd": 47.333,
         "words": [
           {
             "word": "It's ",
-            "start": 41.449,
-            "end": 42.1
+            "start": 41.167,
+            "end": 41.41
           },
           {
             "word": "moments ",
-            "start": 42.1,
-            "end": 42.508
+            "start": 41.41,
+            "end": 41.98
           },
           {
             "word": "like ",
-            "start": 42.508,
-            "end": 42.956
+            "start": 41.98,
+            "end": 42.386
           },
           {
             "word": "this ",
-            "start": 42.956,
-            "end": 43.242
+            "start": 42.386,
+            "end": 42.924
           },
           {
             "word": "where ",
-            "start": 43.242,
-            "end": 43.853
+            "start": 42.924,
+            "end": 43.169
           },
           {
             "word": "silence ",
-            "start": 43.853,
-            "end": 44.056
+            "start": 43.169,
+            "end": 43.779
           },
           {
             "word": "is ",
-            "start": 44.056,
-            "end": 47.363
+            "start": 43.779,
+            "end": 44.064
           },
           {
             "word": "golden",
-            "start": 47.363,
-            "end": 47.57
+            "start": 44.064,
+            "end": 47.333
           }
         ]
       },
       {
-        "verseStart": 47.57,
-        "verseEnd": 48.67,
+        "verseStart": 47.333,
+        "verseEnd": 48.393,
         "words": [
           {
             "word": "And ",
-            "start": 47.57,
-            "end": 47.814
+            "start": 47.333,
+            "end": 47.578
           },
           {
             "word": "then ",
-            "start": 47.814,
-            "end": 48.017
+            "start": 47.578,
+            "end": 47.782
           },
           {
             "word": "you ",
-            "start": 48.017,
-            "end": 48.466
+            "start": 47.782,
+            "end": 48.025
           },
           {
             "word": "speak",
-            "start": 48.466,
-            "end": 48.67
+            "start": 48.025,
+            "end": 48.393
           }
         ]
       },
       {
-        "verseStart": 48.67,
-        "verseEnd": 52.134,
+        "verseStart": 48.393,
+        "verseEnd": 51.902,
         "words": [
           {
             "word": "No ",
-            "start": 48.67,
-            "end": 48.874
+            "start": 48.393,
+            "end": 48.724
           },
           {
             "word": "one ",
-            "start": 48.874,
-            "end": 49.081
+            "start": 48.724,
+            "end": 48.926
           },
           {
             "word": "wants ",
-            "start": 49.081,
-            "end": 49.325
+            "start": 48.926,
+            "end": 49.131
           },
           {
             "word": "to ",
-            "start": 49.325,
-            "end": 49.936
+            "start": 49.131,
+            "end": 49.376
           },
           {
             "word": "hear ",
-            "start": 49.936,
-            "end": 51.89
+            "start": 49.376,
+            "end": 49.904
           },
           {
             "word": "you",
-            "start": 51.89,
-            "end": 52.134
+            "start": 49.904,
+            "end": 51.902
           }
         ]
       },
       {
-        "verseStart": 52.134,
-        "verseEnd": 55.275,
+        "verseStart": 51.902,
+        "verseEnd": 54.759,
         "words": [
           {
             "word": "No ",
-            "start": 52.134,
-            "end": 52.338
+            "start": 51.902,
+            "end": 52.105
           },
           {
             "word": "one ",
-            "start": 52.338,
-            "end": 52.543
+            "start": 52.105,
+            "end": 52.31
           },
           {
             "word": "wants ",
-            "start": 52.543,
-            "end": 52.746
+            "start": 52.31,
+            "end": 52.555
           },
           {
             "word": "to ",
-            "start": 52.746,
-            "end": 53.399
+            "start": 52.555,
+            "end": 52.764
           },
           {
             "word": "see ",
-            "start": 53.399,
-            "end": 54.704
+            "start": 52.764,
+            "end": 53.456
           },
           {
             "word": "you",
-            "start": 54.704,
-            "end": 55.275
+            "start": 53.456,
+            "end": 54.759
           }
         ]
       },
       {
-        "verseStart": 55.275,
-        "verseEnd": 58.824,
+        "verseStart": 54.759,
+        "verseEnd": 58.6,
         "words": [
           {
             "word": "So ",
-            "start": 55.275,
-            "end": 55.806
+            "start": 54.759,
+            "end": 55.252
           },
           {
             "word": "desperate ",
-            "start": 55.806,
-            "end": 55.969
+            "start": 55.252,
+            "end": 55.742
           },
           {
             "word": "and ",
-            "start": 55.969,
-            "end": 56.864
+            "start": 55.742,
+            "end": 55.988
           },
           {
             "word": "pathetic, ",
-            "start": 56.864,
-            "end": 57.068
+            "start": 55.988,
+            "end": 56.884
           },
           {
             "word": "I'm ",
-            "start": 57.068,
-            "end": 57.515
+            "start": 56.884,
+            "end": 57.087
           },
           {
             "word": "begging ",
-            "start": 57.515,
-            "end": 57.722
+            "start": 57.087,
+            "end": 57.494
           },
           {
             "word": "you ",
-            "start": 57.722,
-            "end": 57.927
+            "start": 57.494,
+            "end": 57.7
           },
           {
             "word": "to ",
-            "start": 57.927,
-            "end": 58.21
+            "start": 57.7,
+            "end": 57.948
           },
           {
             "word": "spare ",
-            "start": 58.21,
-            "end": 58.618
+            "start": 57.948,
+            "end": 58.151
           },
           {
             "word": "me",
-            "start": 58.618,
-            "end": 58.824
+            "start": 58.151,
+            "end": 58.6
           }
         ]
       },
       {
-        "verseStart": 58.824,
-        "verseEnd": 63.101,
+        "verseStart": 58.6,
+        "verseEnd": 62.617,
         "words": [
           {
             "word": "The ",
-            "start": 58.824,
-            "end": 59.311
+            "start": 58.6,
+            "end": 58.803
           },
           {
             "word": "pleasure ",
-            "start": 59.311,
-            "end": 59.515
+            "start": 58.803,
+            "end": 59.267
           },
           {
             "word": "of ",
-            "start": 59.515,
-            "end": 59.718
+            "start": 59.267,
+            "end": 59.471
           },
           {
             "word": "your ",
-            "start": 59.718,
-            "end": 62.695
+            "start": 59.471,
+            "end": 59.721
           },
           {
             "word": "company",
-            "start": 62.695,
-            "end": 63.101
+            "start": 59.721,
+            "end": 62.617
           }
         ]
       },
       {
-        "verseStart": 63.101,
-        "verseEnd": 69.717,
+        "verseStart": 62.617,
+        "verseEnd": 69.516,
         "words": [
           {
             "word": "When ",
-            "start": 63.101,
-            "end": 63.548
+            "start": 62.617,
+            "end": 63.112
           },
           {
             "word": "did ",
-            "start": 63.548,
-            "end": 63.955
+            "start": 63.112,
+            "end": 63.568
           },
           {
             "word": "the ",
-            "start": 63.955,
-            "end": 64.771
+            "start": 63.568,
+            "end": 64.015
           },
           {
             "word": "diamonds ",
-            "start": 64.771,
-            "end": 65.178
+            "start": 64.015,
+            "end": 64.831
           },
           {
             "word": "leave ",
-            "start": 65.178,
-            "end": 66.033
+            "start": 64.831,
+            "end": 65.242
           },
           {
             "word": "your ",
-            "start": 66.033,
-            "end": 69.473
+            "start": 65.242,
+            "end": 65.934
           },
           {
             "word": "bones?",
-            "start": 69.473,
-            "end": 69.717
+            "start": 65.934,
+            "end": 69.516
           }
         ]
       },
       {
-        "verseStart": 69.717,
-        "verseEnd": 73.224,
+        "verseStart": 69.516,
+        "verseEnd": 72.99,
         "words": [
           {
             "word": "I'm ",
-            "start": 69.717,
-            "end": 70.045
+            "start": 69.516,
+            "end": 69.68
           },
           {
             "word": "burning ",
-            "start": 70.045,
-            "end": 70.577
+            "start": 69.68,
+            "end": 70.094
           },
           {
             "word": "down ",
-            "start": 70.577,
-            "end": 70.943
+            "start": 70.094,
+            "end": 70.584
           },
           {
             "word": "every ",
-            "start": 70.943,
-            "end": 71.352
+            "start": 70.584,
+            "end": 70.993
           },
           {
             "word": "bridge ",
-            "start": 71.352,
-            "end": 71.757
+            "start": 70.993,
+            "end": 71.36
           },
           {
             "word": "we ",
-            "start": 71.757,
-            "end": 73.02
+            "start": 71.36,
+            "end": 71.766
           },
           {
             "word": "made",
-            "start": 73.02,
-            "end": 73.224
+            "start": 71.766,
+            "end": 72.99
           }
         ]
       },
       {
-        "verseStart": 73.224,
-        "verseEnd": 76.66,
+        "verseStart": 72.99,
+        "verseEnd": 76.373,
         "words": [
           {
             "word": "I'll ",
-            "start": 73.224,
-            "end": 73.43
+            "start": 72.99,
+            "end": 73.234
           },
           {
             "word": "watch ",
-            "start": 73.43,
-            "end": 73.678
+            "start": 73.234,
+            "end": 73.436
           },
           {
             "word": "you ",
-            "start": 73.678,
-            "end": 74.046
+            "start": 73.436,
+            "end": 73.684
           },
           {
             "word": "choke ",
-            "start": 74.046,
-            "end": 74.29
+            "start": 73.684,
+            "end": 74.053
           },
           {
             "word": "on ",
-            "start": 74.29,
-            "end": 74.496
+            "start": 74.053,
+            "end": 74.255
           },
           {
             "word": "the ",
-            "start": 74.496,
-            "end": 74.945
+            "start": 74.255,
+            "end": 74.458
           },
           {
             "word": "hearts ",
-            "start": 74.945,
-            "end": 75.351
+            "start": 74.458,
+            "end": 74.905
           },
           {
             "word": "you ",
-            "start": 75.351,
-            "end": 76.456
+            "start": 74.905,
+            "end": 75.272
           },
           {
             "word": "break",
-            "start": 76.456,
-            "end": 76.66
+            "start": 75.272,
+            "end": 76.373
           }
         ]
       },
       {
-        "verseStart": 76.66,
-        "verseEnd": 80.212,
+        "verseStart": 76.373,
+        "verseEnd": 79.638,
         "words": [
           {
             "word": "I'm ",
-            "start": 76.66,
-            "end": 77.068
+            "start": 76.373,
+            "end": 76.617
           },
           {
             "word": "bleeding ",
-            "start": 77.068,
-            "end": 77.516
+            "start": 76.617,
+            "end": 76.985
           },
           {
             "word": "out ",
-            "start": 77.516,
-            "end": 77.967
+            "start": 76.985,
+            "end": 77.514
           },
           {
             "word": "every ",
-            "start": 77.967,
-            "end": 78.377
+            "start": 77.514,
+            "end": 77.717
           },
           {
             "word": "word ",
-            "start": 78.377,
-            "end": 78.824
+            "start": 77.717,
+            "end": 78.248
           },
           {
             "word": "you ",
-            "start": 78.824,
-            "end": 79.725
+            "start": 78.248,
+            "end": 78.66
           },
           {
             "word": "said",
-            "start": 79.725,
-            "end": 80.212
+            "start": 78.66,
+            "end": 79.638
           }
         ]
       },
       {
-        "verseStart": 80.212,
-        "verseEnd": 83.545,
+        "verseStart": 79.638,
+        "verseEnd": 83.394,
         "words": [
           {
             "word": "Go ",
-            "start": 80.212,
-            "end": 80.416
+            "start": 79.638,
+            "end": 80.087
           },
           {
             "word": "to ",
-            "start": 80.416,
-            "end": 80.985
+            "start": 80.087,
+            "end": 80.293
           },
           {
             "word": "hell, ",
-            "start": 80.985,
-            "end": 81.434
+            "start": 80.293,
+            "end": 80.903
           },
           {
             "word": "for ",
-            "start": 81.434,
-            "end": 82.043
+            "start": 80.903,
+            "end": 81.352
           },
           {
             "word": "heaven's ",
-            "start": 82.043,
-            "end": 83.341
+            "start": 81.352,
+            "end": 82.088
           },
           {
             "word": "sake",
-            "start": 83.341,
-            "end": 83.545
+            "start": 82.088,
+            "end": 83.394
           }
         ]
       },
       {
-        "verseStart": 83.545,
-        "verseEnd": 87.11,
+        "verseStart": 83.394,
+        "verseEnd": 86.874,
         "words": [
           {
             "word": "I'm ",
-            "start": 83.545,
-            "end": 83.998
+            "start": 83.394,
+            "end": 83.602
           },
           {
             "word": "burning ",
-            "start": 83.998,
-            "end": 84.463
+            "start": 83.602,
+            "end": 83.97
           },
           {
             "word": "down ",
-            "start": 84.463,
-            "end": 84.911
+            "start": 83.97,
+            "end": 84.498
           },
           {
             "word": "every ",
-            "start": 84.911,
-            "end": 85.359
+            "start": 84.498,
+            "end": 84.91
           },
           {
             "word": "bridge ",
-            "start": 85.359,
-            "end": 85.806
+            "start": 84.91,
+            "end": 85.315
           },
           {
             "word": "we ",
-            "start": 85.806,
-            "end": 86.907
+            "start": 85.315,
+            "end": 85.766
           },
           {
             "word": "made",
-            "start": 86.907,
-            "end": 87.11
+            "start": 85.766,
+            "end": 86.874
           }
         ]
       },
       {
-        "verseStart": 87.11,
-        "verseEnd": 90.582,
+        "verseStart": 86.874,
+        "verseEnd": 90.308,
         "words": [
           {
             "word": "I'll ",
-            "start": 87.11,
-            "end": 87.361
+            "start": 86.874,
+            "end": 87.077
           },
           {
             "word": "watch ",
-            "start": 87.361,
+            "start": 87.077,
+            "end": 87.322
+          },
+          {
+            "word": "you ",
+            "start": 87.322,
             "end": 87.567
           },
           {
-            "word": "you ",
-            "start": 87.567,
-            "end": 88.016
-          },
-          {
             "word": "choke ",
-            "start": 88.016,
-            "end": 88.22
+            "start": 87.567,
+            "end": 87.933
           },
           {
             "word": "on ",
-            "start": 88.22,
-            "end": 88.465
+            "start": 87.933,
+            "end": 88.177
           },
           {
             "word": "the ",
-            "start": 88.465,
-            "end": 88.871
+            "start": 88.177,
+            "end": 88.381
           },
           {
             "word": "hearts ",
-            "start": 88.871,
-            "end": 89.238
+            "start": 88.381,
+            "end": 88.79
           },
           {
             "word": "you ",
-            "start": 89.238,
-            "end": 90.338
+            "start": 88.79,
+            "end": 89.197
           },
           {
             "word": "break",
-            "start": 90.338,
-            "end": 90.582
+            "start": 89.197,
+            "end": 90.308
           }
         ]
       },
       {
-        "verseStart": 90.582,
-        "verseEnd": 94.092,
+        "verseStart": 90.308,
+        "verseEnd": 93.754,
         "words": [
           {
             "word": "I'm ",
-            "start": 90.582,
-            "end": 90.991
+            "start": 90.308,
+            "end": 90.554
           },
           {
             "word": "bleeding ",
-            "start": 90.991,
-            "end": 91.438
+            "start": 90.554,
+            "end": 90.965
           },
           {
             "word": "out ",
-            "start": 91.438,
-            "end": 91.845
+            "start": 90.965,
+            "end": 91.454
           },
           {
             "word": "every ",
-            "start": 91.845,
-            "end": 92.291
+            "start": 91.454,
+            "end": 91.903
           },
           {
             "word": "word ",
-            "start": 92.291,
-            "end": 92.699
+            "start": 91.903,
+            "end": 92.352
           },
           {
             "word": "you ",
-            "start": 92.699,
-            "end": 93.599
+            "start": 92.352,
+            "end": 92.719
           },
           {
             "word": "said",
-            "start": 93.599,
-            "end": 94.092
+            "start": 92.719,
+            "end": 93.754
           }
         ]
       },
       {
-        "verseStart": 94.092,
-        "verseEnd": 101.11,
+        "verseStart": 93.754,
+        "verseEnd": 100.678,
         "words": [
           {
             "word": "Go ",
-            "start": 94.092,
-            "end": 94.295
+            "start": 93.754,
+            "end": 94.044
           },
           {
             "word": "to ",
-            "start": 94.295,
-            "end": 94.866
+            "start": 94.044,
+            "end": 94.247
           },
           {
             "word": "hell, ",
-            "start": 94.866,
-            "end": 95.355
+            "start": 94.247,
+            "end": 94.822
           },
           {
             "word": "for ",
-            "start": 95.355,
-            "end": 95.968
+            "start": 94.822,
+            "end": 95.274
           },
           {
             "word": "heaven's ",
-            "start": 95.968,
-            "end": 100.905
+            "start": 95.274,
+            "end": 95.974
           },
           {
             "word": "sake",
-            "start": 100.905,
-            "end": 101.11
+            "start": 95.974,
+            "end": 100.678
           }
         ]
       },
       {
-        "verseStart": 101.11,
-        "verseEnd": 107.736,
+        "verseStart": 100.678,
+        "verseEnd": 107.535,
         "words": [
           {
             "word": "Go ",
-            "start": 101.11,
-            "end": 101.313
+            "start": 100.678,
+            "end": 101.046
           },
           {
             "word": "to ",
-            "start": 101.313,
-            "end": 102.664
+            "start": 101.046,
+            "end": 101.208
           },
           {
             "word": "hell, ",
-            "start": 102.664,
-            "end": 103.289
+            "start": 101.208,
+            "end": 102.639
           },
           {
             "word": "for ",
-            "start": 103.289,
-            "end": 103.701
+            "start": 102.639,
+            "end": 102.966
           },
           {
             "word": "heaven's ",
-            "start": 103.701,
-            "end": 107.492
+            "start": 102.966,
+            "end": 103.74
           },
           {
             "word": "sake",
-            "start": 107.492,
-            "end": 107.736
+            "start": 103.74,
+            "end": 107.535
           }
         ]
       },
       {
-        "verseStart": 107.736,
-        "verseEnd": 111.259,
+        "verseStart": 107.535,
+        "verseEnd": 111.015,
         "words": [
           {
             "word": "No ",
-            "start": 107.736,
-            "end": 107.946
+            "start": 107.535,
+            "end": 107.738
           },
           {
             "word": "one ",
-            "start": 107.946,
-            "end": 108.19
+            "start": 107.738,
+            "end": 107.99
           },
           {
             "word": "wants ",
-            "start": 108.19,
-            "end": 108.435
+            "start": 107.99,
+            "end": 108.196
           },
           {
             "word": "to ",
-            "start": 108.435,
-            "end": 109.093
+            "start": 108.196,
+            "end": 108.448
           },
           {
             "word": "hear ",
-            "start": 109.093,
-            "end": 110.115
+            "start": 108.448,
+            "end": 109.097
           },
           {
             "word": "you ( ",
-            "start": 110.115,
-            "end": 110.444
+            "start": 109.097,
+            "end": 110.072
           },
           {
             "word": "save ",
-            "start": 110.444,
-            "end": 110.811
+            "start": 110.072,
+            "end": 110.403
           },
           {
             "word": "your ",
-            "start": 110.811,
-            "end": 111.055
+            "start": 110.403,
+            "end": 110.771
           },
           {
             "word": "breath)",
-            "start": 111.055,
-            "end": 111.259
+            "start": 110.771,
+            "end": 111.015
           }
         ]
       },
       {
-        "verseStart": 111.259,
-        "verseEnd": 114.488,
+        "verseStart": 111.015,
+        "verseEnd": 113.908,
         "words": [
           {
             "word": "No ",
-            "start": 111.259,
-            "end": 111.503
+            "start": 111.015,
+            "end": 111.218
           },
           {
             "word": "one ",
-            "start": 111.503,
-            "end": 111.706
+            "start": 111.218,
+            "end": 111.464
           },
           {
             "word": "wants ",
-            "start": 111.706,
-            "end": 111.954
+            "start": 111.464,
+            "end": 111.668
           },
           {
             "word": "to ",
-            "start": 111.954,
-            "end": 112.565
+            "start": 111.668,
+            "end": 111.913
           },
           {
             "word": "see ",
-            "start": 112.565,
-            "end": 113.955
+            "start": 111.913,
+            "end": 112.485
           },
           {
             "word": "you",
-            "start": 113.955,
-            "end": 114.488
+            "start": 112.485,
+            "end": 113.908
           }
         ]
       },
       {
-        "verseStart": 114.488,
-        "verseEnd": 117.995,
+        "verseStart": 113.908,
+        "verseEnd": 117.724,
         "words": [
           {
             "word": "So ",
-            "start": 114.488,
-            "end": 114.899
+            "start": 113.908,
+            "end": 114.364
           },
           {
             "word": "desperate ",
-            "start": 114.899,
-            "end": 115.142
+            "start": 114.364,
+            "end": 114.853
           },
           {
             "word": "and ",
-            "start": 115.142,
-            "end": 115.999
+            "start": 114.853,
+            "end": 115.056
           },
           {
             "word": "pathetic, ",
-            "start": 115.999,
-            "end": 116.202
+            "start": 115.056,
+            "end": 115.956
           },
           {
             "word": "you ",
-            "start": 116.202,
-            "end": 116.446
+            "start": 115.956,
+            "end": 116.171
           },
           {
             "word": "think ",
-            "start": 116.446,
-            "end": 116.651
+            "start": 116.171,
+            "end": 116.377
           },
           {
             "word": "that ",
-            "start": 116.651,
-            "end": 116.855
+            "start": 116.377,
+            "end": 116.625
           },
           {
             "word": "no ",
-            "start": 116.855,
-            "end": 117.098
+            "start": 116.625,
+            "end": 116.827
           },
           {
             "word": "one ",
-            "start": 117.098,
-            "end": 117.344
+            "start": 116.827,
+            "end": 117.071
           },
           {
             "word": "sees ",
-            "start": 117.344,
-            "end": 117.792
+            "start": 117.071,
+            "end": 117.316
           },
           {
             "word": "this?",
-            "start": 117.792,
-            "end": 117.995
+            "start": 117.316,
+            "end": 117.724
           }
         ]
       },
       {
-        "verseStart": 117.995,
-        "verseEnd": 121.832,
+        "verseStart": 117.724,
+        "verseEnd": 121.654,
         "words": [
           {
             "word": "I ",
-            "start": 117.995,
-            "end": 118.242
+            "start": 117.724,
+            "end": 117.969
           },
           {
             "word": "think ",
-            "start": 118.242,
-            "end": 118.445
+            "start": 117.969,
+            "end": 118.213
           },
           {
             "word": "it's ",
-            "start": 118.445,
-            "end": 118.648
+            "start": 118.213,
+            "end": 118.416
           },
           {
             "word": "time ",
-            "start": 118.648,
-            "end": 118.893
+            "start": 118.416,
+            "end": 118.663
           },
           {
             "word": "you ",
-            "start": 118.893,
-            "end": 119.177
+            "start": 118.663,
+            "end": 118.909
           },
           {
             "word": "knew ",
-            "start": 119.177,
-            "end": 119.502
+            "start": 118.909,
+            "end": 119.24
           },
           {
             "word": "the ",
-            "start": 119.502,
-            "end": 120.528
+            "start": 119.24,
+            "end": 119.49
           },
           {
             "word": "truth, ",
-            "start": 120.528,
-            "end": 121.586
+            "start": 119.49,
+            "end": 120.513
           },
           {
             "word": "yeah",
-            "start": 121.586,
-            "end": 121.832
+            "start": 120.513,
+            "end": 121.654
           }
         ]
       },
       {
-        "verseStart": 121.832,
-        "verseEnd": 125.419,
+        "verseStart": 121.654,
+        "verseEnd": 125.129,
         "words": [
           {
             "word": "I'm ",
-            "start": 121.832,
-            "end": 122.241
+            "start": 121.654,
+            "end": 121.898
           },
           {
             "word": "burning ",
-            "start": 122.241,
-            "end": 122.726
+            "start": 121.898,
+            "end": 122.304
           },
           {
             "word": "down ",
-            "start": 122.726,
-            "end": 123.091
+            "start": 122.304,
+            "end": 122.754
           },
           {
             "word": "every ",
-            "start": 123.091,
-            "end": 123.497
+            "start": 122.754,
+            "end": 123.163
           },
           {
             "word": "bridge ",
-            "start": 123.497,
-            "end": 123.947
+            "start": 123.163,
+            "end": 123.572
           },
           {
             "word": "we ",
-            "start": 123.947,
-            "end": 125.214
+            "start": 123.572,
+            "end": 124.023
           },
           {
             "word": "made",
-            "start": 125.214,
-            "end": 125.419
+            "start": 124.023,
+            "end": 125.129
           }
         ]
       },
       {
-        "verseStart": 125.419,
-        "verseEnd": 128.89,
+        "verseStart": 125.129,
+        "verseEnd": 128.611,
         "words": [
           {
             "word": "I'll ",
-            "start": 125.419,
-            "end": 125.622
+            "start": 125.129,
+            "end": 125.334
           },
           {
             "word": "watch ",
-            "start": 125.622,
-            "end": 125.867
+            "start": 125.334,
+            "end": 125.581
           },
           {
             "word": "you ",
-            "start": 125.867,
-            "end": 126.274
+            "start": 125.581,
+            "end": 125.828
           },
           {
             "word": "choke ",
-            "start": 126.274,
-            "end": 126.481
+            "start": 125.828,
+            "end": 126.24
           },
           {
             "word": "on ",
-            "start": 126.481,
-            "end": 126.726
+            "start": 126.24,
+            "end": 126.446
           },
           {
             "word": "the ",
-            "start": 126.726,
-            "end": 127.092
+            "start": 126.446,
+            "end": 126.691
           },
           {
             "word": "hearts ",
-            "start": 127.092,
-            "end": 127.541
+            "start": 126.691,
+            "end": 127.057
           },
           {
             "word": "you ",
-            "start": 127.541,
-            "end": 128.686
+            "start": 127.057,
+            "end": 127.507
           },
           {
             "word": "break",
-            "start": 128.686,
-            "end": 128.89
+            "start": 127.507,
+            "end": 128.611
           }
         ]
       },
       {
-        "verseStart": 128.89,
-        "verseEnd": 132.355,
+        "verseStart": 128.611,
+        "verseEnd": 131.885,
         "words": [
           {
             "word": "I'm ",
-            "start": 128.89,
-            "end": 129.299
+            "start": 128.611,
+            "end": 128.856
           },
           {
             "word": "bleeding ",
-            "start": 129.299,
-            "end": 129.747
+            "start": 128.856,
+            "end": 129.267
           },
           {
             "word": "out ",
-            "start": 129.747,
-            "end": 130.195
+            "start": 129.267,
+            "end": 129.755
           },
           {
             "word": "every ",
-            "start": 130.195,
-            "end": 130.601
+            "start": 129.755,
+            "end": 130.124
           },
           {
             "word": "word ",
-            "start": 130.601,
-            "end": 130.971
+            "start": 130.124,
+            "end": 130.572
           },
           {
             "word": "you ",
-            "start": 130.971,
-            "end": 131.906
+            "start": 130.572,
+            "end": 130.981
           },
           {
             "word": "said",
-            "start": 131.906,
-            "end": 132.355
+            "start": 130.981,
+            "end": 131.885
           }
         ]
       },
       {
-        "verseStart": 132.355,
-        "verseEnd": 135.821,
+        "verseStart": 131.885,
+        "verseEnd": 135.599,
         "words": [
           {
             "word": "Go ",
-            "start": 132.355,
-            "end": 132.521
+            "start": 131.885,
+            "end": 132.332
           },
           {
             "word": "to ",
-            "start": 132.521,
-            "end": 133.094
+            "start": 132.332,
+            "end": 132.536
           },
           {
             "word": "hell, ",
-            "start": 133.094,
-            "end": 133.621
+            "start": 132.536,
+            "end": 133.149
           },
           {
             "word": "for ",
-            "start": 133.621,
-            "end": 134.231
+            "start": 133.149,
+            "end": 133.601
           },
           {
             "word": "heaven's ",
-            "start": 134.231,
-            "end": 135.577
+            "start": 133.601,
+            "end": 134.17
           },
           {
             "word": "sake",
-            "start": 135.577,
-            "end": 135.821
+            "start": 134.17,
+            "end": 135.599
           }
         ]
       },
       {
-        "verseStart": 135.821,
-        "verseEnd": 139.298,
+        "verseStart": 135.599,
+        "verseEnd": 139.051,
         "words": [
           {
             "word": "I'm ",
-            "start": 135.821,
-            "end": 136.23
+            "start": 135.599,
+            "end": 135.805
           },
           {
             "word": "burning ",
-            "start": 136.23,
-            "end": 136.683
+            "start": 135.805,
+            "end": 136.253
           },
           {
             "word": "down ",
-            "start": 136.683,
-            "end": 137.089
+            "start": 136.253,
+            "end": 136.701
           },
           {
             "word": "every ",
-            "start": 137.089,
-            "end": 137.537
+            "start": 136.701,
+            "end": 137.112
           },
           {
             "word": "bridge ",
-            "start": 137.537,
-            "end": 137.948
+            "start": 137.112,
+            "end": 137.529
           },
           {
             "word": "we ",
-            "start": 137.948,
-            "end": 139.055
+            "start": 137.529,
+            "end": 137.978
           },
           {
             "word": "made",
-            "start": 139.055,
-            "end": 139.298
+            "start": 137.978,
+            "end": 139.051
           }
         ]
       },
       {
-        "verseStart": 139.298,
-        "verseEnd": 142.774,
+        "verseStart": 139.051,
+        "verseEnd": 142.521,
         "words": [
           {
             "word": "I'll ",
-            "start": 139.298,
-            "end": 139.505
+            "start": 139.051,
+            "end": 139.335
           },
           {
             "word": "watch ",
-            "start": 139.505,
-            "end": 139.758
+            "start": 139.335,
+            "end": 139.54
           },
           {
             "word": "you ",
-            "start": 139.758,
-            "end": 140.128
+            "start": 139.54,
+            "end": 139.742
           },
           {
             "word": "choke ",
-            "start": 140.128,
-            "end": 140.371
+            "start": 139.742,
+            "end": 140.15
           },
           {
             "word": "on ",
-            "start": 140.371,
-            "end": 140.615
+            "start": 140.15,
+            "end": 140.353
           },
           {
             "word": "the ",
-            "start": 140.615,
-            "end": 141.022
+            "start": 140.353,
+            "end": 140.601
           },
           {
             "word": "hearts ",
-            "start": 141.022,
-            "end": 141.47
+            "start": 140.601,
+            "end": 140.967
           },
           {
             "word": "you ",
-            "start": 141.47,
-            "end": 142.53
+            "start": 140.967,
+            "end": 141.415
           },
           {
             "word": "break",
-            "start": 142.53,
-            "end": 142.774
+            "start": 141.415,
+            "end": 142.521
           }
         ]
       },
       {
-        "verseStart": 142.774,
-        "verseEnd": 146.246,
+        "verseStart": 142.521,
+        "verseEnd": 145.795,
         "words": [
           {
             "word": "I'm ",
-            "start": 142.774,
-            "end": 143.017
+            "start": 142.521,
+            "end": 142.766
           },
           {
             "word": "bleeding ",
-            "start": 143.017,
-            "end": 143.222
+            "start": 142.766,
+            "end": 143.338
           },
           {
             "word": "out ",
-            "start": 143.222,
-            "end": 143.962
+            "start": 143.338,
+            "end": 143.542
           },
           {
             "word": "every ",
-            "start": 143.962,
-            "end": 144.45
+            "start": 143.542,
+            "end": 144.03
           },
           {
             "word": "word ",
-            "start": 144.45,
-            "end": 144.938
+            "start": 144.03,
+            "end": 144.444
           },
           {
             "word": "you ",
-            "start": 144.938,
-            "end": 145.794
+            "start": 144.444,
+            "end": 144.89
           },
           {
             "word": "said",
-            "start": 145.794,
-            "end": 146.246
+            "start": 144.89,
+            "end": 145.795
           }
         ]
       },
       {
-        "verseStart": 146.246,
-        "verseEnd": 150.125,
+        "verseStart": 145.795,
+        "verseEnd": 149.67,
         "words": [
           {
             "word": "Go ",
+            "start": 145.795,
+            "end": 146.246
+          },
+          {
+            "word": "to ",
             "start": 146.246,
             "end": 146.492
           },
           {
-            "word": "to ",
-            "start": 146.492,
-            "end": 147.061
-          },
-          {
             "word": "hell, ",
-            "start": 147.061,
-            "end": 147.51
+            "start": 146.492,
+            "end": 147.06
           },
           {
             "word": "for ",
-            "start": 147.51,
-            "end": 148.165
+            "start": 147.06,
+            "end": 147.466
           },
           {
             "word": "heaven's ",
-            "start": 148.165,
-            "end": 149.675
+            "start": 147.466,
+            "end": 148.084
           },
           {
             "word": "sake",
-            "start": 149.675,
-            "end": 150.125
+            "start": 148.084,
+            "end": 149.67
           }
         ]
       },
       {
-        "verseStart": 150.125,
-        "verseEnd": 162.758,
+        "verseStart": 149.67,
+        "verseEnd": 162.305,
         "words": [
           {
             "word": "When ",
-            "start": 150.125,
-            "end": 150.575
+            "start": 149.67,
+            "end": 150.084
           },
           {
             "word": "did ",
-            "start": 150.575,
-            "end": 150.782
+            "start": 150.084,
+            "end": 150.533
           },
           {
             "word": "the ",
-            "start": 150.782,
-            "end": 151.797
+            "start": 150.533,
+            "end": 150.739
           },
           {
             "word": "diamonds ",
-            "start": 151.797,
-            "end": 152.211
+            "start": 150.739,
+            "end": 151.758
           },
           {
             "word": "leave ",
-            "start": 152.211,
-            "end": 152.7
+            "start": 151.758,
+            "end": 152.166
           },
           {
             "word": "your ",
-            "start": 152.7,
-            "end": 162.39
+            "start": 152.166,
+            "end": 152.755
           },
           {
             "word": "bones?",
-            "start": 162.39,
-            "end": 162.758
+            "start": 152.755,
+            "end": 162.305
           }
         ]
       },
       {
-        "verseStart": 162.758,
-        "verseEnd": 174.064,
+        "verseStart": 162.305,
+        "verseEnd": 173.929,
         "words": [
           {
             "word": "Leave ",
-            "start": 162.758,
-            "end": 163.207
+            "start": 162.305,
+            "end": 162.709
           },
           {
             "word": "your ",
-            "start": 163.207,
-            "end": 173.86
+            "start": 162.709,
+            "end": 163.16
           },
           {
             "word": "bones",
-            "start": 173.86,
-            "end": 174.064
+            "start": 163.16,
+            "end": 173.929
           }
         ]
       },
       {
-        "verseStart": 174.064,
-        "verseEnd": 177.586,
+        "verseStart": 173.929,
+        "verseEnd": 177.419,
         "words": [
           {
             "word": "You're ",
-            "start": 174.064,
-            "end": 174.314
+            "start": 173.929,
+            "end": 174.092
           },
           {
             "word": "not ",
-            "start": 174.314,
-            "end": 174.516
+            "start": 174.092,
+            "end": 174.296
           },
           {
             "word": "a ",
-            "start": 174.516,
-            "end": 175.577
+            "start": 174.296,
+            "end": 174.503
           },
           {
             "word": "shepherd, ",
-            "start": 175.577,
-            "end": 175.821
+            "start": 174.503,
+            "end": 175.612
           },
           {
             "word": "you're ",
-            "start": 175.821,
-            "end": 175.984
+            "start": 175.612,
+            "end": 175.82
           },
           {
             "word": "just ",
-            "start": 175.984,
-            "end": 176.228
+            "start": 175.82,
+            "end": 176.031
           },
           {
             "word": "a ",
-            "start": 176.228,
-            "end": 177.382
+            "start": 176.031,
+            "end": 176.275
           },
           {
             "word": "sheep",
-            "start": 177.382,
-            "end": 177.586
+            "start": 176.275,
+            "end": 177.419
           }
         ]
       },
       {
-        "verseStart": 177.586,
-        "verseEnd": 181.052,
+        "verseStart": 177.419,
+        "verseEnd": 180.848,
         "words": [
           {
             "word": "A ",
-            "start": 177.586,
-            "end": 177.993
+            "start": 177.419,
+            "end": 177.623
           },
           {
             "word": "combined ",
-            "start": 177.993,
-            "end": 178.688
+            "start": 177.623,
+            "end": 177.988
           },
           {
             "word": "effort ",
-            "start": 178.688,
-            "end": 178.892
+            "start": 177.988,
+            "end": 178.643
           },
           {
             "word": "of ",
-            "start": 178.892,
-            "end": 179.542
+            "start": 178.643,
+            "end": 178.887
           },
           {
             "word": "everyone ",
-            "start": 179.542,
-            "end": 179.746
+            "start": 178.887,
+            "end": 179.538
           },
           {
             "word": "you ",
-            "start": 179.746,
-            "end": 180.85
+            "start": 179.538,
+            "end": 179.741
           },
           {
             "word": "meet",
-            "start": 180.85,
-            "end": 181.052
+            "start": 179.741,
+            "end": 180.848
           }
         ]
       },
       {
-        "verseStart": 181.052,
-        "verseEnd": 184.313,
+        "verseStart": 180.848,
+        "verseEnd": 184.05,
         "words": [
           {
             "word": "You're ",
-            "start": 181.052,
-            "end": 181.501
+            "start": 180.848,
+            "end": 181.052
           },
           {
             "word": "all ",
-            "start": 181.501,
-            "end": 182.562
+            "start": 181.052,
+            "end": 181.422
           },
           {
             "word": "flesh ",
-            "start": 182.562,
-            "end": 182.766
+            "start": 181.422,
+            "end": 182.493
           },
           {
             "word": "with ",
-            "start": 182.766,
-            "end": 183.254
+            "start": 182.493,
+            "end": 182.696
           },
           {
             "word": "no ",
-            "start": 183.254,
-            "end": 184.11
+            "start": 182.696,
+            "end": 183.189
           },
           {
             "word": "bone",
-            "start": 184.11,
-            "end": 184.313
+            "start": 183.189,
+            "end": 184.05
           }
         ]
       },
       {
-        "verseStart": 184.313,
-        "verseEnd": 201.925,
+        "verseStart": 184.05,
+        "verseEnd": 201.662,
         "words": [
           {
             "word": "Feed ' ",
-            "start": 184.313,
-            "end": 184.521
+            "start": 184.05,
+            "end": 184.254
           },
           {
             "word": "em ",
-            "start": 184.521,
-            "end": 184.725
+            "start": 184.254,
+            "end": 184.503
           },
           {
             "word": "to ",
-            "start": 184.725,
-            "end": 184.969
+            "start": 184.503,
+            "end": 184.749
           },
           {
             "word": "the ",
-            "start": 184.969,
-            "end": 185.581
+            "start": 184.749,
+            "end": 184.956
           },
           {
             "word": "sharks ",
-            "start": 185.581,
-            "end": 185.785
+            "start": 184.956,
+            "end": 185.571
           },
           {
             "word": "and ",
-            "start": 185.785,
-            "end": 186.071
+            "start": 185.571,
+            "end": 185.775
           },
           {
             "word": "throw ' ",
-            "start": 186.071,
-            "end": 186.276
+            "start": 185.775,
+            "end": 185.988
           },
           {
             "word": "em ",
-            "start": 186.276,
-            "end": 186.48
+            "start": 185.988,
+            "end": 186.191
           },
           {
             "word": "to ",
-            "start": 186.48,
-            "end": 186.685
+            "start": 186.191,
+            "end": 186.396
           },
           {
             "word": "the ",
-            "start": 186.685,
-            "end": 201.721
+            "start": 186.396,
+            "end": 186.605
           },
           {
             "word": "wolves",
-            "start": 201.721,
-            "end": 201.925
+            "start": 186.605,
+            "end": 201.662
           }
         ]
       },
       {
-        "verseStart": 201.925,
-        "verseEnd": 205.41,
+        "verseStart": 201.662,
+        "verseEnd": 205.138,
         "words": [
           {
             "word": "I'm ",
-            "start": 201.925,
-            "end": 202.294
+            "start": 201.662,
+            "end": 201.865
           },
           {
             "word": "burning ",
-            "start": 202.294,
-            "end": 202.788
+            "start": 201.865,
+            "end": 202.318
           },
           {
             "word": "down ",
-            "start": 202.788,
-            "end": 203.195
+            "start": 202.318,
+            "end": 202.726
           },
           {
             "word": "every ",
-            "start": 203.195,
-            "end": 203.609
+            "start": 202.726,
+            "end": 203.171
           },
           {
             "word": "bridge ",
-            "start": 203.609,
-            "end": 204.095
+            "start": 203.171,
+            "end": 203.583
           },
           {
             "word": "we ",
-            "start": 204.095,
-            "end": 205.205
+            "start": 203.583,
+            "end": 203.989
           },
           {
             "word": "made",
-            "start": 205.205,
-            "end": 205.41
+            "start": 203.989,
+            "end": 205.138
           }
         ]
       },
       {
-        "verseStart": 205.41,
-        "verseEnd": 208.858,
+        "verseStart": 205.138,
+        "verseEnd": 208.616,
         "words": [
           {
             "word": "I'll ",
-            "start": 205.41,
-            "end": 205.614
+            "start": 205.138,
+            "end": 205.383
           },
           {
             "word": "watch ",
-            "start": 205.614,
-            "end": 205.818
+            "start": 205.383,
+            "end": 205.587
           },
           {
             "word": "you ",
-            "start": 205.818,
-            "end": 206.225
+            "start": 205.587,
+            "end": 205.832
           },
           {
             "word": "choke ",
-            "start": 206.225,
-            "end": 206.468
+            "start": 205.832,
+            "end": 206.245
           },
           {
             "word": "on ",
-            "start": 206.468,
-            "end": 206.671
+            "start": 206.245,
+            "end": 206.653
           },
           {
             "word": "the ",
-            "start": 206.671,
-            "end": 207.12
+            "start": 206.653,
+            "end": 207.1
           },
           {
             "word": "hearts ",
-            "start": 207.12,
-            "end": 207.543
+            "start": 207.1,
+            "end": 207.511
           },
           {
             "word": "you ",
-            "start": 207.543,
-            "end": 208.651
+            "start": 207.511,
+            "end": 207.801
           },
           {
             "word": "break",
-            "start": 208.651,
-            "end": 208.858
+            "start": 207.801,
+            "end": 208.616
           }
         ]
       },
       {
-        "verseStart": 208.858,
-        "verseEnd": 212.343,
+        "verseStart": 208.616,
+        "verseEnd": 211.821,
         "words": [
           {
             "word": "I'm ",
-            "start": 208.858,
-            "end": 209.31
+            "start": 208.616,
+            "end": 208.821
           },
           {
             "word": "bleeding ",
-            "start": 209.31,
-            "end": 209.762
+            "start": 208.821,
+            "end": 209.23
           },
           {
             "word": "out ",
-            "start": 209.762,
-            "end": 210.181
+            "start": 209.23,
+            "end": 209.721
           },
           {
             "word": "every ",
-            "start": 210.181,
-            "end": 210.589
+            "start": 209.721,
+            "end": 210.09
           },
           {
             "word": "word ",
-            "start": 210.589,
-            "end": 210.997
+            "start": 210.09,
+            "end": 210.539
           },
           {
             "word": "you ",
-            "start": 210.997,
-            "end": 211.895
+            "start": 210.539,
+            "end": 210.952
           },
           {
             "word": "said",
-            "start": 211.895,
-            "end": 212.343
+            "start": 210.952,
+            "end": 211.821
           }
         ]
       },
       {
-        "verseStart": 212.343,
-        "verseEnd": 215.74,
+        "verseStart": 211.821,
+        "verseEnd": 215.544,
         "words": [
           {
             "word": "Go ",
-            "start": 212.343,
-            "end": 212.587
+            "start": 211.821,
+            "end": 212.351
           },
           {
             "word": "to ",
-            "start": 212.587,
-            "end": 213.157
+            "start": 212.351,
+            "end": 212.562
           },
           {
             "word": "hell, ",
-            "start": 213.157,
-            "end": 213.617
+            "start": 212.562,
+            "end": 213.132
           },
           {
             "word": "for ",
-            "start": 213.617,
-            "end": 214.267
+            "start": 213.132,
+            "end": 213.579
           },
           {
             "word": "heaven's ",
-            "start": 214.267,
-            "end": 215.576
+            "start": 213.579,
+            "end": 214.194
           },
           {
             "word": "sake",
-            "start": 215.576,
-            "end": 215.74
+            "start": 214.194,
+            "end": 215.544
           }
         ]
       },
       {
-        "verseStart": 215.74,
-        "verseEnd": 219.254,
+        "verseStart": 215.544,
+        "verseEnd": 219.068,
         "words": [
           {
             "word": "I'm ",
-            "start": 215.74,
-            "end": 216.187
+            "start": 215.544,
+            "end": 215.75
           },
           {
             "word": "burning ",
-            "start": 216.187,
-            "end": 216.673
+            "start": 215.75,
+            "end": 216.161
           },
           {
             "word": "down ",
-            "start": 216.673,
-            "end": 217.126
+            "start": 216.161,
+            "end": 216.654
           },
           {
             "word": "every ",
-            "start": 217.126,
-            "end": 217.534
+            "start": 216.654,
+            "end": 217.069
           },
           {
             "word": "bridge ",
-            "start": 217.534,
-            "end": 217.984
+            "start": 217.069,
+            "end": 217.475
           },
           {
             "word": "we ",
-            "start": 217.984,
-            "end": 219.047
+            "start": 217.475,
+            "end": 217.845
           },
           {
             "word": "made",
-            "start": 219.047,
-            "end": 219.254
+            "start": 217.845,
+            "end": 219.068
           }
         ]
       },
       {
-        "verseStart": 219.254,
-        "verseEnd": 222.804,
+        "verseStart": 219.068,
+        "verseEnd": 222.541,
         "words": [
           {
             "word": "I'll ",
-            "start": 219.254,
-            "end": 219.496
+            "start": 219.068,
+            "end": 219.271
           },
           {
             "word": "watch ",
-            "start": 219.496,
-            "end": 219.702
+            "start": 219.271,
+            "end": 219.518
           },
           {
             "word": "you ",
-            "start": 219.702,
-            "end": 220.149
+            "start": 219.518,
+            "end": 219.724
           },
           {
             "word": "choke ",
-            "start": 220.149,
-            "end": 220.394
+            "start": 219.724,
+            "end": 220.133
           },
           {
             "word": "on ",
-            "start": 220.394,
-            "end": 220.598
+            "start": 220.133,
+            "end": 220.376
           },
           {
             "word": "the ",
-            "start": 220.598,
-            "end": 221.008
+            "start": 220.376,
+            "end": 220.62
           },
           {
             "word": "hearts ",
-            "start": 221.008,
-            "end": 221.416
+            "start": 220.62,
+            "end": 220.99
           },
           {
             "word": "you ",
-            "start": 221.416,
-            "end": 222.555
+            "start": 220.99,
+            "end": 221.438
           },
           {
             "word": "break",
-            "start": 222.555,
-            "end": 222.804
+            "start": 221.438,
+            "end": 222.541
           }
         ]
       },
       {
-        "verseStart": 222.804,
-        "verseEnd": 226.227,
+        "verseStart": 222.541,
+        "verseEnd": 225.777,
         "words": [
           {
             "word": "I'm ",
-            "start": 222.804,
-            "end": 223.21
+            "start": 222.541,
+            "end": 222.709
           },
           {
             "word": "bleeding ",
-            "start": 223.21,
-            "end": 223.618
+            "start": 222.709,
+            "end": 223.161
           },
           {
             "word": "out ",
-            "start": 223.618,
-            "end": 224.025
+            "start": 223.161,
+            "end": 223.65
           },
           {
             "word": "every ",
-            "start": 224.025,
-            "end": 224.431
+            "start": 223.65,
+            "end": 224.096
           },
           {
             "word": "word ",
-            "start": 224.431,
-            "end": 224.881
+            "start": 224.096,
+            "end": 224.468
           },
           {
             "word": "you ",
-            "start": 224.881,
-            "end": 225.778
+            "start": 224.468,
+            "end": 224.916
           },
           {
             "word": "said",
-            "start": 225.778,
+            "start": 224.916,
+            "end": 225.777
+          }
+        ]
+      },
+      {
+        "verseStart": 225.777,
+        "verseEnd": 229.219,
+        "words": [
+          {
+            "word": "Go ",
+            "start": 225.777,
             "end": 226.227
-          }
-        ]
-      },
-      {
-        "verseStart": 226.227,
-        "verseEnd": 229.735,
-        "words": [
+          },
           {
-            "word": "Go ",
+            "word": "to ",
             "start": 226.227,
-            "end": 226.472
-          },
-          {
-            "word": "to ",
-            "start": 226.472,
-            "end": 227.042
+            "end": 226.431
           },
           {
             "word": "hell, ",
-            "start": 227.042,
-            "end": 227.529
+            "start": 226.431,
+            "end": 227.046
           },
           {
             "word": "for ",
-            "start": 227.529,
-            "end": 228.183
+            "start": 227.046,
+            "end": 227.496
           },
           {
             "word": "heaven's ",
-            "start": 228.183,
-            "end": 229.165
+            "start": 227.496,
+            "end": 228.11
           },
           {
             "word": "sake",
-            "start": 229.165,
-            "end": 229.735
+            "start": 228.11,
+            "end": 229.219
           }
         ]
       },
       {
-        "verseStart": 229.735,
-        "verseEnd": 233.223,
+        "verseStart": 229.219,
+        "verseEnd": 232.69,
         "words": [
           {
             "word": "Go ",
-            "start": 229.735,
-            "end": 229.938
+            "start": 229.219,
+            "end": 229.713
           },
           {
             "word": "to ",
-            "start": 229.938,
-            "end": 230.509
+            "start": 229.713,
+            "end": 229.923
           },
           {
             "word": "hell, ",
-            "start": 230.509,
-            "end": 230.957
+            "start": 229.923,
+            "end": 230.532
           },
           {
             "word": "for ",
-            "start": 230.957,
-            "end": 231.619
+            "start": 230.532,
+            "end": 231.021
           },
           {
             "word": "heaven's ",
-            "start": 231.619,
-            "end": 232.757
+            "start": 231.021,
+            "end": 231.631
           },
           {
             "word": "sake",
-            "start": 232.757,
-            "end": 233.223
+            "start": 231.631,
+            "end": 232.69
           }
         ]
       },
       {
-        "verseStart": 233.223,
-        "verseEnd": 236.735,
+        "verseStart": 232.69,
+        "verseEnd": 236.09,
         "words": [
           {
             "word": "Go ",
-            "start": 233.223,
-            "end": 233.426
+            "start": 232.69,
+            "end": 233.224
           },
           {
             "word": "to ",
-            "start": 233.426,
-            "end": 234.042
+            "start": 233.224,
+            "end": 233.428
           },
           {
             "word": "hell, ",
-            "start": 234.042,
-            "end": 234.49
+            "start": 233.428,
+            "end": 234.084
           },
           {
             "word": "for ",
-            "start": 234.49,
-            "end": 235.098
+            "start": 234.084,
+            "end": 234.489
           },
           {
             "word": "heaven's ",
-            "start": 235.098,
-            "end": 236.076
+            "start": 234.489,
+            "end": 235.142
           },
           {
             "word": "sake",
-            "start": 236.076,
-            "end": 236.735
+            "start": 235.142,
+            "end": 236.09
           }
         ]
       },
       {
-        "verseStart": 236.735,
-        "verseEnd": 233.64,
+        "verseStart": 236.09,
+        "verseEnd": 240.579,
         "words": [
           {
             "word": "Go ",
-            "start": 236.735,
-            "end": 236.939
+            "start": 236.09,
+            "end": 236.703
           },
           {
             "word": "to ",
-            "start": 236.939,
-            "end": 237.55
+            "start": 236.703,
+            "end": 236.908
           },
           {
             "word": "hell, ",
-            "start": 237.55,
-            "end": 237.955
+            "start": 236.908,
+            "end": 237.52
           },
           {
             "word": "for ",
-            "start": 237.955,
-            "end": 238.609
+            "start": 237.52,
+            "end": 237.928
           },
           {
             "word": "heaven's ",
-            "start": 238.609,
-            "end": 233.155
+            "start": 237.928,
+            "end": 238.579
           },
           {
             "word": "sake",
-            "start": 233.155,
+            "start": 238.579,
             "end": 233.64
           }
         ]
@@ -1992,2051 +1992,2051 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 2.522,
-        "verseEnd": 8.685,
+        "verseStart": 2.275,
+        "verseEnd": 8.196,
         "words": [
           {
             "word": "Плак- ",
-            "start": 2.522,
-            "end": 5.385
+            "start": 2.275,
+            "end": 2.561
           },
           {
             "word": "плак, ",
-            "start": 5.385,
-            "end": 5.753
+            "start": 2.561,
+            "end": 5.331
           },
           {
             "word": "плак- ",
-            "start": 5.753,
-            "end": 8.318
+            "start": 5.331,
+            "end": 5.615
           },
           {
             "word": "плак",
-            "start": 8.318,
-            "end": 8.685
+            "start": 5.615,
+            "end": 8.196
           }
         ]
       },
       {
-        "verseStart": 8.685,
-        "verseEnd": 12.438,
+        "verseStart": 8.196,
+        "verseEnd": 12.068,
         "words": [
           {
             "word": "Плак- ",
-            "start": 8.685,
-            "end": 11.379
+            "start": 8.196,
+            "end": 8.523
           },
           {
             "word": "плак, ",
-            "start": 11.379,
-            "end": 11.745
+            "start": 8.523,
+            "end": 11.416
           },
           {
             "word": "плак- ",
-            "start": 11.745,
-            "end": 12.194
+            "start": 11.416,
+            "end": 11.741
           },
           {
             "word": "плак",
-            "start": 12.194,
-            "end": 12.438
+            "start": 11.741,
+            "end": 12.068
           }
         ]
       },
       {
-        "verseStart": 12.438,
-        "verseEnd": 15.874,
+        "verseStart": 12.068,
+        "verseEnd": 15.206,
         "words": [
           {
             "word": "Я ",
-            "start": 12.438,
-            "end": 12.767
+            "start": 12.068,
+            "end": 12.354
           },
           {
             "word": "тебе ",
-            "start": 12.767,
-            "end": 13.177
+            "start": 12.354,
+            "end": 12.721
           },
           {
             "word": "писала ",
-            "start": 13.177,
-            "end": 13.463
+            "start": 12.721,
+            "end": 12.924
           },
           {
             "word": "и ",
-            "start": 13.463,
-            "end": 13.912
+            "start": 12.924,
+            "end": 13.331
           },
           {
             "word": "ждала ",
-            "start": 13.912,
-            "end": 14.076
+            "start": 13.331,
+            "end": 13.658
           },
           {
             "word": "тебя ",
-            "start": 14.076,
-            "end": 14.483
+            "start": 13.658,
+            "end": 14.147
           },
           {
             "word": "в ",
-            "start": 14.483,
-            "end": 15.462
+            "start": 14.147,
+            "end": 14.392
           },
           {
             "word": "ночи ( ",
-            "start": 15.462,
-            "end": 15.625
+            "start": 14.392,
+            "end": 14.636
           },
           {
             "word": "плак- ",
-            "start": 15.625,
-            "end": 15.751
+            "start": 14.636,
+            "end": 14.881
           },
           {
             "word": "плак)",
-            "start": 15.751,
-            "end": 15.874
+            "start": 14.881,
+            "end": 15.206
           }
         ]
       },
       {
-        "verseStart": 15.874,
-        "verseEnd": 18.659,
+        "verseStart": 15.206,
+        "verseEnd": 18.14,
         "words": [
           {
             "word": "Ты ",
-            "start": 15.874,
-            "end": 15.997
+            "start": 15.206,
+            "end": 15.452
           },
           {
             "word": "не ",
-            "start": 15.997,
-            "end": 16.407
+            "start": 15.452,
+            "end": 15.777
           },
           {
             "word": "отвечаешь ",
-            "start": 16.407,
-            "end": 16.569
+            "start": 15.777,
+            "end": 16.305
           },
           {
             "word": "больше ",
-            "start": 16.569,
-            "end": 16.773
+            "start": 16.305,
+            "end": 16.671
           },
           {
             "word": "на ",
-            "start": 16.773,
-            "end": 16.977
+            "start": 16.671,
+            "end": 16.915
           },
           {
             "word": "мои ",
-            "start": 16.977,
-            "end": 17.591
+            "start": 16.915,
+            "end": 17.2
           },
           {
             "word": "звонки ( ",
-            "start": 17.591,
-            "end": 17.923
+            "start": 17.2,
+            "end": 17.449
           },
           {
             "word": "плак- ",
-            "start": 17.923,
-            "end": 18.249
+            "start": 17.449,
+            "end": 17.815
           },
           {
             "word": "плак)",
-            "start": 18.249,
-            "end": 18.659
+            "start": 17.815,
+            "end": 18.14
           }
         ]
       },
       {
-        "verseStart": 18.659,
-        "verseEnd": 21.762,
+        "verseStart": 18.14,
+        "verseEnd": 21.071,
         "words": [
           {
             "word": "Каждый ",
-            "start": 18.659,
-            "end": 19.024
+            "start": 18.14,
+            "end": 18.629
           },
           {
             "word": "вечер ",
-            "start": 19.024,
-            "end": 19.39
+            "start": 18.629,
+            "end": 18.873
           },
           {
             "word": "оставляю ",
-            "start": 19.39,
-            "end": 19.594
+            "start": 18.873,
+            "end": 19.281
           },
           {
             "word": "под ",
-            "start": 19.594,
-            "end": 19.761
+            "start": 19.281,
+            "end": 19.606
           },
           {
             "word": "подушкой ",
-            "start": 19.761,
-            "end": 20.452
+            "start": 19.606,
+            "end": 19.809
           },
           {
             "word": "зуб ( ",
-            "start": 20.452,
-            "end": 20.82
+            "start": 19.809,
+            "end": 20.299
           },
           {
             "word": "плак- ",
-            "start": 20.82,
-            "end": 21.227
+            "start": 20.299,
+            "end": 20.502
           },
           {
             "word": "плак)",
-            "start": 21.227,
-            "end": 21.762
+            "start": 20.502,
+            "end": 21.071
           }
         ]
       },
       {
-        "verseStart": 21.762,
-        "verseEnd": 24.509,
+        "verseStart": 21.071,
+        "verseEnd": 24.215,
         "words": [
           {
             "word": "Умоляю ",
-            "start": 21.762,
-            "end": 22.332
+            "start": 21.071,
+            "end": 21.77
           },
           {
             "word": "небеса ",
-            "start": 22.332,
-            "end": 22.746
+            "start": 21.77,
+            "end": 21.974
           },
           {
             "word": "назад ",
-            "start": 22.746,
-            "end": 23.03
+            "start": 21.974,
+            "end": 22.505
           },
           {
             "word": "тебя ",
-            "start": 23.03,
-            "end": 23.442
+            "start": 22.505,
+            "end": 22.708
           },
           {
             "word": "вернуть ( ",
-            "start": 23.442,
-            "end": 23.852
+            "start": 22.708,
+            "end": 23.404
           },
           {
             "word": "плак- ",
-            "start": 23.852,
-            "end": 24.306
+            "start": 23.404,
+            "end": 23.81
           },
           {
             "word": "плак)",
-            "start": 24.306,
-            "end": 24.509
+            "start": 23.81,
+            "end": 24.215
           }
         ]
       },
       {
-        "verseStart": 24.509,
-        "verseEnd": 27.541,
+        "verseStart": 24.215,
+        "verseEnd": 27.359,
         "words": [
           {
             "word": "Я ",
-            "start": 24.509,
-            "end": 24.881
+            "start": 24.215,
+            "end": 24.42
           },
           {
             "word": "была ",
-            "start": 24.881,
-            "end": 25.044
+            "start": 24.42,
+            "end": 24.745
           },
           {
             "word": "хорошей, ",
-            "start": 25.044,
-            "end": 25.496
+            "start": 24.745,
+            "end": 25.32
           },
           {
             "word": "а ",
-            "start": 25.496,
-            "end": 25.822
+            "start": 25.32,
+            "end": 25.525
           },
           {
             "word": "плохой ",
-            "start": 25.822,
-            "end": 26.108
+            "start": 25.525,
+            "end": 25.729
           },
           {
             "word": "я ",
-            "start": 26.108,
-            "end": 26.27
+            "start": 25.729,
+            "end": 25.972
           },
           {
             "word": "не ",
-            "start": 26.27,
-            "end": 26.597
+            "start": 25.972,
+            "end": 26.175
           },
           {
             "word": "была ( ",
-            "start": 26.597,
-            "end": 27.011
+            "start": 26.175,
+            "end": 26.421
           },
           {
             "word": "плак- ",
-            "start": 27.011,
-            "end": 27.335
+            "start": 26.421,
+            "end": 27.033
           },
           {
             "word": "плак)",
-            "start": 27.335,
-            "end": 27.541
+            "start": 27.033,
+            "end": 27.359
           }
         ]
       },
       {
-        "verseStart": 27.541,
-        "verseEnd": 30.858,
+        "verseStart": 27.359,
+        "verseEnd": 30.543,
         "words": [
           {
             "word": "Я ",
-            "start": 27.541,
-            "end": 27.785
+            "start": 27.359,
+            "end": 27.565
           },
           {
             "word": "всю ",
-            "start": 27.785,
-            "end": 28.397
+            "start": 27.565,
+            "end": 27.894
           },
           {
             "word": "жизнь, ",
-            "start": 28.397,
-            "end": 28.601
+            "start": 27.894,
+            "end": 28.34
           },
           {
             "word": "как ",
-            "start": 28.601,
-            "end": 28.889
+            "start": 28.34,
+            "end": 28.707
           },
           {
             "word": "паинька, ",
-            "start": 28.889,
-            "end": 29.132
+            "start": 28.707,
+            "end": 29.074
           },
           {
             "word": "по ",
-            "start": 29.132,
-            "end": 29.423
+            "start": 29.074,
+            "end": 29.403
           },
           {
             "word": "правилам ",
-            "start": 29.423,
-            "end": 29.591
+            "start": 29.403,
+            "end": 29.606
           },
           {
             "word": "жила ( ",
-            "start": 29.591,
-            "end": 30.002
+            "start": 29.606,
+            "end": 30.096
           },
           {
             "word": "плак- ",
-            "start": 30.002,
-            "end": 30.368
+            "start": 30.096,
+            "end": 30.339
           },
           {
             "word": "плак)",
-            "start": 30.368,
-            "end": 30.858
+            "start": 30.339,
+            "end": 30.543
           }
         ]
       },
       {
-        "verseStart": 30.858,
-        "verseEnd": 33.767,
+        "verseStart": 30.543,
+        "verseEnd": 33.359,
         "words": [
           {
             "word": "Надоело ",
-            "start": 30.858,
-            "end": 31.187
+            "start": 30.543,
+            "end": 30.91
           },
           {
             "word": "плакать, ",
-            "start": 31.187,
-            "end": 31.554
+            "start": 30.91,
+            "end": 31.235
           },
           {
             "word": "надоело ",
-            "start": 31.554,
-            "end": 31.762
+            "start": 31.235,
+            "end": 31.522
           },
           {
             "word": "мне ",
-            "start": 31.762,
-            "end": 32.13
+            "start": 31.522,
+            "end": 31.888
           },
           {
             "word": "страдать ( ",
-            "start": 32.13,
-            "end": 32.823
+            "start": 31.888,
+            "end": 32.545
           },
           {
             "word": "плак- ",
-            "start": 32.823,
-            "end": 33.273
+            "start": 32.545,
+            "end": 32.952
           },
           {
             "word": "плак)",
-            "start": 33.273,
-            "end": 33.767
+            "start": 32.952,
+            "end": 33.359
           }
         ]
       },
       {
-        "verseStart": 33.767,
-        "verseEnd": 37.53,
+        "verseStart": 33.359,
+        "verseEnd": 36.97,
         "words": [
           {
             "word": "Всё ",
-            "start": 33.767,
-            "end": 34.011
+            "start": 33.359,
+            "end": 33.729
           },
           {
             "word": "равно ",
-            "start": 34.011,
-            "end": 34.173
+            "start": 33.729,
+            "end": 34.095
           },
           {
             "word": "не ",
-            "start": 34.173,
-            "end": 34.539
+            "start": 34.095,
+            "end": 34.503
           },
           {
             "word": "выйдет ",
-            "start": 34.539,
-            "end": 34.823
+            "start": 34.503,
+            "end": 34.707
           },
           {
             "word": "свою ",
-            "start": 34.823,
-            "end": 34.986
+            "start": 34.707,
+            "end": 34.912
           },
           {
             "word": "смерть ",
-            "start": 34.986,
-            "end": 35.601
+            "start": 34.912,
+            "end": 35.201
           },
           {
             "word": "предугадать ( ",
-            "start": 35.601,
-            "end": 35.968
+            "start": 35.201,
+            "end": 35.77
           },
           {
             "word": "плак- ",
-            "start": 35.968,
-            "end": 36.743
+            "start": 35.77,
+            "end": 36.177
           },
           {
             "word": "плак)",
-            "start": 36.743,
-            "end": 37.53
+            "start": 36.177,
+            "end": 36.97
           }
         ]
       },
       {
-        "verseStart": 37.53,
-        "verseEnd": 43.406,
+        "verseStart": 36.97,
+        "verseEnd": 42.78,
         "words": [
           {
             "word": "Ла- ",
-            "start": 37.53,
-            "end": 38.144
+            "start": 36.97,
+            "end": 37.423
           },
           {
             "word": "ла- ",
-            "start": 38.144,
-            "end": 38.795
+            "start": 37.423,
+            "end": 37.79
           },
           {
             "word": "ла- ",
-            "start": 38.795,
-            "end": 39.245
+            "start": 37.79,
+            "end": 38.854
           },
           {
             "word": "ла- ",
-            "start": 39.245,
-            "end": 39.816
+            "start": 38.854,
+            "end": 39.84
           },
           {
             "word": "ла- ",
-            "start": 39.816,
-            "end": 40.384
+            "start": 39.84,
+            "end": 40.165
           },
           {
             "word": "а- ",
-            "start": 40.384,
-            "end": 40.995
+            "start": 40.165,
+            "end": 40.532
           },
           {
             "word": "а- ",
-            "start": 40.995,
-            "end": 42.873
+            "start": 40.532,
+            "end": 41.634
           },
           {
             "word": "а",
-            "start": 42.873,
-            "end": 43.406
+            "start": 41.634,
+            "end": 42.78
           }
         ]
       },
       {
-        "verseStart": 43.406,
-        "verseEnd": 48.891,
+        "verseStart": 42.78,
+        "verseEnd": 48.416,
         "words": [
           {
             "word": "Ла- ",
-            "start": 43.406,
-            "end": 43.608
+            "start": 42.78,
+            "end": 43.433
           },
           {
             "word": "ла- ",
-            "start": 43.608,
-            "end": 44.065
+            "start": 43.433,
+            "end": 43.926
           },
           {
             "word": "ла- ",
-            "start": 44.065,
-            "end": 44.808
+            "start": 43.926,
+            "end": 44.617
           },
           {
             "word": "ла- ",
-            "start": 44.808,
-            "end": 45.908
+            "start": 44.617,
+            "end": 44.78
           },
           {
             "word": "ла- ",
-            "start": 45.908,
-            "end": 46.518
+            "start": 44.78,
+            "end": 45.797
           },
           {
             "word": "а- ",
-            "start": 46.518,
-            "end": 47.09
+            "start": 45.797,
+            "end": 46.494
           },
           {
             "word": "а- ",
-            "start": 47.09,
-            "end": 48.524
+            "start": 46.494,
+            "end": 47.025
           },
           {
             "word": "а",
-            "start": 48.524,
-            "end": 48.891
+            "start": 47.025,
+            "end": 48.416
           }
         ]
       },
       {
-        "verseStart": 48.891,
-        "verseEnd": 51.807,
+        "verseStart": 48.416,
+        "verseEnd": 51.436,
         "words": [
           {
             "word": "Мама ",
-            "start": 48.891,
-            "end": 49.265
+            "start": 48.416,
+            "end": 48.823
           },
           {
             "word": "говорила ",
-            "start": 49.265,
-            "end": 49.712
+            "start": 48.823,
+            "end": 49.645
           },
           {
             "word": "мне: \" ",
-            "start": 49.712,
-            "end": 50.784
+            "start": 49.645,
+            "end": 49.93
           },
           {
             "word": "Слушайся ",
-            "start": 50.784,
-            "end": 51.604
+            "start": 49.93,
+            "end": 50.744
           },
           {
             "word": "мужа\"",
-            "start": 51.604,
-            "end": 51.807
+            "start": 50.744,
+            "end": 51.436
           }
         ]
       },
       {
-        "verseStart": 51.807,
-        "verseEnd": 55.067,
+        "verseStart": 51.436,
+        "verseEnd": 54.554,
         "words": [
           {
             "word": "Я ",
-            "start": 51.807,
-            "end": 52.052
+            "start": 51.436,
+            "end": 51.643
           },
           {
             "word": "не ",
-            "start": 52.052,
-            "end": 53.031
+            "start": 51.643,
+            "end": 51.932
           },
           {
             "word": "послушна, ",
-            "start": 53.031,
-            "end": 53.194
+            "start": 51.932,
+            "end": 52.957
           },
           {
             "word": "я ",
-            "start": 53.194,
-            "end": 53.805
+            "start": 52.957,
+            "end": 53.12
           },
           {
             "word": "делаю ",
-            "start": 53.805,
-            "end": 54.66
+            "start": 53.12,
+            "end": 53.533
           },
           {
             "word": "хуже",
-            "start": 54.66,
-            "end": 55.067
+            "start": 53.533,
+            "end": 54.554
           }
         ]
       },
       {
-        "verseStart": 55.067,
-        "verseEnd": 58.055,
+        "verseStart": 54.554,
+        "verseEnd": 57.661,
         "words": [
           {
             "word": "Делаю ",
-            "start": 55.067,
-            "end": 55.433
+            "start": 54.554,
+            "end": 54.965
           },
           {
             "word": "не ",
-            "start": 55.433,
-            "end": 55.844
+            "start": 54.965,
+            "end": 55.295
           },
           {
             "word": "так, ",
-            "start": 55.844,
-            "end": 56.171
+            "start": 55.295,
+            "end": 55.702
           },
           {
             "word": "как ",
-            "start": 56.171,
-            "end": 56.867
+            "start": 55.702,
+            "end": 56.068
           },
           {
             "word": "наказывал ",
-            "start": 56.867,
-            "end": 57.565
+            "start": 56.068,
+            "end": 56.807
           },
           {
             "word": "папа",
-            "start": 57.565,
-            "end": 58.055
+            "start": 56.807,
+            "end": 57.661
           }
         ]
       },
       {
-        "verseStart": 58.055,
-        "verseEnd": 61.036,
+        "verseStart": 57.661,
+        "verseEnd": 60.606,
         "words": [
           {
             "word": "Вместо ",
-            "start": 58.055,
-            "end": 58.793
+            "start": 57.661,
+            "end": 58.314
           },
           {
             "word": "звезды ",
-            "start": 58.793,
-            "end": 59.16
+            "start": 58.314,
+            "end": 59.011
           },
           {
             "word": "я ",
-            "start": 59.16,
-            "end": 59.569
+            "start": 59.011,
+            "end": 59.255
           },
           {
             "word": "хватаю ",
-            "start": 59.569,
-            "end": 60.629
+            "start": 59.255,
+            "end": 59.747
           },
           {
             "word": "гранату",
-            "start": 60.629,
-            "end": 61.036
+            "start": 59.747,
+            "end": 60.606
           }
         ]
       },
       {
-        "verseStart": 61.036,
-        "verseEnd": 63.937,
+        "verseStart": 60.606,
+        "verseEnd": 63.56,
         "words": [
           {
             "word": "Мама ",
-            "start": 61.036,
-            "end": 61.731
+            "start": 60.606,
+            "end": 61.102
           },
           {
             "word": "говорила ",
-            "start": 61.731,
-            "end": 61.934
+            "start": 61.102,
+            "end": 61.715
           },
           {
             "word": "мне: \" ",
-            "start": 61.934,
-            "end": 62.874
+            "start": 61.715,
+            "end": 62.126
           },
           {
             "word": "Слушайся ",
-            "start": 62.874,
-            "end": 63.734
+            "start": 62.126,
+            "end": 62.616
           },
           {
             "word": "мужа\"",
-            "start": 63.734,
-            "end": 63.937
+            "start": 62.616,
+            "end": 63.56
           }
         ]
       },
       {
-        "verseStart": 63.937,
-        "verseEnd": 67.209,
+        "verseStart": 63.56,
+        "verseEnd": 66.708,
         "words": [
           {
             "word": "Я ",
-            "start": 63.937,
-            "end": 64.142
+            "start": 63.56,
+            "end": 63.764
           },
           {
             "word": "не ",
-            "start": 64.142,
-            "end": 65.214
+            "start": 63.764,
+            "end": 64.091
           },
           {
             "word": "послушна, ",
-            "start": 65.214,
-            "end": 65.417
+            "start": 64.091,
+            "end": 65.072
           },
           {
             "word": "я ",
-            "start": 65.417,
-            "end": 65.661
+            "start": 65.072,
+            "end": 65.281
           },
           {
             "word": "делаю ",
-            "start": 65.661,
-            "end": 66.719
+            "start": 65.281,
+            "end": 65.608
           },
           {
             "word": "хуже",
-            "start": 66.719,
-            "end": 67.209
+            "start": 65.608,
+            "end": 66.708
           }
         ]
       },
       {
-        "verseStart": 67.209,
-        "verseEnd": 70.247,
+        "verseStart": 66.708,
+        "verseEnd": 69.693,
         "words": [
           {
             "word": "Делаю ",
-            "start": 67.209,
-            "end": 67.543
+            "start": 66.708,
+            "end": 67.076
           },
           {
             "word": "не ",
-            "start": 67.543,
-            "end": 67.991
+            "start": 67.076,
+            "end": 67.45
           },
           {
             "word": "так, ",
-            "start": 67.991,
-            "end": 68.317
+            "start": 67.45,
+            "end": 67.859
           },
           {
             "word": "как ",
-            "start": 68.317,
-            "end": 69.016
+            "start": 67.859,
+            "end": 68.224
           },
           {
             "word": "наказывал ",
-            "start": 69.016,
-            "end": 69.71
+            "start": 68.224,
+            "end": 68.957
           },
           {
             "word": "папа",
-            "start": 69.71,
-            "end": 70.247
+            "start": 68.957,
+            "end": 69.693
           }
         ]
       },
       {
-        "verseStart": 70.247,
-        "verseEnd": 73.504,
+        "verseStart": 69.693,
+        "verseEnd": 72.958,
         "words": [
           {
             "word": "Вместо ",
-            "start": 70.247,
-            "end": 71.266
+            "start": 69.693,
+            "end": 70.141
           },
           {
             "word": "звезды ",
-            "start": 71.266,
-            "end": 71.592
+            "start": 70.141,
+            "end": 70.957
           },
           {
             "word": "я ",
-            "start": 71.592,
-            "end": 71.875
+            "start": 70.957,
+            "end": 71.615
           },
           {
             "word": "хватаю ",
-            "start": 71.875,
-            "end": 73.341
+            "start": 71.615,
+            "end": 71.9
           },
           {
             "word": "гранату",
-            "start": 73.341,
-            "end": 73.504
+            "start": 71.9,
+            "end": 72.958
           }
         ]
       },
       {
-        "verseStart": 73.504,
-        "verseEnd": 79.546,
+        "verseStart": 72.958,
+        "verseEnd": 78.927,
         "words": [
           {
             "word": "Я ",
-            "start": 73.504,
-            "end": 74.005
+            "start": 72.958,
+            "end": 73.244
           },
           {
             "word": "хотела ",
-            "start": 74.005,
-            "end": 74.373
+            "start": 73.244,
+            "end": 74.113
           },
           {
             "word": "бы ",
-            "start": 74.373,
-            "end": 75.265
+            "start": 74.113,
+            "end": 74.605
           },
           {
             "word": "тебя, ",
-            "start": 75.265,
-            "end": 76.57
+            "start": 74.605,
+            "end": 75.012
           },
           {
             "word": "как ",
-            "start": 76.57,
-            "end": 77.017
+            "start": 75.012,
+            "end": 76.399
           },
           {
             "word": "тогда, ",
-            "start": 77.017,
-            "end": 79.22
+            "start": 76.399,
+            "end": 77.132
           },
           {
             "word": "обнять",
-            "start": 79.22,
-            "end": 79.546
+            "start": 77.132,
+            "end": 78.927
           }
         ]
       },
       {
-        "verseStart": 79.546,
-        "verseEnd": 85.76,
+        "verseStart": 78.927,
+        "verseEnd": 84.883,
         "words": [
           {
             "word": "Но ",
-            "start": 79.546,
-            "end": 80.155
+            "start": 78.927,
+            "end": 79.335
           },
           {
             "word": "для ",
-            "start": 80.155,
-            "end": 81.301
+            "start": 79.335,
+            "end": 80.236
           },
           {
             "word": "этого ",
-            "start": 81.301,
-            "end": 82.032
+            "start": 80.236,
+            "end": 81.175
           },
           {
             "word": "придётся ",
-            "start": 82.032,
-            "end": 82.812
+            "start": 81.175,
+            "end": 82.071
           },
           {
             "word": "тело ",
-            "start": 82.812,
-            "end": 85.019
+            "start": 82.071,
+            "end": 82.844
           },
           {
             "word": "раскопать",
-            "start": 85.019,
-            "end": 85.76
+            "start": 82.844,
+            "end": 84.883
           }
         ]
       },
       {
-        "verseStart": 85.76,
-        "verseEnd": 92.547,
+        "verseStart": 84.883,
+        "verseEnd": 91.015,
         "words": [
           {
             "word": "Твои ",
-            "start": 85.76,
-            "end": 86.494
+            "start": 84.883,
+            "end": 85.702
           },
           {
             "word": "кости ",
-            "start": 86.494,
-            "end": 87.921
+            "start": 85.702,
+            "end": 86.482
           },
           {
             "word": "ледяные ",
-            "start": 87.921,
-            "end": 88.33
+            "start": 86.482,
+            "end": 87.95
           },
           {
             "word": "где- ",
-            "start": 88.33,
-            "end": 88.696
+            "start": 87.95,
+            "end": 88.321
           },
           {
             "word": "то ",
-            "start": 88.696,
-            "end": 89.066
+            "start": 88.321,
+            "end": 88.647
           },
           {
             "word": "там ",
-            "start": 89.066,
-            "end": 89.432
+            "start": 88.647,
+            "end": 89.054
           },
           {
             "word": "на ",
-            "start": 89.432,
-            "end": 91.109
+            "start": 89.054,
+            "end": 89.422
           },
           {
             "word": "дне",
-            "start": 91.109,
-            "end": 92.547
+            "start": 89.422,
+            "end": 91.015
           }
         ]
       },
       {
-        "verseStart": 92.547,
-        "verseEnd": 99.821,
+        "verseStart": 91.015,
+        "verseEnd": 99.312,
         "words": [
           {
             "word": "Прорастут ",
-            "start": 92.547,
-            "end": 93.365
+            "start": 91.015,
+            "end": 92.611
           },
           {
             "word": "цветы ",
-            "start": 93.365,
-            "end": 93.773
+            "start": 92.611,
+            "end": 93.797
           },
           {
             "word": "в ",
-            "start": 93.773,
-            "end": 94.141
+            "start": 93.797,
+            "end": 94.162
           },
           {
             "word": "этой ",
-            "start": 94.141,
-            "end": 95.279
+            "start": 94.162,
+            "end": 94.652
           },
           {
             "word": "оплаканной ",
-            "start": 95.279,
-            "end": 99.491
+            "start": 94.652,
+            "end": 95.226
           },
           {
             "word": "земле",
-            "start": 99.491,
-            "end": 99.821
+            "start": 95.226,
+            "end": 99.312
           }
         ]
       },
       {
-        "verseStart": 99.821,
-        "verseEnd": 105.814,
+        "verseStart": 99.312,
+        "verseEnd": 105.437,
         "words": [
           {
             "word": "Плак- ",
-            "start": 99.821,
-            "end": 102.629
+            "start": 99.312,
+            "end": 99.638
           },
           {
             "word": "плак, ",
-            "start": 102.629,
-            "end": 102.955
+            "start": 99.638,
+            "end": 102.499
           },
           {
             "word": "плак- ",
-            "start": 102.955,
-            "end": 105.488
+            "start": 102.499,
+            "end": 102.824
           },
           {
             "word": "плак",
-            "start": 105.488,
-            "end": 105.814
+            "start": 102.824,
+            "end": 105.437
           }
         ]
       },
       {
-        "verseStart": 105.814,
-        "verseEnd": 110.139,
+        "verseStart": 105.437,
+        "verseEnd": 109.236,
         "words": [
           {
             "word": "Плак- ",
-            "start": 105.814,
-            "end": 108.546
+            "start": 105.437,
+            "end": 105.766
           },
           {
             "word": "плак, ",
-            "start": 108.546,
-            "end": 108.912
+            "start": 105.766,
+            "end": 108.544
           },
           {
             "word": "плак- ",
-            "start": 108.912,
-            "end": 109.32
+            "start": 108.544,
+            "end": 108.91
           },
           {
             "word": "плак",
-            "start": 109.32,
-            "end": 110.139
+            "start": 108.91,
+            "end": 109.236
           }
         ]
       },
       {
-        "verseStart": 110.139,
-        "verseEnd": 112.848,
+        "verseStart": 109.236,
+        "verseEnd": 112.303,
         "words": [
           {
             "word": "Растекаются ",
-            "start": 110.139,
-            "end": 110.468
+            "start": 109.236,
+            "end": 110.039
           },
           {
             "word": "по ",
-            "start": 110.468,
-            "end": 110.833
+            "start": 110.039,
+            "end": 110.417
           },
           {
             "word": "всей ",
-            "start": 110.833,
-            "end": 111.12
+            "start": 110.417,
+            "end": 110.786
           },
           {
             "word": "стене ",
-            "start": 111.12,
-            "end": 111.33
+            "start": 110.786,
+            "end": 111.192
           },
           {
             "word": "твои ",
-            "start": 111.33,
-            "end": 111.744
+            "start": 111.192,
+            "end": 111.478
           },
           {
             "word": "мозги ( ",
-            "start": 111.744,
-            "end": 111.99
+            "start": 111.478,
+            "end": 111.648
           },
           {
             "word": "плак- ",
-            "start": 111.99,
-            "end": 112.356
+            "start": 111.648,
+            "end": 111.976
           },
           {
             "word": "плак)",
-            "start": 112.356,
-            "end": 112.848
+            "start": 111.976,
+            "end": 112.303
           }
         ]
       },
       {
-        "verseStart": 112.848,
-        "verseEnd": 115.869,
+        "verseStart": 112.303,
+        "verseEnd": 115.338,
         "words": [
           {
             "word": "Очень ",
-            "start": 112.848,
-            "end": 113.417
+            "start": 112.303,
+            "end": 112.924
           },
           {
             "word": "разозлилась ",
-            "start": 113.417,
-            "end": 113.66
+            "start": 112.924,
+            "end": 113.454
           },
           {
             "word": "на ",
-            "start": 113.66,
-            "end": 113.946
+            "start": 113.454,
+            "end": 113.74
           },
           {
             "word": "тебя, ",
-            "start": 113.946,
-            "end": 114.272
+            "start": 113.74,
+            "end": 113.944
           },
           {
             "word": "ты ",
-            "start": 114.272,
-            "end": 114.441
+            "start": 113.944,
+            "end": 114.27
           },
           {
             "word": "уж ",
-            "start": 114.441,
-            "end": 114.848
+            "start": 114.27,
+            "end": 114.521
           },
           {
             "word": "прости ( ",
-            "start": 114.848,
-            "end": 115.094
+            "start": 114.521,
+            "end": 114.686
           },
           {
             "word": "плак- ",
-            "start": 115.094,
-            "end": 115.419
+            "start": 114.686,
+            "end": 115.053
           },
           {
             "word": "плак)",
-            "start": 115.419,
-            "end": 115.869
+            "start": 115.053,
+            "end": 115.338
           }
         ]
       },
       {
-        "verseStart": 115.869,
-        "verseEnd": 118.669,
+        "verseStart": 115.338,
+        "verseEnd": 118.406,
         "words": [
           {
             "word": "Сотый ",
-            "start": 115.869,
-            "end": 116.072
+            "start": 115.338,
+            "end": 115.745
           },
           {
             "word": "раз ",
-            "start": 116.072,
-            "end": 116.276
+            "start": 115.745,
+            "end": 116.072
           },
           {
             "word": "во ",
-            "start": 116.276,
-            "end": 116.62
+            "start": 116.072,
+            "end": 116.316
           },
           {
             "word": "сне ",
-            "start": 116.62,
-            "end": 116.823
+            "start": 116.316,
+            "end": 116.563
           },
           {
             "word": "я ",
-            "start": 116.823,
-            "end": 117.027
+            "start": 116.563,
+            "end": 116.809
           },
           {
             "word": "наблюдаю ",
-            "start": 117.027,
-            "end": 117.353
+            "start": 116.809,
+            "end": 117.054
           },
           {
             "word": "твой ",
-            "start": 117.353,
-            "end": 117.729
+            "start": 117.054,
+            "end": 117.468
           },
           {
             "word": "конец ( ",
-            "start": 117.729,
-            "end": 118.055
+            "start": 117.468,
+            "end": 117.713
           },
           {
             "word": "плак- ",
-            "start": 118.055,
-            "end": 118.425
+            "start": 117.713,
+            "end": 118.038
           },
           {
             "word": "плак)",
-            "start": 118.425,
-            "end": 118.669
+            "start": 118.038,
+            "end": 118.406
           }
         ]
       },
       {
-        "verseStart": 118.669,
-        "verseEnd": 121.731,
+        "verseStart": 118.406,
+        "verseEnd": 121.475,
         "words": [
           {
             "word": "И ",
-            "start": 118.669,
-            "end": 118.954
+            "start": 118.406,
+            "end": 118.65
           },
           {
             "word": "не ",
-            "start": 118.954,
-            "end": 119.16
+            "start": 118.65,
+            "end": 118.855
           },
           {
             "word": "так ",
-            "start": 119.16,
-            "end": 119.365
+            "start": 118.855,
+            "end": 119.101
           },
           {
             "word": "уж ",
-            "start": 119.365,
-            "end": 119.851
+            "start": 119.101,
+            "end": 119.469
           },
           {
             "word": "страшно, ",
-            "start": 119.851,
-            "end": 120.054
+            "start": 119.469,
+            "end": 119.755
           },
           {
             "word": "в ",
-            "start": 120.054,
-            "end": 120.216
+            "start": 119.755,
+            "end": 119.964
           },
           {
             "word": "самом ",
-            "start": 120.216,
-            "end": 120.42
+            "start": 119.964,
+            "end": 120.085
           },
           {
             "word": "деле, ",
-            "start": 120.42,
-            "end": 120.704
+            "start": 120.085,
+            "end": 120.33
           },
           {
             "word": "умереть ( ",
-            "start": 120.704,
-            "end": 121.114
+            "start": 120.33,
+            "end": 120.701
           },
           {
             "word": "плак- ",
-            "start": 121.114,
-            "end": 121.445
+            "start": 120.701,
+            "end": 121.066
           },
           {
             "word": "плак)",
-            "start": 121.445,
-            "end": 121.731
+            "start": 121.066,
+            "end": 121.475
           }
         ]
       },
       {
-        "verseStart": 121.731,
-        "verseEnd": 124.67,
+        "verseStart": 121.475,
+        "verseEnd": 124.507,
         "words": [
           {
             "word": "Я ",
-            "start": 121.731,
-            "end": 121.893
+            "start": 121.475,
+            "end": 121.683
           },
           {
             "word": "была ",
-            "start": 121.893,
-            "end": 122.056
+            "start": 121.683,
+            "end": 122.05
           },
           {
             "word": "хорошей, ",
-            "start": 122.056,
-            "end": 122.544
+            "start": 122.05,
+            "end": 122.463
           },
           {
             "word": "а ",
-            "start": 122.544,
-            "end": 122.953
+            "start": 122.463,
+            "end": 122.669
           },
           {
             "word": "плохой ",
-            "start": 122.953,
-            "end": 123.155
+            "start": 122.669,
+            "end": 122.872
           },
           {
             "word": "я ",
-            "start": 123.155,
-            "end": 123.364
+            "start": 122.872,
+            "end": 123.035
           },
           {
             "word": "не ",
-            "start": 123.364,
-            "end": 123.688
+            "start": 123.035,
+            "end": 123.242
           },
           {
             "word": "была ( ",
-            "start": 123.688,
-            "end": 124.061
+            "start": 123.242,
+            "end": 123.693
           },
           {
             "word": "плак- ",
-            "start": 124.061,
-            "end": 124.427
+            "start": 123.693,
+            "end": 124.1
           },
           {
             "word": "плак)",
-            "start": 124.427,
-            "end": 124.67
+            "start": 124.1,
+            "end": 124.507
           }
         ]
       },
       {
-        "verseStart": 124.67,
-        "verseEnd": 127.697,
+        "verseStart": 124.507,
+        "verseEnd": 127.418,
         "words": [
           {
             "word": "И ",
-            "start": 124.67,
-            "end": 124.96
+            "start": 124.507,
+            "end": 124.712
           },
           {
             "word": "всю ",
-            "start": 124.96,
-            "end": 125.206
+            "start": 124.712,
+            "end": 124.916
           },
           {
             "word": "жизнь ",
-            "start": 125.206,
-            "end": 125.369
+            "start": 124.916,
+            "end": 125.12
           },
           {
             "word": "как ",
-            "start": 125.369,
-            "end": 125.776
+            "start": 125.12,
+            "end": 125.324
           },
           {
             "word": "паинька, ",
-            "start": 125.776,
-            "end": 126.021
+            "start": 125.324,
+            "end": 125.813
           },
           {
             "word": "по ",
-            "start": 126.021,
-            "end": 126.305
+            "start": 125.813,
+            "end": 126.102
           },
           {
             "word": "правилам ",
-            "start": 126.305,
-            "end": 126.633
+            "start": 126.102,
+            "end": 126.393
           },
           {
             "word": "жила ( ",
-            "start": 126.633,
-            "end": 126.88
+            "start": 126.393,
+            "end": 126.686
           },
           {
             "word": "плак- ",
-            "start": 126.88,
-            "end": 127.452
+            "start": 126.686,
+            "end": 127.052
           },
           {
             "word": "плак)",
-            "start": 127.452,
-            "end": 127.697
+            "start": 127.052,
+            "end": 127.418
           }
         ]
       },
       {
-        "verseStart": 127.697,
-        "verseEnd": 130.831,
+        "verseStart": 127.418,
+        "verseEnd": 130.444,
         "words": [
           {
             "word": "Надоело ",
-            "start": 127.697,
-            "end": 128.146
+            "start": 127.418,
+            "end": 127.907
           },
           {
             "word": "плакать, ",
-            "start": 128.146,
-            "end": 128.877
+            "start": 127.907,
+            "end": 128.359
           },
           {
             "word": "надоело ",
-            "start": 128.877,
-            "end": 129.081
+            "start": 128.359,
+            "end": 128.891
           },
           {
             "word": "мне ",
-            "start": 129.081,
-            "end": 129.773
+            "start": 128.891,
+            "end": 129.095
           },
           {
             "word": "страдать ( ",
-            "start": 129.773,
-            "end": 130.1
+            "start": 129.095,
+            "end": 129.341
           },
           {
             "word": "плак- ",
-            "start": 130.1,
-            "end": 130.588
+            "start": 129.341,
+            "end": 129.873
           },
           {
             "word": "плак)",
-            "start": 130.588,
-            "end": 130.831
+            "start": 129.873,
+            "end": 130.444
           }
         ]
       },
       {
-        "verseStart": 130.831,
-        "verseEnd": 134.067,
+        "verseStart": 130.444,
+        "verseEnd": 133.717,
         "words": [
           {
             "word": "Всё ",
-            "start": 130.831,
-            "end": 131.203
+            "start": 130.444,
+            "end": 130.893
           },
           {
             "word": "равно ",
-            "start": 131.203,
-            "end": 131.418
+            "start": 130.893,
+            "end": 131.302
           },
           {
             "word": "не ",
-            "start": 131.418,
-            "end": 131.784
+            "start": 131.302,
+            "end": 131.631
           },
           {
             "word": "выйдет ",
-            "start": 131.784,
-            "end": 131.947
+            "start": 131.631,
+            "end": 131.834
           },
           {
             "word": "свою ",
-            "start": 131.947,
-            "end": 132.354
+            "start": 131.834,
+            "end": 132.001
           },
           {
             "word": "смерть ",
-            "start": 132.354,
-            "end": 132.803
+            "start": 132.001,
+            "end": 132.368
           },
           {
             "word": "предугадать ( ",
-            "start": 132.803,
-            "end": 132.928
+            "start": 132.368,
+            "end": 132.857
           },
           {
             "word": "плак- ",
-            "start": 132.928,
-            "end": 133.864
+            "start": 132.857,
+            "end": 133.27
           },
           {
             "word": "плак)",
-            "start": 133.864,
-            "end": 134.067
+            "start": 133.27,
+            "end": 133.717
           }
         ]
       },
       {
-        "verseStart": 134.067,
-        "verseEnd": 136.774,
+        "verseStart": 133.717,
+        "verseEnd": 136.696,
         "words": [
           {
             "word": "Мама ",
-            "start": 134.067,
-            "end": 134.396
+            "start": 133.717,
+            "end": 134.003
           },
           {
             "word": "говорила ",
-            "start": 134.396,
-            "end": 134.806
+            "start": 134.003,
+            "end": 134.493
           },
           {
             "word": "мне: \" ",
-            "start": 134.806,
-            "end": 135.377
+            "start": 134.493,
+            "end": 134.982
           },
           {
             "word": "Слушайся ",
-            "start": 135.377,
-            "end": 136.566
+            "start": 134.982,
+            "end": 135.39
           },
           {
             "word": "мужа\"",
-            "start": 136.566,
-            "end": 136.774
+            "start": 135.39,
+            "end": 136.696
           }
         ]
       },
       {
-        "verseStart": 136.774,
-        "verseEnd": 140.127,
+        "verseStart": 136.696,
+        "verseEnd": 139.577,
         "words": [
           {
             "word": "Я ",
-            "start": 136.774,
-            "end": 137.102
+            "start": 136.696,
+            "end": 136.86
           },
           {
             "word": "не ",
-            "start": 137.102,
-            "end": 137.996
+            "start": 136.86,
+            "end": 137.063
           },
           {
             "word": "послушна, ",
-            "start": 137.996,
-            "end": 138.159
+            "start": 137.063,
+            "end": 137.983
           },
           {
             "word": "я ",
-            "start": 138.159,
-            "end": 138.618
+            "start": 137.983,
+            "end": 138.186
           },
           {
             "word": "делаю ",
-            "start": 138.618,
-            "end": 139.678
+            "start": 138.186,
+            "end": 138.682
           },
           {
             "word": "хуже",
-            "start": 139.678,
-            "end": 140.127
+            "start": 138.682,
+            "end": 139.577
           }
         ]
       },
       {
-        "verseStart": 140.127,
-        "verseEnd": 143.395,
+        "verseStart": 139.577,
+        "verseEnd": 142.641,
         "words": [
           {
             "word": "Делаю ",
-            "start": 140.127,
-            "end": 140.498
+            "start": 139.577,
+            "end": 140.27
           },
           {
             "word": "не ",
-            "start": 140.498,
-            "end": 140.868
+            "start": 140.27,
+            "end": 140.433
           },
           {
             "word": "так, ",
-            "start": 140.868,
-            "end": 141.275
+            "start": 140.433,
+            "end": 140.845
           },
           {
             "word": "как ",
-            "start": 141.275,
-            "end": 141.97
+            "start": 140.845,
+            "end": 141.252
           },
           {
             "word": "наказывал ",
-            "start": 141.97,
-            "end": 142.66
+            "start": 141.252,
+            "end": 141.904
           },
           {
             "word": "папа",
-            "start": 142.66,
-            "end": 143.395
+            "start": 141.904,
+            "end": 142.641
           }
         ]
       },
       {
-        "verseStart": 143.395,
-        "verseEnd": 146.089,
+        "verseStart": 142.641,
+        "verseEnd": 145.761,
         "words": [
           {
             "word": "Вместо ",
-            "start": 143.395,
-            "end": 143.846
+            "start": 142.641,
+            "end": 143.103
           },
           {
             "word": "звезды ",
-            "start": 143.846,
-            "end": 144.212
+            "start": 143.103,
+            "end": 143.794
           },
           {
             "word": "я ",
-            "start": 144.212,
-            "end": 144.621
+            "start": 143.794,
+            "end": 144.168
           },
           {
             "word": "хватаю ",
-            "start": 144.621,
-            "end": 145.724
+            "start": 144.168,
+            "end": 144.576
           },
           {
             "word": "гранату",
-            "start": 145.724,
-            "end": 146.089
+            "start": 144.576,
+            "end": 145.761
           }
         ]
       },
       {
-        "verseStart": 146.089,
-        "verseEnd": 148.838,
+        "verseStart": 145.761,
+        "verseEnd": 148.669,
         "words": [
           {
             "word": "Мама ",
-            "start": 146.089,
-            "end": 146.579
+            "start": 145.761,
+            "end": 146.09
           },
           {
             "word": "говорила ",
-            "start": 146.579,
-            "end": 147.029
+            "start": 146.09,
+            "end": 146.911
           },
           {
             "word": "мне: \" ",
-            "start": 147.029,
-            "end": 147.897
+            "start": 146.911,
+            "end": 147.321
           },
           {
             "word": "Слушайся ",
-            "start": 147.897,
-            "end": 148.674
+            "start": 147.321,
+            "end": 147.972
           },
           {
             "word": "мужа\"",
-            "start": 148.674,
-            "end": 148.838
+            "start": 147.972,
+            "end": 148.669
           }
         ]
       },
       {
-        "verseStart": 148.838,
-        "verseEnd": 152.272,
+        "verseStart": 148.669,
+        "verseEnd": 151.73,
         "words": [
           {
             "word": "Я ",
-            "start": 148.838,
-            "end": 149.208
+            "start": 148.669,
+            "end": 148.832
           },
           {
             "word": "не ",
-            "start": 149.208,
-            "end": 150.107
+            "start": 148.832,
+            "end": 149.202
           },
           {
             "word": "послушна, ",
-            "start": 150.107,
-            "end": 150.393
+            "start": 149.202,
+            "end": 150.14
           },
           {
             "word": "я ",
-            "start": 150.393,
-            "end": 150.965
+            "start": 150.14,
+            "end": 150.344
           },
           {
             "word": "делаю ",
-            "start": 150.965,
-            "end": 151.823
+            "start": 150.344,
+            "end": 150.751
           },
           {
             "word": "хуже",
-            "start": 151.823,
-            "end": 152.272
+            "start": 150.751,
+            "end": 151.73
           }
         ]
       },
       {
-        "verseStart": 152.272,
-        "verseEnd": 155.466,
+        "verseStart": 151.73,
+        "verseEnd": 154.798,
         "words": [
           {
             "word": "Делаю ",
-            "start": 152.272,
-            "end": 152.598
+            "start": 151.73,
+            "end": 152.427
           },
           {
             "word": "не ",
-            "start": 152.598,
-            "end": 153.05
+            "start": 152.427,
+            "end": 152.592
           },
           {
             "word": "так, ",
-            "start": 153.05,
-            "end": 153.334
+            "start": 152.592,
+            "end": 153.003
           },
           {
             "word": "как ",
-            "start": 153.334,
-            "end": 154.027
+            "start": 153.003,
+            "end": 153.409
           },
           {
             "word": "наказывал ",
-            "start": 154.027,
-            "end": 154.847
+            "start": 153.409,
+            "end": 153.736
           },
           {
             "word": "папа",
-            "start": 154.847,
-            "end": 155.466
+            "start": 153.736,
+            "end": 154.798
           }
         ]
       },
       {
-        "verseStart": 155.466,
-        "verseEnd": 158.803,
+        "verseStart": 154.798,
+        "verseEnd": 158.178,
         "words": [
           {
             "word": "Вместо ",
-            "start": 155.466,
-            "end": 155.872
+            "start": 154.798,
+            "end": 155.247
           },
           {
             "word": "звезды ",
-            "start": 155.872,
-            "end": 156.237
+            "start": 155.247,
+            "end": 156.021
           },
           {
             "word": "я ",
-            "start": 156.237,
-            "end": 156.603
+            "start": 156.021,
+            "end": 156.467
           },
           {
             "word": "хватаю ",
-            "start": 156.603,
-            "end": 158.23
+            "start": 156.467,
+            "end": 156.792
           },
           {
             "word": "гранату",
-            "start": 158.23,
-            "end": 158.803
+            "start": 156.792,
+            "end": 158.178
           }
         ]
       },
       {
-        "verseStart": 158.803,
-        "verseEnd": 161.873,
+        "verseStart": 158.178,
+        "verseEnd": 161.295,
         "words": [
           {
             "word": "Ла- ",
-            "start": 158.803,
-            "end": 158.966
+            "start": 158.178,
+            "end": 158.79
           },
           {
             "word": "ла- ",
-            "start": 158.966,
-            "end": 159.622
+            "start": 158.79,
+            "end": 158.96
           },
           {
             "word": "ла- ",
-            "start": 159.622,
-            "end": 160.03
+            "start": 158.96,
+            "end": 159.368
           },
           {
             "word": "ла- ",
-            "start": 160.03,
-            "end": 160.192
+            "start": 159.368,
+            "end": 160.064
           },
           {
             "word": "ла- ",
-            "start": 160.192,
-            "end": 160.609
+            "start": 160.064,
+            "end": 160.234
           },
           {
             "word": "а- ",
-            "start": 160.609,
-            "end": 160.974
+            "start": 160.234,
+            "end": 160.602
           },
           {
             "word": "а- ",
-            "start": 160.974,
-            "end": 161.304
+            "start": 160.602,
+            "end": 160.968
           },
           {
             "word": "а",
-            "start": 161.304,
-            "end": 161.873
+            "start": 160.968,
+            "end": 161.295
           }
         ]
       },
       {
-        "verseStart": 161.873,
-        "verseEnd": 164.841,
+        "verseStart": 161.295,
+        "verseEnd": 164.403,
         "words": [
           {
             "word": "Ла- ",
-            "start": 161.873,
-            "end": 162.042
+            "start": 161.295,
+            "end": 161.911
           },
           {
             "word": "ла- ",
-            "start": 162.042,
-            "end": 162.454
+            "start": 161.911,
+            "end": 162.033
           },
           {
             "word": "ла- ",
-            "start": 162.454,
-            "end": 163.067
+            "start": 162.033,
+            "end": 162.445
           },
           {
             "word": "ла- ",
-            "start": 163.067,
-            "end": 163.556
+            "start": 162.445,
+            "end": 163.26
           },
           {
             "word": "ла- ",
-            "start": 163.556,
-            "end": 163.892
+            "start": 163.26,
+            "end": 163.341
           },
           {
             "word": "а- ",
-            "start": 163.892,
-            "end": 164.135
+            "start": 163.341,
+            "end": 163.708
           },
           {
             "word": "а- ",
-            "start": 164.135,
-            "end": 164.343
+            "start": 163.708,
+            "end": 164.075
           },
           {
             "word": "а",
-            "start": 164.343,
-            "end": 164.841
+            "start": 164.075,
+            "end": 164.403
           }
         ]
       },
       {
-        "verseStart": 164.841,
-        "verseEnd": 167.909,
+        "verseStart": 164.403,
+        "verseEnd": 167.36,
         "words": [
           {
             "word": "Ла- ",
-            "start": 164.841,
-            "end": 164.964
+            "start": 164.403,
+            "end": 164.939
           },
           {
             "word": "ла- ",
-            "start": 164.964,
-            "end": 165.412
+            "start": 164.939,
+            "end": 165.061
           },
           {
             "word": "ла- ",
-            "start": 165.412,
-            "end": 166.067
+            "start": 165.061,
+            "end": 165.511
           },
           {
             "word": "ла- ",
-            "start": 166.067,
-            "end": 166.23
+            "start": 165.511,
+            "end": 166.086
           },
           {
             "word": "ла- ",
-            "start": 166.23,
-            "end": 166.635
+            "start": 166.086,
+            "end": 166.249
           },
           {
             "word": "а- ",
-            "start": 166.635,
-            "end": 167.048
+            "start": 166.249,
+            "end": 166.657
           },
           {
             "word": "а- ",
-            "start": 167.048,
-            "end": 167.376
+            "start": 166.657,
+            "end": 166.988
           },
           {
             "word": "а",
-            "start": 167.376,
-            "end": 167.909
+            "start": 166.988,
+            "end": 167.36
           }
         ]
       },
       {
-        "verseStart": 167.909,
-        "verseEnd": 170.531,
+        "verseStart": 167.36,
+        "verseEnd": 170.104,
         "words": [
           {
             "word": "Ла- ",
-            "start": 167.909,
-            "end": 168.071
+            "start": 167.36,
+            "end": 168.013
           },
           {
             "word": "ла- ",
-            "start": 168.071,
-            "end": 168.444
+            "start": 168.013,
+            "end": 168.177
           },
           {
             "word": "ла- ",
-            "start": 168.444,
-            "end": 169.014
+            "start": 168.177,
+            "end": 168.546
           },
           {
             "word": "ла- ",
-            "start": 169.014,
-            "end": 169.216
+            "start": 168.546,
+            "end": 169.121
           },
           {
             "word": "ла- ",
-            "start": 169.216,
-            "end": 169.505
+            "start": 169.121,
+            "end": 169.243
           },
           {
             "word": "а- ",
-            "start": 169.505,
-            "end": 169.669
+            "start": 169.243,
+            "end": 169.57
           },
           {
             "word": "а- ",
-            "start": 169.669,
-            "end": 169.957
+            "start": 169.57,
+            "end": 169.897
           },
           {
             "word": "а",
-            "start": 169.957,
-            "end": 170.531
+            "start": 169.897,
+            "end": 170.104
           }
         ]
       },
       {
-        "verseStart": 170.531,
-        "verseEnd": 176.622,
+        "verseStart": 170.104,
+        "verseEnd": 176.112,
         "words": [
           {
             "word": "Я ",
-            "start": 170.531,
-            "end": 171.601
+            "start": 170.104,
+            "end": 170.433
           },
           {
             "word": "хотела ",
-            "start": 171.601,
-            "end": 171.969
+            "start": 170.433,
+            "end": 171.251
           },
           {
             "word": "бы ",
-            "start": 171.969,
-            "end": 173.108
+            "start": 171.251,
+            "end": 171.619
           },
           {
             "word": "тебя, ",
-            "start": 173.108,
-            "end": 173.766
+            "start": 171.619,
+            "end": 172.354
           },
           {
             "word": "как ",
-            "start": 173.766,
-            "end": 174.214
+            "start": 172.354,
+            "end": 173.744
           },
           {
             "word": "тогда, ",
-            "start": 174.214,
-            "end": 176.251
+            "start": 173.744,
+            "end": 174.321
           },
           {
             "word": "обнять",
-            "start": 176.251,
-            "end": 176.622
+            "start": 174.321,
+            "end": 176.112
           }
         ]
       },
       {
-        "verseStart": 176.622,
-        "verseEnd": 182.954,
+        "verseStart": 176.112,
+        "verseEnd": 182.193,
         "words": [
           {
             "word": "Но ",
-            "start": 176.622,
-            "end": 177.394
+            "start": 176.112,
+            "end": 176.605
           },
           {
             "word": "для ",
-            "start": 177.394,
-            "end": 178.464
+            "start": 176.605,
+            "end": 177.383
           },
           {
             "word": "этого ",
-            "start": 178.464,
-            "end": 179.197
+            "start": 177.383,
+            "end": 178.442
           },
           {
             "word": "придётся ",
-            "start": 179.197,
-            "end": 180.011
+            "start": 178.442,
+            "end": 179.867
           },
           {
             "word": "тело ",
-            "start": 180.011,
-            "end": 182.258
+            "start": 179.867,
+            "end": 180.071
           },
           {
             "word": "раскопать",
-            "start": 182.258,
-            "end": 182.954
+            "start": 180.071,
+            "end": 182.193
           }
         ]
       },
       {
-        "verseStart": 182.954,
-        "verseEnd": 189.368,
+        "verseStart": 182.193,
+        "verseEnd": 188.161,
         "words": [
           {
             "word": "Твои ",
-            "start": 182.954,
-            "end": 183.73
+            "start": 182.193,
+            "end": 182.93
           },
           {
             "word": "кости ",
-            "start": 183.73,
-            "end": 185.237
+            "start": 182.93,
+            "end": 183.75
           },
           {
             "word": "ледяные ",
-            "start": 185.237,
-            "end": 185.613
+            "start": 183.75,
+            "end": 185.219
           },
           {
             "word": "где- ",
-            "start": 185.613,
-            "end": 185.937
+            "start": 185.219,
+            "end": 185.545
           },
           {
             "word": "то ",
-            "start": 185.937,
-            "end": 186.343
+            "start": 185.545,
+            "end": 185.953
           },
           {
             "word": "там ",
-            "start": 186.343,
-            "end": 186.71
+            "start": 185.953,
+            "end": 186.363
           },
           {
             "word": "на ",
-            "start": 186.71,
-            "end": 188.177
+            "start": 186.363,
+            "end": 186.773
           },
           {
             "word": "дне",
-            "start": 188.177,
-            "end": 189.368
+            "start": 186.773,
+            "end": 188.161
           }
         ]
       },
       {
-        "verseStart": 189.368,
-        "verseEnd": 193.21,
+        "verseStart": 188.161,
+        "verseEnd": 194.461,
         "words": [
           {
             "word": "Прорастут ",
-            "start": 189.368,
-            "end": 189.774
+            "start": 188.161,
+            "end": 189.712
           },
           {
             "word": "цветы ",
-            "start": 189.774,
-            "end": 190.22
+            "start": 189.712,
+            "end": 190.857
           },
           {
             "word": "в ",
-            "start": 190.22,
-            "end": 191.161
+            "start": 190.857,
+            "end": 191.31
           },
           {
             "word": "этой ",
-            "start": 191.161,
-            "end": 192.424
+            "start": 191.31,
+            "end": 191.636
           },
           {
             "word": "оплаканной ",
-            "start": 192.424,
-            "end": 192.34
+            "start": 191.636,
+            "end": 192.461
           },
           {
             "word": "земле",
-            "start": 192.34,
+            "start": 192.461,
             "end": 193.14
           }
         ]
@@ -4047,1953 +4047,1953 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 0.23,
-        "verseEnd": 6.635,
+        "verseStart": 0.393,
+        "verseEnd": 6.274,
         "words": [
           {
             "word": "L- ",
-            "start": 0.23,
-            "end": 0.639
+            "start": 0.393,
+            "end": 0.686
           },
           {
             "word": "U- ",
-            "start": 0.639,
-            "end": 1.086
+            "start": 0.686,
+            "end": 1.052
           },
           {
             "word": "C- ",
-            "start": 1.086,
-            "end": 3.206
+            "start": 1.052,
+            "end": 1.38
           },
           {
             "word": "K ",
-            "start": 3.206,
-            "end": 3.572
+            "start": 1.38,
+            "end": 3.261
           },
           {
             "word": "L- ",
-            "start": 3.572,
-            "end": 3.939
+            "start": 3.261,
+            "end": 3.587
           },
           {
             "word": "U- ",
-            "start": 3.939,
-            "end": 4.345
+            "start": 3.587,
+            "end": 3.994
           },
           {
             "word": "C- ",
-            "start": 4.345,
-            "end": 6.226
+            "start": 3.994,
+            "end": 4.361
           },
           {
             "word": "K",
-            "start": 6.226,
-            "end": 6.635
+            "start": 4.361,
+            "end": 6.274
           }
         ]
       },
       {
-        "verseStart": 6.635,
-        "verseEnd": 24.928,
+        "verseStart": 6.274,
+        "verseEnd": 24.231,
         "words": [
           {
             "word": "L- ",
-            "start": 6.635,
-            "end": 7.006
+            "start": 6.274,
+            "end": 6.641
           },
           {
             "word": "U- ",
-            "start": 7.006,
-            "end": 7.374
+            "start": 6.641,
+            "end": 7.049
           },
           {
             "word": "C- ",
-            "start": 7.374,
-            "end": 9.285
+            "start": 7.049,
+            "end": 7.456
           },
           {
             "word": "K ",
-            "start": 9.285,
-            "end": 9.612
+            "start": 7.456,
+            "end": 9.288
           },
           {
             "word": "L- ",
-            "start": 9.612,
-            "end": 10.018
+            "start": 9.288,
+            "end": 9.654
           },
           {
             "word": "U- ",
-            "start": 10.018,
-            "end": 10.425
+            "start": 9.654,
+            "end": 10.021
           },
           {
             "word": "C- ",
-            "start": 10.425,
-            "end": 24.277
+            "start": 10.021,
+            "end": 10.428
           },
           {
             "word": "K",
-            "start": 24.277,
-            "end": 24.928
+            "start": 10.428,
+            "end": 24.231
           }
         ]
       },
       {
-        "verseStart": 24.928,
-        "verseEnd": 30.84,
+        "verseStart": 24.231,
+        "verseEnd": 30.27,
         "words": [
           {
             "word": "正体 ",
-            "start": 24.928,
-            "end": 25.537
+            "start": 24.231,
+            "end": 24.922
           },
           {
             "word": "は ",
-            "start": 25.537,
-            "end": 25.821
+            "start": 24.922,
+            "end": 25.491
           },
           {
             "word": "誰 ",
-            "start": 25.821,
-            "end": 25.985
+            "start": 25.491,
+            "end": 25.943
           },
           {
             "word": "も ",
-            "start": 25.985,
-            "end": 26.188
+            "start": 25.943,
+            "end": 26.147
           },
           {
             "word": "知 ",
-            "start": 26.188,
-            "end": 26.556
+            "start": 26.147,
+            "end": 26.352
           },
           {
             "word": "ら ",
-            "start": 26.556,
-            "end": 26.883
+            "start": 26.352,
+            "end": 26.556
           },
           {
             "word": "ない ",
-            "start": 26.883,
-            "end": 27.983
+            "start": 26.556,
+            "end": 26.887
           },
           {
             "word": "秘密 ",
-            "start": 27.983,
-            "end": 28.757
+            "start": 26.887,
+            "end": 27.945
           },
           {
             "word": "の ",
-            "start": 28.757,
-            "end": 30.269
+            "start": 27.945,
+            "end": 28.761
           },
           {
             "word": "ヒーロー",
-            "start": 30.269,
-            "end": 30.84
+            "start": 28.761,
+            "end": 30.27
           }
         ]
       },
       {
-        "verseStart": 30.84,
-        "verseEnd": 37.291,
+        "verseStart": 30.27,
+        "verseEnd": 36.241,
         "words": [
           {
             "word": "悪役 ",
-            "start": 30.84,
-            "end": 31.167
+            "start": 30.27,
+            "end": 30.839
           },
           {
             "word": "の ",
-            "start": 31.167,
-            "end": 31.862
+            "start": 30.839,
+            "end": 31.083
           },
           {
             "word": "よう ",
-            "start": 31.862,
-            "end": 32.351
+            "start": 31.083,
+            "end": 31.945
           },
           {
             "word": "にし ",
-            "start": 32.351,
-            "end": 32.554
+            "start": 31.945,
+            "end": 32.351
           },
           {
             "word": "て ",
-            "start": 32.554,
-            "end": 32.88
+            "start": 32.351,
+            "end": 32.514
           },
           {
             "word": "も ",
-            "start": 32.88,
-            "end": 33.697
+            "start": 32.514,
+            "end": 32.963
           },
           {
             "word": "みんな ",
-            "start": 33.697,
-            "end": 34.022
+            "start": 32.963,
+            "end": 33.619
           },
           {
             "word": "は ",
-            "start": 34.022,
-            "end": 34.593
+            "start": 33.619,
+            "end": 33.984
           },
           {
             "word": "ね ",
-            "start": 34.593,
-            "end": 35.12
+            "start": 33.984,
+            "end": 34.596
           },
           {
             "word": "わか ",
-            "start": 35.12,
-            "end": 35.485
+            "start": 34.596,
+            "end": 35.049
           },
           {
             "word": "って ",
-            "start": 35.485,
-            "end": 36.216
+            "start": 35.049,
+            "end": 35.456
           },
           {
             "word": "る",
-            "start": 36.216,
-            "end": 37.291
+            "start": 35.456,
+            "end": 36.241
           }
         ]
       },
       {
-        "verseStart": 37.291,
-        "verseEnd": 44.075,
+        "verseStart": 36.241,
+        "verseEnd": 43.118,
         "words": [
           {
             "word": "マスク ",
-            "start": 37.291,
-            "end": 37.662
+            "start": 36.241,
+            "end": 37.341
           },
           {
             "word": "に ",
-            "start": 37.662,
-            "end": 37.828
+            "start": 37.341,
+            "end": 37.602
           },
           {
             "word": "隠 ",
-            "start": 37.828,
-            "end": 38.601
+            "start": 37.602,
+            "end": 38.256
           },
           {
             "word": "さ ",
-            "start": 38.601,
-            "end": 39.255
+            "start": 38.256,
+            "end": 38.666
           },
           {
             "word": "れ ",
-            "start": 39.255,
-            "end": 40.151
+            "start": 38.666,
+            "end": 39.236
           },
           {
             "word": "た ",
-            "start": 40.151,
-            "end": 40.803
+            "start": 39.236,
+            "end": 40.173
           },
           {
             "word": "強い ",
-            "start": 40.803,
-            "end": 41.296
+            "start": 40.173,
+            "end": 40.827
           },
           {
             "word": "優 ",
-            "start": 41.296,
-            "end": 41.46
+            "start": 40.827,
+            "end": 41.398
           },
           {
             "word": "し ",
-            "start": 41.46,
-            "end": 41.87
+            "start": 41.398,
+            "end": 41.682
           },
           {
             "word": "さ ",
-            "start": 41.87,
-            "end": 43.05
+            "start": 41.682,
+            "end": 42.251
           },
           {
             "word": "に",
-            "start": 43.05,
-            "end": 44.075
+            "start": 42.251,
+            "end": 43.118
           }
         ]
       },
       {
-        "verseStart": 44.075,
-        "verseEnd": 49.757,
+        "verseStart": 43.118,
+        "verseEnd": 48.251,
         "words": [
           {
             "word": "ずっと ",
-            "start": 44.075,
-            "end": 44.278
+            "start": 43.118,
+            "end": 43.81
           },
           {
             "word": "憧 ",
-            "start": 44.278,
-            "end": 45.051
+            "start": 43.81,
+            "end": 44.38
           },
           {
             "word": "れ ",
-            "start": 45.051,
-            "end": 48.277
+            "start": 44.38,
+            "end": 45.12
           },
           {
             "word": "て",
-            "start": 48.277,
-            "end": 49.757
+            "start": 45.12,
+            "end": 48.251
           }
         ]
       },
       {
-        "verseStart": 49.757,
-        "verseEnd": 59.116,
+        "verseStart": 48.251,
+        "verseEnd": 58.771,
         "words": [
           {
             "word": "ざわめく ",
-            "start": 49.757,
-            "end": 50.372
+            "start": 48.251,
+            "end": 49.762
           },
           {
             "word": "街 ",
-            "start": 50.372,
-            "end": 51.227
+            "start": 49.762,
+            "end": 50.333
           },
           {
             "word": "の ",
-            "start": 51.227,
-            "end": 52.578
+            "start": 50.333,
+            "end": 51.27
           },
           {
             "word": "空 ",
-            "start": 52.578,
-            "end": 52.824
+            "start": 51.27,
+            "end": 52.612
           },
           {
             "word": "を ",
-            "start": 52.824,
-            "end": 55.431
+            "start": 52.612,
+            "end": 52.775
           },
           {
             "word": "見上げる ( ",
-            "start": 55.431,
-            "end": 56.792
+            "start": 52.775,
+            "end": 55.381
           },
           {
             "word": "きらきら ",
-            "start": 56.792,
-            "end": 58.749
+            "start": 55.381,
+            "end": 56.848
           },
           {
             "word": "キラー)",
-            "start": 58.749,
-            "end": 59.116
+            "start": 56.848,
+            "end": 58.771
           }
         ]
       },
       {
-        "verseStart": 59.116,
-        "verseEnd": 60.989,
+        "verseStart": 58.771,
+        "verseEnd": 60.121,
         "words": [
           {
             "word": "(One, ",
-            "start": 59.116,
-            "end": 59.524
+            "start": 58.771,
+            "end": 59.184
           },
           {
             "word": "two, ",
-            "start": 59.524,
-            "end": 59.929
+            "start": 59.184,
+            "end": 59.551
           },
           {
             "word": "three, ",
-            "start": 59.929,
-            "end": 60.133
+            "start": 59.551,
+            "end": 59.918
           },
           {
             "word": "four)",
-            "start": 60.133,
-            "end": 60.989
+            "start": 59.918,
+            "end": 60.121
           }
         ]
       },
       {
-        "verseStart": 60.989,
-        "verseEnd": 63.817,
+        "verseStart": 60.121,
+        "verseEnd": 63.022,
         "words": [
           {
             "word": "きらきら ",
-            "start": 60.989,
-            "end": 61.573
+            "start": 60.121,
+            "end": 60.976
           },
           {
             "word": "キラー ",
-            "start": 61.573,
-            "end": 62.103
+            "start": 60.976,
+            "end": 61.544
           },
           {
             "word": "ラッキー ",
-            "start": 62.103,
-            "end": 62.511
+            "start": 61.544,
+            "end": 62.031
           },
           {
             "word": "ラッキー ",
-            "start": 62.511,
-            "end": 63.041
+            "start": 62.031,
+            "end": 62.439
           },
           {
             "word": "ラッキー",
-            "start": 63.041,
-            "end": 63.817
+            "start": 62.439,
+            "end": 63.022
           }
         ]
       },
       {
-        "verseStart": 63.817,
-        "verseEnd": 66.592,
+        "verseStart": 63.022,
+        "verseEnd": 66.002,
         "words": [
           {
             "word": "未来 ",
-            "start": 63.817,
-            "end": 63.98
+            "start": 63.022,
+            "end": 63.797
           },
           {
             "word": "は ",
-            "start": 63.98,
-            "end": 64.554
+            "start": 63.797,
+            "end": 64.002
           },
           {
             "word": "ほら ",
-            "start": 64.554,
-            "end": 65.205
+            "start": 64.002,
+            "end": 64.572
           },
           {
             "word": "ハッピー ",
-            "start": 65.205,
-            "end": 65.572
+            "start": 64.572,
+            "end": 65.104
           },
           {
             "word": "ハッピー ",
-            "start": 65.572,
-            "end": 66.061
+            "start": 65.104,
+            "end": 65.514
           },
           {
             "word": "ハッピー",
-            "start": 66.061,
-            "end": 66.592
+            "start": 65.514,
+            "end": 66.002
           }
         ]
       },
       {
-        "verseStart": 66.592,
-        "verseEnd": 71.191,
+        "verseStart": 66.002,
+        "verseEnd": 70.782,
         "words": [
           {
             "word": "空 ",
-            "start": 66.592,
-            "end": 66.959
+            "start": 66.002,
+            "end": 66.571
           },
           {
             "word": "から ",
-            "start": 66.959,
-            "end": 67.529
+            "start": 66.571,
+            "end": 66.941
           },
           {
             "word": "今 ",
-            "start": 67.529,
-            "end": 68.512
+            "start": 66.941,
+            "end": 67.471
           },
           {
             "word": "きらきら ",
-            "start": 68.512,
-            "end": 69.001
+            "start": 67.471,
+            "end": 68.448
           },
           {
             "word": "キラー ",
-            "start": 69.001,
-            "end": 69.538
+            "start": 68.448,
+            "end": 68.992
           },
           {
             "word": "coming ",
-            "start": 69.538,
-            "end": 70.819
+            "start": 68.992,
+            "end": 69.521
           },
           {
             "word": "now",
-            "start": 70.819,
-            "end": 71.191
+            "start": 69.521,
+            "end": 70.782
           }
         ]
       },
       {
-        "verseStart": 71.191,
-        "verseEnd": 72.587,
+        "verseStart": 70.782,
+        "verseEnd": 72.125,
         "words": [
           {
             "word": "(One, ",
-            "start": 71.191,
-            "end": 71.558
+            "start": 70.782,
+            "end": 71.15
           },
           {
             "word": "two, ",
-            "start": 71.558,
-            "end": 71.926
+            "start": 71.15,
+            "end": 71.516
           },
           {
             "word": "three, ",
-            "start": 71.926,
-            "end": 72.089
+            "start": 71.516,
+            "end": 71.922
           },
           {
             "word": "four)",
-            "start": 72.089,
-            "end": 72.587
+            "start": 71.922,
+            "end": 72.125
           }
         ]
       },
       {
-        "verseStart": 72.587,
-        "verseEnd": 75.833,
+        "verseStart": 72.125,
+        "verseEnd": 75.001,
         "words": [
           {
             "word": "きらきら ",
-            "start": 72.587,
-            "end": 72.997
+            "start": 72.125,
+            "end": 72.908
           },
           {
             "word": "キラー ",
-            "start": 72.997,
-            "end": 73.574
+            "start": 72.908,
+            "end": 73.575
           },
           {
             "word": "ハッピー ",
-            "start": 73.574,
-            "end": 74.194
+            "start": 73.575,
+            "end": 74.146
           },
           {
             "word": "ハッピー ",
-            "start": 74.194,
-            "end": 74.935
+            "start": 74.146,
+            "end": 74.553
           },
           {
             "word": "ハッピー",
-            "start": 74.935,
-            "end": 75.833
+            "start": 74.553,
+            "end": 75.001
           }
         ]
       },
       {
-        "verseStart": 75.833,
-        "verseEnd": 78.787,
+        "verseStart": 75.001,
+        "verseEnd": 77.95,
         "words": [
           {
             "word": "未来 ",
-            "start": 75.833,
-            "end": 75.997
+            "start": 75.001,
+            "end": 75.743
           },
           {
             "word": "は ",
-            "start": 75.997,
-            "end": 76.499
+            "start": 75.743,
+            "end": 75.948
           },
           {
             "word": "ほら ",
-            "start": 76.499,
-            "end": 77.033
+            "start": 75.948,
+            "end": 76.482
           },
           {
             "word": "ラッキー ",
-            "start": 77.033,
-            "end": 77.403
+            "start": 76.482,
+            "end": 77.012
           },
           {
             "word": "ラッキー ",
-            "start": 77.403,
-            "end": 77.932
+            "start": 77.012,
+            "end": 77.42
           },
           {
             "word": "ラッキー",
-            "start": 77.932,
-            "end": 78.787
+            "start": 77.42,
+            "end": 77.95
           }
         ]
       },
       {
-        "verseStart": 78.787,
-        "verseEnd": 84.129,
+        "verseStart": 77.95,
+        "verseEnd": 83.43,
         "words": [
           {
             "word": "きらきら ",
-            "start": 78.787,
-            "end": 79.362
+            "start": 77.95,
+            "end": 78.81
           },
           {
             "word": "キラー ",
-            "start": 79.362,
-            "end": 80.994
+            "start": 78.81,
+            "end": 79.422
           },
           {
             "word": "ドキドキドキ ",
-            "start": 80.994,
-            "end": 81.441
+            "start": 79.422,
+            "end": 81.015
           },
           {
             "word": "fall ",
-            "start": 81.441,
-            "end": 81.604
+            "start": 81.015,
+            "end": 81.425
           },
           {
             "word": "in ",
-            "start": 81.604,
-            "end": 83.436
+            "start": 81.425,
+            "end": 81.629
           },
           {
             "word": "love",
-            "start": 83.436,
-            "end": 84.129
+            "start": 81.629,
+            "end": 83.43
           }
         ]
       },
       {
-        "verseStart": 84.129,
-        "verseEnd": 90.055,
+        "verseStart": 83.43,
+        "verseEnd": 89.411,
         "words": [
           {
             "word": "きらきら ",
-            "start": 84.129,
-            "end": 84.917
+            "start": 83.43,
+            "end": 84.124
           },
           {
             "word": "キラー ( ",
-            "start": 84.917,
-            "end": 85.651
+            "start": 84.124,
+            "end": 85.026
           },
           {
             "word": "きらきら ",
-            "start": 85.651,
-            "end": 89.358
+            "start": 85.026,
+            "end": 85.72
           },
           {
             "word": "キラー)",
-            "start": 89.358,
-            "end": 90.055
+            "start": 85.72,
+            "end": 89.411
           }
         ]
       },
       {
-        "verseStart": 90.055,
-        "verseEnd": 94.69,
+        "verseStart": 89.411,
+        "verseEnd": 93.868,
         "words": [
           {
             "word": "きらきら ",
-            "start": 90.055,
-            "end": 90.85
+            "start": 89.411,
+            "end": 90.145
           },
           {
             "word": "キラー ( ",
-            "start": 90.85,
-            "end": 93.873
+            "start": 90.145,
+            "end": 90.812
           },
           {
             "word": "マジカルパワー)",
-            "start": 93.873,
-            "end": 94.69
+            "start": 90.812,
+            "end": 93.868
           }
         ]
       },
       {
-        "verseStart": 94.69,
-        "verseEnd": 96.567,
+        "verseStart": 93.868,
+        "verseEnd": 96.192,
         "words": [
           {
             "word": "かんぜん ",
-            "start": 94.69,
-            "end": 95.753
+            "start": 93.868,
+            "end": 94.6
           },
           {
             "word": "きらきら ",
-            "start": 95.753,
-            "end": 96.202
+            "start": 94.6,
+            "end": 95.742
           },
           {
             "word": "キラー",
-            "start": 96.202,
-            "end": 96.567
+            "start": 95.742,
+            "end": 96.192
           }
         ]
       },
       {
-        "verseStart": 96.567,
-        "verseEnd": 102.561,
+        "verseStart": 96.192,
+        "verseEnd": 102.192,
         "words": [
           {
             "word": "L- ",
-            "start": 96.567,
-            "end": 96.934
+            "start": 96.192,
+            "end": 96.561
           },
           {
             "word": "U- ",
-            "start": 96.934,
-            "end": 97.303
+            "start": 96.561,
+            "end": 96.93
           },
           {
             "word": "C- ",
-            "start": 97.303,
-            "end": 99.179
+            "start": 96.93,
+            "end": 97.305
           },
           {
             "word": "K ",
-            "start": 99.179,
-            "end": 99.544
+            "start": 97.305,
+            "end": 99.217
           },
           {
             "word": "L- ",
-            "start": 99.544,
-            "end": 99.952
+            "start": 99.217,
+            "end": 99.542
           },
           {
             "word": "U- ",
-            "start": 99.952,
-            "end": 100.319
+            "start": 99.542,
+            "end": 99.907
           },
           {
             "word": "C- ",
-            "start": 100.319,
-            "end": 102.235
+            "start": 99.907,
+            "end": 100.316
           },
           {
             "word": "K",
-            "start": 102.235,
-            "end": 102.561
+            "start": 100.316,
+            "end": 102.192
           }
         ]
       },
       {
-        "verseStart": 102.561,
-        "verseEnd": 108.806,
+        "verseStart": 102.192,
+        "verseEnd": 108.194,
         "words": [
           {
             "word": "L- ",
-            "start": 102.561,
-            "end": 102.969
+            "start": 102.192,
+            "end": 102.56
           },
           {
             "word": "U- ",
-            "start": 102.969,
-            "end": 103.299
+            "start": 102.56,
+            "end": 102.977
           },
           {
             "word": "C- ",
-            "start": 103.299,
-            "end": 105.257
+            "start": 102.977,
+            "end": 103.347
           },
           {
             "word": "K ",
-            "start": 105.257,
-            "end": 105.663
+            "start": 103.347,
+            "end": 105.224
           },
           {
             "word": "L- ",
-            "start": 105.663,
-            "end": 106.07
+            "start": 105.224,
+            "end": 105.549
           },
           {
             "word": "U- ",
-            "start": 106.07,
-            "end": 106.438
+            "start": 105.549,
+            "end": 105.916
           },
           {
             "word": "C- ",
-            "start": 106.438,
-            "end": 108.276
+            "start": 105.916,
+            "end": 106.322
           },
           {
             "word": "K",
-            "start": 108.276,
-            "end": 108.806
+            "start": 106.322,
+            "end": 108.194
           }
         ]
       },
       {
-        "verseStart": 108.806,
-        "verseEnd": 114.642,
+        "verseStart": 108.194,
+        "verseEnd": 114.23,
         "words": [
           {
             "word": "どれ ",
-            "start": 108.806,
-            "end": 109.503
+            "start": 108.194,
+            "end": 108.734
           },
           {
             "word": "だけ ",
-            "start": 109.503,
-            "end": 109.991
+            "start": 108.734,
+            "end": 109.509
           },
           {
             "word": "追 ",
-            "start": 109.991,
-            "end": 110.317
+            "start": 109.509,
+            "end": 109.794
           },
           {
             "word": "い ",
-            "start": 110.317,
-            "end": 110.521
+            "start": 109.794,
+            "end": 110.655
           },
           {
             "word": "かけ ",
-            "start": 110.521,
-            "end": 110.725
+            "start": 110.655,
+            "end": 110.778
           },
           {
             "word": "て ",
-            "start": 110.725,
-            "end": 111.051
+            "start": 110.778,
+            "end": 110.994
           },
           {
             "word": "も ",
-            "start": 111.051,
-            "end": 111.621
+            "start": 110.994,
+            "end": 111.28
           },
           {
             "word": "ヒント ",
-            "start": 111.621,
-            "end": 112.601
+            "start": 111.28,
+            "end": 111.771
           },
           {
             "word": "さえ ",
-            "start": 112.601,
-            "end": 113.05
+            "start": 111.771,
+            "end": 112.587
           },
           {
             "word": "く ",
-            "start": 113.05,
-            "end": 113.334
+            "start": 112.587,
+            "end": 112.75
           },
           {
             "word": "れ ",
-            "start": 113.334,
-            "end": 114.274
+            "start": 112.75,
+            "end": 113.156
           },
           {
             "word": "ない",
-            "start": 114.274,
-            "end": 114.642
+            "start": 113.156,
+            "end": 114.23
           }
         ]
       },
       {
-        "verseStart": 114.642,
-        "verseEnd": 121.202,
+        "verseStart": 114.23,
+        "verseEnd": 120.189,
         "words": [
           {
             "word": "お ",
-            "start": 114.642,
-            "end": 114.886
+            "start": 114.23,
+            "end": 114.436
           },
           {
             "word": "口 ",
-            "start": 114.886,
-            "end": 115.576
+            "start": 114.436,
+            "end": 114.885
           },
           {
             "word": "を ",
-            "start": 115.576,
-            "end": 115.944
+            "start": 114.885,
+            "end": 115.291
           },
           {
             "word": "ギュッ ",
-            "start": 115.944,
-            "end": 116.108
+            "start": 115.291,
+            "end": 115.616
           },
           {
             "word": "と ",
-            "start": 116.108,
-            "end": 116.312
+            "start": 115.616,
+            "end": 115.906
           },
           {
             "word": "つぐむ ",
-            "start": 116.312,
-            "end": 116.761
+            "start": 115.906,
+            "end": 116.11
           },
           {
             "word": "の ",
-            "start": 116.761,
-            "end": 117.086
+            "start": 116.11,
+            "end": 116.519
           },
           {
             "word": "に ",
-            "start": 117.086,
-            "end": 117.576
+            "start": 116.519,
+            "end": 116.847
           },
           {
             "word": "誰か ",
-            "start": 117.576,
-            "end": 117.944
+            "start": 116.847,
+            "end": 117.582
           },
           {
             "word": "は ",
-            "start": 117.944,
-            "end": 118.512
+            "start": 117.582,
+            "end": 118.502
           },
           {
             "word": "わ ",
-            "start": 118.512,
-            "end": 119.081
+            "start": 118.502,
+            "end": 118.707
           },
           {
             "word": "から ",
-            "start": 119.081,
-            "end": 120.261
+            "start": 118.707,
+            "end": 119.242
           },
           {
             "word": "ない",
-            "start": 120.261,
-            "end": 121.202
+            "start": 119.242,
+            "end": 120.189
           }
         ]
       },
       {
-        "verseStart": 121.202,
-        "verseEnd": 127.669,
+        "verseStart": 120.189,
+        "verseEnd": 127.182,
         "words": [
           {
             "word": "ああ ",
-            "start": 121.202,
-            "end": 122.018
+            "start": 120.189,
+            "end": 121.02
           },
           {
             "word": "おんなじ ",
-            "start": 122.018,
-            "end": 122.18
+            "start": 121.02,
+            "end": 122.121
           },
           {
             "word": "所 ",
-            "start": 122.18,
-            "end": 123.971
+            "start": 122.121,
+            "end": 122.457
           },
           {
             "word": "に ",
-            "start": 123.971,
-            "end": 124.582
+            "start": 122.457,
+            "end": 124.124
           },
           {
             "word": "傷 ",
-            "start": 124.582,
-            "end": 124.992
+            "start": 124.124,
+            "end": 124.651
           },
           {
             "word": "を ",
-            "start": 124.992,
-            "end": 125.4
+            "start": 124.651,
+            "end": 124.857
           },
           {
             "word": "負 ",
-            "start": 125.4,
-            "end": 125.684
+            "start": 124.857,
+            "end": 125.304
           },
           {
             "word": "っ ",
-            "start": 125.684,
-            "end": 125.887
+            "start": 125.304,
+            "end": 125.549
           },
           {
             "word": "た ",
-            "start": 125.887,
-            "end": 126.389
+            "start": 125.549,
+            "end": 125.834
           },
           {
             "word": "キミ ",
-            "start": 126.389,
-            "end": 127.008
+            "start": 125.834,
+            "end": 126.244
           },
           {
             "word": "に",
-            "start": 127.008,
-            "end": 127.669
+            "start": 126.244,
+            "end": 127.182
           }
         ]
       },
       {
-        "verseStart": 127.669,
-        "verseEnd": 136.294,
+        "verseStart": 127.182,
+        "verseEnd": 135.332,
         "words": [
           {
             "word": "気付 ",
-            "start": 127.669,
-            "end": 127.878
+            "start": 127.182,
+            "end": 127.671
           },
           {
             "word": "い ",
-            "start": 127.878,
-            "end": 128.205
+            "start": 127.671,
+            "end": 127.877
           },
           {
             "word": "て ",
-            "start": 128.205,
-            "end": 128.897
+            "start": 127.877,
+            "end": 128.166
           },
           {
             "word": "しまう ",
-            "start": 128.897,
-            "end": 132.121
+            "start": 128.166,
+            "end": 128.696
           },
           {
             "word": "なんて ",
-            "start": 132.121,
-            "end": 133.712
+            "start": 128.696,
+            "end": 132.266
           },
           {
             "word": "ざわめく ",
-            "start": 133.712,
-            "end": 135.179
+            "start": 132.266,
+            "end": 133.74
           },
           {
             "word": "心",
-            "start": 135.179,
-            "end": 136.294
+            "start": 133.74,
+            "end": 135.332
           }
         ]
       },
       {
-        "verseStart": 136.294,
-        "verseEnd": 143.126,
+        "verseStart": 135.332,
+        "verseEnd": 142.576,
         "words": [
           {
             "word": "空 ",
-            "start": 136.294,
-            "end": 136.497
+            "start": 135.332,
+            "end": 136.646
           },
           {
             "word": "を ",
-            "start": 136.497,
-            "end": 139.268
+            "start": 136.646,
+            "end": 136.81
           },
           {
             "word": "見上げる ( ",
-            "start": 139.268,
-            "end": 140.841
+            "start": 136.81,
+            "end": 139.219
           },
           {
             "word": "きらきら ",
-            "start": 140.841,
-            "end": 142.76
+            "start": 139.219,
+            "end": 140.864
           },
           {
             "word": "キラー)",
-            "start": 142.76,
-            "end": 143.126
+            "start": 140.864,
+            "end": 142.576
           }
         ]
       },
       {
-        "verseStart": 143.126,
-        "verseEnd": 144.924,
+        "verseStart": 142.576,
+        "verseEnd": 143.969,
         "words": [
           {
             "word": "(One, ",
-            "start": 143.126,
-            "end": 143.493
+            "start": 142.576,
+            "end": 142.986
           },
           {
             "word": "two, ",
-            "start": 143.493,
-            "end": 143.902
+            "start": 142.986,
+            "end": 143.352
           },
           {
             "word": "three, ",
-            "start": 143.902,
-            "end": 144.106
+            "start": 143.352,
+            "end": 143.805
           },
           {
             "word": "four)",
-            "start": 144.106,
-            "end": 144.924
+            "start": 143.805,
+            "end": 143.969
           }
         ]
       },
       {
-        "verseStart": 144.924,
-        "verseEnd": 147.822,
+        "verseStart": 143.969,
+        "verseEnd": 146.911,
         "words": [
           {
             "word": "きらきら ",
-            "start": 144.924,
-            "end": 145.495
+            "start": 143.969,
+            "end": 144.787
           },
           {
             "word": "キラー ",
-            "start": 145.495,
-            "end": 146.066
+            "start": 144.787,
+            "end": 145.233
           },
           {
             "word": "ラッキー ",
-            "start": 146.066,
-            "end": 146.474
+            "start": 145.233,
+            "end": 145.885
           },
           {
             "word": "ラッキー ",
-            "start": 146.474,
-            "end": 147.047
+            "start": 145.885,
+            "end": 146.292
           },
           {
             "word": "ラッキー",
-            "start": 147.047,
-            "end": 147.822
+            "start": 146.292,
+            "end": 146.911
           }
         ]
       },
       {
-        "verseStart": 147.822,
-        "verseEnd": 150.557,
+        "verseStart": 146.911,
+        "verseEnd": 149.815,
         "words": [
           {
             "word": "未来 ",
-            "start": 147.822,
-            "end": 147.985
+            "start": 146.911,
+            "end": 147.772
           },
           {
             "word": "は ",
-            "start": 147.985,
-            "end": 148.554
+            "start": 147.772,
+            "end": 147.897
           },
           {
             "word": "ほら ",
-            "start": 148.554,
-            "end": 149.043
+            "start": 147.897,
+            "end": 148.47
           },
           {
             "word": "ハッピー ",
-            "start": 149.043,
-            "end": 149.451
+            "start": 148.47,
+            "end": 148.998
           },
           {
             "word": "ハッピー ",
-            "start": 149.451,
-            "end": 149.981
+            "start": 148.998,
+            "end": 149.364
           },
           {
             "word": "ハッピー",
-            "start": 149.981,
-            "end": 150.557
+            "start": 149.364,
+            "end": 149.815
           }
         ]
       },
       {
-        "verseStart": 150.557,
-        "verseEnd": 155.127,
+        "verseStart": 149.815,
+        "verseEnd": 154.727,
         "words": [
           {
             "word": "空 ",
-            "start": 150.557,
-            "end": 150.923
+            "start": 149.815,
+            "end": 150.427
           },
           {
             "word": "から ",
-            "start": 150.923,
-            "end": 151.45
+            "start": 150.427,
+            "end": 150.754
           },
           {
             "word": "今 ",
-            "start": 151.45,
-            "end": 152.429
+            "start": 150.754,
+            "end": 151.323
           },
           {
             "word": "きらきら ",
-            "start": 152.429,
-            "end": 152.919
+            "start": 151.323,
+            "end": 151.989
           },
           {
             "word": "キラー ",
-            "start": 152.919,
-            "end": 153.408
+            "start": 151.989,
+            "end": 152.803
           },
           {
             "word": "coming ",
-            "start": 153.408,
-            "end": 154.76
+            "start": 152.803,
+            "end": 153.375
           },
           {
             "word": "now",
-            "start": 154.76,
-            "end": 155.127
+            "start": 153.375,
+            "end": 154.727
           }
         ]
       },
       {
-        "verseStart": 155.127,
-        "verseEnd": 156.907,
+        "verseStart": 154.727,
+        "verseEnd": 155.992,
         "words": [
           {
             "word": "(One, ",
-            "start": 155.127,
-            "end": 155.537
+            "start": 154.727,
+            "end": 155.055
           },
           {
             "word": "two, ",
-            "start": 155.537,
-            "end": 155.906
+            "start": 155.055,
+            "end": 155.423
           },
           {
             "word": "three, ",
-            "start": 155.906,
-            "end": 156.074
+            "start": 155.423,
+            "end": 155.83
           },
           {
             "word": "four)",
-            "start": 156.074,
-            "end": 156.907
+            "start": 155.83,
+            "end": 155.992
           }
         ]
       },
       {
-        "verseStart": 156.907,
-        "verseEnd": 159.82,
+        "verseStart": 155.992,
+        "verseEnd": 158.891,
         "words": [
           {
             "word": "きらきら ",
-            "start": 156.907,
-            "end": 157.408
+            "start": 155.992,
+            "end": 156.522
           },
           {
             "word": "キラー ",
-            "start": 157.408,
-            "end": 157.963
+            "start": 156.522,
+            "end": 157.298
           },
           {
             "word": "ハッピー ",
-            "start": 157.963,
-            "end": 158.415
+            "start": 157.298,
+            "end": 157.868
           },
           {
             "word": "ハッピー ",
-            "start": 158.415,
-            "end": 158.916
+            "start": 157.868,
+            "end": 158.238
           },
           {
             "word": "ハッピー",
-            "start": 158.916,
-            "end": 159.82
+            "start": 158.238,
+            "end": 158.891
           }
         ]
       },
       {
-        "verseStart": 159.82,
-        "verseEnd": 162.873,
+        "verseStart": 158.891,
+        "verseEnd": 161.857,
         "words": [
           {
             "word": "未来 ",
-            "start": 159.82,
-            "end": 159.982
+            "start": 158.891,
+            "end": 159.747
           },
           {
             "word": "は ",
-            "start": 159.982,
-            "end": 160.55
+            "start": 159.747,
+            "end": 159.912
           },
           {
             "word": "ほら ",
-            "start": 160.55,
-            "end": 161.161
+            "start": 159.912,
+            "end": 160.453
           },
           {
             "word": "ラッキー ",
-            "start": 161.161,
-            "end": 161.529
+            "start": 160.453,
+            "end": 160.92
           },
           {
             "word": "ラッキー ",
-            "start": 161.529,
-            "end": 161.937
+            "start": 160.92,
+            "end": 161.327
           },
           {
             "word": "ラッキー",
-            "start": 161.937,
-            "end": 162.873
+            "start": 161.327,
+            "end": 161.857
           }
         ]
       },
       {
-        "verseStart": 162.873,
-        "verseEnd": 168.197,
+        "verseStart": 161.857,
+        "verseEnd": 167.427,
         "words": [
           {
             "word": "きらきら ",
-            "start": 162.873,
-            "end": 163.361
+            "start": 161.857,
+            "end": 162.84
           },
           {
             "word": "キラー ",
-            "start": 163.361,
-            "end": 165.047
+            "start": 162.84,
+            "end": 163.369
           },
           {
             "word": "ドキドキドキ ",
-            "start": 165.047,
-            "end": 165.454
+            "start": 163.369,
+            "end": 164.927
           },
           {
             "word": "fall ",
-            "start": 165.454,
-            "end": 165.666
+            "start": 164.927,
+            "end": 165.374
           },
           {
             "word": "in ",
-            "start": 165.666,
-            "end": 167.462
+            "start": 165.374,
+            "end": 165.58
           },
           {
             "word": "love",
-            "start": 167.462,
-            "end": 168.197
+            "start": 165.58,
+            "end": 167.427
           }
         ]
       },
       {
-        "verseStart": 168.197,
-        "verseEnd": 174.258,
+        "verseStart": 167.427,
+        "verseEnd": 173.343,
         "words": [
           {
             "word": "きらきら ",
-            "start": 168.197,
-            "end": 168.935
+            "start": 167.427,
+            "end": 168.085
           },
           {
             "word": "キラー ( ",
-            "start": 168.935,
-            "end": 169.712
+            "start": 168.085,
+            "end": 168.861
           },
           {
             "word": "きらきら ",
-            "start": 169.712,
-            "end": 173.506
+            "start": 168.861,
+            "end": 169.594
           },
           {
             "word": "キラー)",
-            "start": 173.506,
-            "end": 174.258
+            "start": 169.594,
+            "end": 173.343
           }
         ]
       },
       {
-        "verseStart": 174.258,
-        "verseEnd": 178.676,
+        "verseStart": 173.343,
+        "verseEnd": 177.879,
         "words": [
           {
             "word": "きらきら ",
-            "start": 174.258,
-            "end": 175.004
+            "start": 173.343,
+            "end": 174.04
           },
           {
             "word": "キラー ( ",
-            "start": 175.004,
-            "end": 177.934
+            "start": 174.04,
+            "end": 174.817
           },
           {
             "word": "マジカルパワー)",
-            "start": 177.934,
-            "end": 178.676
+            "start": 174.817,
+            "end": 177.879
           }
         ]
       },
       {
-        "verseStart": 178.676,
-        "verseEnd": 180.684,
+        "verseStart": 177.879,
+        "verseEnd": 180.204,
         "words": [
           {
             "word": "かんぜん ",
-            "start": 178.676,
-            "end": 179.421
+            "start": 177.879,
+            "end": 178.614
           },
           {
             "word": "きらきら ",
-            "start": 179.421,
-            "end": 180.398
+            "start": 178.614,
+            "end": 179.756
           },
           {
             "word": "キラー",
-            "start": 180.398,
-            "end": 180.684
+            "start": 179.756,
+            "end": 180.204
           }
         ]
       },
       {
-        "verseStart": 180.684,
-        "verseEnd": 186.66,
+        "verseStart": 180.204,
+        "verseEnd": 186.191,
         "words": [
           {
             "word": "L- ",
-            "start": 180.684,
-            "end": 181.018
+            "start": 180.204,
+            "end": 180.529
           },
           {
             "word": "U- ",
-            "start": 181.018,
-            "end": 181.395
+            "start": 180.529,
+            "end": 180.936
           },
           {
             "word": "C- ",
-            "start": 181.395,
-            "end": 183.228
+            "start": 180.936,
+            "end": 181.302
           },
           {
             "word": "K ",
-            "start": 183.228,
-            "end": 183.599
+            "start": 181.302,
+            "end": 183.173
           },
           {
             "word": "L- ",
-            "start": 183.599,
-            "end": 183.969
+            "start": 183.173,
+            "end": 183.538
           },
           {
             "word": "U- ",
-            "start": 183.969,
-            "end": 184.376
+            "start": 183.538,
+            "end": 183.905
           },
           {
             "word": "C- ",
-            "start": 184.376,
-            "end": 186.332
+            "start": 183.905,
+            "end": 184.275
           },
           {
             "word": "K",
-            "start": 186.332,
-            "end": 186.66
+            "start": 184.275,
+            "end": 186.191
           }
         ]
       },
       {
-        "verseStart": 186.66,
-        "verseEnd": 192.905,
+        "verseStart": 186.191,
+        "verseEnd": 191.953,
         "words": [
           {
             "word": "L- ",
-            "start": 186.66,
-            "end": 187.028
+            "start": 186.191,
+            "end": 186.561
           },
           {
             "word": "U- ",
-            "start": 187.028,
-            "end": 187.396
+            "start": 186.561,
+            "end": 186.936
           },
           {
             "word": "C- ",
-            "start": 187.396,
-            "end": 189.229
+            "start": 186.936,
+            "end": 187.269
           },
           {
             "word": "K ",
-            "start": 189.229,
-            "end": 189.594
+            "start": 187.269,
+            "end": 189.141
           },
           {
             "word": "L- ",
-            "start": 189.594,
-            "end": 189.961
+            "start": 189.141,
+            "end": 189.471
           },
           {
             "word": "U- ",
-            "start": 189.961,
-            "end": 190.368
+            "start": 189.471,
+            "end": 189.837
           },
           {
             "word": "C- ",
-            "start": 190.368,
-            "end": 192.078
+            "start": 189.837,
+            "end": 190.201
           },
           {
             "word": "K",
-            "start": 192.078,
-            "end": 192.905
+            "start": 190.201,
+            "end": 191.953
           }
         ]
       },
       {
-        "verseStart": 192.905,
-        "verseEnd": 195.806,
+        "verseStart": 191.953,
+        "verseEnd": 194.891,
         "words": [
           {
             "word": "きらきら ",
-            "start": 192.905,
-            "end": 193.474
+            "start": 191.953,
+            "end": 193.466
           },
           {
             "word": "キラー ",
-            "start": 193.474,
-            "end": 193.962
+            "start": 193.466,
+            "end": 193.67
           },
           {
             "word": "ラッキー ",
-            "start": 193.962,
-            "end": 194.373
+            "start": 193.67,
+            "end": 193.954
           },
           {
             "word": "ラッキー ",
-            "start": 194.373,
-            "end": 194.989
+            "start": 193.954,
+            "end": 194.362
           },
           {
             "word": "ラッキー",
-            "start": 194.989,
-            "end": 195.806
+            "start": 194.362,
+            "end": 194.891
           }
         ]
       },
       {
-        "verseStart": 195.806,
-        "verseEnd": 198.577,
+        "verseStart": 194.891,
+        "verseEnd": 198.074,
         "words": [
           {
             "word": "未来 ",
-            "start": 195.806,
-            "end": 196.01
+            "start": 194.891,
+            "end": 195.749
           },
           {
             "word": "は ",
-            "start": 196.01,
-            "end": 196.538
+            "start": 195.749,
+            "end": 195.914
           },
           {
             "word": "ほら ",
-            "start": 196.538,
-            "end": 197.068
+            "start": 195.914,
+            "end": 196.446
           },
           {
             "word": "ハッピー ",
-            "start": 197.068,
-            "end": 197.433
+            "start": 196.446,
+            "end": 196.984
           },
           {
             "word": "ハッピー ",
-            "start": 197.433,
-            "end": 198.044
+            "start": 196.984,
+            "end": 197.351
           },
           {
             "word": "ハッピー",
-            "start": 198.044,
-            "end": 198.577
+            "start": 197.351,
+            "end": 198.074
           }
         ]
       },
       {
-        "verseStart": 198.577,
-        "verseEnd": 203.119,
+        "verseStart": 198.074,
+        "verseEnd": 202.739,
         "words": [
           {
             "word": "空 ",
-            "start": 198.577,
-            "end": 198.945
+            "start": 198.074,
+            "end": 198.488
           },
           {
             "word": "から ",
-            "start": 198.945,
-            "end": 199.473
+            "start": 198.488,
+            "end": 198.853
           },
           {
             "word": "今 ",
-            "start": 199.473,
-            "end": 200.45
+            "start": 198.853,
+            "end": 199.383
           },
           {
             "word": "きらきら ",
-            "start": 200.45,
-            "end": 200.947
+            "start": 199.383,
+            "end": 199.911
           },
           {
             "word": "キラー ",
-            "start": 200.947,
-            "end": 201.478
+            "start": 199.911,
+            "end": 200.807
           },
           {
             "word": "coming ",
-            "start": 201.478,
-            "end": 202.786
+            "start": 200.807,
+            "end": 201.341
           },
           {
             "word": "now",
-            "start": 202.786,
-            "end": 203.119
+            "start": 201.341,
+            "end": 202.739
           }
         ]
       },
       {
-        "verseStart": 203.119,
-        "verseEnd": 204.748,
+        "verseStart": 202.739,
+        "verseEnd": 204.009,
         "words": [
           {
             "word": "(One, ",
-            "start": 203.119,
-            "end": 203.542
+            "start": 202.739,
+            "end": 203.065
           },
           {
             "word": "two, ",
-            "start": 203.542,
-            "end": 203.912
+            "start": 203.065,
+            "end": 203.478
           },
           {
             "word": "three, ",
-            "start": 203.912,
-            "end": 204.077
+            "start": 203.478,
+            "end": 203.845
           },
           {
             "word": "four)",
-            "start": 204.077,
-            "end": 204.748
+            "start": 203.845,
+            "end": 204.009
           }
         ]
       },
       {
-        "verseStart": 204.748,
-        "verseEnd": 207.789,
+        "verseStart": 204.009,
+        "verseEnd": 206.873,
         "words": [
           {
             "word": "きらきら ",
-            "start": 204.748,
-            "end": 205.371
+            "start": 204.009,
+            "end": 204.872
           },
           {
             "word": "キラー ",
-            "start": 205.371,
-            "end": 205.993
+            "start": 204.872,
+            "end": 205.407
           },
           {
             "word": "ハッピー ",
-            "start": 205.993,
-            "end": 206.4
+            "start": 205.407,
+            "end": 205.855
           },
           {
             "word": "ハッピー ",
-            "start": 206.4,
-            "end": 206.89
+            "start": 205.855,
+            "end": 206.262
           },
           {
             "word": "ハッピー",
-            "start": 206.89,
-            "end": 207.789
+            "start": 206.262,
+            "end": 206.873
           }
         ]
       },
       {
-        "verseStart": 207.789,
-        "verseEnd": 210.89,
+        "verseStart": 206.873,
+        "verseEnd": 210.073,
         "words": [
           {
             "word": "未来 ",
-            "start": 207.789,
-            "end": 207.998
+            "start": 206.873,
+            "end": 207.666
           },
           {
             "word": "は ",
-            "start": 207.998,
-            "end": 208.527
+            "start": 207.666,
+            "end": 207.849
           },
           {
             "word": "ほら ",
-            "start": 208.527,
-            "end": 209.057
+            "start": 207.849,
+            "end": 208.466
           },
           {
             "word": "ラッキー ",
-            "start": 209.057,
-            "end": 209.422
+            "start": 208.466,
+            "end": 209
           },
           {
             "word": "ラッキー ",
-            "start": 209.422,
-            "end": 209.952
+            "start": 209,
+            "end": 209.365
           },
           {
             "word": "ラッキー",
-            "start": 209.952,
-            "end": 210.89
+            "start": 209.365,
+            "end": 210.073
           }
         ]
       },
       {
-        "verseStart": 210.89,
-        "verseEnd": 215.841,
+        "verseStart": 210.073,
+        "verseEnd": 215.414,
         "words": [
           {
             "word": "きらきら ",
-            "start": 210.89,
-            "end": 211.378
+            "start": 210.073,
+            "end": 210.601
           },
           {
             "word": "キラー ",
-            "start": 211.378,
-            "end": 212.931
+            "start": 210.601,
+            "end": 211.538
           },
           {
             "word": "ドキドキドキ ",
-            "start": 212.931,
-            "end": 213.461
+            "start": 211.538,
+            "end": 212.719
           },
           {
             "word": "fall ",
-            "start": 213.461,
-            "end": 213.631
+            "start": 212.719,
+            "end": 213.373
           },
           {
             "word": "in ",
-            "start": 213.631,
-            "end": 215.466
+            "start": 213.373,
+            "end": 213.494
           },
           {
             "word": "love",
-            "start": 215.466,
-            "end": 215.841
+            "start": 213.494,
+            "end": 215.414
           }
         ]
       },
       {
-        "verseStart": 215.841,
-        "verseEnd": 222.167,
+        "verseStart": 215.414,
+        "verseEnd": 221.201,
         "words": [
           {
             "word": "きらきら ",
-            "start": 215.841,
-            "end": 217.343
+            "start": 215.414,
+            "end": 216.151
           },
           {
             "word": "キラー ( ",
-            "start": 217.343,
-            "end": 217.593
+            "start": 216.151,
+            "end": 216.924
           },
           {
             "word": "きらきら ",
-            "start": 217.593,
-            "end": 221.506
+            "start": 216.924,
+            "end": 217.621
           },
           {
             "word": "キラー)",
-            "start": 221.506,
-            "end": 222.167
+            "start": 217.621,
+            "end": 221.201
           }
         ]
       },
       {
-        "verseStart": 222.167,
-        "verseEnd": 226.694,
+        "verseStart": 221.201,
+        "verseEnd": 225.897,
         "words": [
           {
             "word": "きらきら ",
-            "start": 222.167,
-            "end": 222.901
+            "start": 221.201,
+            "end": 222.018
           },
           {
             "word": "キラー ( ",
-            "start": 222.901,
-            "end": 225.912
+            "start": 222.018,
+            "end": 222.878
           },
           {
             "word": "マジカルパワー)",
-            "start": 225.912,
-            "end": 226.694
+            "start": 222.878,
+            "end": 225.897
           }
         ]
       },
       {
-        "verseStart": 226.694,
-        "verseEnd": 228.571,
+        "verseStart": 225.897,
+        "verseEnd": 228.184,
         "words": [
           {
             "word": "かんぜん ",
-            "start": 226.694,
-            "end": 227.43
+            "start": 225.897,
+            "end": 226.632
           },
           {
             "word": "きらきら ",
-            "start": 227.43,
-            "end": 228.205
+            "start": 226.632,
+            "end": 227.69
           },
           {
             "word": "キラー",
-            "start": 228.205,
-            "end": 228.571
+            "start": 227.69,
+            "end": 228.184
           }
         ]
       },
       {
-        "verseStart": 228.571,
-        "verseEnd": 234.66,
+        "verseStart": 228.184,
+        "verseEnd": 234.183,
         "words": [
           {
             "word": "L- ",
-            "start": 228.571,
-            "end": 228.981
+            "start": 228.184,
+            "end": 228.515
           },
           {
             "word": "U- ",
-            "start": 228.981,
-            "end": 229.39
+            "start": 228.515,
+            "end": 228.882
           },
           {
             "word": "C- ",
-            "start": 229.39,
-            "end": 231.221
+            "start": 228.882,
+            "end": 229.248
           },
           {
             "word": "K ",
-            "start": 231.221,
-            "end": 231.587
+            "start": 229.248,
+            "end": 231.207
           },
           {
             "word": "L- ",
-            "start": 231.587,
-            "end": 231.994
+            "start": 231.207,
+            "end": 231.533
           },
           {
             "word": "U- ",
-            "start": 231.994,
-            "end": 232.404
+            "start": 231.533,
+            "end": 231.945
           },
           {
             "word": "C- ",
-            "start": 232.404,
-            "end": 234.294
+            "start": 231.945,
+            "end": 232.271
           },
           {
             "word": "K",
-            "start": 234.294,
-            "end": 234.66
+            "start": 232.271,
+            "end": 234.183
           }
         ]
       },
       {
-        "verseStart": 234.66,
-        "verseEnd": 240.661,
+        "verseStart": 234.183,
+        "verseEnd": 240.167,
         "words": [
           {
             "word": "L- ",
-            "start": 234.66,
-            "end": 235.069
+            "start": 234.183,
+            "end": 234.55
           },
           {
             "word": "U- ",
-            "start": 235.069,
-            "end": 235.436
+            "start": 234.55,
+            "end": 235
           },
           {
             "word": "C- ",
-            "start": 235.436,
-            "end": 237.318
+            "start": 235,
+            "end": 235.335
           },
           {
             "word": "K ",
-            "start": 237.318,
-            "end": 237.647
+            "start": 235.335,
+            "end": 237.186
           },
           {
             "word": "L- ",
-            "start": 237.647,
-            "end": 238.013
+            "start": 237.186,
+            "end": 237.596
           },
           {
             "word": "U- ",
-            "start": 238.013,
-            "end": 238.42
+            "start": 237.596,
+            "end": 237.962
           },
           {
             "word": "C- ",
-            "start": 238.42,
-            "end": 240.253
+            "start": 237.962,
+            "end": 238.287
           },
           {
             "word": "K",
-            "start": 240.253,
-            "end": 240.661
+            "start": 238.287,
+            "end": 240.167
           }
         ]
       },
       {
-        "verseStart": 240.661,
-        "verseEnd": 246.619,
+        "verseStart": 240.167,
+        "verseEnd": 246.574,
         "words": [
           {
             "word": "L- ",
-            "start": 240.661,
-            "end": 241.028
+            "start": 240.167,
+            "end": 240.575
           },
           {
             "word": "U- ",
-            "start": 241.028,
-            "end": 241.398
+            "start": 240.575,
+            "end": 240.945
           },
           {
             "word": "C- ",
-            "start": 241.398,
-            "end": 243.271
+            "start": 240.945,
+            "end": 241.311
           },
           {
             "word": "K ",
-            "start": 243.271,
-            "end": 243.678
+            "start": 241.311,
+            "end": 243.226
           },
           {
             "word": "L- ",
-            "start": 243.678,
-            "end": 244.044
+            "start": 243.226,
+            "end": 243.552
           },
           {
             "word": "U- ",
-            "start": 244.044,
-            "end": 244.411
+            "start": 243.552,
+            "end": 243.958
           },
           {
             "word": "C- ",
-            "start": 244.411,
-            "end": 246.208
+            "start": 243.958,
+            "end": 244.324
           },
           {
             "word": "K",
-            "start": 246.208,
-            "end": 246.619
+            "start": 244.324,
+            "end": 246.574
           }
         ]
       },
       {
-        "verseStart": 246.619,
-        "verseEnd": 248.04,
+        "verseStart": 246.574,
+        "verseEnd": 252.3,
         "words": [
           {
             "word": "L- ",
-            "start": 246.619,
-            "end": 247.024
+            "start": 246.574,
+            "end": 246.86
           },
           {
             "word": "U- ",
-            "start": 247.024,
-            "end": 247.39
+            "start": 246.86,
+            "end": 247.148
           },
           {
             "word": "C- ",
-            "start": 247.39,
-            "end": 249.278
+            "start": 247.148,
+            "end": 247.434
           },
           {
             "word": "K ",
-            "start": 249.278,
-            "end": 249.685
+            "start": 247.434,
+            "end": 249.234
           },
           {
             "word": "L- ",
-            "start": 249.685,
-            "end": 250.051
+            "start": 249.234,
+            "end": 249.56
           },
           {
             "word": "U- ",
-            "start": 250.051,
-            "end": 250.376
+            "start": 249.56,
+            "end": 249.93
           },
           {
             "word": "C- ",
-            "start": 250.376,
-            "end": 247.665
+            "start": 249.93,
+            "end": 250.3
           },
           {
             "word": "K",
-            "start": 247.665,
+            "start": 250.3,
             "end": 248.04
           }
         ]
