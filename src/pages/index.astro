@@ -583,7 +583,6 @@ const pageTitle = "I'm cooking something here...";
               id="anthem-video"
               src="" 
               controls 
-              crossorigin="anonymous"
               controlsList="nodownload noremoteplayback noplaybackrate"
               disablePictureInPicture
               playsinline
@@ -1124,7 +1123,7 @@ const pageTitle = "I'm cooking something here...";
             currentSideWordRightEl = null;
           }
 
-          vid.src = `https://pub-84d4fa711ce34676be048da075e8e815.r2.dev/${encodeURIComponent(selectedVideo)}`;
+          vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
           vid.load();
           vid.play().catch(()=>{});
 
