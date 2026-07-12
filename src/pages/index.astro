@@ -99,7 +99,7 @@ const pageTitle = "I'm cooking something here...";
     .player-stack {
       display: flex;
       flex-direction: column;
-      align-items: stretch;
+      align-items: center;
       width: fit-content;
       height: 100%;
       max-width: 100%;
@@ -123,7 +123,7 @@ const pageTitle = "I'm cooking something here...";
 
     .custom-player-wrapper video {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: contain;
       outline: none;
       cursor: pointer;
@@ -566,7 +566,9 @@ const pageTitle = "I'm cooking something here...";
       <div class="video-container">
         <div class="player-stack">
           <div class="custom-player-wrapper" id="player-wrapper">
-            <audio id="anthem-audio" crossorigin="anonymous"></audio>
+            <div id="unmute-overlay" class="unmute-overlay" style="display: none;">
+              <button class="unmute-btn">Click to unmute</button>
+            </div>
             <video 
               id="anthem-video"
               src=""
@@ -704,17 +706,36 @@ const pageTitle = "I'm cooking something here...";
 
       // 2. Setup video player
       let vid = document.getElementById('anthem-video');
-      const audioEl = document.getElementById('anthem-audio');
       const wrapper = document.getElementById('player-wrapper');
       const lyricsContainer = document.getElementById('lyrics-container');
 
-      if (vid && audioEl) {
-        vid.muted = true;
-        
-        vid.addEventListener('play', () => audioEl.play().catch(()=>{}));
-        vid.addEventListener('pause', () => audioEl.pause());
-        vid.addEventListener('seeked', () => { audioEl.currentTime = vid.currentTime; });
-        vid.addEventListener('volumechange', () => { audioEl.volume = vid.volume; audioEl.muted = vid.muted; });
+      if (vid) {
+        vid.addEventListener('loadedmetadata', () => {
+          const wrapper = document.getElementById('player-wrapper');
+          if (wrapper && vid.videoWidth && vid.videoHeight) {
+            wrapper.style.aspectRatio = `${vid.videoWidth} / ${vid.videoHeight}`;
+            vid.style.objectFit = 'contain';
+          }
+        });
+      }
+
+      const unmuteOverlay = document.getElementById('unmute-overlay');
+      if (unmuteOverlay) {
+        unmuteOverlay.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (vid) {
+            vid.muted = false;
+            vid.volume = 0.35;
+          }
+          unmuteOverlay.style.display = 'none';
+          
+          const volIcon = document.getElementById('icon-vol');
+          const volume = document.getElementById('cc-volume');
+          if (volIcon) volIcon.innerHTML = '<path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"/>';
+          if (volume) { volume.value = 0.35; volume.style.setProperty('--val', '35%'); }
+          
+          if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+        });
       }
 
       const safePlay = async () => {
@@ -728,6 +749,8 @@ const pageTitle = "I'm cooking something here...";
             const volume = document.getElementById('cc-volume');
             if (volIcon) volIcon.innerHTML = '<path d="M11 5L6 9H2v6h4l5 4V5z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>';
             if (volume) { volume.value = 0; volume.style.setProperty('--val', '0%'); }
+            
+            if (unmuteOverlay) unmuteOverlay.style.display = 'flex';
           } catch (err) {}
         }
       };
@@ -735,20 +758,8 @@ const pageTitle = "I'm cooking something here...";
       if (vid) {
         vid.volume = 0.35;
         vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
-        if (audioEl) {
-          audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
-          audioEl.load();
-        }
         
-        if (selectedVideo.includes('IC3PEAK')) {
-          const wrapper = document.querySelector('.custom-player-wrapper');
-          if (wrapper) wrapper.style.aspectRatio = '4 / 3';
-          vid.style.objectFit = 'cover';
-        } else {
-          const wrapper = document.querySelector('.custom-player-wrapper');
-          if (wrapper) wrapper.style.aspectRatio = '16 / 9';
-          vid.style.objectFit = 'contain';
-        }
+        // Aspect ratio is handled dynamically via loadedmetadata listener
 
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
@@ -1086,73 +1097,7 @@ const pageTitle = "I'm cooking something here...";
           playedVideos.push(next);
           localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
 
-          selectedVideo = next;
-          fileName = next;
-          songData = songsDictionary[selectedVideo];
-          lyricsData = songData.lyricsData;
-          GLOBAL_OFFSET = songData.globalOffset || 0;
-          subtitle = songData.subtitle || 'In the meantime, check out this banger:';
-          
-          if (subtitleEl) subtitleEl.textContent = subtitle;
-
-          lyricsContainer.innerHTML = '';
-          activeVerseIndex = -1;
-          activeWordIndex = -1;
-          lyricsContainer.style.opacity = '1';
-
-          if (lyricsContainer && typeof lyricsData !== 'undefined') {
-            lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
-              <div class="verse" id="verse-${vIdx}">
-                ${verse.words.map((w, wIdx) => `<span class="word" id="word-${vIdx}-${wIdx}">${w.word} </span>`).join('')}
-              </div>
-            `).join('');
-          }
-
-          if (currentSideWordLeftEl) {
-            currentSideWordLeftEl.remove();
-            currentSideWordLeftEl = null;
-          }
-          if (currentSideWordRightEl) {
-            currentSideWordRightEl.remove();
-            currentSideWordRightEl = null;
-          }
-
-          vid.pause();
-          if (audioEl) audioEl.pause();
-          
-          vid.src = '';
-          vid.load();
-          if (audioEl) {
-            audioEl.src = '';
-            audioEl.load();
-          }
-
-          setTimeout(() => {
-            vid.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
-            if (audioEl) {
-              audioEl.src = `https://media.thiago.qzz.io/media/${encodeURIComponent(selectedVideo)}`;
-              audioEl.load();
-            }
-            
-            if (selectedVideo.includes('IC3PEAK')) {
-              const wrapper = document.querySelector('.custom-player-wrapper');
-              if (wrapper) wrapper.style.aspectRatio = '4 / 3';
-              vid.style.objectFit = 'cover';
-            } else {
-              const wrapper = document.querySelector('.custom-player-wrapper');
-              if (wrapper) wrapper.style.aspectRatio = '16 / 9';
-              vid.style.objectFit = 'contain';
-            }
-            
-            vid.load();
-            safePlay();
-            isShuffling = false;
-          }, 150);
-
-          fetch(`/api/vote?file_name=${encodeURIComponent(fileName)}`, { cache: 'no-store' })
-            .then(r => r.ok ? r.json() : {liked:false, desliked:false})
-            .then(d => updateVoteUI(d.liked, d.desliked))
-            .catch(() => updateVoteUI(false, false));
+          window.location.reload();
         });
       }
 
@@ -1168,10 +1113,10 @@ const pageTitle = "I'm cooking something here...";
       const ctxRight = canvasRight?.getContext('2d');
       
       const initAudio = () => {
-        if (!audioCtx && audioEl) {
+        if (!audioCtx && vid) {
           audioCtx = new (window.AudioContext || window.webkitAudioContext)();
           analyser = audioCtx.createAnalyser();
-          const source = audioCtx.createMediaElementSource(audioEl);
+          const source = audioCtx.createMediaElementSource(vid);
           source.connect(analyser);
           analyser.connect(audioCtx.destination);
           analyser.fftSize = 512;
