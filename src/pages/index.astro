@@ -1,5 +1,5 @@
 ---
-const pageTitle = "Under maintenance...";
+const pageTitle = "I'm cooking something here...";
 ---
 
 <!DOCTYPE html>
@@ -749,7 +749,6 @@ const pageTitle = "Under maintenance...";
               const newVerse = document.getElementById(`verse-${newVerseIndex}`);
               if (newVerse) newVerse.classList.add('active');
             }
-            activeVerseIndex = newVerseIndex;
           }
           
           if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
@@ -765,7 +764,6 @@ const pageTitle = "Under maintenance...";
               lastWordTime = Date.now();
               lyricsContainer.style.opacity = '1';
               
-              // Custom Gabrielle Bridge Logic
               if (isDesktop && selectedVideo === 'Gabrielle - 5 fine frøkner.mp4') {
                 const currentVerseText = lyricsData[newVerseIndex].words.map(w => w.word).join('');
                 const bridgePhrases = [
@@ -844,7 +842,6 @@ const pageTitle = "Under maintenance...";
                 }
               }
               
-              // 4s inactivity timeout
               clearTimeout(inactivityTimer);
               inactivityTimer = setTimeout(() => {
                 if (lyricsContainer) lyricsContainer.style.opacity = '0';
@@ -861,9 +858,9 @@ const pageTitle = "Under maintenance...";
                   currentSideWordRightEl = null;
                 }
               }, 4000);
-              
             }
             activeWordIndex = newWordIndex;
+            activeVerseIndex = newVerseIndex;
           }
           
           animationFrameId = requestAnimationFrame(updateLyrics);
