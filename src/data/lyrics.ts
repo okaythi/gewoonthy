@@ -10393,2162 +10393,4506 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 3.31,
-        "verseEnd": 8.31,
+        "verseStart": 6.448,
+        "verseEnd": 10.003,
         "words": [
           {
             "word": "Bitch ",
-            "start": 0,
-            "end": 0
+            "start": 6.448,
+            "end": 6.57
           },
           {
             "word": "ça ",
-            "start": 0,
-            "end": 0
+            "start": 6.57,
+            "end": 6.733
           },
           {
             "word": "fait ",
-            "start": 0,
-            "end": 0
+            "start": 6.733,
+            "end": 6.814
           },
           {
             "word": "très ",
-            "start": 0,
-            "end": 0
+            "start": 6.814,
+            "end": 6.937
           },
           {
             "word": "très ",
-            "start": 0,
-            "end": 0
+            "start": 6.937,
+            "end": 7.059
           },
           {
             "word": "longtemps ",
-            "start": 0,
-            "end": 0
+            "start": 7.059,
+            "end": 7.224
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 7.224,
+            "end": 7.386
           },
           {
             "word": "j'y ",
-            "start": 0,
-            "end": 0
+            "start": 7.386,
+            "end": 7.508
           },
           {
             "word": "pense ",
-            "start": 0,
-            "end": 0
+            "start": 7.508,
+            "end": 7.672
           },
           {
             "word": "à ",
-            "start": 0,
-            "end": 0
+            "start": 7.672,
+            "end": 7.798
           },
           {
             "word": "comment ",
-            "start": 0,
-            "end": 0
+            "start": 7.798,
+            "end": 7.961
           },
           {
             "word": "se ",
-            "start": 0,
-            "end": 0
+            "start": 7.961,
+            "end": 8.126
           },
           {
             "word": "mettre ",
-            "start": 0,
-            "end": 0
+            "start": 8.126,
+            "end": 8.328
           },
           {
             "word": "bien, ",
-            "start": 0,
-            "end": 0
+            "start": 8.328,
+            "end": 8.492
           },
           {
             "word": "moi ",
-            "start": 0,
-            "end": 0
+            "start": 8.492,
+            "end": 8.736
           },
           {
             "word": "j'ai ",
-            "start": 0,
-            "end": 0
+            "start": 8.736,
+            "end": 8.94
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 8.94,
+            "end": 9.104
           },
           {
             "word": "ton ",
-            "start": 0,
-            "end": 0
+            "start": 9.104,
+            "end": 9.267
           },
           {
             "word": "élan",
-            "start": 0,
-            "end": 0
+            "start": 9.267,
+            "end": 10.003
           }
         ]
       },
       {
-        "verseStart": 7.49,
-        "verseEnd": 12.49,
+        "verseStart": 10.003,
+        "verseEnd": 13.909,
         "words": [
           {
             "word": "N'écoute ",
-            "start": 0,
-            "end": 0
+            "start": 10.003,
+            "end": 10.166
           },
           {
             "word": "jamais ",
-            "start": 0,
-            "end": 0
+            "start": 10.166,
+            "end": 10.328
           },
           {
             "word": "les \"",
-            "start": 0,
-            "end": 0
+            "start": 10.328,
+            "end": 10.53
           },
           {
             "word": "on ",
-            "start": 0,
-            "end": 0
+            "start": 10.53,
+            "end": 10.691
           },
           {
             "word": "dit\", ",
-            "start": 0,
-            "end": 0
+            "start": 10.691,
+            "end": 11.34
           },
           {
             "word": "ceux ",
-            "start": 0,
-            "end": 0
+            "start": 11.34,
+            "end": 11.504
           },
           {
             "word": "qui ",
-            "start": 0,
-            "end": 0
+            "start": 11.504,
+            "end": 11.626
           },
           {
             "word": "jactent ",
-            "start": 0,
-            "end": 0
+            "start": 11.626,
+            "end": 11.79
           },
           {
             "word": "n'ont ",
-            "start": 0,
-            "end": 0
+            "start": 11.79,
+            "end": 11.953
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 11.953,
+            "end": 12.155
           },
           {
             "word": "vu ",
-            "start": 0,
-            "end": 0
+            "start": 12.155,
+            "end": 12.32
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 12.32,
+            "end": 12.485
           },
           {
             "word": "vie ",
-            "start": 0,
-            "end": 0
+            "start": 12.485,
+            "end": 12.647
           },
           {
             "word": "au ",
-            "start": 0,
-            "end": 0
+            "start": 12.647,
+            "end": 12.81
           },
           {
             "word": "travers ",
-            "start": 0,
-            "end": 0
+            "start": 12.81,
+            "end": 12.973
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 12.973,
+            "end": 13.136
           },
           {
             "word": "ton ",
-            "start": 0,
-            "end": 0
+            "start": 13.136,
+            "end": 13.298
           },
           {
             "word": "monde",
-            "start": 0,
-            "end": 0
+            "start": 13.298,
+            "end": 13.909
           }
         ]
       },
       {
-        "verseStart": 11.41,
-        "verseEnd": 16.41,
+        "verseStart": 13.909,
+        "verseEnd": 17.871,
         "words": [
           {
             "word": "J'ai ",
-            "start": 0,
-            "end": 0
+            "start": 13.909,
+            "end": 14.112
           },
           {
             "word": "beau ",
-            "start": 0,
-            "end": 0
+            "start": 14.112,
+            "end": 14.275
           },
           {
             "word": "parler ",
-            "start": 0,
-            "end": 0
+            "start": 14.275,
+            "end": 14.482
           },
           {
             "word": "dans ",
-            "start": 0,
-            "end": 0
+            "start": 14.482,
+            "end": 14.651
           },
           {
             "word": "leur ",
-            "start": 0,
-            "end": 0
+            "start": 14.651,
+            "end": 14.813
           },
           {
             "word": "langue ",
-            "start": 0,
-            "end": 0
+            "start": 14.813,
+            "end": 15.017
           },
           {
             "word": "mais ",
-            "start": 0,
-            "end": 0
+            "start": 15.017,
+            "end": 15.22
           },
           {
             "word": "faut ",
-            "start": 0,
-            "end": 0
+            "start": 15.22,
+            "end": 15.384
           },
           {
             "word": "croire ",
-            "start": 0,
-            "end": 0
+            "start": 15.384,
+            "end": 15.588
           },
           {
             "word": "qu'ils ",
-            "start": 0,
-            "end": 0
+            "start": 15.588,
+            "end": 15.751
           },
           {
             "word": "n'entendent ",
-            "start": 0,
-            "end": 0
+            "start": 15.751,
+            "end": 15.953
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 15.953,
+            "end": 16.116
           },
           {
             "word": "le ",
-            "start": 0,
-            "end": 0
+            "start": 16.116,
+            "end": 16.32
           },
           {
             "word": "langage ",
-            "start": 0,
-            "end": 0
+            "start": 16.32,
+            "end": 16.487
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 16.487,
+            "end": 16.69
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 16.69,
+            "end": 17.014
           },
           {
             "word": "violence",
-            "start": 0,
-            "end": 0
+            "start": 17.014,
+            "end": 17.871
           }
         ]
       },
       {
-        "verseStart": 15.23,
-        "verseEnd": 20.23,
+        "verseStart": 17.871,
+        "verseEnd": 21.907,
         "words": [
           {
             "word": "J'me ",
-            "start": 0,
-            "end": 0
+            "start": 17.871,
+            "end": 18.034
           },
           {
             "word": "faufile ",
-            "start": 0,
-            "end": 0
+            "start": 18.034,
+            "end": 18.201
           },
           {
             "word": "en ",
-            "start": 0,
-            "end": 0
+            "start": 18.201,
+            "end": 18.363
           },
           {
             "word": "bal ",
-            "start": 0,
-            "end": 0
+            "start": 18.363,
+            "end": 18.566
           },
           {
             "word": "sans ",
-            "start": 0,
-            "end": 0
+            "start": 18.566,
+            "end": 18.729
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 18.729,
+            "end": 18.892
           },
           {
             "word": "mains, ",
-            "start": 0,
-            "end": 0
+            "start": 18.892,
+            "end": 19.339
           },
           {
             "word": "tu ",
-            "start": 0,
-            "end": 0
+            "start": 19.339,
+            "end": 19.501
           },
           {
             "word": "m'as ",
-            "start": 0,
-            "end": 0
+            "start": 19.501,
+            "end": 19.623
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 19.623,
+            "end": 19.745
           },
           {
             "word": "vu ",
-            "start": 0,
-            "end": 0
+            "start": 19.745,
+            "end": 19.908
           },
           {
             "word": "bégayer ",
-            "start": 0,
-            "end": 0
+            "start": 19.908,
+            "end": 20.07
           },
           {
             "word": "quand ",
-            "start": 0,
-            "end": 0
+            "start": 20.07,
+            "end": 20.234
           },
           {
             "word": "fallait ",
-            "start": 0,
-            "end": 0
+            "start": 20.234,
+            "end": 20.397
           },
           {
             "word": "passer ",
-            "start": 0,
-            "end": 0
+            "start": 20.397,
+            "end": 20.643
           },
           {
             "word": "le ",
-            "start": 0,
-            "end": 0
+            "start": 20.643,
+            "end": 20.806
           },
           {
             "word": "lent",
-            "start": 0,
-            "end": 0
+            "start": 20.806,
+            "end": 21.907
           }
         ]
       },
       {
-        "verseStart": 19.58,
-        "verseEnd": 24.58,
+        "verseStart": 21.907,
+        "verseEnd": 25.831,
         "words": [
           {
             "word": "Sankara, ",
-            "start": 0,
-            "end": 0
+            "start": 21.907,
+            "end": 22.448
           },
           {
             "word": "Cheikh ",
-            "start": 0,
-            "end": 0
+            "start": 22.448,
+            "end": 22.773
           },
           {
             "word": "Anta, ",
-            "start": 0,
-            "end": 0
+            "start": 22.773,
+            "end": 22.976
           },
           {
             "word": "négro, ",
-            "start": 0,
-            "end": 0
+            "start": 22.976,
+            "end": 23.261
           },
           {
             "word": "j'ai ",
-            "start": 0,
-            "end": 0
+            "start": 23.261,
+            "end": 23.545
           },
           {
             "word": "choisi ",
-            "start": 0,
-            "end": 0
+            "start": 23.545,
+            "end": 23.668
           },
           {
             "word": "mes ",
-            "start": 0,
-            "end": 0
+            "start": 23.668,
+            "end": 23.873
           },
           {
             "word": "modèles, ",
-            "start": 0,
-            "end": 0
+            "start": 23.873,
+            "end": 24.162
           },
           {
             "word": "c'est ",
-            "start": 0,
-            "end": 0
+            "start": 24.162,
+            "end": 24.365
           },
           {
             "word": "fiable ",
-            "start": 0,
-            "end": 0
+            "start": 24.365,
+            "end": 24.528
           },
           {
             "word": "comme ",
-            "start": 0,
-            "end": 0
+            "start": 24.528,
+            "end": 24.734
           },
           {
             "word": "un ",
-            "start": 0,
-            "end": 0
+            "start": 24.734,
+            "end": 24.856
           },
           {
             "word": "moteur ",
-            "start": 0,
-            "end": 0
+            "start": 24.856,
+            "end": 25.059
           },
           {
             "word": "allemand",
-            "start": 0,
-            "end": 0
+            "start": 25.059,
+            "end": 25.831
           }
         ]
       },
       {
-        "verseStart": 23.35,
-        "verseEnd": 28.35,
+        "verseStart": 25.831,
+        "verseEnd": 29.87,
         "words": [
           {
             "word": "En ",
-            "start": 0,
-            "end": 0
+            "start": 25.831,
+            "end": 26.033
           },
           {
             "word": "indé', ",
-            "start": 0,
-            "end": 0
+            "start": 26.033,
+            "end": 26.319
           },
           {
             "word": "sans ",
-            "start": 0,
-            "end": 0
+            "start": 26.319,
+            "end": 26.484
           },
           {
             "word": "carats, ",
-            "start": 0,
-            "end": 0
+            "start": 26.484,
+            "end": 26.648
           },
           {
             "word": "sans ",
-            "start": 0,
-            "end": 0
+            "start": 26.648,
+            "end": 26.81
           },
           {
             "word": "chico, ",
-            "start": 0,
-            "end": 0
+            "start": 26.81,
+            "end": 27.055
           },
           {
             "word": "oui ",
-            "start": 0,
-            "end": 0
+            "start": 27.055,
+            "end": 27.258
           },
           {
             "word": "je ",
-            "start": 0,
-            "end": 0
+            "start": 27.258,
+            "end": 27.461
           },
           {
             "word": "fais ",
-            "start": 0,
-            "end": 0
+            "start": 27.461,
+            "end": 27.706
           },
           {
             "word": "quer-",
-            "start": 0,
-            "end": 0
+            "start": 27.706,
+            "end": 27.912
           },
           {
             "word": "cro ",
-            "start": 0,
-            "end": 0
+            "start": 27.912,
+            "end": 28.115
           },
           {
             "word": "bien ",
-            "start": 0,
-            "end": 0
+            "start": 28.115,
+            "end": 28.281
           },
           {
             "word": "plus ",
-            "start": 0,
-            "end": 0
+            "start": 28.281,
+            "end": 28.486
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 28.486,
+            "end": 28.649
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 28.649,
+            "end": 28.812
           },
           {
             "word": "grands ",
-            "start": 0,
-            "end": 0
+            "start": 28.812,
+            "end": 28.975
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 28.975,
+            "end": 29.178
           },
           {
             "word": "tes ",
-            "start": 0,
-            "end": 0
+            "start": 29.178,
+            "end": 29.666
           },
           {
             "word": "grands",
-            "start": 0,
-            "end": 0
+            "start": 29.666,
+            "end": 29.87
           }
         ]
       },
       {
-        "verseStart": 27.22,
-        "verseEnd": 32.22,
+        "verseStart": 29.87,
+        "verseEnd": 33.556,
         "words": [
           {
             "word": "J'les ",
-            "start": 0,
-            "end": 0
+            "start": 29.87,
+            "end": 29.993
           },
           {
             "word": "té-",
-            "start": 0,
-            "end": 0
+            "start": 29.993,
+            "end": 30.158
           },
           {
             "word": "ma ",
-            "start": 0,
-            "end": 0
+            "start": 30.158,
+            "end": 30.322
           },
           {
             "word": "pas, ",
-            "start": 0,
-            "end": 0
+            "start": 30.322,
+            "end": 30.526
           },
           {
             "word": "ils ",
-            "start": 0,
-            "end": 0
+            "start": 30.526,
+            "end": 30.73
           },
           {
             "word": "sont ",
-            "start": 0,
-            "end": 0
+            "start": 30.73,
+            "end": 30.893
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 30.893,
+            "end": 31.056
           },
           {
             "word": "concentrés, ",
-            "start": 0,
-            "end": 0
+            "start": 31.056,
+            "end": 31.301
           },
           {
             "word": "j'attends ",
-            "start": 0,
-            "end": 0
+            "start": 31.301,
+            "end": 31.708
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 31.708,
+            "end": 31.924
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 31.924,
+            "end": 32.127
           },
           {
             "word": "passe, ",
-            "start": 0,
-            "end": 0
+            "start": 32.127,
+            "end": 32.331
           },
           {
             "word": "ils ",
-            "start": 0,
-            "end": 0
+            "start": 32.331,
+            "end": 32.493
           },
           {
             "word": "peuvent ",
-            "start": 0,
-            "end": 0
+            "start": 32.493,
+            "end": 32.697
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 32.697,
+            "end": 32.862
           },
           {
             "word": "centrer",
-            "start": 0,
-            "end": 0
+            "start": 32.862,
+            "end": 33.556
           }
         ]
       },
       {
-        "verseStart": 31.12,
-        "verseEnd": 36.120000000000005,
+        "verseStart": 33.556,
+        "verseEnd": 37.635,
         "words": [
           {
             "word": "J'suis ",
-            "start": 0,
-            "end": 0
+            "start": 33.556,
+            "end": 33.924
           },
           {
             "word": "bantu, ",
-            "start": 0,
-            "end": 0
+            "start": 33.924,
+            "end": 34.209
           },
           {
             "word": "me ",
-            "start": 0,
-            "end": 0
+            "start": 34.209,
+            "end": 34.372
           },
           {
             "word": "parle ",
-            "start": 0,
-            "end": 0
+            "start": 34.372,
+            "end": 34.535
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 34.535,
+            "end": 34.698
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 34.698,
+            "end": 34.86
           },
           {
             "word": "basané, ",
-            "start": 0,
-            "end": 0
+            "start": 34.86,
+            "end": 35.554
           },
           {
             "word": "on ",
-            "start": 0,
-            "end": 0
+            "start": 35.554,
+            "end": 35.717
           },
           {
             "word": "n'est ",
-            "start": 0,
-            "end": 0
+            "start": 35.717,
+            "end": 35.88
           },
           {
             "word": "pas ",
-            "start": 0,
-            "end": 0
+            "start": 35.88,
+            "end": 36.089
           },
           {
             "word": "v'nus ",
-            "start": 0,
-            "end": 0
+            "start": 36.089,
+            "end": 36.332
           },
           {
             "word": "ici ",
-            "start": 0,
-            "end": 0
+            "start": 36.332,
+            "end": 36.495
           },
           {
             "word": "pour ",
-            "start": 0,
-            "end": 0
+            "start": 36.495,
+            "end": 36.657
           },
           {
             "word": "se ",
-            "start": 0,
-            "end": 0
+            "start": 36.657,
+            "end": 36.82
           },
           {
             "word": "pavaner",
-            "start": 0,
-            "end": 0
+            "start": 36.82,
+            "end": 37.635
           }
         ]
       },
       {
-        "verseStart": 35.18,
-        "verseEnd": 40.18,
+        "verseStart": 37.635,
+        "verseEnd": 41.177,
         "words": [
           {
             "word": "Remballe ",
-            "start": 0,
-            "end": 0
+            "start": 37.635,
+            "end": 37.961
           },
           {
             "word": "ta ",
-            "start": 0,
-            "end": 0
+            "start": 37.961,
+            "end": 38.165
           },
           {
             "word": "c, ",
-            "start": 0,
-            "end": 0
+            "start": 38.165,
+            "end": 38.367
           },
           {
             "word": "j'ai ",
-            "start": 0,
-            "end": 0
+            "start": 38.367,
+            "end": 38.53
           },
           {
             "word": "mes ",
-            "start": 0,
-            "end": 0
+            "start": 38.53,
+            "end": 38.652
           },
           {
             "word": "cc",
-            "start": 0,
-            "end": 0
+            "start": 38.652,
+            "end": 41.177
           }
         ]
       },
       {
-        "verseStart": 37.79,
-        "verseEnd": 42.79,
+        "verseStart": 41.177,
+        "verseEnd": 45.173,
         "words": [
           {
             "word": "J'tourne ",
-            "start": 0,
-            "end": 0
+            "start": 41.177,
+            "end": 41.421
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 41.421,
+            "end": 41.788
           },
           {
             "word": "poignée, ",
-            "start": 0,
-            "end": 0
+            "start": 41.788,
+            "end": 42.155
           },
           {
             "word": "j'froisse ",
-            "start": 0,
-            "end": 0
+            "start": 42.155,
+            "end": 42.278
           },
           {
             "word": "le ",
-            "start": 0,
-            "end": 0
+            "start": 42.278,
+            "end": 42.646
           },
           {
             "word": "temps",
-            "start": 0,
-            "end": 0
+            "start": 42.646,
+            "end": 45.173
           }
         ]
       },
       {
-        "verseStart": 41.4,
-        "verseEnd": 46.4,
+        "verseStart": 45.173,
+        "verseEnd": 48.574,
         "words": [
           {
             "word": "J'roule ",
-            "start": 0,
-            "end": 0
+            "start": 45.173,
+            "end": 45.581
           },
           {
             "word": "comme ",
-            "start": 0,
-            "end": 0
+            "start": 45.581,
+            "end": 45.704
           },
           {
             "word": "si ",
-            "start": 0,
-            "end": 0
+            "start": 45.704,
+            "end": 46.112
           },
           {
             "word": "quelqu'un ",
-            "start": 0,
-            "end": 0
+            "start": 46.112,
+            "end": 46.479
           },
           {
             "word": "m'attendait",
-            "start": 0,
-            "end": 0
+            "start": 46.479,
+            "end": 48.574
           }
         ]
       },
       {
-        "verseStart": 45.73,
-        "verseEnd": 50.73,
+        "verseStart": 48.574,
+        "verseEnd": 54.123,
         "words": [
           {
             "word": "J'cale ",
-            "start": 0,
-            "end": 0
+            "start": 48.574,
+            "end": 49.268
           },
           {
             "word": "l'pétard ",
-            "start": 0,
-            "end": 0
+            "start": 49.268,
+            "end": 49.553
           },
           {
             "word": "entre ",
-            "start": 0,
-            "end": 0
+            "start": 49.553,
+            "end": 50.126
           },
           {
             "word": "mes ",
-            "start": 0,
-            "end": 0
+            "start": 50.126,
+            "end": 50.37
           },
           {
             "word": "dents, ",
-            "start": 0,
-            "end": 0
+            "start": 50.37,
+            "end": 52.248
           },
           {
             "word": "m'bah ",
-            "start": 0,
-            "end": 0
+            "start": 52.248,
+            "end": 52.451
           },
           {
             "word": "ouais, ",
-            "start": 0,
-            "end": 0
+            "start": 52.451,
+            "end": 53.224
           },
           {
             "word": "m'bah ",
-            "start": 0,
-            "end": 0
+            "start": 53.224,
+            "end": 53.468
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 53.468,
+            "end": 54.123
           }
         ]
       },
       {
-        "verseStart": 51.96,
-        "verseEnd": 56.96,
+        "verseStart": 54.123,
+        "verseEnd": 61.014,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 54.123,
+            "end": 54.246
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 54.246,
+            "end": 54.53
           },
           {
             "word": "bécane, ",
-            "start": 0,
-            "end": 0
+            "start": 54.53,
+            "end": 55.182
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 55.182,
+            "end": 55.549
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 55.549,
+            "end": 55.875
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 55.875,
+            "end": 56.241
           },
           {
             "word": "da-",
-            "start": 0,
-            "end": 0
+            "start": 56.241,
+            "end": 56.567
           },
           {
             "word": "da, ",
-            "start": 0,
-            "end": 0
+            "start": 56.567,
+            "end": 58.074
           },
           {
             "word": "j'fume ",
-            "start": 0,
-            "end": 0
+            "start": 58.074,
+            "end": 58.278
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 58.278,
+            "end": 58.524
           },
           {
             "word": "beuh",
-            "start": 0,
-            "end": 0
+            "start": 58.524,
+            "end": 61.014
           }
         ]
       },
       {
-        "verseStart": 57.96,
-        "verseEnd": 62.96,
+        "verseStart": 61.014,
+        "verseEnd": 63.013,
         "words": [
           {
             "word": "J'm'en ",
-            "start": 0,
-            "end": 0
+            "start": 61.014,
+            "end": 61.258
           },
           {
             "word": "bats ",
-            "start": 0,
-            "end": 0
+            "start": 61.258,
+            "end": 61.503
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 61.503,
+            "end": 61.791
           },
           {
             "word": "couilles ",
-            "start": 0,
-            "end": 0
+            "start": 61.791,
+            "end": 61.913
           },
           {
             "word": "si ",
-            "start": 0,
-            "end": 0
+            "start": 61.913,
+            "end": 61.995
           },
           {
             "word": "c'est ",
-            "start": 0,
-            "end": 0
+            "start": 61.995,
+            "end": 62.117
           },
           {
             "word": "dangereux ",
-            "start": 0,
-            "end": 0
+            "start": 62.117,
+            "end": 62.198
           },
           {
             "word": "sa ",
-            "start": 0,
-            "end": 0
+            "start": 62.198,
+            "end": 62.402
           },
           {
             "word": "mère",
-            "start": 0,
-            "end": 0
+            "start": 62.402,
+            "end": 63.013
           }
         ]
       },
       {
-        "verseStart": 60.89,
-        "verseEnd": 65.89,
+        "verseStart": 63.013,
+        "verseEnd": 65.013,
         "words": [
           {
             "word": "J'vois ",
-            "start": 0,
-            "end": 0
+            "start": 63.013,
+            "end": 63.176
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 63.176,
+            "end": 63.42
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 63.42,
+            "end": 63.623
           },
           {
             "word": "barreaux, ",
-            "start": 0,
-            "end": 0
+            "start": 63.623,
+            "end": 63.827
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 63.827,
+            "end": 64.071
           },
           {
             "word": "barreaux ",
-            "start": 0,
-            "end": 0
+            "start": 64.071,
+            "end": 64.275
           },
           {
             "word": "en ",
-            "start": 0,
-            "end": 0
+            "start": 64.275,
+            "end": 64.483
           },
           {
             "word": "fer",
-            "start": 0,
-            "end": 0
+            "start": 64.483,
+            "end": 65.013
           }
         ]
       },
       {
-        "verseStart": 62.52,
-        "verseEnd": 67.52000000000001,
+        "verseStart": 65.013,
+        "verseEnd": 69.907,
         "words": [
           {
             "word": "La ",
-            "start": 0,
-            "end": 0
+            "start": 65.013,
+            "end": 65.135
           },
           {
             "word": "bécane ",
-            "start": 0,
-            "end": 0
+            "start": 65.135,
+            "end": 65.257
           },
           {
             "word": "crie ",
-            "start": 0,
-            "end": 0
+            "start": 65.257,
+            "end": 65.46
           },
           {
             "word": "et ",
-            "start": 0,
-            "end": 0
+            "start": 65.46,
+            "end": 65.786
           },
           {
             "word": "j'sors ",
-            "start": 0,
-            "end": 0
+            "start": 65.786,
+            "end": 65.908
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 65.908,
+            "end": 66.233
           },
           {
             "word": "l'enfer ",
-            "start": 0,
-            "end": 0
+            "start": 66.233,
+            "end": 68.026
           },
           {
             "word": "sur ",
-            "start": 0,
-            "end": 0
+            "start": 68.026,
+            "end": 68.148
           },
           {
             "word": "un ",
-            "start": 0,
-            "end": 0
+            "start": 68.148,
+            "end": 68.354
           },
           {
             "word": "gros ",
-            "start": 0,
-            "end": 0
+            "start": 68.354,
+            "end": 68.685
           },
           {
             "word": "fer, ",
-            "start": 0,
-            "end": 0
+            "start": 68.685,
+            "end": 69.174
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 69.174,
+            "end": 69.419
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 69.419,
+            "end": 69.907
           }
         ]
       },
       {
-        "verseStart": 67.78,
-        "verseEnd": 72.78,
+        "verseStart": 69.907,
+        "verseEnd": 76.922,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 69.907,
+            "end": 70.07
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 70.07,
+            "end": 70.437
           },
           {
             "word": "bécane, ",
-            "start": 0,
-            "end": 0
+            "start": 70.437,
+            "end": 71.132
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 71.132,
+            "end": 71.379
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 71.379,
+            "end": 71.746
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 71.746,
+            "end": 72.193
           },
           {
             "word": "didi, ",
-            "start": 0,
-            "end": 0
+            "start": 72.193,
+            "end": 73.903
           },
           {
             "word": "j'fume ",
-            "start": 0,
-            "end": 0
+            "start": 73.903,
+            "end": 74.19
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 74.19,
+            "end": 74.434
           },
           {
             "word": "beuh, ",
-            "start": 0,
-            "end": 0
+            "start": 74.434,
+            "end": 75.777
           },
           {
             "word": "hum",
-            "start": 0,
-            "end": 0
+            "start": 75.777,
+            "end": 76.922
           }
         ]
       },
       {
-        "verseStart": 73.98,
-        "verseEnd": 78.98,
+        "verseStart": 76.922,
+        "verseEnd": 78.846,
         "words": [
           {
             "word": "J'm'en ",
-            "start": 0,
-            "end": 0
+            "start": 76.922,
+            "end": 77.094
           },
           {
             "word": "bats ",
-            "start": 0,
-            "end": 0
+            "start": 77.094,
+            "end": 77.338
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 77.338,
+            "end": 77.665
           },
           {
             "word": "couilles ",
-            "start": 0,
-            "end": 0
+            "start": 77.665,
+            "end": 77.787
           },
           {
             "word": "si ",
-            "start": 0,
-            "end": 0
+            "start": 77.787,
+            "end": 77.868
           },
           {
             "word": "c'est ",
-            "start": 0,
-            "end": 0
+            "start": 77.868,
+            "end": 77.99
           },
           {
             "word": "dangereux ",
-            "start": 0,
-            "end": 0
+            "start": 77.99,
+            "end": 78.112
           },
           {
             "word": "sa ",
-            "start": 0,
-            "end": 0
+            "start": 78.112,
+            "end": 78.235
           },
           {
             "word": "mère",
-            "start": 0,
-            "end": 0
+            "start": 78.235,
+            "end": 78.846
           }
         ]
       },
       {
-        "verseStart": 76.66,
-        "verseEnd": 81.66,
+        "verseStart": 78.846,
+        "verseEnd": 80.885,
         "words": [
           {
             "word": "J'vois ",
-            "start": 0,
-            "end": 0
+            "start": 78.846,
+            "end": 79.009
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 79.009,
+            "end": 79.174
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 79.174,
+            "end": 79.336
           },
           {
             "word": "barreaux, ",
-            "start": 0,
-            "end": 0
+            "start": 79.336,
+            "end": 79.663
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 79.663,
+            "end": 79.786
           },
           {
             "word": "barreaux ",
-            "start": 0,
-            "end": 0
+            "start": 79.786,
+            "end": 79.948
           },
           {
             "word": "en ",
-            "start": 0,
-            "end": 0
+            "start": 79.948,
+            "end": 80.356
           },
           {
             "word": "fer",
-            "start": 0,
-            "end": 0
+            "start": 80.356,
+            "end": 80.885
           }
         ]
       },
       {
-        "verseStart": 78.44,
-        "verseEnd": 83.44,
+        "verseStart": 80.885,
+        "verseEnd": 88.972,
         "words": [
           {
             "word": "La ",
-            "start": 0,
-            "end": 0
+            "start": 80.885,
+            "end": 81.048
           },
           {
             "word": "bécane ",
-            "start": 0,
-            "end": 0
+            "start": 81.048,
+            "end": 81.211
           },
           {
             "word": "crie ",
-            "start": 0,
-            "end": 0
+            "start": 81.211,
+            "end": 81.415
           },
           {
             "word": "et ",
-            "start": 0,
-            "end": 0
+            "start": 81.415,
+            "end": 81.619
           },
           {
             "word": "j'sors ",
-            "start": 0,
-            "end": 0
+            "start": 81.619,
+            "end": 81.902
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 81.902,
+            "end": 82.147
           },
           {
             "word": "l'enfer ",
-            "start": 0,
-            "end": 0
+            "start": 82.147,
+            "end": 83.872
           },
           {
             "word": "sur ",
-            "start": 0,
-            "end": 0
+            "start": 83.872,
+            "end": 83.995
           },
           {
             "word": "un ",
-            "start": 0,
-            "end": 0
+            "start": 83.995,
+            "end": 84.157
           },
           {
             "word": "gros ",
-            "start": 0,
-            "end": 0
+            "start": 84.157,
+            "end": 84.524
           },
           {
             "word": "fer, ",
-            "start": 0,
-            "end": 0
+            "start": 84.524,
+            "end": 85.094
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 85.094,
+            "end": 85.296
           },
           {
             "word": "ouais, ",
-            "start": 0,
-            "end": 0
+            "start": 85.296,
+            "end": 85.986
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 85.986,
+            "end": 86.23
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 86.23,
+            "end": 88.972
           }
         ]
       },
       {
-        "verseStart": 89.53,
-        "verseEnd": 94.53,
+        "verseStart": 88.972,
+        "verseEnd": 92.525,
         "words": [
           {
             "word": "L'akra ",
-            "start": 0,
-            "end": 0
+            "start": 88.972,
+            "end": 89.299
           },
           {
             "word": "aide ",
-            "start": 0,
-            "end": 0
+            "start": 89.299,
+            "end": 89.585
           },
           {
             "word": "à ",
-            "start": 0,
-            "end": 0
+            "start": 89.585,
+            "end": 89.788
           },
           {
             "word": "focaliser",
-            "start": 0,
-            "end": 0
+            "start": 89.788,
+            "end": 92.525
           }
         ]
       },
       {
-        "verseStart": 92.94,
-        "verseEnd": 97.94,
+        "verseStart": 92.525,
+        "verseEnd": 96.811,
         "words": [
           {
             "word": "La ",
-            "start": 0,
-            "end": 0
+            "start": 92.525,
+            "end": 92.891
           },
           {
             "word": "haine ",
-            "start": 0,
-            "end": 0
+            "start": 92.891,
+            "end": 93.176
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 93.176,
+            "end": 93.298
           },
           {
             "word": "j'ressens ",
-            "start": 0,
-            "end": 0
+            "start": 93.298,
+            "end": 93.582
           },
           {
             "word": "dans ",
-            "start": 0,
-            "end": 0
+            "start": 93.582,
+            "end": 93.785
           },
           {
             "word": "mes ",
-            "start": 0,
-            "end": 0
+            "start": 93.785,
+            "end": 93.99
           },
           {
             "word": "pensées, ",
-            "start": 0,
-            "end": 0
+            "start": 93.99,
+            "end": 95.589
           },
           {
             "word": "hum",
-            "start": 0,
-            "end": 0
+            "start": 95.589,
+            "end": 96.811
           }
         ]
       },
       {
-        "verseStart": 97.87,
-        "verseEnd": 102.87,
+        "verseStart": 96.811,
+        "verseEnd": 101.627,
         "words": [
           {
             "word": "Dans ",
-            "start": 0,
-            "end": 0
+            "start": 96.811,
+            "end": 97.055
           },
           {
             "word": "ce ",
-            "start": 0,
-            "end": 0
+            "start": 97.055,
+            "end": 97.3
           },
           {
             "word": "business ",
-            "start": 0,
-            "end": 0
+            "start": 97.3,
+            "end": 97.994
           },
           {
             "word": "balisé, ",
-            "start": 0,
-            "end": 0
+            "start": 97.994,
+            "end": 99.995
           },
           {
             "word": "ah ",
-            "start": 0,
-            "end": 0
+            "start": 99.995,
+            "end": 100.203
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 100.203,
+            "end": 101.627
           }
         ]
       },
       {
-        "verseStart": 102.55,
-        "verseEnd": 107.55,
+        "verseStart": 101.627,
+        "verseEnd": 109.474,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 101.627,
+            "end": 101.79
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 101.79,
+            "end": 101.995
           },
           {
             "word": "bécane-",
-            "start": 0,
-            "end": 0
+            "start": 101.995,
+            "end": 103.507
           },
           {
             "word": "cane, ",
-            "start": 0,
-            "end": 0
+            "start": 103.507,
+            "end": 105.183
           },
           {
             "word": "wou-",
-            "start": 0,
-            "end": 0
+            "start": 105.183,
+            "end": 106.292
           },
           {
             "word": "ouh",
-            "start": 0,
-            "end": 0
+            "start": 106.292,
+            "end": 109.474
           }
         ]
       },
       {
-        "verseStart": 110.28999999999999,
-        "verseEnd": 115.28999999999999,
+        "verseStart": 109.474,
+        "verseEnd": 118.09,
         "words": [
           {
             "word": "Et ",
-            "start": 0,
-            "end": 0
+            "start": 109.474,
+            "end": 109.596
           },
           {
             "word": "j'sors ",
-            "start": 0,
-            "end": 0
+            "start": 109.596,
+            "end": 109.923
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 109.923,
+            "end": 110.087
           },
           {
             "word": "bécane-",
-            "start": 0,
-            "end": 0
+            "start": 110.087,
+            "end": 111.551
           },
           {
             "word": "cane, ",
-            "start": 0,
-            "end": 0
+            "start": 111.551,
+            "end": 113.016
           },
           {
             "word": "wou-",
-            "start": 0,
-            "end": 0
+            "start": 113.016,
+            "end": 114.161
           },
           {
             "word": "ou-",
-            "start": 0,
-            "end": 0
+            "start": 114.161,
+            "end": 116.036
           },
           {
             "word": "ah-",
-            "start": 0,
-            "end": 0
+            "start": 116.036,
+            "end": 117.027
           },
           {
             "word": "ah",
-            "start": 0,
-            "end": 0
+            "start": 117.027,
+            "end": 118.09
           }
         ]
       },
       {
-        "verseStart": 118.88,
-        "verseEnd": 123.88,
+        "verseStart": 118.09,
+        "verseEnd": 125.47,
         "words": [
           {
             "word": "Cane, ",
-            "start": 0,
-            "end": 0
+            "start": 118.09,
+            "end": 118.824
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 118.824,
+            "end": 119.195
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 119.195,
+            "end": 119.562
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 119.562,
+            "end": 119.929
           },
           {
             "word": "da-",
-            "start": 0,
-            "end": 0
+            "start": 119.929,
+            "end": 120.256
           },
           {
             "word": "da, ",
-            "start": 0,
-            "end": 0
+            "start": 120.256,
+            "end": 121.602
           },
           {
             "word": "j'fume ",
-            "start": 0,
-            "end": 0
+            "start": 121.602,
+            "end": 121.849
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 121.849,
+            "end": 122.093
           },
           {
             "word": "beuh",
-            "start": 0,
-            "end": 0
+            "start": 122.093,
+            "end": 125.47
           }
         ]
       },
       {
-        "verseStart": 123.33,
-        "verseEnd": 128.32999999999998,
+        "verseStart": 125.47,
+        "verseEnd": 133.513,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 125.47,
+            "end": 125.674
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 125.674,
+            "end": 125.963
           },
           {
             "word": "bécane, ",
-            "start": 0,
-            "end": 0
+            "start": 125.963,
+            "end": 126.781
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 126.781,
+            "end": 127.106
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 127.106,
+            "end": 127.432
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 127.432,
+            "end": 127.798
           },
           {
             "word": "da-",
-            "start": 0,
-            "end": 0
+            "start": 127.798,
+            "end": 128.123
           },
           {
             "word": "da, ",
-            "start": 0,
-            "end": 0
+            "start": 128.123,
+            "end": 128.855
           },
           {
             "word": "ah ",
-            "start": 0,
-            "end": 0
+            "start": 128.855,
+            "end": 129.184
           },
           {
             "word": "euh, ",
-            "start": 0,
-            "end": 0
+            "start": 129.184,
+            "end": 129.801
           },
           {
             "word": "ah ",
-            "start": 0,
-            "end": 0
+            "start": 129.801,
+            "end": 130.045
           },
           {
             "word": "euh",
-            "start": 0,
-            "end": 0
+            "start": 130.045,
+            "end": 133.513
           }
         ]
       },
       {
-        "verseStart": 131.46,
-        "verseEnd": 136.46,
+        "verseStart": 133.513,
+        "verseEnd": 140.363,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 133.513,
+            "end": 133.675
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 133.675,
+            "end": 133.962
           },
           {
             "word": "bécane, ",
-            "start": 0,
-            "end": 0
+            "start": 133.962,
+            "end": 134.616
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 134.616,
+            "end": 134.982
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 134.982,
+            "end": 135.35
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 135.35,
+            "end": 135.714
           },
           {
             "word": "da-",
-            "start": 0,
-            "end": 0
+            "start": 135.714,
+            "end": 136.079
           },
           {
             "word": "da, ",
-            "start": 0,
-            "end": 0
+            "start": 136.079,
+            "end": 137.42
           },
           {
             "word": "j'fume ",
-            "start": 0,
-            "end": 0
+            "start": 137.42,
+            "end": 137.663
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 137.663,
+            "end": 137.914
           },
           {
             "word": "beuh, ",
-            "start": 0,
-            "end": 0
+            "start": 137.914,
+            "end": 139.671
           },
           {
             "word": "han",
-            "start": 0,
-            "end": 0
+            "start": 139.671,
+            "end": 140.363
           }
         ]
       },
       {
-        "verseStart": 138.1,
-        "verseEnd": 143.1,
+        "verseStart": 140.363,
+        "verseEnd": 142.374,
         "words": [
           {
             "word": "J'm'en ",
-            "start": 0,
-            "end": 0
+            "start": 140.363,
+            "end": 140.567
           },
           {
             "word": "bats ",
-            "start": 0,
-            "end": 0
+            "start": 140.567,
+            "end": 140.771
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 140.771,
+            "end": 140.933
           },
           {
             "word": "couilles ",
-            "start": 0,
-            "end": 0
+            "start": 140.933,
+            "end": 141.179
           },
           {
             "word": "si ",
-            "start": 0,
-            "end": 0
+            "start": 141.179,
+            "end": 141.301
           },
           {
             "word": "c'est ",
-            "start": 0,
-            "end": 0
+            "start": 141.301,
+            "end": 141.423
           },
           {
             "word": "dangereux ",
-            "start": 0,
-            "end": 0
+            "start": 141.423,
+            "end": 141.505
           },
           {
             "word": "sa ",
-            "start": 0,
-            "end": 0
+            "start": 141.505,
+            "end": 141.71
           },
           {
             "word": "mère",
-            "start": 0,
-            "end": 0
+            "start": 141.71,
+            "end": 142.374
           }
         ]
       },
       {
-        "verseStart": 140.47,
-        "verseEnd": 145.47,
+        "verseStart": 142.374,
+        "verseEnd": 144.378,
         "words": [
           {
             "word": "J'vois ",
-            "start": 0,
-            "end": 0
+            "start": 142.374,
+            "end": 142.538
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 142.538,
+            "end": 142.703
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 142.703,
+            "end": 142.907
           },
           {
             "word": "barreaux, ",
-            "start": 0,
-            "end": 0
+            "start": 142.907,
+            "end": 143.192
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 143.192,
+            "end": 143.314
           },
           {
             "word": "barreaux ",
-            "start": 0,
-            "end": 0
+            "start": 143.314,
+            "end": 143.639
           },
           {
             "word": "en ",
-            "start": 0,
-            "end": 0
+            "start": 143.639,
+            "end": 143.844
           },
           {
             "word": "fer",
-            "start": 0,
-            "end": 0
+            "start": 143.844,
+            "end": 144.378
           }
         ]
       },
       {
-        "verseStart": 142.28,
-        "verseEnd": 147.28,
+        "verseStart": 144.378,
+        "verseEnd": 149.302,
         "words": [
           {
             "word": "La ",
-            "start": 0,
-            "end": 0
+            "start": 144.378,
+            "end": 144.541
           },
           {
             "word": "bécane ",
-            "start": 0,
-            "end": 0
+            "start": 144.541,
+            "end": 144.704
           },
           {
             "word": "crie ",
-            "start": 0,
-            "end": 0
+            "start": 144.704,
+            "end": 144.865
           },
           {
             "word": "et ",
-            "start": 0,
-            "end": 0
+            "start": 144.865,
+            "end": 145.11
           },
           {
             "word": "j'sors ",
-            "start": 0,
-            "end": 0
+            "start": 145.11,
+            "end": 145.314
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 145.314,
+            "end": 145.558
           },
           {
             "word": "l'enfer ",
-            "start": 0,
-            "end": 0
+            "start": 145.558,
+            "end": 147.267
           },
           {
             "word": "sur ",
-            "start": 0,
-            "end": 0
+            "start": 147.267,
+            "end": 147.43
           },
           {
             "word": "un ",
-            "start": 0,
-            "end": 0
+            "start": 147.43,
+            "end": 147.594
           },
           {
             "word": "gros ",
-            "start": 0,
-            "end": 0
+            "start": 147.594,
+            "end": 147.96
           },
           {
             "word": "fer, ",
-            "start": 0,
-            "end": 0
+            "start": 147.96,
+            "end": 148.529
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 148.529,
+            "end": 148.773
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 148.773,
+            "end": 149.302
           }
         ]
       },
       {
-        "verseStart": 147.01,
-        "verseEnd": 152.01,
+        "verseStart": 149.302,
+        "verseEnd": 156.224,
         "words": [
           {
             "word": "J'sors ",
-            "start": 0,
-            "end": 0
+            "start": 149.302,
+            "end": 149.465
           },
           {
             "word": "la ",
-            "start": 0,
-            "end": 0
+            "start": 149.465,
+            "end": 149.587
           },
           {
             "word": "bécane, ",
-            "start": 0,
-            "end": 0
+            "start": 149.587,
+            "end": 150.486
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 150.486,
+            "end": 150.811
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 150.811,
+            "end": 151.14
           },
           {
             "word": "di-",
-            "start": 0,
-            "end": 0
+            "start": 151.14,
+            "end": 151.548
           },
           {
             "word": "didi, ",
-            "start": 0,
-            "end": 0
+            "start": 151.548,
+            "end": 151.75
           },
           {
             "word": "didi-",
-            "start": 0,
-            "end": 0
+            "start": 151.75,
+            "end": 153.499
           },
           {
             "word": "i-",
-            "start": 0,
-            "end": 0
+            "start": 153.499,
+            "end": 153.702
           },
           {
             "word": "i, ",
-            "start": 0,
-            "end": 0
+            "start": 153.702,
+            "end": 155.33
           },
           {
             "word": "han",
-            "start": 0,
-            "end": 0
+            "start": 155.33,
+            "end": 156.224
           }
         ]
       },
       {
-        "verseStart": 153.67000000000002,
-        "verseEnd": 158.67000000000002,
+        "verseStart": 156.224,
+        "verseEnd": 158.263,
         "words": [
           {
             "word": "J'm'en ",
-            "start": 0,
-            "end": 0
+            "start": 156.224,
+            "end": 156.549
           },
           {
             "word": "bats ",
-            "start": 0,
-            "end": 0
+            "start": 156.549,
+            "end": 156.712
           },
           {
             "word": "les ",
-            "start": 0,
-            "end": 0
+            "start": 156.712,
+            "end": 156.998
           },
           {
             "word": "couilles ",
-            "start": 0,
-            "end": 0
+            "start": 156.998,
+            "end": 157.121
           },
           {
             "word": "si ",
-            "start": 0,
-            "end": 0
+            "start": 157.121,
+            "end": 157.203
           },
           {
             "word": "c'est ",
-            "start": 0,
-            "end": 0
+            "start": 157.203,
+            "end": 157.324
           },
           {
             "word": "dangereux ",
-            "start": 0,
-            "end": 0
+            "start": 157.324,
+            "end": 157.528
           },
           {
             "word": "sa ",
-            "start": 0,
-            "end": 0
+            "start": 157.528,
+            "end": 157.65
           },
           {
             "word": "mère",
-            "start": 0,
-            "end": 0
+            "start": 157.65,
+            "end": 158.263
           }
         ]
       },
       {
-        "verseStart": 155.91,
-        "verseEnd": 160.91,
+        "verseStart": 158.263,
+        "verseEnd": 160.261,
         "words": [
           {
             "word": "J'vois ",
-            "start": 0,
-            "end": 0
+            "start": 158.263,
+            "end": 158.385
           },
           {
             "word": "que ",
-            "start": 0,
-            "end": 0
+            "start": 158.385,
+            "end": 158.631
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 158.631,
+            "end": 158.794
           },
           {
             "word": "barreaux, ",
-            "start": 0,
-            "end": 0
+            "start": 158.794,
+            "end": 159.079
           },
           {
             "word": "des ",
-            "start": 0,
-            "end": 0
+            "start": 159.079,
+            "end": 159.201
           },
           {
             "word": "barreaux ",
-            "start": 0,
-            "end": 0
+            "start": 159.201,
+            "end": 159.486
           },
           {
             "word": "en ",
-            "start": 0,
-            "end": 0
+            "start": 159.486,
+            "end": 159.649
           },
           {
             "word": "fer",
-            "start": 0,
-            "end": 0
+            "start": 159.649,
+            "end": 160.261
           }
         ]
       },
       {
-        "verseStart": 158.15,
-        "verseEnd": 163.15,
+        "verseStart": 160.261,
+        "verseEnd": 172.91,
         "words": [
           {
             "word": "La ",
-            "start": 0,
-            "end": 0
+            "start": 160.261,
+            "end": 160.425
           },
           {
             "word": "bécane ",
-            "start": 0,
-            "end": 0
+            "start": 160.425,
+            "end": 160.588
           },
           {
             "word": "crie ",
-            "start": 0,
-            "end": 0
+            "start": 160.588,
+            "end": 160.791
           },
           {
             "word": "et ",
-            "start": 0,
-            "end": 0
+            "start": 160.791,
+            "end": 161.201
           },
           {
             "word": "j'sors ",
-            "start": 0,
-            "end": 0
+            "start": 161.201,
+            "end": 161.444
           },
           {
             "word": "de ",
-            "start": 0,
-            "end": 0
+            "start": 161.444,
+            "end": 161.688
           },
           {
             "word": "l'enfer ",
-            "start": 0,
-            "end": 0
+            "start": 161.688,
+            "end": 163.236
           },
           {
             "word": "sur ",
-            "start": 0,
-            "end": 0
+            "start": 163.236,
+            "end": 163.4
           },
           {
             "word": "un ",
-            "start": 0,
-            "end": 0
+            "start": 163.4,
+            "end": 163.608
           },
           {
             "word": "gros ",
-            "start": 0,
-            "end": 0
+            "start": 163.608,
+            "end": 163.974
           },
           {
             "word": "fer, ",
-            "start": 0,
-            "end": 0
+            "start": 163.974,
+            "end": 164.421
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 164.421,
+            "end": 164.664
           },
           {
             "word": "ouais, ",
-            "start": 0,
-            "end": 0
+            "start": 164.664,
+            "end": 165.32
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 165.32,
+            "end": 165.563
           },
           {
             "word": "ouais",
-            "start": 0,
-            "end": 0
+            "start": 165.563,
+            "end": 172.91
           }
         ]
       },
       {
-        "verseStart": 169.94,
-        "verseEnd": 174.94,
+        "verseStart": 172.91,
+        "verseEnd": 175.815,
         "words": [
           {
             "word": "Bah ",
-            "start": 0,
-            "end": 0
+            "start": 172.91,
+            "end": 173.075
           },
           {
             "word": "ouais, ",
-            "start": 0,
-            "end": 0
+            "start": 173.075,
+            "end": 173.572
           },
           {
             "word": "bah ",
-            "start": 0,
-            "end": 0
+            "start": 173.572,
+            "end": 173.815
           },
           {
             "word": "ouais",
-            "start": 0,
+            "start": 173.815,
             "end": 0
           }
         ]
       }
     ],
     "subtitle": "🇫🇷 ● en attendant, écoute cette pépite ● 🇫🇷"
+  },
+  "Gabrielle - 5 fine frøkner.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 11.629,
+        "verseEnd": 15.296,
+        "words": [
+          {
+            "word": "Åh ",
+            "start": 11.629,
+            "end": 11.833
+          },
+          {
+            "word": "hosianna, ",
+            "start": 11.833,
+            "end": 13.302
+          },
+          {
+            "word": "Annotate ",
+            "start": 13.302,
+            "end": 13.424
+          },
+          {
+            "word": "Hevenu ",
+            "start": 13.424,
+            "end": 14.28
+          },
+          {
+            "word": "shalom",
+            "start": 14.28,
+            "end": 15.296
+          }
+        ]
+      },
+      {
+        "verseStart": 15.296,
+        "verseEnd": 19.291,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 15.296,
+            "end": 15.865
+          },
+          {
+            "word": "fine ",
+            "start": 15.865,
+            "end": 16.352
+          },
+          {
+            "word": "frøkner ",
+            "start": 16.352,
+            "end": 17.537
+          },
+          {
+            "word": "ska ",
+            "start": 17.537,
+            "end": 17.822
+          },
+          {
+            "word": "aldri ",
+            "start": 17.822,
+            "end": 18.109
+          },
+          {
+            "word": "dra ",
+            "start": 18.109,
+            "end": 18.394
+          },
+          {
+            "word": "hjem",
+            "start": 18.394,
+            "end": 19.291
+          }
+        ]
+      },
+      {
+        "verseStart": 19.291,
+        "verseEnd": 22.67,
+        "words": [
+          {
+            "word": "Lyden ",
+            "start": 19.291,
+            "end": 20.103
+          },
+          {
+            "word": "av ",
+            "start": 20.103,
+            "end": 20.348
+          },
+          {
+            "word": "noe ",
+            "start": 20.348,
+            "end": 21.124
+          },
+          {
+            "word": "som ",
+            "start": 21.124,
+            "end": 21.369
+          },
+          {
+            "word": "slipper ",
+            "start": 21.369,
+            "end": 21.938
+          },
+          {
+            "word": "oss ",
+            "start": 21.938,
+            "end": 22.1
+          },
+          {
+            "word": "fri",
+            "start": 22.1,
+            "end": 22.67
+          }
+        ]
+      },
+      {
+        "verseStart": 22.67,
+        "verseEnd": 27.678,
+        "words": [
+          {
+            "word": "Vi ",
+            "start": 22.67,
+            "end": 22.874
+          },
+          {
+            "word": "har'sje ",
+            "start": 22.874,
+            "end": 23.323
+          },
+          {
+            "word": "penger ",
+            "start": 23.323,
+            "end": 23.892
+          },
+          {
+            "word": "men ",
+            "start": 23.892,
+            "end": 24.136
+          },
+          {
+            "word": "vi ",
+            "start": 24.136,
+            "end": 24.38
+          },
+          {
+            "word": "eier ",
+            "start": 24.38,
+            "end": 24.868
+          },
+          {
+            "word": "allting",
+            "start": 24.868,
+            "end": 27.678
+          }
+        ]
+      },
+      {
+        "verseStart": 27.678,
+        "verseEnd": 31.833,
+        "words": [
+          {
+            "word": "Å ",
+            "start": 27.678,
+            "end": 27.8
+          },
+          {
+            "word": "vi ",
+            "start": 27.8,
+            "end": 28.127
+          },
+          {
+            "word": "trenger ",
+            "start": 28.127,
+            "end": 28.249
+          },
+          {
+            "word": "ikke ",
+            "start": 28.249,
+            "end": 28.332
+          },
+          {
+            "word": "verden, ",
+            "start": 28.332,
+            "end": 29.757
+          },
+          {
+            "word": "for ",
+            "start": 29.757,
+            "end": 29.881
+          },
+          {
+            "word": "meg ",
+            "start": 29.881,
+            "end": 30.084
+          },
+          {
+            "word": "og ",
+            "start": 30.084,
+            "end": 30.167
+          },
+          {
+            "word": "deg ",
+            "start": 30.167,
+            "end": 30.29
+          },
+          {
+            "word": "e ",
+            "start": 30.29,
+            "end": 30.411
+          },
+          {
+            "word": "verden",
+            "start": 30.411,
+            "end": 31.833
+          }
+        ]
+      },
+      {
+        "verseStart": 31.833,
+        "verseEnd": 35.377,
+        "words": [
+          {
+            "word": "Vi ",
+            "start": 31.833,
+            "end": 31.916
+          },
+          {
+            "word": "trenger ",
+            "start": 31.916,
+            "end": 32.324
+          },
+          {
+            "word": "ikke ",
+            "start": 32.324,
+            "end": 32.406
+          },
+          {
+            "word": "verden, ",
+            "start": 32.406,
+            "end": 33.787
+          },
+          {
+            "word": "for ",
+            "start": 33.787,
+            "end": 33.909
+          },
+          {
+            "word": "meg ",
+            "start": 33.909,
+            "end": 33.991
+          },
+          {
+            "word": "og ",
+            "start": 33.991,
+            "end": 34.152
+          },
+          {
+            "word": "deg ",
+            "start": 34.152,
+            "end": 34.357
+          },
+          {
+            "word": "e ",
+            "start": 34.357,
+            "end": 34.684
+          },
+          {
+            "word": "verden",
+            "start": 34.684,
+            "end": 35.377
+          }
+        ]
+      },
+      {
+        "verseStart": 35.377,
+        "verseEnd": 38.611,
+        "words": [
+          {
+            "word": "Lyden ",
+            "start": 35.377,
+            "end": 36.108
+          },
+          {
+            "word": "av ",
+            "start": 36.108,
+            "end": 36.312
+          },
+          {
+            "word": "noe ",
+            "start": 36.312,
+            "end": 37.101
+          },
+          {
+            "word": "som ",
+            "start": 37.101,
+            "end": 37.387
+          },
+          {
+            "word": "slipper ",
+            "start": 37.387,
+            "end": 37.834
+          },
+          {
+            "word": "oss ",
+            "start": 37.834,
+            "end": 38.037
+          },
+          {
+            "word": "fri",
+            "start": 38.037,
+            "end": 38.611
+          }
+        ]
+      },
+      {
+        "verseStart": 38.611,
+        "verseEnd": 43.305,
+        "words": [
+          {
+            "word": "Vi ",
+            "start": 38.611,
+            "end": 38.814
+          },
+          {
+            "word": "har'sje ",
+            "start": 38.814,
+            "end": 39.345
+          },
+          {
+            "word": "penger ",
+            "start": 39.345,
+            "end": 39.877
+          },
+          {
+            "word": "men ",
+            "start": 39.877,
+            "end": 40.124
+          },
+          {
+            "word": "vi ",
+            "start": 40.124,
+            "end": 40.368
+          },
+          {
+            "word": "eier ",
+            "start": 40.368,
+            "end": 40.816
+          },
+          {
+            "word": "allting",
+            "start": 40.816,
+            "end": 43.305
+          }
+        ]
+      },
+      {
+        "verseStart": 43.305,
+        "verseEnd": 46.647,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 43.305,
+            "end": 43.792
+          },
+          {
+            "word": "får ",
+            "start": 43.792,
+            "end": 44.328
+          },
+          {
+            "word": "meg ",
+            "start": 44.328,
+            "end": 44.896
+          },
+          {
+            "word": "til ",
+            "start": 44.896,
+            "end": 45.1
+          },
+          {
+            "word": "å ",
+            "start": 45.1,
+            "end": 45.425
+          },
+          {
+            "word": "kjøre ",
+            "start": 45.425,
+            "end": 45.874
+          },
+          {
+            "word": "meg ",
+            "start": 45.874,
+            "end": 46.159
+          },
+          {
+            "word": "opp",
+            "start": 46.159,
+            "end": 46.647
+          }
+        ]
+      },
+      {
+        "verseStart": 46.647,
+        "verseEnd": 51.336,
+        "words": [
+          {
+            "word": "Det ",
+            "start": 46.647,
+            "end": 46.891
+          },
+          {
+            "word": "e ",
+            "start": 46.891,
+            "end": 47.135
+          },
+          {
+            "word": "ingenting ",
+            "start": 47.135,
+            "end": 47.826
+          },
+          {
+            "word": "som ",
+            "start": 47.826,
+            "end": 48.071
+          },
+          {
+            "word": "kan ",
+            "start": 48.071,
+            "end": 48.357
+          },
+          {
+            "word": "kjøre ",
+            "start": 48.357,
+            "end": 48.806
+          },
+          {
+            "word": "meg ",
+            "start": 48.806,
+            "end": 49.293
+          },
+          {
+            "word": "ned",
+            "start": 49.293,
+            "end": 51.336
+          }
+        ]
+      },
+      {
+        "verseStart": 51.336,
+        "verseEnd": 54.571,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 51.336,
+            "end": 51.867
+          },
+          {
+            "word": "får ",
+            "start": 51.867,
+            "end": 52.355
+          },
+          {
+            "word": "alt ",
+            "start": 52.355,
+            "end": 52.89
+          },
+          {
+            "word": "til ",
+            "start": 52.89,
+            "end": 53.176
+          },
+          {
+            "word": "å ",
+            "start": 53.176,
+            "end": 53.42
+          },
+          {
+            "word": "sprenge ",
+            "start": 53.42,
+            "end": 53.908
+          },
+          {
+            "word": "i ",
+            "start": 53.908,
+            "end": 54.153
+          },
+          {
+            "word": "kok",
+            "start": 54.153,
+            "end": 54.571
+          }
+        ]
+      },
+      {
+        "verseStart": 54.571,
+        "verseEnd": 59.406,
+        "words": [
+          {
+            "word": "D ",
+            "start": 54.571,
+            "end": 54.653
+          },
+          {
+            "word": "e ",
+            "start": 54.653,
+            "end": 54.898
+          },
+          {
+            "word": "ingen ",
+            "start": 54.898,
+            "end": 55.427
+          },
+          {
+            "word": "andre ",
+            "start": 55.427,
+            "end": 55.917
+          },
+          {
+            "word": "eg ",
+            "start": 55.917,
+            "end": 56.039
+          },
+          {
+            "word": "heller ",
+            "start": 56.039,
+            "end": 56.423
+          },
+          {
+            "word": "gjør ",
+            "start": 56.423,
+            "end": 56.707
+          },
+          {
+            "word": "det ",
+            "start": 56.707,
+            "end": 56.914
+          },
+          {
+            "word": "her ",
+            "start": 56.914,
+            "end": 57.408
+          },
+          {
+            "word": "med",
+            "start": 57.408,
+            "end": 59.406
+          }
+        ]
+      },
+      {
+        "verseStart": 59.406,
+        "verseEnd": 62.629,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "frøkner ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oppi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "klubben, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "befaler",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 62.629,
+        "verseEnd": 66.588,
+        "words": [
+          {
+            "word": "Sku ",
+            "start": 62.629,
+            "end": 62.874
+          },
+          {
+            "word": "det ",
+            "start": 62.874,
+            "end": 63.119
+          },
+          {
+            "word": "helt ",
+            "start": 63.119,
+            "end": 63.368
+          },
+          {
+            "word": "opp ",
+            "start": 63.368,
+            "end": 63.857
+          },
+          {
+            "word": "i ",
+            "start": 63.857,
+            "end": 64.55
+          },
+          {
+            "word": "himmelen",
+            "start": 64.55,
+            "end": 66.588
+          }
+        ]
+      },
+      {
+        "verseStart": 66.588,
+        "verseEnd": 70.872,
+        "words": [
+          {
+            "word": "Om ",
+            "start": 66.588,
+            "end": 66.832
+          },
+          {
+            "word": "det ",
+            "start": 66.832,
+            "end": 67.117
+          },
+          {
+            "word": "e ",
+            "start": 67.117,
+            "end": 67.364
+          },
+          {
+            "word": "fem ",
+            "start": 67.364,
+            "end": 67.892
+          },
+          {
+            "word": "fine ",
+            "start": 67.892,
+            "end": 68.382
+          },
+          {
+            "word": "fyrer ",
+            "start": 68.382,
+            "end": 68.875
+          },
+          {
+            "word": "spiller ",
+            "start": 68.875,
+            "end": 69.118
+          },
+          {
+            "word": "ingen ",
+            "start": 69.118,
+            "end": 69.815
+          },
+          {
+            "word": "rolle ",
+            "start": 69.815,
+            "end": 70.384
+          },
+          {
+            "word": "på ",
+            "start": 70.384,
+            "end": 70.587
+          },
+          {
+            "word": "det",
+            "start": 70.587,
+            "end": 70.872
+          }
+        ]
+      },
+      {
+        "verseStart": 70.872,
+        "verseEnd": 75.352,
+        "words": [
+          {
+            "word": "Ingen ",
+            "start": 70.872,
+            "end": 71.324
+          },
+          {
+            "word": "andre ",
+            "start": 71.324,
+            "end": 71.651
+          },
+          {
+            "word": "eg ",
+            "start": 71.651,
+            "end": 71.895
+          },
+          {
+            "word": "heller ",
+            "start": 71.895,
+            "end": 72.301
+          },
+          {
+            "word": "gjør ",
+            "start": 72.301,
+            "end": 72.585
+          },
+          {
+            "word": "det ",
+            "start": 72.585,
+            "end": 72.87
+          },
+          {
+            "word": "her ",
+            "start": 72.87,
+            "end": 73.359
+          },
+          {
+            "word": "med",
+            "start": 73.359,
+            "end": 75.352
+          }
+        ]
+      },
+      {
+        "verseStart": 75.352,
+        "verseEnd": 83.756,
+        "words": [
+          {
+            "word": "Send ",
+            "start": 75.352,
+            "end": 75.686
+          },
+          {
+            "word": "meg ",
+            "start": 75.686,
+            "end": 76.051
+          },
+          {
+            "word": "den ",
+            "start": 76.051,
+            "end": 76.376
+          },
+          {
+            "word": "derre ",
+            "start": 76.376,
+            "end": 77.067
+          },
+          {
+            "word": "du ",
+            "start": 77.067,
+            "end": 77.352
+          },
+          {
+            "word": "vet ",
+            "start": 77.352,
+            "end": 77.641
+          },
+          {
+            "word": "som ",
+            "start": 77.641,
+            "end": 78.007
+          },
+          {
+            "word": "får ",
+            "start": 78.007,
+            "end": 78.332
+          },
+          {
+            "word": "oss ",
+            "start": 78.332,
+            "end": 78.7
+          },
+          {
+            "word": "til ",
+            "start": 78.7,
+            "end": 79.066
+          },
+          {
+            "word": "å ",
+            "start": 79.066,
+            "end": 79.351
+          },
+          {
+            "word": "kjenne ",
+            "start": 79.351,
+            "end": 80.006
+          },
+          {
+            "word": "det ",
+            "start": 80.006,
+            "end": 80.331
+          },
+          {
+            "word": "brenner ",
+            "start": 80.331,
+            "end": 81.021
+          },
+          {
+            "word": "i ",
+            "start": 81.021,
+            "end": 81.265
+          },
+          {
+            "word": "hele ",
+            "start": 81.265,
+            "end": 81.878
+          },
+          {
+            "word": "vår ",
+            "start": 81.878,
+            "end": 82.123
+          },
+          {
+            "word": "kropp",
+            "start": 82.123,
+            "end": 83.756
+          }
+        ]
+      },
+      {
+        "verseStart": 83.756,
+        "verseEnd": 91.299,
+        "words": [
+          {
+            "word": "Det ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "som ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "å ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fly ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "over ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "hele ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vår ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "by, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "denne ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "sangen ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "va ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fet ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "så ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "satt ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "an ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "på ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ny?, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Clubbidubbin, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "mine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "damer ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "e ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "så ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "stunning",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 91.299,
+        "verseEnd": 94.568,
+        "words": [
+          {
+            "word": "Kanskje ",
+            "start": 91.299,
+            "end": 92.033
+          },
+          {
+            "word": "vi ",
+            "start": 92.033,
+            "end": 92.322
+          },
+          {
+            "word": "e ",
+            "start": 92.322,
+            "end": 92.689
+          },
+          {
+            "word": "litt ",
+            "start": 92.689,
+            "end": 93.138
+          },
+          {
+            "word": "ufyslige",
+            "start": 93.138,
+            "end": 94.568
+          }
+        ]
+      },
+      {
+        "verseStart": 94.568,
+        "verseEnd": 99.341,
+        "words": [
+          {
+            "word": "Men ",
+            "start": 94.568,
+            "end": 94.853
+          },
+          {
+            "word": "ka ",
+            "start": 94.853,
+            "end": 95.099
+          },
+          {
+            "word": "gjør ",
+            "start": 95.099,
+            "end": 95.427
+          },
+          {
+            "word": "det ",
+            "start": 95.427,
+            "end": 95.672
+          },
+          {
+            "word": "når ",
+            "start": 95.672,
+            "end": 95.917
+          },
+          {
+            "word": "det'sje ",
+            "start": 95.917,
+            "end": 96.364
+          },
+          {
+            "word": "lenger ",
+            "start": 96.364,
+            "end": 96.611
+          },
+          {
+            "word": "e ",
+            "start": 96.611,
+            "end": 97.225
+          },
+          {
+            "word": "dag",
+            "start": 97.225,
+            "end": 99.341
+          }
+        ]
+      },
+      {
+        "verseStart": 99.341,
+        "verseEnd": 102.656,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 99.341,
+            "end": 99.87
+          },
+          {
+            "word": "fine ",
+            "start": 99.87,
+            "end": 100.361
+          },
+          {
+            "word": "frøkner, ",
+            "start": 100.361,
+            "end": 101.353
+          },
+          {
+            "word": "tre ",
+            "start": 101.353,
+            "end": 101.597
+          },
+          {
+            "word": "på ",
+            "start": 101.597,
+            "end": 101.882
+          },
+          {
+            "word": "en ",
+            "start": 101.882,
+            "end": 102.126
+          },
+          {
+            "word": "rad",
+            "start": 102.126,
+            "end": 102.656
+          }
+        ]
+      },
+      {
+        "verseStart": 102.656,
+        "verseEnd": 107.339,
+        "words": [
+          {
+            "word": "Dem ",
+            "start": 102.656,
+            "end": 102.9
+          },
+          {
+            "word": "står ",
+            "start": 102.9,
+            "end": 103.186
+          },
+          {
+            "word": "aleine ",
+            "start": 103.186,
+            "end": 103.431
+          },
+          {
+            "word": "men ",
+            "start": 103.431,
+            "end": 104.046
+          },
+          {
+            "word": "vi ",
+            "start": 104.046,
+            "end": 104.33
+          },
+          {
+            "word": "gjør ",
+            "start": 104.33,
+            "end": 104.574
+          },
+          {
+            "word": "det ",
+            "start": 104.574,
+            "end": 104.858
+          },
+          {
+            "word": "ilag",
+            "start": 104.858,
+            "end": 107.339
+          }
+        ]
+      },
+      {
+        "verseStart": 107.339,
+        "verseEnd": 110.514,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 107.339,
+            "end": 107.732
+          },
+          {
+            "word": "får ",
+            "start": 107.732,
+            "end": 108.265
+          },
+          {
+            "word": "meg ",
+            "start": 108.265,
+            "end": 108.843
+          },
+          {
+            "word": "til ",
+            "start": 108.843,
+            "end": 109.127
+          },
+          {
+            "word": "å ",
+            "start": 109.127,
+            "end": 109.372
+          },
+          {
+            "word": "kjøre ",
+            "start": 109.372,
+            "end": 109.862
+          },
+          {
+            "word": "meg ",
+            "start": 109.862,
+            "end": 110.108
+          },
+          {
+            "word": "opp",
+            "start": 110.108,
+            "end": 110.514
+          }
+        ]
+      },
+      {
+        "verseStart": 110.514,
+        "verseEnd": 115.326,
+        "words": [
+          {
+            "word": "Det ",
+            "start": 110.514,
+            "end": 110.641
+          },
+          {
+            "word": "e ",
+            "start": 110.641,
+            "end": 110.885
+          },
+          {
+            "word": "ingenting ",
+            "start": 110.885,
+            "end": 111.82
+          },
+          {
+            "word": "som ",
+            "start": 111.82,
+            "end": 112.064
+          },
+          {
+            "word": "kan ",
+            "start": 112.064,
+            "end": 112.349
+          },
+          {
+            "word": "kjøre ",
+            "start": 112.349,
+            "end": 112.838
+          },
+          {
+            "word": "meg ",
+            "start": 112.838,
+            "end": 113.369
+          },
+          {
+            "word": "ned",
+            "start": 113.369,
+            "end": 115.326
+          }
+        ]
+      },
+      {
+        "verseStart": 115.326,
+        "verseEnd": 118.691,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 115.326,
+            "end": 115.858
+          },
+          {
+            "word": "får ",
+            "start": 115.858,
+            "end": 116.389
+          },
+          {
+            "word": "alt ",
+            "start": 116.389,
+            "end": 116.922
+          },
+          {
+            "word": "til ",
+            "start": 116.922,
+            "end": 117.127
+          },
+          {
+            "word": "å ",
+            "start": 117.127,
+            "end": 117.373
+          },
+          {
+            "word": "sprenge ",
+            "start": 117.373,
+            "end": 117.903
+          },
+          {
+            "word": "i ",
+            "start": 117.903,
+            "end": 118.149
+          },
+          {
+            "word": "kok",
+            "start": 118.149,
+            "end": 118.691
+          }
+        ]
+      },
+      {
+        "verseStart": 118.691,
+        "verseEnd": 123.307,
+        "words": [
+          {
+            "word": "D ",
+            "start": 118.691,
+            "end": 118.893
+          },
+          {
+            "word": "e ",
+            "start": 118.893,
+            "end": 119.021
+          },
+          {
+            "word": "ingen ",
+            "start": 119.021,
+            "end": 119.428
+          },
+          {
+            "word": "andre ",
+            "start": 119.428,
+            "end": 119.876
+          },
+          {
+            "word": "eg ",
+            "start": 119.876,
+            "end": 120.129
+          },
+          {
+            "word": "heller ",
+            "start": 120.129,
+            "end": 120.373
+          },
+          {
+            "word": "gjør ",
+            "start": 120.373,
+            "end": 120.657
+          },
+          {
+            "word": "det ",
+            "start": 120.657,
+            "end": 120.901
+          },
+          {
+            "word": "her ",
+            "start": 120.901,
+            "end": 121.352
+          },
+          {
+            "word": "med",
+            "start": 121.352,
+            "end": 123.307
+          }
+        ]
+      },
+      {
+        "verseStart": 123.307,
+        "verseEnd": 126.825,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "frøkner ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oppi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "klubben, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "befaler",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 126.825,
+        "verseEnd": 130.623,
+        "words": [
+          {
+            "word": "Sku ",
+            "start": 126.825,
+            "end": 127.07
+          },
+          {
+            "word": "det ",
+            "start": 127.07,
+            "end": 127.355
+          },
+          {
+            "word": "helt ",
+            "start": 127.355,
+            "end": 127.888
+          },
+          {
+            "word": "opp ",
+            "start": 127.888,
+            "end": 128.134
+          },
+          {
+            "word": "i ",
+            "start": 128.134,
+            "end": 128.379
+          },
+          {
+            "word": "himmelen",
+            "start": 128.379,
+            "end": 130.623
+          }
+        ]
+      },
+      {
+        "verseStart": 130.623,
+        "verseEnd": 134.796,
+        "words": [
+          {
+            "word": "Om ",
+            "start": 130.623,
+            "end": 130.868
+          },
+          {
+            "word": "det ",
+            "start": 130.868,
+            "end": 131.161
+          },
+          {
+            "word": "e ",
+            "start": 131.161,
+            "end": 131.405
+          },
+          {
+            "word": "fem ",
+            "start": 131.405,
+            "end": 131.892
+          },
+          {
+            "word": "fine ",
+            "start": 131.892,
+            "end": 132.383
+          },
+          {
+            "word": "fyrer ",
+            "start": 132.383,
+            "end": 132.628
+          },
+          {
+            "word": "spiller ",
+            "start": 132.628,
+            "end": 133.284
+          },
+          {
+            "word": "ingen ",
+            "start": 133.284,
+            "end": 133.774
+          },
+          {
+            "word": "rolle ",
+            "start": 133.774,
+            "end": 134.225
+          },
+          {
+            "word": "på ",
+            "start": 134.225,
+            "end": 134.511
+          },
+          {
+            "word": "det",
+            "start": 134.511,
+            "end": 134.796
+          }
+        ]
+      },
+      {
+        "verseStart": 134.796,
+        "verseEnd": 139.271,
+        "words": [
+          {
+            "word": "Ingen ",
+            "start": 134.796,
+            "end": 135.131
+          },
+          {
+            "word": "andre ",
+            "start": 135.131,
+            "end": 135.624
+          },
+          {
+            "word": "eg ",
+            "start": 135.624,
+            "end": 135.869
+          },
+          {
+            "word": "heller ",
+            "start": 135.869,
+            "end": 136.154
+          },
+          {
+            "word": "gjør ",
+            "start": 136.154,
+            "end": 136.403
+          },
+          {
+            "word": "det ",
+            "start": 136.403,
+            "end": 136.854
+          },
+          {
+            "word": "her ",
+            "start": 136.854,
+            "end": 137.099
+          },
+          {
+            "word": "med",
+            "start": 137.099,
+            "end": 139.271
+          }
+        ]
+      },
+      {
+        "verseStart": 139.271,
+        "verseEnd": 142.753,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "frøkner ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oppi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "klubben, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "befaler",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 142.753,
+        "verseEnd": 146.549,
+        "words": [
+          {
+            "word": "Sku ",
+            "start": 142.753,
+            "end": 143.042
+          },
+          {
+            "word": "det ",
+            "start": 143.042,
+            "end": 143.327
+          },
+          {
+            "word": "helt ",
+            "start": 143.327,
+            "end": 143.857
+          },
+          {
+            "word": "opp ",
+            "start": 143.857,
+            "end": 144.102
+          },
+          {
+            "word": "i ",
+            "start": 144.102,
+            "end": 144.386
+          },
+          {
+            "word": "himmelen",
+            "start": 144.386,
+            "end": 146.549
+          }
+        ]
+      },
+      {
+        "verseStart": 146.549,
+        "verseEnd": 150.847,
+        "words": [
+          {
+            "word": "Om ",
+            "start": 146.549,
+            "end": 146.835
+          },
+          {
+            "word": "det ",
+            "start": 146.835,
+            "end": 147.123
+          },
+          {
+            "word": "e ",
+            "start": 147.123,
+            "end": 147.367
+          },
+          {
+            "word": "fem ",
+            "start": 147.367,
+            "end": 147.894
+          },
+          {
+            "word": "fine ",
+            "start": 147.894,
+            "end": 148.423
+          },
+          {
+            "word": "fyrer ",
+            "start": 148.423,
+            "end": 148.667
+          },
+          {
+            "word": "spiller ",
+            "start": 148.667,
+            "end": 149.116
+          },
+          {
+            "word": "ingen ",
+            "start": 149.116,
+            "end": 149.367
+          },
+          {
+            "word": "rolle ",
+            "start": 149.367,
+            "end": 150.107
+          },
+          {
+            "word": "på ",
+            "start": 150.107,
+            "end": 150.603
+          },
+          {
+            "word": "det",
+            "start": 150.603,
+            "end": 150.847
+          }
+        ]
+      },
+      {
+        "verseStart": 150.847,
+        "verseEnd": 155.315,
+        "words": [
+          {
+            "word": "Ingen ",
+            "start": 150.847,
+            "end": 151.296
+          },
+          {
+            "word": "andre ",
+            "start": 151.296,
+            "end": 151.669
+          },
+          {
+            "word": "eg ",
+            "start": 151.669,
+            "end": 151.914
+          },
+          {
+            "word": "heller ",
+            "start": 151.914,
+            "end": 152.367
+          },
+          {
+            "word": "gjør ",
+            "start": 152.367,
+            "end": 152.612
+          },
+          {
+            "word": "det ",
+            "start": 152.612,
+            "end": 152.902
+          },
+          {
+            "word": "her ",
+            "start": 152.902,
+            "end": 153.352
+          },
+          {
+            "word": "med",
+            "start": 153.352,
+            "end": 155.315
+          }
+        ]
+      },
+      {
+        "verseStart": 155.315,
+        "verseEnd": 158.633,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 155.315,
+            "end": 155.848
+          },
+          {
+            "word": "fine ",
+            "start": 155.848,
+            "end": 156.377
+          },
+          {
+            "word": "frøkner, ",
+            "start": 156.377,
+            "end": 157.397
+          },
+          {
+            "word": "tre ",
+            "start": 157.397,
+            "end": 157.606
+          },
+          {
+            "word": "på ",
+            "start": 157.606,
+            "end": 157.893
+          },
+          {
+            "word": "en ",
+            "start": 157.893,
+            "end": 158.139
+          },
+          {
+            "word": "rad",
+            "start": 158.139,
+            "end": 158.633
+          }
+        ]
+      },
+      {
+        "verseStart": 158.633,
+        "verseEnd": 163.334,
+        "words": [
+          {
+            "word": "Dem ",
+            "start": 158.633,
+            "end": 158.877
+          },
+          {
+            "word": "står ",
+            "start": 158.877,
+            "end": 159.124
+          },
+          {
+            "word": "aleine ",
+            "start": 159.124,
+            "end": 159.903
+          },
+          {
+            "word": "men ",
+            "start": 159.903,
+            "end": 160.148
+          },
+          {
+            "word": "vi ",
+            "start": 160.148,
+            "end": 160.392
+          },
+          {
+            "word": "gjør ",
+            "start": 160.392,
+            "end": 160.636
+          },
+          {
+            "word": "det ",
+            "start": 160.636,
+            "end": 160.924
+          },
+          {
+            "word": "ilag",
+            "start": 160.924,
+            "end": 163.334
+          }
+        ]
+      },
+      {
+        "verseStart": 163.334,
+        "verseEnd": 166.688,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 163.334,
+            "end": 163.866
+          },
+          {
+            "word": "får ",
+            "start": 163.866,
+            "end": 164.362
+          },
+          {
+            "word": "meg ",
+            "start": 164.362,
+            "end": 164.931
+          },
+          {
+            "word": "til ",
+            "start": 164.931,
+            "end": 165.174
+          },
+          {
+            "word": "å ",
+            "start": 165.174,
+            "end": 165.42
+          },
+          {
+            "word": "kjøre ",
+            "start": 165.42,
+            "end": 165.912
+          },
+          {
+            "word": "meg ",
+            "start": 165.912,
+            "end": 166.155
+          },
+          {
+            "word": "opp",
+            "start": 166.155,
+            "end": 166.688
+          }
+        ]
+      },
+      {
+        "verseStart": 166.688,
+        "verseEnd": 171.323,
+        "words": [
+          {
+            "word": "Det ",
+            "start": 166.688,
+            "end": 166.932
+          },
+          {
+            "word": "e ",
+            "start": 166.932,
+            "end": 167.177
+          },
+          {
+            "word": "ingenting ",
+            "start": 167.177,
+            "end": 167.42
+          },
+          {
+            "word": "som ",
+            "start": 167.42,
+            "end": 168.115
+          },
+          {
+            "word": "kan ",
+            "start": 168.115,
+            "end": 168.321
+          },
+          {
+            "word": "kjøre ",
+            "start": 168.321,
+            "end": 168.824
+          },
+          {
+            "word": "meg ",
+            "start": 168.824,
+            "end": 169.354
+          },
+          {
+            "word": "ned",
+            "start": 169.354,
+            "end": 171.323
+          }
+        ]
+      },
+      {
+        "verseStart": 171.323,
+        "verseEnd": 174.652,
+        "words": [
+          {
+            "word": "Du ",
+            "start": 171.323,
+            "end": 171.857
+          },
+          {
+            "word": "får ",
+            "start": 171.857,
+            "end": 172.396
+          },
+          {
+            "word": "alt ",
+            "start": 172.396,
+            "end": 172.929
+          },
+          {
+            "word": "til ",
+            "start": 172.929,
+            "end": 173.172
+          },
+          {
+            "word": "å ",
+            "start": 173.172,
+            "end": 173.417
+          },
+          {
+            "word": "sprenge ",
+            "start": 173.417,
+            "end": 173.91
+          },
+          {
+            "word": "i ",
+            "start": 173.91,
+            "end": 174.161
+          },
+          {
+            "word": "kok",
+            "start": 174.161,
+            "end": 174.652
+          }
+        ]
+      },
+      {
+        "verseStart": 174.652,
+        "verseEnd": 179.479,
+        "words": [
+          {
+            "word": "D ",
+            "start": 174.652,
+            "end": 174.937
+          },
+          {
+            "word": "e ",
+            "start": 174.937,
+            "end": 175.183
+          },
+          {
+            "word": "ingen ",
+            "start": 175.183,
+            "end": 175.426
+          },
+          {
+            "word": "andre ",
+            "start": 175.426,
+            "end": 175.835
+          },
+          {
+            "word": "eg ",
+            "start": 175.835,
+            "end": 176.039
+          },
+          {
+            "word": "heller ",
+            "start": 176.039,
+            "end": 176.256
+          },
+          {
+            "word": "gjør ",
+            "start": 176.256,
+            "end": 176.46
+          },
+          {
+            "word": "det ",
+            "start": 176.46,
+            "end": 176.908
+          },
+          {
+            "word": "her ",
+            "start": 176.908,
+            "end": 177.397
+          },
+          {
+            "word": "med",
+            "start": 177.397,
+            "end": 179.479
+          }
+        ]
+      },
+      {
+        "verseStart": 179.479,
+        "verseEnd": 182.876,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "frøkner ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oppi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "klubben, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "befaler",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 182.876,
+        "verseEnd": 186.554,
+        "words": [
+          {
+            "word": "Sku ",
+            "start": 182.876,
+            "end": 183.125
+          },
+          {
+            "word": "det ",
+            "start": 183.125,
+            "end": 183.411
+          },
+          {
+            "word": "helt ",
+            "start": 183.411,
+            "end": 183.862
+          },
+          {
+            "word": "opp ",
+            "start": 183.862,
+            "end": 184.106
+          },
+          {
+            "word": "i ",
+            "start": 184.106,
+            "end": 184.352
+          },
+          {
+            "word": "himmelen",
+            "start": 184.352,
+            "end": 186.554
+          }
+        ]
+      },
+      {
+        "verseStart": 186.554,
+        "verseEnd": 190.848,
+        "words": [
+          {
+            "word": "Om ",
+            "start": 186.554,
+            "end": 186.841
+          },
+          {
+            "word": "det ",
+            "start": 186.841,
+            "end": 187.13
+          },
+          {
+            "word": "e ",
+            "start": 187.13,
+            "end": 187.374
+          },
+          {
+            "word": "fem ",
+            "start": 187.374,
+            "end": 187.864
+          },
+          {
+            "word": "fine ",
+            "start": 187.864,
+            "end": 188.352
+          },
+          {
+            "word": "fyrer ",
+            "start": 188.352,
+            "end": 188.843
+          },
+          {
+            "word": "spiller ",
+            "start": 188.843,
+            "end": 189.087
+          },
+          {
+            "word": "ingen ",
+            "start": 189.087,
+            "end": 189.376
+          },
+          {
+            "word": "rolle ",
+            "start": 189.376,
+            "end": 189.825
+          },
+          {
+            "word": "på ",
+            "start": 189.825,
+            "end": 190.313
+          },
+          {
+            "word": "det",
+            "start": 190.313,
+            "end": 190.848
+          }
+        ]
+      },
+      {
+        "verseStart": 190.848,
+        "verseEnd": 195.316,
+        "words": [
+          {
+            "word": "Ingen ",
+            "start": 190.848,
+            "end": 191.304
+          },
+          {
+            "word": "andre ",
+            "start": 191.304,
+            "end": 191.68
+          },
+          {
+            "word": "eg ",
+            "start": 191.68,
+            "end": 191.887
+          },
+          {
+            "word": "heller ",
+            "start": 191.887,
+            "end": 192.339
+          },
+          {
+            "word": "gjør ",
+            "start": 192.339,
+            "end": 192.587
+          },
+          {
+            "word": "det ",
+            "start": 192.587,
+            "end": 192.872
+          },
+          {
+            "word": "her ",
+            "start": 192.872,
+            "end": 193.362
+          },
+          {
+            "word": "med",
+            "start": 193.362,
+            "end": 195.316
+          }
+        ]
+      },
+      {
+        "verseStart": 195.316,
+        "verseEnd": 198.683,
+        "words": [
+          {
+            "word": "Fem ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fine ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "frøkner ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oppi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "klubben, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "vi ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "befaler",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 198.683,
+        "verseEnd": 202.618,
+        "words": [
+          {
+            "word": "Sku ",
+            "start": 198.683,
+            "end": 198.846
+          },
+          {
+            "word": "det ",
+            "start": 198.846,
+            "end": 199.177
+          },
+          {
+            "word": "helt ",
+            "start": 199.177,
+            "end": 199.747
+          },
+          {
+            "word": "opp ",
+            "start": 199.747,
+            "end": 200.041
+          },
+          {
+            "word": "i ",
+            "start": 200.041,
+            "end": 200.333
+          },
+          {
+            "word": "himmelen",
+            "start": 200.333,
+            "end": 202.618
+          }
+        ]
+      },
+      {
+        "verseStart": 202.618,
+        "verseEnd": 206.85,
+        "words": [
+          {
+            "word": "Om ",
+            "start": 202.618,
+            "end": 202.869
+          },
+          {
+            "word": "det ",
+            "start": 202.869,
+            "end": 203.16
+          },
+          {
+            "word": "e ",
+            "start": 203.16,
+            "end": 203.406
+          },
+          {
+            "word": "fem ",
+            "start": 203.406,
+            "end": 203.896
+          },
+          {
+            "word": "fine ",
+            "start": 203.896,
+            "end": 204.385
+          },
+          {
+            "word": "fyrer ",
+            "start": 204.385,
+            "end": 204.917
+          },
+          {
+            "word": "spiller ",
+            "start": 204.917,
+            "end": 205.371
+          },
+          {
+            "word": "ingen ",
+            "start": 205.371,
+            "end": 205.617
+          },
+          {
+            "word": "rolle ",
+            "start": 205.617,
+            "end": 206.313
+          },
+          {
+            "word": "på ",
+            "start": 206.313,
+            "end": 206.56
+          },
+          {
+            "word": "det",
+            "start": 206.56,
+            "end": 206.85
+          }
+        ]
+      },
+      {
+        "verseStart": 206.85,
+        "verseEnd": 211.276,
+        "words": [
+          {
+            "word": "Ingen ",
+            "start": 206.85,
+            "end": 207.141
+          },
+          {
+            "word": "andre ",
+            "start": 207.141,
+            "end": 207.603
+          },
+          {
+            "word": "eg ",
+            "start": 207.603,
+            "end": 207.887
+          },
+          {
+            "word": "heller ",
+            "start": 207.887,
+            "end": 208.132
+          },
+          {
+            "word": "gjør ",
+            "start": 208.132,
+            "end": 208.376
+          },
+          {
+            "word": "det ",
+            "start": 208.376,
+            "end": 208.827
+          },
+          {
+            "word": "her ",
+            "start": 208.827,
+            "end": 209.276
+          },
+          {
+            "word": "med",
+            "start": 209.276,
+            "end": 0
+          }
+        ]
+      }
+    ],
+    "subtitle": "🇳🇴 ● men i mellomtiden, sjekk ut denne bangeren ● 🇳🇴"
   }
 };
