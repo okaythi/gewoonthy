@@ -12,7 +12,7 @@ export async function onRequest({ request, env, next }) {
   const normalizedPath = url.pathname.replace(/\/$/, '') || '/';
 
   if (isMobile && normalizedPath === '/') {
-    return Response.redirect(url.origin + '/m', 302);
+    return Response.redirect(url.origin + '/m' + url.search, 302);
   }
 
   // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
