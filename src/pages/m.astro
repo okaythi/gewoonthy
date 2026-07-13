@@ -855,16 +855,17 @@ const pageTitle = "I'm cooking something here...";
         } catch(e) {}
       };
 
-      btnLike.addEventListener('touchstart', () => castVote('like'), { passive: true });
-      btnDislike.addEventListener('touchstart', () => castVote('dislike'), { passive: true });
+      btnLike.addEventListener('click', (e) => { e.stopPropagation(); castVote('like'); });
+      btnDislike.addEventListener('click', (e) => { e.stopPropagation(); castVote('dislike'); });
       
-      btnShuffle.addEventListener('touchstart', () => {
+      btnShuffle.addEventListener('click', (e) => {
+        e.stopPropagation();
         let rem = availableVideos.filter(v => v !== selectedVideo);
         if (rem.length === 0) rem = availableVideos;
         playedVideos.push(rem[Math.floor(Math.random() * rem.length)]);
         localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
         window.location.reload();
-      }, { passive: true });
+      });
     });
   </script>
 </body>
