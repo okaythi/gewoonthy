@@ -420,6 +420,13 @@ const pageTitle = "I'm cooking something here...";
       color: #fff;
       font-weight: 600;
       font-size: 1.2rem;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
     }
   </style>
 </head>
@@ -431,9 +438,9 @@ const pageTitle = "I'm cooking something here...";
     </div>
 
     <div class="video-wrapper" id="video-wrapper">
-      <div id="unmute-overlay" class="unmute-overlay" style="display: none;">
-        <button class="unmute-btn">Tap to Unmute</button>
-      </div>
+      <button id="unmute-overlay" class="unmute-overlay" style="display: none;">
+        <span class="unmute-btn">Tap to Unmute</span>
+      </button>
       <video 
         id="anthem-video"
         playsinline
@@ -595,14 +602,12 @@ const pageTitle = "I'm cooking something here...";
 
         if (unmuteOverlay) {
           const handleUnmute = (e) => {
-            e.preventDefault();
             e.stopPropagation();
             vid.muted = false;
             if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
             unmuteOverlay.style.display = 'none';
           };
-          unmuteOverlay.addEventListener('click', handleUnmute, { passive: false });
-          unmuteOverlay.addEventListener('touchstart', handleUnmute, { passive: false });
+          unmuteOverlay.addEventListener('click', handleUnmute, { passive: true });
         }
 
         vid.load();
