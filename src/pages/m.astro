@@ -594,12 +594,15 @@ const pageTitle = "I'm cooking something here...";
         };
 
         if (unmuteOverlay) {
-          unmuteOverlay.addEventListener('click', (e) => {
+          const handleUnmute = (e) => {
+            e.preventDefault();
             e.stopPropagation();
             vid.muted = false;
             if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
             unmuteOverlay.style.display = 'none';
-          }, { passive: true });
+          };
+          unmuteOverlay.addEventListener('click', handleUnmute, { passive: false });
+          unmuteOverlay.addEventListener('touchstart', handleUnmute, { passive: false });
         }
 
         vid.load();
