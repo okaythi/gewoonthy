@@ -24335,5 +24335,1606 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       }
     ]
+  },
+  "System Of A Down - Chop Suey!.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 0.25,
+        "verseEnd": 5.25,
+        "words": [
+          {
+            "word": "We're ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "rolling \"",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "Suicide\"",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 46.24,
+        "verseEnd": 51.24,
+        "words": [
+          {
+            "word": "Wake ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wake ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 47.1,
+        "verseEnd": 52.1,
+        "words": [
+          {
+            "word": "Grab ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "brush ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "put ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "little ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "makeup",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 49.06,
+        "verseEnd": 54.06,
+        "words": [
+          {
+            "word": "Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "shakeup",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 50.27,
+        "verseEnd": 55.27,
+        "words": [
+          {
+            "word": "(Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "shakeup)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 50.81,
+        "verseEnd": 55.81,
+        "words": [
+          {
+            "word": "Why'd ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leave ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "keys ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "upon ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "table?",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 52.78,
+        "verseEnd": 57.78,
+        "words": [
+          {
+            "word": "Here ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "go, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "create ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "another ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fable, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 54.85,
+        "verseEnd": 59.85,
+        "words": [
+          {
+            "word": "Grab ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "brush ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "put ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "little ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "makeup, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 56.51,
+        "verseEnd": 61.51,
+        "words": [
+          {
+            "word": "Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "shakeup, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 58.43,
+        "verseEnd": 63.43,
+        "words": [
+          {
+            "word": "Why'd ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leave ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "keys ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "upon ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "table? ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "You ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 60.51,
+        "verseEnd": 65.50999999999999,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "don't ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "think ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trust",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 63.47,
+        "verseEnd": 68.47,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "self-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "righteous ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "suicide",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 71.09,
+        "verseEnd": 76.09,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cry ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "when ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "angels ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "deserve ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "die!",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 85.99,
+        "verseEnd": 90.99,
+        "words": [
+          {
+            "word": "Wake ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wake ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "up)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 86.89,
+        "verseEnd": 91.89,
+        "words": [
+          {
+            "word": "Grab ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "brush ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "put ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "little ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "makeup",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 88.82,
+        "verseEnd": 93.82,
+        "words": [
+          {
+            "word": "Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the...",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 89.63,
+        "verseEnd": 94.63,
+        "words": [
+          {
+            "word": "(Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "shakeup)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 90.88,
+        "verseEnd": 95.88,
+        "words": [
+          {
+            "word": "Why'd ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leave ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "keys ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "upon ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "table?",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 92.45,
+        "verseEnd": 97.45,
+        "words": [
+          {
+            "word": "Here ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "go, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "create ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "another ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fable, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 94.53999999999999,
+        "verseEnd": 99.53999999999999,
+        "words": [
+          {
+            "word": "Grab ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "brush ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "and ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "put ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "a ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "little ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "makeup, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 96.4,
+        "verseEnd": 101.4,
+        "words": [
+          {
+            "word": "Hide ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "scars ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "fade ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "away ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "shakeup, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 98.28999999999999,
+        "verseEnd": 103.28999999999999,
+        "words": [
+          {
+            "word": "Why'd ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "leave ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "keys ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "upon ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "the ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "table? ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "You ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "wanted ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 100.22,
+        "verseEnd": 105.22,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "don't ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "think ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "trust",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 103.18,
+        "verseEnd": 108.18,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "self-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "righteous ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "suicide",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 110.85,
+        "verseEnd": 115.85,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cry ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "when ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "angels ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "deserve ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "die",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 118.52000000000001,
+        "verseEnd": 123.52000000000001,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "self-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "righteous ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "suicide",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 126.01,
+        "verseEnd": 131.01,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cry ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "when ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "angels ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "deserve ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "die",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 140.72,
+        "verseEnd": 145.72,
+        "words": [
+          {
+            "word": "Father (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "father)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 142.69,
+        "verseEnd": 147.69,
+        "words": [
+          {
+            "word": "Father (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "father)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 144.67000000000002,
+        "verseEnd": 149.67000000000002,
+        "words": [
+          {
+            "word": "Father (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "father)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 146.45,
+        "verseEnd": 151.45,
+        "words": [
+          {
+            "word": "Father (",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "father)",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 148.54,
+        "verseEnd": 153.54,
+        "words": [
+          {
+            "word": "Father, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "into ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "your ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "hands ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "commend ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "spirit",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 152.21,
+        "verseEnd": 157.21,
+        "words": [
+          {
+            "word": "Father, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "into ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "your ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "hands",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 153.85,
+        "verseEnd": 158.85,
+        "words": [
+          {
+            "word": "Why ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "have ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "you ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "forsaken ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me?",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 157.7,
+        "verseEnd": 162.7,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "your ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "eyes, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "forsaken ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 161.57999999999998,
+        "verseEnd": 166.57999999999998,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "your ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "thoughts, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "forsaken ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 165.36,
+        "verseEnd": 170.36,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "your ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "heart, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "forsaken ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "me, ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "oh",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 170.98,
+        "verseEnd": 175.98,
+        "words": [
+          {
+            "word": "Trust ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "in ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "self-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "righteous ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "suicide",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 180.04,
+        "verseEnd": 185.04,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cry ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "when ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "angels ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "deserve ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "die",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 187.28,
+        "verseEnd": 192.28,
+        "words": [
+          {
+            "word": "In ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "my ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "self-",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "righteous ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "suicide",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 194.52,
+        "verseEnd": 199.52,
+        "words": [
+          {
+            "word": "I ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "cry ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "when ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "angels ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "deserve ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "to ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "die",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };
