@@ -11,8 +11,7 @@ export async function onRequest({ request, env, next }) {
   const isMobile = /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(userAgent);
 
   if (isMobile && url.pathname === '/') {
-    const rewriteReq = new Request(new URL(url.origin + '/m'), request);
-    return env.ASSETS.fetch(rewriteReq);
+    return Response.redirect(url.origin + '/m', 302);
   }
 
   // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
