@@ -5,9 +5,18 @@ export async function onRequest({ request, env, next }) {
     return new Response('Access Denied. Traffic from your region is blocked.', { status: 403 });
   }
 
-  // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
+  // MOBILE INTERCEPT: Redirect mobile users to /m
   const url = new URL(request.url);
-  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && !url.pathname.startsWith('/sync-lyrics') && url.pathname !== '/') {
+  const userAgent = request.headers.get('user-agent') || '';
+  const isMobile = /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(userAgent);
+
+  if (isMobile && url.pathname === '/') {
+    const rewriteReq = new Request(new URL(url.origin + '/m'), request);
+    return env.ASSETS.fetch(rewriteReq);
+  }
+
+  // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
+  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && !url.pathname.startsWith('/sync-lyrics') && url.pathname !== '/' && url.pathname !== '/m') {
     const rewriteReq = new Request(new URL(url.origin + '/'), request);
     return env.ASSETS.fetch(rewriteReq);
   }
