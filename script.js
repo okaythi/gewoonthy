@@ -42,12 +42,23 @@
         remaining = availableVideos.filter(v => v !== lastPlayed);
       }
 
-      // Pick random or force Gabrielle for new visitors
+      // Check for bleeding-edge URL param (?v=...)
+      const urlParams = new URLSearchParams(window.location.search);
+      const requestedSlug = urlParams.get('v');
+      
       let selectedVideo;
-      if (isNewVisitor && availableVideos.includes('Gabrielle - 5 fine frøkner.mp4')) {
-        selectedVideo = 'Gabrielle - 5 fine frøkner.mp4';
-      } else {
-        selectedVideo = remaining[Math.floor(Math.random() * remaining.length)];
+      if (requestedSlug) {
+        const match = availableVideos.find(v => v.toLowerCase().includes(requestedSlug.toLowerCase()));
+        if (match) selectedVideo = match;
+      }
+
+      // Fallback: Pick random or force Gabrielle for new visitors
+      if (!selectedVideo) {
+        if (isNewVisitor && availableVideos.includes('Gabrielle - 5 fine frøkner.mp4')) {
+          selectedVideo = 'Gabrielle - 5 fine frøkner.mp4';
+        } else {
+          selectedVideo = remaining[Math.floor(Math.random() * remaining.length)];
+        }
       }
       
       playedVideos.push(selectedVideo);
@@ -442,6 +453,10 @@
           const next = rem[Math.floor(Math.random() * rem.length)];
           playedVideos.push(next);
           localStorage.setItem('playedVideos', JSON.stringify(playedVideos));
+
+          if (window.location.search) {
+            window.history.replaceState({}, '', window.location.pathname);
+          }
 
           selectedVideo = next;
           fileName = next;

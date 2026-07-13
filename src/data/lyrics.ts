@@ -25915,5 +25915,2915 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       }
     ]
+  },
+  "Grafgravers - Van De G No De H.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 0,
+        "verseEnd": 11.573,
+        "speaker": "<i>West-flemish noises</i>",
+        "words": []
+      },
+      {
+        "verseStart": 11.573,
+        "verseEnd": 13.037,
+        "words": [
+          {
+            "word": "It ",
+            "start": 11.573,
+            "end": 12.182
+          },
+          {
+            "word": "da ",
+            "start": 12.182,
+            "end": 12.346
+          },
+          {
+            "word": "lam ",
+            "start": 12.346,
+            "end": 12.509
+          },
+          {
+            "word": "ooi?",
+            "start": 12.509,
+            "end": 13.037
+          }
+        ]
+      },
+      {
+        "verseStart": 13.037,
+        "verseEnd": 14.426,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 13.037,
+            "end": 13.202
+          },
+          {
+            "word": "da ",
+            "start": 13.202,
+            "end": 13.366
+          },
+          {
+            "word": "lam ",
+            "start": 13.366,
+            "end": 13.528
+          },
+          {
+            "word": "it ",
+            "start": 13.528,
+            "end": 13.696
+          },
+          {
+            "word": "ooi!",
+            "start": 13.696,
+            "end": 14.426
+          }
+        ]
+      },
+      {
+        "verseStart": 14.426,
+        "verseEnd": 15.615,
+        "words": [
+          {
+            "word": "It ",
+            "start": 14.426,
+            "end": 14.629
+          },
+          {
+            "word": "da ",
+            "start": 14.629,
+            "end": 14.792
+          },
+          {
+            "word": "lam ",
+            "start": 14.792,
+            "end": 14.955
+          },
+          {
+            "word": "ooi?",
+            "start": 14.955,
+            "end": 15.615
+          }
+        ]
+      },
+      {
+        "verseStart": 15.615,
+        "verseEnd": 17.046,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 15.615,
+            "end": 15.777
+          },
+          {
+            "word": "da ",
+            "start": 15.777,
+            "end": 15.98
+          },
+          {
+            "word": "lam ",
+            "start": 15.98,
+            "end": 16.224
+          },
+          {
+            "word": "it ",
+            "start": 16.224,
+            "end": 16.388
+          },
+          {
+            "word": "ooi!",
+            "start": 16.388,
+            "end": 17.046
+          }
+        ]
+      },
+      {
+        "verseStart": 17.046,
+        "verseEnd": 18.065,
+        "words": [
+          {
+            "word": "It ",
+            "start": 17.046,
+            "end": 17.208
+          },
+          {
+            "word": "da ",
+            "start": 17.208,
+            "end": 17.373
+          },
+          {
+            "word": "lam ",
+            "start": 17.373,
+            "end": 17.536
+          },
+          {
+            "word": "ooi?",
+            "start": 17.536,
+            "end": 18.065
+          }
+        ]
+      },
+      {
+        "verseStart": 18.065,
+        "verseEnd": 19.925,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 18.065,
+            "end": 18.21
+          },
+          {
+            "word": "da ",
+            "start": 18.21,
+            "end": 18.456
+          },
+          {
+            "word": "lam ",
+            "start": 18.456,
+            "end": 18.619
+          },
+          {
+            "word": "it ",
+            "start": 18.619,
+            "end": 18.823
+          },
+          {
+            "word": "ooi!",
+            "start": 18.823,
+            "end": 19.925
+          }
+        ]
+      },
+      {
+        "verseStart": 19.925,
+        "verseEnd": 22.254,
+        "words": [
+          {
+            "word": "It ",
+            "start": 19.925,
+            "end": 20.048
+          },
+          {
+            "word": "da ",
+            "start": 20.048,
+            "end": 20.211
+          },
+          {
+            "word": "lam ",
+            "start": 20.211,
+            "end": 20.334
+          },
+          {
+            "word": "ooi? ",
+            "start": 20.334,
+            "end": 20.705
+          },
+          {
+            "word": "Bejoa ",
+            "start": 20.705,
+            "end": 20.868
+          },
+          {
+            "word": "joa!",
+            "start": 20.868,
+            "end": 22.254
+          }
+        ]
+      },
+      {
+        "verseStart": 22.254,
+        "verseEnd": 23.23,
+        "words": [
+          {
+            "word": "It ",
+            "start": 22.254,
+            "end": 22.416
+          },
+          {
+            "word": "da ",
+            "start": 22.416,
+            "end": 22.619
+          },
+          {
+            "word": "lam ",
+            "start": 22.619,
+            "end": 22.74
+          },
+          {
+            "word": "ooi?",
+            "start": 22.74,
+            "end": 23.23
+          }
+        ]
+      },
+      {
+        "verseStart": 23.23,
+        "verseEnd": 24.826,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 23.23,
+            "end": 23.393
+          },
+          {
+            "word": "da ",
+            "start": 23.393,
+            "end": 23.597
+          },
+          {
+            "word": "lam ",
+            "start": 23.597,
+            "end": 23.886
+          },
+          {
+            "word": "it ",
+            "start": 23.886,
+            "end": 24.052
+          },
+          {
+            "word": "ooi!",
+            "start": 24.052,
+            "end": 24.826
+          }
+        ]
+      },
+      {
+        "verseStart": 24.826,
+        "verseEnd": 25.769,
+        "words": [
+          {
+            "word": "It ",
+            "start": 24.826,
+            "end": 24.99
+          },
+          {
+            "word": "da ",
+            "start": 24.99,
+            "end": 25.194
+          },
+          {
+            "word": "lam ",
+            "start": 25.194,
+            "end": 25.32
+          },
+          {
+            "word": "ooi?",
+            "start": 25.32,
+            "end": 25.769
+          }
+        ]
+      },
+      {
+        "verseStart": 25.769,
+        "verseEnd": 27.45,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 25.769,
+            "end": 26.182
+          },
+          {
+            "word": "da ",
+            "start": 26.182,
+            "end": 26.306
+          },
+          {
+            "word": "lam ",
+            "start": 26.306,
+            "end": 26.472
+          },
+          {
+            "word": "it ",
+            "start": 26.472,
+            "end": 26.634
+          },
+          {
+            "word": "ooi!",
+            "start": 26.634,
+            "end": 27.45
+          }
+        ]
+      },
+      {
+        "verseStart": 27.45,
+        "verseEnd": 28.391,
+        "words": [
+          {
+            "word": "It ",
+            "start": 27.45,
+            "end": 27.613
+          },
+          {
+            "word": "da ",
+            "start": 27.613,
+            "end": 27.775
+          },
+          {
+            "word": "lam ",
+            "start": 27.775,
+            "end": 27.939
+          },
+          {
+            "word": "ooi?",
+            "start": 27.939,
+            "end": 28.391
+          }
+        ]
+      },
+      {
+        "verseStart": 28.391,
+        "verseEnd": 30.019,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 28.391,
+            "end": 28.717
+          },
+          {
+            "word": "da ",
+            "start": 28.717,
+            "end": 28.883
+          },
+          {
+            "word": "lam ",
+            "start": 28.883,
+            "end": 29.047
+          },
+          {
+            "word": "it ",
+            "start": 29.047,
+            "end": 29.209
+          },
+          {
+            "word": "ooi!",
+            "start": 29.209,
+            "end": 30.019
+          }
+        ]
+      },
+      {
+        "verseStart": 30.019,
+        "verseEnd": 32.105,
+        "words": [
+          {
+            "word": "It ",
+            "start": 30.019,
+            "end": 30.181
+          },
+          {
+            "word": "da ",
+            "start": 30.181,
+            "end": 30.385
+          },
+          {
+            "word": "lam ",
+            "start": 30.385,
+            "end": 30.51
+          },
+          {
+            "word": "ooi? ",
+            "start": 30.51,
+            "end": 31.006
+          },
+          {
+            "word": "Bejoa ",
+            "start": 31.006,
+            "end": 31.413
+          },
+          {
+            "word": "joa!",
+            "start": 31.413,
+            "end": 32.105
+          }
+        ]
+      },
+      {
+        "verseStart": 32.105,
+        "verseEnd": 34.884,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 32.105,
+            "end": 32.267
+          },
+          {
+            "word": "de ",
+            "start": 32.267,
+            "end": 32.431
+          },
+          {
+            "word": "G ",
+            "start": 32.431,
+            "end": 32.755
+          },
+          {
+            "word": "node ",
+            "start": 32.755,
+            "end": 33.087
+          },
+          {
+            "word": "H, ",
+            "start": 33.087,
+            "end": 33.417
+          },
+          {
+            "word": "van ",
+            "start": 33.417,
+            "end": 33.62
+          },
+          {
+            "word": "de ",
+            "start": 33.62,
+            "end": 33.742
+          },
+          {
+            "word": "H ",
+            "start": 33.742,
+            "end": 34.066
+          },
+          {
+            "word": "node ",
+            "start": 34.066,
+            "end": 34.394
+          },
+          {
+            "word": "G",
+            "start": 34.394,
+            "end": 34.884
+          }
+        ]
+      },
+      {
+        "verseStart": 34.884,
+        "verseEnd": 37.275,
+        "words": [
+          {
+            "word": "West-",
+            "start": 34.884,
+            "end": 35.008
+          },
+          {
+            "word": "Vloandern ",
+            "start": 35.008,
+            "end": 35.542
+          },
+          {
+            "word": "vanavond ",
+            "start": 35.542,
+            "end": 36.12
+          },
+          {
+            "word": "doe ",
+            "start": 36.12,
+            "end": 36.244
+          },
+          {
+            "word": "mor ",
+            "start": 36.244,
+            "end": 36.489
+          },
+          {
+            "word": "ollemaole ",
+            "start": 36.489,
+            "end": 36.823
+          },
+          {
+            "word": "mee!",
+            "start": 36.823,
+            "end": 37.275
+          }
+        ]
+      },
+      {
+        "verseStart": 37.275,
+        "verseEnd": 40.072,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 37.275,
+            "end": 37.443
+          },
+          {
+            "word": "de ",
+            "start": 37.443,
+            "end": 37.566
+          },
+          {
+            "word": "G ",
+            "start": 37.566,
+            "end": 37.932
+          },
+          {
+            "word": "node ",
+            "start": 37.932,
+            "end": 38.299
+          },
+          {
+            "word": "H, ",
+            "start": 38.299,
+            "end": 38.588
+          },
+          {
+            "word": "van ",
+            "start": 38.588,
+            "end": 38.791
+          },
+          {
+            "word": "de ",
+            "start": 38.791,
+            "end": 38.915
+          },
+          {
+            "word": "H ",
+            "start": 38.915,
+            "end": 39.214
+          },
+          {
+            "word": "node ",
+            "start": 39.214,
+            "end": 39.583
+          },
+          {
+            "word": "G",
+            "start": 39.583,
+            "end": 40.072
+          }
+        ]
+      },
+      {
+        "verseStart": 40.072,
+        "verseEnd": 42.308,
+        "words": [
+          {
+            "word": "West-",
+            "start": 40.072,
+            "end": 40.072
+          },
+          {
+            "word": "Vloandern ",
+            "start": 40.072,
+            "end": 40.587
+          },
+          {
+            "word": "vanavond ",
+            "start": 40.587,
+            "end": 41.242
+          },
+          {
+            "word": "doe ",
+            "start": 41.242,
+            "end": 41.365
+          },
+          {
+            "word": "mor ",
+            "start": 41.365,
+            "end": 41.57
+          },
+          {
+            "word": "ollemaole ",
+            "start": 41.57,
+            "end": 41.936
+          },
+          {
+            "word": "mee!",
+            "start": 41.936,
+            "end": 42.308
+          }
+        ]
+      },
+      {
+        "verseStart": 42.308,
+        "verseEnd": 44.976,
+        "words": [
+          {
+            "word": "We ",
+            "start": 42.308,
+            "end": 42.43
+          },
+          {
+            "word": "goan ",
+            "start": 42.43,
+            "end": 42.552
+          },
+          {
+            "word": "van ",
+            "start": 42.552,
+            "end": 42.633
+          },
+          {
+            "word": "de ",
+            "start": 42.633,
+            "end": 42.757
+          },
+          {
+            "word": "G ",
+            "start": 42.757,
+            "end": 43.045
+          },
+          {
+            "word": "no ",
+            "start": 43.045,
+            "end": 43.249
+          },
+          {
+            "word": "de ",
+            "start": 43.249,
+            "end": 43.414
+          },
+          {
+            "word": "H ",
+            "start": 43.414,
+            "end": 43.703
+          },
+          {
+            "word": "van ",
+            "start": 43.703,
+            "end": 43.868
+          },
+          {
+            "word": "de ",
+            "start": 43.868,
+            "end": 43.99
+          },
+          {
+            "word": "A ",
+            "start": 43.99,
+            "end": 44.322
+          },
+          {
+            "word": "no ",
+            "start": 44.322,
+            "end": 44.485
+          },
+          {
+            "word": "de ",
+            "start": 44.485,
+            "end": 44.648
+          },
+          {
+            "word": "B",
+            "start": 44.648,
+            "end": 44.976
+          }
+        ]
+      },
+      {
+        "verseStart": 44.976,
+        "verseEnd": 47.521,
+        "words": [
+          {
+            "word": "Heelt ",
+            "start": 44.976,
+            "end": 45.182
+          },
+          {
+            "word": "alfabet ",
+            "start": 45.182,
+            "end": 45.801
+          },
+          {
+            "word": "bewerkt ",
+            "start": 45.801,
+            "end": 46.127
+          },
+          {
+            "word": "up ",
+            "start": 46.127,
+            "end": 46.249
+          },
+          {
+            "word": "uze ",
+            "start": 46.249,
+            "end": 46.579
+          },
+          {
+            "word": "Graver ",
+            "start": 46.579,
+            "end": 47.027
+          },
+          {
+            "word": "LP",
+            "start": 47.027,
+            "end": 47.521
+          }
+        ]
+      },
+      {
+        "verseStart": 47.521,
+        "verseEnd": 50.091,
+        "words": [
+          {
+            "word": "Je ",
+            "start": 47.521,
+            "end": 47.685
+          },
+          {
+            "word": "moet ",
+            "start": 47.685,
+            "end": 47.888
+          },
+          {
+            "word": "niet ",
+            "start": 47.888,
+            "end": 48.051
+          },
+          {
+            "word": "probeern ",
+            "start": 48.051,
+            "end": 48.46
+          },
+          {
+            "word": "van ",
+            "start": 48.46,
+            "end": 48.703
+          },
+          {
+            "word": "us ",
+            "start": 48.703,
+            "end": 48.825
+          },
+          {
+            "word": "in ",
+            "start": 48.825,
+            "end": 48.988
+          },
+          {
+            "word": "een ",
+            "start": 48.988,
+            "end": 49.111
+          },
+          {
+            "word": "maatpak ",
+            "start": 49.111,
+            "end": 49.477
+          },
+          {
+            "word": "te ",
+            "start": 49.477,
+            "end": 49.806
+          },
+          {
+            "word": "steekn",
+            "start": 49.806,
+            "end": 50.091
+          }
+        ]
+      },
+      {
+        "verseStart": 50.091,
+        "verseEnd": 52.625,
+        "words": [
+          {
+            "word": "Owe ",
+            "start": 50.091,
+            "end": 50.213
+          },
+          {
+            "word": "de ",
+            "start": 50.213,
+            "end": 50.376
+          },
+          {
+            "word": "maat ",
+            "start": 50.376,
+            "end": 50.742
+          },
+          {
+            "word": "pakken, ",
+            "start": 50.742,
+            "end": 51.112
+          },
+          {
+            "word": "komn ",
+            "start": 51.112,
+            "end": 51.356
+          },
+          {
+            "word": "we ",
+            "start": 51.356,
+            "end": 51.482
+          },
+          {
+            "word": "de ",
+            "start": 51.482,
+            "end": 51.644
+          },
+          {
+            "word": "maatstaf ",
+            "start": 51.644,
+            "end": 52.173
+          },
+          {
+            "word": "deurbreekn",
+            "start": 52.173,
+            "end": 52.625
+          }
+        ]
+      },
+      {
+        "verseStart": 52.625,
+        "verseEnd": 55.284,
+        "words": [
+          {
+            "word": "Raakvlakken ",
+            "start": 52.625,
+            "end": 53.44
+          },
+          {
+            "word": "smeedn, ",
+            "start": 53.44,
+            "end": 53.767
+          },
+          {
+            "word": "doe ",
+            "start": 53.767,
+            "end": 54.012
+          },
+          {
+            "word": "gieder ",
+            "start": 54.012,
+            "end": 54.257
+          },
+          {
+            "word": "vanavond ",
+            "start": 54.257,
+            "end": 54.38
+          },
+          {
+            "word": "mo ",
+            "start": 54.38,
+            "end": 54.871
+          },
+          {
+            "word": "mee",
+            "start": 54.871,
+            "end": 55.284
+          }
+        ]
+      },
+      {
+        "verseStart": 55.284,
+        "verseEnd": 57.858,
+        "words": [
+          {
+            "word": "Heel ",
+            "start": 55.284,
+            "end": 55.447
+          },
+          {
+            "word": "de ",
+            "start": 55.447,
+            "end": 55.611
+          },
+          {
+            "word": "zale ",
+            "start": 55.611,
+            "end": 56.222
+          },
+          {
+            "word": "gezamenlijk ",
+            "start": 56.222,
+            "end": 56.711
+          },
+          {
+            "word": "een ",
+            "start": 56.711,
+            "end": 56.833
+          },
+          {
+            "word": "zalig ",
+            "start": 56.833,
+            "end": 57.45
+          },
+          {
+            "word": "idee",
+            "start": 57.45,
+            "end": 57.858
+          }
+        ]
+      },
+      {
+        "verseStart": 57.858,
+        "verseEnd": 59.83,
+        "words": [
+          {
+            "word": "Us ",
+            "start": 57.858,
+            "end": 58.029
+          },
+          {
+            "word": "verhaal ",
+            "start": 58.029,
+            "end": 58.4
+          },
+          {
+            "word": "is ",
+            "start": 58.4,
+            "end": 58.728
+          },
+          {
+            "word": "gekneed, ",
+            "start": 58.728,
+            "end": 59.182
+          },
+          {
+            "word": "aangenaam",
+            "start": 59.182,
+            "end": 59.83
+          }
+        ]
+      },
+      {
+        "verseStart": 59.83,
+        "verseEnd": 62.973,
+        "words": [
+          {
+            "word": "5 ",
+            "start": 59.83,
+            "end": 60.195
+          },
+          {
+            "word": "moppetappers ",
+            "start": 60.195,
+            "end": 60.769
+          },
+          {
+            "word": "samen ",
+            "start": 60.769,
+            "end": 61.095
+          },
+          {
+            "word": "rond ",
+            "start": 61.095,
+            "end": 61.299
+          },
+          {
+            "word": "de ",
+            "start": 61.299,
+            "end": 61.461
+          },
+          {
+            "word": "tafel ",
+            "start": 61.461,
+            "end": 61.827
+          },
+          {
+            "word": "lik ",
+            "start": 61.827,
+            "end": 62.152
+          },
+          {
+            "word": "HT&",
+            "start": 62.152,
+            "end": 62.645
+          },
+          {
+            "word": "D",
+            "start": 62.645,
+            "end": 62.973
+          }
+        ]
+      },
+      {
+        "verseStart": 62.973,
+        "verseEnd": 65.665,
+        "words": [
+          {
+            "word": "Wien ",
+            "start": 62.973,
+            "end": 63.341
+          },
+          {
+            "word": "goat ",
+            "start": 63.341,
+            "end": 63.667
+          },
+          {
+            "word": "er ",
+            "start": 63.667,
+            "end": 63.871
+          },
+          {
+            "word": "ier ",
+            "start": 63.871,
+            "end": 64.034
+          },
+          {
+            "word": "nu ",
+            "start": 64.034,
+            "end": 64.32
+          },
+          {
+            "word": "mee ",
+            "start": 64.32,
+            "end": 64.482
+          },
+          {
+            "word": "van ",
+            "start": 64.482,
+            "end": 64.646
+          },
+          {
+            "word": "G ",
+            "start": 64.646,
+            "end": 64.971
+          },
+          {
+            "word": "node ",
+            "start": 64.971,
+            "end": 65.299
+          },
+          {
+            "word": "H",
+            "start": 65.299,
+            "end": 65.665
+          }
+        ]
+      },
+      {
+        "verseStart": 65.665,
+        "verseEnd": 68.136,
+        "words": [
+          {
+            "word": "Tis ",
+            "start": 65.665,
+            "end": 65.665
+          },
+          {
+            "word": "de ",
+            "start": 65.665,
+            "end": 65.731
+          },
+          {
+            "word": "V ",
+            "start": 65.731,
+            "end": 66.219
+          },
+          {
+            "word": "dubbel ",
+            "start": 66.219,
+            "end": 66.464
+          },
+          {
+            "word": "R ",
+            "start": 66.464,
+            "end": 66.831
+          },
+          {
+            "word": "E ",
+            "start": 66.831,
+            "end": 67.034
+          },
+          {
+            "word": "were ",
+            "start": 67.034,
+            "end": 67.402
+          },
+          {
+            "word": "reete ",
+            "start": 67.402,
+            "end": 67.688
+          },
+          {
+            "word": "speciaal",
+            "start": 67.688,
+            "end": 68.136
+          }
+        ]
+      },
+      {
+        "verseStart": 68.136,
+        "verseEnd": 70.84,
+        "words": [
+          {
+            "word": "Tis ",
+            "start": 68.136,
+            "end": 68.545
+          },
+          {
+            "word": "osan ",
+            "start": 68.545,
+            "end": 68.882
+          },
+          {
+            "word": "ol ",
+            "start": 68.882,
+            "end": 69.165
+          },
+          {
+            "word": "vet ",
+            "start": 69.165,
+            "end": 69.491
+          },
+          {
+            "word": "en ",
+            "start": 69.491,
+            "end": 69.653
+          },
+          {
+            "word": "das ",
+            "start": 69.653,
+            "end": 69.816
+          },
+          {
+            "word": "nie ",
+            "start": 69.816,
+            "end": 69.942
+          },
+          {
+            "word": "mjeer ",
+            "start": 69.942,
+            "end": 70.226
+          },
+          {
+            "word": "dan ",
+            "start": 70.226,
+            "end": 70.389
+          },
+          {
+            "word": "normaal",
+            "start": 70.389,
+            "end": 70.84
+          }
+        ]
+      },
+      {
+        "verseStart": 70.84,
+        "verseEnd": 73.381,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 70.84,
+            "end": 71.046
+          },
+          {
+            "word": "de ",
+            "start": 71.046,
+            "end": 71.212
+          },
+          {
+            "word": "raps ",
+            "start": 71.212,
+            "end": 71.496
+          },
+          {
+            "word": "zin ",
+            "start": 71.496,
+            "end": 71.659
+          },
+          {
+            "word": "OHSNAP ",
+            "start": 71.659,
+            "end": 71.782
+          },
+          {
+            "word": "lik ",
+            "start": 71.782,
+            "end": 72.275
+          },
+          {
+            "word": "us ",
+            "start": 72.275,
+            "end": 72.485
+          },
+          {
+            "word": "beeldmateriaal",
+            "start": 72.485,
+            "end": 73.381
+          }
+        ]
+      },
+      {
+        "verseStart": 73.381,
+        "verseEnd": 76.062,
+        "words": [
+          {
+            "word": "Doe ",
+            "start": 73.381,
+            "end": 73.545
+          },
+          {
+            "word": "mo ",
+            "start": 73.545,
+            "end": 73.709
+          },
+          {
+            "word": "mee ",
+            "start": 73.709,
+            "end": 74.041
+          },
+          {
+            "word": "in ",
+            "start": 74.041,
+            "end": 74.205
+          },
+          {
+            "word": "de ",
+            "start": 74.205,
+            "end": 74.369
+          },
+          {
+            "word": "zaal, ",
+            "start": 74.369,
+            "end": 74.736
+          },
+          {
+            "word": "vodajt ",
+            "start": 74.736,
+            "end": 75.106
+          },
+          {
+            "word": "weet ",
+            "start": 75.106,
+            "end": 75.392
+          },
+          {
+            "word": "staom ",
+            "start": 75.392,
+            "end": 75.515
+          },
+          {
+            "word": "in't ",
+            "start": 75.515,
+            "end": 75.682
+          },
+          {
+            "word": "breed",
+            "start": 75.682,
+            "end": 76.062
+          }
+        ]
+      },
+      {
+        "verseStart": 76.062,
+        "verseEnd": 78.683,
+        "words": [
+          {
+            "word": "''Uitgesmeeerd'' ",
+            "start": 76.062,
+            "end": 77.536
+          },
+          {
+            "word": "up ",
+            "start": 77.536,
+            "end": 77.617
+          },
+          {
+            "word": "je ",
+            "start": 77.617,
+            "end": 77.907
+          },
+          {
+            "word": "breedbeeldkanaaal,",
+            "start": 77.907,
+            "end": 78.683
+          }
+        ]
+      },
+      {
+        "verseStart": 78.683,
+        "verseEnd": 82.153,
+        "words": [
+          {
+            "word": "Want ",
+            "start": 78.683,
+            "end": 78.806
+          },
+          {
+            "word": "men ",
+            "start": 78.806,
+            "end": 78.973
+          },
+          {
+            "word": "tong ",
+            "start": 78.973,
+            "end": 79.262
+          },
+          {
+            "word": "is ",
+            "start": 79.262,
+            "end": 79.425
+          },
+          {
+            "word": "me ",
+            "start": 79.425,
+            "end": 79.587
+          },
+          {
+            "word": "zweerd, ",
+            "start": 79.587,
+            "end": 79.956
+          },
+          {
+            "word": "nis ",
+            "start": 79.956,
+            "end": 80.078
+          },
+          {
+            "word": "gesmeed ",
+            "start": 80.078,
+            "end": 80.245
+          },
+          {
+            "word": "in ",
+            "start": 80.245,
+            "end": 80.573
+          },
+          {
+            "word": "het ",
+            "start": 80.573,
+            "end": 80.698
+          },
+          {
+            "word": "heets ",
+            "start": 80.698,
+            "end": 80.82
+          },
+          {
+            "word": "van ",
+            "start": 80.82,
+            "end": 81.271
+          },
+          {
+            "word": "de ",
+            "start": 81.271,
+            "end": 81.434
+          },
+          {
+            "word": "naald",
+            "start": 81.434,
+            "end": 82.153
+          }
+        ]
+      },
+      {
+        "verseStart": 82.153,
+        "verseEnd": 84.232,
+        "words": [
+          {
+            "word": "in ",
+            "start": 82.153,
+            "end": 82.359
+          },
+          {
+            "word": "het ",
+            "start": 82.359,
+            "end": 82.563
+          },
+          {
+            "word": "edelste ",
+            "start": 82.563,
+            "end": 82.807
+          },
+          {
+            "word": "edelmetaal. ",
+            "start": 82.807,
+            "end": 83.703
+          },
+          {
+            "word": "ei !",
+            "start": 83.703,
+            "end": 84.232
+          }
+        ]
+      },
+      {
+        "verseStart": 84.232,
+        "verseEnd": 85.182,
+        "words": [
+          {
+            "word": "It ",
+            "start": 84.232,
+            "end": 84.4
+          },
+          {
+            "word": "da ",
+            "start": 84.4,
+            "end": 84.565
+          },
+          {
+            "word": "lam ",
+            "start": 84.565,
+            "end": 84.731
+          },
+          {
+            "word": "ooi?",
+            "start": 84.731,
+            "end": 85.182
+          }
+        ]
+      },
+      {
+        "verseStart": 85.182,
+        "verseEnd": 86.817,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 85.182,
+            "end": 85.51
+          },
+          {
+            "word": "da ",
+            "start": 85.51,
+            "end": 85.673
+          },
+          {
+            "word": "lam ",
+            "start": 85.673,
+            "end": 85.838
+          },
+          {
+            "word": "it ",
+            "start": 85.838,
+            "end": 86.002
+          },
+          {
+            "word": "ooi!",
+            "start": 86.002,
+            "end": 86.817
+          }
+        ]
+      },
+      {
+        "verseStart": 86.817,
+        "verseEnd": 87.725,
+        "words": [
+          {
+            "word": "It ",
+            "start": 86.817,
+            "end": 86.984
+          },
+          {
+            "word": "da ",
+            "start": 86.984,
+            "end": 87.147
+          },
+          {
+            "word": "lam ",
+            "start": 87.147,
+            "end": 87.311
+          },
+          {
+            "word": "ooi?",
+            "start": 87.311,
+            "end": 87.725
+          }
+        ]
+      },
+      {
+        "verseStart": 87.725,
+        "verseEnd": 89.437,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 87.725,
+            "end": 88.091
+          },
+          {
+            "word": "da ",
+            "start": 88.091,
+            "end": 88.294
+          },
+          {
+            "word": "lam ",
+            "start": 88.294,
+            "end": 88.457
+          },
+          {
+            "word": "it ",
+            "start": 88.457,
+            "end": 88.579
+          },
+          {
+            "word": "ooi",
+            "start": 88.579,
+            "end": 89.437
+          }
+        ]
+      },
+      {
+        "verseStart": 89.437,
+        "verseEnd": 90.295,
+        "words": [
+          {
+            "word": "It ",
+            "start": 89.437,
+            "end": 89.602
+          },
+          {
+            "word": "da ",
+            "start": 89.602,
+            "end": 89.765
+          },
+          {
+            "word": "lam ",
+            "start": 89.765,
+            "end": 89.887
+          },
+          {
+            "word": "ooi?",
+            "start": 89.887,
+            "end": 90.295
+          }
+        ]
+      },
+      {
+        "verseStart": 90.295,
+        "verseEnd": 91.955,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 90.295,
+            "end": 90.676
+          },
+          {
+            "word": "da ",
+            "start": 90.676,
+            "end": 90.843
+          },
+          {
+            "word": "lam ",
+            "start": 90.843,
+            "end": 90.965
+          },
+          {
+            "word": "it ",
+            "start": 90.965,
+            "end": 91.137
+          },
+          {
+            "word": "ooi",
+            "start": 91.137,
+            "end": 91.955
+          }
+        ]
+      },
+      {
+        "verseStart": 91.955,
+        "verseEnd": 93.988,
+        "words": [
+          {
+            "word": "It ",
+            "start": 91.955,
+            "end": 92.124
+          },
+          {
+            "word": "da ",
+            "start": 92.124,
+            "end": 92.331
+          },
+          {
+            "word": "lam ",
+            "start": 92.331,
+            "end": 92.454
+          },
+          {
+            "word": "ooi? ",
+            "start": 92.454,
+            "end": 92.902
+          },
+          {
+            "word": "Bejoat ",
+            "start": 92.902,
+            "end": 93.066
+          },
+          {
+            "word": "joat!",
+            "start": 93.066,
+            "end": 93.988
+          }
+        ]
+      },
+      {
+        "verseStart": 93.988,
+        "verseEnd": 96.808,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 93.988,
+            "end": 94.152
+          },
+          {
+            "word": "de ",
+            "start": 94.152,
+            "end": 94.361
+          },
+          {
+            "word": "G ",
+            "start": 94.361,
+            "end": 94.688
+          },
+          {
+            "word": "node ",
+            "start": 94.688,
+            "end": 95.013
+          },
+          {
+            "word": "H, ",
+            "start": 95.013,
+            "end": 95.338
+          },
+          {
+            "word": "van ",
+            "start": 95.338,
+            "end": 95.5
+          },
+          {
+            "word": "de ",
+            "start": 95.5,
+            "end": 95.664
+          },
+          {
+            "word": "H ",
+            "start": 95.664,
+            "end": 95.989
+          },
+          {
+            "word": "node ",
+            "start": 95.989,
+            "end": 96.316
+          },
+          {
+            "word": "G",
+            "start": 96.316,
+            "end": 96.808
+          }
+        ]
+      },
+      {
+        "verseStart": 96.808,
+        "verseEnd": 99.223,
+        "words": [
+          {
+            "word": "West-",
+            "start": 96.808,
+            "end": 96.97
+          },
+          {
+            "word": "Vloandern ",
+            "start": 96.97,
+            "end": 97.501
+          },
+          {
+            "word": "vanavond ",
+            "start": 97.501,
+            "end": 97.947
+          },
+          {
+            "word": "doe ",
+            "start": 97.947,
+            "end": 98.111
+          },
+          {
+            "word": "mor ",
+            "start": 98.111,
+            "end": 98.281
+          },
+          {
+            "word": "ollemaole ",
+            "start": 98.281,
+            "end": 98.814
+          },
+          {
+            "word": "mee!",
+            "start": 98.814,
+            "end": 99.223
+          }
+        ]
+      },
+      {
+        "verseStart": 99.223,
+        "verseEnd": 102.012,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 99.223,
+            "end": 99.426
+          },
+          {
+            "word": "de ",
+            "start": 99.426,
+            "end": 99.549
+          },
+          {
+            "word": "G ",
+            "start": 99.549,
+            "end": 99.922
+          },
+          {
+            "word": "node ",
+            "start": 99.922,
+            "end": 100.292
+          },
+          {
+            "word": "H, ",
+            "start": 100.292,
+            "end": 100.581
+          },
+          {
+            "word": "van ",
+            "start": 100.581,
+            "end": 100.743
+          },
+          {
+            "word": "de ",
+            "start": 100.743,
+            "end": 100.906
+          },
+          {
+            "word": "H ",
+            "start": 100.906,
+            "end": 101.193
+          },
+          {
+            "word": "node ",
+            "start": 101.193,
+            "end": 101.524
+          },
+          {
+            "word": "G",
+            "start": 101.524,
+            "end": 102.012
+          }
+        ]
+      },
+      {
+        "verseStart": 102.012,
+        "verseEnd": 104.389,
+        "words": [
+          {
+            "word": "West-",
+            "start": 102.012,
+            "end": 102.135
+          },
+          {
+            "word": "Vloandern ",
+            "start": 102.135,
+            "end": 102.667
+          },
+          {
+            "word": "vanavond ",
+            "start": 102.667,
+            "end": 103.121
+          },
+          {
+            "word": "doe ",
+            "start": 103.121,
+            "end": 103.284
+          },
+          {
+            "word": "mor ",
+            "start": 103.284,
+            "end": 103.448
+          },
+          {
+            "word": "ollemaole ",
+            "start": 103.448,
+            "end": 103.938
+          },
+          {
+            "word": "mee!",
+            "start": 103.938,
+            "end": 104.389
+          }
+        ]
+      },
+      {
+        "verseStart": 104.389,
+        "verseEnd": 107.099,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 104.389,
+            "end": 104.593
+          },
+          {
+            "word": "de ",
+            "start": 104.593,
+            "end": 104.761
+          },
+          {
+            "word": "G ",
+            "start": 104.761,
+            "end": 105.087
+          },
+          {
+            "word": "node ",
+            "start": 105.087,
+            "end": 105.294
+          },
+          {
+            "word": "H ",
+            "start": 105.294,
+            "end": 105.623
+          },
+          {
+            "word": "toet ",
+            "start": 105.623,
+            "end": 105.829
+          },
+          {
+            "word": "de ",
+            "start": 105.829,
+            "end": 105.95
+          },
+          {
+            "word": "A ",
+            "start": 105.95,
+            "end": 106.316
+          },
+          {
+            "word": "C ",
+            "start": 106.316,
+            "end": 106.524
+          },
+          {
+            "word": "A ",
+            "start": 106.524,
+            "end": 106.646
+          },
+          {
+            "word": "B",
+            "start": 106.646,
+            "end": 107.099
+          }
+        ]
+      },
+      {
+        "verseStart": 107.099,
+        "verseEnd": 109.517,
+        "words": [
+          {
+            "word": "Wen ",
+            "start": 107.099,
+            "end": 107.264
+          },
+          {
+            "word": "mjeer ",
+            "start": 107.264,
+            "end": 107.589
+          },
+          {
+            "word": "scherpe ",
+            "start": 107.589,
+            "end": 107.835
+          },
+          {
+            "word": "lines ",
+            "start": 107.835,
+            "end": 108.166
+          },
+          {
+            "word": "dan ",
+            "start": 108.166,
+            "end": 108.369
+          },
+          {
+            "word": "een ",
+            "start": 108.369,
+            "end": 108.534
+          },
+          {
+            "word": "HD-",
+            "start": 108.534,
+            "end": 109.026
+          },
+          {
+            "word": "tv",
+            "start": 109.026,
+            "end": 109.517
+          }
+        ]
+      },
+      {
+        "verseStart": 109.517,
+        "verseEnd": 112.151,
+        "words": [
+          {
+            "word": "Jacky ",
+            "start": 109.517,
+            "end": 109.725
+          },
+          {
+            "word": "Chan ",
+            "start": 109.725,
+            "end": 110.179
+          },
+          {
+            "word": "up ",
+            "start": 110.179,
+            "end": 110.345
+          },
+          {
+            "word": "de ",
+            "start": 110.345,
+            "end": 110.508
+          },
+          {
+            "word": "beats ",
+            "start": 110.508,
+            "end": 110.873
+          },
+          {
+            "word": "uit ",
+            "start": 110.873,
+            "end": 111.042
+          },
+          {
+            "word": "da ",
+            "start": 111.042,
+            "end": 111.412
+          },
+          {
+            "word": "mad ",
+            "start": 111.412,
+            "end": 111.656
+          },
+          {
+            "word": "atelier",
+            "start": 111.656,
+            "end": 112.151
+          }
+        ]
+      },
+      {
+        "verseStart": 112.151,
+        "verseEnd": 114.744,
+        "words": [
+          {
+            "word": "Zet ",
+            "start": 112.151,
+            "end": 112.354
+          },
+          {
+            "word": "ze ",
+            "start": 112.354,
+            "end": 112.481
+          },
+          {
+            "word": "beats ",
+            "start": 112.481,
+            "end": 112.851
+          },
+          {
+            "word": "up ",
+            "start": 112.851,
+            "end": 113.015
+          },
+          {
+            "word": "repeat ",
+            "start": 113.015,
+            "end": 113.387
+          },
+          {
+            "word": "en ",
+            "start": 113.387,
+            "end": 113.55
+          },
+          {
+            "word": "krigt ",
+            "start": 113.55,
+            "end": 113.754
+          },
+          {
+            "word": "A ",
+            "start": 113.754,
+            "end": 114.081
+          },
+          {
+            "word": "D ",
+            "start": 114.081,
+            "end": 114.246
+          },
+          {
+            "word": "H ",
+            "start": 114.246,
+            "end": 114.409
+          },
+          {
+            "word": "D",
+            "start": 114.409,
+            "end": 114.744
+          }
+        ]
+      },
+      {
+        "verseStart": 114.744,
+        "verseEnd": 117.316,
+        "words": [
+          {
+            "word": "Go ",
+            "start": 114.744,
+            "end": 114.947
+          },
+          {
+            "word": "mo ",
+            "start": 114.947,
+            "end": 115.11
+          },
+          {
+            "word": "meeej, ",
+            "start": 115.11,
+            "end": 115.395
+          },
+          {
+            "word": "go ",
+            "start": 115.395,
+            "end": 115.561
+          },
+          {
+            "word": "mo ",
+            "start": 115.561,
+            "end": 115.723
+          },
+          {
+            "word": "meej, ",
+            "start": 115.723,
+            "end": 116.048
+          },
+          {
+            "word": "up ",
+            "start": 116.048,
+            "end": 116.21
+          },
+          {
+            "word": "een ",
+            "start": 116.21,
+            "end": 116.332
+          },
+          {
+            "word": "graver ",
+            "start": 116.332,
+            "end": 116.826
+          },
+          {
+            "word": "tournéé",
+            "start": 116.826,
+            "end": 117.316
+          }
+        ]
+      },
+      {
+        "verseStart": 117.316,
+        "verseEnd": 119.94,
+        "words": [
+          {
+            "word": "General ",
+            "start": 117.316,
+            "end": 117.77
+          },
+          {
+            "word": "in ",
+            "start": 117.77,
+            "end": 117.934
+          },
+          {
+            "word": "de ",
+            "start": 117.934,
+            "end": 118.137
+          },
+          {
+            "word": "zoale ",
+            "start": 118.137,
+            "end": 118.751
+          },
+          {
+            "word": "een ",
+            "start": 118.751,
+            "end": 118.913
+          },
+          {
+            "word": "tente ",
+            "start": 118.913,
+            "end": 119.328
+          },
+          {
+            "word": "oft ",
+            "start": 119.328,
+            "end": 119.49
+          },
+          {
+            "word": "café",
+            "start": 119.49,
+            "end": 119.94
+          }
+        ]
+      },
+      {
+        "verseStart": 119.94,
+        "verseEnd": 122.555,
+        "words": [
+          {
+            "word": "5 ",
+            "start": 119.94,
+            "end": 120.39
+          },
+          {
+            "word": "gangen ",
+            "start": 120.39,
+            "end": 120.675
+          },
+          {
+            "word": "upt ",
+            "start": 120.675,
+            "end": 120.883
+          },
+          {
+            "word": "menu, ",
+            "start": 120.883,
+            "end": 121.249
+          },
+          {
+            "word": "tis ",
+            "start": 121.249,
+            "end": 121.453
+          },
+          {
+            "word": "een ",
+            "start": 121.453,
+            "end": 121.776
+          },
+          {
+            "word": "graver ",
+            "start": 121.776,
+            "end": 122.022
+          },
+          {
+            "word": "diner",
+            "start": 122.022,
+            "end": 122.555
+          }
+        ]
+      },
+      {
+        "verseStart": 122.555,
+        "verseEnd": 125.233,
+        "words": [
+          {
+            "word": "Dus ",
+            "start": 122.555,
+            "end": 122.725
+          },
+          {
+            "word": "goan ",
+            "start": 122.725,
+            "end": 122.851
+          },
+          {
+            "word": "oalt ",
+            "start": 122.851,
+            "end": 123.142
+          },
+          {
+            "word": "den ",
+            "start": 123.142,
+            "end": 123.304
+          },
+          {
+            "word": "LP ",
+            "start": 123.304,
+            "end": 123.754
+          },
+          {
+            "word": "en ",
+            "start": 123.754,
+            "end": 123.916
+          },
+          {
+            "word": "betaal ",
+            "start": 123.916,
+            "end": 124.369
+          },
+          {
+            "word": "jen ",
+            "start": 124.369,
+            "end": 124.534
+          },
+          {
+            "word": "entréé",
+            "start": 124.534,
+            "end": 125.233
+          }
+        ]
+      },
+      {
+        "verseStart": 125.233,
+        "verseEnd": 127.615,
+        "words": [
+          {
+            "word": "We ",
+            "start": 125.233,
+            "end": 125.356
+          },
+          {
+            "word": "bluvn ",
+            "start": 125.356,
+            "end": 125.483
+          },
+          {
+            "word": "bezig ",
+            "start": 125.483,
+            "end": 125.812
+          },
+          {
+            "word": "integraaal, ",
+            "start": 125.812,
+            "end": 126.305
+          },
+          {
+            "word": "van ",
+            "start": 126.305,
+            "end": 126.467
+          },
+          {
+            "word": "G ",
+            "start": 126.467,
+            "end": 126.916
+          },
+          {
+            "word": "node ",
+            "start": 126.916,
+            "end": 127.083
+          },
+          {
+            "word": "H",
+            "start": 127.083,
+            "end": 127.615
+          }
+        ]
+      },
+      {
+        "verseStart": 127.615,
+        "verseEnd": 130.233,
+        "words": [
+          {
+            "word": "Asan ",
+            "start": 127.615,
+            "end": 127.863
+          },
+          {
+            "word": "trakteern ",
+            "start": 127.863,
+            "end": 128.15
+          },
+          {
+            "word": "is ",
+            "start": 128.15,
+            "end": 128.394
+          },
+          {
+            "word": "nie ",
+            "start": 128.394,
+            "end": 128.516
+          },
+          {
+            "word": "rendabel, ",
+            "start": 128.516,
+            "end": 128.888
+          },
+          {
+            "word": "doamee ",
+            "start": 128.888,
+            "end": 129.254
+          },
+          {
+            "word": "dame ",
+            "start": 129.254,
+            "end": 129.541
+          },
+          {
+            "word": "vraagn",
+            "start": 129.541,
+            "end": 130.233
+          }
+        ]
+      },
+      {
+        "verseStart": 130.233,
+        "verseEnd": 132.727,
+        "words": [
+          {
+            "word": "Voe ",
+            "start": 130.233,
+            "end": 130.481
+          },
+          {
+            "word": "met ",
+            "start": 130.481,
+            "end": 130.848
+          },
+          {
+            "word": "de ",
+            "start": 130.848,
+            "end": 131.213
+          },
+          {
+            "word": "Gravers, ",
+            "start": 131.213,
+            "end": 131.664
+          },
+          {
+            "word": "bezeetn ",
+            "start": 131.664,
+            "end": 131.827
+          },
+          {
+            "word": "te ",
+            "start": 131.827,
+            "end": 132.276
+          },
+          {
+            "word": "graavn",
+            "start": 132.276,
+            "end": 132.727
+          }
+        ]
+      },
+      {
+        "verseStart": 132.727,
+        "verseEnd": 135.313,
+        "words": [
+          {
+            "word": "We ",
+            "start": 132.727,
+            "end": 132.892
+          },
+          {
+            "word": "loatn ",
+            "start": 132.892,
+            "end": 133.142
+          },
+          {
+            "word": "de '",
+            "start": 133.142,
+            "end": 133.346
+          },
+          {
+            "word": "Ultra' ",
+            "start": 133.346,
+            "end": 133.51
+          },
+          {
+            "word": "achterwege ",
+            "start": 133.51,
+            "end": 133.631
+          },
+          {
+            "word": "toch ",
+            "start": 133.631,
+            "end": 134.124
+          },
+          {
+            "word": "wordt ",
+            "start": 134.124,
+            "end": 134.33
+          },
+          {
+            "word": "het ",
+            "start": 134.33,
+            "end": 134.453
+          },
+          {
+            "word": "magnetisch ",
+            "start": 134.453,
+            "end": 134.742
+          },
+          {
+            "word": "vanaavnd",
+            "start": 134.742,
+            "end": 135.313
+          }
+        ]
+      },
+      {
+        "verseStart": 135.313,
+        "verseEnd": 137.864,
+        "words": [
+          {
+            "word": "Met ",
+            "start": 135.313,
+            "end": 135.539
+          },
+          {
+            "word": "een ",
+            "start": 135.539,
+            "end": 135.704
+          },
+          {
+            "word": "cohesiekracht ",
+            "start": 135.704,
+            "end": 135.988
+          },
+          {
+            "word": "genaamd, ",
+            "start": 135.988,
+            "end": 136.967
+          },
+          {
+            "word": "Fenomenaal !",
+            "start": 136.967,
+            "end": 137.864
+          }
+        ]
+      },
+      {
+        "verseStart": 137.864,
+        "verseEnd": 140.723,
+        "words": [
+          {
+            "word": "Geld ",
+            "start": 137.864,
+            "end": 138.008
+          },
+          {
+            "word": "stoa ",
+            "start": 138.008,
+            "end": 138.172
+          },
+          {
+            "word": "nie ",
+            "start": 138.172,
+            "end": 138.337
+          },
+          {
+            "word": "centraal ",
+            "start": 138.337,
+            "end": 138.907
+          },
+          {
+            "word": "doamee ",
+            "start": 138.907,
+            "end": 139.071
+          },
+          {
+            "word": "dame ",
+            "start": 139.071,
+            "end": 139.274
+          },
+          {
+            "word": "noois ",
+            "start": 139.274,
+            "end": 139.602
+          },
+          {
+            "word": "goan ",
+            "start": 139.602,
+            "end": 139.888
+          },
+          {
+            "word": "ofhaakn",
+            "start": 139.888,
+            "end": 140.723
+          }
+        ]
+      },
+      {
+        "verseStart": 140.723,
+        "verseEnd": 143.183,
+        "words": [
+          {
+            "word": "Met ",
+            "start": 140.723,
+            "end": 140.929
+          },
+          {
+            "word": "op ",
+            "start": 140.929,
+            "end": 141.213
+          },
+          {
+            "word": "te ",
+            "start": 141.213,
+            "end": 141.457
+          },
+          {
+            "word": "geevn ",
+            "start": 141.457,
+            "end": 141.624
+          },
+          {
+            "word": "goaj ",
+            "start": 141.624,
+            "end": 142.072
+          },
+          {
+            "word": "der ",
+            "start": 142.072,
+            "end": 142.401
+          },
+          {
+            "word": "nie ",
+            "start": 142.401,
+            "end": 142.687
+          },
+          {
+            "word": "geraakn",
+            "start": 142.687,
+            "end": 143.183
+          }
+        ]
+      },
+      {
+        "verseStart": 143.183,
+        "verseEnd": 146.251,
+        "words": [
+          {
+            "word": "Dus ",
+            "start": 143.183,
+            "end": 143.386
+          },
+          {
+            "word": "iedereen ",
+            "start": 143.386,
+            "end": 143.508
+          },
+          {
+            "word": "doe ",
+            "start": 143.508,
+            "end": 143.793
+          },
+          {
+            "word": "mee ",
+            "start": 143.793,
+            "end": 143.955
+          },
+          {
+            "word": "vanavond, ",
+            "start": 143.955,
+            "end": 144.53
+          },
+          {
+            "word": "loat ",
+            "start": 144.53,
+            "end": 144.735
+          },
+          {
+            "word": "het ",
+            "start": 144.735,
+            "end": 145.025
+          },
+          {
+            "word": "explodeern, ",
+            "start": 145.025,
+            "end": 145.352
+          },
+          {
+            "word": "WRAAAAAAAAAH !",
+            "start": 145.352,
+            "end": 146.251
+          }
+        ]
+      },
+      {
+        "verseStart": 146.251,
+        "verseEnd": 147.151,
+        "words": [
+          {
+            "word": "It ",
+            "start": 146.251,
+            "end": 146.415
+          },
+          {
+            "word": "da ",
+            "start": 146.415,
+            "end": 146.536
+          },
+          {
+            "word": "lam ",
+            "start": 146.536,
+            "end": 146.702
+          },
+          {
+            "word": "ooi?",
+            "start": 146.702,
+            "end": 147.151
+          }
+        ]
+      },
+      {
+        "verseStart": 147.151,
+        "verseEnd": 148.826,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 147.151,
+            "end": 147.314
+          },
+          {
+            "word": "da ",
+            "start": 147.314,
+            "end": 147.564
+          },
+          {
+            "word": "lam ",
+            "start": 147.564,
+            "end": 147.81
+          },
+          {
+            "word": "it ",
+            "start": 147.81,
+            "end": 148.013
+          },
+          {
+            "word": "ooi!",
+            "start": 148.013,
+            "end": 148.826
+          }
+        ]
+      },
+      {
+        "verseStart": 148.826,
+        "verseEnd": 149.73,
+        "words": [
+          {
+            "word": "It ",
+            "start": 148.826,
+            "end": 148.989
+          },
+          {
+            "word": "da ",
+            "start": 148.989,
+            "end": 149.154
+          },
+          {
+            "word": "lam ",
+            "start": 149.154,
+            "end": 149.321
+          },
+          {
+            "word": "ooi?",
+            "start": 149.321,
+            "end": 149.73
+          }
+        ]
+      },
+      {
+        "verseStart": 149.73,
+        "verseEnd": 156.055,
+        "words": [
+          {
+            "word": "Bejoat ",
+            "start": 149.73,
+            "end": 150.137
+          },
+          {
+            "word": "da ",
+            "start": 150.137,
+            "end": 150.3
+          },
+          {
+            "word": "lam ",
+            "start": 150.3,
+            "end": 150.462
+          },
+          {
+            "word": "it ",
+            "start": 150.462,
+            "end": 150.585
+          },
+          {
+            "word": "ooi",
+            "start": 150.585,
+            "end": 156.055
+          }
+        ]
+      },
+      {
+        "verseStart": 156.055,
+        "verseEnd": 158.87,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 156.055,
+            "end": 156.217
+          },
+          {
+            "word": "de ",
+            "start": 156.217,
+            "end": 156.38
+          },
+          {
+            "word": "G ",
+            "start": 156.38,
+            "end": 156.706
+          },
+          {
+            "word": "node ",
+            "start": 156.706,
+            "end": 157.074
+          },
+          {
+            "word": "H, ",
+            "start": 157.074,
+            "end": 157.399
+          },
+          {
+            "word": "van ",
+            "start": 157.399,
+            "end": 157.561
+          },
+          {
+            "word": "de ",
+            "start": 157.561,
+            "end": 157.684
+          },
+          {
+            "word": "H ",
+            "start": 157.684,
+            "end": 158.01
+          },
+          {
+            "word": "node ",
+            "start": 158.01,
+            "end": 158.337
+          },
+          {
+            "word": "G",
+            "start": 158.337,
+            "end": 158.87
+          }
+        ]
+      },
+      {
+        "verseStart": 158.87,
+        "verseEnd": 161.206,
+        "words": [
+          {
+            "word": "West-",
+            "start": 158.87,
+            "end": 159.034
+          },
+          {
+            "word": "Vloandern ",
+            "start": 159.034,
+            "end": 159.529
+          },
+          {
+            "word": "vanavond ",
+            "start": 159.529,
+            "end": 159.978
+          },
+          {
+            "word": "doe ",
+            "start": 159.978,
+            "end": 160.141
+          },
+          {
+            "word": "mor ",
+            "start": 160.141,
+            "end": 160.303
+          },
+          {
+            "word": "ollemaole ",
+            "start": 160.303,
+            "end": 160.793
+          },
+          {
+            "word": "mee!",
+            "start": 160.793,
+            "end": 161.206
+          }
+        ]
+      },
+      {
+        "verseStart": 161.206,
+        "verseEnd": 164.019,
+        "words": [
+          {
+            "word": "Van ",
+            "start": 161.206,
+            "end": 161.409
+          },
+          {
+            "word": "de ",
+            "start": 161.409,
+            "end": 161.532
+          },
+          {
+            "word": "G ",
+            "start": 161.532,
+            "end": 161.9
+          },
+          {
+            "word": "node ",
+            "start": 161.9,
+            "end": 162.51
+          },
+          {
+            "word": "H, ",
+            "start": 162.51,
+            "end": 162.835
+          },
+          {
+            "word": "van ",
+            "start": 162.835,
+            "end": 162.958
+          },
+          {
+            "word": "de ",
+            "start": 162.958,
+            "end": 163.244
+          },
+          {
+            "word": "H ",
+            "start": 163.244,
+            "end": 163.406
+          },
+          {
+            "word": "node ",
+            "start": 163.406,
+            "end": 163.571
+          },
+          {
+            "word": "G",
+            "start": 163.571,
+            "end": 164.019
+          }
+        ]
+      },
+      {
+        "verseStart": 164.019,
+        "verseEnd": 167.855,
+        "words": [
+          {
+            "word": "West-",
+            "start": 164.019,
+            "end": 164.507
+          },
+          {
+            "word": "Vloandern ",
+            "start": 164.507,
+            "end": 164.671
+          },
+          {
+            "word": "vanavond ",
+            "start": 164.671,
+            "end": 164.837
+          },
+          {
+            "word": "doe ",
+            "start": 164.837,
+            "end": 165.285
+          },
+          {
+            "word": "mor ",
+            "start": 165.285,
+            "end": 165.53
+          },
+          {
+            "word": "ollemaole ",
+            "start": 165.53,
+            "end": 165.855
+          },
+          {
+            "word": "mee!",
+            "start": 165.855,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };
