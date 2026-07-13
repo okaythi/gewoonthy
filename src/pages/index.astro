@@ -335,27 +335,41 @@ const pageTitle = "I'm cooking something here...";
     .footer {
       flex-shrink: 0;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 0.5rem 1rem;
-      gap: 0.75rem;
     }
 
-    .discord-contact {
+    .contact-module {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-size: 0.675rem;
+      gap: 14px;
+      padding: 6px 6px 6px 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-module-divider {
+      width: 1px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
       color: var(--fg);
       font-weight: 500;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
     .pfp-mini-container {
       position: relative;
-      width: 19px;
-      height: 19px;
+      width: 32px;
+      height: 32px;
     }
 
     .pfp-mini-container img {
@@ -368,33 +382,41 @@ const pageTitle = "I'm cooking something here...";
 
     .status-dot {
       position: absolute;
-      bottom: -2px;
-      right: -2px;
-      width: 7px;
-      height: 7px;
+      bottom: -1px;
+      right: -1px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background-color: #80848e; /* Default offline */
-      border: 2px solid var(--bg);
+      background-color: #80848e;
+      border: 2px solid #1a1a1a;
     }
 
     .github-link {
+      color: var(--fg);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--fg-dim);
-      transition: color 0.2s;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      transition: background 0.2s, transform 0.1s;
+      text-decoration: none;
     }
 
     .github-link:hover {
-      color: var(--fg);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .github-link:active {
+      transform: scale(0.95);
     }
 
     .github-link svg {
-      width: 24px;
-      height: 24px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
     }
-
 
     .player-bottom-row {
       display: grid;
@@ -404,6 +426,21 @@ const pageTitle = "I'm cooking something here...";
       min-height: 48px;
       margin-top: 12px;
       z-index: 5;
+    }
+    
+    @media (max-width: 768px) {
+      .player-bottom-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .lyrics-container {
+        order: 3;
+        width: 100%;
+        margin-top: 16px;
+      }
+      .left-controls { order: 1; }
+      .vote-controls { order: 2; }
     }
 
     .left-controls {
@@ -440,8 +477,8 @@ const pageTitle = "I'm cooking something here...";
     }
 
     .shuffle-btn svg {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
@@ -480,8 +517,8 @@ const pageTitle = "I'm cooking something here...";
     }
 
     .vote-btn svg {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
@@ -623,19 +660,21 @@ const pageTitle = "I'm cooking something here...";
     </div>
 
     <div class="footer">
-      <div class="discord-contact">
-        <div class="pfp-mini-container">
-          <img id="mini-pfp" src="/api/pfp" alt="PFP" />
-          <div id="mini-status" class="status-dot"></div>
+      <div class="contact-module">
+        <div class="contact-line">
+          <div class="pfp-mini-container">
+            <img id="mini-pfp" src="/api/pfp" alt="PFP" />
+            <div id="mini-status" class="status-dot"></div>
+          </div>
+          <span><span style="opacity: 0.6">Discord:</span> <span id="discord-username">okaythi</span></span>
         </div>
-        <span>Contact me on Discord: <span id="discord-username">okaythi</span></span>
+        <div class="contact-module-divider"></div>
+        <a href="https://github.com/okaythi" class="github-link" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
       </div>
-      
-      <a href="https://github.com/okaythi" class="github-link" target="_blank" rel="noopener noreferrer" title="GitHub">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-        </svg>
-      </a>
     </div>
   </div>
 
