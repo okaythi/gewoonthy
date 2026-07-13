@@ -24340,1597 +24340,1576 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 0.25,
-        "verseEnd": 5.25,
-        "words": [
-          {
-            "word": "We're ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "rolling \"",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "Suicide\"",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 46.24,
-        "verseEnd": 51.24,
+        "verseStart": 44.842,
+        "verseEnd": 45.784,
         "words": [
           {
             "word": "Wake ",
-            "start": 0,
-            "end": 0
+            "start": 44.842,
+            "end": 44.965
           },
           {
             "word": "up (",
-            "start": 0,
-            "end": 0
+            "start": 44.965,
+            "end": 45.618
           },
           {
             "word": "wake ",
-            "start": 0,
-            "end": 0
+            "start": 45.618,
+            "end": 45.7
           },
           {
             "word": "up)",
-            "start": 0,
-            "end": 0
+            "start": 45.7,
+            "end": 45.784
           }
         ]
       },
       {
-        "verseStart": 47.1,
-        "verseEnd": 52.1,
+        "verseStart": 45.784,
+        "verseEnd": 47.663,
         "words": [
           {
             "word": "Grab ",
-            "start": 0,
-            "end": 0
+            "start": 45.784,
+            "end": 45.967
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 45.967,
+            "end": 46.092
           },
           {
             "word": "brush ",
-            "start": 0,
-            "end": 0
+            "start": 46.092,
+            "end": 46.174
           },
           {
             "word": "and ",
-            "start": 0,
-            "end": 0
+            "start": 46.174,
+            "end": 46.255
           },
           {
             "word": "put ",
-            "start": 0,
-            "end": 0
+            "start": 46.255,
+            "end": 46.423
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 46.423,
+            "end": 46.547
           },
           {
             "word": "little ",
-            "start": 0,
-            "end": 0
+            "start": 46.547,
+            "end": 46.964
           },
           {
             "word": "makeup",
-            "start": 0,
-            "end": 0
+            "start": 46.964,
+            "end": 47.663
           }
         ]
       },
       {
-        "verseStart": 49.06,
-        "verseEnd": 54.06,
+        "verseStart": 47.663,
+        "verseEnd": 48.563,
         "words": [
           {
             "word": "Hide ",
-            "start": 0,
-            "end": 0
+            "start": 47.663,
+            "end": 47.788
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 47.788,
+            "end": 47.869
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 47.869,
+            "end": 47.991
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 47.991,
+            "end": 48.073
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 48.073,
+            "end": 48.195
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 48.195,
+            "end": 48.317
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 48.317,
+            "end": 48.44
           },
           {
             "word": "shakeup",
-            "start": 0,
-            "end": 0
+            "start": 48.44,
+            "end": 48.563
           }
         ]
       },
       {
-        "verseStart": 50.27,
-        "verseEnd": 55.27,
+        "verseStart": 48.563,
+        "verseEnd": 49.518,
         "words": [
           {
             "word": "(Hide ",
-            "start": 0,
-            "end": 0
+            "start": 48.563,
+            "end": 48.69
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 48.69,
+            "end": 48.772
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 48.772,
+            "end": 48.898
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 48.898,
+            "end": 49.025
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 49.025,
+            "end": 49.147
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 49.147,
+            "end": 49.271
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 49.271,
+            "end": 49.395
           },
           {
             "word": "shakeup)",
-            "start": 0,
-            "end": 0
+            "start": 49.395,
+            "end": 49.518
           }
         ]
       },
       {
-        "verseStart": 50.81,
-        "verseEnd": 55.81,
+        "verseStart": 49.518,
+        "verseEnd": 51.379,
         "words": [
           {
             "word": "Why'd ",
-            "start": 0,
-            "end": 0
+            "start": 49.518,
+            "end": 49.578
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 49.578,
+            "end": 49.702
           },
           {
             "word": "leave ",
-            "start": 0,
-            "end": 0
+            "start": 49.702,
+            "end": 49.824
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 49.824,
+            "end": 49.906
           },
           {
             "word": "keys ",
-            "start": 0,
-            "end": 0
+            "start": 49.906,
+            "end": 50.069
           },
           {
             "word": "upon ",
-            "start": 0,
-            "end": 0
+            "start": 50.069,
+            "end": 50.191
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 50.191,
+            "end": 50.394
           },
           {
             "word": "table?",
-            "start": 0,
-            "end": 0
+            "start": 50.394,
+            "end": 51.379
           }
         ]
       },
       {
-        "verseStart": 52.78,
-        "verseEnd": 57.78,
+        "verseStart": 51.379,
+        "verseEnd": 53.26,
         "words": [
           {
             "word": "Here ",
-            "start": 0,
-            "end": 0
+            "start": 51.379,
+            "end": 51.501
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 51.501,
+            "end": 51.664
           },
           {
             "word": "go, ",
-            "start": 0,
-            "end": 0
+            "start": 51.664,
+            "end": 51.825
           },
           {
             "word": "create ",
-            "start": 0,
-            "end": 0
+            "start": 51.825,
+            "end": 51.907
           },
           {
             "word": "another ",
-            "start": 0,
-            "end": 0
+            "start": 51.907,
+            "end": 52.073
           },
           {
             "word": "fable, ",
-            "start": 0,
-            "end": 0
+            "start": 52.073,
+            "end": 52.155
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 52.155,
+            "end": 52.608
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 52.608,
+            "end": 52.73
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 52.73,
+            "end": 53.26
           }
         ]
       },
       {
-        "verseStart": 54.85,
-        "verseEnd": 59.85,
+        "verseStart": 53.26,
+        "verseEnd": 55.317,
         "words": [
           {
             "word": "Grab ",
-            "start": 0,
-            "end": 0
+            "start": 53.26,
+            "end": 53.386
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 53.386,
+            "end": 53.47
           },
           {
             "word": "brush ",
-            "start": 0,
-            "end": 0
+            "start": 53.47,
+            "end": 53.596
           },
           {
             "word": "and ",
-            "start": 0,
-            "end": 0
+            "start": 53.596,
+            "end": 53.723
           },
           {
             "word": "put ",
-            "start": 0,
-            "end": 0
+            "start": 53.723,
+            "end": 53.846
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 53.846,
+            "end": 53.97
           },
           {
             "word": "little ",
-            "start": 0,
-            "end": 0
+            "start": 53.97,
+            "end": 54.093
           },
           {
             "word": "makeup, ",
-            "start": 0,
-            "end": 0
+            "start": 54.093,
+            "end": 54.263
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 54.263,
+            "end": 54.639
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 54.639,
+            "end": 54.762
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 54.762,
+            "end": 55.317
           }
         ]
       },
       {
-        "verseStart": 56.51,
-        "verseEnd": 61.51,
+        "verseStart": 55.317,
+        "verseEnd": 57.156,
         "words": [
           {
             "word": "Hide ",
-            "start": 0,
-            "end": 0
+            "start": 55.317,
+            "end": 55.44
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 55.44,
+            "end": 55.563
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 55.563,
+            "end": 55.77
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 55.77,
+            "end": 55.933
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 55.933,
+            "end": 56.056
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 56.056,
+            "end": 56.219
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 56.219,
+            "end": 56.341
           },
           {
             "word": "shakeup, ",
-            "start": 0,
-            "end": 0
+            "start": 56.341,
+            "end": 56.627
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 56.627,
+            "end": 56.791
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 56.791,
+            "end": 56.913
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 56.913,
+            "end": 57.156
           }
         ]
       },
       {
-        "verseStart": 58.43,
-        "verseEnd": 63.43,
+        "verseStart": 57.156,
+        "verseEnd": 58.81,
         "words": [
           {
             "word": "Why'd ",
-            "start": 0,
-            "end": 0
+            "start": 57.156,
+            "end": 57.279
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 57.279,
+            "end": 57.406
           },
           {
             "word": "leave ",
-            "start": 0,
-            "end": 0
+            "start": 57.406,
+            "end": 57.492
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 57.492,
+            "end": 57.657
           },
           {
             "word": "keys ",
-            "start": 0,
-            "end": 0
+            "start": 57.657,
+            "end": 57.78
           },
           {
             "word": "upon ",
-            "start": 0,
-            "end": 0
+            "start": 57.78,
+            "end": 57.942
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 57.942,
+            "end": 58.104
           },
           {
             "word": "table? ",
-            "start": 0,
-            "end": 0
+            "start": 58.104,
+            "end": 58.431
           },
           {
             "word": "You ",
-            "start": 0,
-            "end": 0
+            "start": 58.431,
+            "end": 58.558
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 58.558,
+            "end": 58.684
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 58.684,
+            "end": 58.81
           }
         ]
       },
       {
-        "verseStart": 60.51,
-        "verseEnd": 65.50999999999999,
+        "verseStart": 58.81,
+        "verseEnd": 61.927,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 58.81,
+            "end": 59.101
           },
           {
             "word": "don't ",
-            "start": 0,
-            "end": 0
+            "start": 59.101,
+            "end": 59.306
           },
           {
             "word": "think ",
-            "start": 0,
-            "end": 0
+            "start": 59.306,
+            "end": 59.602
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 59.602,
+            "end": 59.928
           },
           {
             "word": "trust",
-            "start": 0,
-            "end": 0
+            "start": 59.928,
+            "end": 61.927
           }
         ]
       },
       {
-        "verseStart": 63.47,
-        "verseEnd": 68.47,
+        "verseStart": 61.927,
+        "verseEnd": 69.657,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 61.927,
+            "end": 63.979
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 63.979,
+            "end": 65.858
           },
           {
             "word": "self-",
-            "start": 0,
-            "end": 0
+            "start": 65.858,
+            "end": 66.183
           },
           {
             "word": "righteous ",
-            "start": 0,
-            "end": 0
+            "start": 66.183,
+            "end": 66.837
           },
           {
             "word": "suicide",
-            "start": 0,
-            "end": 0
+            "start": 66.837,
+            "end": 69.657
           }
         ]
       },
       {
-        "verseStart": 71.09,
-        "verseEnd": 76.09,
+        "verseStart": 69.657,
+        "verseEnd": 84.523,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 69.657,
+            "end": 71.504
           },
           {
             "word": "cry ",
-            "start": 0,
-            "end": 0
+            "start": 71.504,
+            "end": 73.184
           },
           {
             "word": "when ",
-            "start": 0,
-            "end": 0
+            "start": 73.184,
+            "end": 73.428
           },
           {
             "word": "angels ",
-            "start": 0,
-            "end": 0
+            "start": 73.428,
+            "end": 74.122
           },
           {
             "word": "deserve ",
-            "start": 0,
-            "end": 0
+            "start": 74.122,
+            "end": 74.818
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 74.818,
+            "end": 75.267
           },
           {
             "word": "die!",
-            "start": 0,
-            "end": 0
+            "start": 75.267,
+            "end": 84.523
           }
         ]
       },
       {
-        "verseStart": 85.99,
-        "verseEnd": 90.99,
+        "verseStart": 84.523,
+        "verseEnd": 85.435,
         "words": [
           {
             "word": "Wake ",
-            "start": 0,
-            "end": 0
+            "start": 84.523,
+            "end": 84.645
           },
           {
             "word": "up (",
-            "start": 0,
-            "end": 0
+            "start": 84.645,
+            "end": 84.933
           },
           {
             "word": "wake ",
-            "start": 0,
-            "end": 0
+            "start": 84.933,
+            "end": 85.058
           },
           {
             "word": "up)",
-            "start": 0,
-            "end": 0
+            "start": 85.058,
+            "end": 85.435
           }
         ]
       },
       {
-        "verseStart": 86.89,
-        "verseEnd": 91.89,
+        "verseStart": 85.435,
+        "verseEnd": 87.367,
         "words": [
           {
             "word": "Grab ",
-            "start": 0,
-            "end": 0
+            "start": 85.435,
+            "end": 85.517
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 85.517,
+            "end": 85.643
           },
           {
             "word": "brush ",
-            "start": 0,
-            "end": 0
+            "start": 85.643,
+            "end": 85.725
           },
           {
             "word": "and ",
-            "start": 0,
-            "end": 0
+            "start": 85.725,
+            "end": 85.852
           },
           {
             "word": "put ",
-            "start": 0,
-            "end": 0
+            "start": 85.852,
+            "end": 85.934
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 85.934,
+            "end": 86.057
           },
           {
             "word": "little ",
-            "start": 0,
-            "end": 0
+            "start": 86.057,
+            "end": 86.301
           },
           {
             "word": "makeup",
-            "start": 0,
-            "end": 0
+            "start": 86.301,
+            "end": 87.367
           }
         ]
       },
       {
-        "verseStart": 88.82,
-        "verseEnd": 93.82,
+        "verseStart": 87.367,
+        "verseEnd": 88.184,
         "words": [
           {
             "word": "Hide ",
-            "start": 0,
-            "end": 0
+            "start": 87.367,
+            "end": 87.49
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 87.49,
+            "end": 87.572
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 87.572,
+            "end": 87.653
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 87.653,
+            "end": 87.776
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 87.776,
+            "end": 87.897
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 87.897,
+            "end": 88.061
           },
           {
             "word": "the...",
-            "start": 0,
-            "end": 0
+            "start": 88.061,
+            "end": 88.184
           }
         ]
       },
       {
-        "verseStart": 89.63,
-        "verseEnd": 94.63,
+        "verseStart": 88.184,
+        "verseEnd": 89.103,
         "words": [
           {
             "word": "(Hide ",
-            "start": 0,
-            "end": 0
+            "start": 88.184,
+            "end": 88.265
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 88.265,
+            "end": 88.387
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 88.387,
+            "end": 88.509
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 88.509,
+            "end": 88.631
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 88.631,
+            "end": 88.714
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 88.714,
+            "end": 88.839
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 88.839,
+            "end": 88.965
           },
           {
             "word": "shakeup)",
-            "start": 0,
-            "end": 0
+            "start": 88.965,
+            "end": 89.103
           }
         ]
       },
       {
-        "verseStart": 90.88,
-        "verseEnd": 95.88,
+        "verseStart": 89.103,
+        "verseEnd": 91.19,
         "words": [
           {
             "word": "Why'd ",
-            "start": 0,
-            "end": 0
+            "start": 89.103,
+            "end": 89.229
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 89.229,
+            "end": 89.356
           },
           {
             "word": "leave ",
-            "start": 0,
-            "end": 0
+            "start": 89.356,
+            "end": 89.437
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 89.437,
+            "end": 89.816
           },
           {
             "word": "keys ",
-            "start": 0,
-            "end": 0
+            "start": 89.816,
+            "end": 89.939
           },
           {
             "word": "upon ",
-            "start": 0,
-            "end": 0
+            "start": 89.939,
+            "end": 90.063
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 90.063,
+            "end": 90.23
           },
           {
             "word": "table?",
-            "start": 0,
-            "end": 0
+            "start": 90.23,
+            "end": 91.19
           }
         ]
       },
       {
-        "verseStart": 92.45,
-        "verseEnd": 97.45,
+        "verseStart": 91.19,
+        "verseEnd": 93.141,
         "words": [
           {
             "word": "Here ",
-            "start": 0,
-            "end": 0
+            "start": 91.19,
+            "end": 91.312
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 91.312,
+            "end": 91.476
           },
           {
             "word": "go, ",
-            "start": 0,
-            "end": 0
+            "start": 91.476,
+            "end": 91.639
           },
           {
             "word": "create ",
-            "start": 0,
-            "end": 0
+            "start": 91.639,
+            "end": 91.72
           },
           {
             "word": "another ",
-            "start": 0,
-            "end": 0
+            "start": 91.72,
+            "end": 91.885
           },
           {
             "word": "fable, ",
-            "start": 0,
-            "end": 0
+            "start": 91.885,
+            "end": 92.38
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 92.38,
+            "end": 92.503
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 92.503,
+            "end": 92.626
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 92.626,
+            "end": 93.141
           }
         ]
       },
       {
-        "verseStart": 94.53999999999999,
-        "verseEnd": 99.53999999999999,
+        "verseStart": 93.141,
+        "verseEnd": 94.907,
         "words": [
           {
             "word": "Grab ",
-            "start": 0,
-            "end": 0
+            "start": 93.141,
+            "end": 93.307
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 93.307,
+            "end": 93.389
           },
           {
             "word": "brush ",
-            "start": 0,
-            "end": 0
+            "start": 93.389,
+            "end": 93.553
           },
           {
             "word": "and ",
-            "start": 0,
-            "end": 0
+            "start": 93.553,
+            "end": 93.68
           },
           {
             "word": "put ",
-            "start": 0,
-            "end": 0
+            "start": 93.68,
+            "end": 93.803
           },
           {
             "word": "a ",
-            "start": 0,
-            "end": 0
+            "start": 93.803,
+            "end": 93.927
           },
           {
             "word": "little ",
-            "start": 0,
-            "end": 0
+            "start": 93.927,
+            "end": 94.294
           },
           {
             "word": "makeup, ",
-            "start": 0,
-            "end": 0
+            "start": 94.294,
+            "end": 94.458
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 94.458,
+            "end": 94.539
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 94.539,
+            "end": 94.662
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 94.662,
+            "end": 94.907
           }
         ]
       },
       {
-        "verseStart": 96.4,
-        "verseEnd": 101.4,
+        "verseStart": 94.907,
+        "verseEnd": 96.786,
         "words": [
           {
             "word": "Hide ",
-            "start": 0,
-            "end": 0
+            "start": 94.907,
+            "end": 95.029
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 95.029,
+            "end": 95.191
           },
           {
             "word": "scars ",
-            "start": 0,
-            "end": 0
+            "start": 95.191,
+            "end": 95.314
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 95.314,
+            "end": 95.436
           },
           {
             "word": "fade ",
-            "start": 0,
-            "end": 0
+            "start": 95.436,
+            "end": 95.599
           },
           {
             "word": "away ",
-            "start": 0,
-            "end": 0
+            "start": 95.599,
+            "end": 95.724
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 95.724,
+            "end": 95.887
           },
           {
             "word": "shakeup, ",
-            "start": 0,
-            "end": 0
+            "start": 95.887,
+            "end": 96.215
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 96.215,
+            "end": 96.338
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 96.338,
+            "end": 96.46
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 96.46,
+            "end": 96.786
           }
         ]
       },
       {
-        "verseStart": 98.28999999999999,
-        "verseEnd": 103.28999999999999,
+        "verseStart": 96.786,
+        "verseEnd": 98.429,
         "words": [
           {
             "word": "Why'd ",
-            "start": 0,
-            "end": 0
+            "start": 96.786,
+            "end": 96.91
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 96.91,
+            "end": 97.032
           },
           {
             "word": "leave ",
-            "start": 0,
-            "end": 0
+            "start": 97.032,
+            "end": 97.155
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 97.155,
+            "end": 97.278
           },
           {
             "word": "keys ",
-            "start": 0,
-            "end": 0
+            "start": 97.278,
+            "end": 97.4
           },
           {
             "word": "upon ",
-            "start": 0,
-            "end": 0
+            "start": 97.4,
+            "end": 97.567
           },
           {
             "word": "the ",
-            "start": 0,
-            "end": 0
+            "start": 97.567,
+            "end": 97.648
           },
           {
             "word": "table? ",
-            "start": 0,
-            "end": 0
+            "start": 97.648,
+            "end": 98.057
           },
           {
             "word": "You ",
-            "start": 0,
-            "end": 0
+            "start": 98.057,
+            "end": 98.181
           },
           {
             "word": "wanted ",
-            "start": 0,
-            "end": 0
+            "start": 98.181,
+            "end": 98.305
           },
           {
             "word": "to",
-            "start": 0,
-            "end": 0
+            "start": 98.305,
+            "end": 98.429
           }
         ]
       },
       {
-        "verseStart": 100.22,
-        "verseEnd": 105.22,
+        "verseStart": 98.429,
+        "verseEnd": 101.627,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 98.429,
+            "end": 98.684
           },
           {
             "word": "don't ",
-            "start": 0,
-            "end": 0
+            "start": 98.684,
+            "end": 98.975
           },
           {
             "word": "think ",
-            "start": 0,
-            "end": 0
+            "start": 98.975,
+            "end": 99.224
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 99.224,
+            "end": 99.508
           },
           {
             "word": "trust",
-            "start": 0,
-            "end": 0
+            "start": 99.508,
+            "end": 101.627
           }
         ]
       },
       {
-        "verseStart": 103.18,
-        "verseEnd": 108.18,
+        "verseStart": 101.627,
+        "verseEnd": 109.303,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 101.627,
+            "end": 103.505
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 103.505,
+            "end": 105.424
           },
           {
             "word": "self-",
-            "start": 0,
-            "end": 0
+            "start": 105.424,
+            "end": 105.752
           },
           {
             "word": "righteous ",
-            "start": 0,
-            "end": 0
+            "start": 105.752,
+            "end": 106.403
           },
           {
             "word": "suicide",
-            "start": 0,
-            "end": 0
+            "start": 106.403,
+            "end": 109.303
           }
         ]
       },
       {
-        "verseStart": 110.85,
-        "verseEnd": 115.85,
+        "verseStart": 109.303,
+        "verseEnd": 116.867,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 109.303,
+            "end": 111.231
           },
           {
             "word": "cry ",
-            "start": 0,
-            "end": 0
+            "start": 111.231,
+            "end": 112.903
           },
           {
             "word": "when ",
-            "start": 0,
-            "end": 0
+            "start": 112.903,
+            "end": 113.146
           },
           {
             "word": "angels ",
-            "start": 0,
-            "end": 0
+            "start": 113.146,
+            "end": 113.797
           },
           {
             "word": "deserve ",
-            "start": 0,
-            "end": 0
+            "start": 113.797,
+            "end": 114.495
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 114.495,
+            "end": 114.99
           },
           {
             "word": "die",
-            "start": 0,
-            "end": 0
+            "start": 114.99,
+            "end": 116.867
           }
         ]
       },
       {
-        "verseStart": 118.52000000000001,
-        "verseEnd": 123.52000000000001,
+        "verseStart": 116.867,
+        "verseEnd": 124.311,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 116.867,
+            "end": 118.756
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 118.756,
+            "end": 120.546
           },
           {
             "word": "self-",
-            "start": 0,
-            "end": 0
+            "start": 120.546,
+            "end": 120.79
           },
           {
             "word": "righteous ",
-            "start": 0,
-            "end": 0
+            "start": 120.79,
+            "end": 121.451
           },
           {
             "word": "suicide",
-            "start": 0,
-            "end": 0
+            "start": 121.451,
+            "end": 124.311
           }
         ]
       },
       {
-        "verseStart": 126.01,
-        "verseEnd": 131.01,
+        "verseStart": 124.311,
+        "verseEnd": 139.25,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 124.311,
+            "end": 126.109
           },
           {
             "word": "cry ",
-            "start": 0,
-            "end": 0
+            "start": 126.109,
+            "end": 127.859
           },
           {
             "word": "when ",
-            "start": 0,
-            "end": 0
+            "start": 127.859,
+            "end": 128.226
           },
           {
             "word": "angels ",
-            "start": 0,
-            "end": 0
+            "start": 128.226,
+            "end": 128.716
           },
           {
             "word": "deserve ",
-            "start": 0,
-            "end": 0
+            "start": 128.716,
+            "end": 129.367
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 129.367,
+            "end": 129.856
           },
           {
             "word": "die",
-            "start": 0,
-            "end": 0
+            "start": 129.856,
+            "end": 139.25
           }
         ]
       },
       {
-        "verseStart": 140.72,
-        "verseEnd": 145.72,
+        "verseStart": 139.25,
+        "verseEnd": 141.123,
         "words": [
           {
             "word": "Father (",
-            "start": 0,
-            "end": 0
+            "start": 139.25,
+            "end": 140.105
           },
           {
             "word": "father)",
-            "start": 0,
-            "end": 0
+            "start": 140.105,
+            "end": 141.123
           }
         ]
       },
       {
-        "verseStart": 142.69,
-        "verseEnd": 147.69,
+        "verseStart": 141.123,
+        "verseEnd": 142.929,
         "words": [
           {
             "word": "Father (",
-            "start": 0,
-            "end": 0
+            "start": 141.123,
+            "end": 142.064
           },
           {
             "word": "father)",
-            "start": 0,
-            "end": 0
+            "start": 142.064,
+            "end": 142.929
           }
         ]
       },
       {
-        "verseStart": 144.67000000000002,
-        "verseEnd": 149.67000000000002,
+        "verseStart": 142.929,
+        "verseEnd": 144.727,
         "words": [
           {
             "word": "Father (",
-            "start": 0,
-            "end": 0
+            "start": 142.929,
+            "end": 143.789
           },
           {
             "word": "father)",
-            "start": 0,
-            "end": 0
+            "start": 143.789,
+            "end": 144.727
           }
         ]
       },
       {
-        "verseStart": 146.45,
-        "verseEnd": 151.45,
+        "verseStart": 144.727,
+        "verseEnd": 146.605,
         "words": [
           {
             "word": "Father (",
-            "start": 0,
-            "end": 0
+            "start": 144.727,
+            "end": 145.668
           },
           {
             "word": "father)",
-            "start": 0,
-            "end": 0
+            "start": 145.668,
+            "end": 146.605
           }
         ]
       },
       {
-        "verseStart": 148.54,
-        "verseEnd": 153.54,
+        "verseStart": 146.605,
+        "verseEnd": 150.489,
         "words": [
           {
             "word": "Father, ",
-            "start": 0,
-            "end": 0
+            "start": 146.605,
+            "end": 147.43
           },
           {
             "word": "into ",
-            "start": 0,
-            "end": 0
+            "start": 147.43,
+            "end": 147.553
           },
           {
             "word": "your ",
-            "start": 0,
-            "end": 0
+            "start": 147.553,
+            "end": 148.082
           },
           {
             "word": "hands ",
-            "start": 0,
-            "end": 0
+            "start": 148.082,
+            "end": 148.816
           },
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 148.816,
+            "end": 149.142
           },
           {
             "word": "commend ",
-            "start": 0,
-            "end": 0
+            "start": 149.142,
+            "end": 149.672
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 149.672,
+            "end": 149.917
           },
           {
             "word": "spirit",
-            "start": 0,
-            "end": 0
+            "start": 149.917,
+            "end": 150.489
           }
         ]
       },
       {
-        "verseStart": 152.21,
-        "verseEnd": 157.21,
+        "verseStart": 150.489,
+        "verseEnd": 152.214,
         "words": [
           {
             "word": "Father, ",
-            "start": 0,
-            "end": 0
+            "start": 150.489,
+            "end": 151.071
           },
           {
             "word": "into ",
-            "start": 0,
-            "end": 0
+            "start": 151.071,
+            "end": 151.563
           },
           {
             "word": "your ",
-            "start": 0,
-            "end": 0
+            "start": 151.563,
+            "end": 151.767
           },
           {
             "word": "hands",
-            "start": 0,
-            "end": 0
+            "start": 151.767,
+            "end": 152.214
           }
         ]
       },
       {
-        "verseStart": 153.85,
-        "verseEnd": 158.85,
+        "verseStart": 152.214,
+        "verseEnd": 155.895,
         "words": [
           {
             "word": "Why ",
-            "start": 0,
-            "end": 0
+            "start": 152.214,
+            "end": 152.626
           },
           {
             "word": "have ",
-            "start": 0,
-            "end": 0
+            "start": 152.626,
+            "end": 153.08
           },
           {
             "word": "you ",
-            "start": 0,
-            "end": 0
+            "start": 153.08,
+            "end": 153.529
           },
           {
             "word": "forsaken ",
-            "start": 0,
-            "end": 0
+            "start": 153.529,
+            "end": 154.915
           },
           {
             "word": "me?",
-            "start": 0,
-            "end": 0
+            "start": 154.915,
+            "end": 155.895
           }
         ]
       },
       {
-        "verseStart": 157.7,
-        "verseEnd": 162.7,
+        "verseStart": 155.895,
+        "verseEnd": 159.655,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 155.895,
+            "end": 156.262
           },
           {
             "word": "your ",
-            "start": 0,
-            "end": 0
+            "start": 156.262,
+            "end": 156.709
           },
           {
             "word": "eyes, ",
-            "start": 0,
-            "end": 0
+            "start": 156.709,
+            "end": 157.118
           },
           {
             "word": "forsaken ",
-            "start": 0,
-            "end": 0
+            "start": 157.118,
+            "end": 158.589
           },
           {
             "word": "me",
-            "start": 0,
-            "end": 0
+            "start": 158.589,
+            "end": 159.655
           }
         ]
       },
       {
-        "verseStart": 161.57999999999998,
-        "verseEnd": 166.57999999999998,
+        "verseStart": 159.655,
+        "verseEnd": 163.37,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 159.655,
+            "end": 160.028
           },
           {
             "word": "your ",
-            "start": 0,
-            "end": 0
+            "start": 160.028,
+            "end": 160.522
           },
           {
             "word": "thoughts, ",
-            "start": 0,
-            "end": 0
+            "start": 160.522,
+            "end": 161.09
           },
           {
             "word": "forsaken ",
-            "start": 0,
-            "end": 0
+            "start": 161.09,
+            "end": 162.354
           },
           {
             "word": "me",
-            "start": 0,
-            "end": 0
+            "start": 162.354,
+            "end": 163.37
           }
         ]
       },
       {
-        "verseStart": 165.36,
-        "verseEnd": 170.36,
+        "verseStart": 163.37,
+        "verseEnd": 168.937,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 163.37,
+            "end": 163.779
           },
           {
             "word": "your ",
-            "start": 0,
-            "end": 0
+            "start": 163.779,
+            "end": 164.233
           },
           {
             "word": "heart, ",
-            "start": 0,
-            "end": 0
+            "start": 164.233,
+            "end": 164.804
           },
           {
             "word": "forsaken ",
-            "start": 0,
-            "end": 0
+            "start": 164.804,
+            "end": 167.014
           },
           {
             "word": "me, ",
-            "start": 0,
-            "end": 0
+            "start": 167.014,
+            "end": 168.124
           },
           {
             "word": "oh",
-            "start": 0,
-            "end": 0
+            "start": 168.124,
+            "end": 168.937
           }
         ]
       },
       {
-        "verseStart": 170.98,
-        "verseEnd": 175.98,
+        "verseStart": 168.937,
+        "verseEnd": 178.235,
         "words": [
           {
             "word": "Trust ",
-            "start": 0,
-            "end": 0
+            "start": 168.937,
+            "end": 170.937
           },
           {
             "word": "in ",
-            "start": 0,
-            "end": 0
+            "start": 170.937,
+            "end": 172.691
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 172.691,
+            "end": 174.487
           },
           {
             "word": "self-",
-            "start": 0,
-            "end": 0
+            "start": 174.487,
+            "end": 174.772
           },
           {
             "word": "righteous ",
-            "start": 0,
-            "end": 0
+            "start": 174.772,
+            "end": 175.423
           },
           {
             "word": "suicide",
-            "start": 0,
-            "end": 0
+            "start": 175.423,
+            "end": 178.235
           }
         ]
       },
       {
-        "verseStart": 180.04,
-        "verseEnd": 185.04,
+        "verseStart": 178.235,
+        "verseEnd": 185.388,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 178.235,
+            "end": 180.072
           },
           {
             "word": "cry ",
-            "start": 0,
-            "end": 0
+            "start": 180.072,
+            "end": 181.595
           },
           {
             "word": "when ",
-            "start": 0,
-            "end": 0
+            "start": 181.595,
+            "end": 181.798
           },
           {
             "word": "angels ",
-            "start": 0,
-            "end": 0
+            "start": 181.798,
+            "end": 182.618
           },
           {
             "word": "deserve ",
-            "start": 0,
-            "end": 0
+            "start": 182.618,
+            "end": 183.147
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 183.147,
+            "end": 183.309
           },
           {
             "word": "die",
-            "start": 0,
-            "end": 0
+            "start": 183.309,
+            "end": 185.388
           }
         ]
       },
       {
-        "verseStart": 187.28,
-        "verseEnd": 192.28,
+        "verseStart": 185.388,
+        "verseEnd": 192.478,
         "words": [
           {
             "word": "In ",
-            "start": 0,
-            "end": 0
+            "start": 185.388,
+            "end": 187.104
           },
           {
             "word": "my ",
-            "start": 0,
-            "end": 0
+            "start": 187.104,
+            "end": 189.004
           },
           {
             "word": "self-",
-            "start": 0,
-            "end": 0
+            "start": 189.004,
+            "end": 189.289
           },
           {
             "word": "righteous ",
-            "start": 0,
-            "end": 0
+            "start": 189.289,
+            "end": 189.902
           },
           {
             "word": "suicide",
-            "start": 0,
-            "end": 0
+            "start": 189.902,
+            "end": 192.478
           }
         ]
       },
       {
-        "verseStart": 194.52,
-        "verseEnd": 199.52,
+        "verseStart": 192.478,
+        "verseEnd": 200.282,
         "words": [
           {
             "word": "I ",
-            "start": 0,
-            "end": 0
+            "start": 192.478,
+            "end": 194.349
           },
           {
             "word": "cry ",
-            "start": 0,
-            "end": 0
+            "start": 194.349,
+            "end": 196.112
           },
           {
             "word": "when ",
-            "start": 0,
-            "end": 0
+            "start": 196.112,
+            "end": 196.275
           },
           {
             "word": "angels ",
-            "start": 0,
-            "end": 0
+            "start": 196.275,
+            "end": 196.971
           },
           {
             "word": "deserve ",
-            "start": 0,
-            "end": 0
+            "start": 196.971,
+            "end": 197.791
           },
           {
             "word": "to ",
-            "start": 0,
-            "end": 0
+            "start": 197.791,
+            "end": 198.282
           },
           {
             "word": "die",
-            "start": 0,
+            "start": 198.282,
             "end": 0
           }
         ]
