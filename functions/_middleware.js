@@ -9,13 +9,14 @@ export async function onRequest({ request, env, next }) {
   const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
   const isMobile = /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(userAgent);
+  const normalizedPath = url.pathname.replace(/\/$/, '') || '/';
 
-  if (isMobile && url.pathname === '/') {
+  if (isMobile && normalizedPath === '/') {
     return Response.redirect(url.origin + '/m', 302);
   }
 
   // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
-  if (!url.pathname.startsWith('/api/') && !url.pathname.startsWith('/media/') && !url.pathname.startsWith('/_astro/') && !url.pathname.startsWith('/sync-lyrics') && url.pathname !== '/' && url.pathname !== '/m') {
+  if (!normalizedPath.startsWith('/api') && !normalizedPath.startsWith('/media') && !normalizedPath.startsWith('/_astro') && !normalizedPath.startsWith('/sync-lyrics') && normalizedPath !== '/' && normalizedPath !== '/m') {
     const rewriteReq = new Request(new URL(url.origin + '/'), request);
     return env.ASSETS.fetch(rewriteReq);
   }
@@ -23,7 +24,7 @@ export async function onRequest({ request, env, next }) {
   // Pre-fetch Data logic for instant loading (HTMLRewriter injection)
   let preloadedScript = '';
   
-  if (url.pathname === '/' || url.pathname === '') {
+  if (normalizedPath === '/') {
      try {
        const { results } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks ORDER BY order_index ASC").all();
        preloadedScript = `<script id="preloaded-about-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
@@ -31,7 +32,7 @@ export async function onRequest({ request, env, next }) {
        const { results: profResults } = await env.PROFESSIONAL_PROFILE.prepare("SELECT id FROM professional_blocks LIMIT 1").all();
        preloadedScript += `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(profResults).replace(/</g, '\\u003c')}</script>`;
      } catch(e) {}
-  } else if (url.pathname === '/professional' || url.pathname === '/professional/') {
+  } else if (normalizedPath === '/professional') {
      try {
        const { results } = await env.PROFESSIONAL_PROFILE.prepare("SELECT * FROM professional_blocks ORDER BY order_index ASC").all();
        preloadedScript = `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
