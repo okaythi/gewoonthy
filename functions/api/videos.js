@@ -11,17 +11,29 @@ export async function onRequest({ env }) {
       } catch(e) {}
     }
 
-    const f = objects.map(o => {
-      const fileName = o.key.split('/').pop().replace(/\.[^/.]+$/, "").toLowerCase();
-      // Try to find if this track was suggested by someone
-      let alias = null;
-      for (const [suggestedTrack, suggAlias] of Object.entries(approvedAliases)) {
-        if (fileName.includes(suggestedTrack) || suggestedTrack.includes(fileName)) {
-           alias = suggAlias; break;
+    let disabledVideos = [];
+    if (env.CONFIG) {
+      try {
+        const { results } = await env.CONFIG.prepare(`SELECT value FROM system_config WHERE key = 'media.disabled_videos'`).all();
+        if (results.length > 0 && results[0].value) {
+          disabledVideos = JSON.parse(results[0].value);
         }
-      }
-      return { url: `${d}/${encodeURIComponent(o.key)}`, alias };
-    });
+      } catch(e) {}
+    }
+
+    const f = objects
+      .filter(o => !disabledVideos.includes(o.key))
+      .map(o => {
+        const fileName = o.key.split('/').pop().replace(/\.[^/.]+$/, "").toLowerCase();
+        // Try to find if this track was suggested by someone
+        let alias = null;
+        for (const [suggestedTrack, suggAlias] of Object.entries(approvedAliases)) {
+          if (fileName.includes(suggestedTrack) || suggestedTrack.includes(fileName)) {
+             alias = suggAlias; break;
+          }
+        }
+        return { url: `${d}/${o.key.split('/').map(encodeURIComponent).join('/')}`, alias };
+      });
 
     return new Response(JSON.stringify(f), { headers: { 'content-type': 'application/json', 'Cache-Control': 'public, max-age=60' } });
   } catch (err) {

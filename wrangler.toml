@@ -25,3 +25,7 @@ database_id = "4901f464-e4c1-4b13-8cfb-d98c25785023"
 binding = "USERS"
 database_name = "thy_users"
 database_id = "605757b1-c6a5-471e-a289-34204f4e5660"
+
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "gewoonthy-media"
