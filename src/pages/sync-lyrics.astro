@@ -278,7 +278,7 @@ const pageTitle = "Lyrics Sync Tool";
       
       const loadSong = (key) => {
         currentSongKey = key;
-        vid.src = `https://sudothy.me/media/${encodeURIComponent(key)}?t=${Date.now()}`;
+        vid.src = `https://cdn.sudothy.me/${encodeURIComponent(key)}?t=${Date.now()}`;
         const songData = songsDictionary[key];
         globalOffset = songData.globalOffset || 0;
         localLyrics = JSON.parse(JSON.stringify(songData.lyricsData)); // clone

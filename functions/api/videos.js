@@ -1,6 +1,6 @@
 export async function onRequest({ env }) {
   try {
-    const d = atob('aHR0cHM6Ly9zdWRvdGh5Lm1l');
+    const d = atob('aHR0cHM6Ly9jZG4uc3Vkb3RoeS5tZQ==');
     const objects = (await env.MEDIA_BUCKET.list()).objects.filter(o => /\.mp4$|\.webm$/.test(o.key));
     
     let approvedAliases = {};
@@ -20,7 +20,7 @@ export async function onRequest({ env }) {
            alias = suggAlias; break;
         }
       }
-      return { url: `${d}/media/${encodeURIComponent(o.key)}`, alias };
+      return { url: `${d}/${encodeURIComponent(o.key)}`, alias };
     });
 
     return new Response(JSON.stringify(f), { headers: { 'content-type': 'application/json', 'Cache-Control': 'public, max-age=60' } });

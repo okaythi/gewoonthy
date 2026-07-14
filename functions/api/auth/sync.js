@@ -31,7 +31,7 @@ export async function onRequest({ request, env }) {
     const username = user.user_metadata?.username || '';
     // Preserve existing role logic if the user already has one
     const role = user.user_metadata?.role || 'Verified';
-    const pfp = user.user_metadata?.profile_picture_url || 'https://sudothy.me/media/vanity/fallback.png';
+    const pfp = user.user_metadata?.profile_picture_url || 'https://cdn.sudothy.me/vanity/fallback.png';
 
     // Telemetry from CF object
     const ip = request.headers.get('cf-connecting-ip') || '';

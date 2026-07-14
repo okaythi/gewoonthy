@@ -216,7 +216,7 @@ import LoginModal from '../components/LoginModal.astro';
                 
                 const file = isFull ? b : `${name}.svg`;
                 
-                return `<img src="https://sudothy.me/media/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
+                return `<img src="https://cdn.sudothy.me/badges/${file}" class="badge-icon" alt="${name}" title="${name.replace(/_/g, ' ')}">`;
               }).join('');
               
               return `<div class="friend-card" style="animation-delay: ${i * 0.05}s">

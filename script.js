@@ -105,9 +105,9 @@
       
       if (vid) {
         vid.volume = 0.35;
-        vid.src = `https://sudothy.me/media/${encodeURIComponent(selectedVideo)}`;
+        vid.src = `https://cdn.sudothy.me/${encodeURIComponent(selectedVideo)}`;
         if (audioEl) {
-          audioEl.src = `https://sudothy.me/media/${encodeURIComponent(selectedVideo)}`;
+          audioEl.src = `https://cdn.sudothy.me/${encodeURIComponent(selectedVideo)}`;
           audioEl.load();
         }
         
@@ -491,9 +491,9 @@
           }
 
           vid.pause();
-          vid.src = `https://sudothy.me/media/${encodeURIComponent(selectedVideo)}`;
+          vid.src = `https://cdn.sudothy.me/${encodeURIComponent(selectedVideo)}`;
           if (audioEl) {
-            audioEl.src = `https://sudothy.me/media/${encodeURIComponent(selectedVideo)}`;
+            audioEl.src = `https://cdn.sudothy.me/${encodeURIComponent(selectedVideo)}`;
             audioEl.load();
           }
           
