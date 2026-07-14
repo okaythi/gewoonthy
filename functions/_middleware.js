@@ -12,7 +12,6 @@ export async function onRequest({ request, env, next }) {
   }
 
   // MOBILE INTERCEPT: Redirect mobile users to /m
-  const url = new URL(request.url);
   const userAgent = request.headers.get('user-agent') || '';
   const isMobile = /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/i.test(userAgent);
   const normalizedPath = url.pathname.replace(/\/$/, '') || '/';
