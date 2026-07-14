@@ -261,7 +261,7 @@
       e.preventDefault();
       const username = document.getElementById('signup-username')?.value || '';
       const pwd = document.getElementById('signup-password')?.value || '';
-      const proxyEmail = `${username}@thiago.qzz.io`;
+      const proxyEmail = `${username}@sudothy.me`;
       const errEl = document.getElementById('signup-error');
       if (errEl) errEl.textContent = 'Creating identity...';
       
@@ -288,7 +288,7 @@
       const errEl = document.getElementById('login-error');
       if (errEl) errEl.textContent = 'Authenticating...';
       
-      let email = identifier.includes('@') ? identifier : `${identifier}@thiago.qzz.io`;
+      let email = identifier.includes('@') ? identifier : `${identifier}@sudothy.me`;
 
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email,

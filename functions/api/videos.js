@@ -1,6 +1,6 @@
 export async function onRequest({ env }) {
   try {
-    const d = atob('aHR0cHM6Ly9tZWRpYS50aGlhZ28ucXp6Lmlv');
+    const d = atob('aHR0cHM6Ly9zdWRvdGh5Lm1l');
     const objects = (await env.MEDIA_BUCKET.list()).objects.filter(o => /\.mp4$|\.webm$/.test(o.key));
     
     let approvedAliases = {};

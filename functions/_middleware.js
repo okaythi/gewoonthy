@@ -1,4 +1,10 @@
 export async function onRequest({ request, env, next }) {
+  const url = new URL(request.url);
+  if (url.hostname.endsWith('gewoonthy.pages.dev')) {
+    url.hostname = 'sudothy.me';
+    return Response.redirect(url.toString(), 301);
+  }
+
   // 1. Block China Mainland
   const country = request.cf?.country;
   if (country === 'CN') {
