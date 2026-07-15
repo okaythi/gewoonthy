@@ -46,7 +46,13 @@ class Terminal {
     this.hiddenInput.addEventListener('keydown', async (e) => {
       if (e.key === 'Enter') {
         const value = this.hiddenInput.value;
-        this.printLine(this.currentPrompt + (this.isMasked ? '*'.repeat(value.length) : value));
+        const inputValue = this.isMasked ? '*'.repeat(value.length) : value;
+        let promptHTML = this.currentPrompt;
+        if (authManager.state === AuthState.READY && this.currentPrompt.endsWith('$ ')) {
+          const prefix = this.currentPrompt.slice(0, -2);
+          promptHTML = `<span class="terminal-prompt">${prefix}</span> <span style="color:var(--ubuntu-text);margin-right:8px;">$</span>`;
+        }
+        this.printLine(promptHTML + inputValue, true);
         this.hiddenInput.value = '';
         this.updateInputDisplay();
         this.inputWrapper.style.display = 'none';
@@ -58,7 +64,14 @@ class Terminal {
           this.prompt();
         }
       } else if (e.ctrlKey && e.key === 'c') {
-        this.printLine(this.currentPrompt + (this.isMasked ? '*'.repeat(this.hiddenInput.value.length) : this.hiddenInput.value) + '^C');
+        const value = this.hiddenInput.value;
+        const inputValue = this.isMasked ? '*'.repeat(value.length) : value;
+        let promptHTML = this.currentPrompt;
+        if (authManager.state === AuthState.READY && this.currentPrompt.endsWith('$ ')) {
+          const prefix = this.currentPrompt.slice(0, -2);
+          promptHTML = `<span class="terminal-prompt">${prefix}</span> <span style="color:var(--ubuntu-text);margin-right:8px;">$</span>`;
+        }
+        this.printLine(promptHTML + inputValue + '^C', true);
         this.hiddenInput.value = '';
         this.updateInputDisplay();
         this.prompt();

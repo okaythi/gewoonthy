@@ -8,47 +8,82 @@ export const aboutCommand = async (args, terminal) => {
     </div>
     <div class="info-grid">
       <div class="info-group">
-        <h3>Personality</h3>
-        <div class="tag-container">
-          <div class="tag"><div class="tag-icon">🧐</div>CURIOUS MIND</div>
-          <div class="tag"><div class="tag-icon">🎯</div>DETAIL-ORIENTED</div>
-          <div class="tag"><div class="tag-icon">🤝</div>COLLABORATIVE</div>
-          <div class="tag"><div class="tag-icon">💡</div>CREATIVE PROBLEM</div>
-        </div>
-      </div>
-      <div class="info-group">
-        <h3>Abilities</h3>
-        <div class="tag-container">
-          <div class="tag"><div class="tag-icon">📈</div>TECHNICAL STRATEGY</div>
-          <div class="tag"><div class="tag-icon">💻</div>FULL-STACK DEVELOPMENT</div>
-          <div class="tag"><div class="tag-icon">🚀</div>PERFORMANCE OPTIMIZATION</div>
-        </div>
-      </div>
-      <div class="info-group">
         <h3>Languages</h3>
         <div class="tag-container">
-          <div class="tag">be-nl</div>
-          <div class="tag">be-fr</div>
-          <div class="tag">pt-br</div>
-          <div class="tag">es-ar</div>
-          <div class="tag">en-uk</div>
-          <div class="tag">sv-sv</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>Flemish</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>French</div>
+          <div class="tag"><div class="tag-icon">🇧🇷</div>Portuguese</div>
+          <div class="tag"><div class="tag-icon">🇦🇷</div>Spanish</div>
+          <div class="tag"><div class="tag-icon">🇬🇧</div>English</div>
+          <div class="tag"><div class="tag-icon">🇸🇪</div>Swedish</div>
         </div>
       </div>
       <div class="info-group">
         <h3>Nationalities</h3>
         <div class="tag-container">
-          <div class="tag-text-only">BE</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>Belgian</div>
         </div>
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
       <h3>Professional Titles</h3>
       <div class="tag-container">
-        <div class="tag-text-only">FOUNDER & CTO</div>
-        <div class="tag-text-only">SENIOR SYSTEMS ENGINEER</div>
-        <div class="tag-text-only">USER EXPERIENCE STRATEGIST</div>
+        <div class="tag-text-only">Senior Community Manager</div>
+        <div class="tag-text-only">Account Project Manager</div>
+        <div class="tag-text-only">Operations Manager</div>
       </div>
+    </div>
+    <div class="info-group" style="margin-top:20px;">
+      <h3>Licenses & certifications</h3>
+      <div class="tag-container">
+        <div class="tag-text-only">EF SET English Certificate 72/100 (C1 Advanced)</div>
+      </div>
+    </div>
+    <div class="info-group" style="margin-top:20px;">
+      <h3>Skills</h3>
+      <div class="tag-container">
+        <div class="tag-text-only">Applied Mathematics</div>
+        <div class="tag-text-only">Data Analysis</div>
+        <div class="tag-text-only">Analytical Skills</div>
+        <div class="tag-text-only">Community Marketing</div>
+        <div class="tag-text-only">Customer Experience Management</div>
+        <div class="tag-text-only">Project Planning</div>
+        <div class="tag-text-only">Web3</div>
+        <div class="tag-text-only">Sales Operations</div>
+        <div class="tag-text-only">Agile Methodologies</div>
+        <div class="tag-text-only">Trust and Safety</div>
+        <div class="tag-text-only">Risk Management</div>
+        <div class="tag-text-only">Global Networking</div>
+        <div class="tag-text-only">Customer Relationship Management (CRM)</div>
+      </div>
+    </div>
+    <div class="info-group" style="margin-top:20px;">
+      <h3>Tech Stack</h3>
+      <div class="tag-container">
+        <div class="tag-text-only">HTML</div>
+        <div class="tag-text-only">CSS</div>
+        <div class="tag-text-only">Javascript</div>
+        <div class="tag-text-only">Python</div>
+        <div class="tag-text-only">Lua</div>
+        <div class="tag-text-only">C</div>
+        <div class="tag-text-only">Node.js</div>
+        <div class="tag-text-only">Astro</div>
+        <div class="tag-text-only">Cloudflare</div>
+        <div class="tag-text-only">Google Cloud</div>
+      </div>
+    </div>
+    <div class="info-group" style="margin-top:20px;">
+      <h3>Interests & Hobbies</h3>
+      <div class="tag-container">
+        <div class="tag-text-only">Systems Information Tech</div>
+        <div class="tag-text-only">Linguistics</div>
+        <div class="tag-text-only">Philosophy</div>
+        <div class="tag-text-only">Frietjes</div>
+      </div>
+    </div>
+    <div class="info-group" style="margin-top:20px; line-height: 1.5; font-size: 14px;">
+      <h3>Experience</h3>
+      <p>I have worked directly with brands such as Fusion, Discord, Tencent, and Garena, ensuring strategic support and audience connection.</p>
     </div>
   `;
   windowManager.createWindow('Thy - About Me', contentHTML);

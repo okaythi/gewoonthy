@@ -1,11 +1,15 @@
 import { helpCommand } from './commands/help.js';
 import { aboutCommand } from './commands/about.js';
+import { clearCommand } from './commands/clear.js';
+import { accountCommand } from './commands/account.js';
 
 class CommandEngine {
   constructor() {
     this.commands = new Map();
     this.registerCommand('help', helpCommand);
     this.registerCommand('about', aboutCommand);
+    this.registerCommand('clear', clearCommand);
+    this.registerCommand('account', accountCommand);
   }
 
   registerCommand(name, handler) {

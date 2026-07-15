@@ -5,3 +5,19 @@
 {"message":" astro  v7.0.4 ready in 7212 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
 {"message":"watching for file changes...","label":null,"level":"info"}
 {"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
+{"message":"[200] / 29ms","label":null,"level":"info"}
+{"message":"[200] / 7ms","label":null,"level":"info"}
+{"message":"[404] /favicon.svg 40ms","label":null,"level":"info"}
+{"message":"dependency optimized: @supabase/supabase-js","label":"vite","level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[console.error] TypeError: NetworkError when attempting to fetch resource.","label":"vite","level":"error"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] / 9ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"src/lib/Terminal.js","label":"watch","level":"info"}
+{"message":"[200] / 8ms","label":null,"level":"info"}
+{"message":"[200] / 6ms","label":null,"level":"info"}
+{"message":"src/lib/CommandEngine.js","label":"watch","level":"info"}
+{"message":"[200] / 6ms","label":null,"level":"info"}
+{"message":"src/lib/commands/about.js","label":"watch","level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}

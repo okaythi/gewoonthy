@@ -65,6 +65,10 @@ body {
   outline: none;
 }
 
+#input-display {
+  white-space: pre-wrap;
+}
+
 .cursor {
   display: inline-block;
   width: 8px;
@@ -100,6 +104,7 @@ body {
   z-index: 100;
   color: #fff;
   border: 1px solid #3a3a3a;
+  resize: both;
 }
 
 .gnome-header {
