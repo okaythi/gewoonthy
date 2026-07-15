@@ -53,33 +53,42 @@
     }
 
     connectedCallback() {
-      // Find the video element in the DOM
-      this.video = document.getElementById('anthem-video');
-      
-      if (!this.video) return;
+      const init = () => {
+        // Find the video element in the DOM
+        this.video = document.getElementById('anthem-video');
+        
+        if (!this.video) return;
 
-      // Setup Worker
-      this.worker = new Worker('/backlight-worker.js');
-      
-      // Setup OffscreenCanvas
-      // Setting width/height to 64x64 for highly efficient downsampling
-      this.canvas.width = 64;
-      this.canvas.height = 64;
-      
-      const offscreen = this.canvas.transferControlToOffscreen();
-      this.worker.postMessage({ type: 'INIT', canvas: offscreen }, [offscreen]);
+        // Setup Worker
+        this.worker = new Worker('/backlight-worker.js');
+        
+        // Setup OffscreenCanvas
+        // Setting width/height to 64x64 for highly efficient downsampling
+        this.canvas.width = 64;
+        this.canvas.height = 64;
+        
+        const offscreen = this.canvas.transferControlToOffscreen();
+        this.worker.postMessage({ type: 'INIT', canvas: offscreen }, [offscreen]);
 
-      // Event listeners for Video
-      this.video.addEventListener('play', this.handlePlay);
-      this.video.addEventListener('pause', this.handlePause);
-      this.video.addEventListener('ended', this.handlePause);
-      
-      // Astro ViewTransitions support for strict garbage collection
-      document.addEventListener('astro:before-swap', this.teardown.bind(this), { once: true });
-      window.addEventListener('beforeunload', this.teardown.bind(this), { once: true });
-      
-      if (!this.video.paused) {
-        this.handlePlay();
+        // Event listeners for Video
+        this.video.addEventListener('play', this.handlePlay);
+        this.video.addEventListener('pause', this.handlePause);
+        this.video.addEventListener('ended', this.handlePause);
+        
+        // Astro ViewTransitions support for strict garbage collection
+        document.addEventListener('astro:before-swap', this.teardown.bind(this), { once: true });
+        window.addEventListener('beforeunload', this.teardown.bind(this), { once: true });
+        
+        if (!this.video.paused) {
+          this.handlePlay();
+        }
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        // Defer to next microtask just in case the sibling video isn't parsed in the same tick
+        setTimeout(init, 0);
       }
     }
 
