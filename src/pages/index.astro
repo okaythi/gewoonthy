@@ -1,4 +1,5 @@
 ---
+import DynamicBacklight from '../components/DynamicBacklight.astro';
 const pageTitle = "I'm cooking something here...";
 ---
 
@@ -97,6 +98,7 @@ const pageTitle = "I'm cooking something here...";
     }
 
     .player-stack {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -105,6 +107,16 @@ const pageTitle = "I'm cooking something here...";
       max-width: 100%;
       min-height: 0;
       min-width: 0;
+    }
+
+    .player-backlight-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width: auto;
+      height: auto;
     }
 
     .custom-player-wrapper {
@@ -603,7 +615,9 @@ const pageTitle = "I'm cooking something here...";
       <div id="gab-side-left" class="gab-side"><canvas id="viz-left" class="viz-canvas"></canvas></div>
       <div class="video-container">
         <div class="player-stack">
-          <div class="custom-player-wrapper" id="player-wrapper">
+          <div class="player-backlight-wrapper">
+            <DynamicBacklight />
+            <div class="custom-player-wrapper" id="player-wrapper">
             <div id="unmute-overlay" class="unmute-overlay" style="display: none;">
               <button class="unmute-btn">Click to unmute</button>
             </div>
@@ -637,6 +651,7 @@ const pageTitle = "I'm cooking something here...";
                 <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
               </button>
             </div>
+          </div>
           </div>
           <div class="player-bottom-row">
             <div class="left-controls">
