@@ -2,6 +2,7 @@ import { helpCommand } from './commands/help.js';
 import { aboutCommand } from './commands/about.js';
 import { clearCommand } from './commands/clear.js';
 import { accountCommand } from './commands/account.js';
+import { logoutCommand } from './commands/logout.js';
 
 class CommandEngine {
   constructor() {
@@ -10,6 +11,7 @@ class CommandEngine {
     this.registerCommand('about', aboutCommand);
     this.registerCommand('clear', clearCommand);
     this.registerCommand('account', accountCommand);
+    this.registerCommand('logout', logoutCommand);
   }
 
   registerCommand(name, handler) {
@@ -29,9 +31,19 @@ class CommandEngine {
     }
 
     try {
-      await this.commands.get(cmdName)(args, terminal);
+      const res = await fetch('/api/execute', {
+        method: 'POST',
+        body: JSON.stringify({ command: cmdName })
+      });
+      const data = await res.json();
+
+      if (data.allowed) {
+        await this.commands.get(cmdName)(args, terminal);
+      } else {
+        terminal.printLine(`bash: ${cmdName}: ${data.error || 'Permission denied'}`);
+      }
     } catch (e) {
-      terminal.printLine(`bash: ${cmdName}: ${e.message}`);
+      terminal.printLine(`bash: ${cmdName}: Error checking permissions`);
     }
   }
 }

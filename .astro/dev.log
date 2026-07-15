@@ -21,3 +21,38 @@
 {"message":"[200] / 6ms","label":null,"level":"info"}
 {"message":"src/lib/commands/about.js","label":"watch","level":"info"}
 {"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[404] /favicon.svg 3ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"Enabling image processing with Cloudflare Images for production with the \"IMAGES\" Images binding.","label":"@astrojs/cloudflare","level":"info"}
+{"message":"Enabling sessions with Cloudflare KV with the \"SESSION\" KV binding.","label":"@astrojs/cloudflare","level":"info"}
+Using secrets defined in .env
+{"message":"Unable to find and open the program executable, so unable to determine if there is a compiled-in config file. Proceeding on the assumption that there is not.\r","label":"vite","level":"info"}
+{"message":"src/lib/auth.js","label":"watch","level":"info"}
+{"message":"[200] / 9ms","label":null,"level":"info"}
+{"message":"src/lib/CommandEngine.js","label":"watch","level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"Internal server error: Failed to resolve import \"./commands/logout.js\" from \"src/lib/CommandEngine.js\". Does the file exist?\n  Plugin: vite:import-analysis\n  File: C:/Users/thy/Projects/gewoonthy/src/lib/CommandEngine.js:5:31\n  3  |  import { clearCommand } from './commands/clear.js';\n  4  |  import { accountCommand } from './commands/account.js';\n  5  |  import { logoutCommand } from './commands/logout.js';\n     |                                 ^\n  6  |  \n  7  |  class CommandEngine {\n      at TransformPluginContext._formatLog (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:29931:39)\n      at TransformPluginContext.error (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:29928:14)\n      at normalizeUrl (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:26992:18)\n      at async file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:27055:30\n      at async Promise.all (index 4)\n      at async TransformPluginContext.transform (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:27023:4)\n      at async EnvironmentPluginContainer.transform (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:29716:14)\n      at async loadAndTransform (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:19731:26)\n      at async viteTransformMiddleware (file:///C:/Users/thy/Projects/gewoonthy/node_modules/vite/dist/node/chunks/node.js:24159:20)","label":"vite","level":"error"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":".wrangler/state/v3/d1/miniflare-D1DatabaseObject/0f21a14c4a4371d76d4755d678a95a30c2da72e72e1a78dfccd39f3dedee3c4f.sqlite","label":"watch","level":"info"}
+{"message":"WARNING: Tried to access method or property 'executeCallback' on a Service Binding or Durable Object stub. Are you trying to use RPC? If so, please enable the 'rpc' compat flag or update your compat date to 2024-04-03 or later (see https://developers.cloudflare.com/workers/configuration/compatibility-dates/ ). If you are not trying to use RPC, please note that in the future, this property (and all other property names) will appear to be present as an RPC method.","label":"vite","level":"info"}
+{"message":"env.__VITE_RUNNER_OBJECT__.get(...).executeCallback is not a function","label":"vite","level":"error"}
+{"message":"server restart failed","label":"vite","level":"error"}
+{"message":"[200] / 220ms","label":null,"level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"Enabling image processing with Cloudflare Images for production with the \"IMAGES\" Images binding.","label":"@astrojs/cloudflare","level":"info"}
+{"message":"Enabling sessions with Cloudflare KV with the \"SESSION\" KV binding.","label":"@astrojs/cloudflare","level":"info"}
+Using secrets defined in .env
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because lockfile has changed","label":"vite","level":"info"}
+{"message":"src/lib/Terminal.js","label":"watch","level":"info"}
+{"message":"[optimizer] scanning dependencies...","label":"vite","level":"info"}
+{"message":"WARNING: Tried to access method or property 'executeCallback' on a Service Binding or Durable Object stub. Are you trying to use RPC? If so, please enable the 'rpc' compat flag or update your compat date to 2024-04-03 or later (see https://developers.cloudflare.com/workers/configuration/compatibility-dates/ ). If you are not trying to use RPC, please note that in the future, this property (and all other property names) will appear to be present as an RPC method.","label":"vite","level":"info"}
+{"message":"env.__VITE_RUNNER_OBJECT__.get(...).executeCallback is not a function","label":"vite","level":"error"}
+{"message":"server restart failed","label":"vite","level":"error"}
+{"message":"[200] / 180ms","label":null,"level":"info"}
+{"message":"[optimizer] bundling dependencies...","label":"vite","level":"info"}
+{"message":"/api/auth POST requests are not available in static endpoints. Mark this page as server-rendered (`export const prerender = false;`) or update your config to `output: 'server'` to make all your pages server-rendered by default.","label":"router","level":"warn"}
+{"message":"TypeError: Cannot read properties of undefined (reading 'env')\n    at Module.POST (C:\\Users\\thy\\Projects\\gewoonthy\\src\\pages\\api\\auth.js:2:29)\n    at renderEndpoint (C:\\Users\\thy\\Projects\\gewoonthy\\node_modules\\astro\\dist\\runtime\\server\\endpoint.js:37:32)\n    at PagesHandler.handle (C:\\Users\\thy\\Projects\\gewoonthy\\node_modules\\astro\\dist\\core\\pages\\handler.js:19:40)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)","label":null,"level":"error"}
+{"message":"Cannot read properties of undefined (reading 'env')\n  Stack trace:\n    at Module.POST (C:\\Users\\thy\\Projects\\gewoonthy\\src\\pages\\api\\auth.js:2:29)\n    [...] See full stack trace in the browser, or rerun with --verbose.","label":null,"level":"error"}

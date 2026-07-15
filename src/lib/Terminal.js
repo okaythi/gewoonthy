@@ -122,4 +122,10 @@ class Terminal {
 
 document.addEventListener('DOMContentLoaded', () => {
   window.terminal = new Terminal();
+
+  window.addEventListener('beforeunload', () => {
+    if (authManager.user && authManager.user.is_guest) {
+      navigator.sendBeacon('/api/auth', JSON.stringify({ action: 'logout' }));
+    }
+  });
 });

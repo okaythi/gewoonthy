@@ -1,18 +1,18 @@
-import { supabase } from './supabase.js';
-
 export const AuthState = {
   BOOTING: 'BOOTING',
   PROMPT_LOGIN: 'PROMPT_LOGIN',
   PROMPT_PASSWORD: 'PROMPT_PASSWORD',
-  READY: 'READY'
+  READY: 'READY',
+  PROMPT_CREATE_USER: 'PROMPT_CREATE_USER',
+  PROMPT_CREATE_PASS: 'PROMPT_CREATE_PASS'
 };
 
 class AuthManager {
   constructor() {
     this.state = AuthState.BOOTING;
     this.user = null;
-    this.tempUsername = null;
     this.loginInput = '';
+    this.createInput = '';
   }
 
   async init() {
@@ -30,25 +30,19 @@ class AuthManager {
     this.state = AuthState.PROMPT_LOGIN;
   }
 
-  async fetchGuestUsername() {
-    try {
-      const adjRes = await fetch('https://random-word-form.herokuapp.com/random/adjective');
-      const nounRes = await fetch('https://random-word-form.herokuapp.com/random/noun');
-      const [adj] = await adjRes.json();
-      const [noun] = await nounRes.json();
-      return `${adj}-${noun}`;
-    } catch (e) {
-      return `guest-${Math.floor(Math.random() * 10000)}`;
-    }
-  }
-
   async handleInput(input, terminal) {
     if (this.state === AuthState.PROMPT_LOGIN) {
       if (!input.trim()) {
-        this.tempUsername = await this.fetchGuestUsername();
+        const res = await fetch('/api/auth', {
+          method: 'POST',
+          body: JSON.stringify({ action: 'guest' })
+        });
+        const data = await res.json();
+        
         terminal.printLine(`A temporary username has been assigned to you, to create an account use 'account --create'.`);
-        this.user = { username: this.tempUsername, isGuest: true };
+        this.user = data.user;
         this.state = AuthState.READY;
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
         terminal.prompt();
       } else {
@@ -61,22 +55,70 @@ class AuthManager {
     } else if (this.state === AuthState.PROMPT_PASSWORD) {
       terminal.setMasked(false);
       try {
-        const { data, error } = await supabase.auth.signInWithPassword({
-          email: this.loginInput,
-          password: input
+        const res = await fetch('/api/auth', {
+          method: 'POST',
+          body: JSON.stringify({ action: 'login', username: this.loginInput, password: input })
         });
-        if (error) throw error;
+        if (!res.ok) throw new Error('Login failed');
+        const data = await res.json();
+        
         this.user = data.user;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
         this.state = AuthState.READY;
-        terminal.setPrompt(`sudothy@${this.user.email.split('@')[0]} $ `);
+        terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
         terminal.printLine(`Login incorrect`);
         this.state = AuthState.PROMPT_LOGIN;
         terminal.setPrompt(`login (leave empty to use as guest): `);
       }
       terminal.prompt();
+    } else if (this.state === AuthState.PROMPT_CREATE_USER) {
+      if (!input.trim()) {
+        terminal.printLine(`account: username cannot be empty`);
+        this.state = AuthState.READY;
+        terminal.setPrompt(`sudothy@${this.user.username} $ `);
+        terminal.prompt();
+        return;
+      }
+      this.createInput = input.trim();
+      this.state = AuthState.PROMPT_CREATE_PASS;
+      terminal.setPrompt(`New password: `);
+      terminal.setMasked(true);
+      terminal.prompt();
+    } else if (this.state === AuthState.PROMPT_CREATE_PASS) {
+      terminal.setMasked(false);
+      try {
+        const res = await fetch('/api/auth', {
+          method: 'POST',
+          body: JSON.stringify({ action: 'create', username: this.createInput, password: input })
+        });
+        if (!res.ok) throw new Error('Username taken or error');
+        const data = await res.json();
+        
+        terminal.printLine(`Account created successfully. Logging in...`);
+        this.user = data.user;
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
+        this.state = AuthState.READY;
+        terminal.setPrompt(`sudothy@${this.user.username} $ `);
+      } catch (e) {
+        terminal.printLine(`account: creation failed (username might be taken)`);
+        this.state = AuthState.READY;
+        terminal.setPrompt(`sudothy@${this.user.username} $ `);
+      }
+      terminal.prompt();
     }
+  }
+
+  async logout(terminal) {
+    await fetch('/api/auth', {
+      method: 'POST',
+      body: JSON.stringify({ action: 'logout' })
+    });
+    localStorage.removeItem('sudothy_session');
+    this.user = null;
+    this.state = AuthState.PROMPT_LOGIN;
+    terminal.setPrompt(`login (leave empty to use as guest): `);
+    terminal.prompt();
   }
 }
 
