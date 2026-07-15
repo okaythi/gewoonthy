@@ -815,7 +815,10 @@ const pageTitle = "I'm cooking something here...";
         if (lyricsContainer && typeof lyricsData !== 'undefined') {
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
             <div class="verse" id="verse-${vIdx}">
-              ${verse.words.map((w, wIdx) => `<span class="word" id="word-${vIdx}-${wIdx}">${w.word} </span>`).join('')}
+              ${verse.words.map((w, wIdx) => {
+                const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
+                return `<span class="word" id="word-${vIdx}-${wIdx}">${display} </span>`;
+              }).join('')}
             </div>
           `).join('');
         }
