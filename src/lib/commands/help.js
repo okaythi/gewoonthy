@@ -6,8 +6,6 @@ Available commands:
   clear     Clear the terminal screen
   account   Manage user account
             --create    Create a new account
-
-System built on Ubuntu 26.04 LTS Simulation Engine.
   `;
   terminal.printLine(helpText);
 };
