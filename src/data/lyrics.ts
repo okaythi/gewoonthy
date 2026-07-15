@@ -28831,2614 +28831,2548 @@ export const songsDictionary: Record<string, SongData> = {
     "globalOffset": 0,
     "lyricsData": [
       {
-        "verseStart": 0,
-        "verseEnd": 3,
+        "verseStart": 1.921,
+        "verseEnd": 3.403,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 1.921,
+            "end": 2.085,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 2.085,
+            "end": 2.21,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 2.21,
+            "end": 2.46
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 2.46,
+            "end": 2.586,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 2.586,
+            "end": 2.74
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 2.74,
+            "end": 2.979
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 2.979,
+            "end": 3.403
           }
         ]
       },
       {
-        "verseStart": 3,
-        "verseEnd": 6,
+        "verseStart": 3.403,
+        "verseEnd": 4.999,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 3.403,
+            "end": 3.568,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 3.568,
+            "end": 3.733,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 3.733,
+            "end": 4.081
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 4.081,
+            "end": 4.209,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 4.209,
+            "end": 4.374
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 4.374,
+            "end": 4.583
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 4.583,
+            "end": 4.999
           }
         ]
       },
       {
-        "verseStart": 6,
-        "verseEnd": 9,
+        "verseStart": 4.999,
+        "verseEnd": 6.601,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 4.999,
+            "end": 5.208,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 5.208,
+            "end": 5.376,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 5.376,
+            "end": 5.667
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 5.667,
+            "end": 5.833,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 5.833,
+            "end": 6.003
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 6.003,
+            "end": 6.226
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 6.226,
+            "end": 6.601
           }
         ]
       },
       {
-        "verseStart": 9,
-        "verseEnd": 12,
+        "verseStart": 6.601,
+        "verseEnd": 8.211,
         "words": [
           {
             "word": "さ",
-            "start": 0,
-            "end": 0
+            "start": 6.601,
+            "end": 6.809
           },
           {
             "word": "あ",
-            "start": 0,
-            "end": 0
+            "start": 6.809,
+            "end": 7.018
           },
           {
             "word": "ご",
-            "start": 0,
-            "end": 0
+            "start": 7.018,
+            "end": 7.307
           },
           {
             "word": "一",
-            "start": 0,
-            "end": 0,
+            "start": 7.307,
+            "end": 7.594,
             "furigana": "いっ"
           },
           {
             "word": "緒",
-            "start": 0,
-            "end": 0,
+            "start": 7.594,
+            "end": 7.799,
             "furigana": "しょ"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 7.799,
+            "end": 8.211
           }
         ]
       },
       {
-        "verseStart": 12,
-        "verseEnd": 15,
+        "verseStart": 8.211,
+        "verseEnd": 9.875,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 8.211,
+            "end": 8.422,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 8.422,
+            "end": 8.631,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 8.631,
+            "end": 8.961
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 8.961,
+            "end": 9.085,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 9.085,
+            "end": 9.256
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 9.256,
+            "end": 9.46
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 9.46,
+            "end": 9.875
           }
         ]
       },
       {
-        "verseStart": 15,
-        "verseEnd": 18,
+        "verseStart": 9.875,
+        "verseEnd": 11.539,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 9.875,
+            "end": 10.087,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 10.087,
+            "end": 10.293,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 10.293,
+            "end": 10.583
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 10.583,
+            "end": 10.709,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 10.709,
+            "end": 10.917
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 10.917,
+            "end": 11.091
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 11.091,
+            "end": 11.539
           }
         ]
       },
       {
-        "verseStart": 18,
-        "verseEnd": 21,
+        "verseStart": 11.539,
+        "verseEnd": 13.587,
         "words": [
           {
             "word": "ご",
-            "start": 0,
-            "end": 0
+            "start": 11.539,
+            "end": 11.95
           },
           {
             "word": "唱",
-            "start": 0,
-            "end": 0,
+            "start": 11.95,
+            "end": 12.521,
             "furigana": "しょう"
           },
           {
             "word": "和",
-            "start": 0,
-            "end": 0,
+            "start": 12.521,
+            "end": 12.766,
             "furigana": "わ"
           },
           {
             "word": "く",
-            "start": 0,
-            "end": 0
+            "start": 12.766,
+            "end": 12.97
           },
           {
             "word": "だ",
-            "start": 0,
-            "end": 0
+            "start": 12.97,
+            "end": 13.174
           },
           {
             "word": "さ",
-            "start": 0,
-            "end": 0
+            "start": 13.174,
+            "end": 13.338
           },
           {
             "word": "い",
-            "start": 0,
-            "end": 0
+            "start": 13.338,
+            "end": 13.587
           }
         ]
       },
       {
-        "verseStart": 21,
-        "verseEnd": 24,
+        "verseStart": 13.587,
+        "verseEnd": 15.15,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 13.587,
+            "end": 13.751
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 13.751,
+            "end": 13.914,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 13.914,
+            "end": 14.372,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 14.372,
+            "end": 14.739,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 14.739,
+            "end": 15.15
           }
         ]
       },
       {
-        "verseStart": 24,
-        "verseEnd": 27,
+        "verseStart": 15.15,
+        "verseEnd": 21.668,
         "words": [
           {
             "word": "意",
-            "start": 0,
-            "end": 0,
+            "start": 15.15,
+            "end": 15.21,
             "furigana": "い"
           },
           {
             "word": "味",
-            "start": 0,
-            "end": 0,
+            "start": 15.21,
+            "end": 15.543,
             "furigana": "み"
           },
           {
             "word": "な",
-            "start": 0,
-            "end": 0
+            "start": 15.543,
+            "end": 15.626
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 15.626,
+            "end": 15.708
           },
           {
             "word": "価",
-            "start": 0,
-            "end": 0,
+            "start": 15.708,
+            "end": 15.834,
             "furigana": "か"
           },
           {
             "word": "値",
-            "start": 0,
-            "end": 0,
+            "start": 15.834,
+            "end": 15.914,
             "furigana": "ち"
           },
           {
             "word": "な",
-            "start": 0,
-            "end": 0
+            "start": 15.914,
+            "end": 16.036
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 16.036,
+            "end": 16.159
           },
           {
             "word": "魅",
-            "start": 0,
-            "end": 0,
+            "start": 16.159,
+            "end": 16.363,
             "furigana": "み"
           },
           {
             "word": "力",
-            "start": 0,
-            "end": 0,
+            "start": 16.363,
+            "end": 16.445,
             "furigana": "りょく"
           },
           {
             "word": "な",
-            "start": 0,
-            "end": 0
+            "start": 16.445,
+            "end": 16.526
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 16.526,
+            "end": 16.607
           },
           {
             "word": "生",
-            "start": 0,
-            "end": 0,
+            "start": 16.607,
+            "end": 16.689,
             "furigana": "う"
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 16.689,
+            "end": 16.774
           },
           {
             "word": "れ",
-            "start": 0,
-            "end": 0
+            "start": 16.774,
+            "end": 16.897
           },
           {
             "word": "た",
-            "start": 0,
-            "end": 0
+            "start": 16.897,
+            "end": 16.983
           },
           {
             "word": "時",
-            "start": 0,
-            "end": 0,
+            "start": 16.983,
+            "end": 17.023,
             "furigana": "じ"
           },
           {
             "word": "点",
-            "start": 0,
-            "end": 0,
+            "start": 17.023,
+            "end": 17.106,
             "furigana": "てん"
           },
           {
             "word": "で",
-            "start": 0,
-            "end": 0
+            "start": 17.106,
+            "end": 17.188
           },
           {
             "word": "終",
-            "start": 0,
-            "end": 0,
+            "start": 17.188,
+            "end": 17.314,
             "furigana": "お"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 17.314,
+            "end": 17.355
           },
           {
             "word": "っ",
-            "start": 0,
-            "end": 0
+            "start": 17.355,
+            "end": 17.436
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 17.436,
+            "end": 17.564
           },
           {
             "word": "る",
-            "start": 0,
-            "end": 0
+            "start": 17.564,
+            "end": 21.668
           }
         ]
       },
       {
-        "verseStart": 27,
-        "verseEnd": 30,
+        "verseStart": 21.668,
+        "verseEnd": 23.399,
         "words": [
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 21.668,
+            "end": 21.796
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 21.796,
+            "end": 21.877
           },
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 21.877,
+            "end": 21.962
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 21.962,
+            "end": 22.084
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 22.084,
+            "end": 22.332,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 22.332,
+            "end": 22.536,
             "furigana": "げん"
           },
           {
             "word": "や",
-            "start": 0,
-            "end": 0
+            "start": 22.536,
+            "end": 22.658
           },
           {
             "word": "め",
-            "start": 0,
-            "end": 0
+            "start": 22.658,
+            "end": 22.74
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 22.74,
+            "end": 22.866
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 22.866,
+            "end": 22.989
           },
           {
             "word": "ょ",
-            "start": 0,
-            "end": 0
+            "start": 22.989,
+            "end": 23.154
           },
           {
             "word": "か",
-            "start": 0,
-            "end": 0
+            "start": 23.154,
+            "end": 23.399
           }
         ]
       },
       {
-        "verseStart": 30,
+        "verseStart": 23.399,
+        "verseEnd": 27.698,
+        "words": [
+          {
+            "word": "そ",
+            "start": 23.399,
+            "end": 23.523
+          },
+          {
+            "word": "ろ",
+            "start": 23.523,
+            "end": 23.646
+          },
+          {
+            "word": "そ",
+            "start": 23.646,
+            "end": 23.729
+          },
+          {
+            "word": "ろ",
+            "start": 23.729,
+            "end": 23.811
+          },
+          {
+            "word": "人",
+            "start": 23.811,
+            "end": 24.017,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 24.017,
+            "end": 24.221,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 24.221,
+            "end": 24.301
+          },
+          {
+            "word": "め",
+            "start": 24.301,
+            "end": 24.424
+          },
+          {
+            "word": "ま",
+            "start": 24.424,
+            "end": 24.507
+          },
+          {
+            "word": "し",
+            "start": 24.507,
+            "end": 24.588
+          },
+          {
+            "word": "ょ",
+            "start": 24.588,
+            "end": 24.671
+          },
+          {
+            "word": "か",
+            "start": 24.671,
+            "end": 27.698
+          }
+        ]
+      },
+      {
+        "verseStart": 27.698,
+        "verseEnd": 29.634,
+        "words": [
+          {
+            "word": "通",
+            "start": 27.698,
+            "end": 27.825,
+            "furigana": "とお"
+          },
+          {
+            "word": "り",
+            "start": 27.825,
+            "end": 28.408
+          },
+          {
+            "word": "ゃ",
+            "start": 28.408,
+            "end": 28.531
+          },
+          {
+            "word": "ん",
+            "start": 28.531,
+            "end": 28.694
+          },
+          {
+            "word": "せ",
+            "start": 28.694,
+            "end": 28.898
+          },
+          {
+            "word": "通",
+            "start": 28.898,
+            "end": 29.02,
+            "furigana": "とお"
+          },
+          {
+            "word": "り",
+            "start": 29.02,
+            "end": 29.101
+          },
+          {
+            "word": "ゃ",
+            "start": 29.101,
+            "end": 29.306
+          },
+          {
+            "word": "ん",
+            "start": 29.306,
+            "end": 29.511
+          },
+          {
+            "word": "せ",
+            "start": 29.511,
+            "end": 29.634
+          }
+        ]
+      },
+      {
+        "verseStart": 29.634,
+        "verseEnd": 31.604,
+        "words": [
+          {
+            "word": "こ",
+            "start": 29.634,
+            "end": 29.717
+          },
+          {
+            "word": "の",
+            "start": 29.717,
+            "end": 29.8
+          },
+          {
+            "word": "世",
+            "start": 29.8,
+            "end": 30.05,
+            "furigana": "よ"
+          },
+          {
+            "word": "の",
+            "start": 30.05,
+            "end": 30.172
+          },
+          {
+            "word": "終",
+            "start": 30.172,
+            "end": 30.253,
+            "furigana": "お"
+          },
+          {
+            "word": "わ",
+            "start": 30.253,
+            "end": 30.375
+          },
+          {
+            "word": "り",
+            "start": 30.375,
+            "end": 30.501
+          },
+          {
+            "word": "絶",
+            "start": 30.501,
+            "end": 30.583,
+            "furigana": "ぜつ"
+          },
+          {
+            "word": "望",
+            "start": 30.583,
+            "end": 30.705,
+            "furigana": "ぼう"
+          },
+          {
+            "word": "ル",
+            "start": 30.705,
+            "end": 30.951
+          },
+          {
+            "word": "ー",
+            "start": 30.951,
+            "end": 31.156
+          },
+          {
+            "word": "ト",
+            "start": 31.156,
+            "end": 31.604
+          }
+        ]
+      },
+      {
+        "verseStart": 31.604,
         "verseEnd": 33,
         "words": [
           {
-            "word": "そ",
-            "start": 0,
-            "end": 0
+            "word": "通",
+            "start": 31.604,
+            "end": 31.77,
+            "furigana": "とお"
           },
           {
-            "word": "ろ",
-            "start": 0,
-            "end": 0
+            "word": "り",
+            "start": 31.77,
+            "end": 31.932
           },
           {
-            "word": "そ",
-            "start": 0,
-            "end": 0
+            "word": "ゃ",
+            "start": 31.932,
+            "end": 32.096
           },
           {
-            "word": "ろ",
-            "start": 0,
-            "end": 0
+            "word": "ん",
+            "start": 32.096,
+            "end": 32.219
           },
           {
-            "word": "人",
-            "start": 0,
-            "end": 0,
-            "furigana": "にん"
+            "word": "せ",
+            "start": 32.219,
+            "end": 32.303
           },
           {
-            "word": "間",
-            "start": 0,
-            "end": 0,
-            "furigana": "げん"
+            "word": "通",
+            "start": 32.303,
+            "end": 32.426,
+            "furigana": "とお"
           },
           {
-            "word": "や",
-            "start": 0,
-            "end": 0
+            "word": "り",
+            "start": 32.426,
+            "end": 32.551
           },
           {
-            "word": "め",
-            "start": 0,
-            "end": 0
+            "word": "ゃ",
+            "start": 32.551,
+            "end": 32.632
           },
           {
-            "word": "ま",
-            "start": 0,
-            "end": 0
+            "word": "ん",
+            "start": 32.632,
+            "end": 32.755
           },
           {
-            "word": "し",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ょ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "か",
-            "start": 0,
-            "end": 0
+            "word": "せ",
+            "start": 32.755,
+            "end": 33
           }
         ]
       },
       {
         "verseStart": 33,
-        "verseEnd": 36,
-        "words": [
-          {
-            "word": "通",
-            "start": 0,
-            "end": 0,
-            "furigana": "とお"
-          },
-          {
-            "word": "り",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ゃ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ん",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "通",
-            "start": 0,
-            "end": 0,
-            "furigana": "とお"
-          },
-          {
-            "word": "り",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ゃ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ん",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 36,
-        "verseEnd": 39,
-        "words": [
-          {
-            "word": "こ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "の",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "世",
-            "start": 0,
-            "end": 0,
-            "furigana": "よ"
-          },
-          {
-            "word": "の",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "終",
-            "start": 0,
-            "end": 0,
-            "furigana": "お"
-          },
-          {
-            "word": "わ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "り",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "絶",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぜつ"
-          },
-          {
-            "word": "望",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぼう"
-          },
-          {
-            "word": "ル",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ー",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ト",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 39,
-        "verseEnd": 42,
-        "words": [
-          {
-            "word": "通",
-            "start": 0,
-            "end": 0,
-            "furigana": "とお"
-          },
-          {
-            "word": "り",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ゃ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ん",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "通",
-            "start": 0,
-            "end": 0,
-            "furigana": "とお"
-          },
-          {
-            "word": "り",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ゃ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ん",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 42,
-        "verseEnd": 45,
+        "verseEnd": 34.793,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 33,
+            "end": 33.126
           },
           {
             "word": "先",
-            "start": 0,
-            "end": 0,
+            "start": 33.126,
+            "end": 33.292,
             "furigana": "さき"
           },
           {
             "word": "真",
-            "start": 0,
-            "end": 0,
+            "start": 33.292,
+            "end": 33.377,
             "furigana": "ま"
           },
           {
             "word": "っ",
-            "start": 0,
-            "end": 0
+            "start": 33.377,
+            "end": 33.5
           },
           {
             "word": "暗",
-            "start": 0,
-            "end": 0,
+            "start": 33.5,
+            "end": 33.586,
             "furigana": "くら"
           },
           {
             "word": "死",
-            "start": 0,
-            "end": 0,
+            "start": 33.586,
+            "end": 33.71,
             "furigana": "し"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 33.71,
+            "end": 33.835
           },
           {
             "word": "ゲ",
-            "start": 0,
-            "end": 0
+            "start": 33.835,
+            "end": 33.968
           },
           {
             "word": "ー",
-            "start": 0,
-            "end": 0
+            "start": 33.968,
+            "end": 34.133
           },
           {
             "word": "ル",
-            "start": 0,
-            "end": 0
+            "start": 34.133,
+            "end": 34.336
           },
           {
             "word": "ー",
-            "start": 0,
-            "end": 0
+            "start": 34.336,
+            "end": 34.5
           },
           {
             "word": "ト",
-            "start": 0,
-            "end": 0
+            "start": 34.5,
+            "end": 34.793
           }
         ]
       },
       {
-        "verseStart": 45,
-        "verseEnd": 48,
+        "verseStart": 34.793,
+        "verseEnd": 39.667,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 34.793,
+            "end": 36.003,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 36.003,
+            "end": 36.417,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 36.417,
+            "end": 37.899,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 37.899,
+            "end": 38.185,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 38.185,
+            "end": 39.214,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 39.214,
+            "end": 39.667,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 48,
-        "verseEnd": 51,
+        "verseStart": 39.667,
+        "verseEnd": 41.21,
         "words": [
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 39.667,
+            "end": 40.045,
             "furigana": "てい"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 40.045,
+            "end": 40.46,
             "furigana": "てい"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 40.46,
+            "end": 40.834,
             "furigana": "てい"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 40.834,
+            "end": 41.21,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 51,
-        "verseEnd": 54,
+        "verseStart": 41.21,
+        "verseEnd": 44.511,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 41.21,
+            "end": 41.625,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 41.625,
+            "end": 41.989,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 41.989,
+            "end": 42.401,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 42.401,
+            "end": 42.891,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 42.891,
+            "end": 43.055,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 43.055,
+            "end": 43.266,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 43.266,
+            "end": 43.643,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 43.643,
+            "end": 44.511,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 54,
-        "verseEnd": 57,
+        "verseStart": 44.511,
+        "verseEnd": 47.788,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 44.511,
+            "end": 44.842,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 44.842,
+            "end": 45.253,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 45.253,
+            "end": 45.68,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 45.68,
+            "end": 46.172,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 46.172,
+            "end": 46.337,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 46.337,
+            "end": 46.544,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 46.544,
+            "end": 46.959,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 46.959,
+            "end": 47.788,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 57,
-        "verseEnd": 60,
+        "verseStart": 47.788,
+        "verseEnd": 51.043,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 47.788,
+            "end": 48.16,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 48.16,
+            "end": 48.574,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 48.574,
+            "end": 48.942,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 48.942,
+            "end": 49.435,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 49.435,
+            "end": 49.599,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 49.599,
+            "end": 49.768,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 49.768,
+            "end": 50.179,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 50.179,
+            "end": 51.043,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 60,
-        "verseEnd": 63,
+        "verseStart": 51.043,
+        "verseEnd": 55.582,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 51.043,
+            "end": 51.375,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 51.375,
+            "end": 51.792,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 51.792,
+            "end": 52.163,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 52.163,
+            "end": 52.625,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 52.625,
+            "end": 52.836,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 52.836,
+            "end": 53.046,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 53.046,
+            "end": 53.377,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 53.377,
+            "end": 55.582,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 63,
-        "verseEnd": 66,
-        "words": [
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "波",
-            "start": 0,
-            "end": 0,
-            "furigana": "は"
-          },
-          {
-            "word": "羅",
-            "start": 0,
-            "end": 0,
-            "furigana": "ら"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          }
-        ]
-      },
-      {
-        "verseStart": 66,
-        "verseEnd": 69,
+        "verseStart": 55.582,
+        "verseEnd": 60.848,
         "words": [
           {
             "word": "才",
-            "start": 0,
-            "end": 0,
+            "start": 55.582,
+            "end": 55.832,
             "furigana": "さい"
           },
           {
             "word": "能",
-            "start": 0,
-            "end": 0,
+            "start": 55.832,
+            "end": 56.083,
             "furigana": "のう"
           },
           {
             "word": "レ",
-            "start": 0,
-            "end": 0
+            "start": 56.083,
+            "end": 56.251
           },
           {
             "word": "ベ",
-            "start": 0,
-            "end": 0
+            "start": 56.251,
+            "end": 56.377
           },
           {
             "word": "ル",
-            "start": 0,
-            "end": 0
+            "start": 56.377,
+            "end": 56.459
           },
           {
             "word": "の",
-            "start": 0,
-            "end": 0
+            "start": 56.459,
+            "end": 56.584
           },
           {
             "word": "社",
-            "start": 0,
-            "end": 0,
+            "start": 56.584,
+            "end": 56.916,
             "furigana": "しゃ"
           },
           {
             "word": "会",
-            "start": 0,
-            "end": 0,
+            "start": 56.916,
+            "end": 57.209,
             "furigana": "かい"
           },
           {
             "word": "不",
-            "start": 0,
-            "end": 0,
+            "start": 57.209,
+            "end": 57.375,
             "furigana": "ふ"
           },
           {
             "word": "適",
-            "start": 0,
-            "end": 0,
+            "start": 57.375,
+            "end": 57.54,
             "furigana": "てき"
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 57.54,
+            "end": 57.837,
             "furigana": "ごう"
           },
           {
             "word": "者",
-            "start": 0,
-            "end": 0,
+            "start": 57.837,
+            "end": 60.848,
             "furigana": "しゃ"
           }
         ]
       },
       {
-        "verseStart": 69,
-        "verseEnd": 72,
+        "verseStart": 60.848,
+        "verseEnd": 62.548,
         "words": [
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 60.848,
+            "end": 60.97
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 60.97,
+            "end": 61.053
           },
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 61.053,
+            "end": 61.178
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 61.178,
+            "end": 61.261
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 61.261,
+            "end": 61.55,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 61.55,
+            "end": 61.759,
             "furigana": "げん"
           },
           {
             "word": "や",
-            "start": 0,
-            "end": 0
+            "start": 61.759,
+            "end": 61.843
           },
           {
             "word": "め",
-            "start": 0,
-            "end": 0
+            "start": 61.843,
+            "end": 61.928
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 61.928,
+            "end": 62.011
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 62.011,
+            "end": 62.133
           },
           {
             "word": "ょ",
-            "start": 0,
-            "end": 0
+            "start": 62.133,
+            "end": 62.219
           },
           {
             "word": "か",
-            "start": 0,
-            "end": 0
+            "start": 62.219,
+            "end": 62.548
           }
         ]
       },
       {
-        "verseStart": 72,
-        "verseEnd": 75,
+        "verseStart": 62.548,
+        "verseEnd": 67.46,
         "words": [
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 62.548,
+            "end": 62.629
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 62.629,
+            "end": 62.751
           },
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 62.751,
+            "end": 62.835
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 62.835,
+            "end": 62.96
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 62.96,
+            "end": 63.127,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 63.127,
+            "end": 63.334,
             "furigana": "げん"
           },
           {
             "word": "や",
-            "start": 0,
-            "end": 0
+            "start": 63.334,
+            "end": 63.417
           },
           {
             "word": "め",
-            "start": 0,
-            "end": 0
+            "start": 63.417,
+            "end": 63.542
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 63.542,
+            "end": 63.626
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 63.626,
+            "end": 63.709
           },
           {
             "word": "ょ",
-            "start": 0,
-            "end": 0
+            "start": 63.709,
+            "end": 63.793
           },
           {
             "word": "か",
-            "start": 0,
-            "end": 0
+            "start": 63.793,
+            "end": 67.46
           }
         ]
       },
       {
-        "verseStart": 75,
-        "verseEnd": 78,
+        "verseStart": 67.46,
+        "verseEnd": 69.058,
         "words": [
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 67.46,
+            "end": 67.542
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 67.542,
+            "end": 67.625
           },
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 67.625,
+            "end": 67.75
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 67.75,
+            "end": 67.837
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 67.837,
+            "end": 68.043,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 68.043,
+            "end": 68.268,
             "furigana": "げん"
           },
           {
             "word": "や",
-            "start": 0,
-            "end": 0
+            "start": 68.268,
+            "end": 68.392
           },
           {
             "word": "め",
-            "start": 0,
-            "end": 0
+            "start": 68.392,
+            "end": 68.477
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 68.477,
+            "end": 68.561
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 68.561,
+            "end": 68.685
           },
           {
             "word": "ょ",
-            "start": 0,
-            "end": 0
+            "start": 68.685,
+            "end": 68.768
           },
           {
             "word": "か",
-            "start": 0,
-            "end": 0
+            "start": 68.768,
+            "end": 69.058
           }
         ]
       },
       {
-        "verseStart": 78,
-        "verseEnd": 81,
+        "verseStart": 69.058,
+        "verseEnd": 73.549,
         "words": [
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 69.058,
+            "end": 69.186
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 69.186,
+            "end": 69.27
           },
           {
             "word": "そ",
-            "start": 0,
-            "end": 0
+            "start": 69.27,
+            "end": 69.393
           },
           {
             "word": "ろ",
-            "start": 0,
-            "end": 0
+            "start": 69.393,
+            "end": 69.476
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 69.476,
+            "end": 69.684,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 69.684,
+            "end": 69.853,
             "furigana": "げん"
           },
           {
             "word": "や",
-            "start": 0,
-            "end": 0
+            "start": 69.853,
+            "end": 69.976
           },
           {
             "word": "め",
-            "start": 0,
-            "end": 0
+            "start": 69.976,
+            "end": 70.102
           },
           {
             "word": "ま",
-            "start": 0,
-            "end": 0
+            "start": 70.102,
+            "end": 70.227
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 70.227,
+            "end": 70.31
           },
           {
             "word": "ょ",
-            "start": 0,
-            "end": 0
+            "start": 70.31,
+            "end": 70.392
           },
           {
             "word": "か",
-            "start": 0,
-            "end": 0
+            "start": 70.392,
+            "end": 73.549
           }
         ]
       },
       {
-        "verseStart": 81,
-        "verseEnd": 84,
+        "verseStart": 73.549,
+        "verseEnd": 75.21,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 73.549,
+            "end": 73.757,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 73.757,
+            "end": 73.964,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 73.964,
+            "end": 74.253
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 74.253,
+            "end": 74.378,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 74.378,
+            "end": 74.547
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 74.547,
+            "end": 74.796
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 74.796,
+            "end": 75.21
           }
         ]
       },
       {
-        "verseStart": 84,
-        "verseEnd": 87,
+        "verseStart": 75.21,
+        "verseEnd": 76.874,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 75.21,
+            "end": 75.418,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 75.418,
+            "end": 75.589,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 75.589,
+            "end": 75.919
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 75.919,
+            "end": 76.045,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 76.045,
+            "end": 76.21
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 76.21,
+            "end": 76.417
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 76.417,
+            "end": 76.874
           }
         ]
       },
       {
-        "verseStart": 87,
-        "verseEnd": 90,
+        "verseStart": 76.874,
+        "verseEnd": 78.445,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 76.874,
+            "end": 77.083,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 77.083,
+            "end": 77.251,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 77.251,
+            "end": 77.542
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 77.542,
+            "end": 77.709,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 77.709,
+            "end": 77.874
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 77.874,
+            "end": 78.043
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 78.043,
+            "end": 78.445
           }
         ]
       },
       {
-        "verseStart": 90,
-        "verseEnd": 93,
+        "verseStart": 78.445,
+        "verseEnd": 80.146,
         "words": [
           {
             "word": "さ",
-            "start": 0,
-            "end": 0
+            "start": 78.445,
+            "end": 78.65
           },
           {
             "word": "あ",
-            "start": 0,
-            "end": 0
+            "start": 78.65,
+            "end": 78.858
           },
           {
             "word": "ご",
-            "start": 0,
-            "end": 0
+            "start": 78.858,
+            "end": 79.147
           },
           {
             "word": "一",
-            "start": 0,
-            "end": 0,
+            "start": 79.147,
+            "end": 79.48,
             "furigana": "いっ"
           },
           {
             "word": "緒",
-            "start": 0,
-            "end": 0,
+            "start": 79.48,
+            "end": 79.694,
             "furigana": "しょ"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 79.694,
+            "end": 80.146
           }
         ]
       },
       {
-        "verseStart": 93,
-        "verseEnd": 96,
+        "verseStart": 80.146,
+        "verseEnd": 81.71,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 80.146,
+            "end": 80.355,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 80.355,
+            "end": 80.518,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 80.518,
+            "end": 80.847
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 80.847,
+            "end": 80.929,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 80.929,
+            "end": 81.137
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 81.137,
+            "end": 81.342
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 81.342,
+            "end": 81.71
           }
         ]
       },
       {
-        "verseStart": 96,
-        "verseEnd": 99,
+        "verseStart": 81.71,
+        "verseEnd": 83.339,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 81.71,
+            "end": 81.921,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 81.921,
+            "end": 82.13,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 82.13,
+            "end": 82.42
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 82.42,
+            "end": 82.545,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 82.545,
+            "end": 82.72
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 82.72,
+            "end": 82.928
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 82.928,
+            "end": 83.339
           }
         ]
       },
       {
-        "verseStart": 99,
-        "verseEnd": 102,
+        "verseStart": 83.339,
+        "verseEnd": 85.001,
         "words": [
           {
             "word": "御",
-            "start": 0,
-            "end": 0,
+            "start": 83.339,
+            "end": 83.587,
             "furigana": "お"
           },
           {
             "word": "手",
-            "start": 0,
-            "end": 0,
+            "start": 83.587,
+            "end": 83.792,
             "furigana": "て"
           },
           {
             "word": "を",
-            "start": 0,
-            "end": 0
+            "start": 83.792,
+            "end": 84.086
           },
           {
             "word": "合",
-            "start": 0,
-            "end": 0,
+            "start": 84.086,
+            "end": 84.21,
             "furigana": "あ"
           },
           {
             "word": "わ",
-            "start": 0,
-            "end": 0
+            "start": 84.21,
+            "end": 84.418
           },
           {
             "word": "せ",
-            "start": 0,
-            "end": 0
+            "start": 84.418,
+            "end": 84.585
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
+            "start": 84.585,
+            "end": 85.001
           }
         ]
       },
       {
-        "verseStart": 102,
-        "verseEnd": 105,
+        "verseStart": 85.001,
+        "verseEnd": 87.104,
         "words": [
           {
             "word": "ご",
-            "start": 0,
-            "end": 0
+            "start": 85.001,
+            "end": 85.417
           },
           {
             "word": "唱",
-            "start": 0,
-            "end": 0,
+            "start": 85.417,
+            "end": 86.005,
             "furigana": "しょう"
           },
           {
             "word": "和",
-            "start": 0,
-            "end": 0,
+            "start": 86.005,
+            "end": 86.251,
             "furigana": "わ"
           },
           {
             "word": "く",
-            "start": 0,
-            "end": 0
+            "start": 86.251,
+            "end": 86.414
           },
           {
             "word": "だ",
-            "start": 0,
-            "end": 0
+            "start": 86.414,
+            "end": 86.627
           },
           {
             "word": "さ",
-            "start": 0,
-            "end": 0
+            "start": 86.627,
+            "end": 86.839
           },
           {
             "word": "い",
-            "start": 0,
-            "end": 0
+            "start": 86.839,
+            "end": 87.104
           }
         ]
       },
       {
-        "verseStart": 105,
-        "verseEnd": 108,
+        "verseStart": 87.104,
+        "verseEnd": 88.708,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 87.104,
+            "end": 87.269
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 87.269,
+            "end": 87.476,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 87.476,
+            "end": 87.845,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 87.845,
+            "end": 88.254,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 88.254,
+            "end": 88.708
           }
         ]
       },
       {
-        "verseStart": 108,
-        "verseEnd": 111,
+        "verseStart": 88.708,
+        "verseEnd": 90.292,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 88.708,
+            "end": 88.877
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 88.877,
+            "end": 89.086,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 89.086,
+            "end": 89.457,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 89.457,
+            "end": 89.917,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 89.917,
+            "end": 90.292
           }
         ]
       },
       {
-        "verseStart": 111,
-        "verseEnd": 114,
+        "verseStart": 90.292,
+        "verseEnd": 93.551,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 90.292,
+            "end": 90.501
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 90.501,
+            "end": 90.71,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 90.71,
+            "end": 91.083,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 91.083,
+            "end": 91.543,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 91.543,
+            "end": 93.551
           }
         ]
       },
       {
-        "verseStart": 114,
-        "verseEnd": 117,
+        "verseStart": 93.551,
+        "verseEnd": 95.21,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 93.551,
+            "end": 93.762
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 93.762,
+            "end": 93.969,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 93.969,
+            "end": 94.378,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 94.378,
+            "end": 94.755,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 94.755,
+            "end": 95.21
           }
         ]
       },
       {
-        "verseStart": 117,
-        "verseEnd": 120,
+        "verseStart": 95.21,
+        "verseEnd": 96.834,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 95.21,
+            "end": 95.418
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 95.418,
+            "end": 95.584,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 95.584,
+            "end": 96.001,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 96.001,
+            "end": 96.421,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 96.421,
+            "end": 96.834
           }
         ]
       },
       {
-        "verseStart": 120,
-        "verseEnd": 123,
+        "verseStart": 96.834,
+        "verseEnd": 99.944,
         "words": [
           {
             "word": "お",
-            "start": 0,
-            "end": 0
+            "start": 96.834,
+            "end": 97
           },
           {
             "word": "可",
-            "start": 0,
-            "end": 0,
+            "start": 97,
+            "end": 97.212,
             "furigana": "か"
           },
           {
             "word": "哀",
-            "start": 0,
-            "end": 0,
+            "start": 97.212,
+            "end": 97.589,
             "furigana": "わい"
           },
           {
             "word": "想",
-            "start": 0,
-            "end": 0,
+            "start": 97.589,
+            "end": 97.959,
             "furigana": "そう"
           },
           {
             "word": "に",
-            "start": 0,
-            "end": 0
+            "start": 97.959,
+            "end": 99.944
           }
         ]
       },
       {
-        "verseStart": 123,
-        "verseEnd": 126,
+        "verseStart": 99.944,
+        "verseEnd": 103.328,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 99.944,
+            "end": 100.405,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 100.405,
+            "end": 100.818,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 100.818,
+            "end": 101.227,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 101.227,
+            "end": 101.686,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 101.686,
+            "end": 101.892,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 101.892,
+            "end": 102.058,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 102.058,
+            "end": 102.467,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 102.467,
+            "end": 103.328,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 126,
-        "verseEnd": 129,
+        "verseStart": 103.328,
+        "verseEnd": 106.587,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 103.328,
+            "end": 103.659,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 103.659,
+            "end": 104.073,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 104.073,
+            "end": 104.442,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 104.442,
+            "end": 104.933,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 104.933,
+            "end": 105.141,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 105.141,
+            "end": 105.35,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 105.35,
+            "end": 105.684,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 105.684,
+            "end": 106.587,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 129,
-        "verseEnd": 132,
+        "verseStart": 106.587,
+        "verseEnd": 109.845,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 106.587,
+            "end": 106.926,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 106.926,
+            "end": 107.347,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 107.347,
+            "end": 107.716,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 107.716,
+            "end": 108.211,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 108.211,
+            "end": 108.433,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 108.433,
+            "end": 108.646,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 108.646,
+            "end": 109.014,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 109.014,
+            "end": 109.845,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 132,
-        "verseEnd": 135,
+        "verseStart": 109.845,
+        "verseEnd": 118.172,
         "words": [
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 109.845,
+            "end": 110.214,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 110.214,
+            "end": 110.628,
             "furigana": "てい"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 110.628,
+            "end": 110.998,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 110.998,
+            "end": 111.502,
             "furigana": "てい"
           },
           {
             "word": "波",
-            "start": 0,
-            "end": 0,
+            "start": 111.502,
+            "end": 111.667,
             "furigana": "は"
           },
           {
             "word": "羅",
-            "start": 0,
-            "end": 0,
+            "start": 111.667,
+            "end": 111.876,
             "furigana": "ら"
           },
           {
             "word": "羯",
-            "start": 0,
-            "end": 0,
+            "start": 111.876,
+            "end": 112.25,
             "furigana": "ぎゃ"
           },
           {
             "word": "諦",
-            "start": 0,
-            "end": 0,
+            "start": 112.25,
+            "end": 118.172,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 135,
-        "verseEnd": 138,
+        "verseStart": 118.172,
+        "verseEnd": 126.196,
         "words": [
           {
             "word": "存",
-            "start": 0,
-            "end": 0,
+            "start": 118.172,
+            "end": 118.296,
             "furigana": "そん"
           },
           {
             "word": "在",
-            "start": 0,
-            "end": 0,
+            "start": 118.296,
+            "end": 118.422,
             "furigana": "ざい"
           },
           {
             "word": "自",
-            "start": 0,
-            "end": 0,
+            "start": 118.422,
+            "end": 118.545,
             "furigana": "じ"
           },
           {
             "word": "体",
-            "start": 0,
-            "end": 0,
+            "start": 118.545,
+            "end": 118.627,
             "furigana": "たい"
           },
           {
             "word": "が",
-            "start": 0,
-            "end": 0
+            "start": 118.627,
+            "end": 118.751
           },
           {
             "word": "罪",
-            "start": 0,
-            "end": 0,
+            "start": 118.751,
+            "end": 118.959,
             "furigana": "つみ"
           },
           {
             "word": "深",
-            "start": 0,
-            "end": 0,
+            "start": 118.959,
+            "end": 119.084,
             "furigana": "ぶか"
           },
           {
             "word": "い",
-            "start": 0,
-            "end": 0
+            "start": 119.084,
+            "end": 126.196
           }
         ]
       },
       {
-        "verseStart": 138,
-        "verseEnd": 141,
+        "verseStart": 126.196,
+        "verseEnd": 129.007,
         "words": [
           {
             "word": "底",
-            "start": 0,
-            "end": 0,
+            "start": 126.196,
+            "end": 126.563,
             "furigana": "てい"
           },
           {
             "word": "辺",
-            "start": 0,
-            "end": 0,
+            "start": 126.563,
+            "end": 126.976,
             "furigana": "へん"
           },
           {
             "word": "廃",
-            "start": 0,
-            "end": 0,
+            "start": 126.976,
+            "end": 127.393,
             "furigana": "はい"
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 127.393,
+            "end": 127.804,
             "furigana": "じん"
           },
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 127.804,
+            "end": 128.256,
             "furigana": "ひと"
           },
           {
             "word": "で",
-            "start": 0,
-            "end": 0
+            "start": 128.256,
+            "end": 128.421
           },
           {
             "word": "な",
-            "start": 0,
-            "end": 0
+            "start": 128.421,
+            "end": 128.631
           },
           {
             "word": "し",
-            "start": 0,
-            "end": 0
+            "start": 128.631,
+            "end": 129.007
           }
         ]
       },
       {
-        "verseStart": 141,
-        "verseEnd": 144,
+        "verseStart": 129.007,
+        "verseEnd": 132.694,
         "words": [
           {
             "word": "闇",
-            "start": 0,
-            "end": 0,
+            "start": 129.007,
+            "end": 129.213,
             "furigana": "やみ"
           },
           {
             "word": "堕",
-            "start": 0,
-            "end": 0,
+            "start": 129.213,
+            "end": 129.586,
             "furigana": "お"
           },
           {
             "word": "ち",
-            "start": 0,
-            "end": 0
+            "start": 129.586,
+            "end": 129.792
           },
           {
             "word": "無",
-            "start": 0,
-            "end": 0,
+            "start": 129.792,
+            "end": 129.996,
             "furigana": "む"
           },
           {
             "word": "気",
-            "start": 0,
-            "end": 0,
+            "start": 129.996,
+            "end": 130.2,
             "furigana": "き"
           },
           {
             "word": "力",
-            "start": 0,
-            "end": 0,
+            "start": 130.2,
+            "end": 130.404,
             "furigana": "りょく"
           },
           {
             "word": "デ",
-            "start": 0,
-            "end": 0
+            "start": 130.404,
+            "end": 130.648
           },
           {
             "word": "バ",
-            "start": 0,
-            "end": 0
+            "start": 130.648,
+            "end": 130.852
           },
           {
             "word": "フ",
-            "start": 0,
-            "end": 0
+            "start": 130.852,
+            "end": 131.298
           },
           {
             "word": "持",
-            "start": 0,
-            "end": 0,
+            "start": 131.298,
+            "end": 131.749,
             "furigana": "も"
           },
           {
             "word": "ち",
-            "start": 0,
-            "end": 0
+            "start": 131.749,
+            "end": 132.694
           }
         ]
       },
       {
-        "verseStart": 144,
-        "verseEnd": 147,
+        "verseStart": 132.694,
+        "verseEnd": 135.837,
         "words": [
           {
             "word": "人",
-            "start": 0,
-            "end": 0,
+            "start": 132.694,
+            "end": 133.102,
             "furigana": "にん"
           },
           {
             "word": "間",
-            "start": 0,
-            "end": 0,
+            "start": 133.102,
+            "end": 133.833,
             "furigana": "げん"
           },
           {
             "word": "失",
-            "start": 0,
-            "end": 0,
+            "start": 133.833,
+            "end": 134.04,
             "furigana": "しっ"
           },
           {
             "word": "格",
-            "start": 0,
-            "end": 0,
+            "start": 134.04,
+            "end": 134.204,
             "furigana": "かく"
           },
           {
             "word": "這",
-            "start": 0,
-            "end": 0,
+            "start": 134.204,
+            "end": 134.367,
             "furigana": "ほ"
           },
           {
             "word": "う",
-            "start": 0,
-            "end": 0
+            "start": 134.367,
+            "end": 134.612
           },
           {
             "word": "這",
-            "start": 0,
-            "end": 0,
+            "start": 134.612,
+            "end": 134.775,
             "furigana": "ほ"
           },
           {
             "word": "う",
-            "start": 0,
-            "end": 0
+            "start": 134.775,
+            "end": 135.02
           },
           {
             "word": "の",
-            "start": 0,
-            "end": 0
+            "start": 135.02,
+            "end": 135.224
           },
           {
             "word": "体",
-            "start": 0,
-            "end": 0,
+            "start": 135.224,
+            "end": 135.837,
             "furigana": "てい"
           }
         ]
       },
       {
-        "verseStart": 147,
-        "verseEnd": 150,
+        "verseStart": 135.837,
+        "verseEnd": 140.617,
         "words": [
           {
             "word": "最",
-            "start": 0,
-            "end": 0,
+            "start": 135.837,
+            "end": 136.287,
             "furigana": "さい"
           },
           {
             "word": "終",
-            "start": 0,
-            "end": 0,
+            "start": 136.287,
+            "end": 136.737,
             "furigana": "しゅう"
           },
           {
             "word": "宣",
-            "start": 0,
-            "end": 0,
+            "start": 136.737,
+            "end": 137.185,
             "furigana": "せん"
           },
           {
             "word": "告",
-            "start": 0,
-            "end": 0,
+            "start": 137.185,
+            "end": 137.39,
             "furigana": "こく"
           },
           {
             "word": "ご",
-            "start": 0,
-            "end": 0
+            "start": 137.39,
+            "end": 137.594
           },
           {
             "word": "愁",
-            "start": 0,
-            "end": 0,
+            "start": 137.594,
+            "end": 138.167,
             "furigana": "しゅう"
           },
           {
             "word": "傷",
-            "start": 0,
-            "end": 0,
+            "start": 138.167,
+            "end": 138.617,
             "furigana": "しょう"
           },
           {
             "word": "様",
-            "start": 0,
+            "start": 138.617,
             "end": 0,
             "furigana": "さま"
           }
