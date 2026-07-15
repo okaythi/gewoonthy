@@ -22,7 +22,7 @@ database_name = "thy_quote"
 database_id = "4901f464-e4c1-4b13-8cfb-d98c25785023"
 
 [[d1_databases]]
-binding = "USERS"
+binding = "users"
 database_name = "user_accounts"
 database_id = "08bfb29e-f701-4d75-8784-86d66caa92d6"
 

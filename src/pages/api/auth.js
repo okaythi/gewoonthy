@@ -1,5 +1,5 @@
 export const POST = async ({ request, cookies, locals }) => {
-  const db = locals.runtime.env.USERS;
+  const db = locals.runtime.env.users;
   const body = await request.json();
   const { action, username, password } = body;
 

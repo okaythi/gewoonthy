@@ -10,7 +10,7 @@ const commandManifest = {
 };
 
 export const POST = async ({ request, cookies, locals }) => {
-  const db = locals.runtime.env.USERS;
+  const db = locals.runtime.env.users;
   const sessionId = cookies.get('session')?.value;
   
   if (!sessionId) {
