@@ -38,6 +38,16 @@ export const POST = async ({ request, cookies, locals }) => {
   if (action === 'create') {
     const id = crypto.randomUUID();
     const ip = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
+    
+    // Clean up volatile guest if they are logged in as one
+    const sessionId = cookies.get('session')?.value;
+    if (sessionId) {
+      const { results } = await db.prepare('SELECT is_guest FROM users WHERE id = ?').bind(sessionId).all();
+      if (results.length > 0 && results[0].is_guest) {
+        await db.prepare('DELETE FROM users WHERE id = ?').bind(sessionId).run();
+      }
+    }
+
     try {
       await db.prepare('INSERT INTO users (id, username, password, primary_group, secondary_groups, is_guest, creation_ip) VALUES (?, ?, ?, ?, ?, ?, ?)')
         .bind(id, username, password, 'users', '[]', 0, ip).run();
