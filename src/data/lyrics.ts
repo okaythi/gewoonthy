@@ -30475,6 +30475,44 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 93,
         "words": [
           {
+            "word": "さ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "あ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "一",
+            "start": 0,
+            "end": 0,
+            "furigana": "いっ"
+          },
+          {
+            "word": "緒",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょ"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 93,
+        "verseEnd": 96,
+        "words": [
+          {
             "word": "御",
             "start": 0,
             "end": 0,
@@ -30509,44 +30547,6 @@ export const songsDictionary: Record<string, SongData> = {
           },
           {
             "word": "て",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 93,
-        "verseEnd": 96,
-        "words": [
-          {
-            "word": "さ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "あ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "ご",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "一",
-            "start": 0,
-            "end": 0,
-            "furigana": "いっ"
-          },
-          {
-            "word": "緒",
-            "start": 0,
-            "end": 0,
-            "furigana": "しょ"
-          },
-          {
-            "word": "に",
             "start": 0,
             "end": 0
           }
@@ -30645,94 +30645,6 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 105,
         "words": [
           {
-            "word": "御",
-            "start": 0,
-            "end": 0,
-            "furigana": "お"
-          },
-          {
-            "word": "手",
-            "start": 0,
-            "end": 0,
-            "furigana": "て"
-          },
-          {
-            "word": "を",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "合",
-            "start": 0,
-            "end": 0,
-            "furigana": "あ"
-          },
-          {
-            "word": "わ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "て",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 105,
-        "verseEnd": 108,
-        "words": [
-          {
-            "word": "御",
-            "start": 0,
-            "end": 0,
-            "furigana": "お"
-          },
-          {
-            "word": "手",
-            "start": 0,
-            "end": 0,
-            "furigana": "て"
-          },
-          {
-            "word": "を",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "合",
-            "start": 0,
-            "end": 0,
-            "furigana": "あ"
-          },
-          {
-            "word": "わ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "せ",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "て",
-            "start": 0,
-            "end": 0
-          }
-        ]
-      },
-      {
-        "verseStart": 108,
-        "verseEnd": 111,
-        "words": [
-          {
             "word": "ご",
             "start": 0,
             "end": 0
@@ -30766,6 +30678,74 @@ export const songsDictionary: Record<string, SongData> = {
           },
           {
             "word": "い",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 105,
+        "verseEnd": 108,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 108,
+        "verseEnd": 111,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
             "start": 0,
             "end": 0
           }
@@ -30912,32 +30892,52 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 126,
         "words": [
           {
-            "word": "お",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "可",
+            "word": "羯",
             "start": 0,
             "end": 0,
-            "furigana": "か"
+            "furigana": "ぎゃ"
           },
           {
-            "word": "哀",
+            "word": "諦",
             "start": 0,
             "end": 0,
-            "furigana": "わい"
+            "furigana": "てい"
           },
           {
-            "word": "想",
+            "word": "羯",
             "start": 0,
             "end": 0,
-            "furigana": "そう"
+            "furigana": "ぎゃ"
           },
           {
-            "word": "に",
+            "word": "諦",
             "start": 0,
-            "end": 0
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
           }
         ]
       },
@@ -30946,32 +30946,52 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 129,
         "words": [
           {
-            "word": "お",
-            "start": 0,
-            "end": 0
-          },
-          {
-            "word": "可",
+            "word": "羯",
             "start": 0,
             "end": 0,
-            "furigana": "か"
+            "furigana": "ぎゃ"
           },
           {
-            "word": "哀",
+            "word": "諦",
             "start": 0,
             "end": 0,
-            "furigana": "わい"
+            "furigana": "てい"
           },
           {
-            "word": "想",
+            "word": "羯",
             "start": 0,
             "end": 0,
-            "furigana": "そう"
+            "furigana": "ぎゃ"
           },
           {
-            "word": "に",
+            "word": "諦",
             "start": 0,
-            "end": 0
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
           }
         ]
       },
@@ -31088,114 +31108,6 @@ export const songsDictionary: Record<string, SongData> = {
         "verseEnd": 138,
         "words": [
           {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "波",
-            "start": 0,
-            "end": 0,
-            "furigana": "は"
-          },
-          {
-            "word": "羅",
-            "start": 0,
-            "end": 0,
-            "furigana": "ら"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          }
-        ]
-      },
-      {
-        "verseStart": 138,
-        "verseEnd": 141,
-        "words": [
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          },
-          {
-            "word": "波",
-            "start": 0,
-            "end": 0,
-            "furigana": "は"
-          },
-          {
-            "word": "羅",
-            "start": 0,
-            "end": 0,
-            "furigana": "ら"
-          },
-          {
-            "word": "羯",
-            "start": 0,
-            "end": 0,
-            "furigana": "ぎゃ"
-          },
-          {
-            "word": "諦",
-            "start": 0,
-            "end": 0,
-            "furigana": "てい"
-          }
-        ]
-      },
-      {
-        "verseStart": 141,
-        "verseEnd": 144,
-        "words": [
-          {
             "word": "存",
             "start": 0,
             "end": 0,
@@ -31244,8 +31156,8 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 144,
-        "verseEnd": 147,
+        "verseStart": 138,
+        "verseEnd": 141,
         "words": [
           {
             "word": "底",
@@ -31295,8 +31207,8 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 147,
-        "verseEnd": 150,
+        "verseStart": 141,
+        "verseEnd": 144,
         "words": [
           {
             "word": "闇",
@@ -31362,8 +31274,8 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 150,
-        "verseEnd": 153,
+        "verseStart": 144,
+        "verseEnd": 147,
         "words": [
           {
             "word": "人",
@@ -31425,8 +31337,8 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       },
       {
-        "verseStart": 153,
-        "verseEnd": 156,
+        "verseStart": 147,
+        "verseEnd": 150,
         "words": [
           {
             "word": "最",
