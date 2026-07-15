@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+:root {
+  --ubuntu-purple: #300a24;
+  --ubuntu-text: #ffffff;
+  --ubuntu-green: #4e9a06;
+  --ubuntu-blue: #3465a4;
+  --ubuntu-red: #cc0000;
+  --ubuntu-cursor: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--ubuntu-purple);
+  color: var(--ubuntu-text);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+  line-height: 1.2;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#terminal-container {
+  flex: 1;
+  padding: 4px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.terminal-line {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 2px;
+}
+
+.terminal-prompt {
+  color: var(--ubuntu-green);
+  font-weight: bold;
+}
+
+.terminal-prompt-path {
+  color: var(--ubuntu-blue);
+  font-weight: bold;
+}
+
+.terminal-input-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background-color: var(--ubuntu-cursor);
+  animation: blink 1s step-end infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.color-red { color: var(--ubuntu-red); }
+.color-green { color: var(--ubuntu-green); }
+.color-blue { color: var(--ubuntu-blue); }
+
+.gnome-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 90vw;
+  background-color: #242424;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  z-index: 100;
+  color: #fff;
+  border: 1px solid #3a3a3a;
+}
+
+.gnome-header {
+  background-color: #1e1e1e;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: grab;
+  user-select: none;
+}
+
+.gnome-header:active {
+  cursor: grabbing;
+}
+
+.gnome-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gnome-close {
+  position: absolute;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background-color: #e04f5f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.gnome-close:hover {
+  background-color: #f75b6d;
+}
+
+.gnome-content {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px dashed #666;
+  padding: 2px;
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.info-group h3 {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: #333;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 80px;
+}
+
+.tag-icon {
+  font-size: 20px;
+}
+
+.tag-text-only {
+  background-color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
