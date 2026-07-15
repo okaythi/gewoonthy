@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('beforeunload', () => {
     if (authManager.user && authManager.user.is_guest) {
-      navigator.sendBeacon('/api/auth', JSON.stringify({ action: 'logout' }));
+      navigator.sendBeacon('/api/auth', JSON.stringify({ action: 'logout', token: authManager.token }));
     }
   });
 });

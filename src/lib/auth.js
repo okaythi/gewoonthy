@@ -19,9 +19,9 @@ class AuthManager {
     const sessionStr = localStorage.getItem('sudothy_session');
     if (sessionStr) {
       try {
-        const session = JSON.parse(sessionStr);
-        if (session && session.user) {
+        if (session && session.user && session.token) {
           this.user = session.user;
+          this.token = session.token;
           this.state = AuthState.READY;
           return;
         }
@@ -39,10 +39,10 @@ class AuthManager {
         });
         const data = await res.json();
         
-        terminal.printLine(`A temporary username has been assigned to you, to create an account use 'account --create'.`);
         this.user = data.user;
+        this.token = data.token;
         this.state = AuthState.READY;
-        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
         terminal.prompt();
       } else {
@@ -61,9 +61,9 @@ class AuthManager {
         });
         if (!res.ok) throw new Error('Login failed');
         const data = await res.json();
-        
         this.user = data.user;
-        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
+        this.token = data.token;
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
@@ -94,10 +94,10 @@ class AuthManager {
         });
         if (!res.ok) throw new Error('Username taken or error');
         const data = await res.json();
-        
         terminal.printLine(`Account created successfully. Logging in...`);
         this.user = data.user;
-        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user }));
+        this.token = data.token;
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
@@ -112,10 +112,15 @@ class AuthManager {
   async logout(terminal) {
     await fetch('/api/auth', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
+      },
       body: JSON.stringify({ action: 'logout' })
     });
     localStorage.removeItem('sudothy_session');
     this.user = null;
+    this.token = null;
     this.state = AuthState.PROMPT_LOGIN;
     terminal.setPrompt(`login (leave empty to use as guest): `);
     terminal.prompt();

@@ -13,7 +13,8 @@ import { env } from "cloudflare:workers";
 
 export const POST = async ({ request, cookies }) => {
   const db = env.users;
-  const sessionId = cookies.get('session')?.value;
+  const authHeader = request.headers.get('Authorization');
+  const sessionId = authHeader ? authHeader.replace('Bearer ', '') : null;
   
   if (!sessionId) {
     return new Response(JSON.stringify({ allowed: false, error: 'Unauthorized' }), { status: 401 });

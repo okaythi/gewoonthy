@@ -3,6 +3,7 @@ import { aboutCommand } from './commands/about.js';
 import { clearCommand } from './commands/clear.js';
 import { accountCommand } from './commands/account.js';
 import { logoutCommand } from './commands/logout.js';
+import { authManager } from './auth.js';
 
 class CommandEngine {
   constructor() {
@@ -33,6 +34,10 @@ class CommandEngine {
     try {
       const res = await fetch('/api/execute', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${authManager.token}`
+        },
         body: JSON.stringify({ command: cmdName })
       });
       const data = await res.json();
