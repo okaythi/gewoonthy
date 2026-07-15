@@ -125,7 +125,10 @@
           lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
             <div class="verse" id="verse-${vIdx}">
               ${verse.speaker ? `<span class="speaker" style="margin-right: 0.5em;">${verse.speaker}</span>` : ''}
-              ${verse.words.map((w, wIdx) => `<span class="word" id="word-${vIdx}-${wIdx}">${w.word} </span>`).join('')}
+              ${verse.words.map((w, wIdx) => {
+                const display = w.furigana ? \`<ruby>\${w.word}<rt>\${w.furigana}</rt></ruby>\` : w.word;
+                return \`<span class="word" id="word-\${vIdx}-\${wIdx}">\${display} </span>\`;
+              }).join('')}
             </div>
           `).join('');
         }
@@ -476,7 +479,10 @@
             lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
               <div class="verse" id="verse-${vIdx}">
                 ${verse.speaker ? `<span class="speaker" style="margin-right: 0.5em;">${verse.speaker}</span>` : ''}
-                ${verse.words.map((w, wIdx) => `<span class="word" id="word-${vIdx}-${wIdx}">${w.word} </span>`).join('')}
+                ${verse.words.map((w, wIdx) => {
+                  const display = w.furigana ? \`<ruby>\${w.word}<rt>\${w.furigana}</rt></ruby>\` : w.word;
+                  return \`<span class="word" id="word-\${vIdx}-\${wIdx}">\${display} </span>\`;
+                }).join('')}
               </div>
             `).join('');
           }

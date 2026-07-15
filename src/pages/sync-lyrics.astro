@@ -353,7 +353,8 @@ const pageTitle = "Lyrics Sync Tool";
             const isSynced = w.start && w.start !== 0;
             const isActive = vIdx === playingV && wIdx === playingW;
             const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
-            return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${w.word}</span>`;
+            const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
+            return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${display}</span>`;
             }).join('')}
           </div>
         `).join('');

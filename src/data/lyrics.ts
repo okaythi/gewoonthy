@@ -2,6 +2,7 @@ export interface Word {
   word: string;
   start: number;
   end: number;
+  furigana?: string;
 }
 
 export interface Verse {
@@ -28821,6 +28822,2658 @@ export const songsDictionary: Record<string, SongData> = {
             "word": "mee!",
             "start": 165.855,
             "end": 0
+          }
+        ]
+      }
+    ]
+  },
+  "INORI.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 0,
+        "verseEnd": 3,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 3,
+        "verseEnd": 6,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 6,
+        "verseEnd": 9,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 9,
+        "verseEnd": 12,
+        "words": [
+          {
+            "word": "さ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "あ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "一",
+            "start": 0,
+            "end": 0,
+            "furigana": "いっ"
+          },
+          {
+            "word": "緒",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょ"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 12,
+        "verseEnd": 15,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 15,
+        "verseEnd": 18,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 18,
+        "verseEnd": 21,
+        "words": [
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "唱",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょう"
+          },
+          {
+            "word": "和",
+            "start": 0,
+            "end": 0,
+            "furigana": "わ"
+          },
+          {
+            "word": "く",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "だ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "さ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "い",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 21,
+        "verseEnd": 24,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 24,
+        "verseEnd": 27,
+        "words": [
+          {
+            "word": "意",
+            "start": 0,
+            "end": 0,
+            "furigana": "い"
+          },
+          {
+            "word": "味",
+            "start": 0,
+            "end": 0,
+            "furigana": "み"
+          },
+          {
+            "word": "な",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "し",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "価",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "値",
+            "start": 0,
+            "end": 0,
+            "furigana": "ち"
+          },
+          {
+            "word": "な",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "し",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "魅",
+            "start": 0,
+            "end": 0,
+            "furigana": "み"
+          },
+          {
+            "word": "力",
+            "start": 0,
+            "end": 0,
+            "furigana": "りょく"
+          },
+          {
+            "word": "な",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "し",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "生",
+            "start": 0,
+            "end": 0,
+            "furigana": "う"
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "れ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "た",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "時",
+            "start": 0,
+            "end": 0,
+            "furigana": "じ"
+          },
+          {
+            "word": "点",
+            "start": 0,
+            "end": 0,
+            "furigana": "てん"
+          },
+          {
+            "word": "で",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "終",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "っ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "る",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 27,
+        "verseEnd": 30,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 30,
+        "verseEnd": 33,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 33,
+        "verseEnd": 36,
+        "words": [
+          {
+            "word": "通",
+            "start": 0,
+            "end": 0,
+            "furigana": "とお"
+          },
+          {
+            "word": "りゃ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ん",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "通",
+            "start": 0,
+            "end": 0,
+            "furigana": "とお"
+          },
+          {
+            "word": "りゃ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ん",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 36,
+        "verseEnd": 39,
+        "words": [
+          {
+            "word": "こ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "の",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "世",
+            "start": 0,
+            "end": 0,
+            "furigana": "よ"
+          },
+          {
+            "word": "の",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "終",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "り",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "絶",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぜつ"
+          },
+          {
+            "word": "望",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぼう"
+          },
+          {
+            "word": "ル",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ー",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ト",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 39,
+        "verseEnd": 42,
+        "words": [
+          {
+            "word": "通",
+            "start": 0,
+            "end": 0,
+            "furigana": "とお"
+          },
+          {
+            "word": "りゃ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ん",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "通",
+            "start": 0,
+            "end": 0,
+            "furigana": "とお"
+          },
+          {
+            "word": "りゃ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ん",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 42,
+        "verseEnd": 45,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "先",
+            "start": 0,
+            "end": 0,
+            "furigana": "さき"
+          },
+          {
+            "word": "真",
+            "start": 0,
+            "end": 0,
+            "furigana": "まっ"
+          },
+          {
+            "word": "暗",
+            "start": 0,
+            "end": 0,
+            "furigana": "くら"
+          },
+          {
+            "word": "死",
+            "start": 0,
+            "end": 0,
+            "furigana": "し"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ゲ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ー",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ル",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ー",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ト",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 45,
+        "verseEnd": 48,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 48,
+        "verseEnd": 51,
+        "words": [
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 51,
+        "verseEnd": 54,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 54,
+        "verseEnd": 57,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 57,
+        "verseEnd": 60,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 60,
+        "verseEnd": 63,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 63,
+        "verseEnd": 66,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 66,
+        "verseEnd": 69,
+        "words": [
+          {
+            "word": "才",
+            "start": 0,
+            "end": 0,
+            "furigana": "さい"
+          },
+          {
+            "word": "能",
+            "start": 0,
+            "end": 0,
+            "furigana": "のう"
+          },
+          {
+            "word": "レ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ベ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ル",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "の",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "社",
+            "start": 0,
+            "end": 0,
+            "furigana": "しゃ"
+          },
+          {
+            "word": "会",
+            "start": 0,
+            "end": 0,
+            "furigana": "かい"
+          },
+          {
+            "word": "不",
+            "start": 0,
+            "end": 0,
+            "furigana": "ふ"
+          },
+          {
+            "word": "適",
+            "start": 0,
+            "end": 0,
+            "furigana": "てき"
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "ごう"
+          },
+          {
+            "word": "者",
+            "start": 0,
+            "end": 0,
+            "furigana": "しゃ"
+          }
+        ]
+      },
+      {
+        "verseStart": 69,
+        "verseEnd": 72,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 72,
+        "verseEnd": 75,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 75,
+        "verseEnd": 78,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 78,
+        "verseEnd": 81,
+        "words": [
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "そ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ろ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "や",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "め",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ま",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "しょ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "か",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 81,
+        "verseEnd": 84,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 84,
+        "verseEnd": 87,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 87,
+        "verseEnd": 90,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 90,
+        "verseEnd": 93,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 93,
+        "verseEnd": 96,
+        "words": [
+          {
+            "word": "さ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "あ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "一",
+            "start": 0,
+            "end": 0,
+            "furigana": "いっ"
+          },
+          {
+            "word": "緒",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょ"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 96,
+        "verseEnd": 99,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 99,
+        "verseEnd": 102,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 102,
+        "verseEnd": 105,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 105,
+        "verseEnd": 108,
+        "words": [
+          {
+            "word": "御",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "手",
+            "start": 0,
+            "end": 0,
+            "furigana": "て"
+          },
+          {
+            "word": "を",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "合",
+            "start": 0,
+            "end": 0,
+            "furigana": "あ"
+          },
+          {
+            "word": "わ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "せ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "て",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 108,
+        "verseEnd": 111,
+        "words": [
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "唱",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょう"
+          },
+          {
+            "word": "和",
+            "start": 0,
+            "end": 0,
+            "furigana": "わ"
+          },
+          {
+            "word": "く",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "だ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "さ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "い",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 111,
+        "verseEnd": 114,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 114,
+        "verseEnd": 117,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 117,
+        "verseEnd": 120,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 120,
+        "verseEnd": 123,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 123,
+        "verseEnd": 126,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 126,
+        "verseEnd": 129,
+        "words": [
+          {
+            "word": "お",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "可",
+            "start": 0,
+            "end": 0,
+            "furigana": "か"
+          },
+          {
+            "word": "哀",
+            "start": 0,
+            "end": 0,
+            "furigana": "わい"
+          },
+          {
+            "word": "想",
+            "start": 0,
+            "end": 0,
+            "furigana": "そう"
+          },
+          {
+            "word": "に",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 129,
+        "verseEnd": 132,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 132,
+        "verseEnd": 135,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 135,
+        "verseEnd": 138,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 138,
+        "verseEnd": 141,
+        "words": [
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "波",
+            "start": 0,
+            "end": 0,
+            "furigana": "は"
+          },
+          {
+            "word": "羅",
+            "start": 0,
+            "end": 0,
+            "furigana": "ら"
+          },
+          {
+            "word": "羯",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぎゃ"
+          },
+          {
+            "word": "諦",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 141,
+        "verseEnd": 144,
+        "words": [
+          {
+            "word": "存",
+            "start": 0,
+            "end": 0,
+            "furigana": "そん"
+          },
+          {
+            "word": "在",
+            "start": 0,
+            "end": 0,
+            "furigana": "ざい"
+          },
+          {
+            "word": "自",
+            "start": 0,
+            "end": 0,
+            "furigana": "じ"
+          },
+          {
+            "word": "体",
+            "start": 0,
+            "end": 0,
+            "furigana": "たい"
+          },
+          {
+            "word": "が",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "罪",
+            "start": 0,
+            "end": 0,
+            "furigana": "つみ"
+          },
+          {
+            "word": "深",
+            "start": 0,
+            "end": 0,
+            "furigana": "ぶか"
+          },
+          {
+            "word": "い",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 144,
+        "verseEnd": 147,
+        "words": [
+          {
+            "word": "底",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          },
+          {
+            "word": "辺",
+            "start": 0,
+            "end": 0,
+            "furigana": "へん"
+          },
+          {
+            "word": "廃",
+            "start": 0,
+            "end": 0,
+            "furigana": "はい"
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "じん"
+          },
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "ひと"
+          },
+          {
+            "word": "で",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "な",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "し",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 147,
+        "verseEnd": 150,
+        "words": [
+          {
+            "word": "闇",
+            "start": 0,
+            "end": 0,
+            "furigana": "やみ"
+          },
+          {
+            "word": "堕",
+            "start": 0,
+            "end": 0,
+            "furigana": "お"
+          },
+          {
+            "word": "ち",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "無",
+            "start": 0,
+            "end": 0,
+            "furigana": "む"
+          },
+          {
+            "word": "気",
+            "start": 0,
+            "end": 0,
+            "furigana": "き"
+          },
+          {
+            "word": "力",
+            "start": 0,
+            "end": 0,
+            "furigana": "りょく"
+          },
+          {
+            "word": "デ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "バ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "フ",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "持",
+            "start": 0,
+            "end": 0,
+            "furigana": "も"
+          },
+          {
+            "word": "ち",
+            "start": 0,
+            "end": 0
+          }
+        ]
+      },
+      {
+        "verseStart": 150,
+        "verseEnd": 153,
+        "words": [
+          {
+            "word": "人",
+            "start": 0,
+            "end": 0,
+            "furigana": "にん"
+          },
+          {
+            "word": "間",
+            "start": 0,
+            "end": 0,
+            "furigana": "げん"
+          },
+          {
+            "word": "失",
+            "start": 0,
+            "end": 0,
+            "furigana": "しっ"
+          },
+          {
+            "word": "格",
+            "start": 0,
+            "end": 0,
+            "furigana": "かく"
+          },
+          {
+            "word": "這",
+            "start": 0,
+            "end": 0,
+            "furigana": "ほ"
+          },
+          {
+            "word": "う",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "這",
+            "start": 0,
+            "end": 0,
+            "furigana": "ほ"
+          },
+          {
+            "word": "う",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "の",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "体",
+            "start": 0,
+            "end": 0,
+            "furigana": "てい"
+          }
+        ]
+      },
+      {
+        "verseStart": 153,
+        "verseEnd": 156,
+        "words": [
+          {
+            "word": "最",
+            "start": 0,
+            "end": 0,
+            "furigana": "さい"
+          },
+          {
+            "word": "終",
+            "start": 0,
+            "end": 0,
+            "furigana": "しゅう"
+          },
+          {
+            "word": "宣",
+            "start": 0,
+            "end": 0,
+            "furigana": "せん"
+          },
+          {
+            "word": "告",
+            "start": 0,
+            "end": 0,
+            "furigana": "こく"
+          },
+          {
+            "word": "ご",
+            "start": 0,
+            "end": 0
+          },
+          {
+            "word": "愁",
+            "start": 0,
+            "end": 0,
+            "furigana": "しゅう"
+          },
+          {
+            "word": "傷",
+            "start": 0,
+            "end": 0,
+            "furigana": "しょう"
+          },
+          {
+            "word": "様",
+            "start": 0,
+            "end": 0,
+            "furigana": "さま"
           }
         ]
       }
