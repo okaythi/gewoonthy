@@ -9,8 +9,10 @@ const commandManifest = {
   'logout': { owner: 'root', group: 'root', perms: 777 }
 };
 
-export const POST = async ({ request, cookies, locals }) => {
-  const db = locals.runtime.env.users;
+import { env } from "cloudflare:workers";
+
+export const POST = async ({ request, cookies }) => {
+  const db = env.users;
   const sessionId = cookies.get('session')?.value;
   
   if (!sessionId) {

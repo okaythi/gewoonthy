@@ -1,5 +1,5 @@
 name = "gewoonthy"
-compatibility_date = "2024-03-20"
+compatibility_date = "2024-04-03"
 
 [[d1_databases]]
 binding = "CLOSE_FRIENDS"
