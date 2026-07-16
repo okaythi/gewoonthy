@@ -38,6 +38,7 @@ class WindowManager {
     
     this.container.appendChild(win);
     this.windows.push(win);
+    return win;
   }
 
   setupDrag(win, handle) {

@@ -89,3 +89,8 @@ export const aboutCommand = async (args, terminal) => {
   `;
   windowManager.createWindow('Thy - About Me', contentHTML);
 };
+
+export const aboutMetadata = {
+  description: 'Open the system information interface',
+  args: []
+};

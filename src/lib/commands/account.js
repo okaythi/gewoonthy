@@ -36,3 +36,11 @@ export const accountCommand = async (args, terminal) => {
     terminal.printLine(`account: unrecognised option '${arg}'`);
   }
 };
+
+export const accountMetadata = {
+  description: 'Manage user account',
+  args: [
+    { name: '--create', description: 'Create a new account' },
+    { name: '--delete [user]', description: 'Delete an account (root only)' }
+  ]
+};

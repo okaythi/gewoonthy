@@ -29,3 +29,13 @@ database_id = "08bfb29e-f701-4d75-8784-86d66caa92d6"
 [[r2_buckets]]
 binding = "MEDIA_BUCKET"
 bucket_name = "gewoonthy-media"
+
+[[d1_databases]]
+binding = "system_data"
+database_name = "system_data"
+database_id = "16c1b754-6dcf-4b82-a220-06e9fdbcdedc"
+
+[[d1_databases]]
+binding = "user_data"
+database_name = "user_data"
+database_id = "25e039dd-bb2e-4bfe-817d-56252334e367"
