@@ -34,7 +34,7 @@ export const openKaraokeWindow = () => {
   const contentHTML = `
     <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%;">
       ${leftSidebarHTML}
-      <div class="karaoke-main" style="flex: 1; display: flex; flex-direction: column; position: relative; padding: 24px;">
+      <div class="karaoke-main" style="flex: 1; display: flex; flex-direction: column; position: relative; padding: 16px;">
         <!-- Right side content (Video player or About) -->
       </div>
     </div>
@@ -94,11 +94,11 @@ export const openKaraokeWindow = () => {
           <video id="k-vid" crossorigin="anonymous" playsinline style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
-        <div id="k-lyrics" style="flex-shrink: 0; height: 140px; margin-top: 20px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 28px; font-weight: bold; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0;">
+        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0;">
           <!-- Lyrics inject here -->
         </div>
         
-        <div class="k-controls" style="flex-shrink: 0; height: 60px; margin-top: 20px; background: rgba(0,0,0,0.4); border-radius: 8px; z-index: 4; display: flex; align-items: center; padding: 0 20px; gap: 15px; border: 1px solid rgba(255,255,255,0.1);">
+        <div class="k-controls" style="flex-shrink: 0; height: 60px; margin-top: 15px; background: rgba(0,0,0,0.4); border-radius: 8px; z-index: 4; display: flex; align-items: center; padding: 0 20px; gap: 15px; border: 1px solid rgba(255,255,255,0.1);">
           <button id="k-play" style="background: none; border: none; color: white; cursor: pointer;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </button>
@@ -230,10 +230,12 @@ export const openKaraokeWindow = () => {
           words.forEach((w, idx) => {
             if (idx === newWordIndex) {
               w.style.opacity = '1';
-              w.style.color = '#4CAF50';
+              w.style.color = '#FF7744';
+              w.style.textShadow = '0 0 4px rgba(233, 84, 32, 0.8), 0 0 12px rgba(233, 84, 32, 0.4)';
             } else {
               w.style.opacity = '0.5';
               w.style.color = 'white';
+              w.style.textShadow = '';
             }
           });
         } else {
