@@ -111,7 +111,7 @@ class Terminal {
 
   printMOTD() {
     const date = new Date().toString();
-    this.printLine(`Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.8.0-40-generic x86_64)`);
+    this.printLine(`Welcome to sudothy (v1.0)`);
     this.printLine(` * Documentation:  <a href="https://sudothy.me/github" target="_blank" rel="noopener noreferrer" style="color: var(--ubuntu-blue); text-decoration: underline;">https://sudothy.me/github</a>`, true);
     this.printLine(``);
     this.printLine(`To log out of this session, type 'logout'.`);
