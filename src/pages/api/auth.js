@@ -36,6 +36,14 @@ export const POST = async ({ request, cookies }) => {
   }
 
   if (action === 'create') {
+    if (!password || password.length < 4) {
+      return new Response(JSON.stringify({ success: false, error: 'password must be at least 4 characters long' }), { status: 400 });
+    }
+    const emojiRegex = /[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu;
+    if (emojiRegex.test(password)) {
+      return new Response(JSON.stringify({ success: false, error: 'password must not contain emojis' }), { status: 400 });
+    }
+
     const id = crypto.randomUUID();
     const ip = request.headers.get('CF-Connecting-IP') || '127.0.0.1';
     

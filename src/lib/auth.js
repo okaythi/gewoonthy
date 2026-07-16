@@ -94,8 +94,8 @@ class AuthManager {
           method: 'POST',
           body: JSON.stringify({ action: 'create', username: this.createInput, password: input })
         });
-        if (!res.ok) throw new Error('Username taken or error');
         const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Username taken or error');
         terminal.printLine(`Account created successfully. Logging in...`);
         this.user = data.user;
         this.token = data.token;
@@ -103,10 +103,11 @@ class AuthManager {
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
-        terminal.printLine(`account: creation failed (username might be taken)`);
+        terminal.printLine(`account: creation failed (${e.message})`);
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       }
+      terminal.prompt();
     } else if (this.state === AuthState.PROMPT_DELETE_USER) {
       if (input.trim().toLowerCase() === 'y') {
         try {
