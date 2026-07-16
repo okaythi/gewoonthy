@@ -49,7 +49,11 @@ export const openKaraokeWindow = () => {
   artImages.forEach(img => {
     const artist = decodeURIComponent(img.dataset.artist);
     const track = decodeURIComponent(img.dataset.track);
-    const term = encodeURIComponent(`${artist} ${track}`);
+    let queryTrack = track;
+    if (artist.toLowerCase() === 'ic3peak' && track.toLowerCase() === 'boo-hoo') {
+      queryTrack = 'Плак-плак';
+    }
+    const term = encodeURIComponent(`${artist} ${queryTrack}`);
     fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=1`)
       .then(res => res.json())
       .then(data => {
