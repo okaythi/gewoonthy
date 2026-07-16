@@ -10,7 +10,7 @@ If you are wondering what AI or magical API I used to sync the lyrics word-by-wo
 
 Standard `.lrc` files usually only sync line-by-line, and the APIs I found were so mediocre that tbh their very existence is embarrassing. To get that modern, bouncy, word-by-word highlight, I manually went through every single video. I painstakingly marked the exact timestamp for the beginning and end of every single word and verse. Honestly, understanding speech prosody and articulatory phonetics is both a blessing and a curse here - seeing a lyric visually light up even 150ms after the syllable is actually sung physically hurts my soul.
 
-> [!INFO]
+> [!NOTE]
 > This is still the case for the Russian song Плак-плак, but bear with me, I can read Cyrillic but I don't speak Russian.
 
 So, I ran a script (I had an LLM model create this one script for me) to format it into our `lyrics.ts` dataset. It took literal days, but the precision is good enough that I'm proud to show it off.

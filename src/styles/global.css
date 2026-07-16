@@ -328,12 +328,12 @@ body {
   margin-bottom: 0;
 }
 
-.ubuntu-prose .markdown-alert-info {
+.ubuntu-prose .markdown-alert-note {
   background-color: rgba(53, 132, 228, 0.1);
   border-color: #3584e4;
 }
 
-.ubuntu-prose .markdown-alert-info .markdown-alert-title {
+.ubuntu-prose .markdown-alert-note .markdown-alert-title {
   color: #3584e4;
   font-weight: 600;
   display: flex;
