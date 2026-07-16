@@ -26,8 +26,8 @@ export const openKaraokeWindow = () => {
       queryArtist = 'Krapoel in Axe';
       queryTrack = 'Zaterdag';
     } else if (songFile === 'Joël Legendre à Soirée Canadienne.mp4') {
-      songName = 'Joël Legendre';
-      artistName = 'QW4RTZ';
+      songName = 'M\\'en Revenant de Sainte-Hélène';
+      artistName = 'QW4RTZ - Joël Legendre';
       queryArtist = 'QW4RTZ';
       queryTrack = 'M\\'en Revenant de Sainte-Hélène';
     }
