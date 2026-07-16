@@ -7,5 +7,8 @@ export default defineConfig({
     platformProxy: {
       enabled: true
     }
-  })
+  }),
+  redirects: {
+    '/github': 'https://github.com/okaythi/gewoonthy'
+  }
 });

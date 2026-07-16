@@ -112,9 +112,7 @@ class Terminal {
   printMOTD() {
     const date = new Date().toString();
     this.printLine(`Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.8.0-40-generic x86_64)`);
-    this.printLine(` * Documentation:  https://help.ubuntu.com`);
-    this.printLine(` * Management:     https://landscape.canonical.com`);
-    this.printLine(` * Support:        https://ubuntu.com/pro`);
+    this.printLine(` * Documentation:  https://sudothy.me/github`);
     this.printLine(``);
     this.printLine(`To log out of this session, type 'logout'.`);
     this.printLine(`Last login: ${date} from 127.0.0.1`);
