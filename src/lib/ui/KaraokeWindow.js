@@ -171,20 +171,20 @@ export const openKaraokeWindow = () => {
     // Audio & Lyrics sync logic
     const lyricsData = songsDictionary[songFile].lyrics;
     
-    vid.src = \`https://cdn.sudothy.me/\${encodeURIComponent(songFile)}\`;
+    vid.src = `https://cdn.sudothy.me/${encodeURIComponent(songFile)}`;
     vid.volume = 0.5;
     vid.load();
     vid.play().catch(e => console.warn('Autoplay prevented', e));
 
     if (lyricsData) {
-      lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => \`
-        <div class="verse" id="verse-\${vIdx}" style="display: none;">
-          \${verse.words.map((w, wIdx) => {
-            const display = w.furigana ? \`<ruby>\${w.word}<rt>\${w.furigana}</rt></ruby>\` : w.word;
-            return \`<span class="word" id="word-\${vIdx}-\${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: 0 2px;">\${display}</span>\`;
+      lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
+        <div class="verse" id="verse-${vIdx}" style="display: none;">
+          ${verse.words.map((w, wIdx) => {
+            const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
+            return `<span class="word" id="word-${vIdx}-${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: 0 2px;">${display}</span>`;
           }).join('')}
         </div>
-      \`).join('');
+      `).join('');
     }
 
     let activeVerseIndex = -1;
@@ -213,11 +213,11 @@ export const openKaraokeWindow = () => {
 
       if (newVerseIndex !== activeVerseIndex) {
         if (activeVerseIndex !== -1) {
-          const old = mainView.querySelector(\`#verse-\${activeVerseIndex}\`);
+          const old = mainView.querySelector(`#verse-${activeVerseIndex}`);
           if (old) old.style.display = 'none';
         }
         if (newVerseIndex !== -1) {
-          const newV = mainView.querySelector(\`#verse-\${newVerseIndex}\`);
+          const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
           if (newV) newV.style.display = 'block';
         }
         activeVerseIndex = newVerseIndex;
@@ -226,7 +226,7 @@ export const openKaraokeWindow = () => {
       if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
         if (newVerseIndex !== -1) {
           lyricsContainer.style.opacity = '1';
-          const words = mainView.querySelectorAll(\`#verse-\${newVerseIndex} .word\`);
+          const words = mainView.querySelectorAll(`#verse-${newVerseIndex} .word`);
           words.forEach((w, idx) => {
             if (idx === newWordIndex) {
               w.style.opacity = '1';
@@ -258,12 +258,12 @@ export const openKaraokeWindow = () => {
       if (isNaN(time)) return "0:00";
       const m = Math.floor(time / 60);
       const s = Math.floor(time % 60);
-      return \`\${m}:\${s.toString().padStart(2, '0')}\`;
+      return `${m}:${s.toString().padStart(2, '0')}`;
     };
 
     let isDragging = false;
     vid.addEventListener('timeupdate', () => {
-      timeDisp.textContent = \`\${formatTime(vid.currentTime)} / \${formatTime(vid.duration)}\`;
+      timeDisp.textContent = `${formatTime(vid.currentTime)} / ${formatTime(vid.duration)}`;
       if (!isDragging && vid.duration) {
         progress.value = (vid.currentTime / vid.duration) * 100;
       }
@@ -293,10 +293,10 @@ export const openKaraokeWindow = () => {
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
     
     // We create multiple layered blurred divs for the backlight
-    container.innerHTML = \`
+    container.innerHTML = `
       <div class="bl-layer bl-1" style="position:absolute; top:-10px; left:-10px; right:-10px; bottom:-10px; filter:blur(20px); opacity:0.8; transition: background 0.3s;"></div>
       <div class="bl-layer bl-2" style="position:absolute; top:-20px; left:-20px; right:-20px; bottom:-20px; filter:blur(40px); opacity:0.6; transition: background 0.3s;"></div>
-    \`;
+    `;
     const bl1 = container.querySelector('.bl-1');
     const bl2 = container.querySelector('.bl-2');
 
@@ -317,8 +317,8 @@ export const openKaraokeWindow = () => {
         const count = data.length / 16;
         r = Math.floor(r/count); g = Math.floor(g/count); b = Math.floor(b/count);
         
-        bl1.style.background = \`rgba(\${r},\${g},\${b}, 0.5)\`;
-        bl2.style.background = \`rgba(\${r},\${g},\${b}, 0.3)\`;
+        bl1.style.background = `rgba(${r},${g},${b}, 0.5)`;
+        bl2.style.background = `rgba(${r},${g},${b}, 0.3)`;
       } catch(e) {}
       
       backlightFrame = requestAnimationFrame(updateBacklight);
