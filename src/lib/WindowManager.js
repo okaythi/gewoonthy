@@ -37,7 +37,7 @@ class WindowManager {
     
     // Initial z-index
     this.bringToFront(win);
-    win.addEventListener('mousedown', () => this.bringToFront(win));
+    win.addEventListener('mousedown', () => this.bringToFront(win), { capture: true });
     
     this.setupDrag(win, header);
     

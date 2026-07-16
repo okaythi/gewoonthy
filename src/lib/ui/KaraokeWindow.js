@@ -45,31 +45,21 @@ export const openKaraokeWindow = () => {
   const songItems = win.querySelectorAll('.song-item');
   const artImages = win.querySelectorAll('.song-art');
 
-  // Fetch album art from MusicBrainz
+  // Fetch album art from iTunes
   artImages.forEach(img => {
     const artist = decodeURIComponent(img.dataset.artist);
     const track = decodeURIComponent(img.dataset.track);
-    // Simple search using MusicBrainz API
-    fetch(`https://musicbrainz.org/ws/2/recording/?query=recording:"${track}" AND artist:"${artist}"&fmt=json`)
+    const term = encodeURIComponent(`${artist} ${track}`);
+    fetch(`https://itunes.apple.com/search?term=${term}&entity=song&limit=1`)
       .then(res => res.json())
       .then(data => {
-        if (data.recordings && data.recordings.length > 0) {
-          const releaseId = data.recordings[0].releases?.[0]?.id;
-          if (releaseId) {
-            return fetch(`https://coverartarchive.org/release/${releaseId}`);
-          }
-        }
-        throw new Error('No release found');
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.images && data.images.length > 0) {
-          img.src = data.images[0].thumbnails.small || data.images[0].image;
+        if (data.results && data.results.length > 0 && data.results[0].artworkUrl100) {
+          const highResUrl = data.results[0].artworkUrl100.replace('100x100bb.jpg', '600x600bb.jpg');
+          img.src = highResUrl;
         }
       })
       .catch(err => {
-        console.log('Could not fetch album art for', track);
-        // Fallback or leave as placeholder
+        console.log('Could not fetch album art for', track, err);
       });
   });
 
