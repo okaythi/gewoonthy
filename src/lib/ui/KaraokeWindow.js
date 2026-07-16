@@ -15,12 +15,27 @@ export const openKaraokeWindow = () => {
   `;
 
   availableSongs.forEach(songFile => {
-    const songName = songFile.split(' - ')[1]?.replace('.mp4', '') || songFile.replace('.mp4', '');
-    const artistName = songFile.split(' - ')[0] || 'Unknown';
+    let songName = songFile.split(' - ')[1]?.replace('.mp4', '') || songFile.replace('.mp4', '');
+    let artistName = songFile.split(' - ')[0] || 'Unknown';
+    let queryArtist = artistName;
+    let queryTrack = songName;
+
+    if (songFile === 'Zaterdag.mp4') {
+      songName = 'Zaterdag';
+      artistName = 'Krapoel in Axe';
+      queryArtist = 'Krapoel in Axe';
+      queryTrack = 'Zaterdag';
+    } else if (songFile === 'Joël Legendre à Soirée Canadienne.mp4') {
+      songName = 'Joël Legendre';
+      artistName = 'QW4RTZ';
+      queryArtist = 'QW4RTZ';
+      queryTrack = 'M\\'en Revenant de Sainte-Hélène';
+    }
+
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `
       <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
-        <img class="song-art" data-artist="${encodeURIComponent(artistName)}" data-track="${encodeURIComponent(songName)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%23888\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
+        <img class="song-art" data-artist="${encodeURIComponent(queryArtist)}" data-track="${encodeURIComponent(queryTrack)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%23888\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
         <div style="overflow: hidden;">
           <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${songName}</div>
           <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${artistName}</div>
@@ -311,8 +326,15 @@ export const openKaraokeWindow = () => {
     const bl2 = container.querySelector('.bl-2');
 
     let backlightFrame = null;
+    let tickCount = 0;
     const updateBacklight = () => {
       if (vidEl.paused || vidEl.ended) {
+        backlightFrame = requestAnimationFrame(updateBacklight);
+        return;
+      }
+      
+      tickCount++;
+      if (tickCount % 2 !== 0) {
         backlightFrame = requestAnimationFrame(updateBacklight);
         return;
       }
