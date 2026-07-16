@@ -190,6 +190,7 @@ export const openKaraokeWindow = () => {
     let activeVerseIndex = -1;
     let activeWordIndex = -1;
     let animationFrameId = null;
+    let lastActiveLyricTime = Date.now();
 
     const updateLyrics = () => {
       const time = vid.currentTime;
@@ -225,6 +226,7 @@ export const openKaraokeWindow = () => {
 
       if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
         if (newVerseIndex !== -1) {
+          lastActiveLyricTime = Date.now();
           lyricsContainer.style.opacity = '1';
           const words = mainView.querySelectorAll(`#verse-${newVerseIndex} .word`);
           words.forEach((w, idx) => {
@@ -242,6 +244,11 @@ export const openKaraokeWindow = () => {
           lyricsContainer.style.opacity = '0';
         }
         activeWordIndex = newWordIndex;
+      }
+      
+      // Garbage collection timeout: hide lyrics if no update in 3000ms
+      if (Date.now() - lastActiveLyricTime > 3000) {
+        lyricsContainer.style.opacity = '0';
       }
       
       animationFrameId = requestAnimationFrame(updateLyrics);

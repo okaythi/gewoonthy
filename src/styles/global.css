@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Zen+Kurenaido&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Zen Kurenaido';
+  src: url('https://cdn.sudothy.me/fonts/ZenKurenaido-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --ubuntu-purple: #300a24;
@@ -21,7 +29,7 @@ body {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 16px;
   line-height: 1.2;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100vh;
   display: flex;
   flex-direction: column;

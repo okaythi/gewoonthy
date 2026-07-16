@@ -2,6 +2,12 @@ class WindowManager {
   constructor() {
     this.windows = [];
     this.container = document.body;
+    this.zIndexCounter = 100;
+  }
+
+  bringToFront(win) {
+    this.zIndexCounter++;
+    win.style.zIndex = this.zIndexCounter;
   }
 
   createWindow(title, contentHTML) {
@@ -29,6 +35,10 @@ class WindowManager {
     win.appendChild(header);
     win.appendChild(content);
     
+    // Initial z-index
+    this.bringToFront(win);
+    win.addEventListener('mousedown', () => this.bringToFront(win));
+    
     this.setupDrag(win, header);
     
     closeBtn.addEventListener('click', () => {
@@ -43,26 +53,45 @@ class WindowManager {
 
   setupDrag(win, handle) {
     let isDragging = false;
-    let startX, startY, initialX, initialY;
+    let startX, startY, initialLeft, initialTop;
 
     const onMouseDown = (e) => {
       if (e.target.classList.contains('gnome-close')) return;
       isDragging = true;
       startX = e.clientX;
       startY = e.clientY;
+      
+      // Convert transform-based positioning to absolute left/top if needed
       const rect = win.getBoundingClientRect();
-      initialX = rect.left + rect.width / 2;
-      initialY = rect.top + rect.height / 2;
-      win.style.transform = `translate(-50%, -50%) translate(${initialX - (window.innerWidth/2)}px, ${initialY - (window.innerHeight/2)}px)`;
-      win.style.left = '50%';
-      win.style.top = '50%';
+      // rect.left and rect.top are the top-left of the window
+      win.style.transform = 'none';
+      win.style.left = rect.left + 'px';
+      win.style.top = rect.top + 'px';
+      
+      initialLeft = rect.left;
+      initialTop = rect.top;
     };
 
     const onMouseMove = (e) => {
       if (!isDragging) return;
       const dx = e.clientX - startX;
       const dy = e.clientY - startY;
-      win.style.transform = `translate(-50%, -50%) translate(${initialX - (window.innerWidth/2) + dx}px, ${initialY - (window.innerHeight/2) + dy}px)`;
+      
+      let newLeft = initialLeft + dx;
+      let newTop = initialTop + dy;
+      
+      // Clamp boundaries so the header is always accessible
+      // Assuming header is ~46px tall and we need at least 30px of it visible horizontally
+      const maxLeft = window.innerWidth - 30;
+      const minLeft = -win.offsetWidth + 30;
+      const maxTop = window.innerHeight - 30;
+      const minTop = 0; // Header cannot go above top of screen
+      
+      newLeft = Math.max(minLeft, Math.min(newLeft, maxLeft));
+      newTop = Math.max(minTop, Math.min(newTop, maxTop));
+      
+      win.style.left = newLeft + 'px';
+      win.style.top = newTop + 'px';
     };
 
     const onMouseUp = () => {
