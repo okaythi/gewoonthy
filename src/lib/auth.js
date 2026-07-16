@@ -45,6 +45,7 @@ class AuthManager {
         this.token = data.token;
         this.state = AuthState.READY;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
+        terminal.printMOTD();
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
         terminal.prompt();
       } else {
@@ -67,6 +68,7 @@ class AuthManager {
         this.token = data.token;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
+        terminal.printMOTD();
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
         terminal.printLine(`Login incorrect`);
@@ -101,6 +103,7 @@ class AuthManager {
         this.token = data.token;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
+        terminal.printMOTD();
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
         terminal.printLine(`account: creation failed (${e.message})`);

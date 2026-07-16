@@ -20,14 +20,14 @@ class Terminal {
   async init() {
     this.setupEventListeners();
     
-    this.printLine('Welcome to sudothy.me v1.0');
-    this.printLine('This system is built to be easily used by you, with minimal bloat. To see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
-
     await authManager.init();
 
     if (authManager.state === AuthState.PROMPT_LOGIN) {
+      this.printLine('Welcome to sudothy.me v1.0');
+      this.printLine('This system is built to be easily used by you, with minimal bloat. To see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
       this.setPrompt('login (leave empty to use as guest): ');
     } else {
+      this.printMOTD();
       this.setPrompt(`sudothy@${authManager.user?.username || 'user'} $ `);
     }
 
@@ -107,6 +107,17 @@ class Terminal {
   setMasked(masked) {
     this.isMasked = masked;
     this.updateInputDisplay();
+  }
+
+  printMOTD() {
+    const date = new Date().toString();
+    this.printLine(`Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.8.0-40-generic x86_64)`);
+    this.printLine(` * Documentation:  https://help.ubuntu.com`);
+    this.printLine(` * Management:     https://landscape.canonical.com`);
+    this.printLine(` * Support:        https://ubuntu.com/pro`);
+    this.printLine(``);
+    this.printLine(`To log out of this session, type 'logout'.`);
+    this.printLine(`Last login: ${date} from 127.0.0.1`);
   }
 
   prompt() {
