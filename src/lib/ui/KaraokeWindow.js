@@ -26,10 +26,10 @@ export const openKaraokeWindow = () => {
       queryArtist = 'Krapoel in Axe';
       queryTrack = 'Zaterdag';
     } else if (songFile === 'Joël Legendre à Soirée Canadienne.mp4') {
-      songName = 'M\\'en Revenant de Sainte-Hélène';
-      artistName = 'QW4RTZ - Joël Legendre';
-      queryArtist = 'QW4RTZ';
-      queryTrack = 'M\\'en Revenant de Sainte-Hélène';
+      songName = "M'en Revenant de Sainte-Hélène";
+      artistName = "QW4RTZ - Joël Legendre";
+      queryArtist = "QW4RTZ";
+      queryTrack = "M'en Revenant de Sainte-Hélène";
     }
 
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
