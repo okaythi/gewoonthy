@@ -246,3 +246,127 @@ body {
   font-size: 12px;
   font-weight: 600;
 }
+
+/* Ubuntu Prose & Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) rgba(0, 0, 0, 0.2);
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  display: block;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ubuntu-prose {
+  font-family: 'Ubuntu', system-ui, sans-serif;
+  color: #f6f6f5;
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ubuntu-prose h1 {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ubuntu-prose h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ubuntu-prose a {
+  color: #E95420;
+  text-decoration: none;
+  transition: opacity 150ms ease;
+}
+
+.ubuntu-prose a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.ubuntu-prose p, .ubuntu-prose li {
+  color: #d3d7cf;
+  margin-bottom: 1rem;
+}
+
+.ubuntu-prose p code, .ubuntu-prose li code {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.ubuntu-prose .markdown-alert {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.ubuntu-prose .markdown-alert > *:last-child {
+  margin-bottom: 0;
+}
+
+.ubuntu-prose .markdown-alert-info {
+  background-color: rgba(53, 132, 228, 0.1);
+  border-color: #3584e4;
+}
+
+.ubuntu-prose .markdown-alert-info .markdown-alert-title {
+  color: #3584e4;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ubuntu-prose .markdown-alert-warning {
+  background-color: rgba(233, 84, 32, 0.1);
+  border-color: #E95420;
+}
+
+.ubuntu-prose .markdown-alert-warning .markdown-alert-title {
+  color: #E95420;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Shiki pre override */
+.ubuntu-prose pre {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow-x: auto;
+}
+.ubuntu-prose pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}

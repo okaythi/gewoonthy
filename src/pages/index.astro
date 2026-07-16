@@ -1,8 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Content as AboutKaraokeContent } from '../data/about-karaoke.md';
 ---
 
 <Layout title="> sudothy">
+	<template id="about-karaoke-template">
+		<div class="ubuntu-prose">
+			<AboutKaraokeContent />
+		</div>
+	</template>
 	<div id="terminal-container">
 		<div id="terminal-output"></div>
 		<div id="terminal-input-wrapper" style="display: none;">

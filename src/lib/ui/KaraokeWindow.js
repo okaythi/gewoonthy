@@ -68,14 +68,21 @@ export const openKaraokeWindow = () => {
   });
 
   const renderAbout = () => {
-    mainView.innerHTML = `
-      <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center;">
-        <h2 style="font-size: 28px; margin-bottom: 15px;">About this project</h2>
-        <p style="opacity: 0.8; line-height: 1.6; max-width: 600px;">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    `;
+    const template = document.getElementById('about-karaoke-template');
+    if (template) {
+      mainView.innerHTML = `
+        <div style="width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; background: #241f31;" class="custom-scrollbar">
+          ${template.innerHTML}
+        </div>
+      `;
+    } else {
+      mainView.innerHTML = `
+        <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+          <h2 style="font-size: 28px; margin-bottom: 15px;">About this project</h2>
+          <p style="opacity: 0.8; line-height: 1.6;">Failed to load markdown content.</p>
+        </div>
+      `;
+    }
   };
 
   const renderPlayer = (songFile) => {
