@@ -91,7 +91,7 @@ export const openKaraokeWindow = () => {
         <div id="dynamic-backlight-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.5;"></div>
         
         <div style="flex: 1; min-height: 0; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
-          <video id="k-vid" crossorigin="anonymous" playsinline style="max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
+          <video id="k-vid" crossorigin="anonymous" playsinline style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
         <div id="k-lyrics" style="flex-shrink: 0; height: 140px; margin-top: 20px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 28px; font-weight: bold; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0;">
@@ -169,7 +169,7 @@ export const openKaraokeWindow = () => {
     });
 
     // Audio & Lyrics sync logic
-    const lyricsData = songsDictionary[songFile].lyrics;
+    const lyricsData = songsDictionary[songFile]?.lyricsData;
     
     vid.src = `https://cdn.sudothy.me/${encodeURIComponent(songFile)}`;
     vid.volume = 0.5;
