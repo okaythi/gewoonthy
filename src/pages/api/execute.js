@@ -6,7 +6,8 @@ const commandManifest = {
   'about': { owner: 'root', group: 'root', perms: 777 },
   'clear': { owner: 'root', group: 'root', perms: 777 },
   'account': { owner: 'root', group: 'root', perms: 777 },
-  'logout': { owner: 'root', group: 'root', perms: 777 }
+  'logout': { owner: 'root', group: 'root', perms: 777 },
+  'projects': { owner: 'root', group: 'root', perms: 777 }
 };
 
 import { env } from "cloudflare:workers";
