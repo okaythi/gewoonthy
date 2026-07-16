@@ -24,7 +24,7 @@ class Terminal {
 
     if (authManager.state === AuthState.PROMPT_LOGIN) {
       this.printLine('Welcome to sudothy.me v1.0');
-      this.printLine('This system is built to be easily used by you, with minimal bloat. To see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
+      this.printLine('This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
       this.setPrompt('login (leave empty to use as guest): ');
     } else {
       this.printMOTD();
@@ -111,7 +111,7 @@ class Terminal {
 
   printMOTD() {
     const date = new Date().toString();
-    this.printLine(`Welcome to Ubuntu 26.04.1 LTS (GNU/Linux 6.8.0-40-generic x86_64)`);
+    this.printLine(`Welcome to sudothy (v1.0)`);
     this.printLine(` * Documentation:  https://sudothy.me/github`);
     this.printLine(``);
     this.printLine(`To log out of this session, type 'logout'.`);
