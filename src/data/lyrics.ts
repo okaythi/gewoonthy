@@ -12571,11 +12571,6 @@ export const songsDictionary: Record<string, SongData> = {
             "end": 13.458
           },
           {
-            "word": "Annotate ",
-            "start": 13.458,
-            "end": 13.579
-          },
-          {
             "word": "Hevenu ",
             "start": 13.579,
             "end": 14.28
