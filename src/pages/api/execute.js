@@ -1,13 +1,13 @@
 import { Permissions } from '../../lib/Permissions.js';
 
-// Hardcoded permission manifest for base commands
 const commandManifest = {
   'help': { owner: 'root', group: 'root', perms: 777 },
   'about': { owner: 'root', group: 'root', perms: 777 },
   'clear': { owner: 'root', group: 'root', perms: 777 },
   'account': { owner: 'root', group: 'root', perms: 777 },
   'logout': { owner: 'root', group: 'root', perms: 777 },
-  'projects': { owner: 'root', group: 'root', perms: 777 }
+  'projects': { owner: 'root', group: 'root', perms: 777 },
+  'uptime': { owner: 'root', group: 'root', perms: 777 }
 };
 
 import { env } from "cloudflare:workers";
