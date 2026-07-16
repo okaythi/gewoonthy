@@ -22,6 +22,7 @@ export const aboutCommand = async (args, terminal) => {
         <h3>Nationalities</h3>
         <div class="tag-container">
           <div class="tag"><div class="tag-icon">🇧🇪</div>Belgian</div>
+          <div class="tag"><div class="tag-icon">🇧🇷</div>Brazilian</div>
         </div>
       </div>
     </div>

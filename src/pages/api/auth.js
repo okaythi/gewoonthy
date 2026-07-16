@@ -58,5 +58,24 @@ export const POST = async ({ request, cookies }) => {
     }
   }
 
+  if (action === 'delete') {
+    const authHeader = request.headers.get('Authorization');
+    const sessionId = (authHeader ? authHeader.replace('Bearer ', '') : null) || body.token;
+    if (!sessionId) return new Response(JSON.stringify({ success: false, error: 'Unauthorized' }), { status: 401 });
+    
+    // Check if requester is root
+    const { results } = await db.prepare('SELECT primary_group FROM users WHERE id = ?').bind(sessionId).all();
+    if (results.length === 0 || results[0].primary_group !== 'root') {
+      return new Response(JSON.stringify({ success: false, error: 'Forbidden' }), { status: 403 });
+    }
+
+    try {
+      await db.prepare('DELETE FROM users WHERE username = ? AND primary_group != ?').bind(username, 'root').run();
+      return new Response(JSON.stringify({ success: true }), { status: 200 });
+    } catch (e) {
+      return new Response(JSON.stringify({ success: false, error: 'Delete failed' }), { status: 400 });
+    }
+  }
+
   return new Response(JSON.stringify({ success: false, error: 'Invalid action' }), { status: 400 });
 };

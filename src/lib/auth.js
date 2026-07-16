@@ -4,7 +4,8 @@ export const AuthState = {
   PROMPT_PASSWORD: 'PROMPT_PASSWORD',
   READY: 'READY',
   PROMPT_CREATE_USER: 'PROMPT_CREATE_USER',
-  PROMPT_CREATE_PASS: 'PROMPT_CREATE_PASS'
+  PROMPT_CREATE_PASS: 'PROMPT_CREATE_PASS',
+  PROMPT_DELETE_USER: 'PROMPT_DELETE_USER'
 };
 
 class AuthManager {
@@ -13,6 +14,7 @@ class AuthManager {
     this.user = null;
     this.loginInput = '';
     this.createInput = '';
+    this.deleteTarget = '';
   }
 
   async init() {
@@ -105,6 +107,27 @@ class AuthManager {
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       }
+    } else if (this.state === AuthState.PROMPT_DELETE_USER) {
+      if (input.trim().toLowerCase() === 'y') {
+        try {
+          const res = await fetch('/api/auth', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${this.token}`
+            },
+            body: JSON.stringify({ action: 'delete', username: this.deleteTarget })
+          });
+          if (!res.ok) throw new Error('Deletion failed');
+          terminal.printLine(`User '${this.deleteTarget}' deleted successfully.`);
+        } catch (e) {
+          terminal.printLine(`account: deletion failed`);
+        }
+      } else {
+        terminal.printLine(`account: deletion cancelled.`);
+      }
+      this.state = AuthState.READY;
+      terminal.setPrompt(`sudothy@${this.user.username} $ `);
       terminal.prompt();
     }
   }
