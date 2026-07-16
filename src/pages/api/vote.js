@@ -1,4 +1,6 @@
-export const GET = async ({ request, locals }) => {
+import { env } from "cloudflare:workers";
+
+export const GET = async ({ request, cookies }) => {
   const url = new URL(request.url);
   const fileName = url.searchParams.get('file_name');
   
@@ -17,7 +19,7 @@ export const GET = async ({ request, locals }) => {
     } catch(e) {}
   }
 
-  const { env } = locals.runtime;
+  // use global env
   
   let totalLikes = 0;
   let totalDislikes = 0;
@@ -47,7 +49,7 @@ export const GET = async ({ request, locals }) => {
   }
 };
 
-export const POST = async ({ request, locals }) => {
+export const POST = async ({ request, cookies }) => {
   const body = await request.json();
   const { file_name, action } = body; // action is 'like' or 'dislike'
 
@@ -69,7 +71,7 @@ export const POST = async ({ request, locals }) => {
     return new Response(JSON.stringify({ error: 'Must be logged in to vote' }), { status: 403 });
   }
 
-  const { env } = locals.runtime;
+  // use global env
 
   try {
     // Determine previous action

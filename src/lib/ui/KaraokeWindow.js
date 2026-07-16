@@ -19,8 +19,8 @@ export const openKaraokeWindow = () => {
     const artistName = songFile.split(' - ')[0] || 'Unknown';
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `
-      <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid var(--ubu-border); display: flex; align-items: center; gap: 10px;">
-        <img class="song-art" data-artist="${encodeURIComponent(artistName)}" data-track="${encodeURIComponent(songName)}" src="https://via.placeholder.com/40" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
+      <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+        <img class="song-art" data-artist="${encodeURIComponent(artistName)}" data-track="${encodeURIComponent(songName)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%23888\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
         <div style="overflow: hidden;">
           <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${songName}</div>
           <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${artistName}</div>
@@ -32,9 +32,9 @@ export const openKaraokeWindow = () => {
   leftSidebarHTML += `</div>`;
 
   const contentHTML = `
-    <div class="karaoke-layout" style="display: flex; height: 100%; min-height: 500px;">
+    <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%;">
       ${leftSidebarHTML}
-      <div class="karaoke-main" style="flex: 1; display: flex; flex-direction: column; background: #000; position: relative;">
+      <div class="karaoke-main" style="flex: 1; display: flex; flex-direction: column; position: relative; padding: 24px;">
         <!-- Right side content (Video player or About) -->
       </div>
     </div>
@@ -75,9 +75,9 @@ export const openKaraokeWindow = () => {
 
   const renderAbout = () => {
     mainView.innerHTML = `
-      <div style="padding: 30px; color: white;">
-        <h2>About this project</h2>
-        <p style="opacity: 0.8; line-height: 1.6; margin-top: 20px;">
+      <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+        <h2 style="font-size: 28px; margin-bottom: 15px;">About this project</h2>
+        <p style="opacity: 0.8; line-height: 1.6; max-width: 600px;">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
@@ -90,15 +90,15 @@ export const openKaraokeWindow = () => {
       <div class="karaoke-player-container" style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; overflow: hidden;">
         <div id="dynamic-backlight-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.5;"></div>
         
-        <div style="flex: 1; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-          <video id="k-vid" crossorigin="anonymous" playsinline style="max-width: 100%; max-height: 100%; z-index: 10; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);"></video>
+        <div style="flex: 1; min-height: 0; position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;">
+          <video id="k-vid" crossorigin="anonymous" playsinline style="max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
-        <div id="k-lyrics" style="height: 120px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 24px; color: white; text-shadow: 1px 1px 4px black; transition: opacity 0.3s; opacity: 0; padding: 10px;">
+        <div id="k-lyrics" style="flex-shrink: 0; height: 140px; margin-top: 20px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 28px; font-weight: bold; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0;">
           <!-- Lyrics inject here -->
         </div>
         
-        <div class="k-controls" style="height: 50px; background: rgba(0,0,0,0.8); z-index: 4; display: flex; align-items: center; padding: 0 15px; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <div class="k-controls" style="flex-shrink: 0; height: 60px; margin-top: 20px; background: rgba(0,0,0,0.4); border-radius: 8px; z-index: 4; display: flex; align-items: center; padding: 0 20px; gap: 15px; border: 1px solid rgba(255,255,255,0.1);">
           <button id="k-play" style="background: none; border: none; color: white; cursor: pointer;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </button>

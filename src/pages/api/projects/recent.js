@@ -1,4 +1,6 @@
-export const GET = async ({ request, locals }) => {
+import { env } from "cloudflare:workers";
+
+export const GET = async ({ request, cookies }) => {
   const cookieStr = request.headers.get('cookie') || '';
   const match = cookieStr.match(/sudothy_session=([^;]+)/);
   let username = 'guest';
@@ -13,7 +15,7 @@ export const GET = async ({ request, locals }) => {
     return new Response(JSON.stringify({ projects: [] }), { headers: { 'Content-Type': 'application/json' } });
   }
 
-  const { env } = locals.runtime;
+  // use global env
 
   try {
     const res = await env.user_data.prepare('SELECT project_id, timestamp FROM recent_projects WHERE username = ? ORDER BY timestamp DESC LIMIT 20').bind(username).all();
@@ -23,7 +25,7 @@ export const GET = async ({ request, locals }) => {
   }
 };
 
-export const POST = async ({ request, locals }) => {
+export const POST = async ({ request, cookies }) => {
   const body = await request.json();
   const { project_id } = body;
 
@@ -46,7 +48,7 @@ export const POST = async ({ request, locals }) => {
     return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });
   }
 
-  const { env } = locals.runtime;
+  // use global env
 
   try {
     await env.user_data.prepare('INSERT OR REPLACE INTO recent_projects (username, project_id, timestamp) VALUES (?, ?, CURRENT_TIMESTAMP)').bind(username, project_id).run();

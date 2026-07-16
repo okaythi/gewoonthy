@@ -4,13 +4,13 @@ import { windowManager } from '../WindowManager.js';
 
 export const openProjectsWindow = () => {
   const contentHTML = `
-    <div class="projects-layout" style="display: flex; width: 900px; height: 600px; max-width: 90vw; max-height: 90vh;">
-      <div class="projects-sidebar" style="width: 200px; border-right: 1px solid rgba(255,255,255,0.1); padding: 10px; display: flex; flex-direction: column; gap: 5px;">
-        <button class="proj-tab active" data-category="Recent" style="text-align: left; padding: 8px; background: rgba(255,255,255,0.1); border: none; color: white; border-radius: 4px; cursor: pointer;">Recent</button>
-        <button class="proj-tab" data-category="Starred" style="text-align: left; padding: 8px; background: transparent; border: none; color: white; border-radius: 4px; cursor: pointer;">Starred</button>
-        <button class="proj-tab" data-category="Coding" style="text-align: left; padding: 8px; background: transparent; border: none; color: white; border-radius: 4px; cursor: pointer;">Coding</button>
-        <button class="proj-tab" data-category="Music" style="text-align: left; padding: 8px; background: transparent; border: none; color: white; border-radius: 4px; cursor: pointer;">Music</button>
-        <button class="proj-tab" data-category="Professional" style="text-align: left; padding: 8px; background: transparent; border: none; color: white; border-radius: 4px; cursor: pointer;">Professional</button>
+    <div class="projects-layout" style="display: flex; width: 100%; height: 100%;">
+      <div class="projects-sidebar" style="width: 240px; border-right: 1px solid rgba(255,255,255,0.1); padding: 12px; display: flex; flex-direction: column; gap: 4px;">
+        <div class="proj-tab active" data-category="Recent" style="padding: 10px 14px; background: rgba(255,255,255,0.1); border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px;">Recent</div>
+        <div class="proj-tab" data-category="Starred" style="padding: 10px 14px; background: transparent; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px;" onmouseover="if(this.style.background === 'transparent') this.style.background='rgba(255,255,255,0.05)';" onmouseout="if(this.style.background === 'rgba(255, 255, 255, 0.05)') this.style.background='transparent';">Starred</div>
+        <div class="proj-tab" data-category="Coding" style="padding: 10px 14px; background: transparent; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px;" onmouseover="if(this.style.background === 'transparent') this.style.background='rgba(255,255,255,0.05)';" onmouseout="if(this.style.background === 'rgba(255, 255, 255, 0.05)') this.style.background='transparent';">Coding</div>
+        <div class="proj-tab" data-category="Music" style="padding: 10px 14px; background: transparent; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px;" onmouseover="if(this.style.background === 'transparent') this.style.background='rgba(255,255,255,0.05)';" onmouseout="if(this.style.background === 'rgba(255, 255, 255, 0.05)') this.style.background='transparent';">Music</div>
+        <div class="proj-tab" data-category="Professional" style="padding: 10px 14px; background: transparent; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-size: 14px;" onmouseover="if(this.style.background === 'transparent') this.style.background='rgba(255,255,255,0.05)';" onmouseout="if(this.style.background === 'rgba(255, 255, 255, 0.05)') this.style.background='transparent';">Professional</div>
       </div>
       <div class="projects-main" style="flex: 1; padding: 20px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; overflow-y: auto;">
         <!-- Dynamic content will go here -->
