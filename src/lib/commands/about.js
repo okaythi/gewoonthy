@@ -2,8 +2,9 @@ import { windowManager } from '../WindowManager.js';
 
 export const aboutCommand = async (args, terminal) => {
   const contentHTML = `
-    <div class="profile-section">
-      <img src="https://cdn.sudothy.me/vanity/fallback.png" alt="Profile" class="profile-pic" onerror="this.src='https://via.placeholder.com/80'" />
+    <div style="padding: 24px; padding-bottom: 32px; box-sizing: border-box;">
+      <div class="profile-section">
+        <img src="https://cdn.sudothy.me/vanity/fallback.png" alt="Profile" class="profile-pic" onerror="this.src='https://via.placeholder.com/80'" />
       <div class="profile-name">Thy - About Me</div>
     </div>
     <div class="info-grid">
@@ -86,11 +87,12 @@ export const aboutCommand = async (args, terminal) => {
       <h3>Experience</h3>
       <p>I have worked directly with brands such as Fusion, Discord, Tencent, and Garena, ensuring strategic support and audience connection.</p>
     </div>
+    </div>
   `;
   windowManager.createWindow('Thy - About Me', contentHTML);
 };
 
 export const aboutMetadata = {
-  description: 'Open the system information interface',
+  description: 'Open information about me',
   args: []
 };
