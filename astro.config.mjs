@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import remarkGithubAlerts from 'remark-github-alerts';
 import remarkGfm from 'remark-gfm';
+import { unified } from '@astrojs/markdown-remark';
 
 export default defineConfig({
   output: 'server',
@@ -14,7 +15,9 @@ export default defineConfig({
     '/github': 'https://github.com/okaythi/gewoonthy'
   },
   markdown: {
-    remarkPlugins: [remarkGfm, remarkGithubAlerts],
+    processor: unified({
+      remarkPlugins: [remarkGfm, remarkGithubAlerts]
+    }),
     shikiConfig: {
       theme: 'github-dark'
     }
