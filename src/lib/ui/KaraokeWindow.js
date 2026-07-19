@@ -91,7 +91,24 @@ export const openKaraokeWindow = async () => {
   const renderAbout = async () => {
     const mdContent = await localesFetcher.fetchMarkdown('karaoke', 'about.md');
     if (mdContent && window.marked) {
-      const renderedHtml = window.marked.parse(mdContent);
+      let renderedHtml = window.marked.parse(mdContent);
+      
+      // Parse markdown alerts since browser-side marked.js doesn't natively support GFM alerts
+      renderedHtml = renderedHtml.replace(/<blockquote>([\s\S]*?)<\/blockquote>/gi, (match, innerHtml) => {
+        const alertMatch = innerHtml.match(/^\s*<p>\[!(NOTE|WARNING|INFO|TIP|CAUTION)\]/i);
+        if (alertMatch) {
+          const type = alertMatch[1].toLowerCase();
+          const title = type.charAt(0).toUpperCase() + type.slice(1);
+          let newContent = innerHtml.replace(/^\s*<p>\[!(NOTE|WARNING|INFO|TIP|CAUTION)\](?:\s*<br>\s*|<\/p>\s*<p>|\s+)/i, '<p>');
+          if (!newContent.trim().startsWith('<p>')) newContent = '<p>' + newContent;
+          return `<div class="markdown-alert markdown-alert-${type}">
+            <div class="markdown-alert-title">${title}</div>
+            ${newContent}
+          </div>`;
+        }
+        return match;
+      });
+
       mainView.innerHTML = `
         <div style="width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; background: #241f31;" class="custom-scrollbar">
           <div class="ubuntu-prose" style="padding: 20px;">
