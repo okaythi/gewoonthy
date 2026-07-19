@@ -11,7 +11,7 @@ export const helpCommand = async (args, terminal) => {
     
     let lineText = `  ${cmdName.padEnd(10)} ${desc}`;
     if (cmdName === 'projects' || cmdName === 'about') {
-      lineText = `<span style="background-color: var(--ubuntu-orange); color: white;">${lineText}</span>`;
+      lineText = `<span style="background-color: #E95420; color: white;">${lineText}</span>`;
     }
     helpText += lineText + '\n';
     
