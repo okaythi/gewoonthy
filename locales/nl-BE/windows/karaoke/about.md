@@ -1,22 +1,24 @@
-# De Karaoke Engine Bouwen
+[This document is localized in nl-BE]
 
-Welkom in de backend van de Karaoke-applicatie. Een vloeiende, woord-voor-woord karaoke-ervaring bouwen in de browser (en dan zwijgen we nog over deze zelfgemaakte Linux terminal simulator) was een tof maar dikwijls echt slopend project, waarbij het niet gewoon draait om een videootje afspelen, maar om sub-milliseconde synchronisatie en het vechten tegen browser latency. Sleutelwoord: "vechten" lol
+# Engineering the Karaoke Engine
 
-Zelfs als hobbyist wou ik iets bouwen dat native, vlot en exact aanvoelde. Hier is een blik onder de motorkap op hoe dit allemaal in elkaar zit.
+Welcome to the backend of the Karaoke application. Building a seamless, word-by-word karaoke experience in the browser (never mind inside this custom-made Linux terminal simulator) was a fun but sometimes proper knackering project, which isn't just about playing a video, it’s about sub-millisecond synchronisation and fighting browser latency. Keyword: "fighting" lol
 
-## 1. Het Handenarbeid (lyrics.ts)
+Even as a hobbyist, I still wanted to build something that felt native, snappy, and exact. Here is a look under the hood at how this comes together.
 
-Als je je afvraagt welke AI of magische API ik heb gebruikt om de lyrics woord-voor-woord te synchroniseren...... het antwoord is pure wilskracht lol
+## 1. The Manual Labour (lyrics.ts)
 
-Standaard `.lrc` bestanden synchroniseren meestal enkel per lijn, en de API's die ik vond waren zo middelmatig dat hun bestaan eigenlijk een beetje gênant is. Om die moderne, verende, woord-voor-woord highlight te krijgen, ben ik manueel door elke video gegaan. Ik heb minutieus de exacte timestamp voor het begin en einde van elk woord en elk couplet gemarkeerd. Eerlijk gezegd, prosodie en articulatorische fonetiek begrijpen is hier tegelijk een zegen en een vloek - een lyric visueel zien oplichten zelfs maar 150ms nadat de lettergreep effectief gezongen is, doet fysiek pijn aan mijn ziel.
+If you are wondering what AI or magical API I used to sync the lyrics word-by-word...... the answer is sheer willpower lol
+
+Standard `.lrc` files usually only sync line-by-line, and the APIs I found were so mediocre that tbh their very existence is embarrassing. To get that modern, bouncy, word-by-word highlight, I manually went through every single video. I painstakingly marked the exact timestamp for the beginning and end of every single word and verse. Honestly, understanding speech prosody and articulatory phonetics is both a blessing and a curse here - seeing a lyric visually light up even 150ms after the syllable is actually sung physically hurts my soul.
 
 > [!NOTE]
-> Dit is nog steeds het geval voor het Russische liedje Плак-плак, maar vergeef het mij, ik kan wel Cyrillisch lezen maar ik spreek geen Russisch.
+> This is still the case for the Russian song Плак-плак, but bear with me, I can read Cyrillic but I don't speak Russian.
 
-Dus, ik heb een script gedraaid (ik heb een LLM-model dit ene script voor mij laten schrijven) om het te formatteren naar onze `lyrics.ts` dataset. Het heeft letterlijk dagen geduurd, maar de precisie is goed genoeg dat ik er fier op ben om het te tonen.
+So, I ran a script (I had an LLM model create this one script for me) to format it into our `lyrics.ts` dataset. It took literal days, but the precision is good enough that I'm proud to show it off.
 
 ```typescript
-// Een blik in lyrics.ts
+// A glimpse into lyrics.ts
 export const lyricsData = [
   { start: 12.45, end: 12.80, text: "Never", type: "word" },
   { start: 12.81, end: 13.10, text: "gonna", type: "word" },
@@ -24,36 +26,36 @@ export const lyricsData = [
 ];
 ```
 
-## 2. Vechten Tegen de DOM (KaraokeWindow.js)
+## 2. Fighting the DOM (KaraokeWindow.js)
 
-De grootste uitdaging was om de UI perfect gekoppeld te houden aan de afspeelstatus van de video. Mijn eerste domme insteek was de native `timeupdate` event van de HTML5 `<video>` tag te gebruiken.
+The core challenge was keeping the UI perfectly tethered to the video's playback state. The daft-me approach was using the HTML5 `<video>` tag's native `timeupdate` event. 
 
-Ik leerde al snel dat `timeupdate` echt dikke zever is hiervoor. Het triggert misschien 4 keer per seconde (ongeveer 250ms intervallen). Voor een trage ballade, allez ja, nog tot daar aan toe. Voor snelle rap verses of een stevige techno track? Het ziet eruit als een haperende, out-of-sync boeltje.
+I quickly learned that `timeupdate` is absolute bollocks for this. It fires maybe 4 times a second (roughly 250ms intervals). For a slow ballad, I mean, fine I guess. For fast rap verses or a punchy techno track? It looks like a jittery, out-of-sync mess. 
 
-De workaround was om `timeupdate` volledig buiten te smijten en de `requestAnimationFrame` van de browser te kapen. Dit pollt `vid.currentTime` op 60 frames per seconde. Ik heb wat zitten graven en ontdekte dat het gebruik van de Web Audio API om een custom audio context node te maken technisch gezien de ultieme manier is voor absolute tijdsprecisie, maar de DOM strikt koppelen aan de videoklok via rAF werkte vlekkeloos, en custom audio buffer parsers schrijven was ver boven mijn intellectuele petje.
+The workaround was to throw `timeupdate` out the window entirely and hijack the browser's `requestAnimationFrame`. This polls `vid.currentTime` at 60 frames per second. I did some digging around and found that using the Web Audio API to create a custom audio context node might technically be the godlike way to handle absolute time precision, but tying the DOM strictly to the video clock via rAF worked flawlessly, and writing custom audio buffer parsers was way above my intellectual grade.
 
-Zo dus:
+Like so:
 ```javascript
-// Pollen aan 60fps in plaats van rekenen op trage event listeners
+// Polling at 60fps instead of relying on slow event listeners
 function updateLyrics() {
   const currentTime = vid.currentTime;
-  // [...] woord-matching logica
+  // [...] word-matching logic
   requestAnimationFrame(updateLyrics);
 }
 ```
 
-## 3. De Nachtmerrie van Font Rendering
+## 3. The Font Rendering Nightmare
 
-Een groot obstakel dat ik niet zag aankomen: custom typografie latency. Omdat veel van deze tracks meertalig zijn, veroorzaakte het dynamisch on-the-fly ophalen van zware Japanse Google Fonts massale FOIT (Flash of Invisible Text). Tegen de tijd dat de browser het font had opgehaald, was het hele kanji couplet al voorbij, wat dus echt dikke miserie was.
+A major hurdle I didn't see coming: custom typography latency. Because a lot of these tracks are multilingual, dynamically fetching heavy Japanese Google Fonts on the fly caused massive FOIT (Flash of Invisible Text). By the time the browser fetched the font, the entire kanji verse had already passed by so it was pure wank.
 
-Ik las over het "subsetten" van CJK fonts met Python om duizenden ongebruikte tekens te strippen zodat het bestand kleiner werd, maar eerlijk gezegd was ik te lui om dat voor elke taal te doen. Mijn workaround was brute force caching. Ik converteerde de ruwe `.ttf` naar een gecomprimeerde `.woff2` (ongeveer 1MB), hostte het direct op mijn eigen CDN (`cdn.sudothy.me`), en dwong de browser agressief om het te cachen via een `<link rel="preload">` directive in de document head, nog voor de karaoke module zelfs inlaadt. Gefikst.
+I read about "subsetting" CJK fonts using Python to strip out thousands of unused glyphs to make the file smaller, but tbh I couldn't be arsed to do all that for every single language. My workaround was to brute force caching. I converted the raw `.ttf` into a compressed `.woff2` (about 1MB), hosted it directly on my own CDN (`cdn.sudothy.me`), and aggressively forced the browser to cache it using a `<link rel="preload">` directive in the document head before the karaoke module even mounts. Sorted.
 
 ## 4. Visuals & Garbage Collection (global.css)
 
-Dan was er nog het probleem van instrumentale pauzes. Oude tekst die 40 seconden lang op het scherm blijft staan, ziet er echt marginaal uit. Ik heb een garbage collector geïmplementeerd: als er 3 seconden passeren zonder een lyric update, unmount de UI het tekstblok netjes.
+Then there was the issue of instrumental breaks. Stale text lingering on screen for 40 seconds looks proper ropey. I implemented a garbage collector: if 3 seconds pass without a lyric update, the UI gracefully unmounts the text block.
 
-Wanneer een woord *wel* actief is, moet het fysiek poppen. We gebruiken Canonical's Ubuntu Orange (`#E95420`) met een gelaagde gloed en een lichte `transform: scale(1.05)`.
-Zo dus:
+When a word *is* active, it needs to physically pop. We use Canonical's Ubuntu Orange (`#E95420`) with a layered glow and a slight `transform: scale(1.05)`. 
+Like so:
 ```css
 .lyric-word.active {
   color: #E95420;
@@ -63,16 +65,16 @@ Zo dus:
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
-*Een technische nota:* Om dit te laten draaien zonder frames te droppen, moest de `transform` property strikt geanimeerd worden om het hardware-accelerated te houden. Als je probeert om `font-size` te animeren voor die kinetische pop, flipt de layout engine van de browser en veroorzaakt massale lag. En ja, frames droppen nog altijd als zot dus alle tips zijn welkom. Je kan een issue openen op mijn Github repo hiervoor.
+*A technical note:* Getting this to run without dropping frames meant strictly animating the `transform` property to keep it hardware-accelerated. If you try to animate `font-size` for that kinetic pop, the browser's layout engine throws a fit and causes major lag. And yes frames are still dropping like a bastard so any tips are welcome. You can open an issue on my Github repo for this.
 
-## 5. API Nachtmerries
+## 5. API Nightmares
 
-Oorspronkelijk gebruikte ik de MusicBrainz/Cover Art Archive API om de album art dynamisch op te halen. Dat was echt om mee te lachen. Het haalde probleemloos het artwork op voor een of andere niche regionale pop track, maar gaf niets terug voor gigantisch bekende platen.
+I originally used the MusicBrainz/Cover Art Archive API to fetch the album art dynamically. It was an absolute piss-take. It would successfully pull the artwork for some niche regional pop track, but return nothing for massively defining records. 
 
-Ik heb het eruit gesmeten. We sturen de zoekopdracht nu door de iTunes Search API. Het is ongelooflijk vergevingsgezind met fuzzy searches en heeft een hit rate van bijna 100%. Soms is de simpelste corporate API gewoon beter dan een pedante open-source database. Wel flink balen, want ik steek normaal gezien liever mijn middelvinger op naar closed-source big tech spul.
+I ripped it out. We now bounce the search string through the iTunes Search API. It’s incredibly forgiving with fuzzy searches and has a near 100% hit rate. Sometimes the simplest corporate API is just better than a pedantic open-source database. Proper gutting tho cause I'm usually one to stick two fingers up at closed-source big tech stuff.
 
-## 6. Het Voting Systeem (vote.js)
+## 6. The Voting System (vote.js)
 
-Tot slot, de Like/Dislike client. Deze zit in de frontend en vuurt POST requests af naar een serverless backend (`vote.js`) die met mijn database praat. Ik moest local state tracking implementeren zodat gebruikers niet gewoon het endpoint spammen, maar door de UI updates optimistisch te houden (de kleur van de knop aanpassen voor de server antwoordt) voelt het instant responsief aan.
+Finally, the Like/Dislike client. It sits in the frontend and fires off POST requests to a serverless backend (`vote.js`) that talks to my database. I had to implement local state tracking so users don't just spam the endpoint, but keeping the UI updates optimistic (updating the button colour before the server responds) makes it feel instantly responsive. 
 
-Het is een complex klein ecosysteem, maar om het vlekkeloos te zien draaien in een gesimuleerde desktop omgeving maakt elke timestamp de moeite waard.
+It is a complex little ecosystem, but seeing it run flawlessly in a simulated desktop environment makes every timestamp worth it.

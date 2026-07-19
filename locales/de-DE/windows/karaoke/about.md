@@ -1,22 +1,24 @@
-# Entwicklung der Karaoke-Engine
+[This document is localized in de-DE]
 
-Willkommen im Backend der Karaoke-Anwendung. Ein nahtloses Wort-für-Wort-Karaoke-Erlebnis im Browser zu entwickeln (ganz zu schweigen von diesem selbstgebauten Linux-Terminal-Simulator), war ein spaßiges, aber oft auch echt verdammt anstrengendes Projekt. Es geht eben nicht nur darum, ein Video abzuspielen, sondern um Sub-Millisekunden-Synchronisation und den Kampf gegen die Browser-Latenz. Schlüsselwort: "Kampf" lol
+# Engineering the Karaoke Engine
 
-Selbst als Hobby-Entwickler wollte ich etwas bauen, das sich nativ, reaktionsschnell und exakt anfühlt. Hier ist ein Blick unter die Haube, wie das alles zusammenpasst.
+Welcome to the backend of the Karaoke application. Building a seamless, word-by-word karaoke experience in the browser (never mind inside this custom-made Linux terminal simulator) was a fun but sometimes proper knackering project, which isn't just about playing a video, it’s about sub-millisecond synchronisation and fighting browser latency. Keyword: "fighting" lol
 
-## 1. Die Handarbeit (lyrics.ts)
+Even as a hobbyist, I still wanted to build something that felt native, snappy, and exact. Here is a look under the hood at how this comes together.
 
-Falls du dich fragst, welche KI oder magische API ich benutzt habe, um die Songtexte Wort für Wort zu synchronisieren...... die Antwort lautet schiere Willenskraft lol
+## 1. The Manual Labour (lyrics.ts)
 
-Standardmäßige `.lrc`-Dateien synchronisieren normalerweise nur zeilenweise, und die APIs, die ich gefunden habe, waren so mittelmäßig, dass ihre bloße Existenz ehrlich gesagt peinlich ist. Um diese moderne, dynamische Wort-für-Wort-Hervorhebung hinzubekommen, bin ich jedes einzelne Video manuell durchgegangen. Ich habe minutiös den exakten Zeitstempel für den Anfang und das Ende jedes einzelnen Wortes und Verses markiert. Ehrlich gesagt ist das Verständnis von Sprachprosodie und artikulatorischer Phonetik hier Fluch und Segen zugleich – visuell zu sehen, wie ein Text selbst 150ms nachdem die Silbe tatsächlich gesungen wurde, aufleuchtet, tut mir körperlich in der Seele weh.
+If you are wondering what AI or magical API I used to sync the lyrics word-by-word...... the answer is sheer willpower lol
+
+Standard `.lrc` files usually only sync line-by-line, and the APIs I found were so mediocre that tbh their very existence is embarrassing. To get that modern, bouncy, word-by-word highlight, I manually went through every single video. I painstakingly marked the exact timestamp for the beginning and end of every single word and verse. Honestly, understanding speech prosody and articulatory phonetics is both a blessing and a curse here - seeing a lyric visually light up even 150ms after the syllable is actually sung physically hurts my soul.
 
 > [!NOTE]
-> Das ist beim russischen Song Плак-плак leider immer noch der Fall, aber habt Nachsicht mit mir, ich kann zwar Kyrillisch lesen, aber spreche kein Russisch.
+> This is still the case for the Russian song Плак-плак, but bear with me, I can read Cyrillic but I don't speak Russian.
 
-Also habe ich ein Skript ausgeführt (dieses eine Skript habe ich mir von einem LLM schreiben lassen), um es in unseren `lyrics.ts` Datensatz zu formatieren. Es dauerte wortwörtlich Tage, aber die Präzision ist gut genug, dass ich stolz darauf bin, sie zu zeigen.
+So, I ran a script (I had an LLM model create this one script for me) to format it into our `lyrics.ts` dataset. It took literal days, but the precision is good enough that I'm proud to show it off.
 
 ```typescript
-// Ein Einblick in lyrics.ts
+// A glimpse into lyrics.ts
 export const lyricsData = [
   { start: 12.45, end: 12.80, text: "Never", type: "word" },
   { start: 12.81, end: 13.10, text: "gonna", type: "word" },
@@ -24,36 +26,36 @@ export const lyricsData = [
 ];
 ```
 
-## 2. Der Kampf gegen das DOM (KaraokeWindow.js)
+## 2. Fighting the DOM (KaraokeWindow.js)
 
-Die eigentliche Herausforderung bestand darin, die Benutzeroberfläche perfekt an den Wiedergabestatus des Videos zu koppeln. Mein erster dummer Ansatz war es, das native `timeupdate`-Event des HTML5-`<video>`-Tags zu nutzen. 
+The core challenge was keeping the UI perfectly tethered to the video's playback state. The daft-me approach was using the HTML5 `<video>` tag's native `timeupdate` event. 
 
-Ich habe schnell gelernt, dass `timeupdate` dafür der reinste Müll ist. Es feuert vielleicht 4-mal pro Sekunde (also in Abständen von ca. 250ms). Für eine langsame Ballade, meinetwegen, das geht noch. Aber für schnelle Rap-Verse oder einen druckvollen Techno-Track? Das sieht aus wie ein ruckeliger, asynchroner Albtraum. 
+I quickly learned that `timeupdate` is absolute bollocks for this. It fires maybe 4 times a second (roughly 250ms intervals). For a slow ballad, I mean, fine I guess. For fast rap verses or a punchy techno track? It looks like a jittery, out-of-sync mess. 
 
-Der Workaround bestand darin, `timeupdate` komplett über Bord zu werfen und das `requestAnimationFrame` des Browsers zu kapern. Dadurch wird `vid.currentTime` 60-mal pro Sekunde abgefragt. Ich habe ein bisschen recherchiert und herausgefunden, dass die Nutzung der Web Audio API zur Erstellung eines benutzerdefinierten Audio-Context-Nodes technisch gesehen der absolute Königsweg für absolute zeitliche Präzision wäre. Aber das DOM über rAF streng an die Video-Uhr zu binden funktionierte einwandfrei, und das Schreiben eigener Audio-Buffer-Parser war dann doch eine Nummer zu groß für mich.
+The workaround was to throw `timeupdate` out the window entirely and hijack the browser's `requestAnimationFrame`. This polls `vid.currentTime` at 60 frames per second. I did some digging around and found that using the Web Audio API to create a custom audio context node might technically be the godlike way to handle absolute time precision, but tying the DOM strictly to the video clock via rAF worked flawlessly, and writing custom audio buffer parsers was way above my intellectual grade.
 
-Das sieht so aus:
+Like so:
 ```javascript
-// Polling mit 60fps, anstatt sich auf langsame Event-Listener zu verlassen
+// Polling at 60fps instead of relying on slow event listeners
 function updateLyrics() {
   const currentTime = vid.currentTime;
-  // [...] Wortabgleich-Logik
+  // [...] word-matching logic
   requestAnimationFrame(updateLyrics);
 }
 ```
 
-## 3. Der Albtraum des Font-Renderings
+## 3. The Font Rendering Nightmare
 
-Eine große Hürde, die ich nicht kommen sah: Die Latenz benutzerdefinierter Typografie. Da viele dieser Tracks mehrsprachig sind, verursachte das dynamische On-the-Fly-Laden schwerer japanischer Google-Schriftarten massive FOIT (Flash of Invisible Text). Bis der Browser die Schriftart geladen hatte, war der gesamte Kanji-Vers schon vorbei, was einfach kompletter Schrott war.
+A major hurdle I didn't see coming: custom typography latency. Because a lot of these tracks are multilingual, dynamically fetching heavy Japanese Google Fonts on the fly caused massive FOIT (Flash of Invisible Text). By the time the browser fetched the font, the entire kanji verse had already passed by so it was pure wank.
 
-Ich habe über "Subsetting" von CJK-Schriftarten mit Python gelesen, um Tausende nicht verwendeter Glyphen zu entfernen und die Datei kleiner zu machen, aber um ehrlich zu sein, hatte ich keinen Bock, das für jede einzelne Sprache zu machen. Mein Workaround war Caching mit der Brechstange. Ich konvertierte die rohe `.ttf` in eine komprimierte `.woff2` (ca. 1 MB), hostete sie direkt auf meinem eigenen CDN (`cdn.sudothy.me`) und zwang den Browser aggressiv, sie zwischenzuspeichern, indem ich eine `<link rel="preload">`-Direktive im Document-Head platzierte, noch bevor das Karaoke-Modul überhaupt geladen wird. Problem gelöst.
+I read about "subsetting" CJK fonts using Python to strip out thousands of unused glyphs to make the file smaller, but tbh I couldn't be arsed to do all that for every single language. My workaround was to brute force caching. I converted the raw `.ttf` into a compressed `.woff2` (about 1MB), hosted it directly on my own CDN (`cdn.sudothy.me`), and aggressively forced the browser to cache it using a `<link rel="preload">` directive in the document head before the karaoke module even mounts. Sorted.
 
 ## 4. Visuals & Garbage Collection (global.css)
 
-Dann gab es noch das Problem mit den Instrumentalpausen. Alter Text, der 40 Sekunden lang auf dem Bildschirm rumhängt, sieht echt schäbig aus. Ich habe einen Garbage Collector implementiert: Wenn 3 Sekunden lang kein Text-Update stattfindet, blendet die UI den Textblock elegant aus.
+Then there was the issue of instrumental breaks. Stale text lingering on screen for 40 seconds looks proper ropey. I implemented a garbage collector: if 3 seconds pass without a lyric update, the UI gracefully unmounts the text block.
 
-Wenn ein Wort *aktiv* ist, muss es physisch hervorstechen. Wir verwenden Canonicals Ubuntu Orange (`#E95420`) mit einem mehrschichtigen Leuchteffekt und einem leichten `transform: scale(1.05)`. 
-Wie hier:
+When a word *is* active, it needs to physically pop. We use Canonical's Ubuntu Orange (`#E95420`) with a layered glow and a slight `transform: scale(1.05)`. 
+Like so:
 ```css
 .lyric-word.active {
   color: #E95420;
@@ -63,16 +65,16 @@ Wie hier:
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
-*Eine technische Anmerkung:* Um dies ohne Frame Drops zum Laufen zu bringen, durfte strikt nur die Eigenschaft `transform` animiert werden, um die Hardwarebeschleunigung aufrechtzuerhalten. Wenn man versucht, die `font-size` für diesen kinetischen Pop-Effekt zu animieren, rastet die Layout-Engine des Browsers aus und verursacht massiven Lag. Und ja, Frames droppen immer noch wie verrückt, also bin ich für jeden Tipp dankbar. Ihr könnt dafür gerne ein Issue in meinem Github-Repo öffnen.
+*A technical note:* Getting this to run without dropping frames meant strictly animating the `transform` property to keep it hardware-accelerated. If you try to animate `font-size` for that kinetic pop, the browser's layout engine throws a fit and causes major lag. And yes frames are still dropping like a bastard so any tips are welcome. You can open an issue on my Github repo for this.
 
-## 5. API-Albträume
+## 5. API Nightmares
 
-Ursprünglich nutzte ich die MusicBrainz/Cover Art Archive API, um das Album-Cover dynamisch abzurufen. Das war ein absoluter Witz. Bei irgendeinem nischigen regionalen Pop-Track wurde das Artwork problemlos gefunden, aber bei absolut legendären Alben kam einfach gar nichts zurück. 
+I originally used the MusicBrainz/Cover Art Archive API to fetch the album art dynamically. It was an absolute piss-take. It would successfully pull the artwork for some niche regional pop track, but return nothing for massively defining records. 
 
-Ich habe es rausgeworfen. Jetzt jagen wir den Suchstring durch die iTunes Search API. Sie ist unglaublich nachsichtig bei ungenauen Suchanfragen und hat eine Trefferquote von fast 100%. Manchmal ist die einfachste Unternehmens-API einfach besser als eine pedantische Open-Source-Datenbank. Tut schon etwas weh, da ich normalerweise derjenige bin, der den Closed-Source-Systemen von Big Tech gerne den Mittelfinger zeigt.
+I ripped it out. We now bounce the search string through the iTunes Search API. It’s incredibly forgiving with fuzzy searches and has a near 100% hit rate. Sometimes the simplest corporate API is just better than a pedantic open-source database. Proper gutting tho cause I'm usually one to stick two fingers up at closed-source big tech stuff.
 
-## 6. Das Abstimmungssystem (vote.js)
+## 6. The Voting System (vote.js)
 
-Zu guter Letzt der Like/Dislike-Client. Er sitzt im Frontend und feuert POST-Requests an ein serverloses Backend (`vote.js`), das mit meiner Datenbank kommuniziert. Ich musste ein lokales State-Tracking implementieren, damit die Nutzer den Endpunkt nicht einfach zuspammen. Dadurch, dass die UI-Updates jedoch optimistisch gehalten sind (die Farbe des Buttons ändert sich, bevor der Server antwortet), fühlt es sich augenblicklich reaktionsschnell an. 
+Finally, the Like/Dislike client. It sits in the frontend and fires off POST requests to a serverless backend (`vote.js`) that talks to my database. I had to implement local state tracking so users don't just spam the endpoint, but keeping the UI updates optimistic (updating the button colour before the server responds) makes it feel instantly responsive. 
 
-Es ist ein komplexes kleines Ökosystem, aber es fehlerfrei in einer simulierten Desktop-Umgebung laufen zu sehen, macht jeden einzelnen Zeitstempel die Mühe wert.
+It is a complex little ecosystem, but seeing it run flawlessly in a simulated desktop environment makes every timestamp worth it.

@@ -26,7 +26,7 @@ class Terminal {
     if (authManager.state === AuthState.PROMPT_LOGIN) {
       const sys = await localesFetcher.fetchSystem() || {};
       this.printLine(sys.welcome || 'Welcome to sudothy.me v1.0');
-      this.printLine(sys.welcome_sub || 'This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
+      this.printLine(sys.welcome_sub || 'This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run \'help\'.\n');
       this.setPrompt(sys.login_prompt || 'login (leave empty to use as guest): ');
     } else {
       await this.printMOTD();

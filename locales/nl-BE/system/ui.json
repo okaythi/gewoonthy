@@ -4,7 +4,7 @@
   "motd_logout": "Typ 'logout' om je af te melden bij deze sessie.",
   "motd_last_login": "Laatste login:",
   "welcome": "Welkom bij sudothy.me v1.0",
-  "welcome_sub": "Dit systeem is gebouwd om gemakkelijk door jou te worden gebruikt, zonder overbodige functies.\nVoer 'help' uit om een lijst met beschikbare taken te zien. Voer 'interfaces --list' uit voor een lijst met beschikbare interfaces.\n",
+  "welcome_sub": "Dit systeem is gebouwd om gemakkelijk door jou te worden gebruikt, zonder overbodige functies.\nVoer 'help' uit om een lijst met beschikbare taken te zien.\n",
   "login_prompt": "login (laat leeg om als gast te gebruiken): ",
   "login_password_prompt": "[wachtwoord]: ",
   "login_guest_failed": "Gastlogin mislukt",

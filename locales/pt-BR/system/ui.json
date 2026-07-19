@@ -4,7 +4,7 @@
   "motd_logout": "Para sair desta sessão, digite 'logout'.",
   "motd_last_login": "Último login:",
   "welcome": "Bem-vindo ao sudothy.me v1.0",
-  "welcome_sub": "Este sistema foi criado para ser facilmente usado por você, sem excessos.\nPara ver uma lista de tarefas disponíveis, execute 'help'. Para ver uma lista de interfaces, execute 'interfaces --list'.\n",
+  "welcome_sub": "Este sistema foi criado para ser facilmente usado por você, sem excessos.\nPara ver uma lista de tarefas disponíveis, execute 'help'.\n",
   "login_prompt": "login (deixe em branco para usar como visitante): ",
   "login_password_prompt": "[senha]: ",
   "login_guest_failed": "Login de visitante falhou",

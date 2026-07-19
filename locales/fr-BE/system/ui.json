@@ -4,7 +4,7 @@
   "motd_logout": "Pour vous déconnecter de cette session, tapez 'logout'.",
   "motd_last_login": "Dernière connexion:",
   "welcome": "Bienvenue sur sudothy.me v1.0",
-  "welcome_sub": "Ce système est conçu pour être facilement utilisé par vous, avec un minimum de superflu.\nPour voir une liste des tâches disponibles, exécutez 'help'. Pour voir une liste des interfaces disponibles, exécutez 'interfaces --list'.\n",
+  "welcome_sub": "Ce système est conçu pour être facilement utilisé par vous, avec un minimum de superflu.\nPour voir une liste des tâches disponibles, exécutez 'help'.\n",
   "login_prompt": "login (laissez vide pour utiliser comme invité): ",
   "login_password_prompt": "[mot de passe]: ",
   "login_guest_failed": "Échec de la connexion invité",

@@ -4,7 +4,7 @@
   "motd_logout": "Para cerrar sesión, escribí 'logout'.",
   "motd_last_login": "Último inicio de sesión:",
   "welcome": "Bienvenido a sudothy.me v1.0",
-  "welcome_sub": "Este sistema está pensado para ser fácil de usar, sin cosas que sobren.\nPara ver una lista de tareas, corré 'help'. Para ver las interfaces, corré 'interfaces --list'.\n",
+  "welcome_sub": "Este sistema está pensado para ser fácil de usar, sin cosas que sobren.\nPara ver una lista de tareas, corré 'help'.\n",
   "login_prompt": "login (dejalo en blanco para entrar como invitado): ",
   "login_password_prompt": "[contraseña]: ",
   "login_guest_failed": "Falló el ingreso de invitado",

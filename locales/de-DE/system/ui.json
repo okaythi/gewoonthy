@@ -4,7 +4,7 @@
   "motd_logout": "Geben Sie 'logout' ein, um sich von dieser Sitzung abzumelden.",
   "motd_last_login": "Letzter Login:",
   "welcome": "Willkommen bei sudothy.me v1.0",
-  "welcome_sub": "Dieses System ist so aufgebaut, dass es von Ihnen leicht und ohne Bloatware genutzt werden kann.\nUm eine Liste der verfügbaren Aufgaben zu sehen, führen Sie 'help' aus. Für Schnittstellen 'interfaces --list'.\n",
+  "welcome_sub": "Dieses System ist so aufgebaut, dass es von Ihnen leicht und ohne Bloatware genutzt werden kann.\nUm eine Liste der verfügbaren Aufgaben zu sehen, führen Sie 'help' aus.\n",
   "login_prompt": "login (leer lassen, um als Gast zu nutzen): ",
   "login_password_prompt": "[Passwort]: ",
   "login_guest_failed": "Gast-Login fehlgeschlagen",

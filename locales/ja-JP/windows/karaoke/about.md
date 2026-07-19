@@ -1,22 +1,24 @@
-# カラオケエンジンの構築
+[This document is localized in ja-JP]
 
-カラオケアプリケーションのバックエンドへようこそ。ブラウザでシームレスな単語ごとのカラオケ体験を構築すること（自作のLinux端末シミュレーター内であることはさておき）は、楽しい反面、時にはマジで骨の折れるプロジェクトでした。ただ単に動画を再生するだけでなく、サブミリ秒の同期とブラウザの遅延との戦いでした。キーワードは「戦い」です（笑）。
+# Engineering the Karaoke Engine
 
-趣味プログラマーであっても、ネイティブで、軽快で、正確に感じられるものを作りたいと思いました。ここでは、これらがどのように統合されているか、内部の仕組みをご紹介します。
+Welcome to the backend of the Karaoke application. Building a seamless, word-by-word karaoke experience in the browser (never mind inside this custom-made Linux terminal simulator) was a fun but sometimes proper knackering project, which isn't just about playing a video, it’s about sub-millisecond synchronisation and fighting browser latency. Keyword: "fighting" lol
 
-## 1. 手作業 (lyrics.ts)
+Even as a hobbyist, I still wanted to build something that felt native, snappy, and exact. Here is a look under the hood at how this comes together.
 
-単語ごとに歌詞を同期させるために、どんなAIや魔法のAPIを使ったのか疑問に思っているなら……答えは純粋な気合と根性です（笑）。
+## 1. The Manual Labour (lyrics.ts)
 
-標準の `.lrc` ファイルは通常、行単位でしか同期せず、見つけたAPIはどれもあまりにも陳腐で、その存在自体が恥ずかしいレベルでした。あのモダンで跳ねるような単語ごとのハイライトを実現するために、すべての動画を手作業でチェックしました。すべての単語とコーラスの開始と終了の正確なタイムスタンプを丹念にマークしました。正直なところ、音声の韻律や調音音声学を理解していることは、ここでは祝福でもあり呪いでもあります。実際に歌われた音節から150ミリ秒遅れて歌詞が視覚的にハイライトされるのを見るだけで、精神的苦痛を感じるからです。
+If you are wondering what AI or magical API I used to sync the lyrics word-by-word...... the answer is sheer willpower lol
+
+Standard `.lrc` files usually only sync line-by-line, and the APIs I found were so mediocre that tbh their very existence is embarrassing. To get that modern, bouncy, word-by-word highlight, I manually went through every single video. I painstakingly marked the exact timestamp for the beginning and end of every single word and verse. Honestly, understanding speech prosody and articulatory phonetics is both a blessing and a curse here - seeing a lyric visually light up even 150ms after the syllable is actually sung physically hurts my soul.
 
 > [!NOTE]
-> ロシア語の曲「Плак-плак」に関してはまだその状態ですが、大目に見てください。キリル文字は読めますが、ロシア語は話せません。
+> This is still the case for the Russian song Плак-плак, but bear with me, I can read Cyrillic but I don't speak Russian.
 
-そこで、データセット `lyrics.ts` にフォーマットするスクリプト（このスクリプトだけはLLMに書かせました）を実行しました。文字通り何日もかかりましたが、誇りを持って見せられるくらいの精度にはなりました。
+So, I ran a script (I had an LLM model create this one script for me) to format it into our `lyrics.ts` dataset. It took literal days, but the precision is good enough that I'm proud to show it off.
 
 ```typescript
-// lyrics.ts の一部
+// A glimpse into lyrics.ts
 export const lyricsData = [
   { start: 12.45, end: 12.80, text: "Never", type: "word" },
   { start: 12.81, end: 13.10, text: "gonna", type: "word" },
@@ -24,36 +26,36 @@ export const lyricsData = [
 ];
 ```
 
-## 2. DOMとの戦い (KaraokeWindow.js)
+## 2. Fighting the DOM (KaraokeWindow.js)
 
-最大の課題は、UIを動画の再生状態と完璧に連動させることでした。最初に思いついたバカな方法は、HTML5の `<video>` タグのネイティブな `timeupdate` イベントを使うことでした。
+The core challenge was keeping the UI perfectly tethered to the video's playback state. The daft-me approach was using the HTML5 `<video>` tag's native `timeupdate` event. 
 
-すぐに `timeupdate` がこの目的には全くのクソであることに気づきました。1秒間に4回程度（約250ミリ秒間隔）しか発火しません。スローなバラードなら、まあ許容範囲でしょう。でも速いラップのバースやパンチの効いたテクノトラックでは？ ガタガタで同期のずれためちゃくちゃな状態になります。
+I quickly learned that `timeupdate` is absolute bollocks for this. It fires maybe 4 times a second (roughly 250ms intervals). For a slow ballad, I mean, fine I guess. For fast rap verses or a punchy techno track? It looks like a jittery, out-of-sync mess. 
 
-回避策として `timeupdate` を完全に捨てて、ブラウザの `requestAnimationFrame` をハックしました。これで `vid.currentTime` を60fpsで監視します。少し調べたところ、Web Audio APIを使ってカスタムオーディオコンテキストノードを作成することが、技術的には絶対的な時間精度を扱う上での神アプローチらしいとわかりました。しかし、rAF経由でDOMをビデオの時計に厳密にバインドする方法でも完璧に機能しましたし、カスタムオーディオバッファパーサーをゼロから書くのは私の知能レベルをはるかに超えていました。
+The workaround was to throw `timeupdate` out the window entirely and hijack the browser's `requestAnimationFrame`. This polls `vid.currentTime` at 60 frames per second. I did some digging around and found that using the Web Audio API to create a custom audio context node might technically be the godlike way to handle absolute time precision, but tying the DOM strictly to the video clock via rAF worked flawlessly, and writing custom audio buffer parsers was way above my intellectual grade.
 
-こんな感じです：
+Like so:
 ```javascript
-// 遅いイベントリスナーに頼らず、60fpsでポーリングする
+// Polling at 60fps instead of relying on slow event listeners
 function updateLyrics() {
   const currentTime = vid.currentTime;
-  // [...] 単語マッチングのロジック
+  // [...] word-matching logic
   requestAnimationFrame(updateLyrics);
 }
 ```
 
-## 3. フォントレンダリングの悪夢
+## 3. The Font Rendering Nightmare
 
-予想していなかった大きな壁、それはカスタムタイポグラフィの遅延です。これらのトラックの多くは多言語であるため、重い日本語のGoogleフォントをその場で動的に取得しようとすると、大規模なFOIT（Flash of Invisible Text：テキストが表示されない現象）が発生しました。ブラウザがフォントを取得し終わる頃には、漢字のバース全体がすでに過ぎ去ってしまっていて、マジで使えませんでした。
+A major hurdle I didn't see coming: custom typography latency. Because a lot of these tracks are multilingual, dynamically fetching heavy Japanese Google Fonts on the fly caused massive FOIT (Flash of Invisible Text). By the time the browser fetched the font, the entire kanji verse had already passed by so it was pure wank.
 
-Pythonを使ってCJKフォントの「サブセット化」を行い、何千もの使われていないグリフを取り除いてファイルサイズを小さくするという手法も読みましたが、正直なところ、それを全言語でやるのは面倒くさすぎました。私の回避策は、ゴリ押しのキャッシュです。生の `.ttf` を圧縮された `.woff2` （約1MB）に変換し、自身のCDN（`cdn.sudothy.me`）で直接ホストし、カラオケモジュールがマウントされる前のドキュメントのヘッダーに `<link rel="preload">` ディレクティブを使用して、ブラウザに強制的にキャッシュさせました。これで解決です。
+I read about "subsetting" CJK fonts using Python to strip out thousands of unused glyphs to make the file smaller, but tbh I couldn't be arsed to do all that for every single language. My workaround was to brute force caching. I converted the raw `.ttf` into a compressed `.woff2` (about 1MB), hosted it directly on my own CDN (`cdn.sudothy.me`), and aggressively forced the browser to cache it using a `<link rel="preload">` directive in the document head before the karaoke module even mounts. Sorted.
 
-## 4. ビジュアルとガベージコレクション (global.css)
+## 4. Visuals & Garbage Collection (global.css)
 
-さらに、間奏の問題もありました。古いテキストが40秒間も画面に残り続けるのはマジでダサいです。そこでガベージコレクターを実装しました。歌詞の更新がないまま3秒経過すると、UIがテキストブロックをスムーズにアンマウントします。
+Then there was the issue of instrumental breaks. Stale text lingering on screen for 40 seconds looks proper ropey. I implemented a garbage collector: if 3 seconds pass without a lyric update, the UI gracefully unmounts the text block.
 
-単語がアクティブな *時* は、物理的にポップさせる必要があります。CanonicalのUbuntuオレンジ（`#E95420`）を使用し、レイヤー化された発光効果とわずかな `transform: scale(1.05)` を加えています。
-こんな感じです：
+When a word *is* active, it needs to physically pop. We use Canonical's Ubuntu Orange (`#E95420`) with a layered glow and a slight `transform: scale(1.05)`. 
+Like so:
 ```css
 .lyric-word.active {
   color: #E95420;
@@ -63,16 +65,16 @@ Pythonを使ってCJKフォントの「サブセット化」を行い、何千�
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
-*技術的なメモ:* これをコマ落ちせずに動作させるためには、ハードウェアアクセラレーションを維持するために `transform` プロパティだけを厳密にアニメーションさせる必要がありました。あのキネティックなポップ感を出そうとして `font-size` をアニメーションさせようとすると、ブラウザのレイアウトエンジンが発狂して大規模なラグを引き起こします。そして今でもコマ落ちはクソみたいに発生しているので、アドバイスがあれば大歓迎です。これについて私のGithubリポジトリでIssueを開いてくれても構いません。
+*A technical note:* Getting this to run without dropping frames meant strictly animating the `transform` property to keep it hardware-accelerated. If you try to animate `font-size` for that kinetic pop, the browser's layout engine throws a fit and causes major lag. And yes frames are still dropping like a bastard so any tips are welcome. You can open an issue on my Github repo for this.
 
-## 5. APIの悪夢
+## 5. API Nightmares
 
-当初は、アルバムアートを動的に取得するためにMusicBrainz/Cover Art ArchiveのAPIを使用していました。これが本当にクソみたいなAPIで、ニッチな地方のポップス曲のアートワークは完璧に取得できるのに、誰もが知っているような超有名なレコードでは何も返してくれませんでした。
+I originally used the MusicBrainz/Cover Art Archive API to fetch the album art dynamically. It was an absolute piss-take. It would successfully pull the artwork for some niche regional pop track, but return nothing for massively defining records. 
 
-これは捨てました。今では検索文字列をiTunes Search APIに投げています。曖昧な検索にも非常に寛容で、ほぼ100％のヒット率を誇ります。時には、最もシンプルな企業製APIの方が、堅苦しいオープンソースのデータベースよりも優れていることがあるんです。普段ならクローズドソースのビッグテック企業には中指を立てるタイプなので、これは結構悔しいんですけどね。
+I ripped it out. We now bounce the search string through the iTunes Search API. It’s incredibly forgiving with fuzzy searches and has a near 100% hit rate. Sometimes the simplest corporate API is just better than a pedantic open-source database. Proper gutting tho cause I'm usually one to stick two fingers up at closed-source big tech stuff.
 
-## 6. 投票システム (vote.js)
+## 6. The Voting System (vote.js)
 
-最後に、Like/Dislikeクライアントです。これはフロントエンドにあり、私のデータベースと通信するサーバーレスのバックエンド（`vote.js`）に対してPOSTリクエストを送信します。ユーザーがエンドポイントにスパム攻撃を仕掛けないようにローカルでの状態追跡を実装する必要がありましたが、UIの更新を楽観的に（サーバーが応答する前にボタンの色を更新）保つことで、瞬時に反応しているように感じられます。
+Finally, the Like/Dislike client. It sits in the frontend and fires off POST requests to a serverless backend (`vote.js`) that talks to my database. I had to implement local state tracking so users don't just spam the endpoint, but keeping the UI updates optimistic (updating the button colour before the server responds) makes it feel instantly responsive. 
 
-小さくて複雑なエコシステムですが、シミュレートされたデスクトップ環境でこれが完璧に動作するのを見ると、すべてのタイムスタンプを打った苦労が報われます。
+It is a complex little ecosystem, but seeing it run flawlessly in a simulated desktop environment makes every timestamp worth it.

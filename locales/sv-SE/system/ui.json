@@ -4,7 +4,7 @@
   "motd_logout": "Skriv 'logout' för att logga ut från denna session.",
   "motd_last_login": "Senaste inloggning:",
   "welcome": "Välkommen till sudothy.me v1.0",
-  "welcome_sub": "Det här systemet är byggt för att vara enkelt att använda, utan onödigt lull-lull.\nFör att se en lista över tillgängliga uppgifter, kör 'help'. För att se tillgängliga gränssnitt, kör 'interfaces --list'.\n",
+  "welcome_sub": "Det här systemet är byggt för att vara enkelt att använda, utan onödigt lull-lull.\nFör att se en lista över tillgängliga uppgifter, kör 'help'.\n",
   "login_prompt": "login (lämna tomt för att använda som gäst): ",
   "login_password_prompt": "[lösenord]: ",
   "login_guest_failed": "Gästinloggning misslyckades",

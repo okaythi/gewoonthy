@@ -4,7 +4,7 @@
   "motd_logout": "To log out of this session, type 'logout'.",
   "motd_last_login": "Last login:",
   "welcome": "Welcome to sudothy.me v1.0",
-  "welcome_sub": "This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run 'help'. To see a list of available interfaces, run 'interfaces --list'.\n",
+  "welcome_sub": "This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run 'help'.\n",
   "login_prompt": "login (leave empty to use as guest): ",
   "login_password_prompt": "[password]: ",
   "login_guest_failed": "Guest login failed",

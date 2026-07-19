@@ -4,7 +4,7 @@
   "motd_logout": "要注销此会话，请输入 'logout'。",
   "motd_last_login": "上次登录:",
   "welcome": "欢迎来到 sudothy.me v1.0",
-  "welcome_sub": "该系统旨在为您提供轻松的使用体验，没有任何臃肿的功能。\n要查看可用任务的列表，请运行 'help'。 要查看可用界面的列表，请运行 'interfaces --list'。\n",
+  "welcome_sub": "该系统旨在为您提供轻松的使用体验，没有任何臃肿的功能。\n要查看可用任务的列表，请运行 'help'。\n",
   "login_prompt": "login (留空以作为访客使用): ",
   "login_password_prompt": "[密码]: ",
   "login_guest_failed": "访客登录失败",
