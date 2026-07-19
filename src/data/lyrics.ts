@@ -31374,5 +31374,4956 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       }
     ]
+  },
+  "VIDEOCLUB - Roi.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 23.129,
+        "verseEnd": 25.214,
+        "words": [
+          {
+            "word": "T'en",
+            "start": 23.129,
+            "end": 23.252
+          },
+          {
+            "word": "trouveras",
+            "start": 23.252,
+            "end": 23.374
+          },
+          {
+            "word": "d'autres",
+            "start": 23.374,
+            "end": 23.577
+          },
+          {
+            "word": "des",
+            "start": 23.577,
+            "end": 23.74
+          },
+          {
+            "word": "mecs",
+            "start": 23.74,
+            "end": 24.065
+          },
+          {
+            "word": "comme",
+            "start": 24.065,
+            "end": 24.187
+          },
+          {
+            "word": "moi",
+            "start": 24.187,
+            "end": 25.214
+          }
+        ]
+      },
+      {
+        "verseStart": 25.214,
+        "verseEnd": 27.535,
+        "words": [
+          {
+            "word": "Y'en",
+            "start": 25.214,
+            "end": 25.337
+          },
+          {
+            "word": "aura",
+            "start": 25.337,
+            "end": 25.459
+          },
+          {
+            "word": "plein",
+            "start": 25.459,
+            "end": 25.58
+          },
+          {
+            "word": "des",
+            "start": 25.58,
+            "end": 25.864
+          },
+          {
+            "word": "gars",
+            "start": 25.864,
+            "end": 26.026
+          },
+          {
+            "word": "pour",
+            "start": 26.026,
+            "end": 26.312
+          },
+          {
+            "word": "toi",
+            "start": 26.312,
+            "end": 27.535
+          }
+        ]
+      },
+      {
+        "verseStart": 27.535,
+        "verseEnd": 29.667,
+        "words": [
+          {
+            "word": "Tes",
+            "start": 27.535,
+            "end": 27.668
+          },
+          {
+            "word": "boucles",
+            "start": 27.668,
+            "end": 27.831
+          },
+          {
+            "word": "brunes",
+            "start": 27.831,
+            "end": 28.075
+          },
+          {
+            "word": "s'évaporent",
+            "start": 28.075,
+            "end": 29.667
+          }
+        ]
+      },
+      {
+        "verseStart": 29.667,
+        "verseEnd": 32.034,
+        "words": [
+          {
+            "word": "Dans",
+            "start": 29.667,
+            "end": 29.83
+          },
+          {
+            "word": "mon",
+            "start": 29.83,
+            "end": 29.912
+          },
+          {
+            "word": "âme,",
+            "start": 29.912,
+            "end": 30.402
+          },
+          {
+            "word": "dans",
+            "start": 30.402,
+            "end": 30.482
+          },
+          {
+            "word": "mon",
+            "start": 30.482,
+            "end": 30.77
+          },
+          {
+            "word": "corps",
+            "start": 30.77,
+            "end": 32.034
+          }
+        ]
+      },
+      {
+        "verseStart": 32.034,
+        "verseEnd": 34.197,
+        "words": [
+          {
+            "word": "Je",
+            "start": 32.034,
+            "end": 32.157
+          },
+          {
+            "word": "te",
+            "start": 32.157,
+            "end": 32.28
+          },
+          {
+            "word": "cherche",
+            "start": 32.28,
+            "end": 32.567
+          },
+          {
+            "word": "dans",
+            "start": 32.567,
+            "end": 32.691
+          },
+          {
+            "word": "mes",
+            "start": 32.691,
+            "end": 32.854
+          },
+          {
+            "word": "songes,",
+            "start": 32.854,
+            "end": 33.097
+          },
+          {
+            "word": "je",
+            "start": 33.097,
+            "end": 33.219
+          },
+          {
+            "word": "te",
+            "start": 33.219,
+            "end": 33.382
+          },
+          {
+            "word": "traque",
+            "start": 33.382,
+            "end": 33.626
+          },
+          {
+            "word": "dans",
+            "start": 33.626,
+            "end": 33.748
+          },
+          {
+            "word": "mes",
+            "start": 33.748,
+            "end": 33.912
+          },
+          {
+            "word": "rêves",
+            "start": 33.912,
+            "end": 34.197
+          }
+        ]
+      },
+      {
+        "verseStart": 34.197,
+        "verseEnd": 36.414,
+        "words": [
+          {
+            "word": "À",
+            "start": 34.197,
+            "end": 34.323
+          },
+          {
+            "word": "l'aube",
+            "start": 34.323,
+            "end": 34.45
+          },
+          {
+            "word": "ou",
+            "start": 34.45,
+            "end": 34.616
+          },
+          {
+            "word": "dans",
+            "start": 34.616,
+            "end": 34.738
+          },
+          {
+            "word": "mon",
+            "start": 34.738,
+            "end": 34.86
+          },
+          {
+            "word": "ombre,",
+            "start": 34.86,
+            "end": 34.941
+          },
+          {
+            "word": "ère",
+            "start": 34.941,
+            "end": 35.307
+          },
+          {
+            "word": "en",
+            "start": 35.307,
+            "end": 35.47
+          },
+          {
+            "word": "vaine",
+            "start": 35.47,
+            "end": 35.714
+          },
+          {
+            "word": "sur",
+            "start": 35.714,
+            "end": 35.922
+          },
+          {
+            "word": "tes",
+            "start": 35.922,
+            "end": 36.044
+          },
+          {
+            "word": "lèvres",
+            "start": 36.044,
+            "end": 36.414
+          }
+        ]
+      },
+      {
+        "verseStart": 36.414,
+        "verseEnd": 38.543,
+        "words": [
+          {
+            "word": "Écorchant",
+            "start": 36.414,
+            "end": 36.905
+          },
+          {
+            "word": "les",
+            "start": 36.905,
+            "end": 37.027
+          },
+          {
+            "word": "abîmes",
+            "start": 37.027,
+            "end": 37.514
+          },
+          {
+            "word": "de",
+            "start": 37.514,
+            "end": 37.636
+          },
+          {
+            "word": "mon",
+            "start": 37.636,
+            "end": 37.801
+          },
+          {
+            "word": "cœur",
+            "start": 37.801,
+            "end": 38.131
+          },
+          {
+            "word": "écarlate",
+            "start": 38.131,
+            "end": 38.543
+          }
+        ]
+      },
+      {
+        "verseStart": 38.543,
+        "verseEnd": 40.789,
+        "words": [
+          {
+            "word": "Tu",
+            "start": 38.543,
+            "end": 38.746
+          },
+          {
+            "word": "n'es",
+            "start": 38.746,
+            "end": 38.869
+          },
+          {
+            "word": "que",
+            "start": 38.869,
+            "end": 39.032
+          },
+          {
+            "word": "le",
+            "start": 39.032,
+            "end": 39.194
+          },
+          {
+            "word": "point",
+            "start": 39.194,
+            "end": 39.315
+          },
+          {
+            "word": "fixe",
+            "start": 39.315,
+            "end": 39.518
+          },
+          {
+            "word": "de",
+            "start": 39.518,
+            "end": 39.721
+          },
+          {
+            "word": "mes",
+            "start": 39.721,
+            "end": 39.884
+          },
+          {
+            "word": "songes",
+            "start": 39.884,
+            "end": 40.175
+          },
+          {
+            "word": "disparates",
+            "start": 40.175,
+            "end": 40.789
+          }
+        ]
+      },
+      {
+        "verseStart": 40.789,
+        "verseEnd": 45.208,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 40.789,
+            "end": 41.331
+          },
+          {
+            "word": "dans",
+            "start": 41.331,
+            "end": 41.576
+          },
+          {
+            "word": "la",
+            "start": 41.576,
+            "end": 41.738
+          },
+          {
+            "word": "neige,",
+            "start": 41.738,
+            "end": 42.023
+          },
+          {
+            "word": "aime-moi",
+            "start": 42.023,
+            "end": 42.147
+          },
+          {
+            "word": "sous",
+            "start": 42.147,
+            "end": 42.472
+          },
+          {
+            "word": "l'soleil,",
+            "start": 42.472,
+            "end": 43.045
+          },
+          {
+            "word": "aime-moi",
+            "start": 43.045,
+            "end": 43.455
+          },
+          {
+            "word": "la",
+            "start": 43.455,
+            "end": 43.617
+          },
+          {
+            "word": "peau",
+            "start": 43.617,
+            "end": 43.739
+          },
+          {
+            "word": "beige",
+            "start": 43.739,
+            "end": 44.185
+          },
+          {
+            "word": "dans",
+            "start": 44.185,
+            "end": 44.307
+          },
+          {
+            "word": "les",
+            "start": 44.307,
+            "end": 44.47
+          },
+          {
+            "word": "fleurs",
+            "start": 44.47,
+            "end": 44.674
+          },
+          {
+            "word": "de",
+            "start": 44.674,
+            "end": 44.8
+          },
+          {
+            "word": "vermeilles",
+            "start": 44.8,
+            "end": 45.208
+          }
+        ]
+      },
+      {
+        "verseStart": 45.208,
+        "verseEnd": 47.338,
+        "words": [
+          {
+            "word": "J'vois",
+            "start": 45.208,
+            "end": 45.373
+          },
+          {
+            "word": "des",
+            "start": 45.373,
+            "end": 45.496
+          },
+          {
+            "word": "gens",
+            "start": 45.496,
+            "end": 45.66
+          },
+          {
+            "word": "qui",
+            "start": 45.66,
+            "end": 45.823
+          },
+          {
+            "word": "courent",
+            "start": 45.823,
+            "end": 46.068
+          },
+          {
+            "word": "nus,",
+            "start": 46.068,
+            "end": 46.354
+          },
+          {
+            "word": "j'vois",
+            "start": 46.354,
+            "end": 46.517
+          },
+          {
+            "word": "des",
+            "start": 46.517,
+            "end": 46.639
+          },
+          {
+            "word": "gens",
+            "start": 46.639,
+            "end": 46.802
+          },
+          {
+            "word": "qui",
+            "start": 46.802,
+            "end": 46.966
+          },
+          {
+            "word": "m'sourient",
+            "start": 46.966,
+            "end": 47.338
+          }
+        ]
+      },
+      {
+        "verseStart": 47.338,
+        "verseEnd": 49.751,
+        "words": [
+          {
+            "word": "Mais",
+            "start": 47.338,
+            "end": 47.543
+          },
+          {
+            "word": "moi",
+            "start": 47.543,
+            "end": 47.708
+          },
+          {
+            "word": "j'plane",
+            "start": 47.708,
+            "end": 47.873
+          },
+          {
+            "word": "dans",
+            "start": 47.873,
+            "end": 47.994
+          },
+          {
+            "word": "la",
+            "start": 47.994,
+            "end": 48.158
+          },
+          {
+            "word": "rue,",
+            "start": 48.158,
+            "end": 48.489
+          },
+          {
+            "word": "dans",
+            "start": 48.489,
+            "end": 48.651
+          },
+          {
+            "word": "tes",
+            "start": 48.651,
+            "end": 48.814
+          },
+          {
+            "word": "yeux,",
+            "start": 48.814,
+            "end": 49.018
+          },
+          {
+            "word": "sous",
+            "start": 49.018,
+            "end": 49.181
+          },
+          {
+            "word": "la",
+            "start": 49.181,
+            "end": 49.383
+          },
+          {
+            "word": "pluie",
+            "start": 49.383,
+            "end": 49.751
+          }
+        ]
+      },
+      {
+        "verseStart": 49.751,
+        "verseEnd": 54.131,
+        "words": [
+          {
+            "word": "Et",
+            "start": 49.751,
+            "end": 49.914
+          },
+          {
+            "word": "je",
+            "start": 49.914,
+            "end": 50.036
+          },
+          {
+            "word": "reste",
+            "start": 50.036,
+            "end": 50.24
+          },
+          {
+            "word": "l'esprit",
+            "start": 50.24,
+            "end": 50.491
+          },
+          {
+            "word": "de",
+            "start": 50.491,
+            "end": 50.657
+          },
+          {
+            "word": "tes",
+            "start": 50.657,
+            "end": 50.779
+          },
+          {
+            "word": "lointains",
+            "start": 50.779,
+            "end": 51.268
+          },
+          {
+            "word": "souvenirs,",
+            "start": 51.268,
+            "end": 51.512
+          },
+          {
+            "word": "dans",
+            "start": 51.512,
+            "end": 52.007
+          },
+          {
+            "word": "mes",
+            "start": 52.007,
+            "end": 52.17
+          },
+          {
+            "word": "songes",
+            "start": 52.17,
+            "end": 52.416
+          },
+          {
+            "word": "ensevelis,",
+            "start": 52.416,
+            "end": 52.986
+          },
+          {
+            "word": "tes",
+            "start": 52.986,
+            "end": 53.149
+          },
+          {
+            "word": "larmes,",
+            "start": 53.149,
+            "end": 53.516
+          },
+          {
+            "word": "tes",
+            "start": 53.516,
+            "end": 53.639
+          },
+          {
+            "word": "rires",
+            "start": 53.639,
+            "end": 54.131
+          }
+        ]
+      },
+      {
+        "verseStart": 54.131,
+        "verseEnd": 56.501,
+        "words": [
+          {
+            "word": "Tu",
+            "start": 54.131,
+            "end": 54.297
+          },
+          {
+            "word": "es",
+            "start": 54.297,
+            "end": 54.46
+          },
+          {
+            "word": "ma",
+            "start": 54.46,
+            "end": 54.665
+          },
+          {
+            "word": "femme",
+            "start": 54.665,
+            "end": 54.871
+          },
+          {
+            "word": "iconique,",
+            "start": 54.871,
+            "end": 55.361
+          },
+          {
+            "word": "tu",
+            "start": 55.361,
+            "end": 55.482
+          },
+          {
+            "word": "es",
+            "start": 55.482,
+            "end": 55.645
+          },
+          {
+            "word": "mon",
+            "start": 55.645,
+            "end": 55.766
+          },
+          {
+            "word": "rubis",
+            "start": 55.766,
+            "end": 55.972
+          },
+          {
+            "word": "saphir",
+            "start": 55.972,
+            "end": 56.501
+          }
+        ]
+      },
+      {
+        "verseStart": 56.501,
+        "verseEnd": 58.949,
+        "words": [
+          {
+            "word": "Je",
+            "start": 56.501,
+            "end": 56.663
+          },
+          {
+            "word": "suis",
+            "start": 56.663,
+            "end": 56.785
+          },
+          {
+            "word": "ta",
+            "start": 56.785,
+            "end": 56.907
+          },
+          {
+            "word": "rose",
+            "start": 56.907,
+            "end": 57.11
+          },
+          {
+            "word": "lyrique,",
+            "start": 57.11,
+            "end": 57.436
+          },
+          {
+            "word": "je",
+            "start": 57.436,
+            "end": 57.639
+          },
+          {
+            "word": "suis",
+            "start": 57.639,
+            "end": 57.802
+          },
+          {
+            "word": "ces",
+            "start": 57.802,
+            "end": 57.924
+          },
+          {
+            "word": "gens",
+            "start": 57.924,
+            "end": 58.085
+          },
+          {
+            "word": "qui",
+            "start": 58.085,
+            "end": 58.248
+          },
+          {
+            "word": "t'admirent",
+            "start": 58.248,
+            "end": 58.949
+          }
+        ]
+      },
+      {
+        "verseStart": 58.949,
+        "verseEnd": 68.013,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 58.949,
+            "end": 59.235
+          },
+          {
+            "word": "dans",
+            "start": 59.235,
+            "end": 60.094
+          },
+          {
+            "word": "la",
+            "start": 60.094,
+            "end": 60.216
+          },
+          {
+            "word": "neige,",
+            "start": 60.216,
+            "end": 60.991
+          },
+          {
+            "word": "aime-moi",
+            "start": 60.991,
+            "end": 61.888
+          },
+          {
+            "word": "sous",
+            "start": 61.888,
+            "end": 62.051
+          },
+          {
+            "word": "le",
+            "start": 62.051,
+            "end": 62.294
+          },
+          {
+            "word": "soleil,",
+            "start": 62.294,
+            "end": 63.047
+          },
+          {
+            "word": "aime-moi",
+            "start": 63.047,
+            "end": 64.31
+          },
+          {
+            "word": "la",
+            "start": 64.31,
+            "end": 64.512
+          },
+          {
+            "word": "peau",
+            "start": 64.512,
+            "end": 64.715
+          },
+          {
+            "word": "beige",
+            "start": 64.715,
+            "end": 65.454
+          },
+          {
+            "word": "dans",
+            "start": 65.454,
+            "end": 65.616
+          },
+          {
+            "word": "les",
+            "start": 65.616,
+            "end": 65.82
+          },
+          {
+            "word": "fleurs",
+            "start": 65.82,
+            "end": 66.634
+          },
+          {
+            "word": "de",
+            "start": 66.634,
+            "end": 66.801
+          },
+          {
+            "word": "vermeilles",
+            "start": 66.801,
+            "end": 68.013
+          }
+        ]
+      },
+      {
+        "verseStart": 68.013,
+        "verseEnd": 76.491,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 68.013,
+            "end": 68.745
+          },
+          {
+            "word": "dans",
+            "start": 68.745,
+            "end": 68.95
+          },
+          {
+            "word": "la",
+            "start": 68.95,
+            "end": 69.113
+          },
+          {
+            "word": "neige,",
+            "start": 69.113,
+            "end": 69.889
+          },
+          {
+            "word": "aime-moi",
+            "start": 69.889,
+            "end": 70.743
+          },
+          {
+            "word": "sous",
+            "start": 70.743,
+            "end": 70.906
+          },
+          {
+            "word": "le",
+            "start": 70.906,
+            "end": 71.111
+          },
+          {
+            "word": "soleil,",
+            "start": 71.111,
+            "end": 72.214
+          },
+          {
+            "word": "aime-moi",
+            "start": 72.214,
+            "end": 73.286
+          },
+          {
+            "word": "la",
+            "start": 73.286,
+            "end": 73.492
+          },
+          {
+            "word": "peau",
+            "start": 73.492,
+            "end": 73.695
+          },
+          {
+            "word": "beige",
+            "start": 73.695,
+            "end": 74.512
+          },
+          {
+            "word": "dans",
+            "start": 74.512,
+            "end": 74.679
+          },
+          {
+            "word": "les",
+            "start": 74.679,
+            "end": 74.843
+          },
+          {
+            "word": "fleurs",
+            "start": 74.843,
+            "end": 75.589
+          },
+          {
+            "word": "de",
+            "start": 75.589,
+            "end": 75.793
+          },
+          {
+            "word": "vermeilles",
+            "start": 75.793,
+            "end": 76.491
+          }
+        ]
+      },
+      {
+        "verseStart": 76.491,
+        "verseEnd": 80.754,
+        "words": [
+          {
+            "word": "Des",
+            "start": 76.491,
+            "end": 76.721
+          },
+          {
+            "word": "jours",
+            "start": 76.721,
+            "end": 76.847
+          },
+          {
+            "word": "durant,",
+            "start": 76.847,
+            "end": 77.84
+          },
+          {
+            "word": "fuyant",
+            "start": 77.84,
+            "end": 78.125
+          },
+          {
+            "word": "la",
+            "start": 78.125,
+            "end": 78.248
+          },
+          {
+            "word": "nuit,",
+            "start": 78.248,
+            "end": 78.535
+          },
+          {
+            "word": "j'parcours",
+            "start": 78.535,
+            "end": 78.657
+          },
+          {
+            "word": "ta",
+            "start": 78.657,
+            "end": 78.782
+          },
+          {
+            "word": "peau,",
+            "start": 78.782,
+            "end": 79.768
+          },
+          {
+            "word": "j'parcours",
+            "start": 79.768,
+            "end": 79.891
+          },
+          {
+            "word": "la",
+            "start": 79.891,
+            "end": 80.305
+          },
+          {
+            "word": "ville",
+            "start": 80.305,
+            "end": 80.754
+          }
+        ]
+      },
+      {
+        "verseStart": 80.754,
+        "verseEnd": 83.298,
+        "words": [
+          {
+            "word": "La",
+            "start": 80.754,
+            "end": 80.923
+          },
+          {
+            "word": "fumée",
+            "start": 80.923,
+            "end": 81.129
+          },
+          {
+            "word": "suave",
+            "start": 81.129,
+            "end": 81.457
+          },
+          {
+            "word": "de",
+            "start": 81.457,
+            "end": 81.621
+          },
+          {
+            "word": "ta",
+            "start": 81.621,
+            "end": 81.743
+          },
+          {
+            "word": "bouche,",
+            "start": 81.743,
+            "end": 81.988
+          },
+          {
+            "word": "file,",
+            "start": 81.988,
+            "end": 82.192
+          },
+          {
+            "word": "s'échappe",
+            "start": 82.192,
+            "end": 82.314
+          },
+          {
+            "word": "de",
+            "start": 82.314,
+            "end": 82.641
+          },
+          {
+            "word": "jours",
+            "start": 82.641,
+            "end": 82.805
+          },
+          {
+            "word": "en",
+            "start": 82.805,
+            "end": 83.011
+          },
+          {
+            "word": "jours",
+            "start": 83.011,
+            "end": 83.298
+          }
+        ]
+      },
+      {
+        "verseStart": 83.298,
+        "verseEnd": 85.596,
+        "words": [
+          {
+            "word": "Quand",
+            "start": 83.298,
+            "end": 83.461
+          },
+          {
+            "word": "je",
+            "start": 83.461,
+            "end": 83.584
+          },
+          {
+            "word": "râle",
+            "start": 83.584,
+            "end": 83.747
+          },
+          {
+            "word": "dans",
+            "start": 83.747,
+            "end": 83.874
+          },
+          {
+            "word": "la",
+            "start": 83.874,
+            "end": 84.042
+          },
+          {
+            "word": "nuit,",
+            "start": 84.042,
+            "end": 84.331
+          },
+          {
+            "word": "je",
+            "start": 84.331,
+            "end": 84.496
+          },
+          {
+            "word": "suis",
+            "start": 84.496,
+            "end": 84.659
+          },
+          {
+            "word": "seule",
+            "start": 84.659,
+            "end": 84.823
+          },
+          {
+            "word": "sous",
+            "start": 84.823,
+            "end": 85.067
+          },
+          {
+            "word": "mes",
+            "start": 85.067,
+            "end": 85.23
+          },
+          {
+            "word": "vices",
+            "start": 85.23,
+            "end": 85.596
+          }
+        ]
+      },
+      {
+        "verseStart": 85.596,
+        "verseEnd": 90.289,
+        "words": [
+          {
+            "word": "Je",
+            "start": 85.596,
+            "end": 85.806
+          },
+          {
+            "word": "t'aime",
+            "start": 85.806,
+            "end": 86.061
+          },
+          {
+            "word": "quand",
+            "start": 86.061,
+            "end": 86.265
+          },
+          {
+            "word": "il",
+            "start": 86.265,
+            "end": 86.591
+          },
+          {
+            "word": "pleut",
+            "start": 86.591,
+            "end": 86.795
+          },
+          {
+            "word": "tu",
+            "start": 86.795,
+            "end": 86.958
+          },
+          {
+            "word": "es",
+            "start": 86.958,
+            "end": 87.081
+          },
+          {
+            "word": "la",
+            "start": 87.081,
+            "end": 87.204
+          },
+          {
+            "word": "nymphe",
+            "start": 87.204,
+            "end": 87.286
+          },
+          {
+            "word": "de",
+            "start": 87.286,
+            "end": 87.491
+          },
+          {
+            "word": "mes",
+            "start": 87.491,
+            "end": 87.655
+          },
+          {
+            "word": "vœux,",
+            "start": 87.655,
+            "end": 87.984
+          },
+          {
+            "word": "je",
+            "start": 87.984,
+            "end": 88.147
+          },
+          {
+            "word": "t'embrasse",
+            "start": 88.147,
+            "end": 88.27
+          },
+          {
+            "word": "dans",
+            "start": 88.27,
+            "end": 88.472
+          },
+          {
+            "word": "mes",
+            "start": 88.472,
+            "end": 88.681
+          },
+          {
+            "word": "rêves",
+            "start": 88.681,
+            "end": 89.051
+          },
+          {
+            "word": "et",
+            "start": 89.051,
+            "end": 89.215
+          },
+          {
+            "word": "je",
+            "start": 89.215,
+            "end": 89.378
+          },
+          {
+            "word": "t'aime",
+            "start": 89.378,
+            "end": 89.546
+          },
+          {
+            "word": "au",
+            "start": 89.546,
+            "end": 89.673
+          },
+          {
+            "word": "bout",
+            "start": 89.673,
+            "end": 89.835
+          },
+          {
+            "word": "des",
+            "start": 89.835,
+            "end": 90.003
+          },
+          {
+            "word": "lèvres",
+            "start": 90.003,
+            "end": 90.289
+          }
+        ]
+      },
+      {
+        "verseStart": 90.289,
+        "verseEnd": 92.497,
+        "words": [
+          {
+            "word": "Je",
+            "start": 90.289,
+            "end": 90.412
+          },
+          {
+            "word": "déteste",
+            "start": 90.412,
+            "end": 90.615
+          },
+          {
+            "word": "le",
+            "start": 90.615,
+            "end": 90.778
+          },
+          {
+            "word": "gout",
+            "start": 90.778,
+            "end": 90.9
+          },
+          {
+            "word": "mièvre",
+            "start": 90.9,
+            "end": 91.023
+          },
+          {
+            "word": "de",
+            "start": 91.023,
+            "end": 91.348
+          },
+          {
+            "word": "leurs",
+            "start": 91.348,
+            "end": 91.512
+          },
+          {
+            "word": "bouches,",
+            "start": 91.512,
+            "end": 91.841
+          },
+          {
+            "word": "de",
+            "start": 91.841,
+            "end": 92.046
+          },
+          {
+            "word": "leurs",
+            "start": 92.046,
+            "end": 92.17
+          },
+          {
+            "word": "rêves",
+            "start": 92.17,
+            "end": 92.497
+          }
+        ]
+      },
+      {
+        "verseStart": 92.497,
+        "verseEnd": 94.973,
+        "words": [
+          {
+            "word": "Dans",
+            "start": 92.497,
+            "end": 92.664
+          },
+          {
+            "word": "la",
+            "start": 92.664,
+            "end": 92.827
+          },
+          {
+            "word": "nuit",
+            "start": 92.827,
+            "end": 92.952
+          },
+          {
+            "word": "tu",
+            "start": 92.952,
+            "end": 93.074
+          },
+          {
+            "word": "me",
+            "start": 93.074,
+            "end": 93.156
+          },
+          {
+            "word": "regardes,",
+            "start": 93.156,
+            "end": 93.323
+          },
+          {
+            "word": "sous",
+            "start": 93.323,
+            "end": 93.74
+          },
+          {
+            "word": "les",
+            "start": 93.74,
+            "end": 93.903
+          },
+          {
+            "word": "nuages",
+            "start": 93.903,
+            "end": 94.229
+          },
+          {
+            "word": "je",
+            "start": 94.229,
+            "end": 94.351
+          },
+          {
+            "word": "divague",
+            "start": 94.351,
+            "end": 94.973
+          }
+        ]
+      },
+      {
+        "verseStart": 94.973,
+        "verseEnd": 95.834,
+        "words": [
+          {
+            "word": "Avec",
+            "start": 94.973,
+            "end": 95.096
+          },
+          {
+            "word": "toi",
+            "start": 95.096,
+            "end": 95.263
+          },
+          {
+            "word": "je",
+            "start": 95.263,
+            "end": 95.427
+          },
+          {
+            "word": "suis",
+            "start": 95.427,
+            "end": 95.59
+          },
+          {
+            "word": "roi",
+            "start": 95.59,
+            "end": 95.834
+          }
+        ]
+      },
+      {
+        "verseStart": 95.834,
+        "verseEnd": 96.694,
+        "words": [
+          {
+            "word": "Toi",
+            "start": 95.834,
+            "end": 95.957
+          },
+          {
+            "word": "je",
+            "start": 95.957,
+            "end": 96.081
+          },
+          {
+            "word": "suis",
+            "start": 96.081,
+            "end": 96.204
+          },
+          {
+            "word": "roi",
+            "start": 96.204,
+            "end": 96.694
+          }
+        ]
+      },
+      {
+        "verseStart": 96.694,
+        "verseEnd": 97.804,
+        "words": [
+          {
+            "word": "Toi",
+            "start": 96.694,
+            "end": 96.979
+          },
+          {
+            "word": "je",
+            "start": 96.979,
+            "end": 97.102
+          },
+          {
+            "word": "suis",
+            "start": 97.102,
+            "end": 97.226
+          },
+          {
+            "word": "roi",
+            "start": 97.226,
+            "end": 97.804
+          }
+        ]
+      },
+      {
+        "verseStart": 97.804,
+        "verseEnd": 112.221,
+        "words": [
+          {
+            "word": "Toi",
+            "start": 97.804,
+            "end": 98.098
+          },
+          {
+            "word": "je",
+            "start": 98.098,
+            "end": 98.261
+          },
+          {
+            "word": "suis",
+            "start": 98.261,
+            "end": 98.423
+          },
+          {
+            "word": "roi",
+            "start": 98.423,
+            "end": 112.221
+          }
+        ]
+      },
+      {
+        "verseStart": 112.221,
+        "verseEnd": 121.007,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 112.221,
+            "end": 113.248
+          },
+          {
+            "word": "dans",
+            "start": 113.248,
+            "end": 113.454
+          },
+          {
+            "word": "la",
+            "start": 113.454,
+            "end": 113.623
+          },
+          {
+            "word": "neige,",
+            "start": 113.623,
+            "end": 114.316
+          },
+          {
+            "word": "aime-moi",
+            "start": 114.316,
+            "end": 115.141
+          },
+          {
+            "word": "sous",
+            "start": 115.141,
+            "end": 115.324
+          },
+          {
+            "word": "le",
+            "start": 115.324,
+            "end": 115.577
+          },
+          {
+            "word": "soleil,",
+            "start": 115.577,
+            "end": 116.473
+          },
+          {
+            "word": "aime-moi",
+            "start": 116.473,
+            "end": 117.618
+          },
+          {
+            "word": "la",
+            "start": 117.618,
+            "end": 117.781
+          },
+          {
+            "word": "peau",
+            "start": 117.781,
+            "end": 117.984
+          },
+          {
+            "word": "beige",
+            "start": 117.984,
+            "end": 118.715
+          },
+          {
+            "word": "dans",
+            "start": 118.715,
+            "end": 118.919
+          },
+          {
+            "word": "les",
+            "start": 118.919,
+            "end": 119.456
+          },
+          {
+            "word": "fleurs",
+            "start": 119.456,
+            "end": 119.945
+          },
+          {
+            "word": "de",
+            "start": 119.945,
+            "end": 120.108
+          },
+          {
+            "word": "vermeilles",
+            "start": 120.108,
+            "end": 121.007
+          }
+        ]
+      },
+      {
+        "verseStart": 121.007,
+        "verseEnd": 129.882,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 121.007,
+            "end": 122.108
+          },
+          {
+            "word": "dans",
+            "start": 122.108,
+            "end": 122.272
+          },
+          {
+            "word": "la",
+            "start": 122.272,
+            "end": 122.476
+          },
+          {
+            "word": "neige,",
+            "start": 122.476,
+            "end": 123.255
+          },
+          {
+            "word": "aime-moi",
+            "start": 123.255,
+            "end": 123.989
+          },
+          {
+            "word": "sous",
+            "start": 123.989,
+            "end": 124.195
+          },
+          {
+            "word": "le",
+            "start": 124.195,
+            "end": 124.443
+          },
+          {
+            "word": "soleil,",
+            "start": 124.443,
+            "end": 125.505
+          },
+          {
+            "word": "aime-moi",
+            "start": 125.505,
+            "end": 126.534
+          },
+          {
+            "word": "la",
+            "start": 126.534,
+            "end": 126.739
+          },
+          {
+            "word": "peau",
+            "start": 126.739,
+            "end": 126.943
+          },
+          {
+            "word": "beige",
+            "start": 126.943,
+            "end": 127.715
+          },
+          {
+            "word": "dans",
+            "start": 127.715,
+            "end": 127.878
+          },
+          {
+            "word": "les",
+            "start": 127.878,
+            "end": 128.206
+          },
+          {
+            "word": "fleurs",
+            "start": 128.206,
+            "end": 128.817
+          },
+          {
+            "word": "de",
+            "start": 128.817,
+            "end": 128.98
+          },
+          {
+            "word": "vermeilles",
+            "start": 128.98,
+            "end": 129.882
+          }
+        ]
+      },
+      {
+        "verseStart": 129.882,
+        "verseEnd": 131.944,
+        "words": [
+          {
+            "word": "J'suis",
+            "start": 129.882,
+            "end": 130.005
+          },
+          {
+            "word": "un",
+            "start": 130.005,
+            "end": 130.176
+          },
+          {
+            "word": "garçon",
+            "start": 130.176,
+            "end": 130.38
+          },
+          {
+            "word": "de",
+            "start": 130.38,
+            "end": 130.544
+          },
+          {
+            "word": "la",
+            "start": 130.544,
+            "end": 130.708
+          },
+          {
+            "word": "nuit,",
+            "start": 130.708,
+            "end": 130.871
+          },
+          {
+            "word": "moi",
+            "start": 130.871,
+            "end": 131.075
+          },
+          {
+            "word": "je",
+            "start": 131.075,
+            "end": 131.243
+          },
+          {
+            "word": "laisse",
+            "start": 131.243,
+            "end": 131.366
+          },
+          {
+            "word": "tomber",
+            "start": 131.366,
+            "end": 131.531
+          },
+          {
+            "word": "les",
+            "start": 131.531,
+            "end": 131.696
+          },
+          {
+            "word": "filles",
+            "start": 131.696,
+            "end": 131.944
+          }
+        ]
+      },
+      {
+        "verseStart": 131.944,
+        "verseEnd": 138.6,
+        "words": [
+          {
+            "word": "Je",
+            "start": 131.944,
+            "end": 132.05
+          },
+          {
+            "word": "n'aime",
+            "start": 132.05,
+            "end": 132.214
+          },
+          {
+            "word": "que",
+            "start": 132.214,
+            "end": 132.378
+          },
+          {
+            "word": "tes",
+            "start": 132.378,
+            "end": 132.543
+          },
+          {
+            "word": "bas",
+            "start": 132.543,
+            "end": 132.706
+          },
+          {
+            "word": "résilles",
+            "start": 132.706,
+            "end": 133.074
+          },
+          {
+            "word": "qui",
+            "start": 133.074,
+            "end": 133.237
+          },
+          {
+            "word": "dans",
+            "start": 133.237,
+            "end": 133.401
+          },
+          {
+            "word": "mes",
+            "start": 133.401,
+            "end": 133.564
+          },
+          {
+            "word": "pensées",
+            "start": 133.564,
+            "end": 133.732
+          },
+          {
+            "word": "grésillent",
+            "start": 133.732,
+            "end": 138.6
+          }
+        ]
+      },
+      {
+        "verseStart": 138.6,
+        "verseEnd": 140.826,
+        "words": [
+          {
+            "word": "J'suis",
+            "start": 138.6,
+            "end": 138.766
+          },
+          {
+            "word": "un",
+            "start": 138.766,
+            "end": 138.892
+          },
+          {
+            "word": "garçon",
+            "start": 138.892,
+            "end": 139.058
+          },
+          {
+            "word": "de",
+            "start": 139.058,
+            "end": 139.14
+          },
+          {
+            "word": "la",
+            "start": 139.14,
+            "end": 139.263
+          },
+          {
+            "word": "nuit,",
+            "start": 139.263,
+            "end": 139.716
+          },
+          {
+            "word": "moi",
+            "start": 139.716,
+            "end": 139.838
+          },
+          {
+            "word": "je",
+            "start": 139.838,
+            "end": 140.046
+          },
+          {
+            "word": "laisse",
+            "start": 140.046,
+            "end": 140.21
+          },
+          {
+            "word": "tomber",
+            "start": 140.21,
+            "end": 140.374
+          },
+          {
+            "word": "les",
+            "start": 140.374,
+            "end": 140.537
+          },
+          {
+            "word": "filles",
+            "start": 140.537,
+            "end": 140.826
+          }
+        ]
+      },
+      {
+        "verseStart": 140.826,
+        "verseEnd": 147.76,
+        "words": [
+          {
+            "word": "Je",
+            "start": 140.826,
+            "end": 140.989
+          },
+          {
+            "word": "n'aime",
+            "start": 140.989,
+            "end": 141.153
+          },
+          {
+            "word": "que",
+            "start": 141.153,
+            "end": 141.276
+          },
+          {
+            "word": "tes",
+            "start": 141.276,
+            "end": 141.403
+          },
+          {
+            "word": "bas",
+            "start": 141.403,
+            "end": 141.529
+          },
+          {
+            "word": "résilles",
+            "start": 141.529,
+            "end": 141.936
+          },
+          {
+            "word": "qui",
+            "start": 141.936,
+            "end": 142.103
+          },
+          {
+            "word": "dans",
+            "start": 142.103,
+            "end": 142.225
+          },
+          {
+            "word": "mes",
+            "start": 142.225,
+            "end": 142.39
+          },
+          {
+            "word": "pensées",
+            "start": 142.39,
+            "end": 142.557
+          },
+          {
+            "word": "grésillent",
+            "start": 142.557,
+            "end": 147.76
+          }
+        ]
+      },
+      {
+        "verseStart": 147.76,
+        "verseEnd": 152.187,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 147.76,
+            "end": 148.873
+          },
+          {
+            "word": "dans",
+            "start": 148.873,
+            "end": 148.996
+          },
+          {
+            "word": "la",
+            "start": 148.996,
+            "end": 149.205
+          },
+          {
+            "word": "neige,",
+            "start": 149.205,
+            "end": 150.02
+          },
+          {
+            "word": "aime-moi",
+            "start": 150.02,
+            "end": 150.957
+          },
+          {
+            "word": "sous",
+            "start": 150.957,
+            "end": 151.079
+          },
+          {
+            "word": "le",
+            "start": 151.079,
+            "end": 151.325
+          },
+          {
+            "word": "soleil",
+            "start": 151.325,
+            "end": 152.187
+          }
+        ]
+      },
+      {
+        "verseStart": 152.187,
+        "verseEnd": 156.737,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 152.187,
+            "end": 153.376
+          },
+          {
+            "word": "la",
+            "start": 153.376,
+            "end": 153.499
+          },
+          {
+            "word": "peau",
+            "start": 153.499,
+            "end": 153.663
+          },
+          {
+            "word": "beige",
+            "start": 153.663,
+            "end": 154.485
+          },
+          {
+            "word": "dans",
+            "start": 154.485,
+            "end": 154.649
+          },
+          {
+            "word": "les",
+            "start": 154.649,
+            "end": 154.771
+          },
+          {
+            "word": "fleurs",
+            "start": 154.771,
+            "end": 155.544
+          },
+          {
+            "word": "de",
+            "start": 155.544,
+            "end": 155.667
+          },
+          {
+            "word": "vermeille",
+            "start": 155.667,
+            "end": 156.737
+          }
+        ]
+      },
+      {
+        "verseStart": 156.737,
+        "verseEnd": 160.998,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 156.737,
+            "end": 157.796
+          },
+          {
+            "word": "dans",
+            "start": 157.796,
+            "end": 157.935
+          },
+          {
+            "word": "la",
+            "start": 157.935,
+            "end": 158.18
+          },
+          {
+            "word": "neige,",
+            "start": 158.18,
+            "end": 158.751
+          },
+          {
+            "word": "aime-moi",
+            "start": 158.751,
+            "end": 159.611
+          },
+          {
+            "word": "sous",
+            "start": 159.611,
+            "end": 159.774
+          },
+          {
+            "word": "le",
+            "start": 159.774,
+            "end": 160.018
+          },
+          {
+            "word": "soleil",
+            "start": 160.018,
+            "end": 160.998
+          }
+        ]
+      },
+      {
+        "verseStart": 160.998,
+        "verseEnd": 166.425,
+        "words": [
+          {
+            "word": "Aime-moi",
+            "start": 160.998,
+            "end": 162.184
+          },
+          {
+            "word": "la",
+            "start": 162.184,
+            "end": 162.307
+          },
+          {
+            "word": "peau",
+            "start": 162.307,
+            "end": 162.55
+          },
+          {
+            "word": "beige",
+            "start": 162.55,
+            "end": 163.201
+          },
+          {
+            "word": "dans",
+            "start": 163.201,
+            "end": 163.364
+          },
+          {
+            "word": "les",
+            "start": 163.364,
+            "end": 163.527
+          },
+          {
+            "word": "fleurs",
+            "start": 163.527,
+            "end": 164.262
+          },
+          {
+            "word": "de",
+            "start": 164.262,
+            "end": 164.425
+          },
+          {
+            "word": "vermeille",
+            "start": 164.425,
+            "end": 0
+          }
+        ]
+      }
+    ]
+  },
+  "Kero Kero Bonito - Break.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 9.2,
+        "verseEnd": 11.569,
+        "words": [
+          {
+            "word": "I",
+            "start": 9.2,
+            "end": 9.525
+          },
+          {
+            "word": "know",
+            "start": 9.525,
+            "end": 9.771
+          },
+          {
+            "word": "it",
+            "start": 9.771,
+            "end": 10.098
+          },
+          {
+            "word": "seems",
+            "start": 10.098,
+            "end": 10.425
+          },
+          {
+            "word": "kinda",
+            "start": 10.425,
+            "end": 10.913
+          },
+          {
+            "word": "tough",
+            "start": 10.913,
+            "end": 11.569
+          }
+        ]
+      },
+      {
+        "verseStart": 11.569,
+        "verseEnd": 14.14,
+        "words": [
+          {
+            "word": "But",
+            "start": 11.569,
+            "end": 12.021
+          },
+          {
+            "word": "really",
+            "start": 12.021,
+            "end": 12.266
+          },
+          {
+            "word": "it's",
+            "start": 12.266,
+            "end": 12.591
+          },
+          {
+            "word": "easy",
+            "start": 12.591,
+            "end": 13.162
+          },
+          {
+            "word": "enough",
+            "start": 13.162,
+            "end": 14.14
+          }
+        ]
+      },
+      {
+        "verseStart": 14.14,
+        "verseEnd": 16.639,
+        "words": [
+          {
+            "word": "For",
+            "start": 14.14,
+            "end": 14.467
+          },
+          {
+            "word": "us",
+            "start": 14.467,
+            "end": 14.752
+          },
+          {
+            "word": "to",
+            "start": 14.752,
+            "end": 15.039
+          },
+          {
+            "word": "slow",
+            "start": 15.039,
+            "end": 15.325
+          },
+          {
+            "word": "down",
+            "start": 15.325,
+            "end": 15.653
+          },
+          {
+            "word": "the",
+            "start": 15.653,
+            "end": 15.983
+          },
+          {
+            "word": "pace",
+            "start": 15.983,
+            "end": 16.639
+          }
+        ]
+      },
+      {
+        "verseStart": 16.639,
+        "verseEnd": 19.3,
+        "words": [
+          {
+            "word": "So",
+            "start": 16.639,
+            "end": 17.047
+          },
+          {
+            "word": "we",
+            "start": 17.047,
+            "end": 17.21
+          },
+          {
+            "word": "can",
+            "start": 17.21,
+            "end": 17.373
+          },
+          {
+            "word": "all",
+            "start": 17.373,
+            "end": 17.699
+          },
+          {
+            "word": "go",
+            "start": 17.699,
+            "end": 17.947
+          },
+          {
+            "word": "take",
+            "start": 17.947,
+            "end": 18.281
+          },
+          {
+            "word": "a",
+            "start": 18.281,
+            "end": 18.607
+          },
+          {
+            "word": "break",
+            "start": 18.607,
+            "end": 19.3
+          }
+        ]
+      },
+      {
+        "verseStart": 19.3,
+        "verseEnd": 24.205,
+        "words": [
+          {
+            "word": "In",
+            "start": 19.3,
+            "end": 19.587
+          },
+          {
+            "word": "fact,",
+            "start": 19.587,
+            "end": 19.873
+          },
+          {
+            "word": "there’s",
+            "start": 19.873,
+            "end": 20.201
+          },
+          {
+            "word": "not",
+            "start": 20.201,
+            "end": 20.774
+          },
+          {
+            "word": "much",
+            "start": 20.774,
+            "end": 21.426
+          },
+          {
+            "word": "better",
+            "start": 21.426,
+            "end": 22.038
+          },
+          {
+            "word": "than",
+            "start": 22.038,
+            "end": 22.697
+          },
+          {
+            "word": "nothing",
+            "start": 22.697,
+            "end": 23.352
+          },
+          {
+            "word": "at",
+            "start": 23.352,
+            "end": 23.635
+          },
+          {
+            "word": "all",
+            "start": 23.635,
+            "end": 24.205
+          }
+        ]
+      },
+      {
+        "verseStart": 24.205,
+        "verseEnd": 29.251,
+        "words": [
+          {
+            "word": "And",
+            "start": 24.205,
+            "end": 24.552
+          },
+          {
+            "word": "that's",
+            "start": 24.552,
+            "end": 24.878
+          },
+          {
+            "word": "especially",
+            "start": 24.878,
+            "end": 26.068
+          },
+          {
+            "word": "true",
+            "start": 26.068,
+            "end": 26.804
+          },
+          {
+            "word": "when",
+            "start": 26.804,
+            "end": 27.052
+          },
+          {
+            "word": "there",
+            "start": 27.052,
+            "end": 27.344
+          },
+          {
+            "word": "is",
+            "start": 27.344,
+            "end": 27.644
+          },
+          {
+            "word": "something",
+            "start": 27.644,
+            "end": 28.216
+          },
+          {
+            "word": "to",
+            "start": 28.216,
+            "end": 28.502
+          },
+          {
+            "word": "do",
+            "start": 28.502,
+            "end": 29.251
+          }
+        ]
+      },
+      {
+        "verseStart": 29.251,
+        "verseEnd": 30.201,
+        "words": [
+          {
+            "word": "目",
+            "start": 29.251,
+            "end": 29.458,
+            "furigana": "め"
+          },
+          {
+            "word": "の",
+            "start": 29.458,
+            "end": 29.581
+          },
+          {
+            "word": "前",
+            "start": 29.581,
+            "end": 29.79,
+            "furigana": "まえ"
+          },
+          {
+            "word": "を",
+            "start": 29.79,
+            "end": 30.201
+          }
+        ]
+      },
+      {
+        "verseStart": 30.201,
+        "verseEnd": 32.367,
+        "words": [
+          {
+            "word": "ぐ",
+            "start": 30.201,
+            "end": 30.365
+          },
+          {
+            "word": "る",
+            "start": 30.365,
+            "end": 30.49
+          },
+          {
+            "word": "ぐ",
+            "start": 30.49,
+            "end": 30.618
+          },
+          {
+            "word": "る",
+            "start": 30.618,
+            "end": 30.782
+          },
+          {
+            "word": "世",
+            "start": 30.782,
+            "end": 30.869,
+            "furigana": "せ"
+          },
+          {
+            "word": "界",
+            "start": 30.869,
+            "end": 30.991,
+            "furigana": "かい"
+          },
+          {
+            "word": "が",
+            "start": 30.991,
+            "end": 31.115
+          },
+          {
+            "word": "駆",
+            "start": 31.115,
+            "end": 31.24,
+            "furigana": "か"
+          },
+          {
+            "word": "け",
+            "start": 31.24,
+            "end": 31.407
+          },
+          {
+            "word": "抜",
+            "start": 31.407,
+            "end": 31.654,
+            "furigana": "ぬ"
+          },
+          {
+            "word": "け",
+            "start": 31.654,
+            "end": 31.907
+          },
+          {
+            "word": "る",
+            "start": 31.907,
+            "end": 32.367
+          }
+        ]
+      },
+      {
+        "verseStart": 32.367,
+        "verseEnd": 35.118,
+        "words": [
+          {
+            "word": "で",
+            "start": 32.367,
+            "end": 32.634
+          },
+          {
+            "word": "も",
+            "start": 32.634,
+            "end": 32.801
+          },
+          {
+            "word": "私",
+            "start": 32.801,
+            "end": 33.213,
+            "furigana": "わたし"
+          },
+          {
+            "word": "は",
+            "start": 33.213,
+            "end": 33.337
+          },
+          {
+            "word": "daydream",
+            "start": 33.337,
+            "end": 33.995
+          },
+          {
+            "word": "夢",
+            "start": 33.995,
+            "end": 34.121,
+            "furigana": "ゆめ"
+          },
+          {
+            "word": "見",
+            "start": 34.121,
+            "end": 34.284,
+            "furigana": "み"
+          },
+          {
+            "word": "て",
+            "start": 34.284,
+            "end": 34.493
+          },
+          {
+            "word": "る",
+            "start": 34.493,
+            "end": 35.118
+          }
+        ]
+      },
+      {
+        "verseStart": 35.118,
+        "verseEnd": 37.496,
+        "words": [
+          {
+            "word": "Look",
+            "start": 35.118,
+            "end": 35.369
+          },
+          {
+            "word": "out",
+            "start": 35.369,
+            "end": 35.702
+          },
+          {
+            "word": "the",
+            "start": 35.702,
+            "end": 36.076
+          },
+          {
+            "word": "window",
+            "start": 36.076,
+            "end": 36.412
+          },
+          {
+            "word": "窓",
+            "start": 36.412,
+            "end": 36.789,
+            "furigana": "まど"
+          },
+          {
+            "word": "の",
+            "start": 36.789,
+            "end": 36.994
+          },
+          {
+            "word": "外",
+            "start": 36.994,
+            "end": 37.496,
+            "furigana": "そと"
+          }
+        ]
+      },
+      {
+        "verseStart": 37.496,
+        "verseEnd": 40.132,
+        "words": [
+          {
+            "word": "Watching",
+            "start": 37.496,
+            "end": 38.164
+          },
+          {
+            "word": "the",
+            "start": 38.164,
+            "end": 38.246
+          },
+          {
+            "word": "world",
+            "start": 38.246,
+            "end": 38.581
+          },
+          {
+            "word": "go",
+            "start": 38.581,
+            "end": 38.868
+          },
+          {
+            "word": "by,",
+            "start": 38.868,
+            "end": 39.195
+          },
+          {
+            "word": "goodbye",
+            "start": 39.195,
+            "end": 40.132
+          }
+        ]
+      },
+      {
+        "verseStart": 40.132,
+        "verseEnd": 42.666,
+        "words": [
+          {
+            "word": "み",
+            "start": 40.132,
+            "end": 40.261
+          },
+          {
+            "word": "ん",
+            "start": 40.261,
+            "end": 40.344
+          },
+          {
+            "word": "な",
+            "start": 40.344,
+            "end": 40.471
+          },
+          {
+            "word": "ど",
+            "start": 40.471,
+            "end": 40.68
+          },
+          {
+            "word": "こ",
+            "start": 40.68,
+            "end": 40.802
+          },
+          {
+            "word": "か",
+            "start": 40.802,
+            "end": 40.968
+          },
+          {
+            "word": "へ",
+            "start": 40.968,
+            "end": 41.094
+          },
+          {
+            "word": "向",
+            "start": 41.094,
+            "end": 41.264,
+            "furigana": "む"
+          },
+          {
+            "word": "か",
+            "start": 41.264,
+            "end": 41.39
+          },
+          {
+            "word": "っ",
+            "start": 41.39,
+            "end": 41.553
+          },
+          {
+            "word": "て",
+            "start": 41.553,
+            "end": 42.003
+          },
+          {
+            "word": "る",
+            "start": 42.003,
+            "end": 42.666
+          }
+        ]
+      },
+      {
+        "verseStart": 42.666,
+        "verseEnd": 45.225,
+        "words": [
+          {
+            "word": "で",
+            "start": 42.666,
+            "end": 42.915
+          },
+          {
+            "word": "も",
+            "start": 42.915,
+            "end": 42.915
+          },
+          {
+            "word": "か",
+            "start": 42.915,
+            "end": 43.001
+          },
+          {
+            "word": "み",
+            "start": 43.001,
+            "end": 43.126
+          },
+          {
+            "word": "が",
+            "start": 43.126,
+            "end": 43.208
+          },
+          {
+            "word": "dancing",
+            "start": 43.208,
+            "end": 43.913
+          },
+          {
+            "word": "in",
+            "start": 43.913,
+            "end": 44.198
+          },
+          {
+            "word": "the",
+            "start": 44.198,
+            "end": 44.525
+          },
+          {
+            "word": "wind",
+            "start": 44.525,
+            "end": 45.225
+          }
+        ]
+      },
+      {
+        "verseStart": 45.225,
+        "verseEnd": 47.671,
+        "words": [
+          {
+            "word": "こ",
+            "start": 45.225,
+            "end": 45.346
+          },
+          {
+            "word": "う",
+            "start": 45.346,
+            "end": 45.476
+          },
+          {
+            "word": "い",
+            "start": 45.476,
+            "end": 45.557
+          },
+          {
+            "word": "う",
+            "start": 45.557,
+            "end": 45.768
+          },
+          {
+            "word": "時",
+            "start": 45.768,
+            "end": 46.176,
+            "furigana": "とき"
+          },
+          {
+            "word": "に",
+            "start": 46.176,
+            "end": 46.299
+          },
+          {
+            "word": "思",
+            "start": 46.299,
+            "end": 46.505,
+            "furigana": "おも"
+          },
+          {
+            "word": "う",
+            "start": 46.505,
+            "end": 46.839
+          },
+          {
+            "word": "ん",
+            "start": 46.839,
+            "end": 47.005
+          },
+          {
+            "word": "だ",
+            "start": 47.005,
+            "end": 47.671
+          }
+        ]
+      },
+      {
+        "verseStart": 47.671,
+        "verseEnd": 50.394,
+        "words": [
+          {
+            "word": "生",
+            "start": 47.671,
+            "end": 47.842,
+            "furigana": "い"
+          },
+          {
+            "word": "き",
+            "start": 47.842,
+            "end": 48.005
+          },
+          {
+            "word": "て",
+            "start": 48.005,
+            "end": 48.173
+          },
+          {
+            "word": "い",
+            "start": 48.173,
+            "end": 48.299
+          },
+          {
+            "word": "て",
+            "start": 48.299,
+            "end": 48.422
+          },
+          {
+            "word": "本",
+            "start": 48.422,
+            "end": 48.588,
+            "furigana": "ほん"
+          },
+          {
+            "word": "当",
+            "start": 48.588,
+            "end": 48.716,
+            "furigana": "とう"
+          },
+          {
+            "word": "に",
+            "start": 48.716,
+            "end": 48.841
+          },
+          {
+            "word": "よ",
+            "start": 48.841,
+            "end": 49.008
+          },
+          {
+            "word": "か",
+            "start": 49.008,
+            "end": 49.175
+          },
+          {
+            "word": "っ",
+            "start": 49.175,
+            "end": 49.425
+          },
+          {
+            "word": "た",
+            "start": 49.425,
+            "end": 50.394
+          }
+        ]
+      },
+      {
+        "verseStart": 50.394,
+        "verseEnd": 52.677,
+        "words": [
+          {
+            "word": "幸",
+            "start": 50.394,
+            "end": 50.642,
+            "furigana": "しあわ"
+          },
+          {
+            "word": "せ",
+            "start": 50.642,
+            "end": 50.769
+          },
+          {
+            "word": "気",
+            "start": 50.769,
+            "end": 50.852,
+            "furigana": "き"
+          },
+          {
+            "word": "分",
+            "start": 50.852,
+            "end": 51.061,
+            "furigana": "ぶん"
+          },
+          {
+            "word": "に",
+            "start": 51.061,
+            "end": 51.315
+          },
+          {
+            "word": "な",
+            "start": 51.315,
+            "end": 51.441
+          },
+          {
+            "word": "れ",
+            "start": 51.441,
+            "end": 51.565
+          },
+          {
+            "word": "る",
+            "start": 51.565,
+            "end": 51.689
+          },
+          {
+            "word": "ん",
+            "start": 51.689,
+            "end": 51.775
+          },
+          {
+            "word": "だ",
+            "start": 51.775,
+            "end": 52.677
+          }
+        ]
+      },
+      {
+        "verseStart": 52.677,
+        "verseEnd": 55.227,
+        "words": [
+          {
+            "word": "こ",
+            "start": 52.677,
+            "end": 52.881
+          },
+          {
+            "word": "れ",
+            "start": 52.881,
+            "end": 53.003
+          },
+          {
+            "word": "で",
+            "start": 53.003,
+            "end": 53.125
+          },
+          {
+            "word": "い",
+            "start": 53.125,
+            "end": 53.25
+          },
+          {
+            "word": "い",
+            "start": 53.25,
+            "end": 53.623
+          },
+          {
+            "word": "気",
+            "start": 53.623,
+            "end": 53.955,
+            "furigana": "き"
+          },
+          {
+            "word": "が",
+            "start": 53.955,
+            "end": 54.118
+          },
+          {
+            "word": "す",
+            "start": 54.118,
+            "end": 54.282
+          },
+          {
+            "word": "る",
+            "start": 54.282,
+            "end": 54.53
+          },
+          {
+            "word": "ん",
+            "start": 54.53,
+            "end": 54.612
+          },
+          {
+            "word": "だ",
+            "start": 54.612,
+            "end": 55.227
+          }
+        ]
+      },
+      {
+        "verseStart": 55.227,
+        "verseEnd": 57.407,
+        "words": [
+          {
+            "word": "I",
+            "start": 55.227,
+            "end": 55.515
+          },
+          {
+            "word": "got",
+            "start": 55.515,
+            "end": 55.681
+          },
+          {
+            "word": "a",
+            "start": 55.681,
+            "end": 55.806
+          },
+          {
+            "word": "smile",
+            "start": 55.806,
+            "end": 56.141
+          },
+          {
+            "word": "on",
+            "start": 56.141,
+            "end": 56.344
+          },
+          {
+            "word": "my",
+            "start": 56.344,
+            "end": 56.466
+          },
+          {
+            "word": "face",
+            "start": 56.466,
+            "end": 57.407
+          }
+        ]
+      },
+      {
+        "verseStart": 57.407,
+        "verseEnd": 60.132,
+        "words": [
+          {
+            "word": "Cause",
+            "start": 57.407,
+            "end": 57.739
+          },
+          {
+            "word": "now",
+            "start": 57.739,
+            "end": 58.025
+          },
+          {
+            "word": "I'm",
+            "start": 58.025,
+            "end": 58.316
+          },
+          {
+            "word": "taking",
+            "start": 58.316,
+            "end": 58.767
+          },
+          {
+            "word": "a",
+            "start": 58.767,
+            "end": 58.891
+          },
+          {
+            "word": "break",
+            "start": 58.891,
+            "end": 60.132
+          }
+        ]
+      },
+      {
+        "verseStart": 60.132,
+        "verseEnd": 62.688,
+        "words": [
+          {
+            "word": "何",
+            "start": 60.132,
+            "end": 60.503,
+            "furigana": "なに"
+          },
+          {
+            "word": "も",
+            "start": 60.503,
+            "end": 60.709
+          },
+          {
+            "word": "し",
+            "start": 60.709,
+            "end": 60.833
+          },
+          {
+            "word": "な",
+            "start": 60.833,
+            "end": 60.96
+          },
+          {
+            "word": "い",
+            "start": 60.96,
+            "end": 61.491
+          },
+          {
+            "word": "こ",
+            "start": 61.491,
+            "end": 61.572
+          },
+          {
+            "word": "の",
+            "start": 61.572,
+            "end": 61.741
+          },
+          {
+            "word": "時",
+            "start": 61.741,
+            "end": 62.033,
+            "furigana": "じ"
+          },
+          {
+            "word": "間",
+            "start": 62.033,
+            "end": 62.688,
+            "furigana": "かん"
+          }
+        ]
+      },
+      {
+        "verseStart": 62.688,
+        "verseEnd": 65.203,
+        "words": [
+          {
+            "word": "今",
+            "start": 62.688,
+            "end": 62.81,
+            "furigana": "いま"
+          },
+          {
+            "word": "っ",
+            "start": 62.81,
+            "end": 62.938
+          },
+          {
+            "word": "て",
+            "start": 62.938,
+            "end": 63.228
+          },
+          {
+            "word": "い",
+            "start": 63.228,
+            "end": 63.355
+          },
+          {
+            "word": "う",
+            "start": 63.355,
+            "end": 63.605
+          },
+          {
+            "word": "こ",
+            "start": 63.605,
+            "end": 64.017
+          },
+          {
+            "word": "の",
+            "start": 64.017,
+            "end": 64.139
+          },
+          {
+            "word": "瞬",
+            "start": 64.139,
+            "end": 64.509,
+            "furigana": "しゅん"
+          },
+          {
+            "word": "間",
+            "start": 64.509,
+            "end": 65.203,
+            "furigana": "かん"
+          }
+        ]
+      },
+      {
+        "verseStart": 65.203,
+        "verseEnd": 67.37,
+        "words": [
+          {
+            "word": "ペ",
+            "start": 65.203,
+            "end": 65.333
+          },
+          {
+            "word": "ー",
+            "start": 65.333,
+            "end": 65.415
+          },
+          {
+            "word": "ス",
+            "start": 65.415,
+            "end": 65.54
+          },
+          {
+            "word": "に",
+            "start": 65.54,
+            "end": 65.626
+          },
+          {
+            "word": "ブ",
+            "start": 65.626,
+            "end": 65.751
+          },
+          {
+            "word": "レ",
+            "start": 65.751,
+            "end": 65.873
+          },
+          {
+            "word": "ー",
+            "start": 65.873,
+            "end": 66.081
+          },
+          {
+            "word": "キ",
+            "start": 66.081,
+            "end": 66.374
+          },
+          {
+            "word": "か",
+            "start": 66.374,
+            "end": 66.498
+          },
+          {
+            "word": "け",
+            "start": 66.498,
+            "end": 66.96
+          },
+          {
+            "word": "て",
+            "start": 66.96,
+            "end": 67.37
+          }
+        ]
+      },
+      {
+        "verseStart": 67.37,
+        "verseEnd": 69.214,
+        "words": [
+          {
+            "word": "Let's",
+            "start": 67.37,
+            "end": 67.697
+          },
+          {
+            "word": "slow",
+            "start": 67.697,
+            "end": 68.564
+          },
+          {
+            "word": "down",
+            "start": 68.564,
+            "end": 69.214
+          }
+        ]
+      },
+      {
+        "verseStart": 69.214,
+        "verseEnd": 71.712,
+        "words": [
+          {
+            "word": "I",
+            "start": 69.214,
+            "end": 69.541
+          },
+          {
+            "word": "know",
+            "start": 69.541,
+            "end": 69.789
+          },
+          {
+            "word": "it",
+            "start": 69.789,
+            "end": 70.119
+          },
+          {
+            "word": "seems",
+            "start": 70.119,
+            "end": 70.449
+          },
+          {
+            "word": "kinda",
+            "start": 70.449,
+            "end": 70.979
+          },
+          {
+            "word": "tough",
+            "start": 70.979,
+            "end": 71.712
+          }
+        ]
+      },
+      {
+        "verseStart": 71.712,
+        "verseEnd": 74.189,
+        "words": [
+          {
+            "word": "But",
+            "start": 71.712,
+            "end": 71.957
+          },
+          {
+            "word": "really",
+            "start": 71.957,
+            "end": 72.287
+          },
+          {
+            "word": "it's",
+            "start": 72.287,
+            "end": 72.578
+          },
+          {
+            "word": "easy",
+            "start": 72.578,
+            "end": 73.197
+          },
+          {
+            "word": "enough",
+            "start": 73.197,
+            "end": 74.189
+          }
+        ]
+      },
+      {
+        "verseStart": 74.189,
+        "verseEnd": 76.662,
+        "words": [
+          {
+            "word": "For",
+            "start": 74.189,
+            "end": 74.479
+          },
+          {
+            "word": "us",
+            "start": 74.479,
+            "end": 74.81
+          },
+          {
+            "word": "to",
+            "start": 74.81,
+            "end": 75.096
+          },
+          {
+            "word": "slow",
+            "start": 75.096,
+            "end": 75.423
+          },
+          {
+            "word": "down",
+            "start": 75.423,
+            "end": 75.677
+          },
+          {
+            "word": "the",
+            "start": 75.677,
+            "end": 76.007
+          },
+          {
+            "word": "pace",
+            "start": 76.007,
+            "end": 76.662
+          }
+        ]
+      },
+      {
+        "verseStart": 76.662,
+        "verseEnd": 79.204,
+        "words": [
+          {
+            "word": "So",
+            "start": 76.662,
+            "end": 77.038
+          },
+          {
+            "word": "we",
+            "start": 77.038,
+            "end": 77.244
+          },
+          {
+            "word": "can",
+            "start": 77.244,
+            "end": 77.37
+          },
+          {
+            "word": "all",
+            "start": 77.37,
+            "end": 77.702
+          },
+          {
+            "word": "go",
+            "start": 77.702,
+            "end": 77.914
+          },
+          {
+            "word": "take",
+            "start": 77.914,
+            "end": 78.245
+          },
+          {
+            "word": "a",
+            "start": 78.245,
+            "end": 78.579
+          },
+          {
+            "word": "break",
+            "start": 78.579,
+            "end": 79.204
+          }
+        ]
+      },
+      {
+        "verseStart": 79.204,
+        "verseEnd": 84.249,
+        "words": [
+          {
+            "word": "In",
+            "start": 79.204,
+            "end": 79.493
+          },
+          {
+            "word": "fact,",
+            "start": 79.493,
+            "end": 79.746
+          },
+          {
+            "word": "there's",
+            "start": 79.746,
+            "end": 80.081
+          },
+          {
+            "word": "not",
+            "start": 80.081,
+            "end": 80.693
+          },
+          {
+            "word": "much",
+            "start": 80.693,
+            "end": 81.304
+          },
+          {
+            "word": "better",
+            "start": 81.304,
+            "end": 81.998
+          },
+          {
+            "word": "than",
+            "start": 81.998,
+            "end": 82.624
+          },
+          {
+            "word": "nothing",
+            "start": 82.624,
+            "end": 83.25
+          },
+          {
+            "word": "at",
+            "start": 83.25,
+            "end": 83.542
+          },
+          {
+            "word": "all",
+            "start": 83.542,
+            "end": 84.249
+          }
+        ]
+      },
+      {
+        "verseStart": 84.249,
+        "verseEnd": 86.753,
+        "words": [
+          {
+            "word": "And",
+            "start": 84.249,
+            "end": 84.535
+          },
+          {
+            "word": "that's",
+            "start": 84.535,
+            "end": 84.825
+          },
+          {
+            "word": "especially",
+            "start": 84.825,
+            "end": 85.973
+          },
+          {
+            "word": "true",
+            "start": 85.973,
+            "end": 86.753
+          }
+        ]
+      },
+      {
+        "verseStart": 86.753,
+        "verseEnd": 90.076,
+        "words": [
+          {
+            "word": "When",
+            "start": 86.753,
+            "end": 87.004
+          },
+          {
+            "word": "there",
+            "start": 87.004,
+            "end": 87.297
+          },
+          {
+            "word": "is",
+            "start": 87.297,
+            "end": 87.588
+          },
+          {
+            "word": "something",
+            "start": 87.588,
+            "end": 88.255
+          },
+          {
+            "word": "to",
+            "start": 88.255,
+            "end": 88.545
+          },
+          {
+            "word": "do",
+            "start": 88.545,
+            "end": 90.076
+          }
+        ]
+      },
+      {
+        "verseStart": 90.076,
+        "verseEnd": 95.158,
+        "words": [
+          {
+            "word": "Just",
+            "start": 90.076,
+            "end": 90.405
+          },
+          {
+            "word": "move",
+            "start": 90.405,
+            "end": 90.737
+          },
+          {
+            "word": "very",
+            "start": 90.737,
+            "end": 91.189
+          },
+          {
+            "word": "slowly",
+            "start": 91.189,
+            "end": 91.763
+          },
+          {
+            "word": "to",
+            "start": 91.763,
+            "end": 91.967
+          },
+          {
+            "word": "the",
+            "start": 91.967,
+            "end": 92.05
+          },
+          {
+            "word": "beat",
+            "start": 92.05,
+            "end": 92.718
+          },
+          {
+            "word": "(a-yo,",
+            "start": 92.718,
+            "end": 93.677
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 93.677,
+            "end": 95.158
+          }
+        ]
+      },
+      {
+        "verseStart": 95.158,
+        "verseEnd": 100.188,
+        "words": [
+          {
+            "word": "Now",
+            "start": 95.158,
+            "end": 95.448
+          },
+          {
+            "word": "get",
+            "start": 95.448,
+            "end": 95.777
+          },
+          {
+            "word": "down",
+            "start": 95.777,
+            "end": 96.07
+          },
+          {
+            "word": "and",
+            "start": 96.07,
+            "end": 96.401
+          },
+          {
+            "word": "put",
+            "start": 96.401,
+            "end": 96.73
+          },
+          {
+            "word": "up",
+            "start": 96.73,
+            "end": 96.976
+          },
+          {
+            "word": "your",
+            "start": 96.976,
+            "end": 97.057
+          },
+          {
+            "word": "feet",
+            "start": 97.057,
+            "end": 97.64
+          },
+          {
+            "word": "(a-yo,",
+            "start": 97.64,
+            "end": 98.556
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 98.556,
+            "end": 100.188
+          }
+        ]
+      },
+      {
+        "verseStart": 100.188,
+        "verseEnd": 105.447,
+        "words": [
+          {
+            "word": "If",
+            "start": 100.188,
+            "end": 100.407
+          },
+          {
+            "word": "you",
+            "start": 100.407,
+            "end": 100.532
+          },
+          {
+            "word": "like",
+            "start": 100.532,
+            "end": 100.704
+          },
+          {
+            "word": "to",
+            "start": 100.704,
+            "end": 100.868
+          },
+          {
+            "word": "lounge,",
+            "start": 100.868,
+            "end": 101.326
+          },
+          {
+            "word": "relax,",
+            "start": 101.326,
+            "end": 101.658
+          },
+          {
+            "word": "or",
+            "start": 101.658,
+            "end": 101.948
+          },
+          {
+            "word": "flop",
+            "start": 101.948,
+            "end": 102.654
+          },
+          {
+            "word": "(a-yo,",
+            "start": 102.654,
+            "end": 103.486
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 103.486,
+            "end": 105.447
+          }
+        ]
+      },
+      {
+        "verseStart": 105.447,
+        "verseEnd": 107.623,
+        "words": [
+          {
+            "word": "Doesn't",
+            "start": 105.447,
+            "end": 105.613
+          },
+          {
+            "word": "really",
+            "start": 105.613,
+            "end": 105.779
+          },
+          {
+            "word": "matter",
+            "start": 105.779,
+            "end": 105.904
+          },
+          {
+            "word": "when",
+            "start": 105.904,
+            "end": 106.149
+          },
+          {
+            "word": "you're",
+            "start": 106.149,
+            "end": 106.515
+          },
+          {
+            "word": "doing",
+            "start": 106.515,
+            "end": 106.964
+          },
+          {
+            "word": "squat",
+            "start": 106.964,
+            "end": 107.623
+          }
+        ]
+      },
+      {
+        "verseStart": 107.623,
+        "verseEnd": 110.422,
+        "words": [
+          {
+            "word": "(a-yo,",
+            "start": 107.623,
+            "end": 108.539
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 108.539,
+            "end": 110.422
+          }
+        ]
+      },
+      {
+        "verseStart": 110.422,
+        "verseEnd": 112.528,
+        "words": [
+          {
+            "word": "空",
+            "start": 110.422,
+            "end": 110.627,
+            "furigana": "そら"
+          },
+          {
+            "word": "を",
+            "start": 110.627,
+            "end": 110.753
+          },
+          {
+            "word": "見",
+            "start": 110.753,
+            "end": 110.877,
+            "furigana": "み"
+          },
+          {
+            "word": "上",
+            "start": 110.877,
+            "end": 111.045,
+            "furigana": "あ"
+          },
+          {
+            "word": "げ",
+            "start": 111.045,
+            "end": 111.254
+          },
+          {
+            "word": "る",
+            "start": 111.254,
+            "end": 111.417
+          },
+          {
+            "word": "満",
+            "start": 111.417,
+            "end": 111.95,
+            "furigana": "まん"
+          },
+          {
+            "word": "月",
+            "start": 111.95,
+            "end": 112.528,
+            "furigana": "げつ"
+          }
+        ]
+      },
+      {
+        "verseStart": 112.528,
+        "verseEnd": 115.244,
+        "words": [
+          {
+            "word": "星",
+            "start": 112.528,
+            "end": 112.937,
+            "furigana": "ほし"
+          },
+          {
+            "word": "っ",
+            "start": 112.937,
+            "end": 113.06
+          },
+          {
+            "word": "て",
+            "start": 113.06,
+            "end": 113.184
+          },
+          {
+            "word": "こ",
+            "start": 113.184,
+            "end": 113.305
+          },
+          {
+            "word": "ん",
+            "start": 113.305,
+            "end": 113.551
+          },
+          {
+            "word": "な",
+            "start": 113.551,
+            "end": 113.88
+          },
+          {
+            "word": "に",
+            "start": 113.88,
+            "end": 114.047
+          },
+          {
+            "word": "綺",
+            "start": 114.047,
+            "end": 114.172,
+            "furigana": "き"
+          },
+          {
+            "word": "麗",
+            "start": 114.172,
+            "end": 114.335,
+            "furigana": "れい"
+          },
+          {
+            "word": "な",
+            "start": 114.335,
+            "end": 114.499
+          },
+          {
+            "word": "ん",
+            "start": 114.499,
+            "end": 114.792
+          },
+          {
+            "word": "だ",
+            "start": 114.792,
+            "end": 115.244
+          }
+        ]
+      },
+      {
+        "verseStart": 115.244,
+        "verseEnd": 117.7,
+        "words": [
+          {
+            "word": "こ",
+            "start": 115.244,
+            "end": 115.337
+          },
+          {
+            "word": "う",
+            "start": 115.337,
+            "end": 115.46
+          },
+          {
+            "word": "い",
+            "start": 115.46,
+            "end": 115.584
+          },
+          {
+            "word": "う",
+            "start": 115.584,
+            "end": 115.712
+          },
+          {
+            "word": "時",
+            "start": 115.712,
+            "end": 116.005,
+            "furigana": "とき"
+          },
+          {
+            "word": "に",
+            "start": 116.005,
+            "end": 116.381
+          },
+          {
+            "word": "思",
+            "start": 116.381,
+            "end": 116.627,
+            "furigana": "おも"
+          },
+          {
+            "word": "う",
+            "start": 116.627,
+            "end": 116.755
+          },
+          {
+            "word": "ん",
+            "start": 116.755,
+            "end": 117.04
+          },
+          {
+            "word": "だ",
+            "start": 117.04,
+            "end": 117.7
+          }
+        ]
+      },
+      {
+        "verseStart": 117.7,
+        "verseEnd": 120.166,
+        "words": [
+          {
+            "word": "生",
+            "start": 117.7,
+            "end": 117.986,
+            "furigana": "い"
+          },
+          {
+            "word": "き",
+            "start": 117.986,
+            "end": 118.11
+          },
+          {
+            "word": "て",
+            "start": 118.11,
+            "end": 118.232
+          },
+          {
+            "word": "る",
+            "start": 118.232,
+            "end": 118.313
+          },
+          {
+            "word": "っ",
+            "start": 118.313,
+            "end": 118.765
+          },
+          {
+            "word": "て",
+            "start": 118.765,
+            "end": 119.011
+          },
+          {
+            "word": "不",
+            "start": 119.011,
+            "end": 119.136,
+            "furigana": "ふ"
+          },
+          {
+            "word": "思",
+            "start": 119.136,
+            "end": 119.303,
+            "furigana": "し"
+          },
+          {
+            "word": "議",
+            "start": 119.303,
+            "end": 120.166,
+            "furigana": "ぎ"
+          }
+        ]
+      },
+      {
+        "verseStart": 120.166,
+        "verseEnd": 122.512,
+        "words": [
+          {
+            "word": "Life",
+            "start": 120.166,
+            "end": 120.497
+          },
+          {
+            "word": "is",
+            "start": 120.497,
+            "end": 120.704
+          },
+          {
+            "word": "a",
+            "start": 120.704,
+            "end": 120.787
+          },
+          {
+            "word": "race,",
+            "start": 120.787,
+            "end": 121.121
+          },
+          {
+            "word": "that's",
+            "start": 121.121,
+            "end": 121.411
+          },
+          {
+            "word": "what",
+            "start": 121.411,
+            "end": 121.699
+          },
+          {
+            "word": "they",
+            "start": 121.699,
+            "end": 122.024
+          },
+          {
+            "word": "say",
+            "start": 122.024,
+            "end": 122.512
+          }
+        ]
+      },
+      {
+        "verseStart": 122.512,
+        "verseEnd": 125.201,
+        "words": [
+          {
+            "word": "So",
+            "start": 122.512,
+            "end": 122.638
+          },
+          {
+            "word": "time",
+            "start": 122.638,
+            "end": 122.974
+          },
+          {
+            "word": "out,",
+            "start": 122.974,
+            "end": 123.625
+          },
+          {
+            "word": "and",
+            "start": 123.625,
+            "end": 123.926
+          },
+          {
+            "word": "look",
+            "start": 123.926,
+            "end": 124.258
+          },
+          {
+            "word": "around",
+            "start": 124.258,
+            "end": 125.201
+          }
+        ]
+      },
+      {
+        "verseStart": 125.201,
+        "verseEnd": 127.348,
+        "words": [
+          {
+            "word": "立",
+            "start": 125.201,
+            "end": 125.488,
+            "furigana": "た"
+          },
+          {
+            "word": "ち",
+            "start": 125.488,
+            "end": 125.611
+          },
+          {
+            "word": "止",
+            "start": 125.611,
+            "end": 125.736,
+            "furigana": "ど"
+          },
+          {
+            "word": "ま",
+            "start": 125.736,
+            "end": 125.858
+          },
+          {
+            "word": "る",
+            "start": 125.858,
+            "end": 126.021
+          },
+          {
+            "word": "と",
+            "start": 126.021,
+            "end": 126.311
+          },
+          {
+            "word": "見",
+            "start": 126.311,
+            "end": 126.56,
+            "furigana": "み"
+          },
+          {
+            "word": "え",
+            "start": 126.56,
+            "end": 126.767
+          },
+          {
+            "word": "て",
+            "start": 126.767,
+            "end": 126.934
+          },
+          {
+            "word": "く",
+            "start": 126.934,
+            "end": 127.058
+          },
+          {
+            "word": "る",
+            "start": 127.058,
+            "end": 127.348
+          }
+        ]
+      },
+      {
+        "verseStart": 127.348,
+        "verseEnd": 129.597,
+        "words": [
+          {
+            "word": "I",
+            "start": 127.348,
+            "end": 127.682
+          },
+          {
+            "word": "see",
+            "start": 127.682,
+            "end": 128.214
+          },
+          {
+            "word": "it",
+            "start": 128.214,
+            "end": 128.501
+          },
+          {
+            "word": "now",
+            "start": 128.501,
+            "end": 129.597
+          }
+        ]
+      },
+      {
+        "verseStart": 129.597,
+        "verseEnd": 133.467,
+        "words": [
+          {
+            "word": "(Take",
+            "start": 129.597,
+            "end": 129.659
+          },
+          {
+            "word": "a",
+            "start": 129.659,
+            "end": 129.826
+          },
+          {
+            "word": "break!)",
+            "start": 129.826,
+            "end": 133.467
+          }
+        ]
+      },
+      {
+        "verseStart": 133.467,
+        "verseEnd": 136.581,
+        "words": [
+          {
+            "word": "\"Hey,",
+            "start": 133.467,
+            "end": 133.636
+          },
+          {
+            "word": "you've",
+            "start": 133.636,
+            "end": 133.8
+          },
+          {
+            "word": "reached",
+            "start": 133.8,
+            "end": 133.922
+          },
+          {
+            "word": "Gus",
+            "start": 133.922,
+            "end": 134.043
+          },
+          {
+            "word": "and",
+            "start": 134.043,
+            "end": 134.492
+          },
+          {
+            "word": "Jamie",
+            "start": 134.492,
+            "end": 134.777
+          },
+          {
+            "word": "from",
+            "start": 134.777,
+            "end": 135.395
+          },
+          {
+            "word": "KKB",
+            "start": 135.395,
+            "end": 136.581
+          }
+        ]
+      },
+      {
+        "verseStart": 136.581,
+        "verseEnd": 137.614,
+        "words": [
+          {
+            "word": "We're",
+            "start": 136.581,
+            "end": 136.703
+          },
+          {
+            "word": "recording",
+            "start": 136.703,
+            "end": 137.03
+          },
+          {
+            "word": "right",
+            "start": 137.03,
+            "end": 137.238
+          },
+          {
+            "word": "now",
+            "start": 137.238,
+            "end": 137.614
+          }
+        ]
+      },
+      {
+        "verseStart": 137.614,
+        "verseEnd": 140.542,
+        "words": [
+          {
+            "word": "So",
+            "start": 137.614,
+            "end": 137.818
+          },
+          {
+            "word": "leave",
+            "start": 137.818,
+            "end": 137.941
+          },
+          {
+            "word": "your",
+            "start": 137.941,
+            "end": 138.066
+          },
+          {
+            "word": "message",
+            "start": 138.066,
+            "end": 138.687
+          },
+          {
+            "word": "after",
+            "start": 138.687,
+            "end": 139.142
+          },
+          {
+            "word": "the",
+            "start": 139.142,
+            "end": 139.265
+          },
+          {
+            "word": "beep\"",
+            "start": 139.265,
+            "end": 140.542
+          }
+        ]
+      },
+      {
+        "verseStart": 140.542,
+        "verseEnd": 143.227,
+        "words": [
+          {
+            "word": "Yo,",
+            "start": 140.542,
+            "end": 141.044
+          },
+          {
+            "word": "Gus",
+            "start": 141.044,
+            "end": 141.249
+          },
+          {
+            "word": "and",
+            "start": 141.249,
+            "end": 141.539
+          },
+          {
+            "word": "Jamie,",
+            "start": 141.539,
+            "end": 142.194
+          },
+          {
+            "word": "it's",
+            "start": 142.194,
+            "end": 142.322
+          },
+          {
+            "word": "Sarah",
+            "start": 142.322,
+            "end": 143.227
+          }
+        ]
+      },
+      {
+        "verseStart": 143.227,
+        "verseEnd": 146.221,
+        "words": [
+          {
+            "word": "Just",
+            "start": 143.227,
+            "end": 143.432
+          },
+          {
+            "word": "to",
+            "start": 143.432,
+            "end": 143.594
+          },
+          {
+            "word": "let",
+            "start": 143.594,
+            "end": 143.717
+          },
+          {
+            "word": "you",
+            "start": 143.717,
+            "end": 143.881
+          },
+          {
+            "word": "know",
+            "start": 143.881,
+            "end": 144.165
+          },
+          {
+            "word": "that",
+            "start": 144.165,
+            "end": 144.288
+          },
+          {
+            "word": "I",
+            "start": 144.288,
+            "end": 144.369
+          },
+          {
+            "word": "don't",
+            "start": 144.369,
+            "end": 144.491
+          },
+          {
+            "word": "wanna",
+            "start": 144.491,
+            "end": 144.618
+          },
+          {
+            "word": "do",
+            "start": 144.618,
+            "end": 144.784
+          },
+          {
+            "word": "anything",
+            "start": 144.784,
+            "end": 145.234
+          },
+          {
+            "word": "today",
+            "start": 145.234,
+            "end": 146.221
+          }
+        ]
+      },
+      {
+        "verseStart": 146.221,
+        "verseEnd": 149.182,
+        "words": [
+          {
+            "word": "So",
+            "start": 146.221,
+            "end": 146.384
+          },
+          {
+            "word": "I'll",
+            "start": 146.384,
+            "end": 146.588
+          },
+          {
+            "word": "see",
+            "start": 146.588,
+            "end": 146.755
+          },
+          {
+            "word": "you",
+            "start": 146.755,
+            "end": 146.921
+          },
+          {
+            "word": "later,",
+            "start": 146.921,
+            "end": 147.662
+          },
+          {
+            "word": "bye!",
+            "start": 147.662,
+            "end": 149.182
+          }
+        ]
+      },
+      {
+        "verseStart": 149.182,
+        "verseEnd": 151.639,
+        "words": [
+          {
+            "word": "I",
+            "start": 149.182,
+            "end": 149.47
+          },
+          {
+            "word": "know",
+            "start": 149.47,
+            "end": 149.763
+          },
+          {
+            "word": "it",
+            "start": 149.763,
+            "end": 150.049
+          },
+          {
+            "word": "seems",
+            "start": 150.049,
+            "end": 150.416
+          },
+          {
+            "word": "kinda",
+            "start": 150.416,
+            "end": 150.985
+          },
+          {
+            "word": "tough",
+            "start": 150.985,
+            "end": 151.639
+          }
+        ]
+      },
+      {
+        "verseStart": 151.639,
+        "verseEnd": 154.212,
+        "words": [
+          {
+            "word": "But",
+            "start": 151.639,
+            "end": 151.926
+          },
+          {
+            "word": "really",
+            "start": 151.926,
+            "end": 152.212
+          },
+          {
+            "word": "it's",
+            "start": 152.212,
+            "end": 152.541
+          },
+          {
+            "word": "easy",
+            "start": 152.541,
+            "end": 153.153
+          },
+          {
+            "word": "enough",
+            "start": 153.153,
+            "end": 154.212
+          }
+        ]
+      },
+      {
+        "verseStart": 154.212,
+        "verseEnd": 156.655,
+        "words": [
+          {
+            "word": "For",
+            "start": 154.212,
+            "end": 154.498
+          },
+          {
+            "word": "us",
+            "start": 154.498,
+            "end": 154.751
+          },
+          {
+            "word": "to",
+            "start": 154.751,
+            "end": 155.038
+          },
+          {
+            "word": "slow",
+            "start": 155.038,
+            "end": 155.367
+          },
+          {
+            "word": "down",
+            "start": 155.367,
+            "end": 155.699
+          },
+          {
+            "word": "the",
+            "start": 155.699,
+            "end": 155.986
+          },
+          {
+            "word": "pace",
+            "start": 155.986,
+            "end": 156.655
+          }
+        ]
+      },
+      {
+        "verseStart": 156.655,
+        "verseEnd": 159.091,
+        "words": [
+          {
+            "word": "So",
+            "start": 156.655,
+            "end": 156.991
+          },
+          {
+            "word": "we",
+            "start": 156.991,
+            "end": 157.2
+          },
+          {
+            "word": "could",
+            "start": 157.2,
+            "end": 157.327
+          },
+          {
+            "word": "all",
+            "start": 157.327,
+            "end": 157.616
+          },
+          {
+            "word": "go",
+            "start": 157.616,
+            "end": 157.866
+          },
+          {
+            "word": "take",
+            "start": 157.866,
+            "end": 158.19
+          },
+          {
+            "word": "a",
+            "start": 158.19,
+            "end": 158.517
+          },
+          {
+            "word": "break",
+            "start": 158.517,
+            "end": 159.091
+          }
+        ]
+      },
+      {
+        "verseStart": 159.091,
+        "verseEnd": 164.134,
+        "words": [
+          {
+            "word": "In",
+            "start": 159.091,
+            "end": 159.381
+          },
+          {
+            "word": "fact,",
+            "start": 159.381,
+            "end": 159.756
+          },
+          {
+            "word": "there's",
+            "start": 159.756,
+            "end": 160
+          },
+          {
+            "word": "not",
+            "start": 160,
+            "end": 160.617
+          },
+          {
+            "word": "much",
+            "start": 160.617,
+            "end": 161.228
+          },
+          {
+            "word": "better",
+            "start": 161.228,
+            "end": 161.881
+          },
+          {
+            "word": "than",
+            "start": 161.881,
+            "end": 162.535
+          },
+          {
+            "word": "nothing",
+            "start": 162.535,
+            "end": 163.154
+          },
+          {
+            "word": "at",
+            "start": 163.154,
+            "end": 163.359
+          },
+          {
+            "word": "all",
+            "start": 163.359,
+            "end": 164.134
+          }
+        ]
+      },
+      {
+        "verseStart": 164.134,
+        "verseEnd": 166.624,
+        "words": [
+          {
+            "word": "And",
+            "start": 164.134,
+            "end": 164.426
+          },
+          {
+            "word": "that's",
+            "start": 164.426,
+            "end": 164.683
+          },
+          {
+            "word": "especially",
+            "start": 164.683,
+            "end": 165.958
+          },
+          {
+            "word": "true",
+            "start": 165.958,
+            "end": 166.624
+          }
+        ]
+      },
+      {
+        "verseStart": 166.624,
+        "verseEnd": 170.126,
+        "words": [
+          {
+            "word": "When",
+            "start": 166.624,
+            "end": 166.869
+          },
+          {
+            "word": "there",
+            "start": 166.869,
+            "end": 167.543
+          },
+          {
+            "word": "is",
+            "start": 167.543,
+            "end": 168.168
+          },
+          {
+            "word": "something",
+            "start": 168.168,
+            "end": 168.413
+          },
+          {
+            "word": "to",
+            "start": 168.413,
+            "end": 168.738
+          },
+          {
+            "word": "do",
+            "start": 168.738,
+            "end": 170.126
+          }
+        ]
+      },
+      {
+        "verseStart": 170.126,
+        "verseEnd": 175.117,
+        "words": [
+          {
+            "word": "Just",
+            "start": 170.126,
+            "end": 170.379
+          },
+          {
+            "word": "move",
+            "start": 170.379,
+            "end": 170.671
+          },
+          {
+            "word": "very",
+            "start": 170.671,
+            "end": 171.128
+          },
+          {
+            "word": "slowly",
+            "start": 171.128,
+            "end": 171.714
+          },
+          {
+            "word": "to",
+            "start": 171.714,
+            "end": 171.922
+          },
+          {
+            "word": "the",
+            "start": 171.922,
+            "end": 172.047
+          },
+          {
+            "word": "beat",
+            "start": 172.047,
+            "end": 172.658
+          },
+          {
+            "word": "(a-yo,",
+            "start": 172.658,
+            "end": 173.598
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 173.598,
+            "end": 175.117
+          }
+        ]
+      },
+      {
+        "verseStart": 175.117,
+        "verseEnd": 180.167,
+        "words": [
+          {
+            "word": "Now",
+            "start": 175.117,
+            "end": 175.405
+          },
+          {
+            "word": "get",
+            "start": 175.405,
+            "end": 175.738
+          },
+          {
+            "word": "down",
+            "start": 175.738,
+            "end": 176.026
+          },
+          {
+            "word": "and",
+            "start": 176.026,
+            "end": 176.321
+          },
+          {
+            "word": "put",
+            "start": 176.321,
+            "end": 176.658
+          },
+          {
+            "word": "up",
+            "start": 176.658,
+            "end": 176.904
+          },
+          {
+            "word": "your",
+            "start": 176.904,
+            "end": 177.028
+          },
+          {
+            "word": "feet",
+            "start": 177.028,
+            "end": 177.65
+          },
+          {
+            "word": "(a-yo,",
+            "start": 177.65,
+            "end": 178.553
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 178.553,
+            "end": 180.167
+          }
+        ]
+      },
+      {
+        "verseStart": 180.167,
+        "verseEnd": 185.118,
+        "words": [
+          {
+            "word": "If",
+            "start": 180.167,
+            "end": 180.374
+          },
+          {
+            "word": "you",
+            "start": 180.374,
+            "end": 180.497
+          },
+          {
+            "word": "like",
+            "start": 180.497,
+            "end": 180.742
+          },
+          {
+            "word": "to",
+            "start": 180.742,
+            "end": 180.824
+          },
+          {
+            "word": "lounge,",
+            "start": 180.824,
+            "end": 181.313
+          },
+          {
+            "word": "relax,",
+            "start": 181.313,
+            "end": 181.763
+          },
+          {
+            "word": "or",
+            "start": 181.763,
+            "end": 182.012
+          },
+          {
+            "word": "flop",
+            "start": 182.012,
+            "end": 182.583
+          },
+          {
+            "word": "(a-yo,",
+            "start": 182.583,
+            "end": 183.602
+          },
+          {
+            "word": "a-a-yo-o)",
+            "start": 183.602,
+            "end": 185.118
+          }
+        ]
+      },
+      {
+        "verseStart": 185.118,
+        "verseEnd": 190.516,
+        "words": [
+          {
+            "word": "Doesn't",
+            "start": 185.118,
+            "end": 185.363
+          },
+          {
+            "word": "really",
+            "start": 185.363,
+            "end": 185.689
+          },
+          {
+            "word": "matter",
+            "start": 185.689,
+            "end": 186.056
+          },
+          {
+            "word": "when",
+            "start": 186.056,
+            "end": 186.259
+          },
+          {
+            "word": "you're",
+            "start": 186.259,
+            "end": 186.423
+          },
+          {
+            "word": "doing",
+            "start": 186.423,
+            "end": 186.952
+          },
+          {
+            "word": "squat",
+            "start": 186.952,
+            "end": 187.528
+          },
+          {
+            "word": "(a-yo,",
+            "start": 187.528,
+            "end": 188.516
+          },
+          {
+            "word": "a-yo)",
+            "start": 188.516,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };
