@@ -10,9 +10,7 @@ const commandManifest = {
   'uptime': { owner: 'root', group: 'root', perms: 777 }
 };
 
-import { env } from "cloudflare:workers";
-
-export const POST = async ({ request, cookies }) => {
+export async function onRequestPost({ request, env }) {
   const db = env.users;
   const authHeader = request.headers.get('Authorization');
   const sessionId = authHeader ? authHeader.replace('Bearer ', '') : null;

@@ -1,6 +1,4 @@
-import { env } from "cloudflare:workers";
-
-export const GET = async ({ request, cookies }) => {
+export async function onRequestGet({ request, env }) {
   const cookieStr = request.headers.get('cookie') || '';
   const match = cookieStr.match(/sudothy_session=([^;]+)/);
   let username = 'guest';
@@ -25,7 +23,7 @@ export const GET = async ({ request, cookies }) => {
   }
 };
 
-export const POST = async ({ request, cookies }) => {
+export async function onRequestPost({ request, env }) {
   const body = await request.json();
   const { project_id } = body;
 

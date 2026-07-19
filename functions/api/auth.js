@@ -1,6 +1,4 @@
-import { env } from "cloudflare:workers";
-
-export const POST = async ({ request, cookies }) => {
+export async function onRequestPost({ request, env }) {
   const db = env.users;
   const body = await request.json();
   const { action, username, password, token } = body;

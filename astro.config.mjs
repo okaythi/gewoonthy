@@ -5,12 +5,7 @@ import remarkGfm from 'remark-gfm';
 import { unified } from '@astrojs/markdown-remark';
 
 export default defineConfig({
-  output: 'server',
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true
-    }
-  }),
+  output: 'static',
   redirects: {
     '/github': 'https://github.com/okaythi/gewoonthy'
   },

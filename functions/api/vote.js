@@ -1,139 +1,125 @@
-export async function onRequest({ request, env }) {
-  if (request.method === 'OPTIONS') {
-    return new Response(null, { headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type' } });
-  }
-
-  const ip = request.headers.get('cf-connecting-ip') || '127.0.0.1';
+export async function onRequestGet({ request, env }) {
   const url = new URL(request.url);
+  const fileName = url.searchParams.get('file_name');
   
-  if (request.method === 'GET') {
-    const fileName = url.searchParams.get('file_name');
-    if (!fileName) return new Response('Missing file_name', { status: 400 });
+  if (!fileName) {
+    return new Response(JSON.stringify({ error: 'Missing file_name' }), { status: 400 });
+  }
+
+  // Get user session cookie
+  const cookieStr = request.headers.get('cookie') || '';
+  const match = cookieStr.match(/sudothy_session=([^;]+)/);
+  let username = 'guest';
+  if (match) {
+    try {
+      const session = JSON.parse(decodeURIComponent(match[1]));
+      username = session.user.username;
+    } catch(e) {}
+  }
+
+  // use global env
+  
+  let totalLikes = 0;
+  let totalDislikes = 0;
+  let userLiked = false;
+  let userDisliked = false;
+
+  try {
+    const sysRes = await env.system_data.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(fileName).first();
+    if (sysRes) {
+      totalLikes = sysRes.likes;
+      totalDislikes = sysRes.dislikes;
+    }
+
+    if (username !== 'guest') {
+      const usrRes = await env.user_data.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, fileName).first();
+      if (usrRes) {
+        if (usrRes.action === 'like') userLiked = true;
+        if (usrRes.action === 'dislike') userDisliked = true;
+      }
+    }
     
-    try {
-      // Auto-initialize the table if it doesn't exist yet
-      await env.USERS.prepare(`
-        CREATE TABLE IF NOT EXISTS video_votes (
-            ip TEXT NOT NULL,
-            file_name TEXT NOT NULL,
-            date TEXT NOT NULL,
-            liked BOOLEAN DEFAULT 0,
-            desliked BOOLEAN DEFAULT 0,
-            PRIMARY KEY (ip, file_name)
-        )
-      `).run();
+    return new Response(JSON.stringify({ liked: userLiked, desliked: userDisliked, totalLikes, totalDislikes }), {
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  }
+};
 
-      const { results } = await env.USERS.prepare("SELECT liked, desliked FROM video_votes WHERE ip = ? AND file_name = ?")
-        .bind(ip, fileName).all();
-        
-      if (results.length > 0) {
-        return new Response(JSON.stringify(results[0]), { headers: { 'Content-Type': 'application/json' }});
-      }
-      return new Response(JSON.stringify({ liked: 0, desliked: 0 }), { headers: { 'Content-Type': 'application/json' }});
-    } catch (e) {
-      return new Response(e.message, { status: 500 });
-    }
+export async function onRequestPost({ request, env }) {
+  const body = await request.json();
+  const { file_name, action } = body; // action is 'like' or 'dislike'
+
+  if (!file_name || !action) {
+    return new Response(JSON.stringify({ error: 'Missing params' }), { status: 400 });
   }
 
-  if (request.method === 'POST') {
+  const cookieStr = request.headers.get('cookie') || '';
+  const match = cookieStr.match(/sudothy_session=([^;]+)/);
+  let username = 'guest';
+  if (match) {
     try {
-      // Auto-initialize the table if it doesn't exist yet
-      await env.USERS.prepare(`
-        CREATE TABLE IF NOT EXISTS video_votes (
-            ip TEXT NOT NULL,
-            file_name TEXT NOT NULL,
-            date TEXT NOT NULL,
-            liked BOOLEAN DEFAULT 0,
-            desliked BOOLEAN DEFAULT 0,
-            inferred_location TEXT DEFAULT '',
-            is_vpn BOOLEAN DEFAULT 0,
-            ISP TEXT DEFAULT '',
-            PRIMARY KEY (ip, file_name)
-        )
-      `).run();
-
-      // Auto-upgrade schema if columns are missing
-      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN inferred_location TEXT DEFAULT ''").run(); } catch(e) {}
-      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN is_vpn BOOLEAN DEFAULT 0").run(); } catch(e) {}
-      try { await env.USERS.prepare("ALTER TABLE video_votes ADD COLUMN ISP TEXT DEFAULT ''").run(); } catch(e) {}
-
-      const body = await request.json();
-      const fileName = body.file_name;
-      const actionStr = body.action; // 'like' or 'dislike'
-      if (!fileName || !actionStr) return new Response('Bad Request', { status: 400 });
-
-      // Fetch IP Intelligence
-      let location = '';
-      let is_vpn = 0;
-      let isp = '';
-      
-      try {
-        const geoRes = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,city,isp,proxy`);
-        if (geoRes.ok) {
-            const geo = await geoRes.json();
-            if (geo.status === 'success') {
-                location = `${geo.city}, ${geo.country}`;
-                isp = geo.isp;
-                is_vpn = geo.proxy ? 1 : 0;
-            }
-        }
-      } catch (e) {}
-
-      if (!location && request.cf) {
-          const city = request.cf.city || '';
-          const country = request.cf.country || '';
-          location = [city, country].filter(Boolean).join(', ');
-          isp = request.cf.asOrganization || '';
-      }
-
-      // Fetch current state
-      const { results } = await env.USERS.prepare("SELECT liked, desliked FROM video_votes WHERE ip = ? AND file_name = ?")
-        .bind(ip, fileName).all();
-      
-      const current = results.length > 0 ? results[0] : { liked: 0, desliked: 0 };
-      
-      // -- PURE MATHEMATICAL EVILNESS --
-      // Map state to integer S: 0 = none, 1 = liked, 2 = disliked
-      const S = current.liked ? 1 : (current.desliked ? 2 : 0);
-      
-      // Map action to integer k: 1 = like, 2 = dislike
-      const k = actionStr === 'like' ? 1 : 2;
-      
-      // Calculate new state N using polynomial identity bounds constraint
-      // N = k * min(1, (S - k)^2)
-      // This strictly evaluates to 0 if S==k, and k if S!=k.
-      const N = k * Math.min(1, Math.pow(S - k, 2));
-      
-      const newLiked = N === 1 ? 1 : 0;
-      const newDesliked = N === 2 ? 1 : 0;
-      
-      // --------------------------------
-      
-      if (N === 0) {
-        // Remove vote
-        await env.USERS.prepare("DELETE FROM video_votes WHERE ip = ? AND file_name = ?").bind(ip, fileName).run();
-      } else {
-        // Brussels Time
-        const brusselsDate = new Intl.DateTimeFormat('en-GB', {
-          timeZone: 'Europe/Brussels',
-          year: 'numeric', month: '2-digit', day: '2-digit',
-          hour: '2-digit', minute: '2-digit', second: '2-digit'
-        }).format(new Date());
-
-        await env.USERS.prepare(`
-          INSERT INTO video_votes (ip, file_name, date, liked, desliked, inferred_location, is_vpn, ISP) 
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
-          ON CONFLICT(ip, file_name) DO UPDATE SET 
-          date = excluded.date, liked = excluded.liked, desliked = excluded.desliked,
-          inferred_location = excluded.inferred_location, is_vpn = excluded.is_vpn, ISP = excluded.ISP
-        `).bind(ip, fileName, brusselsDate, newLiked, newDesliked, location, is_vpn, isp).run();
-      }
-
-      return new Response(JSON.stringify({ liked: newLiked, desliked: newDesliked }), { headers: { 'Content-Type': 'application/json' }});
-    } catch (e) {
-      return new Response(e.message, { status: 500 });
-    }
+      const session = JSON.parse(decodeURIComponent(match[1]));
+      username = session.user.username;
+    } catch(e) {}
   }
 
-  return new Response('Method Not Allowed', { status: 405 });
-}
+  if (username === 'guest') {
+    return new Response(JSON.stringify({ error: 'Must be logged in to vote' }), { status: 403 });
+  }
+
+  // use global env
+
+  try {
+    // Determine previous action
+    const usrRes = await env.user_data.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).first();
+    const prevAction = usrRes ? usrRes.action : null;
+
+    let likeDelta = 0;
+    let dislikeDelta = 0;
+
+    if (prevAction === action) {
+      // Toggle off
+      await env.user_data.prepare('DELETE FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).run();
+      if (action === 'like') likeDelta = -1;
+      if (action === 'dislike') dislikeDelta = -1;
+    } else {
+      // Upsert
+      await env.user_data.prepare('INSERT OR REPLACE INTO user_song_votes (username, file_name, action) VALUES (?, ?, ?)').bind(username, file_name, action).run();
+      
+      if (action === 'like') {
+        likeDelta = 1;
+        if (prevAction === 'dislike') dislikeDelta = -1;
+      }
+      if (action === 'dislike') {
+        dislikeDelta = 1;
+        if (prevAction === 'like') likeDelta = -1;
+      }
+    }
+
+    // Ensure row exists in system_data
+    await env.system_data.prepare('INSERT OR IGNORE INTO song_votes (file_name, likes, dislikes) VALUES (?, 0, 0)').bind(file_name).run();
+
+    // Update system_data
+    if (likeDelta !== 0 || dislikeDelta !== 0) {
+      await env.system_data.prepare('UPDATE song_votes SET likes = likes + ?, dislikes = dislikes + ? WHERE file_name = ?').bind(likeDelta, dislikeDelta, file_name).run();
+    }
+
+    const sysRes = await env.system_data.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(file_name).first();
+    
+    const isLiked = prevAction !== action && action === 'like';
+    const isDisliked = prevAction !== action && action === 'dislike';
+
+    return new Response(JSON.stringify({ 
+      liked: isLiked, 
+      desliked: isDisliked, 
+      totalLikes: sysRes.likes, 
+      totalDislikes: sysRes.dislikes 
+    }), {
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+  }
+};
