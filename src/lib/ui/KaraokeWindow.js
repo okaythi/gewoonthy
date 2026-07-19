@@ -2,7 +2,7 @@ import { windowManager } from '../WindowManager.js';
 import { songsDictionary } from '../../data/lyrics.ts';
 
 export const openKaraokeWindow = () => {
-  const availableSongs = Object.keys(songsDictionary);
+  const availableSongs = Object.keys(songsDictionary).sort((a, b) => a.localeCompare(b));
   
   let leftSidebarHTML = `
     <div class="karaoke-sidebar" style="width: 250px; border-right: 1px solid var(--ubu-border); background: var(--ubu-bg); display: flex; flex-direction: column; overflow-y: auto;">
