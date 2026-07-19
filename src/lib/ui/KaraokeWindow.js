@@ -44,7 +44,13 @@ export const openKaraokeWindow = async () => {
     }
 
     const hasTranslation = songsDictionary[songFile]?.lyricsData?.some(v => v.translation);
-    const globeBadge = hasTranslation ? `<div title="Contains localized translation" style="background: #E95420; color: white; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-size: 10px; margin-left: auto; box-shadow: 0 0 4px rgba(233, 84, 32, 0.6);">🌍</div>` : '';
+    const globeBadge = hasTranslation ? `<div title="Contains localized translation" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+    </div>` : '';
 
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `

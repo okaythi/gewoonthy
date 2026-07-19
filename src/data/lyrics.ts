@@ -9,6 +9,7 @@ export interface Verse {
   verseStart: number;
   verseEnd: number;
   speaker?: string;
+  translation?: string;
   words: Word[];
 }
 
@@ -2018,7 +2019,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 5.615,
             "end": 8.196
           }
-        ]
+        ],
+        "translation": "Boo-hoo, boo-hoo"
       },
       {
         "verseStart": 8.196,
@@ -2044,7 +2046,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 11.741,
             "end": 12.068
           }
-        ]
+        ],
+        "translation": "Boo-hoo, boo-hoo"
       },
       {
         "verseStart": 12.068,
@@ -2100,7 +2103,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 14.881,
             "end": 15.206
           }
-        ]
+        ],
+        "translation": "I wrote to you and waited for you in the night (boo-hoo)"
       },
       {
         "verseStart": 15.206,
@@ -2151,7 +2155,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 17.815,
             "end": 18.14
           }
-        ]
+        ],
+        "translation": "You don't answer my calls anymore (boo-hoo)"
       },
       {
         "verseStart": 18.14,
@@ -2197,7 +2202,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 20.502,
             "end": 21.071
           }
-        ]
+        ],
+        "translation": "Every evening I leave a tooth under the pillow (boo-hoo)"
       },
       {
         "verseStart": 21.071,
@@ -2238,7 +2244,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 23.81,
             "end": 24.215
           }
-        ]
+        ],
+        "translation": "Begging the heavens to bring you back (boo-hoo)"
       },
       {
         "verseStart": 24.215,
@@ -2294,7 +2301,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 27.033,
             "end": 27.359
           }
-        ]
+        ],
+        "translation": "I was good, and I wasn't bad (boo-hoo)"
       },
       {
         "verseStart": 27.359,
@@ -2350,7 +2358,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 30.339,
             "end": 30.543
           }
-        ]
+        ],
+        "translation": "All my life, like a good girl, I lived by the rules (boo-hoo)"
       },
       {
         "verseStart": 30.543,
@@ -2391,7 +2400,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 32.952,
             "end": 33.359
           }
-        ]
+        ],
+        "translation": "I'm tired of crying, I'm tired of suffering (boo-hoo)"
       },
       {
         "verseStart": 33.359,
@@ -2442,7 +2452,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 36.177,
             "end": 36.97
           }
-        ]
+        ],
+        "translation": "Still won't be able to foresee my own death (boo-hoo)"
       },
       {
         "verseStart": 36.97,
@@ -2488,7 +2499,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 41.634,
             "end": 42.78
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 42.78,
@@ -2534,7 +2546,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 47.025,
             "end": 48.416
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 48.416,
@@ -2565,7 +2578,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 50.744,
             "end": 51.436
           }
-        ]
+        ],
+        "translation": "Mum told me: \"Listen to your husband\""
       },
       {
         "verseStart": 51.436,
@@ -2601,7 +2615,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 53.533,
             "end": 54.554
           }
-        ]
+        ],
+        "translation": "I'm not obedient, I make it worse"
       },
       {
         "verseStart": 54.554,
@@ -2637,7 +2652,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 56.807,
             "end": 57.661
           }
-        ]
+        ],
+        "translation": "I don't do it like dad ordered"
       },
       {
         "verseStart": 57.661,
@@ -2668,7 +2684,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 59.747,
             "end": 60.606
           }
-        ]
+        ],
+        "translation": "Instead of a star, I grab a grenade"
       },
       {
         "verseStart": 60.606,
@@ -2699,7 +2716,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 62.616,
             "end": 63.56
           }
-        ]
+        ],
+        "translation": "Mum told me: \"Listen to your husband\""
       },
       {
         "verseStart": 63.56,
@@ -2735,7 +2753,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 65.608,
             "end": 66.708
           }
-        ]
+        ],
+        "translation": "I'm not obedient, I make it worse"
       },
       {
         "verseStart": 66.708,
@@ -2771,7 +2790,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 68.957,
             "end": 69.693
           }
-        ]
+        ],
+        "translation": "I don't do it like dad ordered"
       },
       {
         "verseStart": 69.693,
@@ -2802,7 +2822,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 71.9,
             "end": 72.958
           }
-        ]
+        ],
+        "translation": "Instead of a star, I grab a grenade"
       },
       {
         "verseStart": 72.958,
@@ -2843,7 +2864,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 77.132,
             "end": 78.927
           }
-        ]
+        ],
+        "translation": "I'd like to hug you like back then"
       },
       {
         "verseStart": 78.927,
@@ -2879,7 +2901,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 82.844,
             "end": 84.883
           }
-        ]
+        ],
+        "translation": "But for that I'd have to dig up the body"
       },
       {
         "verseStart": 84.883,
@@ -2925,7 +2948,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 89.422,
             "end": 91.015
           }
-        ]
+        ],
+        "translation": "Your ice-cold bones are somewhere down at the bottom"
       },
       {
         "verseStart": 91.015,
@@ -2961,7 +2985,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 95.226,
             "end": 99.312
           }
-        ]
+        ],
+        "translation": "Flowers will sprout in this wept-over earth"
       },
       {
         "verseStart": 99.312,
@@ -2987,7 +3012,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 102.824,
             "end": 105.437
           }
-        ]
+        ],
+        "translation": "Boo-hoo, boo-hoo"
       },
       {
         "verseStart": 105.437,
@@ -3013,7 +3039,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 108.91,
             "end": 109.236
           }
-        ]
+        ],
+        "translation": "Boo-hoo, boo-hoo"
       },
       {
         "verseStart": 109.236,
@@ -3059,7 +3086,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 111.976,
             "end": 112.303
           }
-        ]
+        ],
+        "translation": "Your brains are splattered all over the wall (boo-hoo)"
       },
       {
         "verseStart": 112.303,
@@ -3110,7 +3138,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 115.053,
             "end": 115.338
           }
-        ]
+        ],
+        "translation": "Got really angry at you, you gotta forgive me (boo-hoo)"
       },
       {
         "verseStart": 115.338,
@@ -3166,7 +3195,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 118.038,
             "end": 118.406
           }
-        ]
+        ],
+        "translation": "For the hundredth time in my sleep I watch your end (boo-hoo)"
       },
       {
         "verseStart": 118.406,
@@ -3227,7 +3257,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 121.066,
             "end": 121.475
           }
-        ]
+        ],
+        "translation": "And it's really not that scary to die (boo-hoo)"
       },
       {
         "verseStart": 121.475,
@@ -3283,7 +3314,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 124.1,
             "end": 124.507
           }
-        ]
+        ],
+        "translation": "I was good, and I wasn't bad (boo-hoo)"
       },
       {
         "verseStart": 124.507,
@@ -3339,7 +3371,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 127.052,
             "end": 127.418
           }
-        ]
+        ],
+        "translation": "And all my life like a good girl, I lived by the rules (boo-hoo)"
       },
       {
         "verseStart": 127.418,
@@ -3380,7 +3413,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 129.873,
             "end": 130.444
           }
-        ]
+        ],
+        "translation": "I'm tired of crying, I'm tired of suffering (boo-hoo)"
       },
       {
         "verseStart": 130.444,
@@ -3431,7 +3465,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 133.27,
             "end": 133.717
           }
-        ]
+        ],
+        "translation": "Still won't be able to foresee my own death (boo-hoo)"
       },
       {
         "verseStart": 133.717,
@@ -3462,7 +3497,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 135.39,
             "end": 136.696
           }
-        ]
+        ],
+        "translation": "Mum told me: \"Listen to your husband\""
       },
       {
         "verseStart": 136.696,
@@ -3498,7 +3534,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 138.682,
             "end": 139.577
           }
-        ]
+        ],
+        "translation": "I'm not obedient, I make it worse"
       },
       {
         "verseStart": 139.577,
@@ -3534,7 +3571,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 141.904,
             "end": 142.641
           }
-        ]
+        ],
+        "translation": "I don't do it like dad ordered"
       },
       {
         "verseStart": 142.641,
@@ -3565,7 +3603,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 144.576,
             "end": 145.761
           }
-        ]
+        ],
+        "translation": "Instead of a star, I grab a grenade"
       },
       {
         "verseStart": 145.761,
@@ -3596,7 +3635,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 147.972,
             "end": 148.669
           }
-        ]
+        ],
+        "translation": "Mum told me: \"Listen to your husband\""
       },
       {
         "verseStart": 148.669,
@@ -3632,7 +3672,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 150.751,
             "end": 151.73
           }
-        ]
+        ],
+        "translation": "I'm not obedient, I make it worse"
       },
       {
         "verseStart": 151.73,
@@ -3668,7 +3709,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 153.736,
             "end": 154.798
           }
-        ]
+        ],
+        "translation": "I don't do it like dad ordered"
       },
       {
         "verseStart": 154.798,
@@ -3699,7 +3741,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 156.792,
             "end": 158.178
           }
-        ]
+        ],
+        "translation": "Instead of a star, I grab a grenade"
       },
       {
         "verseStart": 158.178,
@@ -3745,7 +3788,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 160.968,
             "end": 161.295
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 161.295,
@@ -3791,7 +3835,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 164.075,
             "end": 164.403
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 164.403,
@@ -3837,7 +3882,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 166.988,
             "end": 167.36
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 167.36,
@@ -3883,7 +3929,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 169.897,
             "end": 170.104
           }
-        ]
+        ],
+        "translation": "La-la-la-la-la-a-a-a"
       },
       {
         "verseStart": 170.104,
@@ -3924,7 +3971,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 174.321,
             "end": 176.112
           }
-        ]
+        ],
+        "translation": "I'd like to hug you like back then"
       },
       {
         "verseStart": 176.112,
@@ -3960,7 +4008,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 180.071,
             "end": 182.193
           }
-        ]
+        ],
+        "translation": "But for that I'd have to dig up the body"
       },
       {
         "verseStart": 182.193,
@@ -4006,7 +4055,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 186.773,
             "end": 188.161
           }
-        ]
+        ],
+        "translation": "Your ice-cold bones are somewhere down at the bottom"
       },
       {
         "verseStart": 188.161,
@@ -4042,7 +4092,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 192.461,
             "end": 193.14
           }
-        ]
+        ],
+        "translation": "Flowers will sprout in this wept-over earth"
       }
     ],
     "subtitle": "🇷🇺 ● но тем временем, зацени этот разъёб ● 🇷🇺"
