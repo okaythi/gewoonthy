@@ -11,7 +11,8 @@ const commandManifest = {
   'locale': { owner: 'root', group: 'root', perms: 777 },
   'localectl': { owner: 'root', group: 'root', perms: 777 },
   'language': { owner: 'root', group: 'root', perms: 777 },
-  'export': { owner: 'root', group: 'root', perms: 777 }
+  'export': { owner: 'root', group: 'root', perms: 777 },
+  'reload': { owner: 'root', group: 'root', perms: 777 }
 };
 
 export async function onRequestPost({ request, env }) {

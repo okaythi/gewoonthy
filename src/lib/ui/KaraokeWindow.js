@@ -394,4 +394,20 @@ export const openKaraokeWindow = async () => {
 
   // Default
   renderAbout();
+
+  // Listen for language changes to dynamically update the about section if it's active
+  const langListener = () => {
+    // Only re-render if the user is currently looking at the about section
+    const activeTab = Array.from(songItems).find(t => t.style.background === 'rgba(255, 255, 255, 0.1)' || t.style.background === 'rgba(255,255,255,0.1)');
+    if (activeTab && activeTab.dataset.song === 'about') {
+      renderAbout();
+    }
+  };
+  window.addEventListener('languageChanged', langListener);
+  
+  // Cleanup listener on window close
+  const currentClose = win.querySelector('.gnome-close').onclick;
+  win.querySelector('.gnome-close').addEventListener('click', () => {
+    window.removeEventListener('languageChanged', langListener);
+  });
 };

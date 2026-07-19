@@ -7,6 +7,7 @@ import { projectsCommand, projectsMetadata } from './commands/projects.js';
 import { uptimeCommand, uptimeMetadata } from './commands/uptime.js';
 import { localeCommand, localeMetadata } from './commands/locale.js';
 import { exportCommand, exportMetadata } from './commands/export.js';
+import { reloadCommand, reloadMetadata } from './commands/reload.js';
 import { authManager } from './auth.js';
 import { localesFetcher } from './LocalesFetcher.js';
 
@@ -24,6 +25,7 @@ class CommandEngine {
     this.registerCommand('localectl', localeCommand, localeMetadata);
     this.registerCommand('language', localeCommand, localeMetadata);
     this.registerCommand('export', exportCommand, exportMetadata);
+    this.registerCommand('reload', reloadCommand, reloadMetadata);
   }
 
   registerCommand(name, handler, metadata = { description: 'No description provided', args: [] }) {
