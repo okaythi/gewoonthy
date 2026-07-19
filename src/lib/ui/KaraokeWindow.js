@@ -53,7 +53,7 @@ export const openKaraokeWindow = async () => {
   leftSidebarHTML += `</div>`;
 
   const contentHTML = `
-    <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%;">
+    <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%; font-family: 'Noto Sans JP', system-ui, sans-serif;">
       ${leftSidebarHTML}
       <div class="karaoke-main" style="flex: 1; display: flex; flex-direction: column; position: relative; padding: 16px;">
         <!-- Right side content (Video player or About) -->

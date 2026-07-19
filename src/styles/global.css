@@ -36,7 +36,7 @@
 body {
   background-color: var(--ubuntu-purple);
   color: var(--ubuntu-text);
-  font-family: 'Ubuntu Mono', 'Noto Sans JP', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 16px;
   line-height: 1.2;
   overflow: hidden;
@@ -120,7 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  font-family: 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
   z-index: 100;
   color: #fff;
   border: 1px solid #3a3a3a;
