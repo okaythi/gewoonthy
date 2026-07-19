@@ -1,5 +1,3 @@
-[This document is localized in en-US]
-
 # Engineering the Karaoke Engine
 
 Welcome to the backend of the Karaoke application. Building a seamless, word-by-word karaoke experience in the browser (never mind inside this custom-made Linux terminal simulator) was a fun but sometimes proper knackering project, which isn't just about playing a video, it’s about sub-millisecond synchronisation and fighting browser latency. Keyword: "fighting" lol
