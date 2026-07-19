@@ -10,9 +10,27 @@
 }
 
 @font-face {
+  font-family: 'Zen Kurenaido';
+  src: url('https://cdn.sudothy.me/fonts/ZenKurenaido-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303f, U+3040-309f, U+30a0-30ff, U+ff00-ff9f, U+4e00-9fff;
+}
+
+@font-face {
   font-family: 'Noto Sans JP';
   src: url('https://cdn.sudothy.me/fonts/NotoSansJP-Regular.woff2') format('woff2');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+3000-303f, U+3040-309f, U+30a0-30ff, U+ff00-ff9f, U+4e00-9fff;
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('https://cdn.sudothy.me/fonts/NotoSansJP-Regular.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   unicode-range: U+3000-303f, U+3040-309f, U+30a0-30ff, U+ff00-ff9f, U+4e00-9fff;
