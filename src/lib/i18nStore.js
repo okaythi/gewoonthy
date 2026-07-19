@@ -50,3 +50,4 @@ class I18nStore {
 }
 
 export const i18nStore = new I18nStore();
+export const supportedLocales = ['en-GB', 'nl-BE', 'fr-BE', 'pt-BR', 'es-AR', 'sv-SE', 'ja-JP', 'en-US', 'de-DE', 'zh-CN'];
