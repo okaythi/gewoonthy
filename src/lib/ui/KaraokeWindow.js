@@ -51,7 +51,7 @@ export const openKaraokeWindow = async () => {
       if (isDialect) {
         globeBadge = `<div title="Contains dialect localization" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="10,4 4,4 4,20 10,20 20,12" />
+            <path d="M 8 4 L 4 4 L 4 20 L 8 20 M 14 4 L 20 12 L 14 20" />
           </svg>
         </div>`;
       } else {
