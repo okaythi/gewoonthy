@@ -1,4 +1,4 @@
-import { Permissions } from '../../lib/Permissions.js';
+import { Permissions } from '../../src/lib/Permissions.js';
 
 const commandManifest = {
   'help': { owner: 'root', group: 'root', perms: 777 },
