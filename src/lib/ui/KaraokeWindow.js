@@ -44,13 +44,26 @@ export const openKaraokeWindow = async () => {
     }
 
     const hasTranslation = songsDictionary[songFile]?.lyricsData?.some(v => v.translation);
-    const globeBadge = hasTranslation ? `<div title="Contains localized translation" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="2" y1="12" x2="22" y2="12"></line>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-      </svg>
-    </div>` : '';
+    const isDialect = songsDictionary[songFile]?.isDialect;
+    
+    let globeBadge = '';
+    if (hasTranslation) {
+      if (isDialect) {
+        globeBadge = `<div title="Contains dialect localization" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="10,4 4,4 4,20 10,20 20,12" />
+          </svg>
+        </div>`;
+      } else {
+        globeBadge = `<div title="Contains localized translation" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>`;
+      }
+    }
 
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `

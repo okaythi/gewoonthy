@@ -15,6 +15,7 @@ export interface Verse {
 
 export interface SongData {
   globalOffset: number;
+  isDialect?: boolean;
   lyricsData: Verse[];
 }
 
@@ -14980,7 +14981,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 26.971,
             "end": 27.296
           }
-        ]
+        ],
+        "translation": "Zaterdagavond ga ik in het bad"
       },
       {
         "verseStart": 27.296,
@@ -15026,7 +15028,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 28.725,
             "end": 29.217
           }
-        ]
+        ],
+        "translation": "Want er groeien al champignons uit mijn gat"
       },
       {
         "verseStart": 29.217,
@@ -15062,7 +15065,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 30.772,
             "end": 31.342
           }
-        ]
+        ],
+        "translation": "Mijn okselgeur is niet meer te doen"
       },
       {
         "verseStart": 31.342,
@@ -15098,7 +15102,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 32.65,
             "end": 33.346
           }
-        ]
+        ],
+        "translation": "Ik spuit deodorant in elke schoen"
       },
       {
         "verseStart": 33.346,
@@ -15154,7 +15159,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 35.228,
             "end": 35.471
           }
-        ]
+        ],
+        "translation": "Ik was mijn haar want het is weer vettig"
       },
       {
         "verseStart": 35.471,
@@ -15195,7 +15201,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 36.909,
             "end": 37.688
           }
-        ]
+        ],
+        "translation": "Ik ben op tijd, twintig uur dertig"
       },
       {
         "verseStart": 37.688,
@@ -15256,7 +15263,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 39.402,
             "end": 39.816
           }
-        ]
+        ],
+        "translation": "Dat is dus nog tijd voor wat puisten uit te knijpen"
       },
       {
         "verseStart": 39.816,
@@ -15297,7 +15305,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 41.206,
             "end": 41.37
           }
-        ]
+        ],
+        "translation": "En binnen het uurtje ben ik weg"
       },
       {
         "verseStart": 41.37,
@@ -15338,7 +15347,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 43.369,
             "end": 44.021
           }
-        ]
+        ],
+        "translation": "Ja zaterdagavond, mijn haar in de plooi"
       },
       {
         "verseStart": 44.021,
@@ -15384,7 +15394,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 45.321,
             "end": 45.889
           }
-        ]
+        ],
+        "translation": "Op en top in kostuum, dat zie je zo"
       },
       {
         "verseStart": 45.889,
@@ -15440,7 +15451,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 47.771,
             "end": 48.22
           }
-        ]
+        ],
+        "translation": "Ik ben de playboy, ik weet dat van mijn eigen"
       },
       {
         "verseStart": 48.22,
@@ -15486,7 +15498,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 49.615,
             "end": 50.309
           }
-        ]
+        ],
+        "translation": "Maar over mijn witte kousen moet je gaan zwijgen"
       },
       {
         "verseStart": 50.309,
@@ -15532,7 +15545,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 51.734,
             "end": 52.264
           }
-        ]
+        ],
+        "translation": "Ik bewonder nog een keer mijn eigen kop"
       },
       {
         "verseStart": 52.264,
@@ -15593,7 +15607,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 53.941,
             "end": 54.388
           }
-        ]
+        ],
+        "translation": "Om te zien is het goed of is het een flop"
       },
       {
         "verseStart": 54.388,
@@ -15649,7 +15664,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 55.94,
             "end": 56.387
           }
-        ]
+        ],
+        "translation": "Ik ben klaar voor het café, dus goed gezind"
       },
       {
         "verseStart": 56.387,
@@ -15690,7 +15706,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 57.98,
             "end": 58.432
           }
-        ]
+        ],
+        "translation": "En als ik binnenkom kraak ik direct mijn pint"
       },
       {
         "verseStart": 58.432,
@@ -15746,7 +15763,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 60.309,
             "end": 60.762
           }
-        ]
+        ],
+        "translation": "Maar zoek je een Bob, maak ik mij uit de voeten"
       },
       {
         "verseStart": 60.762,
@@ -15797,7 +15815,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 62.189,
             "end": 62.721
           }
-        ]
+        ],
+        "translation": "Ik drink zaterdags liever een stuk in mijn kloten"
       },
       {
         "verseStart": 62.721,
@@ -15843,7 +15862,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 64.394,
             "end": 64.68
           }
-        ]
+        ],
+        "translation": "Bob hier Bob daar, het is allemaal iets vies"
       },
       {
         "verseStart": 64.68,
@@ -15894,7 +15914,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 66.395,
             "end": 66.521
           }
-        ]
+        ],
+        "translation": "Als ik op een boom peer kom ik toch op het nieuws"
       },
       {
         "verseStart": 66.521,
@@ -15910,7 +15931,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 67.668,
             "end": 69.581
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 69.581,
@@ -15961,7 +15983,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 70.932,
             "end": 71.428
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 71.428,
@@ -15977,7 +16000,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 72.163,
             "end": 73.261
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 73.261,
@@ -16008,7 +16032,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 74.53,
             "end": 75.39
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 75.39,
@@ -16024,7 +16049,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 76.246,
             "end": 77.55
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 77.55,
@@ -16075,7 +16101,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 79.019,
             "end": 79.634
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 79.634,
@@ -16091,7 +16118,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 80.419,
             "end": 81.639
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 81.639,
@@ -16122,7 +16150,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 82.862,
             "end": 84.09
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 84.09,
@@ -16168,7 +16197,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 85.396,
             "end": 85.85
           }
-        ]
+        ],
+        "translation": "Er is een fuif, daar ga ik eens binnen"
       },
       {
         "verseStart": 85.85,
@@ -16214,7 +16244,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 87.155,
             "end": 87.93
           }
-        ]
+        ],
+        "translation": "Over die honderd frank inkom moet je niet beginnen"
       },
       {
         "verseStart": 87.93,
@@ -16260,7 +16291,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 89.566,
             "end": 90.055
           }
-        ]
+        ],
+        "translation": "Zij heeft twee ogen en ik twee duimen"
       },
       {
         "verseStart": 90.055,
@@ -16321,7 +16353,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 91.53,
             "end": 92.099
           }
-        ]
+        ],
+        "translation": "Ik kom hier niet voor de fuif, maar voor de pramen"
       },
       {
         "verseStart": 92.099,
@@ -16372,7 +16405,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 93.977,
             "end": 94.387
           }
-        ]
+        ],
+        "translation": "Hilde of Hilda, ik grijp ze bij de kraag"
       },
       {
         "verseStart": 94.387,
@@ -16413,7 +16447,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 95.617,
             "end": 96.231
           }
-        ]
+        ],
+        "translation": "Het speelt voor mij allemaal geen rol"
       },
       {
         "verseStart": 96.231,
@@ -16459,7 +16494,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 97.868,
             "end": 98.397
           }
-        ]
+        ],
+        "translation": "Nee, zaterdags lig ik niet in mijn bed"
       },
       {
         "verseStart": 98.397,
@@ -16510,7 +16546,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 99.871,
             "end": 100.403
           }
-        ]
+        ],
+        "translation": "En op de televisie is het ook niet vet"
       },
       {
         "verseStart": 100.403,
@@ -16561,7 +16598,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 102.035,
             "end": 102.198
           }
-        ]
+        ],
+        "translation": "Je moet niet proberen van het mij te beletten"
       },
       {
         "verseStart": 102.198,
@@ -16612,7 +16650,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 104.283,
             "end": 104.73
           }
-        ]
+        ],
+        "translation": "Om zaterdags een stapje in de wereld te zetten"
       },
       {
         "verseStart": 104.73,
@@ -16643,7 +16682,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 105.551,
             "end": 106.651
           }
-        ]
+        ],
+        "translation": "Met toverwater van de interbrew"
       },
       {
         "verseStart": 106.651,
@@ -16699,7 +16739,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 108.326,
             "end": 108.896
           }
-        ]
+        ],
+        "translation": "Of de nectar van de haacht, dat is al even goed"
       },
       {
         "verseStart": 108.896,
@@ -16745,7 +16786,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 110.489,
             "end": 110.98
           }
-        ]
+        ],
+        "translation": "Even goed voor de stress en de dynamiek"
       },
       {
         "verseStart": 110.98,
@@ -16781,7 +16823,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 112.245,
             "end": 112.977
           }
-        ]
+        ],
+        "translation": "Voor uw piston en de elektriciteit"
       },
       {
         "verseStart": 112.977,
@@ -16837,7 +16880,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 114.82,
             "end": 115.226
           }
-        ]
+        ],
+        "translation": "Over naar huis gaan moet je tegen mij direct nog niet praten"
       },
       {
         "verseStart": 115.226,
@@ -16893,7 +16937,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 116.775,
             "end": 117.428
           }
-        ]
+        ],
+        "translation": "Ik ga eerst nog wat pintjes in mijn kamizool kappen"
       },
       {
         "verseStart": 117.428,
@@ -16909,7 +16954,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 118.209,
             "end": 119.468
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 119.468,
@@ -16960,7 +17006,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 121.104,
             "end": 121.593
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 121.593,
@@ -16976,7 +17023,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 122.658,
             "end": 123.593
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 123.593,
@@ -17007,7 +17055,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 124.691,
             "end": 125.671
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 125.671,
@@ -17023,7 +17072,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 126.535,
             "end": 127.682
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 127.682,
@@ -17074,7 +17124,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 129.394,
             "end": 129.975
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 129.975,
@@ -17090,7 +17141,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 130.751,
             "end": 131.85
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 131.85,
@@ -17121,7 +17173,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 133.075,
             "end": 134.01
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 134.01,
@@ -17167,7 +17220,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 135.483,
             "end": 136.053
           }
-        ]
+        ],
+        "translation": "Het broebelt in mijn strot en alles draait"
       },
       {
         "verseStart": 136.053,
@@ -17213,7 +17267,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 137.606,
             "end": 138.182
           }
-        ]
+        ],
+        "translation": "Ik moet naar de koer, alles moet eruit"
       },
       {
         "verseStart": 138.182,
@@ -17259,7 +17314,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 139.781,
             "end": 140.191
           }
-        ]
+        ],
+        "translation": "Ik braak curryworst en wat soep van daarnet"
       },
       {
         "verseStart": 140.191,
@@ -17315,7 +17371,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 141.821,
             "end": 142.391
           }
-        ]
+        ],
+        "translation": "Het ligt allemaal te drijven in de GFT-bak"
       },
       {
         "verseStart": 142.391,
@@ -17381,7 +17438,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 144.318,
             "end": 144.605
           }
-        ]
+        ],
+        "translation": "Als ik denk dat het is gedaan, valt nog een flats op mijn hemd"
       },
       {
         "verseStart": 144.605,
@@ -17432,7 +17490,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 145.911,
             "end": 146.407
           }
-        ]
+        ],
+        "translation": "Ik val over mijn voeten, dat is niet het slimste"
       },
       {
         "verseStart": 146.407,
@@ -17478,7 +17537,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 148.116,
             "end": 148.651
           }
-        ]
+        ],
+        "translation": "Het wordt te veel, ik begin het te voelen"
       },
       {
         "verseStart": 148.651,
@@ -17529,7 +17589,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 149.954,
             "end": 150.689
           }
-        ]
+        ],
+        "translation": "Maar eerst de kots-smaak met nog een pintje wegspoelen"
       },
       {
         "verseStart": 150.689,
@@ -17580,7 +17641,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 152.364,
             "end": 152.732
           }
-        ]
+        ],
+        "translation": "En ik val in slaap in de asbak"
       },
       {
         "verseStart": 152.732,
@@ -17631,7 +17693,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 154.359,
             "end": 154.85
           }
-        ]
+        ],
+        "translation": "Geef nu toe, ik ben eigenlijk toch een krak"
       },
       {
         "verseStart": 154.85,
@@ -17682,7 +17745,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 156.322,
             "end": 156.852
           }
-        ]
+        ],
+        "translation": "Ik ga naar mijn thuis waar de Stella staat"
       },
       {
         "verseStart": 156.852,
@@ -17728,7 +17792,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 158.324,
             "end": 159.016
           }
-        ]
+        ],
+        "translation": "Je weet wel waar die omgekapte boom staat"
       },
       {
         "verseStart": 159.016,
@@ -17794,7 +17859,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 160.767,
             "end": 161.172
           }
-        ]
+        ],
+        "translation": "Ik pak de trap naar boven, maar hij loopt meer naar beneden"
       },
       {
         "verseStart": 161.172,
@@ -17830,7 +17896,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 162.147,
             "end": 163.33
           }
-        ]
+        ],
+        "translation": "Dat is al van vorige zaterdag geleden"
       },
       {
         "verseStart": 163.33,
@@ -17881,7 +17948,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 164.8,
             "end": 165.291
           }
-        ]
+        ],
+        "translation": "Dat de trap niet meer doet wat je verwacht"
       },
       {
         "verseStart": 165.291,
@@ -17922,7 +17990,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 166.747,
             "end": 167.401
           }
-        ]
+        ],
+        "translation": "Dat kan je voorhebben op een zaterdagnacht"
       },
       {
         "verseStart": 167.401,
@@ -17938,7 +18007,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 168.342,
             "end": 169.771
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 169.771,
@@ -17989,7 +18059,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 171.111,
             "end": 171.685
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 171.685,
@@ -18005,7 +18076,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 172.46,
             "end": 173.721
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 173.721,
@@ -18036,7 +18108,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 174.821,
             "end": 175.921
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 175.921,
@@ -18052,7 +18125,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 176.741,
             "end": 177.854
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 177.854,
@@ -18103,7 +18177,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 179.57,
             "end": 180.141
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 180.141,
@@ -18119,7 +18194,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 180.923,
             "end": 182.105
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 182.105,
@@ -18150,7 +18226,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 183.049,
             "end": 184.272
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 184.272,
@@ -18166,7 +18243,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 185.131,
             "end": 186.272
           }
-        ]
+        ],
+        "translation": "Joepiao, Jupilerajee"
       },
       {
         "verseStart": 186.272,
@@ -18217,7 +18295,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 187.987,
             "end": 190.401
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 190.401,
@@ -18248,7 +18327,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 191.593,
             "end": 194.817
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       },
       {
         "verseStart": 194.817,
@@ -18299,7 +18379,8 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 196.27,
             "end": 198.85
           }
-        ]
+        ],
+        "translation": "Wij gaan feesten en als dat nog niet mag"
       },
       {
         "verseStart": 198.85,
@@ -18330,9 +18411,11 @@ export const songsDictionary: Record<string, SongData> = {
             "start": 199.92,
             "end": 0
           }
-        ]
+        ],
+        "translation": "Want zaterdag is het krapoeltjesdag"
       }
-    ]
+    ],
+    "isDialect": true
   },
   "Joël Legendre à Soirée Canadienne.mp4": {
     "globalOffset": 0,
