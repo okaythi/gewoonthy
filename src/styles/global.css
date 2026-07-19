@@ -6,6 +6,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+3000-303f, U+3040-309f, U+30a0-30ff, U+ff00-ff9f, U+4e00-9faf;
 }
 
 :root {
@@ -26,7 +27,7 @@
 body {
   background-color: var(--ubuntu-purple);
   color: var(--ubuntu-text);
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Zen Kurenaido', 'Ubuntu Mono', monospace;
   font-size: 16px;
   line-height: 1.2;
   overflow: hidden;
@@ -110,7 +111,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Zen Kurenaido', system-ui, -apple-system, sans-serif;
   z-index: 100;
   color: #fff;
   border: 1px solid #3a3a3a;
