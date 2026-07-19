@@ -7,7 +7,11 @@ const commandManifest = {
   'account': { owner: 'root', group: 'root', perms: 777 },
   'logout': { owner: 'root', group: 'root', perms: 777 },
   'projects': { owner: 'root', group: 'root', perms: 777 },
-  'uptime': { owner: 'root', group: 'root', perms: 777 }
+  'uptime': { owner: 'root', group: 'root', perms: 777 },
+  'locale': { owner: 'root', group: 'root', perms: 777 },
+  'localectl': { owner: 'root', group: 'root', perms: 777 },
+  'language': { owner: 'root', group: 'root', perms: 777 },
+  'export': { owner: 'root', group: 'root', perms: 777 }
 };
 
 export async function onRequestPost({ request, env }) {

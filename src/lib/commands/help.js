@@ -6,6 +6,7 @@ export const helpCommand = async (args, terminal) => {
   let helpText = sys.help_header || '\nAvailable commands:\n';
   
   for (const [cmdName, { metadata }] of commandEngine.commands.entries()) {
+    if (cmdName === 'localectl' || cmdName === 'language') continue;
     const desc = sys[`${cmdName}_desc`] || sys[`${cmdName === 'localectl' || cmdName === 'language' ? 'locale' : cmdName}_desc`] || metadata.description;
     helpText += `  ${cmdName.padEnd(10)} ${desc}\n`;
     if (metadata.args && metadata.args.length > 0) {
