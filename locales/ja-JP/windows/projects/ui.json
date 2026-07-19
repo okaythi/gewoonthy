@@ -1,10 +1,10 @@
 {
-  "tab_recent": "Recent",
-  "tab_starred": "Starred",
-  "tab_coding": "Coding",
-  "tab_music": "Music",
-  "tab_professional": "Professional",
-  "empty_choose": "Choose an option on the menu to see it here.",
-  "empty_nothing": "Nothing to show here yet.",
-  "card_karaoke": "Karaoke"
+  "tab_recent": "最近",
+  "tab_starred": "お気に入り",
+  "tab_coding": "コーディング",
+  "tab_music": "音楽",
+  "tab_professional": "プロフェッショナル",
+  "empty_choose": "メニューのオプションを選択すると、ここに表示されます。",
+  "empty_nothing": "まだ表示するものがありません。",
+  "card_karaoke": "カラオケ"
 }

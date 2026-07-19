@@ -1,10 +1,10 @@
 {
-  "tab_recent": "Recent",
-  "tab_starred": "Starred",
-  "tab_coding": "Coding",
-  "tab_music": "Music",
-  "tab_professional": "Professional",
-  "empty_choose": "Choose an option on the menu to see it here.",
-  "empty_nothing": "Nothing to show here yet.",
+  "tab_recent": "Senaste",
+  "tab_starred": "Stjärnmärkt",
+  "tab_coding": "Kodning",
+  "tab_music": "Musik",
+  "tab_professional": "Professionell",
+  "empty_choose": "Välj ett alternativ i menyn för att se det här.",
+  "empty_nothing": "Inget att visa här ännu.",
   "card_karaoke": "Karaoke"
 }

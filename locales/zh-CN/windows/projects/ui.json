@@ -1,10 +1,10 @@
 {
-  "tab_recent": "Recent",
-  "tab_starred": "Starred",
-  "tab_coding": "Coding",
-  "tab_music": "Music",
-  "tab_professional": "Professional",
-  "empty_choose": "Choose an option on the menu to see it here.",
-  "empty_nothing": "Nothing to show here yet.",
-  "card_karaoke": "Karaoke"
+  "tab_recent": "最近",
+  "tab_starred": "已加星标",
+  "tab_coding": "编码",
+  "tab_music": "音乐",
+  "tab_professional": "专业",
+  "empty_choose": "在菜单上选择一个选项以在此处查看。",
+  "empty_nothing": "这里还没有什么可展示的。",
+  "card_karaoke": "卡拉OK"
 }

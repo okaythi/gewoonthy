@@ -1,10 +1,10 @@
 {
-  "tab_recent": "Recent",
-  "tab_starred": "Starred",
-  "tab_coding": "Coding",
-  "tab_music": "Music",
-  "tab_professional": "Professional",
-  "empty_choose": "Choose an option on the menu to see it here.",
-  "empty_nothing": "Nothing to show here yet.",
+  "tab_recent": "Reciente",
+  "tab_starred": "Destacados",
+  "tab_coding": "Programación",
+  "tab_music": "Música",
+  "tab_professional": "Profesional",
+  "empty_choose": "Elegí una opción del menú para verla acá.",
+  "empty_nothing": "No hay nada para mostrar acá todavía.",
   "card_karaoke": "Karaoke"
 }
