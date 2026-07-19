@@ -49,7 +49,7 @@ export const openKaraokeWindow = async () => {
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `
       <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
-        <img class="song-art" data-artist="${encodeURIComponent(queryArtist)}" data-track="${encodeURIComponent(queryTrack)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%23888\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
+        <img class="song-art" data-artist="${encodeURIComponent(queryArtist)}" data-track="${encodeURIComponent(queryTrack)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
         <div style="overflow: hidden; flex: 1;">
           <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${songName}</div>
           <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${artistName}</div>
@@ -291,7 +291,7 @@ export const openKaraokeWindow = async () => {
         if (newVerseIndex !== -1) {
           lastActiveLyricTime = Date.now();
           lyricsContainer.style.opacity = '1';
-          const newV = mainView.querySelector(\`#verse-\${newVerseIndex}\`);
+          const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
           const words = newV.querySelectorAll('.word');
           
           let activeWordEl = null;
@@ -326,7 +326,7 @@ export const openKaraokeWindow = async () => {
               // Vertically center if it fully fits
               translateY = (vHeight - innerHeight) / 2;
             }
-            scrollInner.style.transform = \`translateY(\${translateY}px)\`;
+            scrollInner.style.transform = `translateY(${translateY}px)`;
           }
         } else {
           lyricsContainer.style.opacity = '0';
