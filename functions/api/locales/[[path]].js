@@ -25,7 +25,7 @@ export async function onRequest(context) {
 
   const object = await bucket.get(pathStr);
   if (!object) {
-    return new Response('Not found in R2', { status: 404 });
+    return new Response(`Not found in R2: "${pathStr}"`, { status: 404 });
   }
 
   const headers = new Headers();

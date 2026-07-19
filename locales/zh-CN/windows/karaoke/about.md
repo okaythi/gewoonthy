@@ -1,24 +1,22 @@
-[This document is localized in zh-CN]
+# 开发卡拉OK引擎
 
-# Engineering the Karaoke Engine
+欢迎来到卡拉OK应用程序的后端。在浏览器里（更不用说在这个自制的Linux终端模拟器里）打造一个流畅的、逐字高亮的卡拉OK体验，虽然很有趣，但有时真的是个真心累人的项目。这不仅仅是播放一段视频那么简单，而是要在亚毫秒级别进行同步，并且还要与浏览器的延迟作斗争。关键词就是：“斗争” lol。
 
-Welcome to the backend of the Karaoke application. Building a seamless, word-by-word karaoke experience in the browser (never mind inside this custom-made Linux terminal simulator) was a fun but sometimes proper knackering project, which isn't just about playing a video, it’s about sub-millisecond synchronisation and fighting browser latency. Keyword: "fighting" lol
+即便作为一个业余开发者，我依然想打造一个感觉原生、顺滑且精准的东西。这里为您揭秘这一切是如何在引擎盖下运作的。
 
-Even as a hobbyist, I still wanted to build something that felt native, snappy, and exact. Here is a look under the hood at how this comes together.
+## 1. 纯手工苦力活 (lyrics.ts)
 
-## 1. The Manual Labour (lyrics.ts)
+如果你在想我到底用了什么AI或者神奇的API来做到歌词的逐字同步……答案是纯粹的意志力 lol。
 
-If you are wondering what AI or magical API I used to sync the lyrics word-by-word...... the answer is sheer willpower lol
-
-Standard `.lrc` files usually only sync line-by-line, and the APIs I found were so mediocre that tbh their very existence is embarrassing. To get that modern, bouncy, word-by-word highlight, I manually went through every single video. I painstakingly marked the exact timestamp for the beginning and end of every single word and verse. Honestly, understanding speech prosody and articulatory phonetics is both a blessing and a curse here - seeing a lyric visually light up even 150ms after the syllable is actually sung physically hurts my soul.
+标准的 `.lrc` 文件通常只能做到逐行同步，而我能找到的API都太水了，说实话它们的存在本身就很尴尬。为了实现那种现代的、有弹性的、逐字高亮的效果，我手动过了一遍每一个视频。我煞费苦心地标记了每一个词和每一段主歌开头和结尾的准确时间戳。说真的，懂得语音韵律和发音语音学在这里既是祝福也是诅咒——看到一个词在音节被唱出来150毫秒之后才在视觉上亮起，这会让我的灵魂感到生理上的痛苦。
 
 > [!NOTE]
-> This is still the case for the Russian song Плак-плак, but bear with me, I can read Cyrillic but I don't speak Russian.
+> 对于俄语歌曲《Плак-плак》来说依然存在这个问题，但请多包涵，我能读西里尔字母，但我不会说俄语。
 
-So, I ran a script (I had an LLM model create this one script for me) to format it into our `lyrics.ts` dataset. It took literal days, but the precision is good enough that I'm proud to show it off.
+所以，我跑了一个脚本（我让一个LLM模型帮我写了这个小脚本）把这些数据格式化成了我们的 `lyrics.ts` 数据集。这花了我整整好几天的时间，但精准度好到足以让我自豪地拿出来炫耀了。
 
 ```typescript
-// A glimpse into lyrics.ts
+// 瞥一眼 lyrics.ts
 export const lyricsData = [
   { start: 12.45, end: 12.80, text: "Never", type: "word" },
   { start: 12.81, end: 13.10, text: "gonna", type: "word" },
@@ -26,36 +24,36 @@ export const lyricsData = [
 ];
 ```
 
-## 2. Fighting the DOM (KaraokeWindow.js)
+## 2. 与DOM的搏斗 (KaraokeWindow.js)
 
-The core challenge was keeping the UI perfectly tethered to the video's playback state. The daft-me approach was using the HTML5 `<video>` tag's native `timeupdate` event. 
+核心挑战是如何让UI与视频的播放状态完美绑定。一开始我的蠢办法是直接使用 HTML5 `<video>` 标签原生的 `timeupdate` 事件。
 
-I quickly learned that `timeupdate` is absolute bollocks for this. It fires maybe 4 times a second (roughly 250ms intervals). For a slow ballad, I mean, fine I guess. For fast rap verses or a punchy techno track? It looks like a jittery, out-of-sync mess. 
+我很快就发现用 `timeupdate` 来干这事简直就是纯粹的垃圾。它大概每秒才触发4次（差不多250毫秒的间隔）。对于一首慢节奏的抒情歌来说，勉强还凑合吧。但要是碰上快节奏的Rap或者动感十足的Techno曲目呢？那看起来就是一场卡顿的、完全不同步的灾难。
 
-The workaround was to throw `timeupdate` out the window entirely and hijack the browser's `requestAnimationFrame`. This polls `vid.currentTime` at 60 frames per second. I did some digging around and found that using the Web Audio API to create a custom audio context node might technically be the godlike way to handle absolute time precision, but tying the DOM strictly to the video clock via rAF worked flawlessly, and writing custom audio buffer parsers was way above my intellectual grade.
+解决办法就是把 `timeupdate` 彻底抛到脑后，然后劫持浏览器的 `requestAnimationFrame`。这能以每秒60帧的速度轮询 `vid.currentTime`。我做了一些深入的研究，发现使用 Web Audio API 来创建一个自定义的音频上下文节点，在技术上可能是处理绝对时间精度的神级方案，但是通过 rAF 把 DOM 严格绑定到视频时钟上已经能完美运行了，而且从头写一个自定义的音频缓冲解析器实在超出了我的智商水平。
 
-Like so:
+就像这样：
 ```javascript
-// Polling at 60fps instead of relying on slow event listeners
+// 以60fps进行轮询，而不是依赖缓慢的事件监听器
 function updateLyrics() {
   const currentTime = vid.currentTime;
-  // [...] word-matching logic
+  // [...] 单词匹配逻辑
   requestAnimationFrame(updateLyrics);
 }
 ```
 
-## 3. The Font Rendering Nightmare
+## 3. 字体渲染的噩梦
 
-A major hurdle I didn't see coming: custom typography latency. Because a lot of these tracks are multilingual, dynamically fetching heavy Japanese Google Fonts on the fly caused massive FOIT (Flash of Invisible Text). By the time the browser fetched the font, the entire kanji verse had already passed by so it was pure wank.
+一个我始料未及的大障碍：自定义排版的延迟。因为很多曲目都是多语言的，动态地实时去获取那些体积庞大的日文 Google Fonts 会导致严重的 FOIT（闪烁的不可见文本）。等浏览器把字体获取下来的时候，整段日文汉字的歌词早都已经过去了，所以这真的很拉垮。
 
-I read about "subsetting" CJK fonts using Python to strip out thousands of unused glyphs to make the file smaller, but tbh I couldn't be arsed to do all that for every single language. My workaround was to brute force caching. I converted the raw `.ttf` into a compressed `.woff2` (about 1MB), hosted it directly on my own CDN (`cdn.sudothy.me`), and aggressively forced the browser to cache it using a `<link rel="preload">` directive in the document head before the karaoke module even mounts. Sorted.
+我看过关于用 Python 对中日韩字体进行“子集化”的文章，也就是剥离掉成千上万个不用的字形来让文件变小，但老实说，给每种语言都搞这一套我实在懒得弄。我的暴力解决办法是强制缓存。我把原始的 `.ttf` 转换成了压缩的 `.woff2`（大概1MB），直接托管在我自己的 CDN（`cdn.sudothy.me`）上，然后在卡拉OK模块挂载之前，就在文档头部使用 `<link rel="preload">` 指令疯狂地强迫浏览器缓存它。搞定。
 
-## 4. Visuals & Garbage Collection (global.css)
+## 4. 视觉效果与垃圾回收 (global.css)
 
-Then there was the issue of instrumental breaks. Stale text lingering on screen for 40 seconds looks proper ropey. I implemented a garbage collector: if 3 seconds pass without a lyric update, the UI gracefully unmounts the text block.
+然后就是间奏暂停的问题。旧的歌词停留在屏幕上长达40秒，看起来实在太拉垮了。我实现了一个垃圾回收器：如果超过3秒没有歌词更新，UI就会优雅地卸载掉文本块。
 
-When a word *is* active, it needs to physically pop. We use Canonical's Ubuntu Orange (`#E95420`) with a layered glow and a slight `transform: scale(1.05)`. 
-Like so:
+当一个词*确实*处于激活状态时，它需要有物理上的弹跳感。我们使用了 Canonical 的 Ubuntu 橙色（`#E95420`），加上多层的发光效果以及轻微的 `transform: scale(1.05)`。
+就像这样：
 ```css
 .lyric-word.active {
   color: #E95420;
@@ -65,16 +63,16 @@ Like so:
   transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ```
-*A technical note:* Getting this to run without dropping frames meant strictly animating the `transform` property to keep it hardware-accelerated. If you try to animate `font-size` for that kinetic pop, the browser's layout engine throws a fit and causes major lag. And yes frames are still dropping like a bastard so any tips are welcome. You can open an issue on my Github repo for this.
+*技术说明：* 要想让这个效果运行且不掉帧，就意味着只能严格对 `transform` 属性做动画，以保持硬件加速。如果你试图通过动画 `font-size` 来实现那种动感十足的弹跳，浏览器的布局引擎就会当场发飙，并导致严重的卡顿。当然，现在还是掉帧掉得跟见鬼了一样，所以欢迎提供任何建议。你可以在我的 Github 仓库里为这事提个 issue。
 
-## 5. API Nightmares
+## 5. API的噩梦
 
-I originally used the MusicBrainz/Cover Art Archive API to fetch the album art dynamically. It was an absolute piss-take. It would successfully pull the artwork for some niche regional pop track, but return nothing for massively defining records. 
+我最初使用的是 MusicBrainz/Cover Art Archive 的 API 来动态获取专辑封面。那简直是个笑话。它能完美获取一些小众地方流行歌曲的封面，但对于那些家喻户晓的重量级唱片却什么也返回不了。
 
-I ripped it out. We now bounce the search string through the iTunes Search API. It’s incredibly forgiving with fuzzy searches and has a near 100% hit rate. Sometimes the simplest corporate API is just better than a pedantic open-source database. Proper gutting tho cause I'm usually one to stick two fingers up at closed-source big tech stuff.
+我把它直接砍了。我们现在直接通过 iTunes Search API 来进行搜索。它对模糊搜索极其宽容，命中率几乎达到 100%。有时候，最简单的企业级 API 就是比那些死板的开源数据库要好用得多。虽然挺让人不爽的，毕竟我通常是那个喜欢对科技巨头的闭源系统竖中指的人。
 
-## 6. The Voting System (vote.js)
+## 6. 投票系统 (vote.js)
 
-Finally, the Like/Dislike client. It sits in the frontend and fires off POST requests to a serverless backend (`vote.js`) that talks to my database. I had to implement local state tracking so users don't just spam the endpoint, but keeping the UI updates optimistic (updating the button colour before the server responds) makes it feel instantly responsive. 
+最后，点赞/踩客户端。它位于前端，并向与我的数据库对话的 Serverless 后端（`vote.js`）发送 POST 请求。我必须实现本地状态追踪，以免用户狂刷这个接口，但通过保持乐观的 UI 更新（在服务器响应之前就更新按钮颜色），能让它感觉是瞬间响应的。
 
-It is a complex little ecosystem, but seeing it run flawlessly in a simulated desktop environment makes every timestamp worth it.
+这是一个复杂的小生态系统，但看到它在模拟的桌面环境中完美运行，让每一个记录的时间戳都变得物有所值。
