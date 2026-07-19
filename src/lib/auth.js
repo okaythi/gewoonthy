@@ -35,18 +35,25 @@ class AuthManager {
   async handleInput(input, terminal) {
     if (this.state === AuthState.PROMPT_LOGIN) {
       if (!input.trim()) {
-        const res = await fetch('/api/auth', {
-          method: 'POST',
-          body: JSON.stringify({ action: 'guest' })
-        });
-        const data = await res.json();
-        
-        this.user = data.user;
-        this.token = data.token;
-        this.state = AuthState.READY;
-        localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
-        terminal.printMOTD();
-        terminal.setPrompt(`sudothy@${this.user.username} $ `);
+        try {
+          const res = await fetch('/api/auth', {
+            method: 'POST',
+            body: JSON.stringify({ action: 'guest' })
+          });
+          if (!res.ok) throw new Error('Guest login failed');
+          const data = await res.json();
+          
+          this.user = data.user;
+          this.token = data.token;
+          this.state = AuthState.READY;
+          localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
+          terminal.printMOTD();
+          terminal.setPrompt(`sudothy@${this.user.username} $ `);
+        } catch (e) {
+          terminal.printLine(`Guest login failed`);
+          this.state = AuthState.PROMPT_LOGIN;
+          terminal.setPrompt(`login (leave empty to use as guest): `);
+        }
         terminal.prompt();
       } else {
         this.loginInput = input.trim();
