@@ -21,7 +21,7 @@ export async function onRequest({ request, env, next }) {
   }
 
   // MAINTENANCE INTERCEPT: Redirect all non-essential page loads to the root maintenance page
-  if (!normalizedPath.startsWith('/api') && !normalizedPath.startsWith('/media') && !normalizedPath.startsWith('/_astro') && !normalizedPath.startsWith('/sync-lyrics') && normalizedPath !== '/' && normalizedPath !== '/m') {
+  if (!normalizedPath.startsWith('/api') && !normalizedPath.startsWith('/media') && !normalizedPath.startsWith('/_astro') && normalizedPath !== '/' && normalizedPath !== '/m') {
     const rewriteReq = new Request(new URL(url.origin + '/'), request);
     return env.ASSETS.fetch(rewriteReq);
   }
