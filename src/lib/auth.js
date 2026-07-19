@@ -1,3 +1,5 @@
+import { localesFetcher } from './LocalesFetcher.js';
+
 export const AuthState = {
   BOOTING: 'BOOTING',
   PROMPT_LOGIN: 'PROMPT_LOGIN',
@@ -33,6 +35,7 @@ class AuthManager {
   }
 
   async handleInput(input, terminal) {
+    const sys = await localesFetcher.fetchSystem() || {};
     if (this.state === AuthState.PROMPT_LOGIN) {
       if (!input.trim()) {
         try {
@@ -47,18 +50,18 @@ class AuthManager {
           this.token = data.token;
           this.state = AuthState.READY;
           localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
-          terminal.printMOTD();
+          await terminal.printMOTD();
           terminal.setPrompt(`sudothy@${this.user.username} $ `);
         } catch (e) {
-          terminal.printLine(`Guest login failed`);
+          terminal.printLine(sys.login_guest_failed || `Guest login failed`);
           this.state = AuthState.PROMPT_LOGIN;
-          terminal.setPrompt(`login (leave empty to use as guest): `);
+          terminal.setPrompt(sys.login_prompt || `login (leave empty to use as guest): `);
         }
         terminal.prompt();
       } else {
         this.loginInput = input.trim();
         this.state = AuthState.PROMPT_PASSWORD;
-        terminal.setPrompt(`[password]: `);
+        terminal.setPrompt(sys.login_password_prompt || `[password]: `);
         terminal.setMasked(true);
         terminal.prompt();
       }
@@ -75,17 +78,17 @@ class AuthManager {
         this.token = data.token;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
-        terminal.printMOTD();
+        await terminal.printMOTD();
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
-        terminal.printLine(`Login incorrect`);
+        terminal.printLine(sys.login_incorrect || `Login incorrect`);
         this.state = AuthState.PROMPT_LOGIN;
-        terminal.setPrompt(`login (leave empty to use as guest): `);
+        terminal.setPrompt(sys.login_prompt || `login (leave empty to use as guest): `);
       }
       terminal.prompt();
     } else if (this.state === AuthState.PROMPT_CREATE_USER) {
       if (!input.trim()) {
-        terminal.printLine(`account: username cannot be empty`);
+        terminal.printLine(sys.auth_acc_empty || `account: username cannot be empty`);
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
         terminal.prompt();
@@ -93,7 +96,7 @@ class AuthManager {
       }
       this.createInput = input.trim();
       this.state = AuthState.PROMPT_CREATE_PASS;
-      terminal.setPrompt(`New password: `);
+      terminal.setPrompt(sys.auth_acc_new_pass || `New password: `);
       terminal.setMasked(true);
       terminal.prompt();
     } else if (this.state === AuthState.PROMPT_CREATE_PASS) {
@@ -105,15 +108,16 @@ class AuthManager {
         });
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || 'Username taken or error');
-        terminal.printLine(`Account created successfully. Logging in...`);
+        terminal.printLine(sys.auth_acc_created || `Account created successfully. Logging in...`);
         this.user = data.user;
         this.token = data.token;
         localStorage.setItem('sudothy_session', JSON.stringify({ user: this.user, token: this.token }));
         this.state = AuthState.READY;
-        terminal.printMOTD();
+        await terminal.printMOTD();
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       } catch (e) {
-        terminal.printLine(`account: creation failed (${e.message})`);
+        const errMsg = sys.auth_acc_creation_failed ? sys.auth_acc_creation_failed.replace('{err}', e.message) : `account: creation failed (${e.message})`;
+        terminal.printLine(errMsg);
         this.state = AuthState.READY;
         terminal.setPrompt(`sudothy@${this.user.username} $ `);
       }
@@ -130,12 +134,13 @@ class AuthManager {
             body: JSON.stringify({ action: 'delete', username: this.deleteTarget })
           });
           if (!res.ok) throw new Error('Deletion failed');
-          terminal.printLine(`User '${this.deleteTarget}' deleted successfully.`);
+          const succMsg = sys.auth_acc_del_success ? sys.auth_acc_del_success.replace('{user}', this.deleteTarget) : `User '${this.deleteTarget}' deleted successfully.`;
+          terminal.printLine(succMsg);
         } catch (e) {
-          terminal.printLine(`account: deletion failed`);
+          terminal.printLine(sys.auth_acc_del_fail || `account: deletion failed`);
         }
       } else {
-        terminal.printLine(`account: deletion cancelled.`);
+        terminal.printLine(sys.auth_acc_del_cancel || `account: deletion cancelled.`);
       }
       this.state = AuthState.READY;
       terminal.setPrompt(`sudothy@${this.user.username} $ `);
@@ -156,7 +161,8 @@ class AuthManager {
     this.user = null;
     this.token = null;
     this.state = AuthState.PROMPT_LOGIN;
-    terminal.setPrompt(`login (leave empty to use as guest): `);
+    const sys = await localesFetcher.fetchSystem() || {};
+    terminal.setPrompt(sys.login_prompt || `login (leave empty to use as guest): `);
     terminal.prompt();
   }
 }

@@ -1,8 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const localizations = {
-  'nl-BE': {
+// Instead of rewriting all existing translations here, let's just append the newly required ones
+// We will write a small script that reads en-GB, but for speed, I'll just write out the translations
+// since we only have 9 locales. Wait, the prompt says "do the job completely".
+// Let's implement an automated translation file generator for the markdown and system UI.
     about: {
       "title": "Thy - Over Mij",
       "languages_title": "Talen",

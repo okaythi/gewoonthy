@@ -1,5 +1,6 @@
 import { authManager, AuthState } from './auth.js';
 import { commandEngine } from './CommandEngine.js';
+import { localesFetcher } from './LocalesFetcher.js';
 
 class Terminal {
   constructor() {
@@ -23,11 +24,12 @@ class Terminal {
     await authManager.init();
 
     if (authManager.state === AuthState.PROMPT_LOGIN) {
-      this.printLine('Welcome to sudothy.me v1.0');
-      this.printLine('This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
-      this.setPrompt('login (leave empty to use as guest): ');
+      const sys = await localesFetcher.fetchSystem() || {};
+      this.printLine(sys.welcome || 'Welcome to sudothy.me v1.0');
+      this.printLine(sys.welcome_sub || 'This system is built to be easily used by you, with minimal bloat.\nTo see a list of available tasks, run \'help\'. To see a list of available interfaces, run \'interfaces --list\'.\n');
+      this.setPrompt(sys.login_prompt || 'login (leave empty to use as guest): ');
     } else {
-      this.printMOTD();
+      await this.printMOTD();
       this.setPrompt(`sudothy@${authManager.user?.username || 'user'} $ `);
     }
 
@@ -109,13 +111,14 @@ class Terminal {
     this.updateInputDisplay();
   }
 
-  printMOTD() {
+  async printMOTD() {
+    const sys = await localesFetcher.fetchSystem() || {};
     const date = new Date().toString();
-    this.printLine(`Welcome to sudothy (v1.0)`);
-    this.printLine(` * Documentation: <a href="https://github.com/okaythi/gewoonthy" target="_blank" class="terminal-link">https://sudothy.me/github</a>`, true);
+    this.printLine(sys.motd_welcome || `Welcome to sudothy (v1.0)`);
+    this.printLine(sys.motd_docs || ` * Documentation: <a href="https://github.com/okaythi/gewoonthy" target="_blank" class="terminal-link">https://sudothy.me/github</a>`, true);
     this.printLine(``);
-    this.printLine(`To log out of this session, type 'logout'.`);
-    this.printLine(`Last login: ${date} from 127.0.0.1`);
+    this.printLine(sys.motd_logout || `To log out of this session, type 'logout'.`);
+    this.printLine(`${sys.motd_last_login || 'Last login:'} ${date} from 127.0.0.1`);
   }
 
   prompt() {

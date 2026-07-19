@@ -88,21 +88,33 @@ export const openKaraokeWindow = async () => {
       });
   });
 
-  const renderAbout = () => {
-    const template = document.getElementById('about-karaoke-template');
-    if (template) {
+  const renderAbout = async () => {
+    const mdContent = await localesFetcher.fetchMarkdown('karaoke', 'about.md');
+    if (mdContent && window.marked) {
+      const renderedHtml = window.marked.parse(mdContent);
       mainView.innerHTML = `
         <div style="width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; background: #241f31;" class="custom-scrollbar">
-          ${template.innerHTML}
+          <div class="ubuntu-prose" style="padding: 20px;">
+            ${renderedHtml}
+          </div>
         </div>
       `;
     } else {
-      mainView.innerHTML = `
-        <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
-          <h2 style="font-size: 28px; margin-bottom: 15px;">${i18n.about_project}</h2>
-          <p style="opacity: 0.8; line-height: 1.6;">${i18n.failed_load}</p>
-        </div>
-      `;
+      const template = document.getElementById('about-karaoke-template');
+      if (template) {
+        mainView.innerHTML = `
+          <div style="width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; background: #241f31;" class="custom-scrollbar">
+            ${template.innerHTML}
+          </div>
+        `;
+      } else {
+        mainView.innerHTML = `
+          <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
+            <h2 style="font-size: 28px; margin-bottom: 15px;">${i18n.about_project}</h2>
+            <p style="opacity: 0.8; line-height: 1.6;">${i18n.failed_load}</p>
+          </div>
+        `;
+      }
     }
   };
 

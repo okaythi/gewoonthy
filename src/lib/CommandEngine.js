@@ -8,6 +8,7 @@ import { uptimeCommand, uptimeMetadata } from './commands/uptime.js';
 import { localeCommand, localeMetadata } from './commands/locale.js';
 import { exportCommand, exportMetadata } from './commands/export.js';
 import { authManager } from './auth.js';
+import { localesFetcher } from './LocalesFetcher.js';
 
 class CommandEngine {
   constructor() {
@@ -30,35 +31,40 @@ class CommandEngine {
   }
 
   async execute(input, terminal) {
-    const tokens = input.trim().split(/\s+/);
-    if (!tokens[0]) return;
+    if (!input.trim()) return;
 
-    const cmdName = tokens[0];
-    const args = tokens.slice(1);
+    const parts = input.trim().match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+    const commandName = parts[0].toLowerCase();
+    const args = parts.slice(1).map(arg => arg.replace(/(^"|"$)/g, ''));
 
-    if (!this.commands.has(cmdName)) {
-      terminal.printLine(`bash: ${cmdName}: command not found`);
-      return;
-    }
+    const sys = await localesFetcher.fetchSystem() || {};
 
-    try {
-      const res = await fetch('/api/execute', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${authManager.token}`
-        },
-        body: JSON.stringify({ command: cmdName })
-      });
-      const data = await res.json();
+    if (this.commands.has(commandName)) {
+      const { handler, metadata } = this.commands.get(commandName);
+      try {
+        const res = await fetch('/api/execute', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authManager.token}`
+          },
+          body: JSON.stringify({ command: commandName })
+        });
+        const data = await res.json();
 
-      if (data.allowed) {
-        await this.commands.get(cmdName).handler(args, terminal);
-      } else {
-        terminal.printLine(`bash: ${cmdName}: ${data.error || 'Permission denied'}`);
+        if (data.allowed) {
+          await handler(args, terminal);
+        } else {
+          const errMsg = sys.cmd_perm_denied ? sys.cmd_perm_denied.replace('{cmd}', commandName).replace('{err}', data.error || 'Permission denied') : `bash: ${commandName}: ${data.error || 'Permission denied'}`;
+          terminal.printLine(errMsg);
+        }
+      } catch (e) {
+        const errMsg = sys.cmd_error_perms ? sys.cmd_error_perms.replace('{cmd}', commandName) : `bash: ${commandName}: Error checking permissions`;
+        terminal.printLine(errMsg);
       }
-    } catch (e) {
-      terminal.printLine(`bash: ${cmdName}: Error checking permissions`);
+    } else {
+      const errMsg = sys.cmd_not_found ? sys.cmd_not_found.replace('{cmd}', commandName) : `bash: ${commandName}: command not found`;
+      terminal.printLine(errMsg);
     }
   }
 }

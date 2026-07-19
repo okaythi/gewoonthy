@@ -1,4 +1,7 @@
+import { localesFetcher } from '../LocalesFetcher.js';
+
 export const uptimeCommand = async (args, terminal) => {
+  const sys = await localesFetcher.fetchSystem() || {};
   const ms = performance.now();
   const totalSeconds = Math.floor(ms / 1000);
   const days = Math.floor(totalSeconds / 86400);
@@ -10,11 +13,13 @@ export const uptimeCommand = async (args, terminal) => {
 
   let upStr = '';
   if (days > 0) {
-    upStr += `${days} day${days > 1 ? 's' : ''}, `;
+    const dayStr = days > 1 ? (sys.uptime_days_plural || 'days') : (sys.uptime_days || 'day');
+    upStr += `${days} ${dayStr}, `;
   }
   upStr += `${hours}:${minutes.toString().padStart(2, '0')}`;
 
-  terminal.printLine(` ${timeStr} up ${upStr},  1 user,  load average: 0.00, 0.00, 0.00`);
+  const format = sys.uptime_format || " {time} up {upStr},  1 user,  load average: 0.00, 0.00, 0.00";
+  terminal.printLine(format.replace('{time}', timeStr).replace('{upStr}', upStr));
 };
 
 export const uptimeMetadata = {
