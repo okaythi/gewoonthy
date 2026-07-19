@@ -30,6 +30,10 @@ database_id = "08bfb29e-f701-4d75-8784-86d66caa92d6"
 binding = "MEDIA_BUCKET"
 bucket_name = "gewoonthy-media"
 
+[[r2_buckets]]
+binding = "LOCALES_BUCKET"
+bucket_name = "gewoonthy-locales"
+
 [[d1_databases]]
 binding = "system_data"
 database_name = "system_data"

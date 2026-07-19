@@ -1,34 +1,41 @@
 import { windowManager } from '../WindowManager.js';
+import { localesFetcher } from '../LocalesFetcher.js';
 
 export const aboutCommand = async (args, terminal) => {
+  const i18n = await localesFetcher.fetchWindow('about');
+  if (!i18n) {
+    terminal.printLine('Error: Could not load locale strings for about window.');
+    return;
+  }
+
   const contentHTML = `
     <div style="padding: 24px; padding-bottom: 32px; box-sizing: border-box;">
       <div class="profile-section">
         <img src="https://cdn.sudothy.me/vanity/fallback.png" alt="Profile" class="profile-pic" onerror="this.src='https://via.placeholder.com/80'" />
-      <div class="profile-name">Thy - About Me</div>
+      <div class="profile-name">${i18n.title}</div>
     </div>
     <div class="info-grid">
       <div class="info-group">
-        <h3>Languages</h3>
+        <h3>${i18n.languages_title}</h3>
         <div class="tag-container">
-          <div class="tag"><div class="tag-icon">🇧🇪</div>Flemish</div>
-          <div class="tag"><div class="tag-icon">🇧🇪</div>French</div>
-          <div class="tag"><div class="tag-icon">🇧🇷</div>Portuguese</div>
-          <div class="tag"><div class="tag-icon">🇦🇷</div>Spanish</div>
-          <div class="tag"><div class="tag-icon">🇬🇧</div>English</div>
-          <div class="tag"><div class="tag-icon">🇸🇪</div>Swedish</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.lang_flemish}</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.lang_french}</div>
+          <div class="tag"><div class="tag-icon">🇧🇷</div>${i18n.lang_portuguese}</div>
+          <div class="tag"><div class="tag-icon">🇦🇷</div>${i18n.lang_spanish}</div>
+          <div class="tag"><div class="tag-icon">🇬🇧</div>${i18n.lang_english}</div>
+          <div class="tag"><div class="tag-icon">🇸🇪</div>${i18n.lang_swedish}</div>
         </div>
       </div>
       <div class="info-group">
-        <h3>Nationalities</h3>
+        <h3>${i18n.nationalities_title}</h3>
         <div class="tag-container">
-          <div class="tag"><div class="tag-icon">🇧🇪</div>Belgian</div>
-          <div class="tag"><div class="tag-icon">🇧🇷</div>Brazilian</div>
+          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.nat_belgian}</div>
+          <div class="tag"><div class="tag-icon">🇧🇷</div>${i18n.nat_brazilian}</div>
         </div>
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
-      <h3>Professional Titles</h3>
+      <h3>${i18n.professional_titles}</h3>
       <div class="tag-container">
         <div class="tag-text-only">Senior Community Manager</div>
         <div class="tag-text-only">Account Project Manager</div>
@@ -36,13 +43,13 @@ export const aboutCommand = async (args, terminal) => {
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
-      <h3>Licenses & certifications</h3>
+      <h3>${i18n.licenses_title}</h3>
       <div class="tag-container">
         <div class="tag-text-only">EF SET English Certificate 72/100 (C1 Advanced)</div>
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
-      <h3>Skills</h3>
+      <h3>${i18n.skills_title}</h3>
       <div class="tag-container">
         <div class="tag-text-only">Applied Mathematics</div>
         <div class="tag-text-only">Data Analysis</div>
@@ -60,7 +67,7 @@ export const aboutCommand = async (args, terminal) => {
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
-      <h3>Tech Stack</h3>
+      <h3>${i18n.tech_stack_title}</h3>
       <div class="tag-container">
         <div class="tag-text-only">HTML</div>
         <div class="tag-text-only">CSS</div>
@@ -75,7 +82,7 @@ export const aboutCommand = async (args, terminal) => {
       </div>
     </div>
     <div class="info-group" style="margin-top:20px;">
-      <h3>Interests & Hobbies</h3>
+      <h3>${i18n.interests_title}</h3>
       <div class="tag-container">
         <div class="tag-text-only">Systems Information Tech</div>
         <div class="tag-text-only">Linguistics</div>
@@ -84,12 +91,12 @@ export const aboutCommand = async (args, terminal) => {
       </div>
     </div>
     <div class="info-group" style="margin-top:20px; line-height: 1.5; font-size: 14px;">
-      <h3>Experience</h3>
-      <p>I have worked directly with brands such as Fusion, Discord, Tencent, and Garena, ensuring strategic support and audience connection.</p>
+      <h3>${i18n.experience_title}</h3>
+      <p>${i18n.experience_text}</p>
     </div>
     </div>
   `;
-  windowManager.createWindow('Thy - About Me', contentHTML);
+  windowManager.createWindow(i18n.title, contentHTML);
 };
 
 export const aboutMetadata = {

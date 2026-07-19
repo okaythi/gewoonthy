@@ -5,6 +5,8 @@ import { accountCommand, accountMetadata } from './commands/account.js';
 import { logoutCommand, logoutMetadata } from './commands/logout.js';
 import { projectsCommand, projectsMetadata } from './commands/projects.js';
 import { uptimeCommand, uptimeMetadata } from './commands/uptime.js';
+import { localeCommand, localeMetadata } from './commands/locale.js';
+import { exportCommand, exportMetadata } from './commands/export.js';
 import { authManager } from './auth.js';
 
 class CommandEngine {
@@ -17,6 +19,10 @@ class CommandEngine {
     this.registerCommand('logout', logoutCommand, logoutMetadata);
     this.registerCommand('projects', projectsCommand, projectsMetadata);
     this.registerCommand('uptime', uptimeCommand, uptimeMetadata);
+    this.registerCommand('locale', localeCommand, localeMetadata);
+    this.registerCommand('localectl', localeCommand, localeMetadata);
+    this.registerCommand('language', localeCommand, localeMetadata);
+    this.registerCommand('export', exportCommand, exportMetadata);
   }
 
   registerCommand(name, handler, metadata = { description: 'No description provided', args: [] }) {

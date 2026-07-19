@@ -1,0 +1,22 @@
+{
+  "rules": [
+    {
+      "id": "allow-fonts",
+      "allowed": {
+        "origins": [
+          "https://sudothy.me",
+          "http://localhost:4321",
+          "https://www.sudothy.me"
+        ],
+        "methods": [
+          "GET",
+          "HEAD"
+        ],
+        "headers": [
+          "*"
+        ]
+      },
+      "maxAgeSeconds": 3600
+    }
+  ]
+}

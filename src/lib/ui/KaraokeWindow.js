@@ -1,7 +1,13 @@
 import { windowManager } from '../WindowManager.js';
 import { songsDictionary } from '../../data/lyrics.ts';
+import { localesFetcher } from '../LocalesFetcher.js';
 
-export const openKaraokeWindow = () => {
+export const openKaraokeWindow = async () => {
+  const i18n = await localesFetcher.fetchWindow('karaoke') || {
+    about_project: 'About this project',
+    failed_load: 'Failed to load markdown content.'
+  };
+
   const availableSongs = Object.keys(songsDictionary).sort((a, b) => a.localeCompare(b));
   
   let leftSidebarHTML = `
@@ -9,7 +15,7 @@ export const openKaraokeWindow = () => {
       <div class="song-item active" data-song="about" style="padding: 10px; cursor: pointer; border-bottom: 1px solid var(--ubu-border); display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1);">
         <div style="width: 40px; height: 40px; background: var(--ubu-blue); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold;">?</div>
         <div>
-          <div style="font-weight: bold; font-size: 14px;">About this project</div>
+          <div style="font-weight: bold; font-size: 14px;">${i18n.about_project}</div>
         </div>
       </div>
   `;
@@ -93,8 +99,8 @@ export const openKaraokeWindow = () => {
     } else {
       mainView.innerHTML = `
         <div style="color: white; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 20px;">
-          <h2 style="font-size: 28px; margin-bottom: 15px;">About this project</h2>
-          <p style="opacity: 0.8; line-height: 1.6;">Failed to load markdown content.</p>
+          <h2 style="font-size: 28px; margin-bottom: 15px;">${i18n.about_project}</h2>
+          <p style="opacity: 0.8; line-height: 1.6;">${i18n.failed_load}</p>
         </div>
       `;
     }
