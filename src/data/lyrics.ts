@@ -36325,5 +36325,5916 @@ export const songsDictionary: Record<string, SongData> = {
         ]
       }
     ]
+  },
+  "A Vida É Desafio.mp4": {
+    "globalOffset": 0,
+    "lyricsData": [
+      {
+        "verseStart": 8.735,
+        "verseEnd": 12.048,
+        "translation": "I’ve always been a dreamer, that’s what keeps me alive",
+        "words": [
+          {
+            "word": "Sempre",
+            "start": 8.735,
+            "end": 8.898
+          },
+          {
+            "word": "fui",
+            "start": 8.898,
+            "end": 9.062
+          },
+          {
+            "word": "sonhador,",
+            "start": 9.062,
+            "end": 10.201
+          },
+          {
+            "word": "é",
+            "start": 10.201,
+            "end": 10.324
+          },
+          {
+            "word": "isso",
+            "start": 10.324,
+            "end": 10.445
+          },
+          {
+            "word": "que",
+            "start": 10.445,
+            "end": 10.656
+          },
+          {
+            "word": "me",
+            "start": 10.656,
+            "end": 10.861
+          },
+          {
+            "word": "mantém",
+            "start": 10.861,
+            "end": 11.108
+          },
+          {
+            "word": "vivo",
+            "start": 11.108,
+            "end": 12.048
+          }
+        ]
+      },
+      {
+        "verseStart": 12.048,
+        "verseEnd": 16.755,
+        "translation": "When I was a kid, my dream was to be a footballer, check it out",
+        "words": [
+          {
+            "word": "Quando",
+            "start": 12.048,
+            "end": 12.252
+          },
+          {
+            "word": "pivete,",
+            "start": 12.252,
+            "end": 13.228
+          },
+          {
+            "word": "meu",
+            "start": 13.228,
+            "end": 13.392
+          },
+          {
+            "word": "sonho",
+            "start": 13.392,
+            "end": 13.515
+          },
+          {
+            "word": "era",
+            "start": 13.515,
+            "end": 13.686
+          },
+          {
+            "word": "ser",
+            "start": 13.686,
+            "end": 13.851
+          },
+          {
+            "word": "jogador",
+            "start": 13.851,
+            "end": 14.054
+          },
+          {
+            "word": "de",
+            "start": 14.054,
+            "end": 14.466
+          },
+          {
+            "word": "futebol,",
+            "start": 14.466,
+            "end": 15.696
+          },
+          {
+            "word": "vai",
+            "start": 15.696,
+            "end": 15.858
+          },
+          {
+            "word": "vendo",
+            "start": 15.858,
+            "end": 16.755
+          }
+        ]
+      },
+      {
+        "verseStart": 16.755,
+        "verseEnd": 20.206,
+        "translation": "But the system restricts our lives in such a way",
+        "words": [
+          {
+            "word": "Mas",
+            "start": 16.755,
+            "end": 17.003
+          },
+          {
+            "word": "o",
+            "start": 17.003,
+            "end": 17.341
+          },
+          {
+            "word": "sistema",
+            "start": 17.341,
+            "end": 17.585
+          },
+          {
+            "word": "limita",
+            "start": 17.585,
+            "end": 18.155
+          },
+          {
+            "word": "nossa",
+            "start": 18.155,
+            "end": 18.324
+          },
+          {
+            "word": "vida",
+            "start": 18.324,
+            "end": 18.529
+          },
+          {
+            "word": "de",
+            "start": 18.529,
+            "end": 18.776
+          },
+          {
+            "word": "tal",
+            "start": 18.776,
+            "end": 19.061
+          },
+          {
+            "word": "forma",
+            "start": 19.061,
+            "end": 20.206
+          }
+        ]
+      },
+      {
+        "verseStart": 20.206,
+        "verseEnd": 23.89,
+        "translation": "That I had to make my choice: Dream or survive",
+        "words": [
+          {
+            "word": "Que",
+            "start": 20.206,
+            "end": 20.328
+          },
+          {
+            "word": "tive",
+            "start": 20.328,
+            "end": 20.497
+          },
+          {
+            "word": "que",
+            "start": 20.497,
+            "end": 20.619
+          },
+          {
+            "word": "fazer",
+            "start": 20.619,
+            "end": 20.783
+          },
+          {
+            "word": "minha",
+            "start": 20.783,
+            "end": 20.948
+          },
+          {
+            "word": "escolha:",
+            "start": 20.948,
+            "end": 21.888
+          },
+          {
+            "word": "Sonhar",
+            "start": 21.888,
+            "end": 22.872
+          },
+          {
+            "word": "ou",
+            "start": 22.872,
+            "end": 22.953
+          },
+          {
+            "word": "sobreviver",
+            "start": 22.953,
+            "end": 23.89
+          }
+        ]
+      },
+      {
+        "verseStart": 23.89,
+        "verseEnd": 28.551,
+        "translation": "Years went by and I dodged the vicious cycle",
+        "words": [
+          {
+            "word": "Os",
+            "start": 23.89,
+            "end": 24.177
+          },
+          {
+            "word": "anos",
+            "start": 24.177,
+            "end": 24.461
+          },
+          {
+            "word": "se",
+            "start": 24.461,
+            "end": 24.706
+          },
+          {
+            "word": "passaram",
+            "start": 24.706,
+            "end": 25.316
+          },
+          {
+            "word": "e",
+            "start": 25.316,
+            "end": 25.484
+          },
+          {
+            "word": "eu",
+            "start": 25.484,
+            "end": 25.645
+          },
+          {
+            "word": "fui",
+            "start": 25.645,
+            "end": 25.937
+          },
+          {
+            "word": "me",
+            "start": 25.937,
+            "end": 26.141
+          },
+          {
+            "word": "esquivando",
+            "start": 26.141,
+            "end": 26.635
+          },
+          {
+            "word": "do",
+            "start": 26.635,
+            "end": 26.84
+          },
+          {
+            "word": "ciclo",
+            "start": 26.84,
+            "end": 27.209
+          },
+          {
+            "word": "vicioso",
+            "start": 27.209,
+            "end": 28.551
+          }
+        ]
+      },
+      {
+        "verseStart": 28.551,
+        "verseEnd": 31.574,
+        "translation": "However, capitalism forced me to be successful",
+        "words": [
+          {
+            "word": "Porém,",
+            "start": 28.551,
+            "end": 28.878
+          },
+          {
+            "word": "o",
+            "start": 28.878,
+            "end": 29.041
+          },
+          {
+            "word": "capitalismo",
+            "start": 29.041,
+            "end": 29.205
+          },
+          {
+            "word": "me",
+            "start": 29.205,
+            "end": 29.449
+          },
+          {
+            "word": "obrigou",
+            "start": 29.449,
+            "end": 29.733
+          },
+          {
+            "word": "a",
+            "start": 29.733,
+            "end": 30.065
+          },
+          {
+            "word": "ser",
+            "start": 30.065,
+            "end": 30.228
+          },
+          {
+            "word": "bem",
+            "start": 30.228,
+            "end": 30.473
+          },
+          {
+            "word": "sucedido",
+            "start": 30.473,
+            "end": 31.574
+          }
+        ]
+      },
+      {
+        "verseStart": 31.574,
+        "verseEnd": 34.976,
+        "translation": "I reckon every poor man's dream is to be rich",
+        "words": [
+          {
+            "word": "Acredito",
+            "start": 31.574,
+            "end": 31.983
+          },
+          {
+            "word": "que",
+            "start": 31.983,
+            "end": 32.307
+          },
+          {
+            "word": "o",
+            "start": 32.307,
+            "end": 32.471
+          },
+          {
+            "word": "sonho",
+            "start": 32.471,
+            "end": 32.715
+          },
+          {
+            "word": "de",
+            "start": 32.715,
+            "end": 32.963
+          },
+          {
+            "word": "todo",
+            "start": 32.963,
+            "end": 33.25
+          },
+          {
+            "word": "pobre",
+            "start": 33.25,
+            "end": 33.496
+          },
+          {
+            "word": "é",
+            "start": 33.496,
+            "end": 33.7
+          },
+          {
+            "word": "ser",
+            "start": 33.7,
+            "end": 34.075
+          },
+          {
+            "word": "rico",
+            "start": 34.075,
+            "end": 34.976
+          }
+        ]
+      },
+      {
+        "verseStart": 34.976,
+        "verseEnd": 36.975,
+        "translation": "In pursuit of my dream of consumption",
+        "words": [
+          {
+            "word": "Em",
+            "start": 34.976,
+            "end": 35.222
+          },
+          {
+            "word": "busca",
+            "start": 35.222,
+            "end": 35.384
+          },
+          {
+            "word": "do",
+            "start": 35.384,
+            "end": 35.548
+          },
+          {
+            "word": "meu",
+            "start": 35.548,
+            "end": 35.711
+          },
+          {
+            "word": "sonho",
+            "start": 35.711,
+            "end": 35.996
+          },
+          {
+            "word": "de",
+            "start": 35.996,
+            "end": 36.159
+          },
+          {
+            "word": "consumo",
+            "start": 36.159,
+            "end": 36.975
+          }
+        ]
+      },
+      {
+        "verseStart": 36.975,
+        "verseEnd": 40.827,
+        "translation": "I tried to find a quick and easy fix for my problems:",
+        "words": [
+          {
+            "word": "Procurei",
+            "start": 36.975,
+            "end": 37.139
+          },
+          {
+            "word": "dar",
+            "start": 37.139,
+            "end": 37.261
+          },
+          {
+            "word": "uma",
+            "start": 37.261,
+            "end": 37.465
+          },
+          {
+            "word": "solução",
+            "start": 37.465,
+            "end": 37.629
+          },
+          {
+            "word": "rápida",
+            "start": 37.629,
+            "end": 38.163
+          },
+          {
+            "word": "e",
+            "start": 38.163,
+            "end": 38.327
+          },
+          {
+            "word": "fácil",
+            "start": 38.327,
+            "end": 39.029
+          },
+          {
+            "word": "pros",
+            "start": 39.029,
+            "end": 39.193
+          },
+          {
+            "word": "meus",
+            "start": 39.193,
+            "end": 39.523
+          },
+          {
+            "word": "problemas:",
+            "start": 39.523,
+            "end": 40.827
+          }
+        ]
+      },
+      {
+        "verseStart": 40.827,
+        "verseEnd": 42.743,
+        "translation": "Crime",
+        "words": [
+          {
+            "word": "O",
+            "start": 40.827,
+            "end": 41.278
+          },
+          {
+            "word": "crime",
+            "start": 41.278,
+            "end": 42.743
+          }
+        ]
+      },
+      {
+        "verseStart": 42.743,
+        "verseEnd": 44.299,
+        "translation": "But it’s cursed money",
+        "words": [
+          {
+            "word": "Mas",
+            "start": 42.743,
+            "end": 42.866
+          },
+          {
+            "word": "é",
+            "start": 42.866,
+            "end": 43.028
+          },
+          {
+            "word": "um",
+            "start": 43.028,
+            "end": 43.275
+          },
+          {
+            "word": "dinheiro",
+            "start": 43.275,
+            "end": 43.441
+          },
+          {
+            "word": "amaldiçoado",
+            "start": 43.441,
+            "end": 44.299
+          }
+        ]
+      },
+      {
+        "verseStart": 44.299,
+        "verseEnd": 46.681,
+        "translation": "The more I earned, the more I spent",
+        "words": [
+          {
+            "word": "Quanto",
+            "start": 44.299,
+            "end": 44.463
+          },
+          {
+            "word": "mais",
+            "start": 44.463,
+            "end": 44.626
+          },
+          {
+            "word": "eu",
+            "start": 44.626,
+            "end": 44.789
+          },
+          {
+            "word": "ganhava,",
+            "start": 44.789,
+            "end": 45.278
+          },
+          {
+            "word": "mais",
+            "start": 45.278,
+            "end": 45.441
+          },
+          {
+            "word": "eu",
+            "start": 45.441,
+            "end": 45.614
+          },
+          {
+            "word": "gastava",
+            "start": 45.614,
+            "end": 46.681
+          }
+        ]
+      },
+      {
+        "verseStart": 46.681,
+        "verseEnd": 49.789,
+        "translation": "Soon I was charged by the law of nature, blimey",
+        "words": [
+          {
+            "word": "Logo",
+            "start": 46.681,
+            "end": 46.929
+          },
+          {
+            "word": "fui",
+            "start": 46.929,
+            "end": 47.134
+          },
+          {
+            "word": "cobrado",
+            "start": 47.134,
+            "end": 47.298
+          },
+          {
+            "word": "pela",
+            "start": 47.298,
+            "end": 47.623
+          },
+          {
+            "word": "lei",
+            "start": 47.623,
+            "end": 47.866
+          },
+          {
+            "word": "da",
+            "start": 47.866,
+            "end": 48.111
+          },
+          {
+            "word": "natureza,",
+            "start": 48.111,
+            "end": 48.68
+          },
+          {
+            "word": "vish",
+            "start": 48.68,
+            "end": 49.789
+          }
+        ]
+      },
+      {
+        "verseStart": 49.789,
+        "verseEnd": 51.999,
+        "translation": "14 years behind bars",
+        "words": [
+          {
+            "word": "14",
+            "start": 49.789,
+            "end": 50.156
+          },
+          {
+            "word": "anos",
+            "start": 50.156,
+            "end": 50.448
+          },
+          {
+            "word": "de",
+            "start": 50.448,
+            "end": 50.653
+          },
+          {
+            "word": "reclusão",
+            "start": 50.653,
+            "end": 51.999
+          }
+        ]
+      },
+      {
+        "verseStart": 51.999,
+        "verseEnd": 53.561,
+        "translation": "The game is mad, the game is mad",
+        "words": [
+          {
+            "word": "Barato",
+            "start": 51.999,
+            "end": 52.165
+          },
+          {
+            "word": "é",
+            "start": 52.165,
+            "end": 52.33
+          },
+          {
+            "word": "loco,",
+            "start": 52.33,
+            "end": 52.822
+          },
+          {
+            "word": "barato",
+            "start": 52.822,
+            "end": 52.984
+          },
+          {
+            "word": "é",
+            "start": 52.984,
+            "end": 53.191
+          },
+          {
+            "word": "loco",
+            "start": 53.191,
+            "end": 53.561
+          }
+        ]
+      },
+      {
+        "verseStart": 53.561,
+        "verseEnd": 56.845,
+        "translation": "You always gotta believe that the dream is possible",
+        "words": [
+          {
+            "word": "É",
+            "start": 53.561,
+            "end": 53.769
+          },
+          {
+            "word": "necessário",
+            "start": 53.769,
+            "end": 53.891
+          },
+          {
+            "word": "sempre",
+            "start": 53.891,
+            "end": 54.511
+          },
+          {
+            "word": "acreditar",
+            "start": 54.511,
+            "end": 55.204
+          },
+          {
+            "word": "que",
+            "start": 55.204,
+            "end": 55.326
+          },
+          {
+            "word": "o",
+            "start": 55.326,
+            "end": 55.53
+          },
+          {
+            "word": "sonho",
+            "start": 55.53,
+            "end": 55.857
+          },
+          {
+            "word": "é",
+            "start": 55.857,
+            "end": 56.066
+          },
+          {
+            "word": "possível",
+            "start": 56.066,
+            "end": 56.845
+          }
+        ]
+      },
+      {
+        "verseStart": 56.845,
+        "verseEnd": 60.369,
+        "translation": "That the sky's the limit and you, mate, are unbeatable",
+        "words": [
+          {
+            "word": "Que",
+            "start": 56.845,
+            "end": 57.05
+          },
+          {
+            "word": "o",
+            "start": 57.05,
+            "end": 57.213
+          },
+          {
+            "word": "céu",
+            "start": 57.213,
+            "end": 57.499
+          },
+          {
+            "word": "é",
+            "start": 57.499,
+            "end": 57.665
+          },
+          {
+            "word": "o",
+            "start": 57.665,
+            "end": 57.827
+          },
+          {
+            "word": "limite",
+            "start": 57.827,
+            "end": 58.154
+          },
+          {
+            "word": "e",
+            "start": 58.154,
+            "end": 58.401
+          },
+          {
+            "word": "você,",
+            "start": 58.401,
+            "end": 58.974
+          },
+          {
+            "word": "truta,",
+            "start": 58.974,
+            "end": 59.178
+          },
+          {
+            "word": "é",
+            "start": 59.178,
+            "end": 59.385
+          },
+          {
+            "word": "imbatível",
+            "start": 59.385,
+            "end": 60.369
+          }
+        ]
+      },
+      {
+        "verseStart": 60.369,
+        "verseEnd": 63.607,
+        "translation": "That the bad times will pass, it’s just a phase",
+        "words": [
+          {
+            "word": "Que",
+            "start": 60.369,
+            "end": 60.532
+          },
+          {
+            "word": "o",
+            "start": 60.532,
+            "end": 60.695
+          },
+          {
+            "word": "tempo",
+            "start": 60.695,
+            "end": 60.942
+          },
+          {
+            "word": "ruim",
+            "start": 60.942,
+            "end": 61.434
+          },
+          {
+            "word": "vai",
+            "start": 61.434,
+            "end": 61.602
+          },
+          {
+            "word": "passar,",
+            "start": 61.602,
+            "end": 62.095
+          },
+          {
+            "word": "é",
+            "start": 62.095,
+            "end": 62.258
+          },
+          {
+            "word": "só",
+            "start": 62.258,
+            "end": 62.543
+          },
+          {
+            "word": "uma",
+            "start": 62.543,
+            "end": 62.911
+          },
+          {
+            "word": "fase",
+            "start": 62.911,
+            "end": 63.607
+          }
+        ]
+      },
+      {
+        "verseStart": 63.607,
+        "verseEnd": 66.802,
+        "translation": "That the suffering just feeds your courage",
+        "words": [
+          {
+            "word": "Que",
+            "start": 63.607,
+            "end": 63.77
+          },
+          {
+            "word": "o",
+            "start": 63.77,
+            "end": 63.934
+          },
+          {
+            "word": "sofrimento",
+            "start": 63.934,
+            "end": 64.343
+          },
+          {
+            "word": "alimenta",
+            "start": 64.343,
+            "end": 65.115
+          },
+          {
+            "word": "mais",
+            "start": 65.115,
+            "end": 65.283
+          },
+          {
+            "word": "a",
+            "start": 65.283,
+            "end": 65.487
+          },
+          {
+            "word": "sua",
+            "start": 65.487,
+            "end": 65.653
+          },
+          {
+            "word": "coragem",
+            "start": 65.653,
+            "end": 66.802
+          }
+        ]
+      },
+      {
+        "verseStart": 66.802,
+        "verseEnd": 69.391,
+        "translation": "That your family needs you",
+        "words": [
+          {
+            "word": "Que",
+            "start": 66.802,
+            "end": 66.964
+          },
+          {
+            "word": "a",
+            "start": 66.964,
+            "end": 67.171
+          },
+          {
+            "word": "sua",
+            "start": 67.171,
+            "end": 67.545
+          },
+          {
+            "word": "família",
+            "start": 67.545,
+            "end": 68.075
+          },
+          {
+            "word": "precisa",
+            "start": 68.075,
+            "end": 68.532
+          },
+          {
+            "word": "de",
+            "start": 68.532,
+            "end": 68.694
+          },
+          {
+            "word": "você",
+            "start": 68.694,
+            "end": 69.391
+          }
+        ]
+      },
+      {
+        "verseStart": 69.391,
+        "verseEnd": 73.149,
+        "translation": "Side by side if you win, to back you up if you lose",
+        "words": [
+          {
+            "word": "Lado",
+            "start": 69.391,
+            "end": 69.594
+          },
+          {
+            "word": "a",
+            "start": 69.594,
+            "end": 69.763
+          },
+          {
+            "word": "lado",
+            "start": 69.763,
+            "end": 70.131
+          },
+          {
+            "word": "se",
+            "start": 70.131,
+            "end": 70.458
+          },
+          {
+            "word": "ganhar",
+            "start": 70.458,
+            "end": 70.949
+          },
+          {
+            "word": "pra",
+            "start": 70.949,
+            "end": 71.111
+          },
+          {
+            "word": "te",
+            "start": 71.111,
+            "end": 71.644
+          },
+          {
+            "word": "apoiar",
+            "start": 71.644,
+            "end": 72.092
+          },
+          {
+            "word": "se",
+            "start": 72.092,
+            "end": 72.294
+          },
+          {
+            "word": "perder",
+            "start": 72.294,
+            "end": 73.149
+          }
+        ]
+      },
+      {
+        "verseStart": 73.149,
+        "verseEnd": 75.86,
+        "translation": "I speak of the love between a man, his son and his woman",
+        "words": [
+          {
+            "word": "Falo",
+            "start": 73.149,
+            "end": 73.355
+          },
+          {
+            "word": "do",
+            "start": 73.355,
+            "end": 73.564
+          },
+          {
+            "word": "amor",
+            "start": 73.564,
+            "end": 74.141
+          },
+          {
+            "word": "entre",
+            "start": 74.141,
+            "end": 74.304
+          },
+          {
+            "word": "homem,",
+            "start": 74.304,
+            "end": 74.711
+          },
+          {
+            "word": "filho",
+            "start": 74.711,
+            "end": 74.915
+          },
+          {
+            "word": "e",
+            "start": 74.915,
+            "end": 75.079
+          },
+          {
+            "word": "mulher",
+            "start": 75.079,
+            "end": 75.86
+          }
+        ]
+      },
+      {
+        "verseStart": 75.86,
+        "verseEnd": 79.43,
+        "translation": "The only universal truth that keeps the faith",
+        "words": [
+          {
+            "word": "A",
+            "start": 75.86,
+            "end": 76.108
+          },
+          {
+            "word": "única",
+            "start": 76.108,
+            "end": 76.606
+          },
+          {
+            "word": "verdade",
+            "start": 76.606,
+            "end": 77.096
+          },
+          {
+            "word": "universal",
+            "start": 77.096,
+            "end": 77.586
+          },
+          {
+            "word": "que",
+            "start": 77.586,
+            "end": 77.87
+          },
+          {
+            "word": "mantém",
+            "start": 77.87,
+            "end": 78.445
+          },
+          {
+            "word": "a",
+            "start": 78.445,
+            "end": 78.691
+          },
+          {
+            "word": "fé",
+            "start": 78.691,
+            "end": 79.43
+          }
+        ]
+      },
+      {
+        "verseStart": 79.43,
+        "verseEnd": 82.265,
+        "translation": "I look at the kids who are the future and hope",
+        "words": [
+          {
+            "word": "Olho",
+            "start": 79.43,
+            "end": 79.633
+          },
+          {
+            "word": "as",
+            "start": 79.633,
+            "end": 79.876
+          },
+          {
+            "word": "crianças",
+            "start": 79.876,
+            "end": 80.739
+          },
+          {
+            "word": "que",
+            "start": 80.739,
+            "end": 80.821
+          },
+          {
+            "word": "é",
+            "start": 80.821,
+            "end": 81.069
+          },
+          {
+            "word": "o",
+            "start": 81.069,
+            "end": 81.32
+          },
+          {
+            "word": "futuro",
+            "start": 81.32,
+            "end": 81.487
+          },
+          {
+            "word": "e",
+            "start": 81.487,
+            "end": 81.69
+          },
+          {
+            "word": "esperança",
+            "start": 81.69,
+            "end": 82.265
+          }
+        ]
+      },
+      {
+        "verseStart": 82.265,
+        "verseEnd": 85.711,
+        "translation": "Who don't yet know, don't feel what hate and greed are",
+        "words": [
+          {
+            "word": "Que",
+            "start": 82.265,
+            "end": 82.433
+          },
+          {
+            "word": "ainda",
+            "start": 82.433,
+            "end": 82.641
+          },
+          {
+            "word": "não",
+            "start": 82.641,
+            "end": 82.803
+          },
+          {
+            "word": "conhecem,",
+            "start": 82.803,
+            "end": 83.582
+          },
+          {
+            "word": "não",
+            "start": 83.582,
+            "end": 83.744
+          },
+          {
+            "word": "sentem",
+            "start": 83.744,
+            "end": 84.233
+          },
+          {
+            "word": "o",
+            "start": 84.233,
+            "end": 84.395
+          },
+          {
+            "word": "que",
+            "start": 84.395,
+            "end": 84.567
+          },
+          {
+            "word": "é",
+            "start": 84.567,
+            "end": 84.73
+          },
+          {
+            "word": "ódio",
+            "start": 84.73,
+            "end": 84.933
+          },
+          {
+            "word": "e",
+            "start": 84.933,
+            "end": 85.137
+          },
+          {
+            "word": "ganância",
+            "start": 85.137,
+            "end": 85.711
+          }
+        ]
+      },
+      {
+        "verseStart": 85.711,
+        "verseEnd": 88.633,
+        "translation": "I see the rich man who fears losing his fortune",
+        "words": [
+          {
+            "word": "Eu",
+            "start": 85.711,
+            "end": 85.916
+          },
+          {
+            "word": "vejo",
+            "start": 85.916,
+            "end": 86.082
+          },
+          {
+            "word": "o",
+            "start": 86.082,
+            "end": 86.288
+          },
+          {
+            "word": "rico",
+            "start": 86.288,
+            "end": 86.782
+          },
+          {
+            "word": "que",
+            "start": 86.782,
+            "end": 86.947
+          },
+          {
+            "word": "teme",
+            "start": 86.947,
+            "end": 87.325
+          },
+          {
+            "word": "perder",
+            "start": 87.325,
+            "end": 87.491
+          },
+          {
+            "word": "a",
+            "start": 87.491,
+            "end": 87.693
+          },
+          {
+            "word": "fortuna",
+            "start": 87.693,
+            "end": 88.633
+          }
+        ]
+      },
+      {
+        "verseStart": 88.633,
+        "verseEnd": 92.192,
+        "translation": "While the unemployed brother, addicted, sinks",
+        "words": [
+          {
+            "word": "Enquanto",
+            "start": 88.633,
+            "end": 89.046
+          },
+          {
+            "word": "o",
+            "start": 89.046,
+            "end": 89.209
+          },
+          {
+            "word": "mano",
+            "start": 89.209,
+            "end": 89.535
+          },
+          {
+            "word": "desempregado,",
+            "start": 89.535,
+            "end": 90.472
+          },
+          {
+            "word": "viciado,",
+            "start": 90.472,
+            "end": 91.295
+          },
+          {
+            "word": "se",
+            "start": 91.295,
+            "end": 91.458
+          },
+          {
+            "word": "afunda",
+            "start": 91.458,
+            "end": 92.192
+          }
+        ]
+      },
+      {
+        "verseStart": 92.192,
+        "verseEnd": 95.308,
+        "translation": "I speak of the sick (brother), I speak of the healthy (then)",
+        "words": [
+          {
+            "word": "Falo",
+            "start": 92.192,
+            "end": 92.356
+          },
+          {
+            "word": "do",
+            "start": 92.356,
+            "end": 92.559
+          },
+          {
+            "word": "enfermo,",
+            "start": 92.559,
+            "end": 93.259
+          },
+          {
+            "word": "(irmão)",
+            "start": 93.259,
+            "end": 93.869
+          },
+          {
+            "word": "falo",
+            "start": 93.869,
+            "end": 94.032
+          },
+          {
+            "word": "do",
+            "start": 94.032,
+            "end": 94.197
+          },
+          {
+            "word": "são",
+            "start": 94.197,
+            "end": 94.732
+          },
+          {
+            "word": "(então)",
+            "start": 94.732,
+            "end": 95.308
+          }
+        ]
+      },
+      {
+        "verseStart": 95.308,
+        "verseEnd": 98.422,
+        "translation": "I speak of the street, which to this mad big world",
+        "words": [
+          {
+            "word": "Falo",
+            "start": 95.308,
+            "end": 95.471
+          },
+          {
+            "word": "da",
+            "start": 95.471,
+            "end": 95.676
+          },
+          {
+            "word": "rua",
+            "start": 95.676,
+            "end": 96.214
+          },
+          {
+            "word": "que",
+            "start": 96.214,
+            "end": 96.459
+          },
+          {
+            "word": "pra",
+            "start": 96.459,
+            "end": 96.663
+          },
+          {
+            "word": "esse",
+            "start": 96.663,
+            "end": 96.989
+          },
+          {
+            "word": "louco",
+            "start": 96.989,
+            "end": 97.567
+          },
+          {
+            "word": "mundão",
+            "start": 97.567,
+            "end": 98.422
+          }
+        ]
+      },
+      {
+        "verseStart": 98.422,
+        "verseEnd": 101.748,
+        "translation": "The path to the cure might just be the disease",
+        "words": [
+          {
+            "word": "Que",
+            "start": 98.422,
+            "end": 98.625
+          },
+          {
+            "word": "o",
+            "start": 98.625,
+            "end": 98.995
+          },
+          {
+            "word": "caminho",
+            "start": 98.995,
+            "end": 99.328
+          },
+          {
+            "word": "da",
+            "start": 99.328,
+            "end": 99.572
+          },
+          {
+            "word": "cura",
+            "start": 99.572,
+            "end": 100.019
+          },
+          {
+            "word": "pode",
+            "start": 100.019,
+            "end": 100.262
+          },
+          {
+            "word": "ser",
+            "start": 100.262,
+            "end": 100.427
+          },
+          {
+            "word": "a",
+            "start": 100.427,
+            "end": 100.631
+          },
+          {
+            "word": "doença",
+            "start": 100.631,
+            "end": 101.748
+          }
+        ]
+      },
+      {
+        "verseStart": 101.748,
+        "verseEnd": 105.065,
+        "translation": "That the path of forgiveness is sometimes the sentence",
+        "words": [
+          {
+            "word": "Que",
+            "start": 101.748,
+            "end": 101.911
+          },
+          {
+            "word": "o",
+            "start": 101.911,
+            "end": 102.115
+          },
+          {
+            "word": "caminho",
+            "start": 102.115,
+            "end": 102.566
+          },
+          {
+            "word": "do",
+            "start": 102.566,
+            "end": 102.77
+          },
+          {
+            "word": "perdão",
+            "start": 102.77,
+            "end": 103.218
+          },
+          {
+            "word": "às",
+            "start": 103.218,
+            "end": 103.382
+          },
+          {
+            "word": "vezes",
+            "start": 103.382,
+            "end": 103.749
+          },
+          {
+            "word": "é",
+            "start": 103.749,
+            "end": 103.994
+          },
+          {
+            "word": "a",
+            "start": 103.994,
+            "end": 104.157
+          },
+          {
+            "word": "sentença",
+            "start": 104.157,
+            "end": 105.065
+          }
+        ]
+      },
+      {
+        "verseStart": 105.065,
+        "verseEnd": 107.961,
+        "translation": "Disagreement, beef and fake unity",
+        "words": [
+          {
+            "word": "Desavença,",
+            "start": 105.065,
+            "end": 105.765
+          },
+          {
+            "word": "treta",
+            "start": 105.765,
+            "end": 106.299
+          },
+          {
+            "word": "e",
+            "start": 106.299,
+            "end": 106.668
+          },
+          {
+            "word": "falsa",
+            "start": 106.668,
+            "end": 106.916
+          },
+          {
+            "word": "união",
+            "start": 106.916,
+            "end": 107.961
+          }
+        ]
+      },
+      {
+        "verseStart": 107.961,
+        "verseEnd": 111.204,
+        "translation": "Ambition is like a veil that blinds the brothers",
+        "words": [
+          {
+            "word": "A",
+            "start": 107.961,
+            "end": 108.166
+          },
+          {
+            "word": "ambição",
+            "start": 108.166,
+            "end": 108.779
+          },
+          {
+            "word": "é",
+            "start": 108.779,
+            "end": 108.942
+          },
+          {
+            "word": "como",
+            "start": 108.942,
+            "end": 109.23
+          },
+          {
+            "word": "um",
+            "start": 109.23,
+            "end": 109.561
+          },
+          {
+            "word": "véu",
+            "start": 109.561,
+            "end": 109.848
+          },
+          {
+            "word": "que",
+            "start": 109.848,
+            "end": 110.011
+          },
+          {
+            "word": "cega",
+            "start": 110.011,
+            "end": 110.174
+          },
+          {
+            "word": "os",
+            "start": 110.174,
+            "end": 110.382
+          },
+          {
+            "word": "irmão",
+            "start": 110.382,
+            "end": 111.204
+          }
+        ]
+      },
+      {
+        "verseStart": 111.204,
+        "verseEnd": 114.407,
+        "translation": "Just like a car driven on the road of life",
+        "words": [
+          {
+            "word": "Que",
+            "start": 111.204,
+            "end": 111.408
+          },
+          {
+            "word": "nem",
+            "start": 111.408,
+            "end": 111.613
+          },
+          {
+            "word": "um",
+            "start": 111.613,
+            "end": 111.818
+          },
+          {
+            "word": "carro",
+            "start": 111.818,
+            "end": 112.268
+          },
+          {
+            "word": "guiado",
+            "start": 112.268,
+            "end": 112.761
+          },
+          {
+            "word": "na",
+            "start": 112.761,
+            "end": 112.968
+          },
+          {
+            "word": "estrada",
+            "start": 112.968,
+            "end": 113.545
+          },
+          {
+            "word": "da",
+            "start": 113.545,
+            "end": 113.709
+          },
+          {
+            "word": "vida",
+            "start": 113.709,
+            "end": 114.407
+          }
+        ]
+      },
+      {
+        "verseStart": 114.407,
+        "verseEnd": 117.633,
+        "translation": "Without headlights in the desert of lost darkness",
+        "words": [
+          {
+            "word": "Sem",
+            "start": 114.407,
+            "end": 114.652
+          },
+          {
+            "word": "farol",
+            "start": 114.652,
+            "end": 115.267
+          },
+          {
+            "word": "no",
+            "start": 115.267,
+            "end": 115.471
+          },
+          {
+            "word": "deserto",
+            "start": 115.471,
+            "end": 116.125
+          },
+          {
+            "word": "das",
+            "start": 116.125,
+            "end": 116.288
+          },
+          {
+            "word": "trevas",
+            "start": 116.288,
+            "end": 116.736
+          },
+          {
+            "word": "perdidas",
+            "start": 116.736,
+            "end": 117.633
+          }
+        ]
+      },
+      {
+        "verseStart": 117.633,
+        "verseEnd": 120.713,
+        "translation": "I was an orgy, drunk, crazy, but today I walk sober",
+        "words": [
+          {
+            "word": "Eu",
+            "start": 117.633,
+            "end": 117.836
+          },
+          {
+            "word": "fui",
+            "start": 117.836,
+            "end": 117.961
+          },
+          {
+            "word": "orgia,",
+            "start": 117.961,
+            "end": 118.66
+          },
+          {
+            "word": "ébrio,",
+            "start": 118.66,
+            "end": 118.946
+          },
+          {
+            "word": "louco,",
+            "start": 118.946,
+            "end": 119.314
+          },
+          {
+            "word": "mas",
+            "start": 119.314,
+            "end": 119.479
+          },
+          {
+            "word": "hoje",
+            "start": 119.479,
+            "end": 119.893
+          },
+          {
+            "word": "ando",
+            "start": 119.893,
+            "end": 120.055
+          },
+          {
+            "word": "sóbrio",
+            "start": 120.055,
+            "end": 120.713
+          }
+        ]
+      },
+      {
+        "verseStart": 120.713,
+        "verseEnd": 123.89,
+        "translation": "I put away the revolver when you speak to me of hate",
+        "words": [
+          {
+            "word": "Guardo",
+            "start": 120.713,
+            "end": 120.963
+          },
+          {
+            "word": "o",
+            "start": 120.963,
+            "end": 121.169
+          },
+          {
+            "word": "revólver",
+            "start": 121.169,
+            "end": 121.622
+          },
+          {
+            "word": "quando",
+            "start": 121.622,
+            "end": 121.954
+          },
+          {
+            "word": "você",
+            "start": 121.954,
+            "end": 122.409
+          },
+          {
+            "word": "me",
+            "start": 122.409,
+            "end": 122.783
+          },
+          {
+            "word": "fala",
+            "start": 122.783,
+            "end": 123.029
+          },
+          {
+            "word": "em",
+            "start": 123.029,
+            "end": 123.233
+          },
+          {
+            "word": "ódio",
+            "start": 123.233,
+            "end": 123.89
+          }
+        ]
+      },
+      {
+        "verseStart": 123.89,
+        "verseEnd": 127.169,
+        "translation": "I see the body, the mind, the soul, the spirit",
+        "words": [
+          {
+            "word": "Eu",
+            "start": 123.89,
+            "end": 124.094
+          },
+          {
+            "word": "vejo",
+            "start": 124.094,
+            "end": 124.258
+          },
+          {
+            "word": "o",
+            "start": 124.258,
+            "end": 124.461
+          },
+          {
+            "word": "corpo,",
+            "start": 124.461,
+            "end": 124.916
+          },
+          {
+            "word": "a",
+            "start": 124.916,
+            "end": 125.079
+          },
+          {
+            "word": "mente,",
+            "start": 125.079,
+            "end": 125.528
+          },
+          {
+            "word": "a",
+            "start": 125.528,
+            "end": 125.692
+          },
+          {
+            "word": "alma,",
+            "start": 125.692,
+            "end": 126.099
+          },
+          {
+            "word": "o",
+            "start": 126.099,
+            "end": 126.223
+          },
+          {
+            "word": "espírito",
+            "start": 126.223,
+            "end": 127.169
+          }
+        ]
+      },
+      {
+        "verseStart": 127.169,
+        "verseEnd": 130.22,
+        "translation": "I hear the beat and what’s said there in the lyric chant",
+        "words": [
+          {
+            "word": "Ouço",
+            "start": 127.169,
+            "end": 127.332
+          },
+          {
+            "word": "o",
+            "start": 127.332,
+            "end": 127.497
+          },
+          {
+            "word": "repente",
+            "start": 127.497,
+            "end": 127.95
+          },
+          {
+            "word": "e",
+            "start": 127.95,
+            "end": 128.112
+          },
+          {
+            "word": "o",
+            "start": 128.112,
+            "end": 128.276
+          },
+          {
+            "word": "que",
+            "start": 128.276,
+            "end": 128.445
+          },
+          {
+            "word": "diz",
+            "start": 128.445,
+            "end": 128.813
+          },
+          {
+            "word": "lá",
+            "start": 128.813,
+            "end": 128.977
+          },
+          {
+            "word": "no",
+            "start": 128.977,
+            "end": 129.185
+          },
+          {
+            "word": "canto",
+            "start": 129.185,
+            "end": 129.434
+          },
+          {
+            "word": "lírico",
+            "start": 129.434,
+            "end": 130.22
+          }
+        ]
+      },
+      {
+        "verseStart": 130.22,
+        "verseEnd": 133.257,
+        "translation": "I speak of the brain and the heart",
+        "words": [
+          {
+            "word": "Falo",
+            "start": 130.22,
+            "end": 130.423
+          },
+          {
+            "word": "do",
+            "start": 130.423,
+            "end": 130.628
+          },
+          {
+            "word": "cérebro",
+            "start": 130.628,
+            "end": 131.329
+          },
+          {
+            "word": "e",
+            "start": 131.329,
+            "end": 131.534
+          },
+          {
+            "word": "do",
+            "start": 131.534,
+            "end": 131.779
+          },
+          {
+            "word": "coração",
+            "start": 131.779,
+            "end": 133.257
+          }
+        ]
+      },
+      {
+        "verseStart": 133.257,
+        "verseEnd": 136.616,
+        "translation": "I see selfishness, prejudice from brother to brother",
+        "words": [
+          {
+            "word": "Vejo",
+            "start": 133.257,
+            "end": 133.545
+          },
+          {
+            "word": "egoísmo,",
+            "start": 133.545,
+            "end": 134.371
+          },
+          {
+            "word": "preconceito",
+            "start": 134.371,
+            "end": 135.063
+          },
+          {
+            "word": "de",
+            "start": 135.063,
+            "end": 135.226
+          },
+          {
+            "word": "irmão",
+            "start": 135.226,
+            "end": 135.675
+          },
+          {
+            "word": "pra",
+            "start": 135.675,
+            "end": 135.837
+          },
+          {
+            "word": "irmão",
+            "start": 135.837,
+            "end": 136.616
+          }
+        ]
+      },
+      {
+        "verseStart": 136.616,
+        "verseEnd": 139.791,
+        "translation": "Life isn't the problem, it's a battle, a challenge",
+        "words": [
+          {
+            "word": "A",
+            "start": 136.616,
+            "end": 136.819
+          },
+          {
+            "word": "vida",
+            "start": 136.819,
+            "end": 136.987
+          },
+          {
+            "word": "não",
+            "start": 136.987,
+            "end": 137.191
+          },
+          {
+            "word": "é",
+            "start": 137.191,
+            "end": 137.395
+          },
+          {
+            "word": "o",
+            "start": 137.395,
+            "end": 137.61
+          },
+          {
+            "word": "problema,",
+            "start": 137.61,
+            "end": 138.187
+          },
+          {
+            "word": "é",
+            "start": 138.187,
+            "end": 138.308
+          },
+          {
+            "word": "batalha,",
+            "start": 138.308,
+            "end": 138.886
+          },
+          {
+            "word": "desafio",
+            "start": 138.886,
+            "end": 139.791
+          }
+        ]
+      },
+      {
+        "verseStart": 139.791,
+        "verseEnd": 142.988,
+        "translation": "Every obstacle is a lesson, I announce",
+        "words": [
+          {
+            "word": "Cada",
+            "start": 139.791,
+            "end": 139.957
+          },
+          {
+            "word": "obstáculo",
+            "start": 139.957,
+            "end": 140.775
+          },
+          {
+            "word": "é",
+            "start": 140.775,
+            "end": 141.02
+          },
+          {
+            "word": "uma",
+            "start": 141.02,
+            "end": 141.305
+          },
+          {
+            "word": "lição,",
+            "start": 141.305,
+            "end": 141.72
+          },
+          {
+            "word": "eu",
+            "start": 141.72,
+            "end": 141.927
+          },
+          {
+            "word": "anuncio",
+            "start": 141.927,
+            "end": 142.988
+          }
+        ]
+      },
+      {
+        "verseStart": 142.988,
+        "verseEnd": 146.179,
+        "translation": "That's right, you can't stop",
+        "words": [
+          {
+            "word": "É",
+            "start": 142.988,
+            "end": 143.113
+          },
+          {
+            "word": "isso",
+            "start": 143.113,
+            "end": 143.316
+          },
+          {
+            "word": "aí,",
+            "start": 143.316,
+            "end": 143.686
+          },
+          {
+            "word": "você",
+            "start": 143.686,
+            "end": 144.133
+          },
+          {
+            "word": "não",
+            "start": 144.133,
+            "end": 144.256
+          },
+          {
+            "word": "pode",
+            "start": 144.256,
+            "end": 144.664
+          },
+          {
+            "word": "parar",
+            "start": 144.664,
+            "end": 146.179
+          }
+        ]
+      },
+      {
+        "verseStart": 146.179,
+        "verseEnd": 149.214,
+        "translation": "Wait for the bad times to come embrace you",
+        "words": [
+          {
+            "word": "Esperar",
+            "start": 146.179,
+            "end": 146.885
+          },
+          {
+            "word": "o",
+            "start": 146.885,
+            "end": 147.007
+          },
+          {
+            "word": "tempo",
+            "start": 147.007,
+            "end": 147.415
+          },
+          {
+            "word": "ruim",
+            "start": 147.415,
+            "end": 147.863
+          },
+          {
+            "word": "vir",
+            "start": 147.863,
+            "end": 148.026
+          },
+          {
+            "word": "te",
+            "start": 148.026,
+            "end": 148.274
+          },
+          {
+            "word": "abraçar",
+            "start": 148.274,
+            "end": 149.214
+          }
+        ]
+      },
+      {
+        "verseStart": 149.214,
+        "verseEnd": 153.248,
+        "translation": "Believe that dreaming is always necessary",
+        "words": [
+          {
+            "word": "Acreditar",
+            "start": 149.214,
+            "end": 150.111
+          },
+          {
+            "word": "que",
+            "start": 150.111,
+            "end": 150.315
+          },
+          {
+            "word": "sonhar",
+            "start": 150.315,
+            "end": 150.86
+          },
+          {
+            "word": "sempre",
+            "start": 150.86,
+            "end": 151.064
+          },
+          {
+            "word": "é",
+            "start": 151.064,
+            "end": 151.268
+          },
+          {
+            "word": "preciso",
+            "start": 151.268,
+            "end": 153.248
+          }
+        ]
+      },
+      {
+        "verseStart": 153.248,
+        "verseEnd": 154.756,
+        "translation": "It's what keeps the brothers alive",
+        "words": [
+          {
+            "word": "É",
+            "start": 153.248,
+            "end": 153.41
+          },
+          {
+            "word": "o",
+            "start": 153.41,
+            "end": 153.615
+          },
+          {
+            "word": "que",
+            "start": 153.615,
+            "end": 153.778
+          },
+          {
+            "word": "mantém",
+            "start": 153.778,
+            "end": 153.94
+          },
+          {
+            "word": "os",
+            "start": 153.94,
+            "end": 154.43
+          },
+          {
+            "word": "irmãos",
+            "start": 154.43,
+            "end": 154.674
+          },
+          {
+            "word": "vivos",
+            "start": 154.674,
+            "end": 154.756
+          }
+        ]
+      },
+      {
+        "verseStart": 154.756,
+        "verseEnd": 157.129,
+        "translation": "Several families, several shacks",
+        "words": [
+          {
+            "word": "Várias",
+            "start": 154.756,
+            "end": 155.454
+          },
+          {
+            "word": "famílias,",
+            "start": 155.454,
+            "end": 156.025
+          },
+          {
+            "word": "vários",
+            "start": 156.025,
+            "end": 156.519
+          },
+          {
+            "word": "barracos",
+            "start": 156.519,
+            "end": 157.129
+          }
+        ]
+      },
+      {
+        "verseStart": 157.129,
+        "verseEnd": 158.807,
+        "translation": "A pregnant girl",
+        "words": [
+          {
+            "word": "Uma",
+            "start": 157.129,
+            "end": 157.293
+          },
+          {
+            "word": "mina",
+            "start": 157.293,
+            "end": 158.028
+          },
+          {
+            "word": "grávida",
+            "start": 158.028,
+            "end": 158.807
+          }
+        ]
+      },
+      {
+        "verseStart": 158.807,
+        "verseEnd": 161.223,
+        "translation": "And the lad is locked up in there",
+        "words": [
+          {
+            "word": "E",
+            "start": 158.807,
+            "end": 158.971
+          },
+          {
+            "word": "o",
+            "start": 158.971,
+            "end": 159.215
+          },
+          {
+            "word": "mano",
+            "start": 159.215,
+            "end": 159.547
+          },
+          {
+            "word": "tá",
+            "start": 159.547,
+            "end": 159.832
+          },
+          {
+            "word": "lá",
+            "start": 159.832,
+            "end": 160.53
+          },
+          {
+            "word": "trancafiado",
+            "start": 160.53,
+            "end": 161.223
+          }
+        ]
+      },
+      {
+        "verseStart": 161.223,
+        "verseEnd": 164.207,
+        "translation": "He dreams straight up of freedom",
+        "words": [
+          {
+            "word": "Ele",
+            "start": 161.223,
+            "end": 161.631
+          },
+          {
+            "word": "sonha",
+            "start": 161.631,
+            "end": 161.917
+          },
+          {
+            "word": "na",
+            "start": 161.917,
+            "end": 162.206
+          },
+          {
+            "word": "direta",
+            "start": 162.206,
+            "end": 162.858
+          },
+          {
+            "word": "com",
+            "start": 162.858,
+            "end": 163.102
+          },
+          {
+            "word": "a",
+            "start": 163.102,
+            "end": 163.347
+          },
+          {
+            "word": "liberdade",
+            "start": 163.347,
+            "end": 164.207
+          }
+        ]
+      },
+      {
+        "verseStart": 164.207,
+        "verseEnd": 168.42,
+        "translation": "He dreams of one day going back to the streets far from the wickedness",
+        "words": [
+          {
+            "word": "Ele",
+            "start": 164.207,
+            "end": 164.495
+          },
+          {
+            "word": "sonha",
+            "start": 164.495,
+            "end": 165.071
+          },
+          {
+            "word": "em",
+            "start": 165.071,
+            "end": 165.235
+          },
+          {
+            "word": "um",
+            "start": 165.235,
+            "end": 165.438
+          },
+          {
+            "word": "dia",
+            "start": 165.438,
+            "end": 165.888
+          },
+          {
+            "word": "voltar",
+            "start": 165.888,
+            "end": 166.092
+          },
+          {
+            "word": "pra",
+            "start": 166.092,
+            "end": 166.418
+          },
+          {
+            "word": "rua",
+            "start": 166.418,
+            "end": 166.907
+          },
+          {
+            "word": "longe",
+            "start": 166.907,
+            "end": 167.233
+          },
+          {
+            "word": "da",
+            "start": 167.233,
+            "end": 167.482
+          },
+          {
+            "word": "maldade",
+            "start": 167.482,
+            "end": 168.42
+          }
+        ]
+      },
+      {
+        "verseStart": 168.42,
+        "verseEnd": 170.49,
+        "translation": "In the big city it's like this",
+        "words": [
+          {
+            "word": "Na",
+            "start": 168.42,
+            "end": 168.664
+          },
+          {
+            "word": "cidade",
+            "start": 168.664,
+            "end": 169.075
+          },
+          {
+            "word": "grande",
+            "start": 169.075,
+            "end": 169.58
+          },
+          {
+            "word": "é",
+            "start": 169.58,
+            "end": 169.907
+          },
+          {
+            "word": "assim",
+            "start": 169.907,
+            "end": 170.49
+          }
+        ]
+      },
+      {
+        "verseStart": 170.49,
+        "verseEnd": 174.551,
+        "translation": "You expect good weather and all that comes is bad weather",
+        "words": [
+          {
+            "word": "Você",
+            "start": 170.49,
+            "end": 170.735
+          },
+          {
+            "word": "espera",
+            "start": 170.735,
+            "end": 171.109
+          },
+          {
+            "word": "tempo",
+            "start": 171.109,
+            "end": 171.885
+          },
+          {
+            "word": "bom",
+            "start": 171.885,
+            "end": 172.417
+          },
+          {
+            "word": "e",
+            "start": 172.417,
+            "end": 172.58
+          },
+          {
+            "word": "o",
+            "start": 172.58,
+            "end": 172.743
+          },
+          {
+            "word": "que",
+            "start": 172.743,
+            "end": 172.906
+          },
+          {
+            "word": "vem",
+            "start": 172.906,
+            "end": 173.19
+          },
+          {
+            "word": "é",
+            "start": 173.19,
+            "end": 173.353
+          },
+          {
+            "word": "só",
+            "start": 173.353,
+            "end": 173.522
+          },
+          {
+            "word": "tempo",
+            "start": 173.522,
+            "end": 173.856
+          },
+          {
+            "word": "ruim",
+            "start": 173.856,
+            "end": 174.551
+          }
+        ]
+      },
+      {
+        "verseStart": 174.551,
+        "verseEnd": 177.416,
+        "translation": "In sports, in boxing or football",
+        "words": [
+          {
+            "word": "No",
+            "start": 174.551,
+            "end": 174.673
+          },
+          {
+            "word": "esporte,",
+            "start": 174.673,
+            "end": 175.368
+          },
+          {
+            "word": "no",
+            "start": 175.368,
+            "end": 175.49
+          },
+          {
+            "word": "boxe",
+            "start": 175.49,
+            "end": 175.982
+          },
+          {
+            "word": "ou",
+            "start": 175.982,
+            "end": 176.144
+          },
+          {
+            "word": "no",
+            "start": 176.144,
+            "end": 176.307
+          },
+          {
+            "word": "futebol",
+            "start": 176.307,
+            "end": 177.416
+          }
+        ]
+      },
+      {
+        "verseStart": 177.416,
+        "verseEnd": 180.968,
+        "translation": "Someone dreaming of a medal, their place in the sun, however",
+        "words": [
+          {
+            "word": "Alguém",
+            "start": 177.416,
+            "end": 177.701
+          },
+          {
+            "word": "sonhando",
+            "start": 177.701,
+            "end": 178.111
+          },
+          {
+            "word": "com",
+            "start": 178.111,
+            "end": 178.518
+          },
+          {
+            "word": "uma",
+            "start": 178.518,
+            "end": 178.887
+          },
+          {
+            "word": "medalha",
+            "start": 178.887,
+            "end": 179.132
+          },
+          {
+            "word": "o",
+            "start": 179.132,
+            "end": 179.254
+          },
+          {
+            "word": "seu",
+            "start": 179.254,
+            "end": 179.457
+          },
+          {
+            "word": "lugar",
+            "start": 179.457,
+            "end": 179.702
+          },
+          {
+            "word": "ao",
+            "start": 179.702,
+            "end": 179.905
+          },
+          {
+            "word": "sol,",
+            "start": 179.905,
+            "end": 180.353
+          },
+          {
+            "word": "porém",
+            "start": 180.353,
+            "end": 180.968
+          }
+        ]
+      },
+      {
+        "verseStart": 180.968,
+        "verseEnd": 183.557,
+        "translation": "What to do if the bloke didn't study",
+        "words": [
+          {
+            "word": "Fazer",
+            "start": 180.968,
+            "end": 181.171
+          },
+          {
+            "word": "o",
+            "start": 181.171,
+            "end": 181.335
+          },
+          {
+            "word": "que",
+            "start": 181.335,
+            "end": 181.584
+          },
+          {
+            "word": "se",
+            "start": 181.584,
+            "end": 181.952
+          },
+          {
+            "word": "o",
+            "start": 181.952,
+            "end": 182.198
+          },
+          {
+            "word": "maluco",
+            "start": 182.198,
+            "end": 182.445
+          },
+          {
+            "word": "não",
+            "start": 182.445,
+            "end": 182.856
+          },
+          {
+            "word": "estudou",
+            "start": 182.856,
+            "end": 183.557
+          }
+        ]
+      },
+      {
+        "verseStart": 183.557,
+        "verseEnd": 187.196,
+        "translation": "500 years of Brazil and the Brazil here hasn't changed at all",
+        "words": [
+          {
+            "word": "500",
+            "start": 183.557,
+            "end": 183.926
+          },
+          {
+            "word": "anos",
+            "start": 183.926,
+            "end": 184.253
+          },
+          {
+            "word": "de",
+            "start": 184.253,
+            "end": 184.498
+          },
+          {
+            "word": "Brasil",
+            "start": 184.498,
+            "end": 184.905
+          },
+          {
+            "word": "e",
+            "start": 184.905,
+            "end": 185.028
+          },
+          {
+            "word": "o",
+            "start": 185.028,
+            "end": 185.232
+          },
+          {
+            "word": "Brasil",
+            "start": 185.232,
+            "end": 185.801
+          },
+          {
+            "word": "aqui",
+            "start": 185.801,
+            "end": 186.087
+          },
+          {
+            "word": "nada",
+            "start": 186.087,
+            "end": 186.255
+          },
+          {
+            "word": "mudou",
+            "start": 186.255,
+            "end": 187.196
+          }
+        ]
+      },
+      {
+        "verseStart": 187.196,
+        "verseEnd": 190.149,
+        "translation": "Getting desperate, scene of a madman",
+        "words": [
+          {
+            "word": "Desesperô",
+            "start": 187.196,
+            "end": 188.146
+          },
+          {
+            "word": "aí,",
+            "start": 188.146,
+            "end": 188.801
+          },
+          {
+            "word": "cena",
+            "start": 188.801,
+            "end": 188.966
+          },
+          {
+            "word": "do",
+            "start": 188.966,
+            "end": 189.211
+          },
+          {
+            "word": "louco",
+            "start": 189.211,
+            "end": 190.149
+          }
+        ]
+      },
+      {
+        "verseStart": 190.149,
+        "verseEnd": 193.62,
+        "translation": "Invaded the market, powdered up, armed and then some",
+        "words": [
+          {
+            "word": "Invadiu",
+            "start": 190.149,
+            "end": 190.271
+          },
+          {
+            "word": "o",
+            "start": 190.271,
+            "end": 190.515
+          },
+          {
+            "word": "mercado",
+            "start": 190.515,
+            "end": 191.049
+          },
+          {
+            "word": "farinhado",
+            "start": 191.049,
+            "end": 191.742
+          },
+          {
+            "word": "armado",
+            "start": 191.742,
+            "end": 192.188
+          },
+          {
+            "word": "e",
+            "start": 192.188,
+            "end": 192.351
+          },
+          {
+            "word": "mais",
+            "start": 192.351,
+            "end": 192.595
+          },
+          {
+            "word": "um",
+            "start": 192.595,
+            "end": 192.967
+          },
+          {
+            "word": "pouco",
+            "start": 192.967,
+            "end": 193.62
+          }
+        ]
+      },
+      {
+        "verseStart": 193.62,
+        "verseEnd": 196.736,
+        "translation": "This is a reflection of our current reality",
+        "words": [
+          {
+            "word": "Isso",
+            "start": 193.62,
+            "end": 193.785
+          },
+          {
+            "word": "é",
+            "start": 193.785,
+            "end": 194.03
+          },
+          {
+            "word": "reflexo",
+            "start": 194.03,
+            "end": 194.729
+          },
+          {
+            "word": "da",
+            "start": 194.729,
+            "end": 194.935
+          },
+          {
+            "word": "nossa",
+            "start": 194.935,
+            "end": 195.348
+          },
+          {
+            "word": "atualidade",
+            "start": 195.348,
+            "end": 196.736
+          }
+        ]
+      },
+      {
+        "verseStart": 196.736,
+        "verseEnd": 199.896,
+        "translation": "This is the ultimate mirror of reality",
+        "words": [
+          {
+            "word": "Esse",
+            "start": 196.736,
+            "end": 196.903
+          },
+          {
+            "word": "é",
+            "start": 196.903,
+            "end": 197.149
+          },
+          {
+            "word": "o",
+            "start": 197.149,
+            "end": 197.362
+          },
+          {
+            "word": "espelho",
+            "start": 197.362,
+            "end": 197.815
+          },
+          {
+            "word": "derradeiro",
+            "start": 197.815,
+            "end": 198.385
+          },
+          {
+            "word": "da",
+            "start": 198.385,
+            "end": 198.589
+          },
+          {
+            "word": "realidade",
+            "start": 198.589,
+            "end": 199.896
+          }
+        ]
+      },
+      {
+        "verseStart": 199.896,
+        "verseEnd": 202.38,
+        "translation": "It's no bullshit, chatter, or sweet talk",
+        "words": [
+          {
+            "word": "Não",
+            "start": 199.896,
+            "end": 200.059
+          },
+          {
+            "word": "é",
+            "start": 200.059,
+            "end": 200.262
+          },
+          {
+            "word": "areia,",
+            "start": 200.262,
+            "end": 200.872
+          },
+          {
+            "word": "conversa,",
+            "start": 200.872,
+            "end": 201.527
+          },
+          {
+            "word": "xaveco",
+            "start": 201.527,
+            "end": 202.38
+          }
+        ]
+      },
+      {
+        "verseStart": 202.38,
+        "verseEnd": 206.271,
+        "translation": "Because the dream of many in the ends is to open a pub",
+        "words": [
+          {
+            "word": "Porque",
+            "start": 202.38,
+            "end": 202.584
+          },
+          {
+            "word": "o",
+            "start": 202.584,
+            "end": 202.787
+          },
+          {
+            "word": "sonho",
+            "start": 202.787,
+            "end": 202.991
+          },
+          {
+            "word": "de",
+            "start": 202.991,
+            "end": 203.361
+          },
+          {
+            "word": "vários",
+            "start": 203.361,
+            "end": 204.013
+          },
+          {
+            "word": "na",
+            "start": 204.013,
+            "end": 204.176
+          },
+          {
+            "word": "quebrada",
+            "start": 204.176,
+            "end": 204.665
+          },
+          {
+            "word": "é",
+            "start": 204.665,
+            "end": 204.827
+          },
+          {
+            "word": "abrir",
+            "start": 204.827,
+            "end": 205.202
+          },
+          {
+            "word": "um",
+            "start": 205.202,
+            "end": 205.448
+          },
+          {
+            "word": "boteco",
+            "start": 205.448,
+            "end": 206.271
+          }
+        ]
+      },
+      {
+        "verseStart": 206.271,
+        "verseEnd": 209.427,
+        "translation": "Being an entrepreneur won't work, studying no way",
+        "words": [
+          {
+            "word": "Ser",
+            "start": 206.271,
+            "end": 207.011
+          },
+          {
+            "word": "empresário",
+            "start": 207.011,
+            "end": 207.339
+          },
+          {
+            "word": "não",
+            "start": 207.339,
+            "end": 207.502
+          },
+          {
+            "word": "dá,",
+            "start": 207.502,
+            "end": 207.869
+          },
+          {
+            "word": "estudar",
+            "start": 207.869,
+            "end": 208.446
+          },
+          {
+            "word": "nem",
+            "start": 208.446,
+            "end": 208.609
+          },
+          {
+            "word": "pensar",
+            "start": 208.609,
+            "end": 209.427
+          }
+        ]
+      },
+      {
+        "verseStart": 209.427,
+        "verseEnd": 212.59,
+        "translation": "Gotta graft or steal to sustain the brothers",
+        "words": [
+          {
+            "word": "Tem",
+            "start": 209.427,
+            "end": 209.591
+          },
+          {
+            "word": "que",
+            "start": 209.591,
+            "end": 209.757
+          },
+          {
+            "word": "trampar",
+            "start": 209.757,
+            "end": 210.294
+          },
+          {
+            "word": "ou",
+            "start": 210.294,
+            "end": 210.458
+          },
+          {
+            "word": "ripar",
+            "start": 210.458,
+            "end": 210.99
+          },
+          {
+            "word": "pros",
+            "start": 210.99,
+            "end": 211.154
+          },
+          {
+            "word": "irmãos",
+            "start": 211.154,
+            "end": 211.77
+          },
+          {
+            "word": "sustentar",
+            "start": 211.77,
+            "end": 212.59
+          }
+        ]
+      },
+      {
+        "verseStart": 212.59,
+        "verseEnd": 215.623,
+        "translation": "Being a criminal here is way more practical",
+        "words": [
+          {
+            "word": "Ser",
+            "start": 212.59,
+            "end": 212.834
+          },
+          {
+            "word": "criminoso",
+            "start": 212.834,
+            "end": 213.246
+          },
+          {
+            "word": "aqui",
+            "start": 213.246,
+            "end": 213.782
+          },
+          {
+            "word": "é",
+            "start": 213.782,
+            "end": 214.272
+          },
+          {
+            "word": "bem",
+            "start": 214.272,
+            "end": 214.517
+          },
+          {
+            "word": "mais",
+            "start": 214.517,
+            "end": 214.764
+          },
+          {
+            "word": "prático",
+            "start": 214.764,
+            "end": 215.623
+          }
+        ]
+      },
+      {
+        "verseStart": 215.623,
+        "verseEnd": 218.687,
+        "translation": "Fast, sadistic, or simply a tactical scheme",
+        "words": [
+          {
+            "word": "Rápido,",
+            "start": 215.623,
+            "end": 216.154
+          },
+          {
+            "word": "sádico,",
+            "start": 216.154,
+            "end": 216.689
+          },
+          {
+            "word": "ou",
+            "start": 216.689,
+            "end": 216.812
+          },
+          {
+            "word": "simplesmente",
+            "start": 216.812,
+            "end": 217.543
+          },
+          {
+            "word": "esquema",
+            "start": 217.543,
+            "end": 217.909
+          },
+          {
+            "word": "tático",
+            "start": 217.909,
+            "end": 218.687
+          }
+        ]
+      },
+      {
+        "verseStart": 218.687,
+        "verseEnd": 221.836,
+        "translation": "Is it instinct or conscience",
+        "words": [
+          {
+            "word": "Será",
+            "start": 218.687,
+            "end": 219.303
+          },
+          {
+            "word": "instinto",
+            "start": 219.303,
+            "end": 219.507
+          },
+          {
+            "word": "ou",
+            "start": 219.507,
+            "end": 219.954
+          },
+          {
+            "word": "consciência",
+            "start": 219.954,
+            "end": 221.836
+          }
+        ]
+      },
+      {
+        "verseStart": 221.836,
+        "verseEnd": 225.411,
+        "translation": "Living between the dream or the shite of survival",
+        "words": [
+          {
+            "word": "Viver",
+            "start": 221.836,
+            "end": 222.134
+          },
+          {
+            "word": "entre",
+            "start": 222.134,
+            "end": 222.299
+          },
+          {
+            "word": "o",
+            "start": 222.299,
+            "end": 222.466
+          },
+          {
+            "word": "sonho",
+            "start": 222.466,
+            "end": 222.954
+          },
+          {
+            "word": "ou",
+            "start": 222.954,
+            "end": 223.117
+          },
+          {
+            "word": "a",
+            "start": 223.117,
+            "end": 223.365
+          },
+          {
+            "word": "merda",
+            "start": 223.365,
+            "end": 223.813
+          },
+          {
+            "word": "da",
+            "start": 223.813,
+            "end": 224.016
+          },
+          {
+            "word": "sobrevivência",
+            "start": 224.016,
+            "end": 225.411
+          }
+        ]
+      },
+      {
+        "verseStart": 225.411,
+        "verseEnd": 227.501,
+        "translation": "The learning was hard",
+        "words": [
+          {
+            "word": "O",
+            "start": 225.411,
+            "end": 225.615
+          },
+          {
+            "word": "aprendizado",
+            "start": 225.615,
+            "end": 226.11
+          },
+          {
+            "word": "foi",
+            "start": 226.11,
+            "end": 226.314
+          },
+          {
+            "word": "duro",
+            "start": 226.314,
+            "end": 227.501
+          }
+        ]
+      },
+      {
+        "verseStart": 227.501,
+        "verseEnd": 230.006,
+        "translation": "And even faced with this setback I didn't stop dreaming",
+        "words": [
+          {
+            "word": "E",
+            "start": 227.501,
+            "end": 227.626
+          },
+          {
+            "word": "mesmo",
+            "start": 227.626,
+            "end": 227.789
+          },
+          {
+            "word": "diante",
+            "start": 227.789,
+            "end": 227.953
+          },
+          {
+            "word": "desse",
+            "start": 227.953,
+            "end": 228.081
+          },
+          {
+            "word": "revés",
+            "start": 228.081,
+            "end": 228.777
+          },
+          {
+            "word": "não",
+            "start": 228.777,
+            "end": 228.9
+          },
+          {
+            "word": "parei",
+            "start": 228.9,
+            "end": 229.104
+          },
+          {
+            "word": "de",
+            "start": 229.104,
+            "end": 229.347
+          },
+          {
+            "word": "sonhar",
+            "start": 229.347,
+            "end": 230.006
+          }
+        ]
+      },
+      {
+        "verseStart": 230.006,
+        "verseEnd": 233.206,
+        "translation": "I was persistent, because the weak don't reach the goal",
+        "words": [
+          {
+            "word": "Fui",
+            "start": 230.006,
+            "end": 230.171
+          },
+          {
+            "word": "persistente,",
+            "start": 230.171,
+            "end": 231.319
+          },
+          {
+            "word": "porque",
+            "start": 231.319,
+            "end": 231.441
+          },
+          {
+            "word": "o",
+            "start": 231.441,
+            "end": 231.609
+          },
+          {
+            "word": "fraco",
+            "start": 231.609,
+            "end": 231.855
+          },
+          {
+            "word": "não",
+            "start": 231.855,
+            "end": 232.018
+          },
+          {
+            "word": "alcança",
+            "start": 232.018,
+            "end": 232.18
+          },
+          {
+            "word": "a",
+            "start": 232.18,
+            "end": 232.383
+          },
+          {
+            "word": "meta",
+            "start": 232.383,
+            "end": 233.206
+          }
+        ]
+      },
+      {
+        "verseStart": 233.206,
+        "verseEnd": 235.628,
+        "translation": "Through rap I chased my losses",
+        "words": [
+          {
+            "word": "Através",
+            "start": 233.206,
+            "end": 233.329
+          },
+          {
+            "word": "do",
+            "start": 233.329,
+            "end": 233.491
+          },
+          {
+            "word": "rap",
+            "start": 233.491,
+            "end": 234.024
+          },
+          {
+            "word": "corri",
+            "start": 234.024,
+            "end": 234.476
+          },
+          {
+            "word": "atrás",
+            "start": 234.476,
+            "end": 234.684
+          },
+          {
+            "word": "do",
+            "start": 234.684,
+            "end": 234.888
+          },
+          {
+            "word": "preju",
+            "start": 234.888,
+            "end": 235.628
+          }
+        ]
+      },
+      {
+        "verseStart": 235.628,
+        "verseEnd": 237.875,
+        "translation": "And I could make my dream come true",
+        "words": [
+          {
+            "word": "E",
+            "start": 235.628,
+            "end": 235.831
+          },
+          {
+            "word": "pude",
+            "start": 235.831,
+            "end": 236.285
+          },
+          {
+            "word": "realizar",
+            "start": 236.285,
+            "end": 236.612
+          },
+          {
+            "word": "meu",
+            "start": 236.612,
+            "end": 236.775
+          },
+          {
+            "word": "sonho",
+            "start": 236.775,
+            "end": 237.875
+          }
+        ]
+      },
+      {
+        "verseStart": 237.875,
+        "verseEnd": 244.292,
+        "translation": "That's why I, Afro-X, never stop dreaming",
+        "words": [
+          {
+            "word": "Por",
+            "start": 237.875,
+            "end": 237.981
+          },
+          {
+            "word": "isso",
+            "start": 237.981,
+            "end": 238.147
+          },
+          {
+            "word": "que",
+            "start": 238.147,
+            "end": 238.31
+          },
+          {
+            "word": "eu,",
+            "start": 238.31,
+            "end": 239.049
+          },
+          {
+            "word": "Afro-X,",
+            "start": 239.049,
+            "end": 240.311
+          },
+          {
+            "word": "nunca",
+            "start": 240.311,
+            "end": 240.721
+          },
+          {
+            "word": "deixo",
+            "start": 240.721,
+            "end": 240.925
+          },
+          {
+            "word": "de",
+            "start": 240.925,
+            "end": 241.092
+          },
+          {
+            "word": "sonhar",
+            "start": 241.092,
+            "end": 244.292
+          }
+        ]
+      },
+      {
+        "verseStart": 244.292,
+        "verseEnd": 247.017,
+        "translation": "I knew paradise and I know hell",
+        "words": [
+          {
+            "word": "Conheci",
+            "start": 244.292,
+            "end": 244.414
+          },
+          {
+            "word": "o",
+            "start": 244.414,
+            "end": 244.537
+          },
+          {
+            "word": "paraíso",
+            "start": 244.537,
+            "end": 245.191
+          },
+          {
+            "word": "e",
+            "start": 245.191,
+            "end": 245.356
+          },
+          {
+            "word": "eu",
+            "start": 245.356,
+            "end": 245.53
+          },
+          {
+            "word": "conheço",
+            "start": 245.53,
+            "end": 245.775
+          },
+          {
+            "word": "o",
+            "start": 245.775,
+            "end": 246.104
+          },
+          {
+            "word": "inferno",
+            "start": 246.104,
+            "end": 247.017
+          }
+        ]
+      },
+      {
+        "verseStart": 247.017,
+        "verseEnd": 250.651,
+        "translation": "I saw Jesus in beige trousers and the devil dressed in a suit",
+        "words": [
+          {
+            "word": "Vi",
+            "start": 247.017,
+            "end": 247.18
+          },
+          {
+            "word": "Jesus",
+            "start": 247.18,
+            "end": 247.343
+          },
+          {
+            "word": "de",
+            "start": 247.343,
+            "end": 247.506
+          },
+          {
+            "word": "calça",
+            "start": 247.506,
+            "end": 247.914
+          },
+          {
+            "word": "bege",
+            "start": 247.914,
+            "end": 248.281
+          },
+          {
+            "word": "e",
+            "start": 248.281,
+            "end": 248.485
+          },
+          {
+            "word": "o",
+            "start": 248.485,
+            "end": 248.688
+          },
+          {
+            "word": "diabo",
+            "start": 248.688,
+            "end": 249.095
+          },
+          {
+            "word": "vestido",
+            "start": 249.095,
+            "end": 249.546
+          },
+          {
+            "word": "de",
+            "start": 249.546,
+            "end": 249.751
+          },
+          {
+            "word": "terno",
+            "start": 249.751,
+            "end": 250.651
+          }
+        ]
+      },
+      {
+        "verseStart": 250.651,
+        "verseEnd": 253.53,
+        "translation": "In the modern world, people don't talk to each other",
+        "words": [
+          {
+            "word": "No",
+            "start": 250.651,
+            "end": 250.857
+          },
+          {
+            "word": "mundo",
+            "start": 250.857,
+            "end": 251.102
+          },
+          {
+            "word": "moderno,",
+            "start": 251.102,
+            "end": 251.634
+          },
+          {
+            "word": "as",
+            "start": 251.634,
+            "end": 251.842
+          },
+          {
+            "word": "pessoas",
+            "start": 251.842,
+            "end": 252.004
+          },
+          {
+            "word": "não",
+            "start": 252.004,
+            "end": 252.337
+          },
+          {
+            "word": "se",
+            "start": 252.337,
+            "end": 252.628
+          },
+          {
+            "word": "falam",
+            "start": 252.628,
+            "end": 253.53
+          }
+        ]
+      },
+      {
+        "verseStart": 253.53,
+        "verseEnd": 256.653,
+        "translation": "On the contrary, they stay silent, step on each other, betray, kill",
+        "words": [
+          {
+            "word": "Ao",
+            "start": 253.53,
+            "end": 253.698
+          },
+          {
+            "word": "contrário,",
+            "start": 253.698,
+            "end": 254.07
+          },
+          {
+            "word": "se",
+            "start": 254.07,
+            "end": 254.233
+          },
+          {
+            "word": "calam,",
+            "start": 254.233,
+            "end": 254.642
+          },
+          {
+            "word": "se",
+            "start": 254.642,
+            "end": 254.809
+          },
+          {
+            "word": "pisam,",
+            "start": 254.809,
+            "end": 255.175
+          },
+          {
+            "word": "se",
+            "start": 255.175,
+            "end": 255.297
+          },
+          {
+            "word": "traem,",
+            "start": 255.297,
+            "end": 255.787
+          },
+          {
+            "word": "se",
+            "start": 255.787,
+            "end": 255.914
+          },
+          {
+            "word": "matam",
+            "start": 255.914,
+            "end": 256.653
+          }
+        ]
+      },
+      {
+        "verseStart": 256.653,
+        "verseEnd": 260.148,
+        "translation": "I shuffle the cards of envy and treason",
+        "words": [
+          {
+            "word": "Embaralho",
+            "start": 256.653,
+            "end": 256.977
+          },
+          {
+            "word": "as",
+            "start": 256.977,
+            "end": 257.349
+          },
+          {
+            "word": "cartas",
+            "start": 257.349,
+            "end": 257.716
+          },
+          {
+            "word": "da",
+            "start": 257.716,
+            "end": 258.051
+          },
+          {
+            "word": "inveja",
+            "start": 258.051,
+            "end": 258.382
+          },
+          {
+            "word": "e",
+            "start": 258.382,
+            "end": 258.75
+          },
+          {
+            "word": "da",
+            "start": 258.75,
+            "end": 258.954
+          },
+          {
+            "word": "traição",
+            "start": 258.954,
+            "end": 260.148
+          }
+        ]
+      },
+      {
+        "verseStart": 260.148,
+        "verseEnd": 263.476,
+        "translation": "Hearts, diamonds and a spade in hand",
+        "words": [
+          {
+            "word": "Copa,",
+            "start": 260.148,
+            "end": 260.521
+          },
+          {
+            "word": "ouro",
+            "start": 260.521,
+            "end": 261.183
+          },
+          {
+            "word": "e",
+            "start": 261.183,
+            "end": 261.311
+          },
+          {
+            "word": "uma",
+            "start": 261.311,
+            "end": 261.885
+          },
+          {
+            "word": "espada",
+            "start": 261.885,
+            "end": 262.537
+          },
+          {
+            "word": "na",
+            "start": 262.537,
+            "end": 262.66
+          },
+          {
+            "word": "mão",
+            "start": 262.66,
+            "end": 263.476
+          }
+        ]
+      },
+      {
+        "verseStart": 263.476,
+        "verseEnd": 266.097,
+        "translation": "What's good is for oneself and what's left is for the other",
+        "words": [
+          {
+            "word": "O",
+            "start": 263.476,
+            "end": 263.604
+          },
+          {
+            "word": "que",
+            "start": 263.604,
+            "end": 263.769
+          },
+          {
+            "word": "é",
+            "start": 263.769,
+            "end": 263.932
+          },
+          {
+            "word": "bom",
+            "start": 263.932,
+            "end": 264.053
+          },
+          {
+            "word": "é",
+            "start": 264.053,
+            "end": 264.216
+          },
+          {
+            "word": "pra",
+            "start": 264.216,
+            "end": 264.379
+          },
+          {
+            "word": "si",
+            "start": 264.379,
+            "end": 264.542
+          },
+          {
+            "word": "e",
+            "start": 264.542,
+            "end": 264.665
+          },
+          {
+            "word": "o",
+            "start": 264.665,
+            "end": 264.828
+          },
+          {
+            "word": "que",
+            "start": 264.828,
+            "end": 264.951
+          },
+          {
+            "word": "sobra",
+            "start": 264.951,
+            "end": 265.073
+          },
+          {
+            "word": "é",
+            "start": 265.073,
+            "end": 265.237
+          },
+          {
+            "word": "do",
+            "start": 265.237,
+            "end": 265.606
+          },
+          {
+            "word": "outro",
+            "start": 265.606,
+            "end": 266.097
+          }
+        ]
+      },
+      {
+        "verseStart": 266.097,
+        "verseEnd": 269.805,
+        "translation": "Just like the sun that warms, but also rots the sewer",
+        "words": [
+          {
+            "word": "Que",
+            "start": 266.097,
+            "end": 266.22
+          },
+          {
+            "word": "nem",
+            "start": 266.22,
+            "end": 266.384
+          },
+          {
+            "word": "o",
+            "start": 266.384,
+            "end": 266.506
+          },
+          {
+            "word": "sol",
+            "start": 266.506,
+            "end": 266.751
+          },
+          {
+            "word": "que",
+            "start": 266.751,
+            "end": 266.92
+          },
+          {
+            "word": "aquece,",
+            "start": 266.92,
+            "end": 267.369
+          },
+          {
+            "word": "mas",
+            "start": 267.369,
+            "end": 267.534
+          },
+          {
+            "word": "também",
+            "start": 267.534,
+            "end": 268.111
+          },
+          {
+            "word": "apodrece",
+            "start": 268.111,
+            "end": 268.728
+          },
+          {
+            "word": "o",
+            "start": 268.728,
+            "end": 268.853
+          },
+          {
+            "word": "esgoto",
+            "start": 268.853,
+            "end": 269.805
+          }
+        ]
+      },
+      {
+        "verseStart": 269.805,
+        "verseEnd": 272.046,
+        "translation": "It's very crazy looking at people",
+        "words": [
+          {
+            "word": "É",
+            "start": 269.805,
+            "end": 269.968
+          },
+          {
+            "word": "muito",
+            "start": 269.968,
+            "end": 270.295
+          },
+          {
+            "word": "louco",
+            "start": 270.295,
+            "end": 270.702
+          },
+          {
+            "word": "olhar",
+            "start": 270.702,
+            "end": 271.028
+          },
+          {
+            "word": "as",
+            "start": 271.028,
+            "end": 271.19
+          },
+          {
+            "word": "pessoas",
+            "start": 271.19,
+            "end": 272.046
+          }
+        ]
+      },
+      {
+        "verseStart": 272.046,
+        "verseEnd": 276.126,
+        "translation": "The bad attitude influences the good minority",
+        "words": [
+          {
+            "word": "A",
+            "start": 272.046,
+            "end": 272.291
+          },
+          {
+            "word": "atitude",
+            "start": 272.291,
+            "end": 272.657
+          },
+          {
+            "word": "do",
+            "start": 272.657,
+            "end": 273.105
+          },
+          {
+            "word": "mal",
+            "start": 273.105,
+            "end": 273.593
+          },
+          {
+            "word": "influencia",
+            "start": 273.593,
+            "end": 274.489
+          },
+          {
+            "word": "a",
+            "start": 274.489,
+            "end": 274.652
+          },
+          {
+            "word": "minoria",
+            "start": 274.652,
+            "end": 275.347
+          },
+          {
+            "word": "boa",
+            "start": 275.347,
+            "end": 276.126
+          }
+        ]
+      },
+      {
+        "verseStart": 276.126,
+        "verseEnd": 279.194,
+        "translation": "Dying for nothing, what else? Killing for nothing, what else?",
+        "words": [
+          {
+            "word": "Morrer",
+            "start": 276.126,
+            "end": 276.249
+          },
+          {
+            "word": "à",
+            "start": 276.249,
+            "end": 276.493
+          },
+          {
+            "word": "toa,",
+            "start": 276.493,
+            "end": 277.104
+          },
+          {
+            "word": "que",
+            "start": 277.104,
+            "end": 277.267
+          },
+          {
+            "word": "mais?",
+            "start": 277.267,
+            "end": 277.681
+          },
+          {
+            "word": "Matar",
+            "start": 277.681,
+            "end": 277.888
+          },
+          {
+            "word": "à",
+            "start": 277.888,
+            "end": 278.092
+          },
+          {
+            "word": "toa,",
+            "start": 278.092,
+            "end": 278.58
+          },
+          {
+            "word": "que",
+            "start": 278.58,
+            "end": 278.745
+          },
+          {
+            "word": "mais?",
+            "start": 278.745,
+            "end": 279.194
+          }
+        ]
+      },
+      {
+        "verseStart": 279.194,
+        "verseEnd": 282.396,
+        "translation": "Getting nicked for nothing, dreaming of a good score",
+        "words": [
+          {
+            "word": "Ser",
+            "start": 279.194,
+            "end": 279.397
+          },
+          {
+            "word": "presa",
+            "start": 279.397,
+            "end": 279.562
+          },
+          {
+            "word": "à",
+            "start": 279.562,
+            "end": 279.727
+          },
+          {
+            "word": "toa",
+            "start": 279.727,
+            "end": 280.306
+          },
+          {
+            "word": ",",
+            "start": 280.306,
+            "end": 280.757
+          },
+          {
+            "word": "sonhando",
+            "start": 280.757,
+            "end": 280.881
+          },
+          {
+            "word": "com",
+            "start": 280.881,
+            "end": 281.089
+          },
+          {
+            "word": "uma",
+            "start": 281.089,
+            "end": 281.253
+          },
+          {
+            "word": "fita",
+            "start": 281.253,
+            "end": 281.415
+          },
+          {
+            "word": "boa",
+            "start": 281.415,
+            "end": 282.396
+          }
+        ]
+      },
+      {
+        "verseStart": 282.396,
+        "verseEnd": 284.942,
+        "translation": "Life flies by and the future catches up",
+        "words": [
+          {
+            "word": "A",
+            "start": 282.396,
+            "end": 282.561
+          },
+          {
+            "word": "vida",
+            "start": 282.561,
+            "end": 282.684
+          },
+          {
+            "word": "voa",
+            "start": 282.684,
+            "end": 283.307
+          },
+          {
+            "word": "e",
+            "start": 283.307,
+            "end": 283.389
+          },
+          {
+            "word": "o",
+            "start": 283.389,
+            "end": 283.714
+          },
+          {
+            "word": "futuro",
+            "start": 283.714,
+            "end": 283.88
+          },
+          {
+            "word": "pega",
+            "start": 283.88,
+            "end": 284.942
+          }
+        ]
+      },
+      {
+        "verseStart": 284.942,
+        "verseEnd": 286.33,
+        "translation": "Who stood firm, spoke",
+        "words": [
+          {
+            "word": "Quem",
+            "start": 284.942,
+            "end": 285.105
+          },
+          {
+            "word": "se",
+            "start": 285.105,
+            "end": 285.268
+          },
+          {
+            "word": "firmô,",
+            "start": 285.268,
+            "end": 285.757
+          },
+          {
+            "word": "falô",
+            "start": 285.757,
+            "end": 286.33
+          }
+        ]
+      },
+      {
+        "verseStart": 286.33,
+        "verseEnd": 288.802,
+        "translation": "Who didn't win, gives up the game",
+        "words": [
+          {
+            "word": "Quem",
+            "start": 286.33,
+            "end": 286.492
+          },
+          {
+            "word": "não",
+            "start": 286.492,
+            "end": 286.656
+          },
+          {
+            "word": "ganhou,",
+            "start": 286.656,
+            "end": 287.281
+          },
+          {
+            "word": "o",
+            "start": 287.281,
+            "end": 287.446
+          },
+          {
+            "word": "jogo",
+            "start": 287.446,
+            "end": 287.896
+          },
+          {
+            "word": "entrega",
+            "start": 287.896,
+            "end": 288.802
+          }
+        ]
+      },
+      {
+        "verseStart": 288.802,
+        "verseEnd": 291.261,
+        "translation": "Another fall among 15 million",
+        "words": [
+          {
+            "word": "Mais",
+            "start": 288.802,
+            "end": 288.967
+          },
+          {
+            "word": "um",
+            "start": 288.967,
+            "end": 289.293
+          },
+          {
+            "word": "queda",
+            "start": 289.293,
+            "end": 289.745
+          },
+          {
+            "word": "em",
+            "start": 289.745,
+            "end": 289.908
+          },
+          {
+            "word": "15",
+            "start": 289.908,
+            "end": 290.362
+          },
+          {
+            "word": "milhões",
+            "start": 290.362,
+            "end": 291.261
+          }
+        ]
+      },
+      {
+        "verseStart": 291.261,
+        "verseEnd": 295.148,
+        "translation": "In the richest metropolis, its several contradictions",
+        "words": [
+          {
+            "word": "Na",
+            "start": 291.261,
+            "end": 291.551
+          },
+          {
+            "word": "mais",
+            "start": 291.551,
+            "end": 291.714
+          },
+          {
+            "word": "rica",
+            "start": 291.714,
+            "end": 292.047
+          },
+          {
+            "word": "metrópole,",
+            "start": 292.047,
+            "end": 292.859
+          },
+          {
+            "word": "suas",
+            "start": 292.859,
+            "end": 293.265
+          },
+          {
+            "word": "várias",
+            "start": 293.265,
+            "end": 293.591
+          },
+          {
+            "word": "contradições",
+            "start": 293.591,
+            "end": 295.148
+          }
+        ]
+      },
+      {
+        "verseStart": 295.148,
+        "verseEnd": 299.358,
+        "translation": "It's countless, unacceptable, relentless, inevitable",
+        "words": [
+          {
+            "word": "É",
+            "start": 295.148,
+            "end": 295.27
+          },
+          {
+            "word": "incontável,",
+            "start": 295.27,
+            "end": 296.34
+          },
+          {
+            "word": "inaceitável,",
+            "start": 296.34,
+            "end": 297.439
+          },
+          {
+            "word": "implacável,",
+            "start": 297.439,
+            "end": 298.255
+          },
+          {
+            "word": "inevitável",
+            "start": 298.255,
+            "end": 299.358
+          }
+        ]
+      },
+      {
+        "verseStart": 299.358,
+        "verseEnd": 304.323,
+        "translation": "Seeing the miserable side subjecting itself to crumbs, favours",
+        "words": [
+          {
+            "word": "Ver",
+            "start": 299.358,
+            "end": 299.522
+          },
+          {
+            "word": "o",
+            "start": 299.522,
+            "end": 299.772
+          },
+          {
+            "word": "lado",
+            "start": 299.772,
+            "end": 300.305
+          },
+          {
+            "word": "miserável",
+            "start": 300.305,
+            "end": 301.614
+          },
+          {
+            "word": "se",
+            "start": 301.614,
+            "end": 301.778
+          },
+          {
+            "word": "sujeitando",
+            "start": 301.778,
+            "end": 302.389
+          },
+          {
+            "word": "com",
+            "start": 302.389,
+            "end": 302.592
+          },
+          {
+            "word": "migalhas,",
+            "start": 302.592,
+            "end": 303.211
+          },
+          {
+            "word": "favores",
+            "start": 303.211,
+            "end": 304.323
+          }
+        ]
+      },
+      {
+        "verseStart": 304.323,
+        "verseEnd": 307.778,
+        "translation": "Dodging between nights of fear and horrors",
+        "words": [
+          {
+            "word": "Se",
+            "start": 304.323,
+            "end": 304.824
+          },
+          {
+            "word": "esquivando",
+            "start": 304.824,
+            "end": 305.231
+          },
+          {
+            "word": "entre",
+            "start": 305.231,
+            "end": 305.683
+          },
+          {
+            "word": "noite",
+            "start": 305.683,
+            "end": 306.218
+          },
+          {
+            "word": "de",
+            "start": 306.218,
+            "end": 306.382
+          },
+          {
+            "word": "medo",
+            "start": 306.382,
+            "end": 306.789
+          },
+          {
+            "word": "e",
+            "start": 306.789,
+            "end": 306.953
+          },
+          {
+            "word": "horrores",
+            "start": 306.953,
+            "end": 307.778
+          }
+        ]
+      },
+      {
+        "verseStart": 307.778,
+        "verseEnd": 310.233,
+        "translation": "What's the deal, the beef, the scene?",
+        "words": [
+          {
+            "word": "Qual",
+            "start": 307.778,
+            "end": 307.941
+          },
+          {
+            "word": "é",
+            "start": 307.941,
+            "end": 308.145
+          },
+          {
+            "word": "a",
+            "start": 308.145,
+            "end": 308.553
+          },
+          {
+            "word": "fita,",
+            "start": 308.553,
+            "end": 308.757
+          },
+          {
+            "word": "a",
+            "start": 308.757,
+            "end": 309.046
+          },
+          {
+            "word": "treta,",
+            "start": 309.046,
+            "end": 309.414
+          },
+          {
+            "word": "a",
+            "start": 309.414,
+            "end": 309.623
+          },
+          {
+            "word": "cena?",
+            "start": 309.623,
+            "end": 310.233
+          }
+        ]
+      },
+      {
+        "verseStart": 310.233,
+        "verseEnd": 314.127,
+        "translation": "We pray, we flee, it's always the same problems carrying on",
+        "words": [
+          {
+            "word": "A",
+            "start": 310.233,
+            "end": 310.396
+          },
+          {
+            "word": "gente",
+            "start": 310.396,
+            "end": 310.602
+          },
+          {
+            "word": "reza,",
+            "start": 310.602,
+            "end": 310.767
+          },
+          {
+            "word": "foge,",
+            "start": 310.767,
+            "end": 311.338
+          },
+          {
+            "word": "continua",
+            "start": 311.338,
+            "end": 311.827
+          },
+          {
+            "word": "sempre",
+            "start": 311.827,
+            "end": 312.276
+          },
+          {
+            "word": "os",
+            "start": 312.276,
+            "end": 312.606
+          },
+          {
+            "word": "mesmo",
+            "start": 312.606,
+            "end": 312.98
+          },
+          {
+            "word": "problema",
+            "start": 312.98,
+            "end": 314.127
+          }
+        ]
+      },
+      {
+        "verseStart": 314.127,
+        "verseEnd": 316.747,
+        "translation": "Women and money are always involved",
+        "words": [
+          {
+            "word": "Mulher",
+            "start": 314.127,
+            "end": 314.292
+          },
+          {
+            "word": "e",
+            "start": 314.292,
+            "end": 314.582
+          },
+          {
+            "word": "dinheiro",
+            "start": 314.582,
+            "end": 315.072
+          },
+          {
+            "word": "tá",
+            "start": 315.072,
+            "end": 315.281
+          },
+          {
+            "word": "sempre",
+            "start": 315.281,
+            "end": 315.568
+          },
+          {
+            "word": "envolvido",
+            "start": 315.568,
+            "end": 316.747
+          }
+        ]
+      },
+      {
+        "verseStart": 316.747,
+        "verseEnd": 320.478,
+        "translation": "Vanity, ambition, ammo to create enemies",
+        "words": [
+          {
+            "word": "Vaidade,",
+            "start": 316.747,
+            "end": 317.408
+          },
+          {
+            "word": "ambição,",
+            "start": 317.408,
+            "end": 317.937
+          },
+          {
+            "word": "munição",
+            "start": 317.937,
+            "end": 318.915
+          },
+          {
+            "word": "pra",
+            "start": 318.915,
+            "end": 319.036
+          },
+          {
+            "word": "criar",
+            "start": 319.036,
+            "end": 319.409
+          },
+          {
+            "word": "inimigo",
+            "start": 319.409,
+            "end": 320.478
+          }
+        ]
+      },
+      {
+        "verseStart": 320.478,
+        "verseEnd": 322.775,
+        "translation": "Since ancient times it was always like this",
+        "words": [
+          {
+            "word": "Desde",
+            "start": 320.478,
+            "end": 320.725
+          },
+          {
+            "word": "o",
+            "start": 320.725,
+            "end": 320.89
+          },
+          {
+            "word": "povo",
+            "start": 320.89,
+            "end": 321.095
+          },
+          {
+            "word": "antigo",
+            "start": 321.095,
+            "end": 321.424
+          },
+          {
+            "word": "foi",
+            "start": 321.424,
+            "end": 321.71
+          },
+          {
+            "word": "sempre",
+            "start": 321.71,
+            "end": 321.873
+          },
+          {
+            "word": "assim",
+            "start": 321.873,
+            "end": 322.775
+          }
+        ]
+      },
+      {
+        "verseStart": 322.775,
+        "verseEnd": 326.305,
+        "translation": "Who doesn't remember that Abel was killed by Cain",
+        "words": [
+          {
+            "word": "Quem",
+            "start": 322.775,
+            "end": 322.979
+          },
+          {
+            "word": "não",
+            "start": 322.979,
+            "end": 323.143
+          },
+          {
+            "word": "se",
+            "start": 323.143,
+            "end": 323.388
+          },
+          {
+            "word": "lembra",
+            "start": 323.388,
+            "end": 323.8
+          },
+          {
+            "word": "que",
+            "start": 323.8,
+            "end": 324.005
+          },
+          {
+            "word": "Abel",
+            "start": 324.005,
+            "end": 324.537
+          },
+          {
+            "word": "foi",
+            "start": 324.537,
+            "end": 324.785
+          },
+          {
+            "word": "morto",
+            "start": 324.785,
+            "end": 325.401
+          },
+          {
+            "word": "por",
+            "start": 325.401,
+            "end": 325.607
+          },
+          {
+            "word": "Caim",
+            "start": 325.607,
+            "end": 326.305
+          }
+        ]
+      },
+      {
+        "verseStart": 326.305,
+        "verseEnd": 329.993,
+        "translation": "Anyway, I want to win without mugging anyone off",
+        "words": [
+          {
+            "word": "Enfim,",
+            "start": 326.305,
+            "end": 326.716
+          },
+          {
+            "word": "quero",
+            "start": 326.716,
+            "end": 327.087
+          },
+          {
+            "word": "vencer",
+            "start": 327.087,
+            "end": 327.78
+          },
+          {
+            "word": "sem",
+            "start": 327.78,
+            "end": 327.943
+          },
+          {
+            "word": "pilantrar",
+            "start": 327.943,
+            "end": 328.841
+          },
+          {
+            "word": "com",
+            "start": 328.841,
+            "end": 329.01
+          },
+          {
+            "word": "ninguém",
+            "start": 329.01,
+            "end": 329.993
+          }
+        ]
+      },
+      {
+        "verseStart": 329.993,
+        "verseEnd": 333.117,
+        "translation": "I want money without stepping on anyone's head",
+        "words": [
+          {
+            "word": "Quero",
+            "start": 329.993,
+            "end": 330.409
+          },
+          {
+            "word": "dinheiro",
+            "start": 330.409,
+            "end": 330.818
+          },
+          {
+            "word": "sem",
+            "start": 330.818,
+            "end": 331.192
+          },
+          {
+            "word": "pisar",
+            "start": 331.192,
+            "end": 331.522
+          },
+          {
+            "word": "na",
+            "start": 331.522,
+            "end": 331.687
+          },
+          {
+            "word": "cabeça",
+            "start": 331.687,
+            "end": 332.221
+          },
+          {
+            "word": "de",
+            "start": 332.221,
+            "end": 332.384
+          },
+          {
+            "word": "alguém",
+            "start": 332.384,
+            "end": 333.117
+          }
+        ]
+      },
+      {
+        "verseStart": 333.117,
+        "verseEnd": 335.975,
+        "translation": "Right is right in war or in peace",
+        "words": [
+          {
+            "word": "O",
+            "start": 333.117,
+            "end": 333.281
+          },
+          {
+            "word": "certo",
+            "start": 333.281,
+            "end": 333.444
+          },
+          {
+            "word": "é",
+            "start": 333.444,
+            "end": 333.652
+          },
+          {
+            "word": "certo",
+            "start": 333.652,
+            "end": 334.262
+          },
+          {
+            "word": "na",
+            "start": 334.262,
+            "end": 334.466
+          },
+          {
+            "word": "guerra",
+            "start": 334.466,
+            "end": 334.874
+          },
+          {
+            "word": "ou",
+            "start": 334.874,
+            "end": 335.077
+          },
+          {
+            "word": "na",
+            "start": 335.077,
+            "end": 335.362
+          },
+          {
+            "word": "paz",
+            "start": 335.362,
+            "end": 335.975
+          }
+        ]
+      },
+      {
+        "verseStart": 335.975,
+        "verseEnd": 339.144,
+        "translation": "If it's a dream don't wake me up ever again",
+        "words": [
+          {
+            "word": "Se",
+            "start": 335.975,
+            "end": 336.178
+          },
+          {
+            "word": "for",
+            "start": 336.178,
+            "end": 336.341
+          },
+          {
+            "word": "um",
+            "start": 336.341,
+            "end": 336.549
+          },
+          {
+            "word": "sonho",
+            "start": 336.549,
+            "end": 336.761
+          },
+          {
+            "word": "não",
+            "start": 336.761,
+            "end": 336.924
+          },
+          {
+            "word": "me",
+            "start": 336.924,
+            "end": 337.211
+          },
+          {
+            "word": "acorde",
+            "start": 337.211,
+            "end": 337.987
+          },
+          {
+            "word": "nunca",
+            "start": 337.987,
+            "end": 338.152
+          },
+          {
+            "word": "mais",
+            "start": 338.152,
+            "end": 339.144
+          }
+        ]
+      },
+      {
+        "verseStart": 339.144,
+        "verseEnd": 342.298,
+        "translation": "Russian roulette, how much does it cost to cock it?",
+        "words": [
+          {
+            "word": "Roleta",
+            "start": 339.144,
+            "end": 339.761
+          },
+          {
+            "word": "russa,",
+            "start": 339.761,
+            "end": 340.622
+          },
+          {
+            "word": "quanto",
+            "start": 340.622,
+            "end": 340.785
+          },
+          {
+            "word": "custa",
+            "start": 340.785,
+            "end": 341.112
+          },
+          {
+            "word": "engatilhar?",
+            "start": 341.112,
+            "end": 342.298
+          }
+        ]
+      },
+      {
+        "verseStart": 342.298,
+        "verseEnd": 345.884,
+        "translation": "I'll pay double for you to believe in me",
+        "words": [
+          {
+            "word": "Eu",
+            "start": 342.298,
+            "end": 342.546
+          },
+          {
+            "word": "pago",
+            "start": 342.546,
+            "end": 342.963
+          },
+          {
+            "word": "o",
+            "start": 342.963,
+            "end": 343.253
+          },
+          {
+            "word": "dobro",
+            "start": 343.253,
+            "end": 343.62
+          },
+          {
+            "word": "pra",
+            "start": 343.62,
+            "end": 343.787
+          },
+          {
+            "word": "você",
+            "start": 343.787,
+            "end": 344.282
+          },
+          {
+            "word": "em",
+            "start": 344.282,
+            "end": 344.569
+          },
+          {
+            "word": "mim",
+            "start": 344.569,
+            "end": 344.814
+          },
+          {
+            "word": "acreditar",
+            "start": 344.814,
+            "end": 345.884
+          }
+        ]
+      },
+      {
+        "verseStart": 345.884,
+        "verseEnd": 349.146,
+        "translation": "That's right you can't stop",
+        "words": [
+          {
+            "word": "É",
+            "start": 345.884,
+            "end": 346.048
+          },
+          {
+            "word": "isso",
+            "start": 346.048,
+            "end": 346.253
+          },
+          {
+            "word": "ai",
+            "start": 346.253,
+            "end": 346.661
+          },
+          {
+            "word": "você",
+            "start": 346.661,
+            "end": 347.067
+          },
+          {
+            "word": "não",
+            "start": 347.067,
+            "end": 347.189
+          },
+          {
+            "word": "pode",
+            "start": 347.189,
+            "end": 347.557
+          },
+          {
+            "word": "parar",
+            "start": 347.557,
+            "end": 349.146
+          }
+        ]
+      },
+      {
+        "verseStart": 349.146,
+        "verseEnd": 352.102,
+        "translation": "Wait for the bad times to come embrace you",
+        "words": [
+          {
+            "word": "Esperar",
+            "start": 349.146,
+            "end": 349.268
+          },
+          {
+            "word": "o",
+            "start": 349.268,
+            "end": 349.765
+          },
+          {
+            "word": "tempo",
+            "start": 349.765,
+            "end": 350.175
+          },
+          {
+            "word": "ruim",
+            "start": 350.175,
+            "end": 350.338
+          },
+          {
+            "word": "vir",
+            "start": 350.338,
+            "end": 350.873
+          },
+          {
+            "word": "te",
+            "start": 350.873,
+            "end": 351.039
+          },
+          {
+            "word": "abraçar",
+            "start": 351.039,
+            "end": 352.102
+          }
+        ]
+      },
+      {
+        "verseStart": 352.102,
+        "verseEnd": 356.244,
+        "translation": "Believe that dreaming is always necessary",
+        "words": [
+          {
+            "word": "Acreditar",
+            "start": 352.102,
+            "end": 353.132
+          },
+          {
+            "word": "que",
+            "start": 353.132,
+            "end": 353.296
+          },
+          {
+            "word": "sonhar",
+            "start": 353.296,
+            "end": 353.83
+          },
+          {
+            "word": "sempre",
+            "start": 353.83,
+            "end": 354.243
+          },
+          {
+            "word": "é",
+            "start": 354.243,
+            "end": 354.53
+          },
+          {
+            "word": "preciso",
+            "start": 354.53,
+            "end": 356.244
+          }
+        ]
+      },
+      {
+        "verseStart": 356.244,
+        "verseEnd": 358.216,
+        "translation": "It's what keeps the brothers alive",
+        "words": [
+          {
+            "word": "É",
+            "start": 356.244,
+            "end": 356.368
+          },
+          {
+            "word": "o",
+            "start": 356.368,
+            "end": 356.449
+          },
+          {
+            "word": "que",
+            "start": 356.449,
+            "end": 356.531
+          },
+          {
+            "word": "mantém",
+            "start": 356.531,
+            "end": 356.705
+          },
+          {
+            "word": "os",
+            "start": 356.705,
+            "end": 357.195
+          },
+          {
+            "word": "irmãos",
+            "start": 357.195,
+            "end": 357.932
+          },
+          {
+            "word": "vivos",
+            "start": 357.932,
+            "end": 358.216
+          }
+        ]
+      },
+      {
+        "verseStart": 358.216,
+        "verseEnd": 360.72,
+        "translation": "Usually when problems appear",
+        "words": [
+          {
+            "word": "Geralmente",
+            "start": 358.216,
+            "end": 358.379
+          },
+          {
+            "word": "quando",
+            "start": 358.379,
+            "end": 359.115
+          },
+          {
+            "word": "os",
+            "start": 359.115,
+            "end": 359.322
+          },
+          {
+            "word": "problemas",
+            "start": 359.322,
+            "end": 359.897
+          },
+          {
+            "word": "aparecem",
+            "start": 359.897,
+            "end": 360.72
+          }
+        ]
+      },
+      {
+        "verseStart": 360.72,
+        "verseEnd": 362.697,
+        "translation": "We're caught off guard right, ain't we?",
+        "words": [
+          {
+            "word": "A",
+            "start": 360.72,
+            "end": 360.892
+          },
+          {
+            "word": "gente",
+            "start": 360.892,
+            "end": 361.015
+          },
+          {
+            "word": "está",
+            "start": 361.015,
+            "end": 361.31
+          },
+          {
+            "word": "desprevenido",
+            "start": 361.31,
+            "end": 361.839
+          },
+          {
+            "word": "né,",
+            "start": 361.839,
+            "end": 361.962
+          },
+          {
+            "word": "não?",
+            "start": 361.962,
+            "end": 362.697
+          }
+        ]
+      },
+      {
+        "verseStart": 362.697,
+        "verseEnd": 364.782,
+        "translation": "Wrong!",
+        "words": [
+          {
+            "word": "Errado!",
+            "start": 362.697,
+            "end": 364.782
+          }
+        ]
+      },
+      {
+        "verseStart": 364.782,
+        "verseEnd": 367.911,
+        "translation": "It's you who lost control of the situation",
+        "words": [
+          {
+            "word": "É",
+            "start": 364.782,
+            "end": 365.028
+          },
+          {
+            "word": "você",
+            "start": 365.028,
+            "end": 365.366
+          },
+          {
+            "word": "que",
+            "start": 365.366,
+            "end": 365.53
+          },
+          {
+            "word": "perdeu",
+            "start": 365.53,
+            "end": 365.694
+          },
+          {
+            "word": "o",
+            "start": 365.694,
+            "end": 365.98
+          },
+          {
+            "word": "controle",
+            "start": 365.98,
+            "end": 366.143
+          },
+          {
+            "word": "da",
+            "start": 366.143,
+            "end": 366.43
+          },
+          {
+            "word": "situação",
+            "start": 366.43,
+            "end": 367.911
+          }
+        ]
+      },
+      {
+        "verseStart": 367.911,
+        "verseEnd": 372.67,
+        "translation": "Lost the ability to control the challenges",
+        "words": [
+          {
+            "word": "Perdeu",
+            "start": 367.911,
+            "end": 368.156
+          },
+          {
+            "word": "a",
+            "start": 368.156,
+            "end": 368.485
+          },
+          {
+            "word": "capacidade",
+            "start": 368.485,
+            "end": 368.976
+          },
+          {
+            "word": "de",
+            "start": 368.976,
+            "end": 369.346
+          },
+          {
+            "word": "controlar",
+            "start": 369.346,
+            "end": 370.325
+          },
+          {
+            "word": "os",
+            "start": 370.325,
+            "end": 370.533
+          },
+          {
+            "word": "desafios",
+            "start": 370.533,
+            "end": 372.67
+          }
+        ]
+      },
+      {
+        "verseStart": 372.67,
+        "verseEnd": 375.116,
+        "translation": "Especially when we run away from the lessons",
+        "words": [
+          {
+            "word": "Principalmente",
+            "start": 372.67,
+            "end": 372.791
+          },
+          {
+            "word": "quando",
+            "start": 372.791,
+            "end": 372.954
+          },
+          {
+            "word": "a",
+            "start": 372.954,
+            "end": 373.081
+          },
+          {
+            "word": "gente",
+            "start": 373.081,
+            "end": 373.489
+          },
+          {
+            "word": "foge",
+            "start": 373.489,
+            "end": 373.897
+          },
+          {
+            "word": "das",
+            "start": 373.897,
+            "end": 374.02
+          },
+          {
+            "word": "lição",
+            "start": 374.02,
+            "end": 375.116
+          }
+        ]
+      },
+      {
+        "verseStart": 375.116,
+        "verseEnd": 378.158,
+        "translation": "That life puts in front of us like this, you get me?",
+        "words": [
+          {
+            "word": "Que",
+            "start": 375.116,
+            "end": 375.241
+          },
+          {
+            "word": "a",
+            "start": 375.241,
+            "end": 375.365
+          },
+          {
+            "word": "vida",
+            "start": 375.365,
+            "end": 375.531
+          },
+          {
+            "word": "coloca",
+            "start": 375.531,
+            "end": 375.653
+          },
+          {
+            "word": "na",
+            "start": 375.653,
+            "end": 375.781
+          },
+          {
+            "word": "nossa",
+            "start": 375.781,
+            "end": 375.903
+          },
+          {
+            "word": "frente",
+            "start": 375.903,
+            "end": 375.984
+          },
+          {
+            "word": "assim,",
+            "start": 375.984,
+            "end": 376.437
+          },
+          {
+            "word": "tá",
+            "start": 376.437,
+            "end": 376.725
+          },
+          {
+            "word": "ligado?",
+            "start": 376.725,
+            "end": 378.158
+          }
+        ]
+      },
+      {
+        "verseStart": 378.158,
+        "verseEnd": 383.157,
+        "translation": "You always think you're incapable of solving it",
+        "words": [
+          {
+            "word": "Você",
+            "start": 378.158,
+            "end": 378.321
+          },
+          {
+            "word": "se",
+            "start": 378.321,
+            "end": 378.403
+          },
+          {
+            "word": "acha",
+            "start": 378.403,
+            "end": 380.383
+          },
+          {
+            "word": "sempre",
+            "start": 380.383,
+            "end": 380.708
+          },
+          {
+            "word": "incapaz",
+            "start": 380.708,
+            "end": 380.871
+          },
+          {
+            "word": "de",
+            "start": 380.871,
+            "end": 381.487
+          },
+          {
+            "word": "resolver",
+            "start": 381.487,
+            "end": 383.157
+          }
+        ]
+      },
+      {
+        "verseStart": 383.157,
+        "verseEnd": 385.703,
+        "translation": "You bottle it, ya know?",
+        "words": [
+          {
+            "word": "Se",
+            "start": 383.157,
+            "end": 383.279
+          },
+          {
+            "word": "acovarda,",
+            "start": 383.279,
+            "end": 384.063
+          },
+          {
+            "word": "morô?",
+            "start": 384.063,
+            "end": 385.703
+          }
+        ]
+      },
+      {
+        "verseStart": 385.703,
+        "verseEnd": 388.728,
+        "translation": "Thought is the creative force",
+        "words": [
+          {
+            "word": "O",
+            "start": 385.703,
+            "end": 385.912
+          },
+          {
+            "word": "pensamento",
+            "start": 385.912,
+            "end": 386.366
+          },
+          {
+            "word": "é",
+            "start": 386.366,
+            "end": 386.529
+          },
+          {
+            "word": "a",
+            "start": 386.529,
+            "end": 386.651
+          },
+          {
+            "word": "força",
+            "start": 386.651,
+            "end": 387.222
+          },
+          {
+            "word": "criadora",
+            "start": 387.222,
+            "end": 388.728
+          }
+        ]
+      },
+      {
+        "verseStart": 388.728,
+        "verseEnd": 391.508,
+        "translation": "Tomorrow is an illusion",
+        "words": [
+          {
+            "word": "O",
+            "start": 388.728,
+            "end": 388.932
+          },
+          {
+            "word": "amanha",
+            "start": 388.932,
+            "end": 389.584
+          },
+          {
+            "word": "é",
+            "start": 389.584,
+            "end": 389.747
+          },
+          {
+            "word": "ilusório",
+            "start": 389.747,
+            "end": 391.508
+          }
+        ]
+      },
+      {
+        "verseStart": 391.508,
+        "verseEnd": 393.273,
+        "translation": "Because it doesn't exist yet",
+        "words": [
+          {
+            "word": "Porque",
+            "start": 391.508,
+            "end": 391.631
+          },
+          {
+            "word": "ainda",
+            "start": 391.631,
+            "end": 391.755
+          },
+          {
+            "word": "não",
+            "start": 391.755,
+            "end": 392.006
+          },
+          {
+            "word": "existe",
+            "start": 392.006,
+            "end": 393.273
+          }
+        ]
+      },
+      {
+        "verseStart": 393.273,
+        "verseEnd": 395.559,
+        "translation": "Today is real",
+        "words": [
+          {
+            "word": "O",
+            "start": 393.273,
+            "end": 393.395
+          },
+          {
+            "word": "hoje",
+            "start": 393.395,
+            "end": 393.804
+          },
+          {
+            "word": "é",
+            "start": 393.804,
+            "end": 394.254
+          },
+          {
+            "word": "real",
+            "start": 394.254,
+            "end": 395.559
+          }
+        ]
+      },
+      {
+        "verseStart": 395.559,
+        "verseEnd": 398.629,
+        "translation": "It's the reality you can interfere with",
+        "words": [
+          {
+            "word": "É",
+            "start": 395.559,
+            "end": 395.722
+          },
+          {
+            "word": "a",
+            "start": 395.722,
+            "end": 395.804
+          },
+          {
+            "word": "realidade",
+            "start": 395.804,
+            "end": 395.928
+          },
+          {
+            "word": "que",
+            "start": 395.928,
+            "end": 396.051
+          },
+          {
+            "word": "você",
+            "start": 396.051,
+            "end": 396.133
+          },
+          {
+            "word": "pode",
+            "start": 396.133,
+            "end": 396.911
+          },
+          {
+            "word": "interferir",
+            "start": 396.911,
+            "end": 398.629
+          }
+        ]
+      },
+      {
+        "verseStart": 398.629,
+        "verseEnd": 401.328,
+        "translation": "The opportunities for change",
+        "words": [
+          {
+            "word": "As",
+            "start": 398.629,
+            "end": 398.955
+          },
+          {
+            "word": "oportunidades",
+            "start": 398.955,
+            "end": 399.123
+          },
+          {
+            "word": "de",
+            "start": 399.123,
+            "end": 400.102
+          },
+          {
+            "word": "mudança",
+            "start": 400.102,
+            "end": 401.328
+          }
+        ]
+      },
+      {
+        "verseStart": 401.328,
+        "verseEnd": 403.21,
+        "translation": "Are in the present",
+        "words": [
+          {
+            "word": "Tá",
+            "start": 401.328,
+            "end": 401.45
+          },
+          {
+            "word": "no",
+            "start": 401.45,
+            "end": 401.572
+          },
+          {
+            "word": "presente",
+            "start": 401.572,
+            "end": 403.21
+          }
+        ]
+      },
+      {
+        "verseStart": 403.21,
+        "verseEnd": 405.626,
+        "translation": "Don't wait for the future to change your life",
+        "words": [
+          {
+            "word": "Não",
+            "start": 403.21,
+            "end": 403.332
+          },
+          {
+            "word": "espere",
+            "start": 403.332,
+            "end": 403.537
+          },
+          {
+            "word": "o",
+            "start": 403.537,
+            "end": 403.703
+          },
+          {
+            "word": "futuro",
+            "start": 403.703,
+            "end": 403.911
+          },
+          {
+            "word": "mudar",
+            "start": 403.911,
+            "end": 404.198
+          },
+          {
+            "word": "sua",
+            "start": 404.198,
+            "end": 404.444
+          },
+          {
+            "word": "vida",
+            "start": 404.444,
+            "end": 405.626
+          }
+        ]
+      },
+      {
+        "verseStart": 405.626,
+        "verseEnd": 409.682,
+        "translation": "Because the future will be the consequence of the present",
+        "words": [
+          {
+            "word": "Porque",
+            "start": 405.626,
+            "end": 405.748
+          },
+          {
+            "word": "o",
+            "start": 405.748,
+            "end": 405.83
+          },
+          {
+            "word": "futuro",
+            "start": 405.83,
+            "end": 405.953
+          },
+          {
+            "word": "será",
+            "start": 405.953,
+            "end": 406.238
+          },
+          {
+            "word": "a",
+            "start": 406.238,
+            "end": 406.569
+          },
+          {
+            "word": "consequência",
+            "start": 406.569,
+            "end": 407.303
+          },
+          {
+            "word": "do",
+            "start": 407.303,
+            "end": 407.469
+          },
+          {
+            "word": "presente",
+            "start": 407.469,
+            "end": 409.682
+          }
+        ]
+      },
+      {
+        "verseStart": 409.682,
+        "verseEnd": 412.545,
+        "translation": "Parasite today, a poor sod tomorrow",
+        "words": [
+          {
+            "word": "Parasita",
+            "start": 409.682,
+            "end": 409.927
+          },
+          {
+            "word": "hoje,",
+            "start": 409.927,
+            "end": 410.904
+          },
+          {
+            "word": "um",
+            "start": 410.904,
+            "end": 411.069
+          },
+          {
+            "word": "coitado",
+            "start": 411.069,
+            "end": 411.314
+          },
+          {
+            "word": "amanhã",
+            "start": 411.314,
+            "end": 412.545
+          }
+        ]
+      },
+      {
+        "verseStart": 412.545,
+        "verseEnd": 416.465,
+        "translation": "Hustle today, victory tomorrow",
+        "words": [
+          {
+            "word": "Corrida",
+            "start": 412.545,
+            "end": 412.789
+          },
+          {
+            "word": "hoje,",
+            "start": 412.789,
+            "end": 413.775
+          },
+          {
+            "word": "vitória",
+            "start": 413.775,
+            "end": 414.142
+          },
+          {
+            "word": "amanhã",
+            "start": 414.142,
+            "end": 416.465
+          }
+        ]
+      },
+      {
+        "verseStart": 416.465,
+        "verseEnd": 419.629,
+        "translation": "Never forget that, brother",
+        "words": [
+          {
+            "word": "Nunca",
+            "start": 416.465,
+            "end": 416.882
+          },
+          {
+            "word": "esqueça",
+            "start": 416.882,
+            "end": 417.25
+          },
+          {
+            "word": "disso,",
+            "start": 417.25,
+            "end": 417.629
+          },
+          {
+            "word": "irmão",
+            "start": 417.629,
+            "end": 0
+          }
+        ]
+      }
+    ]
   }
 };

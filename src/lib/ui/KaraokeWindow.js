@@ -36,16 +36,25 @@ export const openKaraokeWindow = async () => {
       artistName = "QW4RTZ - Joël Legendre";
       queryArtist = "QW4RTZ";
       queryTrack = "M'en Revenant de Sainte-Hélène";
+    } else if (songFile === 'A Vida É Desafio.mp4') {
+      songName = "A Vida É Desafio";
+      artistName = "Racionais MC's";
+      queryArtist = "Racionais MC's";
+      queryTrack = "A Vida É Desafio";
     }
+
+    const hasTranslation = songsDictionary[songFile]?.lyricsData?.some(v => v.translation);
+    const globeBadge = hasTranslation ? `<div title="Contains localized translation" style="background: #E95420; color: white; border-radius: 50%; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; font-size: 10px; margin-left: auto; box-shadow: 0 0 4px rgba(233, 84, 32, 0.6);">🌍</div>` : '';
 
     // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `
       <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
         <img class="song-art" data-artist="${encodeURIComponent(queryArtist)}" data-track="${encodeURIComponent(queryTrack)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'40\\' height=\\'40\\' viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'%23888\\' stroke-width=\\'2\\' stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\'><circle cx=\\'12\\' cy=\\'12\\' r=\\'10\\'/><circle cx=\\'12\\' cy=\\'12\\' r=\\'3\\'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
-        <div style="overflow: hidden;">
+        <div style="overflow: hidden; flex: 1;">
           <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${songName}</div>
           <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${artistName}</div>
         </div>
+        ${globeBadge}
       </div>
     `;
   });
@@ -145,7 +154,7 @@ export const openKaraokeWindow = async () => {
           <video id="k-vid" crossorigin="anonymous" playsinline style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
-        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0;">
+        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; width: 100%; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0; overflow: hidden; position: relative;">
           <!-- Lyrics inject here -->
         </div>
         
@@ -229,11 +238,14 @@ export const openKaraokeWindow = async () => {
 
     if (lyricsData) {
       lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
-        <div class="verse" id="verse-${vIdx}" style="display: none;">
-          ${verse.words.map((w, wIdx) => {
-            const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
-            return `<span class="word" id="word-${vIdx}-${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: 0 2px;">${display}</span>`;
-          }).join('')}
+        <div class="verse" id="verse-${vIdx}" style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;">
+          <div class="verse-scroll" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-content: flex-start; column-gap: 8px; row-gap: 4px; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+            ${verse.words.map((w, wIdx) => {
+              const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
+              return `<span class="word" id="word-${vIdx}-${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: 0 2px;">${display}</span>`;
+            }).join('')}
+          </div>
+          ${verse.translation ? `<div class="verse-translation" style="position: absolute; bottom: 4px; left: 0; width: 100%; text-align: center; font-size: 14px; font-family: system-ui, sans-serif; opacity: 0.4; color: white; pointer-events: none; text-shadow: none; font-weight: 500; letter-spacing: 0.5px;">${verse.translation}</div>` : ''}
         </div>
       `).join('');
     }
@@ -279,9 +291,13 @@ export const openKaraokeWindow = async () => {
         if (newVerseIndex !== -1) {
           lastActiveLyricTime = Date.now();
           lyricsContainer.style.opacity = '1';
-          const words = mainView.querySelectorAll(`#verse-${newVerseIndex} .word`);
+          const newV = mainView.querySelector(\`#verse-\${newVerseIndex}\`);
+          const words = newV.querySelectorAll('.word');
+          
+          let activeWordEl = null;
           words.forEach((w, idx) => {
             if (idx === newWordIndex) {
+              activeWordEl = w;
               w.style.opacity = '1';
               w.style.color = '#FF7744';
               w.style.textShadow = '0 0 4px rgba(233, 84, 32, 0.8), 0 0 12px rgba(233, 84, 32, 0.4)';
@@ -291,6 +307,27 @@ export const openKaraokeWindow = async () => {
               w.style.textShadow = '';
             }
           });
+          
+          // Mathematical foolproof scrolling to prevent container overflow
+          const scrollInner = newV.querySelector('.verse-scroll');
+          if (activeWordEl && scrollInner) {
+            const vHeight = newV.clientHeight;
+            const wordTop = activeWordEl.offsetTop; 
+            const wordHeight = activeWordEl.offsetHeight;
+            const innerHeight = scrollInner.scrollHeight;
+            
+            let translateY = 0;
+            if (innerHeight > vHeight) {
+              translateY = (vHeight / 2) - (wordTop + (wordHeight / 2));
+              const maxScroll = -(innerHeight - vHeight);
+              if (translateY > 0) translateY = 0;
+              if (translateY < maxScroll) translateY = maxScroll;
+            } else {
+              // Vertically center if it fully fits
+              translateY = (vHeight - innerHeight) / 2;
+            }
+            scrollInner.style.transform = \`translateY(\${translateY}px)\`;
+          }
         } else {
           lyricsContainer.style.opacity = '0';
         }
