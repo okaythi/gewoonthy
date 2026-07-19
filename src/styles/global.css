@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 @font-face {
+  font-family: 'Great Vibes';
+  src: url('https://cdn.sudothy.me/fonts/GreatVibes-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('https://cdn.sudothy.me/fonts/GreatVibes-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0400-04FF, U+0500-052F;
+}
+
+@font-face {
   font-family: 'Zen Kurenaido';
   src: url('https://cdn.sudothy.me/fonts/ZenKurenaido-Regular.woff2') format('woff2');
   font-weight: 400;

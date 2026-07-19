@@ -173,7 +173,7 @@ export const openKaraokeWindow = async () => {
           <video id="k-vid" crossorigin="anonymous" playsinline style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
-        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; width: 100%; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0; overflow: hidden; position: relative;">
+        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; width: 100%; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Great Vibes', 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0; overflow: hidden; position: relative;">
           <!-- Lyrics inject here -->
         </div>
         
@@ -258,7 +258,7 @@ export const openKaraokeWindow = async () => {
     if (lyricsData) {
       lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
         <div class="verse" id="verse-${vIdx}" style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;">
-          <div class="verse-scroll" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; align-content: flex-start; column-gap: 8px; row-gap: 4px; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Zen Kurenaido', 'Noto Sans JP', system-ui, sans-serif;">
+          <div class="verse-scroll" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; align-content: flex-start; column-gap: 8px; row-gap: 4px; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Great Vibes', 'Zen Kurenaido', 'Noto Sans JP', system-ui, sans-serif;">
             ${verse.words.map((w, wIdx) => {
               const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
               return `<span class="word" id="word-${vIdx}-${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: 0 2px;">${display}</span>`;
