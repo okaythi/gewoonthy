@@ -8,7 +8,13 @@ export const helpCommand = async (args, terminal) => {
   for (const [cmdName, { metadata }] of commandEngine.commands.entries()) {
     if (cmdName === 'localectl' || cmdName === 'language') continue;
     const desc = sys[`${cmdName}_desc`] || sys[`${cmdName === 'localectl' || cmdName === 'language' ? 'locale' : cmdName}_desc`] || metadata.description;
-    helpText += `  ${cmdName.padEnd(10)} ${desc}\n`;
+    
+    let lineText = `  ${cmdName.padEnd(10)} ${desc}`;
+    if (cmdName === 'projects' || cmdName === 'about') {
+      lineText = `<span style="background-color: var(--ubuntu-orange); color: white;">${lineText}</span>`;
+    }
+    helpText += lineText + '\n';
+    
     if (metadata.args && metadata.args.length > 0) {
       for (const arg of metadata.args) {
         const argDesc = sys[`${cmdName}_desc_${arg.name.replace(/[^a-zA-Z]/g, '')}`] || arg.description;
@@ -17,7 +23,7 @@ export const helpCommand = async (args, terminal) => {
     }
   }
   
-  terminal.printLine(helpText);
+  terminal.printLine(helpText, true);
 };
 
 export const helpMetadata = {
