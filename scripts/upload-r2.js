@@ -30,7 +30,7 @@ async function uploadToR2() {
     console.log(`Uploading ${relativePath}...`);
     try {
       // In production, an S3 sync tool is faster, but for this setup we invoke wrangler per file
-      await execAsync(`npx wrangler r2 object put ${r2Path} --file="${file}"`);
+      await execAsync(`npx wrangler r2 object put ${r2Path} --file="${file}" --remote`);
       console.log(`✅ Uploaded ${relativePath}`);
     } catch (e) {
       console.error(`❌ Failed to upload ${relativePath}:`, e.message);
