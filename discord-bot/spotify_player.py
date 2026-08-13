@@ -110,7 +110,7 @@ def search_spotify_native(artist: str, album_query: str) -> Optional[Dict[str, A
             "artist": artist_display,
             "album_id": album_id,
             "image_hash": image_hash,
-            "spotify_image": f"spotify:{image_hash}" if image_hash else None,
+            "spotify_image": f"https://i.scdn.co/image/{image_hash}" if image_hash else None,
             "tracks": tracks
         }
     except Exception as e:
