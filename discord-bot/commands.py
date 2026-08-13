@@ -28,6 +28,12 @@ class CommandContext:
             print(f"[CommandContext] Failed to send message: {e}")
             return None
 
+    async def react_success(self) -> None:
+        try:
+            await self.message.add_reaction("✅")
+        except Exception as e:
+            print(f"[CommandContext] Failed to add checkmark reaction: {e}")
+
     async def delete_trigger(self) -> None:
         try:
             await self.message.delete()
@@ -96,6 +102,9 @@ class CommandEngine:
             args=args,
             raw_args=raw_args
         )
+
+        # React with green checkmark to confirm valid command recognition
+        await ctx.react_success()
 
         try:
             await cmd.invoke(ctx)
@@ -193,7 +202,6 @@ class AdaptiveDeleter:
                     # Attempt deletion with adaptive congestion control
                     while True:
                         try:
-                            t0 = time.time()
                             await msg.delete()
                             deleted_count += 1
 
@@ -258,9 +266,6 @@ def register_default_commands(engine: CommandEngine) -> None:
         usage="<channelID> [messageID | 'all']"
     )
     async def cmd_delete(ctx: CommandContext, *args: str) -> None:
-        # Delete command trigger message first
-        await ctx.delete_trigger()
-
         if not args:
             await ctx.reply("⚠️ **Usage**: `.delete <channelID> [messageID | 'all']`")
             return
@@ -278,6 +283,11 @@ def register_default_commands(engine: CommandEngine) -> None:
             except Exception as e:
                 await ctx.reply(f"⚠️ **Error**: Failed to resolve channel `{channel_id}`: {e}")
                 return
+
+        # If the command was sent in the same channel as the target channel, delete the command trigger message
+        is_same_channel = (ctx.channel.id == channel_id)
+        if is_same_channel:
+            await ctx.delete_trigger()
 
         target_opt = args[1].lower().strip() if len(args) > 1 else "all"
 
@@ -298,7 +308,6 @@ def register_default_commands(engine: CommandEngine) -> None:
         usage=""
     )
     async def cmd_restart(ctx: CommandContext, *args: str) -> None:
-        await ctx.delete_trigger()
         await LifecycleManager.initiate_restart(ctx.client, ctx.channel)
 
     @engine.command(
@@ -308,8 +317,6 @@ def register_default_commands(engine: CommandEngine) -> None:
         usage="<online|idle|dnd|invisible|offline> [optional activity text]"
     )
     async def cmd_status(ctx: CommandContext, *args: str) -> None:
-        await ctx.delete_trigger()
-
         if not args:
             await ctx.reply("⚠️ **Usage**: `.status <online|idle|dnd|invisible|offline> [activity text]`")
             return
@@ -334,7 +341,6 @@ def register_default_commands(engine: CommandEngine) -> None:
 
         activity = None
         if activity_text:
-            # Check for CustomActivity if available in discord.py-self, fallback to Game
             if hasattr(discord, "CustomActivity"):
                 activity = discord.CustomActivity(name=activity_text)
             else:
