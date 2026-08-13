@@ -1,5 +1,5 @@
 """
-commands.py - High performance, decorator-driven command engine and state-of-the-art deletion/status/reaction modules for discord.py-self.
+commands.py - High performance, decorator-driven command engine and state-of-the-art deletion/status/reaction/spotify modules for discord.py-self.
 """
 from __future__ import annotations
 import asyncio
@@ -10,6 +10,7 @@ from typing import Callable, Coroutine, Dict, List, Optional, Any, Union
 import discord
 from lifecycle import LifecycleManager
 from reactions import ReactionManager, resolve_user, parse_emoji_input
+from spotify_player import SpotifyPlayer, fetch_album_metadata, SpotifySearchError, SpotifyConflictError
 
 class CommandContext:
     def __init__(self, message: discord.Message, client: discord.Client, command_name: str, args: List[str], raw_args: str):
@@ -71,6 +72,7 @@ class CommandEngine:
         self.prefix = prefix
         self.commands: Dict[str, Command] = {}
         self.reaction_manager: Optional[ReactionManager] = None
+        self.spotify_player: SpotifyPlayer = SpotifyPlayer()
 
     def command(self, name: str, aliases: Optional[List[str]] = None, description: str = "", usage: str = ""):
         def decorator(func: Callable[..., Coroutine[Any, Any, Any]]):
@@ -116,10 +118,12 @@ class CommandEngine:
             return True
         except TypeError as te:
             print(f"[CommandEngine] Argument mismatch for '.{cmd_name}': {te}")
+            await ctx.react_fail()
             await ctx.reply(f"⚠️ **Usage**: `.{cmd.name} {cmd.usage}`")
             return False
         except Exception as e:
             print(f"[CommandEngine] Error executing '.{cmd_name}': {e}")
+            await ctx.react_fail()
             return False
 
 class AdaptiveDeleter:
@@ -182,7 +186,6 @@ class AdaptiveDeleter:
         print(f"[AdaptiveDeleter] Starting purge in channel {getattr(channel, 'id', channel)}...")
 
         while True:
-            # Batch fetch history in pages of 100 to reduce gateway roundtrips
             try:
                 history_kwargs: Dict[str, Any] = {"limit": 100}
                 if last_message:
@@ -204,7 +207,6 @@ class AdaptiveDeleter:
                     if target_message_id and msg.id != target_message_id:
                         continue
 
-                    # Attempt deletion with adaptive congestion control
                     while True:
                         try:
                             await msg.delete()
@@ -213,13 +215,11 @@ class AdaptiveDeleter:
                             # Additive decrease of delay on success (speed up)
                             self.current_delay = max(self.min_delay, self.current_delay * 0.95)
                             
-                            # Tiny sleep with jitter to keep gateway healthy
                             jitter = random.uniform(0.01, 0.03)
                             await asyncio.sleep(self.current_delay + jitter)
                             break
 
                         except discord.NotFound:
-                            # Message already deleted, continue
                             break
 
                         except discord.Forbidden:
@@ -231,9 +231,7 @@ class AdaptiveDeleter:
                                 retry_after = getattr(e, "retry_after", 1.0)
                                 print(f"[AdaptiveDeleter] 429 Rate Limit hit. Backing off for {retry_after:.2f}s...")
                                 await asyncio.sleep(retry_after + 0.05)
-                                # Multiplicative increase of delay (slow down)
                                 self.current_delay = min(self.max_delay, max(0.5, self.current_delay * 1.6))
-                                # Retry the same message
                                 continue
                             else:
                                 print(f"[AdaptiveDeleter] HTTPException {e.status} on message {msg.id}: {e}")
@@ -261,9 +259,10 @@ class AdaptiveDeleter:
 
 def register_default_commands(engine: CommandEngine, reaction_manager: ReactionManager) -> None:
     """
-    Registers the core command suite: .delete, .restart, .status, and .reaction.
+    Registers the core command suite: .delete, .restart, .status, .reaction, and .spotify.
     """
     engine.reaction_manager = reaction_manager
+    spotify_player = engine.spotify_player
 
     @engine.command(
         name="delete",
@@ -301,7 +300,6 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
             await ctx.react_success()
 
         target_opt = args[1].lower().strip() if len(args) > 1 else "all"
-
         deleter = AdaptiveDeleter(ctx.client)
 
         if target_opt == "all":
@@ -324,61 +322,77 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
     @engine.command(
         name="status",
-        aliases=["presence", "setstatus"],
-        description="Updates bot presence status and optional custom activity.",
-        usage="<online|idle|dnd|invisible|offline> [optional activity text]"
+        aliases=["presence", "setstatus", "customstatus"],
+        description="Updates custom status message and optional emoji with pre-API validation.",
+        usage="<message> [emoji]"
     )
     async def cmd_status(ctx: CommandContext, *args: str) -> None:
         if not args:
             await ctx.react_fail()
-            await ctx.reply("⚠️ **Usage**: `.status <online|idle|dnd|invisible|offline> [activity text]`")
+            await ctx.reply("⚠️ **Usage**: `.status <message> [emoji]` or `.status clear`")
             return
 
-        status_input = args[0].lower().strip()
-        status_map = {
-            "online": discord.Status.online,
-            "idle": discord.Status.idle,
-            "dnd": discord.Status.dnd,
-            "do_not_disturb": discord.Status.dnd,
-            "invisible": discord.Status.invisible,
-            "offline": discord.Status.offline
-        }
+        raw_text = " ".join(args).strip()
 
-        if status_input not in status_map:
+        # Handle clear
+        if raw_text.lower() in ("clear", "reset", "none", "off"):
+            try:
+                await ctx.client.change_presence(activity=None)
+                await ctx.react_success()
+                await ctx.reply("✨ **Custom Status Cleared**.")
+            except Exception as e:
+                await ctx.react_fail()
+                await ctx.reply(f"⚠️ **Error clearing status**: {e}")
+            return
+
+        # Check if the last argument is an emoji
+        emoji_arg = None
+        status_message = raw_text
+
+        if len(args) > 1:
+            possible_emoji = args[-1]
+            # Check if possible_emoji is a valid emoji format
+            parsed = parse_emoji_input(ctx.client, possible_emoji)
+            if (
+                isinstance(parsed, (discord.Emoji, discord.PartialEmoji))
+                or (isinstance(parsed, str) and len(parsed) <= 4 and not parsed.isalnum())
+            ):
+                emoji_arg = parsed
+                status_message = " ".join(args[:-1]).strip()
+
+        # Pre-API Character Count Validation (Discord hard limit is 128 characters)
+        if len(status_message) > 128:
             await ctx.react_fail()
-            valid_statuses = ", ".join(f"`{s}`" for s in ["online", "idle", "dnd", "invisible", "offline"])
-            await ctx.reply(f"⚠️ **Invalid status** `{status_input}`. Choose from: {valid_statuses}")
+            overflow = len(status_message) - 128
+            await ctx.reply(
+                f"⚠️ **Error (Pre-API Validation)**: Status message exceeds Discord's 128-character limit "
+                f"({len(status_message)}/128 characters). Please shorten it by **{overflow}** character{'s' if overflow != 1 else ''}."
+            )
             return
-
-        target_status = status_map[status_input]
-        activity_text = " ".join(args[1:]).strip() if len(args) > 1 else None
-
-        activity = None
-        if activity_text:
-            if hasattr(discord, "CustomActivity"):
-                activity = discord.CustomActivity(name=activity_text)
-            else:
-                activity = discord.Game(name=activity_text)
 
         try:
-            await ctx.client.change_presence(status=target_status, activity=activity)
+            custom_activity = discord.CustomActivity(name=status_message, emoji=emoji_arg)
+            await ctx.client.change_presence(activity=custom_activity)
             await ctx.react_success()
-            print(f"[CommandEngine] Status updated to {target_status} (activity: {activity_text})")
+            emoji_display = f" {emoji_arg}" if emoji_arg else ""
+            print(f"[CommandEngine] Updated custom status to: '{status_message}'{emoji_display}")
+        except discord.HTTPException as e:
+            await ctx.react_fail()
+            await ctx.reply(f"⚠️ **Discord API Error**: Failed to update status: {e}")
         except Exception as e:
             await ctx.react_fail()
-            print(f"[CommandEngine] Failed to update presence: {e}")
-            await ctx.reply(f"⚠️ **Error**: Failed to update status: {e}")
+            await ctx.reply(f"⚠️ **Unexpected Error**: {e}")
 
     @engine.command(
         name="reaction",
         aliases=["react", "autoreact"],
-        description="Configures auto-reactions for target users or displays reaction statistics.",
-        usage="<user_id | status | remove> [emoji | user_id]"
+        description="Configures auto-reactions for target users (with optional burst mode) or displays statistics.",
+        usage="<user_id | status | remove> [emoji | user_id] [burst]"
     )
     async def cmd_reaction(ctx: CommandContext, *args: str) -> None:
         if not args:
             await ctx.react_fail()
-            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>` or `.reaction status`")
+            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji> [burst]` or `.reaction status`")
             return
 
         subcmd = args[0].lower().strip()
@@ -387,7 +401,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         if subcmd == "status":
             has_data, summary = reaction_manager.get_stats_summary()
             if not has_data:
-                # If none, ONLY react to command msg with :x: emoji and do NOT delete
+                # If none, strictly react with :x: without adding checkmark or deleting
                 await ctx.react_fail()
             else:
                 # Self deletes command msg and sends the total amount of reactions per user per day
@@ -396,7 +410,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
             return
 
         # Handle: .reaction remove <user>
-        if subcmd == "remove" or subcmd == "delete":
+        if subcmd in ("remove", "delete", "clear"):
             if len(args) < 2:
                 await ctx.react_fail()
                 await ctx.reply("⚠️ **Usage**: `.reaction remove <user_id|mention|username>`")
@@ -415,14 +429,17 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
                 await ctx.reply(f"ℹ️ No active auto-reaction configured for **{uname}** (`{uid}`).")
             return
 
-        # Handle: .reaction <user_id> <emoji>
+        # Handle: .reaction <user_id> <emoji> [burst]
         if len(args) < 2:
             await ctx.react_fail()
-            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>`")
+            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji> [burst]`")
             return
 
         user_input = args[0]
         emoji_input = args[1]
+        is_burst = False
+        if len(args) > 2:
+            is_burst = args[2].lower().strip() in ("burst", "super", "true", "1", "yes")
 
         user_target = await resolve_user(ctx.client, user_input)
         if not user_target:
@@ -437,8 +454,84 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
             await ctx.reply(f"⚠️ **Error**: Invalid emoji `{emoji_input}`.")
             return
 
-        reaction_manager.set_target(uid, uname, emoji_input)
+        reaction_manager.set_target(uid, uname, emoji_input, burst=is_burst)
         await ctx.react_success()
+        burst_desc = " with **Super/Burst** mode" if is_burst else ""
         await ctx.reply(
-            f"✨ **Auto-Reaction Configured**: Reacting with {emoji_input} to every message by **{uname}** (`{uid}`) after 1.03s delay."
+            f"✨ **Auto-Reaction Configured**: Reacting with {emoji_input}{burst_desc} to every message by **{uname}** (`{uid}`) after 1.03s delay."
+        )
+
+    @engine.command(
+        name="spotify",
+        aliases=["spot", "listen"],
+        description="Plays an album in order on Spotify Rich Presence, or stops active playback.",
+        usage="<artist> <album name> | stop"
+    )
+    async def cmd_spotify(ctx: CommandContext, *args: str) -> None:
+        if not args:
+            await ctx.react_fail()
+            await ctx.reply("⚠️ **Usage**: `.spotify <artist> <album name>` (e.g. `.spotify daft punk discovery`) or `.spotify stop`")
+            return
+
+        subcmd = args[0].lower().strip()
+
+        # Handle: .spotify stop
+        if subcmd in ("stop", "pause", "end", "off", "cancel"):
+            was_playing = await spotify_player.stop(ctx.client)
+            await ctx.react_success()
+            if was_playing:
+                await ctx.reply("⏹️ **Spotify Playback Stopped**.")
+            else:
+                await ctx.reply("ℹ️ No active Spotify album was currently playing.")
+            return
+
+        if len(args) < 2:
+            await ctx.react_fail()
+            await ctx.reply("⚠️ **Missing Parameters**: Please specify both artist and approximate album title.\n*Example:* `.spotify daft punk discovery`")
+            return
+
+        artist_query = args[0].strip()
+        album_query = " ".join(args[1:]).strip()
+
+        # Intelligent Conflict Detection: Check if already playing
+        if spotify_player.is_playing():
+            current = spotify_player.get_current_info()
+            curr_album = current.get("album") if current else "an album"
+            curr_artist = current.get("artist") if current else ""
+            print(f"[CommandEngine] Spotify conflict: already playing {curr_album} by {curr_artist}")
+
+        # Search for album metadata
+        try:
+            album_data = fetch_album_metadata(artist_query, album_query)
+        except SpotifySearchError as sse:
+            await ctx.react_fail()
+            await ctx.reply(f"⚠️ **Spotify Search Error**: {sse}")
+            return
+        except Exception as e:
+            await ctx.react_fail()
+            await ctx.reply(f"⚠️ **Error Querying Album Metadata**: {e}")
+            return
+
+        tracks = album_data.get("tracks", [])
+        if not tracks:
+            await ctx.react_fail()
+            await ctx.reply(f"⚠️ **Error**: Album **{album_data.get('album')}** has 0 playable tracks.")
+            return
+
+        # Start playback in order
+        await spotify_player.play_album(ctx.client, album_data, ctx_channel=ctx.channel)
+        await ctx.react_success()
+
+        album_title = album_data.get("album")
+        artist_name = album_data.get("artist")
+        first_track = tracks[0].get("title", "Track 1")
+        total_duration = sum(t.get("duration", 0) for t in tracks)
+        dur_min = total_duration // 60
+        dur_sec = total_duration % 60
+
+        await ctx.reply(
+            f"🎵 **Now Playing on Spotify**:\n"
+            f"💿 **{album_title}** by **{artist_name}**\n"
+            f"📑 **{len(tracks)} tracks** ({dur_min}m {dur_sec}s total)\n"
+            f"▶️ Track 1: **{first_track}**"
         )

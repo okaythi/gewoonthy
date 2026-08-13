@@ -1,5 +1,5 @@
 """
-reactions.py - Auto-reaction manager, emoji/user resolvers, and per-user per-day statistics tracking for discord.py-self.
+reactions.py - Auto-reaction manager, emoji/user resolvers, burst option, and per-user per-day statistics tracking for discord.py-self.
 """
 from __future__ import annotations
 import asyncio
@@ -128,7 +128,7 @@ class ReactionManager:
     """
     def __init__(self, client: discord.Client):
         self.client = client
-        self.targets: Dict[str, Dict[str, Any]] = {}  # str(user_id) -> {"emoji": str, "username": str}
+        self.targets: Dict[str, Dict[str, Any]] = {}  # str(user_id) -> {"emoji": str, "username": str, "burst": bool}
         self.stats: Dict[str, Dict[str, int]] = {}     # "YYYY-MM-DD" -> {str(user_id): count}
         self.user_names: Dict[str, str] = {}           # str(user_id) -> username
         self.load_data()
@@ -156,11 +156,12 @@ class ReactionManager:
         except Exception as e:
             print(f"[ReactionManager] Failed to save {DATA_FILE}: {e}")
 
-    def set_target(self, user_id: int, username: str, emoji_raw: str) -> None:
+    def set_target(self, user_id: int, username: str, emoji_raw: str, burst: bool = False) -> None:
         uid_str = str(user_id)
         self.targets[uid_str] = {
             "emoji": emoji_raw,
-            "username": username
+            "username": username,
+            "burst": bool(burst)
         }
         self.user_names[uid_str] = username
         self.save_data()
@@ -209,7 +210,8 @@ class ReactionManager:
                 uname = self.user_names.get(uid_str, f"User_{uid_str}")
                 target_cfg = self.targets.get(uid_str)
                 emoji_tag = f" [{target_cfg['emoji']}]" if target_cfg else ""
-                lines.append(f"  • **{uname}** (`{uid_str}`): **{count}** reaction{'s' if count != 1 else ''}{emoji_tag}")
+                burst_tag = " (💥 Burst)" if target_cfg and target_cfg.get("burst") else ""
+                lines.append(f"  • **{uname}** (`{uid_str}`): **{count}** reaction{'s' if count != 1 else ''}{emoji_tag}{burst_tag}")
 
         if total_reactions == 0 or not lines:
             return False, ""
@@ -219,7 +221,7 @@ class ReactionManager:
 
     async def handle_incoming_message(self, message: discord.Message) -> None:
         """
-        Listens to all incoming messages, waits 1.03s, and applies the configured emoji reaction.
+        Listens to all incoming messages, waits 1.03s, and applies the configured emoji reaction (supporting burst).
         """
         if not message.author:
             return
@@ -230,15 +232,24 @@ class ReactionManager:
 
         target_cfg = self.targets[uid_str]
         emoji_raw = target_cfg["emoji"]
+        is_burst = target_cfg.get("burst", False)
 
         # Wait exactly 1.03s as specified
         await asyncio.sleep(1.03)
 
         parsed_emoji = parse_emoji_input(self.client, emoji_raw)
         try:
-            await message.add_reaction(parsed_emoji)
+            if is_burst:
+                try:
+                    await message.add_reaction(parsed_emoji, burst=True)
+                except Exception as e:
+                    print(f"[ReactionManager] Burst reaction failed, falling back to standard: {e}")
+                    await message.add_reaction(parsed_emoji)
+            else:
+                await message.add_reaction(parsed_emoji)
+
             self.record_reaction(message.author.id, message.author.name)
-            print(f"[ReactionManager] Reacted with {emoji_raw} to message from {message.author.name} ({message.author.id})")
+            print(f"[ReactionManager] Reacted with {emoji_raw} (burst={is_burst}) to message from {message.author.name} ({message.author.id})")
         except discord.Forbidden:
             print(f"[ReactionManager] Missing permissions to react in channel {message.channel}.")
         except discord.NotFound:
