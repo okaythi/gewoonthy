@@ -514,9 +514,15 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         artist_query = args[0].strip()
         album_query = " ".join(args[1:]).strip()
 
-        # Search for album metadata
+        # Add a search reaction so the user knows we're working on it
         try:
-            album_data = fetch_album_metadata(artist_query, album_query)
+            await ctx.message.add_reaction("🔍")
+        except:
+            pass
+
+        # Search for album metadata - run in a separate thread to prevent blocking the event loop
+        try:
+            album_data = await asyncio.to_thread(fetch_album_metadata, artist_query, album_query)
         except SpotifySearchError as sse:
             await ctx.react_fail()
             await ctx.reply(f"⚠️ **Spotify Search Error**: {sse}")
