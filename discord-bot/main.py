@@ -9,6 +9,7 @@ from flask_cors import CORS
 
 from commands import CommandEngine, register_default_commands
 from lifecycle import LifecycleManager
+from reactions import ReactionManager
 
 load_dotenv()
 
@@ -193,6 +194,7 @@ class MyClient(discord.Client):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.command_engine = CommandEngine(self, prefix=".")
+        self.reaction_manager = ReactionManager(self)
 
     async def on_ready(self):
         print(f'Logged in as {self.user}')
@@ -201,11 +203,14 @@ class MyClient(discord.Client):
         await LifecycleManager.handle_post_restart(self)
 
     async def on_message(self, message: discord.Message):
-        # Process self commands starting with '.'
+        # 1. Check auto-reactions for target users (runs in background task after 1.03s delay)
+        asyncio.create_task(self.reaction_manager.handle_incoming_message(message))
+
+        # 2. Process self commands starting with '.'
         await self.command_engine.process_message(message)
 
 client = MyClient()
-register_default_commands(client.command_engine)
+register_default_commands(client.command_engine, client.reaction_manager)
 
 if __name__ == '__main__':
     # Start the web server

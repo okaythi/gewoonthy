@@ -1,5 +1,5 @@
 """
-commands.py - High performance, decorator-driven command engine and state-of-the-art deletion/status modules for discord.py-self.
+commands.py - High performance, decorator-driven command engine and state-of-the-art deletion/status/reaction modules for discord.py-self.
 """
 from __future__ import annotations
 import asyncio
@@ -9,6 +9,7 @@ import time
 from typing import Callable, Coroutine, Dict, List, Optional, Any, Union
 import discord
 from lifecycle import LifecycleManager
+from reactions import ReactionManager, resolve_user, parse_emoji_input
 
 class CommandContext:
     def __init__(self, message: discord.Message, client: discord.Client, command_name: str, args: List[str], raw_args: str):
@@ -33,6 +34,17 @@ class CommandContext:
             await self.message.add_reaction("✅")
         except Exception as e:
             print(f"[CommandContext] Failed to add checkmark reaction: {e}")
+
+    async def react_fail(self) -> None:
+        try:
+            # Remove green checkmark if present
+            try:
+                await self.message.remove_reaction("✅", self.client.user)
+            except Exception:
+                pass
+            await self.message.add_reaction("❌")
+        except Exception as e:
+            print(f"[CommandContext] Failed to add fail reaction: {e}")
 
     async def delete_trigger(self) -> None:
         try:
@@ -63,6 +75,7 @@ class CommandEngine:
         self.client = client
         self.prefix = prefix
         self.commands: Dict[str, Command] = {}
+        self.reaction_manager: Optional[ReactionManager] = None
 
     def command(self, name: str, aliases: Optional[List[str]] = None, description: str = "", usage: str = ""):
         def decorator(func: Callable[..., Coroutine[Any, Any, Any]]):
@@ -254,10 +267,11 @@ class AdaptiveDeleter:
         print(f"[AdaptiveDeleter] Purge completed. Deleted {deleted_count} messages.")
         return deleted_count
 
-def register_default_commands(engine: CommandEngine) -> None:
+def register_default_commands(engine: CommandEngine, reaction_manager: ReactionManager) -> None:
     """
-    Registers the core command suite: .delete, .restart, and .status.
+    Registers the core command suite: .delete, .restart, .status, and .reaction.
     """
+    engine.reaction_manager = reaction_manager
 
     @engine.command(
         name="delete",
@@ -352,3 +366,69 @@ def register_default_commands(engine: CommandEngine) -> None:
         except Exception as e:
             print(f"[CommandEngine] Failed to update presence: {e}")
             await ctx.reply(f"⚠️ **Error**: Failed to update status: {e}")
+
+    @engine.command(
+        name="reaction",
+        aliases=["react", "autoreact"],
+        description="Configures auto-reactions for target users or displays reaction statistics.",
+        usage="<user_id | status | remove> [emoji | user_id]"
+    )
+    async def cmd_reaction(ctx: CommandContext, *args: str) -> None:
+        if not args:
+            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>` or `.reaction status`")
+            return
+
+        subcmd = args[0].lower().strip()
+
+        # Handle: .reaction status
+        if subcmd == "status":
+            has_data, summary = reaction_manager.get_stats_summary()
+            if not has_data:
+                # If none, react to command msg with :x: emoji and do NOT delete
+                await ctx.react_fail()
+            else:
+                # Self deletes command msg and sends the total amount of reactions per user per day
+                await ctx.delete_trigger()
+                await ctx.reply(summary)
+            return
+
+        # Handle: .reaction remove <user>
+        if subcmd == "remove" or subcmd == "delete":
+            if len(args) < 2:
+                await ctx.reply("⚠️ **Usage**: `.reaction remove <user_id|mention|username>`")
+                return
+            user_target = await resolve_user(ctx.client, args[1])
+            if not user_target:
+                await ctx.reply(f"⚠️ **Error**: Could not resolve user `{args[1]}`.")
+                return
+            uid, uname = user_target
+            removed = reaction_manager.remove_target(uid)
+            if removed:
+                await ctx.reply(f"🗑️ Removed auto-reaction for **{uname}** (`{uid}`).")
+            else:
+                await ctx.reply(f"ℹ️ No active auto-reaction configured for **{uname}** (`{uid}`).")
+            return
+
+        # Handle: .reaction <user_id> <emoji>
+        if len(args) < 2:
+            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>`")
+            return
+
+        user_input = args[0]
+        emoji_input = args[1]
+
+        user_target = await resolve_user(ctx.client, user_input)
+        if not user_target:
+            await ctx.reply(f"⚠️ **Error**: Could not resolve user `{user_input}`. Provide a valid mention, ID, or username.")
+            return
+
+        uid, uname = user_target
+        parsed_emoji = parse_emoji_input(ctx.client, emoji_input)
+        if not parsed_emoji:
+            await ctx.reply(f"⚠️ **Error**: Invalid emoji `{emoji_input}`.")
+            return
+
+        reaction_manager.set_target(uid, uname, emoji_input)
+        await ctx.reply(
+            f"✨ **Auto-Reaction Configured**: Reacting with {emoji_input} to every message by **{uname}** (`{uid}`) after 1.03s delay."
+        )
