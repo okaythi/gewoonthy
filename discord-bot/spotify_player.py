@@ -1,5 +1,5 @@
 """
-spotify_player.py - Advanced Spotify Rich Presence album player with native Spotify CDN image hashing and multi-source fallback.
+spotify_player.py - Advanced Spotify Rich Presence album player with native Spotify CDN image hashing, robust task management, and presence wiping.
 """
 from __future__ import annotations
 import asyncio
@@ -252,7 +252,7 @@ class SpotifyPlayer:
         self.is_running: bool = False
 
     def is_playing(self) -> bool:
-        return self.is_running and self.current_task is not None and not self.current_task.done()
+        return (self.is_running or (self.current_task is not None and not self.current_task.done()))
 
     def get_current_info(self) -> Optional[Dict[str, Any]]:
         if not self.is_playing() or not self.current_album_info:
@@ -286,7 +286,6 @@ class SpotifyPlayer:
         tracks: List[Dict[str, Any]] = album_data.get("tracks", [])
         album_name = album_data.get("album", "Unknown Album")
         artist_name = album_data.get("artist", "Unknown Artist")
-        # Ensure we pass the spotify: image asset if available
         spotify_image = album_data.get("spotify_image") or album_data.get("cover_url")
         album_id = album_data.get("album_id")
 
@@ -310,17 +309,16 @@ class SpotifyPlayer:
                     album_cover_url=spotify_image,
                     start_time=start_time,
                     duration=duration,
-                    party_owner_id=client.user.id
+                    party_owner_id=client.user.id if client.user else 0
                 )
 
-                await client.change_presence(activity=spotify_activity)
+                await client.change_presence(activities=[spotify_activity])
                 print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s, image: {spotify_image})")
 
                 # Sleep duration of the track
                 await asyncio.sleep(duration_sec)
 
             print(f"[SpotifyPlayer] Album '{album_name}' finished.")
-            await client.change_presence(activity=None)
         except asyncio.CancelledError:
             print("[SpotifyPlayer] Playback task cancelled.")
         except Exception as e:
@@ -328,28 +326,32 @@ class SpotifyPlayer:
         finally:
             self.is_running = False
             self.current_album_info = None
+            try:
+                await client.change_presence(activities=[])
+            except Exception as e:
+                print(f"[SpotifyPlayer] Error resetting presence in finally: {e}")
 
     async def stop(self, client: discord.Client) -> bool:
         """
-        Stops the Spotify player and resets Discord presence.
+        Stops the Spotify player and resets Discord presence completely.
         """
-        was_playing = self.is_playing()
+        was_active = self.is_playing()
+
         if self.current_task and not self.current_task.done():
             self.current_task.cancel()
             try:
-                await self.current_task
-            except asyncio.CancelledError:
-                pass
-            except Exception:
+                await asyncio.wait_for(self.current_task, timeout=1.0)
+            except (asyncio.CancelledError, asyncio.TimeoutError, Exception):
                 pass
 
         self.current_task = None
         self.is_running = False
         self.current_album_info = None
 
+        # Always explicitly wipe activities from presence
         try:
-            await client.change_presence(activity=None)
+            await client.change_presence(activities=[])
         except Exception as e:
             print(f"[SpotifyPlayer] Failed to clear presence: {e}")
 
-        return was_playing
+        return was_active

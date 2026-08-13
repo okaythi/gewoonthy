@@ -337,7 +337,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         # Handle clear
         if raw_text.lower() in ("clear", "reset", "none", "off"):
             try:
-                await ctx.client.change_presence(activity=None)
+                await ctx.client.change_presence(activities=[])
                 await ctx.react_success()
                 await ctx.reply("✨ **Custom Status Cleared**.")
             except Exception as e:
@@ -371,7 +371,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         try:
             custom_activity = discord.CustomActivity(name=status_message, emoji=emoji_arg)
-            await ctx.client.change_presence(activity=custom_activity)
+            await ctx.client.change_presence(activities=[custom_activity])
             await ctx.react_success()
             emoji_display = f" {emoji_arg}" if emoji_arg else ""
             print(f"[CommandEngine] Updated custom status to: '{status_message}'{emoji_display}")
@@ -400,10 +400,8 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         if subcmd == "status":
             has_data, summary = reaction_manager.get_stats_summary()
             if not has_data:
-                # If none, strictly react with :x: without adding checkmark or deleting
                 await ctx.react_fail()
             else:
-                # Self deletes command msg and sends the total amount of reactions per user per day
                 await ctx.delete_trigger()
                 await ctx.reply(summary)
             return
@@ -416,11 +414,8 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
                 return
 
             target_user_input = args[1]
-            
-            # First try direct removal in ReactionManager targets
             removed, uid, uname = reaction_manager.remove_target(target_user_input)
 
-            # If not found directly, attempt gateway resolve
             if not removed:
                 user_target = await resolve_user(ctx.client, target_user_input)
                 if user_target:
@@ -501,12 +496,14 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         # Handle: .spotify stop
         if subcmd in ("stop", "pause", "end", "off", "cancel"):
-            was_playing = await spotify_player.stop(ctx.client)
+            await spotify_player.stop(ctx.client)
+            try:
+                await ctx.client.change_presence(activities=[])
+            except Exception as e:
+                print(f"[CommandEngine] Error resetting presence: {e}")
+
             await ctx.react_success()
-            if was_playing:
-                await ctx.reply("⏹️ **Spotify Playback Stopped**.")
-            else:
-                await ctx.reply("ℹ️ No active Spotify album was currently playing.")
+            await ctx.reply("⏹️ **Spotify Playback Stopped** and presence cleared.")
             return
 
         if len(args) < 2:
