@@ -1,20 +1,121 @@
 """
-spotify_player.py - Advanced Spotify Rich Presence album player with intelligent multi-source metadata search.
+spotify_player.py - Advanced Spotify Rich Presence album player with native Spotify CDN image hashing and multi-source fallback.
 """
 from __future__ import annotations
 import asyncio
 import datetime
 import json
+import re
 import urllib.parse
 import urllib.request
 from typing import Dict, List, Optional, Any, Tuple
 import discord
+from curl_cffi import requests
 
 class SpotifySearchError(Exception):
     pass
 
 class SpotifyConflictError(Exception):
     pass
+
+def search_spotify_native(artist: str, album_query: str) -> Optional[Dict[str, Any]]:
+    """
+    Searches Spotify directly to obtain the real Spotify CDN image hash (spotify:ab67...)
+    and accurate Spotify track IDs for rich presence rendering.
+    """
+    query = f"{artist} {album_query} spotify album".strip()
+    session = requests.Session(impersonate="chrome")
+
+    album_ids: List[str] = []
+
+    # 1. Search DDG HTML for open.spotify.com/album/
+    try:
+        ddg_url = f"https://html.duckduckgo.com/html/?q={urllib.parse.quote(query)}"
+        r = session.get(ddg_url, timeout=6)
+        if r.status_code == 200:
+            found = re.findall(r"open\.spotify\.com(?:%2F|/)album(?:%2F|/)([a-zA-Z0-9]{22})", r.text)
+            album_ids.extend(found)
+    except Exception as e:
+        print(f"[SpotifyPlayer] DDG scrape error: {e}")
+
+    # 2. Fallback: Bing Search
+    if not album_ids:
+        try:
+            bing_url = f"https://www.bing.com/search?q={urllib.parse.quote(query)}"
+            r_bing = session.get(bing_url, timeout=6)
+            if r_bing.status_code == 200:
+                found = re.findall(r"open\.spotify\.com/album/([a-zA-Z0-9]{22})", r_bing.text)
+                album_ids.extend(found)
+        except Exception as e:
+            print(f"[SpotifyPlayer] Bing scrape error: {e}")
+
+    if not album_ids:
+        return None
+
+    album_id = album_ids[0]
+
+    # Fetch album embed metadata
+    try:
+        embed_url = f"https://open.spotify.com/embed/album/{album_id}"
+        r_embed = session.get(embed_url, timeout=6)
+        if r_embed.status_code != 200:
+            return None
+
+        matches = re.findall(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', r_embed.text, re.DOTALL)
+        if not matches:
+            return None
+
+        data = json.loads(matches[0])
+        entity = data.get("props", {}).get("pageProps", {}).get("state", {}).get("data", {}).get("entity", {})
+        if not entity:
+            return None
+
+        title = entity.get("title") or entity.get("name", "Unknown Album")
+        artists = [a.get("name") for a in entity.get("artists", []) if a.get("name")]
+        artist_display = ", ".join(artists) if artists else artist
+
+        # Extract real Spotify image hash
+        image_hash = None
+        visual_images = entity.get("visualIdentity", {}).get("image", [])
+        cover_images = entity.get("coverArt", {}).get("sources", [])
+        all_images = visual_images + cover_images
+
+        for img in all_images:
+            url = img.get("url", "")
+            img_match = re.search(r"image/([a-zA-Z0-9]+)", url)
+            if img_match:
+                image_hash = img_match.group(1)
+                break
+
+        track_list = entity.get("trackList", [])
+        tracks = []
+        for t in track_list:
+            t_artists = [a.get("name") for a in t.get("artists", []) if a.get("name")]
+            track_artist = ", ".join(t_artists) if t_artists else artist_display
+            uri = t.get("uri", "")
+            track_id = uri.replace("spotify:track:", "") if "spotify:track:" in uri else None
+
+            tracks.append({
+                "title": t.get("title", "Unknown Track"),
+                "duration": int(t.get("duration", 180000) / 1000),
+                "artist": track_artist,
+                "track_id": track_id
+            })
+
+        if not tracks:
+            return None
+
+        return {
+            "album": title,
+            "artist": artist_display,
+            "album_id": album_id,
+            "image_hash": image_hash,
+            "spotify_image": f"spotify:{image_hash}" if image_hash else None,
+            "tracks": tracks
+        }
+    except Exception as e:
+        print(f"[SpotifyPlayer] Embed parse error: {e}")
+        return None
 
 def search_album_deezer(query: str) -> Optional[Dict[str, Any]]:
     try:
@@ -36,7 +137,6 @@ def search_album_deezer(query: str) -> Optional[Dict[str, Any]]:
             or first_album.get("cover_medium")
         )
 
-        # Retrieve tracks in order
         tracks_url = f"https://api.deezer.com/album/{album_id}/tracks"
         with urllib.request.urlopen(urllib.request.Request(tracks_url, headers={"User-Agent": "Mozilla/5.0"}), timeout=5) as res:
             tracks_data = json.loads(res.read().decode("utf-8"))
@@ -45,8 +145,9 @@ def search_album_deezer(query: str) -> Optional[Dict[str, Any]]:
         for t in tracks_data.get("data", []):
             tracks.append({
                 "title": t.get("title", "Unknown Track"),
-                "duration": int(t.get("duration", 180)),  # seconds
-                "artist": t.get("artist", {}).get("name", artist_name)
+                "duration": int(t.get("duration", 180)),
+                "artist": t.get("artist", {}).get("name", artist_name),
+                "track_id": None
             })
 
         if not tracks:
@@ -56,6 +157,7 @@ def search_album_deezer(query: str) -> Optional[Dict[str, Any]]:
             "album": album_title,
             "artist": artist_name,
             "cover_url": cover_url,
+            "spotify_image": None,
             "tracks": tracks
         }
     except Exception as e:
@@ -78,7 +180,6 @@ def search_album_itunes(query: str) -> Optional[Dict[str, Any]]:
         artist_name = first.get("artistName", "Unknown Artist")
         cover_url = first.get("artworkUrl100", "").replace("100x100bb", "600x600bb")
 
-        # Lookup tracks in collection
         lookup_url = f"https://itunes.apple.com/lookup?id={collection_id}&entity=song"
         with urllib.request.urlopen(urllib.request.Request(lookup_url, headers={"User-Agent": "Mozilla/5.0"}), timeout=5) as res:
             lookup_data = json.loads(res.read().decode("utf-8"))
@@ -89,7 +190,8 @@ def search_album_itunes(query: str) -> Optional[Dict[str, Any]]:
                 tracks.append({
                     "title": item.get("trackName", "Unknown Track"),
                     "duration": int(item.get("trackTimeMillis", 180000) / 1000),
-                    "artist": item.get("artistName", artist_name)
+                    "artist": item.get("artistName", artist_name),
+                    "track_id": None
                 })
 
         if not tracks:
@@ -99,6 +201,7 @@ def search_album_itunes(query: str) -> Optional[Dict[str, Any]]:
             "album": album_name,
             "artist": artist_name,
             "cover_url": cover_url,
+            "spotify_image": None,
             "tracks": tracks
         }
     except Exception as e:
@@ -107,7 +210,9 @@ def search_album_itunes(query: str) -> Optional[Dict[str, Any]]:
 
 def fetch_album_metadata(artist: str, album_query: str) -> Dict[str, Any]:
     """
-    Searches for an album by artist and approximate album title using primary and fallback providers.
+    Searches for an album by artist and approximate album title.
+    Prioritizes native Spotify metadata to obtain real Spotify CDN image hashes (spotify:ab67...)
+    and Spotify track IDs. Falls back to Deezer and iTunes.
     """
     clean_artist = artist.strip()
     clean_album = album_query.strip()
@@ -116,15 +221,20 @@ def fetch_album_metadata(artist: str, album_query: str) -> Dict[str, Any]:
     if not full_query:
         raise SpotifySearchError("Empty search terms provided.")
 
-    # 1. Primary: Deezer
-    res = search_album_deezer(full_query)
-    if res and res.get("tracks"):
-        return res
+    # 1. Primary: Native Spotify search & embed extraction
+    res_spotify = search_spotify_native(clean_artist, clean_album)
+    if res_spotify and res_spotify.get("tracks"):
+        return res_spotify
 
-    # 2. Fallback: iTunes
-    res = search_album_itunes(full_query)
-    if res and res.get("tracks"):
-        return res
+    # 2. Secondary: Deezer search
+    res_deezer = search_album_deezer(full_query)
+    if res_deezer and res_deezer.get("tracks"):
+        return res_deezer
+
+    # 3. Tertiary: iTunes fallback
+    res_itunes = search_album_itunes(full_query)
+    if res_itunes and res_itunes.get("tracks"):
+        return res_itunes
 
     raise SpotifySearchError(
         f"Could not find any matching album for '{clean_album}' by '{clean_artist}'. "
@@ -166,7 +276,6 @@ class SpotifyPlayer:
         """
         Starts sequential playback of the album tracks in order.
         """
-        # Cancel any active background playback task
         await self.stop(client)
 
         self.current_album_info = album_data
@@ -177,7 +286,9 @@ class SpotifyPlayer:
         tracks: List[Dict[str, Any]] = album_data.get("tracks", [])
         album_name = album_data.get("album", "Unknown Album")
         artist_name = album_data.get("artist", "Unknown Artist")
-        cover_url = album_data.get("cover_url")
+        # Ensure we pass the spotify: image asset if available
+        spotify_image = album_data.get("spotify_image") or album_data.get("cover_url")
+        album_id = album_data.get("album_id")
 
         try:
             for idx, track in enumerate(tracks):
@@ -185,6 +296,7 @@ class SpotifyPlayer:
                 title = track.get("title", "Unknown Track")
                 duration_sec = max(10, track.get("duration", 180))
                 artist = track.get("artist", artist_name)
+                track_id = track.get("track_id")
 
                 start_time = datetime.datetime.now(datetime.timezone.utc)
                 duration = datetime.timedelta(seconds=duration_sec)
@@ -193,20 +305,21 @@ class SpotifyPlayer:
                     title=title,
                     artists=[artist],
                     album=album_name,
-                    album_cover_url=cover_url,
+                    album_id=album_id,
+                    track_id=track_id,
+                    album_cover_url=spotify_image,
                     start_time=start_time,
                     duration=duration,
                     party_owner_id=client.user.id
                 )
 
                 await client.change_presence(activity=spotify_activity)
-                print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s)")
+                print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s, image: {spotify_image})")
 
                 # Sleep duration of the track
                 await asyncio.sleep(duration_sec)
 
             print(f"[SpotifyPlayer] Album '{album_name}' finished.")
-            # Clear presence once album ends
             await client.change_presence(activity=None)
         except asyncio.CancelledError:
             print("[SpotifyPlayer] Playback task cancelled.")
