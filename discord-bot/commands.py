@@ -37,11 +37,6 @@ class CommandContext:
 
     async def react_fail(self) -> None:
         try:
-            # Remove green checkmark if present
-            try:
-                await self.message.remove_reaction("✅", self.client.user)
-            except Exception:
-                pass
             await self.message.add_reaction("❌")
         except Exception as e:
             print(f"[CommandContext] Failed to add fail reaction: {e}")
@@ -115,9 +110,6 @@ class CommandEngine:
             args=args,
             raw_args=raw_args
         )
-
-        # React with green checkmark to confirm valid command recognition
-        await ctx.react_success()
 
         try:
             await cmd.invoke(ctx)
@@ -281,11 +273,13 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
     )
     async def cmd_delete(ctx: CommandContext, *args: str) -> None:
         if not args:
+            await ctx.react_fail()
             await ctx.reply("⚠️ **Usage**: `.delete <channelID> [messageID | 'all']`")
             return
 
         channel_arg = args[0].strip()
         if not channel_arg.isdigit():
+            await ctx.react_fail()
             await ctx.reply("⚠️ **Error**: `channelID` must be a valid integer ID.")
             return
 
@@ -295,6 +289,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
             try:
                 channel = await ctx.client.fetch_channel(channel_id)
             except Exception as e:
+                await ctx.react_fail()
                 await ctx.reply(f"⚠️ **Error**: Failed to resolve channel `{channel_id}`: {e}")
                 return
 
@@ -302,6 +297,8 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         is_same_channel = (ctx.channel.id == channel_id)
         if is_same_channel:
             await ctx.delete_trigger()
+        else:
+            await ctx.react_success()
 
         target_opt = args[1].lower().strip() if len(args) > 1 else "all"
 
@@ -322,6 +319,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         usage=""
     )
     async def cmd_restart(ctx: CommandContext, *args: str) -> None:
+        await ctx.react_success()
         await LifecycleManager.initiate_restart(ctx.client, ctx.channel)
 
     @engine.command(
@@ -332,6 +330,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
     )
     async def cmd_status(ctx: CommandContext, *args: str) -> None:
         if not args:
+            await ctx.react_fail()
             await ctx.reply("⚠️ **Usage**: `.status <online|idle|dnd|invisible|offline> [activity text]`")
             return
 
@@ -346,6 +345,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         }
 
         if status_input not in status_map:
+            await ctx.react_fail()
             valid_statuses = ", ".join(f"`{s}`" for s in ["online", "idle", "dnd", "invisible", "offline"])
             await ctx.reply(f"⚠️ **Invalid status** `{status_input}`. Choose from: {valid_statuses}")
             return
@@ -362,8 +362,10 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         try:
             await ctx.client.change_presence(status=target_status, activity=activity)
+            await ctx.react_success()
             print(f"[CommandEngine] Status updated to {target_status} (activity: {activity_text})")
         except Exception as e:
+            await ctx.react_fail()
             print(f"[CommandEngine] Failed to update presence: {e}")
             await ctx.reply(f"⚠️ **Error**: Failed to update status: {e}")
 
@@ -375,6 +377,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
     )
     async def cmd_reaction(ctx: CommandContext, *args: str) -> None:
         if not args:
+            await ctx.react_fail()
             await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>` or `.reaction status`")
             return
 
@@ -384,7 +387,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         if subcmd == "status":
             has_data, summary = reaction_manager.get_stats_summary()
             if not has_data:
-                # If none, react to command msg with :x: emoji and do NOT delete
+                # If none, ONLY react to command msg with :x: emoji and do NOT delete
                 await ctx.react_fail()
             else:
                 # Self deletes command msg and sends the total amount of reactions per user per day
@@ -395,14 +398,17 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         # Handle: .reaction remove <user>
         if subcmd == "remove" or subcmd == "delete":
             if len(args) < 2:
+                await ctx.react_fail()
                 await ctx.reply("⚠️ **Usage**: `.reaction remove <user_id|mention|username>`")
                 return
             user_target = await resolve_user(ctx.client, args[1])
             if not user_target:
+                await ctx.react_fail()
                 await ctx.reply(f"⚠️ **Error**: Could not resolve user `{args[1]}`.")
                 return
             uid, uname = user_target
             removed = reaction_manager.remove_target(uid)
+            await ctx.react_success()
             if removed:
                 await ctx.reply(f"🗑️ Removed auto-reaction for **{uname}** (`{uid}`).")
             else:
@@ -411,6 +417,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         # Handle: .reaction <user_id> <emoji>
         if len(args) < 2:
+            await ctx.react_fail()
             await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji>`")
             return
 
@@ -419,16 +426,19 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         user_target = await resolve_user(ctx.client, user_input)
         if not user_target:
+            await ctx.react_fail()
             await ctx.reply(f"⚠️ **Error**: Could not resolve user `{user_input}`. Provide a valid mention, ID, or username.")
             return
 
         uid, uname = user_target
         parsed_emoji = parse_emoji_input(ctx.client, emoji_input)
         if not parsed_emoji:
+            await ctx.react_fail()
             await ctx.reply(f"⚠️ **Error**: Invalid emoji `{emoji_input}`.")
             return
 
         reaction_manager.set_target(uid, uname, emoji_input)
+        await ctx.react_success()
         await ctx.reply(
             f"✨ **Auto-Reaction Configured**: Reacting with {emoji_input} to every message by **{uname}** (`{uid}`) after 1.03s delay."
         )
