@@ -110,7 +110,7 @@ def search_spotify_native(artist: str, album_query: str) -> Optional[Dict[str, A
             "artist": artist_display,
             "album_id": album_id,
             "image_hash": image_hash,
-            "spotify_image": f"https://i.scdn.co/image/{image_hash}" if image_hash else None,
+            "spotify_image": f"spotify:{image_hash}" if image_hash else None,
             "tracks": tracks
         }
     except Exception as e:
@@ -311,6 +311,9 @@ class SpotifyPlayer:
                     duration=duration,
                     party_owner_id=client.user.id if client.user else 0
                 )
+                
+                # IMPORTANT: Inject official Spotify application ID so Discord clients render the spotify: prefix image hashes
+                spotify_activity.application_id = "159714140401418240"
 
                 await client.change_presence(activities=[spotify_activity])
                 print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s, image: {spotify_image})")
