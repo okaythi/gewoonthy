@@ -1,0 +1,348 @@
+"""
+commands.py - High performance, decorator-driven command engine and state-of-the-art deletion/status modules for discord.py-self.
+"""
+from __future__ import annotations
+import asyncio
+import os
+import random
+import time
+from typing import Callable, Coroutine, Dict, List, Optional, Any, Union
+import discord
+from lifecycle import LifecycleManager
+
+class CommandContext:
+    def __init__(self, message: discord.Message, client: discord.Client, command_name: str, args: List[str], raw_args: str):
+        self.message = message
+        self.client = client
+        self.channel = message.channel
+        self.author = message.author
+        self.guild = message.guild
+        self.command_name = command_name
+        self.args = args
+        self.raw_args = raw_args
+
+    async def reply(self, content: str, **kwargs) -> Optional[discord.Message]:
+        try:
+            return await self.channel.send(content, **kwargs)
+        except Exception as e:
+            print(f"[CommandContext] Failed to send message: {e}")
+            return None
+
+    async def delete_trigger(self) -> None:
+        try:
+            await self.message.delete()
+        except Exception:
+            pass
+
+class Command:
+    def __init__(
+        self,
+        name: str,
+        callback: Callable[..., Coroutine[Any, Any, Any]],
+        aliases: Optional[List[str]] = None,
+        description: str = "",
+        usage: str = ""
+    ):
+        self.name = name.lower()
+        self.callback = callback
+        self.aliases = [a.lower() for a in (aliases or [])]
+        self.description = description
+        self.usage = usage
+
+    async def invoke(self, ctx: CommandContext) -> Any:
+        return await self.callback(ctx, *ctx.args)
+
+class CommandEngine:
+    def __init__(self, client: discord.Client, prefix: str = "."):
+        self.client = client
+        self.prefix = prefix
+        self.commands: Dict[str, Command] = {}
+
+    def command(self, name: str, aliases: Optional[List[str]] = None, description: str = "", usage: str = ""):
+        def decorator(func: Callable[..., Coroutine[Any, Any, Any]]):
+            cmd = Command(name=name, callback=func, aliases=aliases, description=description, usage=usage)
+            self.commands[cmd.name] = cmd
+            for alias in cmd.aliases:
+                self.commands[alias] = cmd
+            return func
+        return decorator
+
+    async def process_message(self, message: discord.Message) -> bool:
+        # Strictly listen to own messages (self-bot user account)
+        if not message.author or message.author.id != self.client.user.id:
+            return False
+
+        content = message.content.strip()
+        if not content.startswith(self.prefix):
+            return False
+
+        body = content[len(self.prefix):].strip()
+        if not body:
+            return False
+
+        parts = body.split()
+        cmd_name = parts[0].lower()
+        args = parts[1:]
+        raw_args = body[len(cmd_name):].strip()
+
+        cmd = self.commands.get(cmd_name)
+        if not cmd:
+            return False
+
+        ctx = CommandContext(
+            message=message,
+            client=self.client,
+            command_name=cmd_name,
+            args=args,
+            raw_args=raw_args
+        )
+
+        try:
+            await cmd.invoke(ctx)
+            return True
+        except TypeError as te:
+            print(f"[CommandEngine] Argument mismatch for '.{cmd_name}': {te}")
+            await ctx.reply(f"⚠️ **Usage**: `.{cmd.name} {cmd.usage}`")
+            return False
+        except Exception as e:
+            print(f"[CommandEngine] Error executing '.{cmd_name}': {e}")
+            return False
+
+class AdaptiveDeleter:
+    """
+    State-of-the-Art adaptive rate-limiting deletion engine for user accounts (selfbots).
+    Uses Additive-Increase/Multiplicative-Decrease (AIMD) congestion control,
+    batch history paging, and immediate 429 retry-after recovery to maximize throughput
+    while strictly avoiding Discord anti-spam flags.
+    """
+    def __init__(
+        self,
+        client: discord.Client,
+        min_delay: float = 0.05,
+        initial_delay: float = 0.15,
+        max_delay: float = 2.5
+    ):
+        self.client = client
+        self.min_delay = min_delay
+        self.current_delay = initial_delay
+        self.max_delay = max_delay
+
+    async def delete_single_message(self, channel: discord.abc.Messageable, message_id: int) -> bool:
+        try:
+            msg = await channel.fetch_message(message_id)
+            if msg.author.id != self.client.user.id:
+                print(f"[AdaptiveDeleter] Message {message_id} was not authored by self. Skipping.")
+                return False
+            await msg.delete()
+            return True
+        except discord.NotFound:
+            print(f"[AdaptiveDeleter] Message {message_id} not found (already deleted).")
+            return False
+        except discord.HTTPException as e:
+            if e.status == 429:
+                retry_after = getattr(e, "retry_after", 1.0)
+                print(f"[AdaptiveDeleter] Rate limited on single delete. Backing off {retry_after}s...")
+                await asyncio.sleep(retry_after + 0.05)
+                # Retry once
+                try:
+                    msg = await channel.fetch_message(message_id)
+                    await msg.delete()
+                    return True
+                except Exception:
+                    pass
+            print(f"[AdaptiveDeleter] HTTP error deleting message {message_id}: {e}")
+            return False
+
+    async def purge_channel_messages(
+        self,
+        channel: discord.abc.Messageable,
+        target_message_id: Optional[int] = None,
+        max_messages: Optional[int] = None
+    ) -> int:
+        """
+        Fast, rate-limit-compliant bulk deletion of own messages in a channel.
+        """
+        deleted_count = 0
+        last_message: Optional[discord.Message] = None
+
+        print(f"[AdaptiveDeleter] Starting purge in channel {getattr(channel, 'id', channel)}...")
+
+        while True:
+            # Batch fetch history in pages of 100 to reduce gateway roundtrips
+            try:
+                history_kwargs: Dict[str, Any] = {"limit": 100}
+                if last_message:
+                    history_kwargs["before"] = last_message
+
+                batch: List[discord.Message] = []
+                async for msg in channel.history(**history_kwargs):
+                    batch.append(msg)
+
+                if not batch:
+                    break
+
+                last_message = batch[-1]
+
+                # Filter for self messages
+                self_messages = [m for m in batch if m.author.id == self.client.user.id]
+
+                for msg in self_messages:
+                    if target_message_id and msg.id != target_message_id:
+                        continue
+
+                    # Attempt deletion with adaptive congestion control
+                    while True:
+                        try:
+                            t0 = time.time()
+                            await msg.delete()
+                            deleted_count += 1
+
+                            # Additive decrease of delay on success (speed up)
+                            self.current_delay = max(self.min_delay, self.current_delay * 0.95)
+                            
+                            # Tiny sleep with jitter to keep gateway healthy
+                            jitter = random.uniform(0.01, 0.03)
+                            await asyncio.sleep(self.current_delay + jitter)
+                            break
+
+                        except discord.NotFound:
+                            # Message already deleted, continue
+                            break
+
+                        except discord.Forbidden:
+                            print(f"[AdaptiveDeleter] Forbidden: Cannot delete message {msg.id} in {channel}.")
+                            return deleted_count
+
+                        except discord.HTTPException as e:
+                            if e.status == 429:
+                                retry_after = getattr(e, "retry_after", 1.0)
+                                print(f"[AdaptiveDeleter] 429 Rate Limit hit. Backing off for {retry_after:.2f}s...")
+                                await asyncio.sleep(retry_after + 0.05)
+                                # Multiplicative increase of delay (slow down)
+                                self.current_delay = min(self.max_delay, max(0.5, self.current_delay * 1.6))
+                                # Retry the same message
+                                continue
+                            else:
+                                print(f"[AdaptiveDeleter] HTTPException {e.status} on message {msg.id}: {e}")
+                                break
+
+                        except Exception as e:
+                            print(f"[AdaptiveDeleter] Unexpected error on message {msg.id}: {e}")
+                            break
+
+                    if target_message_id and msg.id == target_message_id:
+                        return deleted_count
+
+                    if max_messages and deleted_count >= max_messages:
+                        return deleted_count
+
+            except discord.Forbidden:
+                print(f"[AdaptiveDeleter] Lacking permissions to read history in {channel}.")
+                break
+            except Exception as e:
+                print(f"[AdaptiveDeleter] Error fetching history chunk: {e}")
+                break
+
+        print(f"[AdaptiveDeleter] Purge completed. Deleted {deleted_count} messages.")
+        return deleted_count
+
+def register_default_commands(engine: CommandEngine) -> None:
+    """
+    Registers the core command suite: .delete, .restart, and .status.
+    """
+
+    @engine.command(
+        name="delete",
+        aliases=["del", "purge"],
+        description="Deletes own messages using SOTA rate-limiting congestion control.",
+        usage="<channelID> [messageID | 'all']"
+    )
+    async def cmd_delete(ctx: CommandContext, *args: str) -> None:
+        # Delete command trigger message first
+        await ctx.delete_trigger()
+
+        if not args:
+            await ctx.reply("⚠️ **Usage**: `.delete <channelID> [messageID | 'all']`")
+            return
+
+        channel_arg = args[0].strip()
+        if not channel_arg.isdigit():
+            await ctx.reply("⚠️ **Error**: `channelID` must be a valid integer ID.")
+            return
+
+        channel_id = int(channel_arg)
+        channel = ctx.client.get_channel(channel_id)
+        if channel is None:
+            try:
+                channel = await ctx.client.fetch_channel(channel_id)
+            except Exception as e:
+                await ctx.reply(f"⚠️ **Error**: Failed to resolve channel `{channel_id}`: {e}")
+                return
+
+        target_opt = args[1].lower().strip() if len(args) > 1 else "all"
+
+        deleter = AdaptiveDeleter(ctx.client)
+
+        if target_opt == "all":
+            await deleter.purge_channel_messages(channel)
+        elif target_opt.isdigit():
+            msg_id = int(target_opt)
+            await deleter.delete_single_message(channel, msg_id)
+        else:
+            await ctx.reply(f"⚠️ **Error**: Unknown delete target `{target_opt}`. Use a message ID or `'all'`.")
+
+    @engine.command(
+        name="restart",
+        aliases=["reboot", "reload"],
+        description="Gracefully restarts the bot, sends loading emoji, and diffs updates upon reboot.",
+        usage=""
+    )
+    async def cmd_restart(ctx: CommandContext, *args: str) -> None:
+        await ctx.delete_trigger()
+        await LifecycleManager.initiate_restart(ctx.client, ctx.channel)
+
+    @engine.command(
+        name="status",
+        aliases=["presence", "setstatus"],
+        description="Updates bot presence status and optional custom activity.",
+        usage="<online|idle|dnd|invisible|offline> [optional activity text]"
+    )
+    async def cmd_status(ctx: CommandContext, *args: str) -> None:
+        await ctx.delete_trigger()
+
+        if not args:
+            await ctx.reply("⚠️ **Usage**: `.status <online|idle|dnd|invisible|offline> [activity text]`")
+            return
+
+        status_input = args[0].lower().strip()
+        status_map = {
+            "online": discord.Status.online,
+            "idle": discord.Status.idle,
+            "dnd": discord.Status.dnd,
+            "do_not_disturb": discord.Status.dnd,
+            "invisible": discord.Status.invisible,
+            "offline": discord.Status.offline
+        }
+
+        if status_input not in status_map:
+            valid_statuses = ", ".join(f"`{s}`" for s in ["online", "idle", "dnd", "invisible", "offline"])
+            await ctx.reply(f"⚠️ **Invalid status** `{status_input}`. Choose from: {valid_statuses}")
+            return
+
+        target_status = status_map[status_input]
+        activity_text = " ".join(args[1:]).strip() if len(args) > 1 else None
+
+        activity = None
+        if activity_text:
+            # Check for CustomActivity if available in discord.py-self, fallback to Game
+            if hasattr(discord, "CustomActivity"):
+                activity = discord.CustomActivity(name=activity_text)
+            else:
+                activity = discord.Game(name=activity_text)
+
+        try:
+            await ctx.client.change_presence(status=target_status, activity=activity)
+            print(f"[CommandEngine] Status updated to {target_status} (activity: {activity_text})")
+        except Exception as e:
+            print(f"[CommandEngine] Failed to update presence: {e}")
+            await ctx.reply(f"⚠️ **Error**: Failed to update status: {e}")

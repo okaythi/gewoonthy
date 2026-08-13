@@ -1,9 +1,14 @@
 import discord
 import os
+import time
+import asyncio
+from threading import Thread
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from threading import Thread
+
+from commands import CommandEngine, register_default_commands
+from lifecycle import LifecycleManager
 
 load_dotenv()
 
@@ -14,9 +19,6 @@ CORS(app)
 @app.route('/')
 def home():
     return "Bot is alive!"
-
-import time
-import asyncio
 
 profile_cache = {}
 
@@ -183,15 +185,27 @@ def run_server():
 
 def keep_alive():
     t = Thread(target=run_server)
+    t.daemon = True
     t.start()
 
-# Discord Bot Setup
+# Discord Self-Bot Setup
 class MyClient(discord.Client):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.command_engine = CommandEngine(self, prefix=".")
+
     async def on_ready(self):
         print(f'Logged in as {self.user}')
         print(f'Latency: {round(self.latency * 1000)}ms')
+        # Check and handle post-restart notification and changelog
+        await LifecycleManager.handle_post_restart(self)
+
+    async def on_message(self, message: discord.Message):
+        # Process self commands starting with '.'
+        await self.command_engine.process_message(message)
 
 client = MyClient()
+register_default_commands(client.command_engine)
 
 if __name__ == '__main__':
     # Start the web server
