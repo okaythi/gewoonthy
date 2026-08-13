@@ -351,7 +351,6 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         if len(args) > 1:
             possible_emoji = args[-1]
-            # Check if possible_emoji is a valid emoji format
             parsed = parse_emoji_input(ctx.client, possible_emoji)
             if (
                 isinstance(parsed, (discord.Emoji, discord.PartialEmoji))
@@ -392,7 +391,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
     async def cmd_reaction(ctx: CommandContext, *args: str) -> None:
         if not args:
             await ctx.react_fail()
-            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji> [burst]` or `.reaction status`")
+            await ctx.reply("⚠️ **Usage**: `.reaction <user_id|mention|username> <emoji> [burst]` or `.reaction status` or `.reaction remove <user>`")
             return
 
         subcmd = args[0].lower().strip()
@@ -409,24 +408,31 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
                 await ctx.reply(summary)
             return
 
-        # Handle: .reaction remove <user>
-        if subcmd in ("remove", "delete", "clear"):
+        # Handle: .reaction remove <user> OR .reaction delete <user> OR .reaction clear <user>
+        if subcmd in ("remove", "delete", "clear", "off", "stop"):
             if len(args) < 2:
                 await ctx.react_fail()
                 await ctx.reply("⚠️ **Usage**: `.reaction remove <user_id|mention|username>`")
                 return
-            user_target = await resolve_user(ctx.client, args[1])
-            if not user_target:
-                await ctx.react_fail()
-                await ctx.reply(f"⚠️ **Error**: Could not resolve user `{args[1]}`.")
-                return
-            uid, uname = user_target
-            removed = reaction_manager.remove_target(uid)
-            await ctx.react_success()
+
+            target_user_input = args[1]
+            
+            # First try direct removal in ReactionManager targets
+            removed, uid, uname = reaction_manager.remove_target(target_user_input)
+
+            # If not found directly, attempt gateway resolve
+            if not removed:
+                user_target = await resolve_user(ctx.client, target_user_input)
+                if user_target:
+                    r_uid, r_uname = user_target
+                    removed, uid, uname = reaction_manager.remove_target(r_uid)
+
             if removed:
-                await ctx.reply(f"🗑️ Removed auto-reaction for **{uname}** (`{uid}`).")
+                await ctx.react_success()
+                await ctx.reply(f"🗑️ **Auto-Reaction Disabled**: Successfully removed auto-reaction for **{uname}** (`{uid}`).")
             else:
-                await ctx.reply(f"ℹ️ No active auto-reaction configured for **{uname}** (`{uid}`).")
+                await ctx.react_fail()
+                await ctx.reply(f"⚠️ No active auto-reaction configured for **{target_user_input}**.")
             return
 
         # Handle: .reaction <user_id> <emoji> [burst]
@@ -437,6 +443,24 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         user_input = args[0]
         emoji_input = args[1]
+
+        # Handle: .reaction <user_id> remove / off / none
+        if emoji_input.lower() in ("remove", "delete", "off", "none", "stop", "clear"):
+            removed, uid, uname = reaction_manager.remove_target(user_input)
+            if not removed:
+                user_target = await resolve_user(ctx.client, user_input)
+                if user_target:
+                    r_uid, _ = user_target
+                    removed, uid, uname = reaction_manager.remove_target(r_uid)
+
+            if removed:
+                await ctx.react_success()
+                await ctx.reply(f"🗑️ **Auto-Reaction Disabled**: Successfully removed auto-reaction for **{uname}** (`{uid}`).")
+            else:
+                await ctx.react_fail()
+                await ctx.reply(f"⚠️ No active auto-reaction configured for **{user_input}**.")
+            return
+
         is_burst = False
         if len(args) > 2:
             is_burst = args[2].lower().strip() in ("burst", "super", "true", "1", "yes")
@@ -454,7 +478,7 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
             await ctx.reply(f"⚠️ **Error**: Invalid emoji `{emoji_input}`.")
             return
 
-        reaction_manager.set_target(uid, uname, emoji_input, burst=is_burst)
+        reaction_manager.set_target(int(uid), uname, emoji_input, burst=is_burst)
         await ctx.react_success()
         burst_desc = " with **Super/Burst** mode" if is_burst else ""
         await ctx.reply(
@@ -492,13 +516,6 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         artist_query = args[0].strip()
         album_query = " ".join(args[1:]).strip()
-
-        # Intelligent Conflict Detection: Check if already playing
-        if spotify_player.is_playing():
-            current = spotify_player.get_current_info()
-            curr_album = current.get("album") if current else "an album"
-            curr_artist = current.get("artist") if current else ""
-            print(f"[CommandEngine] Spotify conflict: already playing {curr_album} by {curr_artist}")
 
         # Search for album metadata
         try:

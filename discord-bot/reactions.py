@@ -166,13 +166,39 @@ class ReactionManager:
         self.user_names[uid_str] = username
         self.save_data()
 
-    def remove_target(self, user_id: int) -> bool:
-        uid_str = str(user_id)
-        if uid_str in self.targets:
-            del self.targets[uid_str]
+    def remove_target(self, user_identifier: Union[int, str]) -> Tuple[bool, Optional[str], Optional[str]]:
+        """
+        Ultra-resilient target removal: checks direct ID, mention, or username across configured targets.
+        Returns (success, user_id_str, username).
+        """
+        raw_str = str(user_identifier).strip()
+
+        # 1. Mention check
+        mention_match = re.match(r"^<@!?(\d+)>$", raw_str)
+        if mention_match:
+            raw_str = mention_match.group(1)
+
+        # 2. Direct ID check in targets
+        if raw_str in self.targets:
+            uname = self.targets[raw_str].get("username", self.user_names.get(raw_str, f"User_{raw_str}"))
+            del self.targets[raw_str]
             self.save_data()
-            return True
-        return False
+            print(f"[ReactionManager] Removed target ID {raw_str} ({uname})")
+            return True, raw_str, uname
+
+        # 3. Case-insensitive username match in targets or user_names
+        lower_term = raw_str.lower()
+        for uid_str, cfg in list(self.targets.items()):
+            target_uname = cfg.get("username", "").lower()
+            stored_uname = self.user_names.get(uid_str, "").lower()
+            if lower_term in (target_uname, stored_uname):
+                uname = cfg.get("username", self.user_names.get(uid_str, f"User_{uid_str}"))
+                del self.targets[uid_str]
+                self.save_data()
+                print(f"[ReactionManager] Removed target by username '{raw_str}' -> ID {uid_str} ({uname})")
+                return True, uid_str, uname
+
+        return False, None, None
 
     def record_reaction(self, user_id: int, username: Optional[str] = None) -> None:
         uid_str = str(user_id)
@@ -236,6 +262,10 @@ class ReactionManager:
 
         # Wait exactly 1.03s as specified
         await asyncio.sleep(1.03)
+
+        # Re-check targets after sleep to ensure target wasn't removed during the delay
+        if uid_str not in self.targets:
+            return
 
         parsed_emoji = parse_emoji_input(self.client, emoji_raw)
         try:
