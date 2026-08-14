@@ -39,7 +39,7 @@ class AdaptiveDeleter:
         except discord.HTTPException as e:
             if e.status == 429:
                 retry_after = getattr(e, "retry_after", 1.0)
-                await asyncio.sleep(retry_after + 0.05)
+                await asyncio.sleep(retry_after + 0.1)
                 try:
                     await message.edit(content=content)
                 except Exception:
@@ -55,7 +55,7 @@ class AdaptiveDeleter:
         except discord.HTTPException as e:
             if e.status == 429:
                 retry_after = getattr(e, "retry_after", 1.0)
-                await asyncio.sleep(retry_after + 0.05)
+                await asyncio.sleep(retry_after + 0.1)
                 try:
                     await message.delete()
                 except Exception:
@@ -65,29 +65,25 @@ class AdaptiveDeleter:
 
     async def _update_progress(
         self,
-        msg1: Optional[discord.Message],
         msg2: Optional[discord.Message],
-        target_name: str,
         deleted_count: int,
         total_discovered: int,
+        custom_cooldown: Optional[float] = None,
         force: bool = False
     ) -> None:
+        if not msg2:
+            return
         now = time.time()
-        if not force and (now - self.last_edit_timestamp < 1.75):
+        if not force and (now - self.last_edit_timestamp < 3.5):
             return
         self.last_edit_timestamp = now
 
-        if msg2:
-            if self.current_delay > (self.min_delay * 1.5):
-                text2 = f"deleting (current cooldown: {self.current_delay:.2f}s) [{deleted_count} out of {total_discovered}]"
-            else:
-                text2 = f"deleting... [{deleted_count} out of {total_discovered}]"
-            await self._safe_edit(msg2, text2)
-
-        if msg1:
-            bar = make_progress_bar(deleted_count, total_discovered)
-            text1 = f"Started deleting messages with `{target_name}`...\n{bar}"
-            await self._safe_edit(msg1, text1)
+        cooldown = custom_cooldown if custom_cooldown is not None else (self.current_delay if self.current_delay > (self.min_delay * 1.5) else None)
+        if cooldown is not None and cooldown > 0.1:
+            text = f"deleting (current cooldown: {cooldown:.2f}s) [{deleted_count} out of {total_discovered}]"
+        else:
+            text = f"deleting... [{deleted_count} out of {total_discovered}]"
+        await self._safe_edit(msg2, text)
 
     async def _finalize(
         self,
@@ -195,9 +191,6 @@ class AdaptiveDeleter:
                 self_messages = [m for m in batch if m.author.id == self.client.user.id and m.id not in protected_ids]
                 total_discovered += len(self_messages)
 
-                if status_msg2 and deleted_count == 0 and total_discovered > 0:
-                    await self._safe_edit(status_msg2, f"deleting... [0 out of {total_discovered}]")
-
                 for msg in self_messages:
                     if target_message_id and msg.id != target_message_id:
                         continue
@@ -207,7 +200,7 @@ class AdaptiveDeleter:
                             await msg.delete()
                             deleted_count += 1
                             self.current_delay = max(self.min_delay, self.current_delay * 0.95)
-                            await self._update_progress(status_msg1, status_msg2, target_name, deleted_count, total_discovered)
+                            await self._update_progress(status_msg2, deleted_count, total_discovered)
                             await asyncio.sleep(self.current_delay + random.uniform(0.01, 0.03))
                             break
                         except discord.NotFound:
@@ -219,8 +212,7 @@ class AdaptiveDeleter:
                             if e.status == 429:
                                 retry_after = getattr(e, "retry_after", 1.0)
                                 self.current_delay = min(self.max_delay, max(0.5, self.current_delay * 1.6))
-                                if status_msg2:
-                                    await self._safe_edit(status_msg2, f"deleting (current cooldown: {retry_after:.2f}s) [{deleted_count} out of {total_discovered}]")
+                                await self._update_progress(status_msg2, deleted_count, total_discovered, custom_cooldown=retry_after)
                                 await asyncio.sleep(retry_after + 0.05)
                                 continue
                             break
