@@ -202,10 +202,12 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
         import os
         try:
             cwd = os.path.join(os.path.dirname(__file__), "..", "..")
-            res_info = subprocess.run(["git", "show", "-s", "--format=Commit: %h | Date: %cd%nMessage: %s", "HEAD"], cwd=cwd, capture_output=True, text=True, timeout=5)
-            res_stat = subprocess.run(["git", "diff", "--stat", "HEAD~1", "HEAD"], cwd=cwd, capture_output=True, text=True, timeout=5)
-            if res_info.returncode == 0 and res_stat.returncode == 0:
-                summary = res_info.stdout.strip() + "\n\n" + res_stat.stdout.strip()
+            res = subprocess.run(
+                ["git", "--no-pager", "show", "--stat", "--format=Commit: %h | Date: %cd%nMessage: %s", "HEAD"], 
+                cwd=cwd, capture_output=True, text=True, timeout=10
+            )
+            if res.returncode == 0:
+                summary = res.stdout.strip()
                 if len(summary) > 1900:
                     summary = summary[:1900] + "\n... (truncated)"
                 await ctx.reply(f"```diff\n{summary}\n```")
