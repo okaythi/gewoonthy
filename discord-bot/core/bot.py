@@ -5,11 +5,13 @@ from core.command_engine import CommandEngine
 from core.lifecycle import LifecycleManager
 
 class MyClient(discord.Client):
-    __slots__ = ("command_engine", "reaction_manager", "start_time", "ready_handled")
+    __slots__ = ("command_engine", "reaction_manager", "dashboard_bridge", "start_time", "ready_handled")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        from core.dashboard_bridge import DashboardBridge
         self.command_engine = CommandEngine(self, prefix=".")
+        self.dashboard_bridge = DashboardBridge(self)
         self.reaction_manager = None
         self.start_time = time.time()
         self.ready_handled = False
@@ -18,6 +20,8 @@ class MyClient(discord.Client):
         if not self.ready_handled:
             self.ready_handled = True
             await LifecycleManager.handle_post_restart(self)
+        
+        asyncio.create_task(self.dashboard_bridge.push_state())
 
     async def on_message(self, message: discord.Message) -> None:
         if self.reaction_manager:
