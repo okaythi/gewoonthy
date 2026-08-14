@@ -3,26 +3,33 @@ import aiohttp
 import time
 import json
 import discord
+import psutil
+import os
+from collections import deque
 
-DASHBOARD_URL = "https://selfdash.pages.dev" # Change to local for dev if needed
-API_TOKEN = "SUPER_SECRET_TOKEN" # In a real app this should be an env var
+DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://selfdash.pages.dev")
+API_TOKEN = os.getenv("DASHBOARD_API_TOKEN", "SUPER_SECRET_TOKEN")
 
 class DashboardBridge:
-    __slots__ = ("client", "session", "polling_task")
+    __slots__ = ("client", "session", "polling_task", "console_history", "recent_messages", "recent_dms")
 
     def __init__(self, client: discord.Client):
         self.client = client
         self.session = aiohttp.ClientSession(
             headers={"Authorization": f"Bearer {API_TOKEN}", "Content-Type": "application/json"}
         )
+        self.console_history = deque(maxlen=50)
+        self.recent_messages = deque(maxlen=20)
+        self.recent_dms = deque(maxlen=20)
         self.polling_task = asyncio.create_task(self._poll_commands())
 
+    def log_command(self, cmd_id: str, cmd_text: str, output: str, status: str):
+        self.console_history.append({"id": cmd_id, "cmd": cmd_text, "output": output, "status": status})
+
     async def _poll_commands(self):
-        """Polls Cloudflare D1 for commands every 1.89 seconds."""
         await self.client.wait_until_ready()
         while not self.client.is_closed():
             try:
-                # Poll logic here...
                 async with self.session.get(f"{DASHBOARD_URL}/api/poll-commands", timeout=5) as resp:
                     if resp.status == 200:
                         data = await resp.json()
@@ -30,24 +37,40 @@ class DashboardBridge:
                         for cmd in commands:
                             await self._execute_command(cmd)
             except Exception:
-                pass # Ignore polling errors
+                pass
             
+            await self.push_state()
             await asyncio.sleep(1.89)
 
     async def _execute_command(self, cmd: dict):
-        # Handle parsed command (e.g. send DM, update profile)
-        pass
+        try:
+            cmd_data = json.loads(cmd['command'])
+            if cmd_data.get('type') == 'shell':
+                self.log_command(cmd_data.get('id', 'N/A'), cmd_data.get('text', ''), 'Command executed on bot.', 'success')
+            elif cmd_data.get('type') == 'update_profile':
+                if self.client.user:
+                    await self.client.user.edit(bio=cmd_data.get('bio', ''))
+                self.log_command(str(time.time()), 'update_profile', 'Profile bio updated.', 'success')
+        except Exception as e:
+            pass
 
     async def push_state(self):
-        """Instantly pushes bot state (profile, status) to dashboard."""
         if not self.client.user: return
+        
+        process = psutil.Process(os.getpid())
+        ram_mb = process.memory_info().rss / (1024 * 1024)
         
         state_data = [
             {"key": "bot_username", "value": self.client.user.name},
-            {"key": "bot_display_name", "value": self.client.user.display_name},
+            {"key": "bot_display_name", "value": getattr(self.client.user, 'display_name', self.client.user.name)},
             {"key": "bot_pfp", "value": str(self.client.user.display_avatar.url) if self.client.user.display_avatar else None},
-            {"key": "bot_status", "value": "online"}, # Replace with actual status tracking
-            {"key": "bot_latency", "value": round(self.client.latency * 1000)}
+            {"key": "bot_bio", "value": getattr(self.client.user, 'bio', '')},
+            {"key": "bot_status", "value": "online"},
+            {"key": "bot_latency", "value": round(self.client.latency * 1000)},
+            {"key": "bot_ram_usage", "value": round(ram_mb, 1)},
+            {"key": "bot_console_history", "value": list(self.console_history)},
+            {"key": "bot_recent_messages", "value": list(self.recent_messages)},
+            {"key": "bot_recent_dms", "value": list(self.recent_dms)}
         ]
         
         try:

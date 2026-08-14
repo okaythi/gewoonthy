@@ -2,3 +2,5 @@ discord.py-self
 flask
 flask-cors
 python-dotenv
+psutil
+aiohttp
