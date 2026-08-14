@@ -192,3 +192,40 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
 
         total_duration = sum(t.get("duration", 0) for t in tracks)
         await ctx.reply(f"🎵 **Now Playing on Spotify**:\n💿 **{album_data.get('album')}** by **{album_data.get('artist')}**\n📑 **{len(tracks)} tracks** ({total_duration // 60}m {total_duration % 60}s total)")
+
+    @engine.command("git", ["gitdiff", "changes"], usage="diff")
+    async def cmd_git(ctx: CommandContext, *args: str) -> None:
+        if not args or args[0].lower() != "diff":
+            await ctx.react_fail()
+            return
+        import subprocess
+        import os
+        try:
+            cwd = os.path.join(os.path.dirname(__file__), "..", "..")
+            res_info = subprocess.run(["git", "show", "-s", "--format=Commit: %h | Date: %cd%nMessage: %s", "HEAD"], cwd=cwd, capture_output=True, text=True, timeout=5)
+            res_stat = subprocess.run(["git", "diff", "--stat", "HEAD~1", "HEAD"], cwd=cwd, capture_output=True, text=True, timeout=5)
+            if res_info.returncode == 0 and res_stat.returncode == 0:
+                summary = res_info.stdout.strip() + "\n\n" + res_stat.stdout.strip()
+                if len(summary) > 1900:
+                    summary = summary[:1900] + "\n... (truncated)"
+                await ctx.reply(f"```diff\n{summary}\n```")
+                await ctx.react_success()
+            else:
+                await ctx.react_fail()
+        except Exception:
+            await ctx.react_fail()
+
+    @engine.command("uptime", usage="")
+    async def cmd_uptime(ctx: CommandContext, *args: str) -> None:
+        import time
+        uptime_seconds = int(time.time() - getattr(ctx.client, "start_time", time.time()))
+        m, s = divmod(uptime_seconds, 60)
+        h, m = divmod(m, 60)
+        d, h = divmod(h, 24)
+        parts = []
+        if d > 0: parts.append(f"{d}d")
+        if h > 0: parts.append(f"{h}h")
+        if m > 0: parts.append(f"{m}m")
+        parts.append(f"{s}s")
+        await ctx.reply(f"⏱️ **Uptime**: {' '.join(parts)}")
+        await ctx.react_success()
