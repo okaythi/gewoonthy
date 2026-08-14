@@ -310,8 +310,28 @@ class SpotifyPlayer:
         tracks: List[Dict[str, Any]] = album_data.get("tracks", [])
         album_name = album_data.get("album", "Unknown Album")
         artist_name = album_data.get("artist", "Unknown Artist")
-        spotify_image = album_data.get("spotify_image") or album_data.get("cover_url")
         album_id = album_data.get("album_id")
+
+        # Convert spotify image hash to a Discord-proxied mp:external/ path
+        # The spotify: prefix only works for the real Spotify RPC integration,
+        # NOT for self-bot gateway presences. We must proxy through Discord's CDN.
+        SPOTIFY_APP_ID = 159714140401418240
+        cover_image = None
+        image_hash = album_data.get("image_hash")
+        if image_hash:
+            https_url = f"https://i.scdn.co/image/{image_hash}"
+            try:
+                data = await client.http.create_app_external_assets(SPOTIFY_APP_ID, [https_url])
+                if data and len(data) > 0:
+                    cover_image = f"mp:{data[0]['external_asset_path']}"
+                    print(f"[SpotifyPlayer] Proxied album art: {cover_image}")
+            except Exception as e:
+                print(f"[SpotifyPlayer] External asset proxy failed: {e}")
+        
+        if not cover_image:
+            # Fallback to spotify:hash (unlikely to render, but better than nothing)
+            cover_image = album_data.get("spotify_image") or album_data.get("cover_url")
+            print(f"[SpotifyPlayer] Falling back to: {cover_image}")
 
         try:
             for idx, track in enumerate(tracks):
@@ -330,17 +350,14 @@ class SpotifyPlayer:
                     album=album_name,
                     album_id=album_id,
                     track_id=track_id,
-                    album_cover_url=spotify_image,
+                    album_cover_url=cover_image,
                     start_time=start_time,
                     duration=duration,
                     party_owner_id=client.user.id if client.user else 0
                 )
-                
-                # IMPORTANT: Inject official Spotify application ID so Discord clients render the spotify: prefix image hashes
-                spotify_activity.application_id = "159714140401418240"
 
                 await client.change_presence(activities=[spotify_activity])
-                print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s, image: {spotify_image})")
+                print(f"[SpotifyPlayer] Playing track {idx+1}/{len(tracks)}: '{title}' ({duration_sec}s, image: {cover_image})")
 
                 # Sleep duration of the track
                 await asyncio.sleep(duration_sec)
