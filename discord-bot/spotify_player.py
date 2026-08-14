@@ -75,17 +75,41 @@ def search_spotify_native(artist: str, album_query: str) -> Optional[Dict[str, A
         artist_display = ", ".join(artists) if artists else artist
 
         # Extract real Spotify image hash
+        # Discord requires the 300x300 variant (prefix ab67616d0000b273)
+        # The embed page may return multiple sizes:
+        #   ab67616d00001e02 = 64x64 (thumbnail)
+        #   ab67616d00004851 = 160x160
+        #   ab67616d0000b273 = 300x300 (what Discord needs)
+        SPOTIFY_300PX_PREFIX = "ab67616d0000b273"
         image_hash = None
         visual_images = entity.get("visualIdentity", {}).get("image", [])
         cover_images = entity.get("coverArt", {}).get("sources", [])
         all_images = visual_images + cover_images
 
+        # First pass: look specifically for the 300x300 variant
         for img in all_images:
             url = img.get("url", "")
             img_match = re.search(r"image/([a-zA-Z0-9]+)", url)
             if img_match:
-                image_hash = img_match.group(1)
-                break
+                h = img_match.group(1)
+                if h.startswith(SPOTIFY_300PX_PREFIX):
+                    image_hash = h
+                    break
+
+        # Second pass: grab any hash and swap the prefix to 300px
+        if not image_hash:
+            for img in all_images:
+                url = img.get("url", "")
+                img_match = re.search(r"image/([a-zA-Z0-9]+)", url)
+                if img_match:
+                    h = img_match.group(1)
+                    # All Spotify album hashes share the same 24-char unique suffix
+                    # Swap the 16-char size prefix to the 300px one
+                    if len(h) == 40:
+                        image_hash = SPOTIFY_300PX_PREFIX + h[16:]
+                    else:
+                        image_hash = h
+                    break
 
         track_list = entity.get("trackList", [])
         tracks = []
