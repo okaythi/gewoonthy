@@ -122,6 +122,18 @@ class LifecycleManager:
     @staticmethod
     async def handle_post_restart(client: discord.Client) -> None:
         if not os.path.exists(STATE_FILE):
+            target_channel = client.get_channel(RESTART_CHANNEL_ID)
+            if target_channel is None:
+                try:
+                    target_channel = await client.fetch_channel(RESTART_CHANNEL_ID)
+                except Exception:
+                    pass
+
+            if target_channel:
+                try:
+                    await target_channel.send("Restarted. Online again!")
+                except Exception:
+                    pass
             return
 
         try:
