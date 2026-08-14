@@ -7,7 +7,7 @@ import psutil
 import os
 from collections import deque
 
-DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://selfdash.pages.dev")
+DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://self.sudothy.me")
 API_TOKEN = os.getenv("DASHBOARD_API_TOKEN", "SUPER_SECRET_TOKEN")
 
 class DashboardBridge:
@@ -16,7 +16,11 @@ class DashboardBridge:
     def __init__(self, client: discord.Client):
         self.client = client
         self.session = aiohttp.ClientSession(
-            headers={"Authorization": f"Bearer {API_TOKEN}", "Content-Type": "application/json"}
+            headers={
+                "Authorization": f"Bearer {API_TOKEN}", 
+                "Content-Type": "application/json",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            }
         )
         self.console_history = deque(maxlen=50)
         self.recent_messages = deque(maxlen=20)
