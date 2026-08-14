@@ -1,7 +1,7 @@
 import asyncio
 import discord
 from core.command_engine import CommandEngine, CommandContext
-from core.deleter import AdaptiveDeleter
+from core.deleter import AdaptiveDeleter, make_progress_bar
 from core.lifecycle import LifecycleManager
 from features.reactions import ReactionManager
 from utils.resolvers import parse_emoji_input, resolve_user
@@ -33,20 +33,43 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
                 await ctx.react_fail()
                 return
 
+        target_name = "target"
+        if hasattr(channel, "recipient") and channel.recipient:
+            target_name = getattr(channel.recipient, "name", str(channel.id))
+        elif hasattr(channel, "name") and channel.name:
+            target_name = channel.name
+        elif hasattr(channel, "recipients") and channel.recipients:
+            target_name = ", ".join(getattr(r, "name", "") for r in channel.recipients if getattr(r, "name", None)) or str(channel.id)
+        else:
+            target_name = str(channel_id)
+
         if ctx.channel.id == channel_id:
             await ctx.delete_trigger()
         else:
             await ctx.react_success()
 
+        init_bar = make_progress_bar(0, 1)
+        msg1 = await ctx.reply(f"Started deleting messages with `{target_name}`...\n{init_bar}")
+        msg2 = await ctx.reply("fetching first messages...")
+
         target_opt = args[1].lower().strip() if len(args) > 1 else "all"
         deleter = AdaptiveDeleter(ctx.client)
 
         if target_opt == "all":
-            await deleter.purge_channel_messages(channel)
+            await deleter.purge_channel_messages(channel, status_msg1=msg1, status_msg2=msg2, target_name=target_name)
         elif target_opt.isdigit():
-            await deleter.delete_single_message(channel, int(target_opt))
+            await deleter.delete_single_message(channel, int(target_opt), status_msg1=msg1, status_msg2=msg2, target_name=target_name)
         else:
-            await ctx.reply(f"⚠️ **Error**: Unknown delete target `{target_opt}`.")
+            if msg2:
+                try:
+                    await msg2.delete()
+                except Exception:
+                    pass
+            if msg1:
+                try:
+                    await msg1.edit(content=f"⚠️ **Error**: Unknown delete target `{target_opt}`.")
+                except Exception:
+                    pass
 
     @engine.command("restart", ["reboot", "reload"])
     async def cmd_restart(ctx: CommandContext, *args: str) -> None:
