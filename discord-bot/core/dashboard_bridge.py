@@ -85,6 +85,8 @@ class DashboardBridge:
         
         try:
             async with self.session.post(f"{DASHBOARD_URL}/api/push-state", json=state_data) as resp:
-                pass
-        except Exception:
-            pass
+                if resp.status != 200:
+                    text = await resp.text()
+                    print(f"Push state failed: {resp.status} - {text}")
+        except Exception as e:
+            print(f"Exception in push_state: {e}")
