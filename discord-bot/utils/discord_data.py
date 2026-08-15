@@ -58,6 +58,23 @@ def extract_user_data(user: Any, is_friend: bool, friend_since: Optional[str], p
     badges = list(dict.fromkeys(badges))
     avatar_url = str(user.avatar.url) if user.avatar else str(user.default_avatar.url)
     
+    raw_flags = getattr(user, 'flags', None)
+    flags_val = raw_flags.value if raw_flags else getattr(flags, 'value', 0)
+    
+    status = 'offline'
+    custom_status = None
+    
+    # Try to find presence data if user is in our mutual guilds
+    for guild in getattr(user, '_state', getattr(user, '_client', user)).guilds if hasattr(user, '_state') else []:
+        member = guild.get_member(user.id)
+        if member and hasattr(member, 'status'):
+            status = str(member.status)
+            if member.activities:
+                for activity in member.activities:
+                    if hasattr(activity, 'name') and activity.type and getattr(activity.type, 'value', -1) == 4: # Custom Status
+                        custom_status = getattr(activity, 'state', getattr(activity, 'name', None))
+            break
+
     return {
         "id": str(user.id),
         "user_id": str(user.id),
@@ -66,5 +83,8 @@ def extract_user_data(user: Any, is_friend: bool, friend_since: Optional[str], p
         "avatar_url": avatar_url,
         "is_friend": is_friend,
         "friend_since": friend_since,
-        "badges": badges
+        "badges": badges,
+        "flags": flags_val,
+        "status": status,
+        "custom_status": custom_status
     }
