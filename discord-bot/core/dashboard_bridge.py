@@ -11,7 +11,7 @@ DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://self.sudothy.me")
 API_TOKEN = os.getenv("DASHBOARD_API_TOKEN", "SUPER_SECRET_TOKEN")
 
 class DashboardBridge:
-    __slots__ = ("client", "session", "polling_task", "console_history", "recent_messages", "recent_dms", "last_sent_message", "cached_channel_context", "cached_dm_messages", "bot_status")
+    __slots__ = ("client", "session", "polling_task", "console_history", "recent_messages", "recent_dms", "last_sent_message", "cached_channel_context", "cached_dm_messages", "bot_status", "last_profile_fetch", "cached_profile_theme")
 
     def __init__(self, client: discord.Client):
         self.client = client
@@ -25,6 +25,8 @@ class DashboardBridge:
         self.cached_channel_context = {"channel_name": "No recent messages", "messages": []}
         self.cached_dm_messages = []
         self.bot_status = "online"
+        self.last_profile_fetch = 0
+        self.cached_profile_theme = None
 
     def start(self):
         if self.session is None:
@@ -112,6 +114,9 @@ class DashboardBridge:
                     if 'bio' in cmd_data:
                         edit_kwargs['bio'] = cmd_data['bio']
                         
+                    if 'displayName' in cmd_data:
+                        edit_kwargs['global_name'] = cmd_data['displayName']
+                        
                     primary_hex = str(cmd_data.get('bannerColor', '')).replace('#', '')
                     accent_hex = str(cmd_data.get('accentColor', '')).replace('#', '')
                     
@@ -120,6 +125,7 @@ class DashboardBridge:
                             primary_int = int(primary_hex, 16)
                             accent_int = int(accent_hex, 16)
                             await self.client.http.edit_profile({"theme_colors": [primary_int, accent_int]})
+                            self.cached_profile_theme = [primary_int, accent_int]
                         except Exception as e:
                             self.log_command(str(time.time()), 'update_profile', f'Theme color error: {e}', 'error')
                     
@@ -243,12 +249,36 @@ class DashboardBridge:
             self.log_command(str(time.time()), 'push_state (fetch dms)', f'Failed to fetch DMs: {e}', 'error')
             
             
+        if time.time() - self.last_profile_fetch > 60:
+            try:
+                route = discord.http.Route('GET', f'/users/{self.client.user.id}/profile')
+                data = await self.client.http.request(route)
+                user_data = data.get('user', {})
+                theme_colors = user_data.get('theme_colors')
+                if theme_colors and len(theme_colors) == 2:
+                    self.cached_profile_theme = theme_colors
+                else:
+                    self.cached_profile_theme = None
+                self.last_profile_fetch = time.time()
+            except Exception as e:
+                pass
+
+        banner_color = '#000000'
+        accent_color = '#000000'
+        
+        if self.cached_profile_theme:
+            banner_color = f"#{self.cached_profile_theme[0]:06x}"
+            accent_color = f"#{self.cached_profile_theme[1]:06x}"
+        elif getattr(self.client.user, 'accent_colour', None):
+            banner_color = str(self.client.user.accent_colour)
+
         state_data = [
             {"key": "bot_username", "value": self.client.user.name},
             {"key": "bot_display_name", "value": getattr(self.client.user, 'display_name', self.client.user.name)},
             {"key": "bot_pfp", "value": str(self.client.user.display_avatar.url) if self.client.user.display_avatar else None},
             {"key": "bot_banner", "value": str(self.client.user.banner.url) if getattr(self.client.user, 'banner', None) else None},
-            {"key": "bot_banner_color", "value": str(self.client.user.accent_colour) if getattr(self.client.user, 'accent_colour', None) else '#000000'},
+            {"key": "bot_banner_color", "value": banner_color},
+            {"key": "bot_accent_color", "value": accent_color},
             {"key": "bot_bio", "value": getattr(self.client.user, 'bio', '')},
             {"key": "bot_status", "value": self.bot_status},
             {"key": "bot_latency", "value": round(self.client.latency * 1000)},
