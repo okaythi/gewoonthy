@@ -236,11 +236,12 @@ class DashboardBridge:
                 if target:
                     recent_dms_list.append({
                         "id": str(dm.id),
-                        "name": target.name,
-                        "avatar": str(target.display_avatar.url) if target.display_avatar else "https://cdn.discordapp.com/embed/avatars/0.png"
+                        "name": getattr(target, 'name', 'Unknown User'),
+                        "avatar": str(target.display_avatar.url) if getattr(target, 'display_avatar', None) else "https://cdn.discordapp.com/embed/avatars/0.png"
                     })
-        except Exception:
-            pass
+        except Exception as e:
+            self.log_command(str(time.time()), 'push_state (fetch dms)', f'Failed to fetch DMs: {e}', 'error')
+            
             
         state_data = [
             {"key": "bot_username", "value": self.client.user.name},
