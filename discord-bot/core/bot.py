@@ -21,7 +21,7 @@ class MyClient(discord.Client):
             self.ready_handled = True
             await LifecycleManager.handle_post_restart(self)
         
-        asyncio.create_task(self.dashboard_bridge.push_state())
+        self.dashboard_bridge.start()
 
     async def on_message(self, message: discord.Message) -> None:
         if self.reaction_manager:

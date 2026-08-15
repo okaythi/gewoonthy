@@ -15,17 +15,23 @@ class DashboardBridge:
 
     def __init__(self, client: discord.Client):
         self.client = client
-        self.session = aiohttp.ClientSession(
-            headers={
-                "Authorization": f"Bearer {API_TOKEN}", 
-                "Content-Type": "application/json",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-            }
-        )
+        self.session = None
         self.console_history = deque(maxlen=50)
         self.recent_messages = deque(maxlen=20)
         self.recent_dms = deque(maxlen=20)
-        self.polling_task = asyncio.create_task(self._poll_commands())
+        self.polling_task = None
+
+    def start(self):
+        if self.session is None:
+            self.session = aiohttp.ClientSession(
+                headers={
+                    "Authorization": f"Bearer {API_TOKEN}", 
+                    "Content-Type": "application/json",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+                }
+            )
+        if self.polling_task is None:
+            self.polling_task = asyncio.create_task(self._poll_commands())
 
     def log_command(self, cmd_id: str, cmd_text: str, output: str, status: str):
         self.console_history.append({"id": cmd_id, "cmd": cmd_text, "output": output, "status": status})
