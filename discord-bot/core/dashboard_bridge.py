@@ -93,6 +93,51 @@ class DashboardBridge:
                     except Exception as e:
                         self.log_command(cmd_data.get('id', 'N/A'), command_text, str(e), 'error')
                 
+                elif command_text.startswith('.activity'):
+                    parts = command_text.split()
+                    action = parts[1] if len(parts) > 1 else ""
+                    player = getattr(self.client.command_engine, "activity_player", None)
+                    if player:
+                        try:
+                            if action == "play":
+                                media_type = parts[2]
+                                tmdb_id = int(parts[3])
+                                season = int(parts[4]) if len(parts) > 4 else 1
+                                episode = int(parts[5]) if len(parts) > 5 else 1
+                                media_info = await player.get_media_details(tmdb_id, media_type, season, episode)
+                                if media_info:
+                                    await player.play(media_info)
+                                    self.log_command(cmd_data.get('id', 'N/A'), command_text, f"Playing {media_info.get('title') or media_info.get('show_title')}", 'success')
+                                else:
+                                    self.log_command(cmd_data.get('id', 'N/A'), command_text, "Failed to get media details", 'error')
+                            elif action == "queue":
+                                media_type = parts[2]
+                                tmdb_id = int(parts[3])
+                                season = int(parts[4]) if len(parts) > 4 else 1
+                                episode = int(parts[5]) if len(parts) > 5 else 1
+                                media_info = await player.get_media_details(tmdb_id, media_type, season, episode)
+                                if media_info:
+                                    player.queue.append(media_info)
+                                    self.log_command(cmd_data.get('id', 'N/A'), command_text, f"Queued {media_info.get('title') or media_info.get('show_title')}", 'success')
+                                else:
+                                    self.log_command(cmd_data.get('id', 'N/A'), command_text, "Failed to get media details", 'error')
+                            elif action == "pause":
+                                await player.pause()
+                                self.log_command(cmd_data.get('id', 'N/A'), command_text, "Paused", 'success')
+                            elif action == "resume":
+                                await player.resume()
+                                self.log_command(cmd_data.get('id', 'N/A'), command_text, "Resumed", 'success')
+                            elif action == "stop":
+                                await player.stop()
+                                self.log_command(cmd_data.get('id', 'N/A'), command_text, "Stopped", 'success')
+                            elif action == "seek":
+                                await player.seek(int(parts[2]))
+                                self.log_command(cmd_data.get('id', 'N/A'), command_text, f"Seeked back {parts[2]}s", 'success')
+                        except Exception as e:
+                            self.log_command(cmd_data.get('id', 'N/A'), command_text, f"Activity error: {e}", 'error')
+                    else:
+                        self.log_command(cmd_data.get('id', 'N/A'), command_text, "ActivityPlayer not ready", 'error')
+                
                 else:
                     cmd_to_run = command_text[1:] if command_text.startswith('.') else command_text
                     import subprocess
@@ -225,6 +270,18 @@ class DashboardBridge:
         except Exception as e:
             pass
 
+    def _get_player_state(self):
+        player = getattr(self.client.command_engine, "activity_player", None)
+        if player and player.current_media:
+            return {
+                "media": player.current_media,
+                "playing": player.playing,
+                "start_time": player.start_time,
+                "paused_at": player.paused_at,
+                "duration": player.duration
+            }
+        return None
+
     async def push_state(self):
         if not self.client.user: return
         
@@ -284,6 +341,8 @@ class DashboardBridge:
             {"key": "bot_latency", "value": round(self.client.latency * 1000)},
             {"key": "bot_ram_usage", "value": round(ram_mb, 1)},
             {"key": "bot_console_history", "value": list(self.console_history)},
+            
+            {"key": "bot_activity_player", "value": self._get_player_state()},
             
             {"key": "bot_channel_context", "value": self.cached_channel_context},
             {"key": "bot_recent_dms_list", "value": recent_dms_list},
