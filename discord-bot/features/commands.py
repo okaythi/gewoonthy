@@ -7,10 +7,12 @@ from features.reactions import ReactionManager
 from utils.resolvers import parse_emoji_input, resolve_user
 from utils.spotify_search import fetch_album_metadata, SpotifySearchError
 from features.spotify_player import SpotifyPlayer
+from features.activity_player import ActivityPlayer
 
 def register_default_commands(engine: CommandEngine, reaction_manager: ReactionManager) -> None:
     engine.reaction_manager = reaction_manager
     engine.spotify_player = SpotifyPlayer()
+    engine.activity_player = ActivityPlayer(engine.client)
 
     @engine.command("delete", ["del", "purge"], usage="<channelID> [messageID | 'all']")
     async def cmd_delete(ctx: CommandContext, *args: str) -> None:
@@ -239,6 +241,78 @@ def register_default_commands(engine: CommandEngine, reaction_manager: ReactionM
                 await ctx.react_fail()
         except Exception:
             await ctx.react_fail()
+
+    @engine.command("activity", ["act"], usage="<play|pause|resume|stop|seek|queue> [args]")
+    async def cmd_activity(ctx: CommandContext, *args: str) -> None:
+        if not args:
+            await ctx.react_fail()
+            return
+
+        subcmd = args[0].lower().strip()
+        player = engine.activity_player
+
+        if subcmd == "play":
+            if len(args) < 3:
+                await ctx.react_fail()
+                return
+            media_type = args[1].lower() # "movie" or "tv"
+            tmdb_id = args[2]
+            if not tmdb_id.isdigit():
+                await ctx.react_fail()
+                return
+            
+            season = int(args[3]) if len(args) > 3 and args[3].isdigit() else 1
+            episode = int(args[4]) if len(args) > 4 and args[4].isdigit() else 1
+                
+            media_info = await player.get_media_details(int(tmdb_id), media_type, season, episode)
+            if not media_info:
+                await ctx.react_fail()
+                return
+            await player.play(media_info)
+            await ctx.react_success()
+
+        elif subcmd == "pause":
+            await player.pause()
+            await ctx.react_success()
+
+        elif subcmd == "resume":
+            await player.resume()
+            await ctx.react_success()
+
+        elif subcmd == "seek":
+            if len(args) < 2:
+                await ctx.react_fail()
+                return
+            try:
+                sec = float(args[1])
+                await player.seek(sec)
+                await ctx.react_success()
+            except ValueError:
+                await ctx.react_fail()
+
+        elif subcmd == "stop":
+            await player.stop()
+            await ctx.react_success()
+            
+        elif subcmd == "queue":
+            if len(args) < 3:
+                await ctx.react_fail()
+                return
+            media_type = args[1].lower()
+            tmdb_id = args[2]
+            if not tmdb_id.isdigit():
+                await ctx.react_fail()
+                return
+            
+            season = int(args[3]) if len(args) > 3 and args[3].isdigit() else 1
+            episode = int(args[4]) if len(args) > 4 and args[4].isdigit() else 1
+                
+            media_info = await player.get_media_details(int(tmdb_id), media_type, season, episode)
+            if media_info:
+                player.queue.append(media_info)
+                await ctx.react_success()
+            else:
+                await ctx.react_fail()
 
     @engine.command("uptime", usage="")
     async def cmd_uptime(ctx: CommandContext, *args: str) -> None:

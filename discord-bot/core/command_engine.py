@@ -53,7 +53,7 @@ class Command:
         return await self.callback(ctx, *ctx.args)
 
 class CommandEngine:
-    __slots__ = ("client", "prefix", "commands", "reaction_manager", "spotify_player")
+    __slots__ = ("client", "prefix", "commands", "reaction_manager", "spotify_player", "activity_player")
 
     def __init__(self, client: discord.Client, prefix: str = ".") -> None:
         self.client = client
@@ -61,6 +61,7 @@ class CommandEngine:
         self.commands: Dict[str, Command] = {}
         self.reaction_manager: Any = None
         self.spotify_player: Any = None
+        self.activity_player: Any = None
 
     def command(self, name: str, aliases: Optional[List[str]] = None, description: str = "", usage: str = "") -> Callable[[Callable[..., Coroutine[Any, Any, Any]]], Callable[..., Coroutine[Any, Any, Any]]]:
         def decorator(func: Callable[..., Coroutine[Any, Any, Any]]) -> Callable[..., Coroutine[Any, Any, Any]]:
