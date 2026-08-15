@@ -7,7 +7,7 @@ import psutil
 import os
 from collections import deque
 
-DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://self.sudothy.me")
+DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://selfdash.pages.dev")
 API_TOKEN = os.getenv("DASHBOARD_API_TOKEN", "SUPER_SECRET_TOKEN")
 
 class DashboardBridge:
