@@ -20,6 +20,11 @@ class DashboardBridge:
         self.recent_messages = deque(maxlen=20)
         self.recent_dms = deque(maxlen=20)
         self.polling_task = None
+        
+        self.last_sent_message = None
+        self.cached_channel_context = {"channel_name": "No recent messages", "messages": []}
+        self.cached_dm_messages = []
+        self.bot_status = "online"
 
     def start(self):
         if self.session is None:
@@ -107,13 +112,22 @@ class DashboardBridge:
                     if 'bio' in cmd_data:
                         edit_kwargs['bio'] = cmd_data['bio']
                         
-                    if 'bannerColor' in cmd_data:
-                        hex_str = str(cmd_data['bannerColor']).replace('#', '')
-                        if hex_str:
-                            try:
-                                edit_kwargs['accent_colour'] = discord.Colour(int(hex_str, 16))
-                            except ValueError:
-                                pass
+                    primary_hex = str(cmd_data.get('bannerColor', '')).replace('#', '')
+                    accent_hex = str(cmd_data.get('accentColor', '')).replace('#', '')
+                    
+                    if primary_hex and accent_hex:
+                        try:
+                            primary_int = int(primary_hex, 16)
+                            accent_int = int(accent_hex, 16)
+                            await self.client.http.edit_profile({"theme_colors": [primary_int, accent_int]})
+                        except Exception as e:
+                            self.log_command(str(time.time()), 'update_profile', f'Theme color error: {e}', 'error')
+                    
+                    status_str = cmd_data.get('status')
+                    if status_str:
+                        status_enum = getattr(discord.Status, status_str, discord.Status.online)
+                        await self.client.change_presence(status=status_enum)
+                        self.bot_status = status_str
                                 
                     avatar_url = cmd_data.get('avatarUrl')
                     if avatar_url == '':
@@ -145,6 +159,63 @@ class DashboardBridge:
                             self.log_command(str(time.time()), 'update_profile', f'Discord API Error: {e}', 'error')
                 else:
                     self.log_command(str(time.time()), 'update_profile', 'Client user not ready.', 'error')
+                    
+            elif cmd_type == 'fetch_channel_context':
+                msg = getattr(self, 'last_sent_message', None)
+                if msg and msg.channel:
+                    try:
+                        before = [m async for m in msg.channel.history(limit=18, before=msg)]
+                        after = [m async for m in msg.channel.history(limit=11, after=msg)]
+                        all_msgs = list(reversed(before)) + [msg] + after
+                        
+                        formatted = []
+                        for m in all_msgs:
+                            formatted.append({
+                                "id": str(m.id),
+                                "author": m.author.name,
+                                "color": str(m.author.color) if hasattr(m.author, 'color') else '#ffffff',
+                                "avatar": str(m.author.display_avatar.url) if m.author.display_avatar else "https://cdn.discordapp.com/embed/avatars/0.png",
+                                "content": m.content,
+                                "time": m.created_at.strftime('%H:%M'),
+                                "isBot": m.author.id == self.client.user.id
+                            })
+                        
+                        self.cached_channel_context = {
+                            "channel_name": getattr(msg.channel, 'name', 'Unknown'),
+                            "messages": formatted
+                        }
+                    except Exception as e:
+                        pass
+                        
+            elif cmd_type == 'fetch_dm_messages':
+                channel_id = int(cmd_data.get('channel_id', 0))
+                channel = self.client.get_channel(channel_id)
+                if channel:
+                    try:
+                        msgs = [m async for m in channel.history(limit=22)]
+                        formatted = []
+                        for m in reversed(msgs):
+                            formatted.append({
+                                "id": str(m.id),
+                                "author": m.author.name,
+                                "avatar": str(m.author.display_avatar.url) if m.author.display_avatar else "https://cdn.discordapp.com/embed/avatars/0.png",
+                                "content": m.content,
+                                "time": m.created_at.strftime('%H:%M'),
+                                "isBot": m.author.id == self.client.user.id
+                            })
+                        self.cached_dm_messages = formatted
+                    except Exception:
+                        pass
+                        
+            elif cmd_type == 'send_dm_message':
+                channel_id = int(cmd_data.get('channel_id', 0))
+                content = cmd_data.get('content', '')
+                channel = self.client.get_channel(channel_id)
+                if channel and content:
+                    await channel.send(content)
+                    # Automatically fetch messages again to update view
+                    cmd['command'] = json.dumps({'type': 'fetch_dm_messages', 'channel_id': str(channel_id)})
+                    await self._execute_command(cmd)
         except Exception as e:
             pass
 
@@ -154,6 +225,23 @@ class DashboardBridge:
         process = psutil.Process(os.getpid())
         ram_mb = process.memory_info().rss / (1024 * 1024)
         
+        # fetch recent DMs
+        recent_dms_list = []
+        try:
+            sorted_dms = sorted(self.client.private_channels, key=lambda c: getattr(c, 'last_message_id', 0) or 0, reverse=True)[:6]
+            for dm in sorted_dms:
+                target = getattr(dm, 'recipient', None)
+                if not target and hasattr(dm, 'recipients') and dm.recipients:
+                    target = dm.recipients[0]
+                if target:
+                    recent_dms_list.append({
+                        "id": str(dm.id),
+                        "name": target.name,
+                        "avatar": str(target.display_avatar.url) if target.display_avatar else "https://cdn.discordapp.com/embed/avatars/0.png"
+                    })
+        except Exception:
+            pass
+            
         state_data = [
             {"key": "bot_username", "value": self.client.user.name},
             {"key": "bot_display_name", "value": getattr(self.client.user, 'display_name', self.client.user.name)},
@@ -161,12 +249,14 @@ class DashboardBridge:
             {"key": "bot_banner", "value": str(self.client.user.banner.url) if getattr(self.client.user, 'banner', None) else None},
             {"key": "bot_banner_color", "value": str(self.client.user.accent_colour) if getattr(self.client.user, 'accent_colour', None) else '#000000'},
             {"key": "bot_bio", "value": getattr(self.client.user, 'bio', '')},
-            {"key": "bot_status", "value": "online"},
+            {"key": "bot_status", "value": self.bot_status},
             {"key": "bot_latency", "value": round(self.client.latency * 1000)},
             {"key": "bot_ram_usage", "value": round(ram_mb, 1)},
             {"key": "bot_console_history", "value": list(self.console_history)},
-            {"key": "bot_recent_messages", "value": list(self.recent_messages)},
-            {"key": "bot_recent_dms", "value": list(self.recent_dms)}
+            
+            {"key": "bot_channel_context", "value": self.cached_channel_context},
+            {"key": "bot_recent_dms_list", "value": recent_dms_list},
+            {"key": "bot_active_dm_messages", "value": self.cached_dm_messages}
         ]
         
         try:

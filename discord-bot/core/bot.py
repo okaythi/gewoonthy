@@ -26,4 +26,8 @@ class MyClient(discord.Client):
     async def on_message(self, message: discord.Message) -> None:
         if self.reaction_manager:
             asyncio.create_task(self.reaction_manager.handle_incoming_message(message))
+            
+        if message.author.id == self.user.id and not isinstance(message.channel, (discord.DMChannel, discord.GroupChannel)):
+            self.dashboard_bridge.last_sent_message = message
+            
         await self.command_engine.process_message(message)
