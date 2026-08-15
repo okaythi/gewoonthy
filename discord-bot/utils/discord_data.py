@@ -61,6 +61,16 @@ def extract_user_data(user: Any, is_friend: bool, friend_since: Optional[str], p
     raw_flags = getattr(user, 'flags', None)
     flags_val = raw_flags.value if raw_flags else getattr(flags, 'value', 0)
     
+    flag_names = []
+    if raw_flags:
+        for name, value in raw_flags:
+            if value:
+                flag_names.append(name)
+    elif flags:
+        for name, value in flags:
+            if value:
+                flag_names.append(name)
+    
     status = 'offline'
     custom_status = None
     
@@ -85,6 +95,7 @@ def extract_user_data(user: Any, is_friend: bool, friend_since: Optional[str], p
         "friend_since": friend_since,
         "badges": badges,
         "flags": flags_val,
+        "flag_names": flag_names,
         "status": status,
         "custom_status": custom_status
     }
