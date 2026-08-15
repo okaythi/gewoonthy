@@ -102,8 +102,49 @@ class DashboardBridge:
                         
             elif cmd_type == 'update_profile':
                 if self.client.user:
-                    await self.client.user.edit(bio=cmd_data.get('bio', ''))
-                self.log_command(str(time.time()), 'update_profile', 'Profile bio updated.', 'success')
+                    edit_kwargs = {}
+                    
+                    if 'bio' in cmd_data:
+                        edit_kwargs['bio'] = cmd_data['bio']
+                        
+                    if 'bannerColor' in cmd_data:
+                        hex_str = str(cmd_data['bannerColor']).replace('#', '')
+                        if hex_str:
+                            try:
+                                edit_kwargs['accent_colour'] = discord.Colour(int(hex_str, 16))
+                            except ValueError:
+                                pass
+                                
+                    avatar_url = cmd_data.get('avatarUrl')
+                    if avatar_url == '':
+                        edit_kwargs['avatar'] = None
+                    elif avatar_url and 'cdn.discordapp.com' not in avatar_url:
+                        try:
+                            async with self.session.get(avatar_url) as resp:
+                                if resp.status == 200:
+                                    edit_kwargs['avatar'] = await resp.read()
+                        except Exception as e:
+                            self.log_command(str(time.time()), 'update_profile', f'Failed to download avatar: {e}', 'error')
+                            
+                    banner_url = cmd_data.get('bannerUrl')
+                    if banner_url == '':
+                        edit_kwargs['banner'] = None
+                    elif banner_url and 'cdn.discordapp.com' not in banner_url:
+                        try:
+                            async with self.session.get(banner_url) as resp:
+                                if resp.status == 200:
+                                    edit_kwargs['banner'] = await resp.read()
+                        except Exception as e:
+                            self.log_command(str(time.time()), 'update_profile', f'Failed to download banner: {e}', 'error')
+                            
+                    if edit_kwargs:
+                        try:
+                            await self.client.user.edit(**edit_kwargs)
+                            self.log_command(str(time.time()), 'update_profile', 'Profile updated successfully.', 'success')
+                        except Exception as e:
+                            self.log_command(str(time.time()), 'update_profile', f'Discord API Error: {e}', 'error')
+                else:
+                    self.log_command(str(time.time()), 'update_profile', 'Client user not ready.', 'error')
         except Exception as e:
             pass
 
@@ -117,6 +158,8 @@ class DashboardBridge:
             {"key": "bot_username", "value": self.client.user.name},
             {"key": "bot_display_name", "value": getattr(self.client.user, 'display_name', self.client.user.name)},
             {"key": "bot_pfp", "value": str(self.client.user.display_avatar.url) if self.client.user.display_avatar else None},
+            {"key": "bot_banner", "value": str(self.client.user.banner.url) if getattr(self.client.user, 'banner', None) else None},
+            {"key": "bot_banner_color", "value": str(self.client.user.accent_colour) if getattr(self.client.user, 'accent_colour', None) else '#000000'},
             {"key": "bot_bio", "value": getattr(self.client.user, 'bio', '')},
             {"key": "bot_status", "value": "online"},
             {"key": "bot_latency", "value": round(self.client.latency * 1000)},
