@@ -11,7 +11,7 @@ DASHBOARD_URL = os.getenv("DASHBOARD_URL", "https://self.sudothy.me")
 API_TOKEN = os.getenv("DASHBOARD_API_TOKEN", "SUPER_SECRET_TOKEN")
 
 class DashboardBridge:
-    __slots__ = ("client", "session", "polling_task", "console_history", "recent_messages", "recent_dms")
+    __slots__ = ("client", "session", "polling_task", "console_history", "recent_messages", "recent_dms", "last_sent_message", "cached_channel_context", "cached_dm_messages", "bot_status")
 
     def __init__(self, client: discord.Client):
         self.client = client
