@@ -10,12 +10,8 @@ client = discord.Client()
 async def on_ready():
     try:
         user = await client.fetch_user_profile(1339570380943261697)
-        print("Badges:")
         for b in getattr(user, 'badges', []):
-            print(getattr(b, 'id', ''), getattr(b, 'description', ''), getattr(b, 'icon', ''))
-        
-        print("PREMIUM:", getattr(user, 'premium_since', None))
-        print("GUILD:", getattr(user, 'premium_guild_since', None))
+            print(b.id, getattr(b, '_icon', ''), getattr(b, 'url', ''))
     except Exception as e:
         print("Error", e)
     await client.close()

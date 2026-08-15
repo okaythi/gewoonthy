@@ -33,7 +33,7 @@ def extract_user_data(user: Any, is_friend: bool, friend_since: Optional[str], p
         is_nitro = is_nitro or bool(getattr(profile, 'premium_since', None)) or bool(getattr(profile, 'premium_guild_since', None))
         for b in getattr(profile, 'badges', []):
             bid = str(getattr(b, 'id', ''))
-            bicon = str(getattr(b, 'icon', ''))
+            bicon = str(getattr(b, '_icon', ''))
             bdesc = str(getattr(b, 'description', ''))
             bot_profile_badges.append({"id": bid, "icon": bicon, "description": bdesc})
 
