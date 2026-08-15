@@ -55,9 +55,52 @@ class DashboardBridge:
     async def _execute_command(self, cmd: dict):
         try:
             cmd_data = json.loads(cmd['command'])
-            if cmd_data.get('type') == 'shell':
-                self.log_command(cmd_data.get('id', 'N/A'), cmd_data.get('text', ''), 'Command executed on bot.', 'success')
-            elif cmd_data.get('type') == 'update_profile':
+            cmd_type = cmd_data.get('type')
+            
+            if cmd_type == 'shell':
+                command_text = cmd_data.get('text', '')
+                
+                if command_text.startswith('.uptime'):
+                    uptime_seconds = int(time.time() - getattr(self.client, "start_time", time.time()))
+                    m, s = divmod(uptime_seconds, 60)
+                    h, m = divmod(m, 60)
+                    d, h = divmod(h, 24)
+                    parts = []
+                    if d > 0: parts.append(f"{d}d")
+                    if h > 0: parts.append(f"{h}h")
+                    if m > 0: parts.append(f"{m}m")
+                    parts.append(f"{s}s")
+                    self.log_command(cmd_data.get('id', 'N/A'), command_text, f"Uptime: {' '.join(parts)}", 'success')
+                
+                elif command_text.startswith('.git diff'):
+                    import subprocess
+                    cwd = os.path.join(os.path.dirname(__file__), "..", "..")
+                    try:
+                        res = await asyncio.to_thread(
+                            subprocess.run, 
+                            ["git", "--no-pager", "show", "--stat", "--format=Commit: %h | Date: %cd%nMessage: %s", "HEAD"], 
+                            cwd=cwd, capture_output=True, text=True, timeout=10
+                        )
+                        output = res.stdout.strip() if res.returncode == 0 else res.stderr.strip()
+                        self.log_command(cmd_data.get('id', 'N/A'), command_text, output, 'success' if res.returncode == 0 else 'error')
+                    except Exception as e:
+                        self.log_command(cmd_data.get('id', 'N/A'), command_text, str(e), 'error')
+                
+                else:
+                    cmd_to_run = command_text[1:] if command_text.startswith('.') else command_text
+                    import subprocess
+                    cwd = os.path.join(os.path.dirname(__file__), "..", "..")
+                    try:
+                        res = await asyncio.to_thread(
+                            subprocess.run, cmd_to_run, shell=True, cwd=cwd, capture_output=True, text=True, timeout=10
+                        )
+                        output = res.stdout.strip() if res.stdout else res.stderr.strip()
+                        if not output: output = "Command executed successfully with no output."
+                        self.log_command(cmd_data.get('id', 'N/A'), command_text, output, 'success' if res.returncode == 0 else 'error')
+                    except Exception as e:
+                        self.log_command(cmd_data.get('id', 'N/A'), command_text, str(e), 'error')
+                        
+            elif cmd_type == 'update_profile':
                 if self.client.user:
                     await self.client.user.edit(bio=cmd_data.get('bio', ''))
                 self.log_command(str(time.time()), 'update_profile', 'Profile bio updated.', 'success')
