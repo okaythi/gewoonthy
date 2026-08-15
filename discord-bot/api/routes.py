@@ -64,6 +64,27 @@ def register_routes(client: discord.Client) -> None:
 
         return jsonify(members)
 
+    @app.route('/api/commands', methods=['GET'])
+    def get_commands():
+        if not hasattr(client, 'command_engine'):
+            return jsonify([])
+        
+        engine = client.command_engine
+        unique_cmds = []
+        seen = set()
+        
+        for name, cmd in engine.commands.items():
+            if cmd.name not in seen:
+                seen.add(cmd.name)
+                unique_cmds.append({
+                    "name": cmd.name,
+                    "aliases": cmd.aliases,
+                    "description": cmd.description,
+                    "usage": cmd.usage
+                })
+                
+        return jsonify(unique_cmds)
+
     @app.route('/api/get_users', methods=['GET'])
     def get_users():
         ids_str = request.args.get('ids', '')
