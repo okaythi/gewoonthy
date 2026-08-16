@@ -120,16 +120,33 @@ class ActivityPlayer:
             await self.client.change_presence(activity=None)
             return
 
-        m = self.current_media
-        
-        details = m.get("title", "") if m["type"] == "movie" else f"{m.get('show_title')} (S{m.get('season'):02d}E{m.get('episode'):02d})"
-        state = f"({m.get('year')})" if m["type"] == "movie" else m.get("ep_title", "")
+        if m["type"] == "movie":
+            details = m.get("title", "")
+            state = f"({m.get('year')})"
+        else:
+            details = m.get("show_title", "Unknown Show")
+            state = f"S{m.get('season'):02d}E{m.get('episode'):02d} - {m.get('ep_title', '')}"
+            
         if not self.playing:
             state = f"[PAUSED] {state}"
 
         assets = {}
         if m.get("poster"):
-            assets["large_image"] = m["poster"]
+            if not m.get("proxied_poster"):
+                try:
+                    data = await self.client.http.create_app_external_assets(APPLICATION_ID, [m["poster"]])
+                    if data and isinstance(data, list) and len(data) > 0:
+                        path = data[0].get("external_asset_path")
+                        if path:
+                            m["proxied_poster"] = f"mp:{path}"
+                except Exception as e:
+                    print(f"Failed to proxy poster: {e}")
+                    
+            if m.get("proxied_poster"):
+                assets["large_image"] = m["proxied_poster"]
+            else:
+                assets["large_image"] = m["poster"]
+                
             assets["large_text"] = details
 
         start_ts = int(self.start_time)
