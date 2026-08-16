@@ -120,6 +120,8 @@ class ActivityPlayer:
             await self.client.change_presence(activity=None)
             return
 
+        m = self.current_media
+
         if m["type"] == "movie":
             details = m.get("title", "")
             state = f"({m.get('year')})"
