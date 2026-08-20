@@ -18,19 +18,20 @@ export const aboutCommand = async (args, terminal) => {
       <div class="info-group">
         <h3>${i18n.languages_title}</h3>
         <div class="tag-container">
-          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.lang_flemish}</div>
-          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.lang_french}</div>
-          <div class="tag"><div class="tag-icon">🇧🇷</div>${i18n.lang_portuguese}</div>
-          <div class="tag"><div class="tag-icon">🇦🇷</div>${i18n.lang_spanish}</div>
-          <div class="tag"><div class="tag-icon">🇬🇧</div>${i18n.lang_english}</div>
-          <div class="tag"><div class="tag-icon">🇸🇪</div>${i18n.lang_swedish}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/be.png" alt="🇧🇪" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_flemish}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/be.png" alt="🇧🇪" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_french}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/br.png" alt="🇧🇷" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_portuguese}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/ar.png" alt="🇦🇷" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_spanish}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/gb.png" alt="🇬🇧" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_english}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/se.png" alt="🇸🇪" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_swedish}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/jp.png" alt="🇯🇵" style="width: 20px; vertical-align: middle;"></div>${i18n.lang_japanese}</div>
         </div>
       </div>
       <div class="info-group">
         <h3>${i18n.nationalities_title}</h3>
         <div class="tag-container">
-          <div class="tag"><div class="tag-icon">🇧🇪</div>${i18n.nat_belgian}</div>
-          <div class="tag"><div class="tag-icon">🇧🇷</div>${i18n.nat_brazilian}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/be.png" alt="🇧🇪" style="width: 20px; vertical-align: middle;"></div>${i18n.nat_belgian}</div>
+          <div class="tag"><div class="tag-icon"><img src="https://flagcdn.com/w20/br.png" alt="🇧🇷" style="width: 20px; vertical-align: middle;"></div>${i18n.nat_brazilian}</div>
         </div>
       </div>
     </div>

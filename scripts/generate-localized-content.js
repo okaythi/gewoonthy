@@ -22,6 +22,7 @@ import path from 'path';
       "lang_spanish": "Spaans",
       "lang_english": "Engels",
       "lang_swedish": "Zweeds",
+      "lang_japanese": "Japans",
       "nat_belgian": "Belgisch",
       "nat_brazilian": "Braziliaans"
     },
