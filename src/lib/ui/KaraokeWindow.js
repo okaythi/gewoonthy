@@ -82,7 +82,7 @@ export const openKaraokeWindow = async () => {
 
   const contentHTML = `
     <style>
-      .yomitan-ruby { position: relative; display: inline-block; line-height: 2; }
+      .yomitan-ruby { position: relative; }
       .yomitan-ruby::before {
         content: attr(data-furi);
         position: absolute;
