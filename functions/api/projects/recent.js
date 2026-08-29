@@ -16,7 +16,7 @@ export async function onRequestGet({ request, env }) {
   // use global env
 
   try {
-    const res = await env.user_data.prepare('SELECT project_id, timestamp FROM recent_projects WHERE username = ? ORDER BY timestamp DESC LIMIT 20').bind(username).all();
+    const res = await env.DB.prepare('SELECT project_id, timestamp FROM recent_projects WHERE username = ? ORDER BY timestamp DESC LIMIT 20').bind(username).all();
     return new Response(JSON.stringify({ projects: res.results }), { headers: { 'Content-Type': 'application/json' } });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), { status: 500 });
@@ -49,7 +49,7 @@ export async function onRequestPost({ request, env }) {
   // use global env
 
   try {
-    await env.user_data.prepare('INSERT OR REPLACE INTO recent_projects (username, project_id, timestamp) VALUES (?, ?, CURRENT_TIMESTAMP)').bind(username, project_id).run();
+    await env.DB.prepare('INSERT OR REPLACE INTO recent_projects (username, project_id, timestamp) VALUES (?, ?, CURRENT_TIMESTAMP)').bind(username, project_id).run();
     return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), { status: 500 });

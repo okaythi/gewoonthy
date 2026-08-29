@@ -4,21 +4,9 @@ pages_build_output_dir = "dist"
 
 
 [[d1_databases]]
-binding = "ABOUT_ME"
-database_name = "thy_aboutme"
-database_id = "d9f6e4e8-0fbf-4f54-bb0f-a5179c737fc3"
-
-[[d1_databases]]
-binding = "PROFESSIONAL_PROFILE"
-database_name = "thy_professional"
-database_id = "33137698-8481-4fdd-8fc0-d5166f0b6baf"
-
-
-
-[[d1_databases]]
-binding = "users"
-database_name = "user_accounts"
-database_id = "08bfb29e-f701-4d75-8784-86d66caa92d6"
+binding = "DB"
+database_name = "system_data"
+database_id = "16c1b754-6dcf-4b82-a220-06e9fdbcdedc"
 
 [[r2_buckets]]
 binding = "MEDIA_BUCKET"
@@ -27,13 +15,3 @@ bucket_name = "gewoonthy-media"
 [[r2_buckets]]
 binding = "LOCALES_BUCKET"
 bucket_name = "gewoonthy-locales"
-
-[[d1_databases]]
-binding = "system_data"
-database_name = "system_data"
-database_id = "16c1b754-6dcf-4b82-a220-06e9fdbcdedc"
-
-[[d1_databases]]
-binding = "user_data"
-database_name = "user_data"
-database_id = "25e039dd-bb2e-4bfe-817d-56252334e367"

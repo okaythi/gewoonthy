@@ -16,7 +16,7 @@ const commandManifest = {
 };
 
 export async function onRequestPost({ request, env }) {
-  const db = env.users;
+  const db = env.DB;
   const authHeader = request.headers.get('Authorization');
   const sessionId = authHeader ? authHeader.replace('Bearer ', '') : null;
   

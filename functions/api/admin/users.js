@@ -1,5 +1,5 @@
 export async function onRequest({ request, env }) {
-  const db = env.USERS;
+  const db = env.DB;
   if (!db) return new Response('Database Error', { status: 500 });
 
   if (request.method === 'GET') {

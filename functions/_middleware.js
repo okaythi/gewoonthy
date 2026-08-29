@@ -31,18 +31,18 @@ export async function onRequest({ request, env, next }) {
   
   if (normalizedPath === '/') {
      try {
-       const { results } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks ORDER BY order_index ASC").all();
+       const { results } = await env.DB.prepare("SELECT * FROM about_blocks ORDER BY order_index ASC").all();
        preloadedScript = `<script id="preloaded-about-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
        
-       const { results: profResults } = await env.PROFESSIONAL_PROFILE.prepare("SELECT id FROM professional_blocks LIMIT 1").all();
+       const { results: profResults } = await env.DB.prepare("SELECT id FROM professional_blocks LIMIT 1").all();
        preloadedScript += `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(profResults).replace(/</g, '\\u003c')}</script>`;
      } catch(e) {}
   } else if (normalizedPath === '/professional') {
      try {
-       const { results } = await env.PROFESSIONAL_PROFILE.prepare("SELECT * FROM professional_blocks ORDER BY order_index ASC").all();
+       const { results } = await env.DB.prepare("SELECT * FROM professional_blocks ORDER BY order_index ASC").all();
        preloadedScript = `<script id="preloaded-prof-data" type="application/json">${JSON.stringify(results).replace(/</g, '\\u003c')}</script>`;
        
-       const { results: aboutRes } = await env.ABOUT_ME.prepare("SELECT * FROM about_blocks WHERE type IN ('status', 'pfp_crop')").all();
+       const { results: aboutRes } = await env.DB.prepare("SELECT * FROM about_blocks WHERE type IN ('status', 'pfp_crop')").all();
        preloadedScript += `<script id="preloaded-prof-about-data" type="application/json">${JSON.stringify(aboutRes).replace(/</g, '\\u003c')}</script>`;
      } catch(e) {}
   }

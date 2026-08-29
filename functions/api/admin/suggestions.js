@@ -1,13 +1,13 @@
 export async function onRequest({ request, env }) {
   const url = new URL(request.url);
 
-  if (!env.QUOTE_DB) {
+  if (!env.DB) {
     return new Response(JSON.stringify({ error: 'DB not bound' }), { status: 500 });
   }
 
   try {
     if (request.method === 'GET') {
-      const { results } = await env.QUOTE_DB.prepare(
+      const { results } = await env.DB.prepare(
         `SELECT * FROM suggestions ORDER BY 
          CASE status 
            WHEN 'pending' THEN 1 
@@ -20,14 +20,14 @@ export async function onRequest({ request, env }) {
 
     if (request.method === 'PUT') {
       const { id, status } = await request.json();
-      await env.QUOTE_DB.prepare(
+      await env.DB.prepare(
         `UPDATE suggestions SET status = ? WHERE id = ?`
       ).bind(status, id).run();
       return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });
     }
 
     if (request.method === 'DELETE') {
-      await env.QUOTE_DB.prepare(
+      await env.DB.prepare(
         `DELETE FROM suggestions WHERE status = 'discarded'`
       ).run();
       return new Response(JSON.stringify({ success: true }), { headers: { 'Content-Type': 'application/json' } });

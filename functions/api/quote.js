@@ -1,5 +1,5 @@
 export async function onRequest({ request, env }) {
-  if (!env.QUOTE_DB) {
+  if (!env.DB) {
     return new Response(JSON.stringify({ text: { en: "Database not bound." } }), { status: 500 });
   }
   
@@ -9,7 +9,7 @@ export async function onRequest({ request, env }) {
     const v = s ? s.split(',').map(Number).filter(n => !isNaN(n)) : [];
     
     // Fetch all quotes (it's very fast for ~150 rows)
-    const { results: quotes } = await env.QUOTE_DB.prepare(`SELECT * FROM quotes`).all();
+    const { results: quotes } = await env.DB.prepare(`SELECT * FROM quotes`).all();
     
     if (!quotes || quotes.length === 0) {
       return new Response(JSON.stringify({ text: { en: "No quotes available." } }), { status: 404 });
@@ -35,7 +35,7 @@ export async function onRequest({ request, env }) {
     }
 
     // Asynchronously update view count for analytics
-    env.QUOTE_DB.prepare(`UPDATE quotes SET views = views + 1 WHERE id = ?`).bind(selected.id).run().catch(e => console.error("View update failed", e));
+    env.DB.prepare(`UPDATE quotes SET views = views + 1 WHERE id = ?`).bind(selected.id).run().catch(e => console.error("View update failed", e));
     
     // Format payload to match the legacy structure
     const payload = {

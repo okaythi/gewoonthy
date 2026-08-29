@@ -1,5 +1,5 @@
 export async function onRequestPost({ request, env }) {
-  const db = env.users;
+  const db = env.DB;
   const body = await request.json();
   const { action, username, password, token } = body;
 

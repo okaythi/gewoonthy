@@ -25,14 +25,14 @@ export async function onRequestGet({ request, env }) {
   let userDisliked = false;
 
   try {
-    const sysRes = await env.system_data.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(fileName).first();
+    const sysRes = await env.DB.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(fileName).first();
     if (sysRes) {
       totalLikes = sysRes.likes;
       totalDislikes = sysRes.dislikes;
     }
 
     if (username !== 'guest') {
-      const usrRes = await env.user_data.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, fileName).first();
+      const usrRes = await env.DB.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, fileName).first();
       if (usrRes) {
         if (usrRes.action === 'like') userLiked = true;
         if (usrRes.action === 'dislike') userDisliked = true;
@@ -73,7 +73,7 @@ export async function onRequestPost({ request, env }) {
 
   try {
     // Determine previous action
-    const usrRes = await env.user_data.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).first();
+    const usrRes = await env.DB.prepare('SELECT action FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).first();
     const prevAction = usrRes ? usrRes.action : null;
 
     let likeDelta = 0;
@@ -81,12 +81,12 @@ export async function onRequestPost({ request, env }) {
 
     if (prevAction === action) {
       // Toggle off
-      await env.user_data.prepare('DELETE FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).run();
+      await env.DB.prepare('DELETE FROM user_song_votes WHERE username = ? AND file_name = ?').bind(username, file_name).run();
       if (action === 'like') likeDelta = -1;
       if (action === 'dislike') dislikeDelta = -1;
     } else {
       // Upsert
-      await env.user_data.prepare('INSERT OR REPLACE INTO user_song_votes (username, file_name, action) VALUES (?, ?, ?)').bind(username, file_name, action).run();
+      await env.DB.prepare('INSERT OR REPLACE INTO user_song_votes (username, file_name, action) VALUES (?, ?, ?)').bind(username, file_name, action).run();
       
       if (action === 'like') {
         likeDelta = 1;
@@ -99,14 +99,14 @@ export async function onRequestPost({ request, env }) {
     }
 
     // Ensure row exists in system_data
-    await env.system_data.prepare('INSERT OR IGNORE INTO song_votes (file_name, likes, dislikes) VALUES (?, 0, 0)').bind(file_name).run();
+    await env.DB.prepare('INSERT OR IGNORE INTO song_votes (file_name, likes, dislikes) VALUES (?, 0, 0)').bind(file_name).run();
 
     // Update system_data
     if (likeDelta !== 0 || dislikeDelta !== 0) {
-      await env.system_data.prepare('UPDATE song_votes SET likes = likes + ?, dislikes = dislikes + ? WHERE file_name = ?').bind(likeDelta, dislikeDelta, file_name).run();
+      await env.DB.prepare('UPDATE song_votes SET likes = likes + ?, dislikes = dislikes + ? WHERE file_name = ?').bind(likeDelta, dislikeDelta, file_name).run();
     }
 
-    const sysRes = await env.system_data.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(file_name).first();
+    const sysRes = await env.DB.prepare('SELECT likes, dislikes FROM song_votes WHERE file_name = ?').bind(file_name).first();
     
     const isLiked = prevAction !== action && action === 'like';
     const isDisliked = prevAction !== action && action === 'dislike';

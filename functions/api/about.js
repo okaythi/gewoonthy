@@ -2,8 +2,8 @@ export async function onRequest({ request, env }) {
   if (request.method !== 'GET') return new Response('Method not allowed', { status: 405 });
 
   try {
-    if (!env.ABOUT_ME) return new Response('[]', { status: 500 });
-    const { results } = await env.ABOUT_ME.prepare(
+    if (!env.DB) return new Response('[]', { status: 500 });
+    const { results } = await env.DB.prepare(
       `SELECT id, type, content, order_index FROM about_blocks ORDER BY order_index ASC`
     ).all();
     

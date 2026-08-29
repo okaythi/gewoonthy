@@ -1,8 +1,8 @@
 export async function onRequest(context) {
   const { env } = context;
   try {
-    if (!env.PROFESSIONAL_PROFILE) return new Response('[]', { status: 500 });
-    const { results } = await env.PROFESSIONAL_PROFILE.prepare(
+    if (!env.DB) return new Response('[]', { status: 500 });
+    const { results } = await env.DB.prepare(
       `SELECT id, type, content, order_index FROM professional_blocks ORDER BY order_index ASC`
     ).all();
     

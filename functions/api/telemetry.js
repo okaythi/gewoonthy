@@ -10,13 +10,13 @@ export async function onRequest({ request, env }) {
       return new Response('Invalid event type', { status: 400 });
     }
     
-    if (env.QUOTE_DB) {
+    if (env.DB) {
       const ip = request.headers.get('cf-connecting-ip') || 'unknown';
       const cf = request.cf || {};
       const asn = (cf.asOrganization || '').toUpperCase();
       const country = cf.country || 'unknown';
       
-      await env.QUOTE_DB.prepare(
+      await env.DB.prepare(
         `INSERT INTO threat_ledger (ip_address, asn, country, event_type, target, blocked) VALUES (?, ?, ?, ?, ?, 1)`
       ).bind(ip, asn, country, eventType, target || 'unknown').run();
     }

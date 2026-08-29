@@ -32,9 +32,9 @@ export async function onRequest({ request: r, env }) {
     
     if (!p.includes(n) || torBlock || x || !v) {
       b = true;
-      if (env.QUOTE_DB) {
+      if (env.DB) {
         let reason = torBlock ? 'TOR' : (!p.includes(n) ? 'GEOBLOCK' : (!v ? 'ISP_NOT_ALLOWED' : 'ASN_BLOCK'));
-        env.QUOTE_DB.prepare(
+        env.DB.prepare(
           `INSERT INTO threat_ledger (ip_address, asn, country, event_type, target, blocked) VALUES (?, ?, ?, ?, ?, ?)`
         ).bind(i, o, n, reason, 'video_token', 1).run().catch(e => console.error("Threat log fail", e));
       }
