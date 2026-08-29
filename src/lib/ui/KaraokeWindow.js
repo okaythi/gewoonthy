@@ -272,7 +272,7 @@ export const openKaraokeWindow = async () => {
     if (lyricsData) {
       lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
         <div class="verse" id="verse-${vIdx}" style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;">
-          <div class="verse-scroll" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-end; align-content: flex-start; column-gap: 8px; row-gap: 4px; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Great Vibes', 'Zen Kurenaido', 'Noto Sans JP', system-ui, sans-serif;">
+          <div class="verse-scroll" style="width: 100%; text-align: center; line-height: 2.5; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Great Vibes', 'Zen Kurenaido', 'Noto Sans JP', system-ui, sans-serif;">
             ${verse.words.map((w, wIdx) => {
               const isJp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(w.word);
               const margin = isJp ? "0" : "0 2px";
