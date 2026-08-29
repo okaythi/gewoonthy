@@ -192,6 +192,21 @@ const pageTitle = "Lyrics Sync Tool";
       color: #333; /* Unsynced */
     }
 
+    .jp-word { margin-right: 0 !important; }
+
+    .yomitan-ruby { position: relative; display: inline-block; line-height: 2; }
+    .yomitan-ruby::before {
+      content: attr(data-furi);
+      position: absolute;
+      top: -1.2em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.5em;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
     .word:hover {
       background: rgba(255,255,255,0.1);
       color: #aaa;
@@ -350,10 +365,11 @@ const pageTitle = "Lyrics Sync Tool";
             <span class="time-badge">${verse.verseStart ? verse.verseStart.toFixed(2) : '--'}s</span>
             ${verse.speaker ? `<span class="speaker" style="color: #aaa; margin-right: 0.5em;">${verse.speaker}</span>` : ''}
             ${verse.words.map((w, wIdx) => {
+            const isJp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(w.word);
             const isSynced = w.start && w.start !== 0;
             const isActive = vIdx === playingV && wIdx === playingW;
-            const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''}`;
-            const display = w.furigana ? `<ruby>${w.word}<rt>${w.furigana}</rt></ruby>` : w.word;
+            const classes = `word ${isActive ? 'active' : ''} ${isSynced ? 'synced' : ''} ${isJp ? 'jp-word' : ''}`;
+            const display = w.furigana ? `<span class="yomitan-ruby" data-furi="${w.furigana}">${w.word}</span>` : w.word;
             return `<span class="${classes}" data-v="${vIdx}" data-w="${wIdx}" id="w-${vIdx}-${wIdx}">${display}</span>`;
             }).join('')}
           </div>
