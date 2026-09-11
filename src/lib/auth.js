@@ -23,6 +23,7 @@ class AuthManager {
     const sessionStr = localStorage.getItem('sudothy_session');
     if (sessionStr) {
       try {
+        const session = JSON.parse(sessionStr);
         if (session && session.user && session.token) {
           this.user = session.user;
           this.token = session.token;

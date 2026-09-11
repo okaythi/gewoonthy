@@ -1,6 +1,7 @@
 import { windowManager } from '../WindowManager.js';
 import { songsDictionary } from '../../data/lyrics.ts';
 import { localesFetcher } from '../LocalesFetcher.js';
+import { authManager, AuthState } from '../auth.js';
 
 export const openKaraokeWindow = async () => {
   const i18n = await localesFetcher.fetchWindow('karaoke') || {
@@ -179,6 +180,38 @@ export const openKaraokeWindow = async () => {
     }
   };
 
+  const getAuthToken = async () => {
+    if (authManager.token) return authManager.token;
+    const sessionStr = localStorage.getItem('sudothy_session');
+    if (sessionStr) {
+      try {
+        const session = JSON.parse(sessionStr);
+        if (session?.token) {
+          authManager.token = session.token;
+          authManager.user = session.user;
+          authManager.state = AuthState.READY;
+          return session.token;
+        }
+      } catch (e) {}
+    }
+    try {
+      const res = await fetch('/api/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'guest' })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        authManager.user = data.user;
+        authManager.token = data.token;
+        authManager.state = AuthState.READY;
+        localStorage.setItem('sudothy_session', JSON.stringify({ user: data.user, token: data.token }));
+        return data.token;
+      }
+    } catch (e) {}
+    return null;
+  };
+
   const renderPlayer = (songFile) => {
     // Basic structure for video player, porting from production
     mainView.innerHTML = `
@@ -227,28 +260,92 @@ export const openKaraokeWindow = async () => {
     const likeCount = mainView.querySelector('#like-count');
     const dislikeCount = mainView.querySelector('#dislike-count');
 
-    // Voting Logic
-    const updateVoteUI = (l, d, totalL, totalD) => {
-      btnLike.style.color = l ? '#4CAF50' : 'white';
-      btnDislike.style.color = d ? '#F44336' : 'white';
-      likeCount.textContent = totalL;
-      dislikeCount.textContent = totalD;
+    // Voting Logic (Half-optimistic & per-user D1)
+    let currentVote = null; // 'like' | 'dislike' | null
+    let totalLikes = 0;
+    let totalDislikes = 0;
+    let isVoting = false;
+    const currentSong = songFile;
+
+    const updateButtonStyles = (vote) => {
+      btnLike.style.color = vote === 'like' ? '#4CAF50' : 'white';
+      btnDislike.style.color = vote === 'dislike' ? '#F44336' : 'white';
     };
 
-    fetch(`/api/vote?file_name=${encodeURIComponent(songFile)}`)
-      .then(res => res.json())
-      .then(data => updateVoteUI(data.liked, data.desliked, data.totalLikes, data.totalDislikes))
-      .catch(e => console.error(e));
+    const updateCounts = (l, d) => {
+      likeCount.textContent = typeof l === 'number' ? l : 0;
+      dislikeCount.textContent = typeof d === 'number' ? d : 0;
+    };
 
-    const castVote = (action) => {
-      fetch('/api/vote', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file_name: songFile, action })
-      })
-      .then(res => res.json())
-      .then(data => updateVoteUI(data.liked, data.desliked, data.totalLikes, data.totalDislikes))
-      .catch(e => console.error(e));
+    getAuthToken().then(token => {
+      if (currentSong !== songFile) return;
+      const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
+      fetch(`/api/vote?file_name=${encodeURIComponent(songFile)}`, { headers })
+        .then(res => res.json())
+        .then(data => {
+          if (currentSong !== songFile) return;
+          if (data.liked) currentVote = 'like';
+          else if (data.disliked || data.desliked) currentVote = 'dislike';
+          else currentVote = null;
+
+          if (typeof data.totalLikes === 'number') totalLikes = data.totalLikes;
+          if (typeof data.totalDislikes === 'number') totalDislikes = data.totalDislikes;
+
+          updateButtonStyles(currentVote);
+          updateCounts(totalLikes, totalDislikes);
+        })
+        .catch(e => console.error(e));
+    });
+
+    const castVote = async (action) => {
+      if (isVoting) return;
+
+      const prevVote = currentVote;
+      const nextVote = currentVote === action ? null : action;
+
+      // Half-optimistic: update button highlight immediately before network round-trip
+      currentVote = nextVote;
+      updateButtonStyles(currentVote);
+      isVoting = true;
+
+      try {
+        const token = await getAuthToken();
+        const headers = { 'Content-Type': 'application/json' };
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+
+        const res = await fetch('/api/vote', {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ file_name: songFile, action })
+        });
+
+        if (!res.ok) {
+          throw new Error(`Vote request failed with status ${res.status}`);
+        }
+
+        const data = await res.json();
+        if (currentSong !== songFile) return;
+
+        if (data.liked) currentVote = 'like';
+        else if (data.disliked || data.desliked) currentVote = 'dislike';
+        else currentVote = null;
+
+        if (typeof data.totalLikes === 'number') totalLikes = data.totalLikes;
+        if (typeof data.totalDislikes === 'number') totalDislikes = data.totalDislikes;
+
+        updateButtonStyles(currentVote);
+        updateCounts(totalLikes, totalDislikes);
+      } catch (e) {
+        console.error('Vote failed:', e);
+        if (currentSong === songFile) {
+          // Revert button styles on error
+          currentVote = prevVote;
+          updateButtonStyles(currentVote);
+          updateCounts(totalLikes, totalDislikes);
+        }
+      } finally {
+        isVoting = false;
+      }
     };
 
     btnLike.addEventListener('click', () => castVote('like'));
