@@ -86,10 +86,12 @@ export const openKaraokeWindow = async () => {
       .yomitan-ruby::before {
         content: attr(data-furi);
         position: absolute;
-        top: -1.2em;
+        bottom: 100%;
         left: 50%;
         transform: translateX(-50%);
         font-size: 0.5em;
+        line-height: 1;
+        margin-bottom: 2px;
         white-space: nowrap;
         pointer-events: none;
         user-select: none;
