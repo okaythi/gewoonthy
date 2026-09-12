@@ -123,7 +123,7 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
         : (state.localLyrics[v]?.verseStart || 0);
 
       if (targetTime > 0) {
-        vid.currentTime = Math.max(0, targetTime + state.globalOffset);
+        vid.currentTime = Math.max(0, targetTime + state.globalOffset - 1.0);
       }
 
       renderMatrix(els, onRenderBlocks);
@@ -138,7 +138,7 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
       const v = Number(btn.getAttribute('data-v'));
       setTargetIndices(v, 0);
       const start = state.localLyrics[v]?.verseStart || 0;
-      if (start > 0) vid.currentTime = Math.max(0, start + state.globalOffset);
+      if (start > 0) vid.currentTime = Math.max(0, start + state.globalOffset - 1.0);
       renderMatrix(els, onRenderBlocks);
     });
   });
