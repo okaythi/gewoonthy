@@ -135,6 +135,12 @@ export async function bootstrapStudio(): Promise<void> {
     loadSelectedSong((e.target as HTMLSelectElement).value);
   });
 
+  // Sidebar Toggle (Inspector collapse/expand)
+  els.btnToggleSidebar?.addEventListener('click', () => {
+    els.studioGrid?.classList.toggle('sidebar-collapsed');
+    playerController.renderBlocks();
+  });
+
   // Filter Tabs
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {

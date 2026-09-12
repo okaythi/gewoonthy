@@ -109,7 +109,7 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
     `;
   }).join('');
 
-  // Attach Word Chip Listeners (Seek & Focus)
+  // Attach Word Chip Listeners (Seek & Focus without window scroll)
   versesContainer.querySelectorAll('.word-chip').forEach(el => {
     el.addEventListener('click', () => {
       const v = Number(el.getAttribute('data-v'));
@@ -126,7 +126,7 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
       }
 
       renderMatrix(els, onRenderBlocks);
-      matrixPane.focus();
+      matrixPane.focus({ preventScroll: true });
     });
   });
 
@@ -187,9 +187,14 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
     });
   });
 
-  // Smooth scroll active card into view
+  // Smooth scroll active card vertically inside the verses container ONLY (never scroll window)
   const activeCard = document.getElementById(`card-v-${state.currentV}`);
-  if (activeCard) {
-    activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (activeCard && versesContainer) {
+    const cardTop = activeCard.offsetTop;
+    const containerTop = versesContainer.offsetTop;
+    versesContainer.scrollTo({
+      top: Math.max(0, cardTop - containerTop - 12),
+      behavior: 'smooth'
+    });
   }
 }
