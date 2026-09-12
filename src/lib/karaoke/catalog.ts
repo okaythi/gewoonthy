@@ -13,20 +13,28 @@ export function getLocalManifest(): SongMetadata[] {
 }
 
 /**
- * Fetches the list of video files physically uploaded to Cloudflare R2
+ * Fetches the list of video files and live lyrics overlays from Cloudflare R2
  */
-export async function fetchR2Videos(): Promise<string[] | null> {
+export async function fetchR2Data(): Promise<{ videoKeys: string[]; liveLyrics: Set<string> } | null> {
   try {
     const res = await fetch('/api/karaoke/videos');
     if (!res.ok) return null;
     const data = await res.json();
+    let videoList: (R2VideoItem | string)[] = [];
+    let liveLyricsList: string[] = [];
+
     if (Array.isArray(data)) {
-      return data.map((v: R2VideoItem | string) => typeof v === 'string' ? v : v.key);
+      videoList = data;
+    } else if (data && typeof data === 'object') {
+      if (Array.isArray(data.videos)) videoList = data.videos;
+      if (Array.isArray(data.liveLyrics)) liveLyricsList = data.liveLyrics;
     }
-    if (data && Array.isArray(data.videos)) {
-      return data.videos.map((v: R2VideoItem | string) => typeof v === 'string' ? v : v.key);
-    }
-    return null;
+
+    const videoKeys = videoList.map((v: R2VideoItem | string) => typeof v === 'string' ? v : v.key);
+    return {
+      videoKeys,
+      liveLyrics: new Set(liveLyricsList)
+    };
   } catch (err) {
     console.warn('[Karaoke Catalog] Failed to query /api/karaoke/videos, falling back to local list:', err);
     return null;
@@ -39,13 +47,14 @@ export async function fetchR2Videos(): Promise<string[] | null> {
 export { parseSongInfoFromFilename };
 
 /**
- * Returns the unified catalog combining R2 storage videos and Git lyrics
+ * Returns the unified catalog combining R2 storage videos, Git lyrics, and R2 live overlay lyrics
  */
 export async function loadCatalog(): Promise<SongCatalogItem[]> {
   const localSongs = getLocalManifest();
-  const r2VideoKeys = await fetchR2Videos();
+  const r2Data = await fetchR2Data();
 
-  const r2KeySet = r2VideoKeys ? new Set(r2VideoKeys) : null;
+  const r2KeySet = r2Data ? new Set(r2Data.videoKeys) : null;
+  const liveLyricsSet = r2Data ? r2Data.liveLyrics : new Set<string>();
   const knownVideoFiles = new Set(localSongs.map(s => s.videoFile));
 
   // 1. Process all songs registered in the Git manifest
@@ -59,12 +68,13 @@ export async function loadCatalog(): Promise<SongCatalogItem[]> {
     };
   });
 
-  // 2. Discover unsynced videos in R2 (videos on R2 that don't have lyrics in git)
-  if (r2VideoKeys) {
-    for (const videoKey of r2VideoKeys) {
+  // 2. Discover unsynced or live-synced videos in R2
+  if (r2Data) {
+    for (const videoKey of r2Data.videoKeys) {
       if (!knownVideoFiles.has(videoKey)) {
         const { artist, title } = parseSongInfoFromFilename(videoKey);
         const slug = canonicalSongId(artist, title);
+        const hasLyrics = liveLyricsSet.has(slug);
         catalog.push({
           id: slug,
           videoFile: videoKey,
@@ -74,7 +84,7 @@ export async function loadCatalog(): Promise<SongCatalogItem[]> {
           hasTranslation: false,
           isDialect: false,
           isOnR2: true,
-          hasLyrics: false,
+          hasLyrics,
           videoUrl: `https://cdn.sudothy.me/${encodeURIComponent(videoKey)}`
         });
       }
