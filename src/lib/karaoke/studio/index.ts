@@ -188,10 +188,13 @@ export async function bootstrapStudio(): Promise<void> {
     }
   });
 
-  // Save Master Button
-  els.btnSaveMaster.addEventListener('click', () => {
+  // Save Master Buttons
+  const triggerSave = () => {
     saveMaster(els, showToast, modalController.openExportModal, refreshDropdown);
-  });
+  };
+  els.btnSaveMaster.addEventListener('click', triggerSave);
+  els.btnSaveTelemetry?.addEventListener('click', triggerSave);
+  els.btnSaveDeck?.addEventListener('click', triggerSave);
 
   // Boot initial catalog
   try {

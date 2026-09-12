@@ -11,6 +11,35 @@ type StudioElements = ReturnType<typeof getStudioElements>;
 export function buildPayload(els: StudioElements): SaveLyricsPayload | null {
   if (!state.activeSong) return null;
 
+  // Auto-heal unclosed words and verse boundaries before contract validation
+  state.localLyrics.forEach((verse) => {
+    let maxWordEnd = 0;
+    verse.words.forEach((w, idx) => {
+      if (w.start > 0 && (!w.end || w.end <= w.start)) {
+        const next = verse.words[idx + 1];
+        if (next && next.start > w.start) {
+          w.end = next.start;
+        } else if (verse.verseEnd > w.start) {
+          w.end = verse.verseEnd;
+        } else {
+          w.end = parseFloat((w.start + 1.5).toFixed(3));
+        }
+      }
+      if (w.end && w.end > maxWordEnd) {
+        maxWordEnd = w.end;
+      }
+    });
+
+    if (verse.words.length > 0) {
+      if (verse.verseStart <= 0 && verse.words[0].start > 0) {
+        verse.verseStart = verse.words[0].start;
+      }
+      if (verse.verseEnd <= verse.verseStart) {
+        verse.verseEnd = parseFloat((Math.max(verse.verseStart + 1.0, maxWordEnd)).toFixed(3));
+      }
+    }
+  });
+
   return {
     id: els.metaId.value.trim() || state.activeSong.id,
     videoFile: state.activeSong.videoFile,

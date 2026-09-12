@@ -43,6 +43,8 @@ export function getStudioElements() {
     btnSeekFwd: document.getElementById('btn-seek-fwd') as HTMLButtonElement,
     btnWipe: document.getElementById('btn-wipe-timestamps') as HTMLButtonElement,
     btnSaveMaster: document.getElementById('btn-save-master') as HTMLButtonElement,
+    btnSaveTelemetry: document.getElementById('btn-save-telemetry') as HTMLButtonElement | null,
+    btnSaveDeck: document.getElementById('btn-save-deck') as HTMLButtonElement | null,
     btnExportJson: document.getElementById('btn-export-json') as HTMLButtonElement,
     btnShortcuts: document.getElementById('btn-shortcuts') as HTMLButtonElement,
     btnAddVerse: document.getElementById('btn-add-verse') as HTMLButtonElement,

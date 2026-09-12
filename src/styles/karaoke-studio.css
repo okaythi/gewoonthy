@@ -89,21 +89,33 @@ html, body {
   user-select: none;
   z-index: 20;
   gap: 8px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   min-width: 0;
   max-width: 100vw;
 }
-.top-bar::-webkit-scrollbar {
-  display: none;
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 1;
 }
 
-.top-left, .top-center, .top-right {
+.top-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.top-right {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .studio-brand {
@@ -974,12 +986,15 @@ video#studio-video {
 }
 
 /* Responsive Adaptive Layouts */
+@media (max-width: 1320px) {
+  .control-group {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   .studio-grid {
     grid-template-columns: 220px 1fr 340px;
-  }
-  .group-label {
-    display: none;
   }
 }
 

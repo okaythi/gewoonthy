@@ -53,7 +53,11 @@ export function initSyncEngine(
       // 4. Advance target indices
       state.currentW++;
       if (state.currentW >= verse.words.length) {
-        verse.verseEnd = parseFloat((time + 2.0).toFixed(3));
+        const lastWord = verse.words[stampedW];
+        if (lastWord && (!lastWord.end || lastWord.end <= lastWord.start)) {
+          lastWord.end = parseFloat((time + 1.5).toFixed(3));
+        }
+        verse.verseEnd = parseFloat(((lastWord?.end || time) + 0.5).toFixed(3));
         state.currentW = 0;
         state.currentV++;
       }
