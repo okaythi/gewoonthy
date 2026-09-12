@@ -21,7 +21,7 @@ export async function onRequest({ request, env, next }) {
   }
 
   // SPA ROUTING: Redirect all non-essential page loads to the root terminal UI
-  if (!normalizedPath.startsWith('/api') && !normalizedPath.startsWith('/media') && !normalizedPath.startsWith('/_astro') && !normalizedPath.startsWith('/sync-lyrics') && normalizedPath !== '/' && normalizedPath !== '/m') {
+  if (!normalizedPath.startsWith('/api') && !normalizedPath.startsWith('/media') && !normalizedPath.startsWith('/_astro') && !normalizedPath.startsWith('/admin') && normalizedPath !== '/' && normalizedPath !== '/m') {
     const rewriteReq = new Request(new URL(url.origin + '/'), request);
     return env.ASSETS.fetch(rewriteReq);
   }

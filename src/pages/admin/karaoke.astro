@@ -1,0 +1,343 @@
+---
+// Studio Karaoke Lyrics Synchronization Workstation
+import '../../styles/karaoke-studio.css';
+const pageTitle = "Karaoke Studio // Lyrics Sync Workstation";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdn.sudothy.me/fonts/ZenKurenaido-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.sudothy.me/fonts/NotoSansJP-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="app-viewport">
+    
+    <!-- Top Studio Control Deck -->
+    <header class="top-bar">
+      <div class="top-left">
+        <div class="studio-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-cyan);"><circle cx="12" cy="12" r="10"/><path d="M9 18V6l10 6-10 6z"/></svg>
+          KARAOKE // STUDIO
+          <span class="studio-badge" id="app-mode-badge">Workstation</span>
+        </div>
+
+        <button class="btn btn-secondary" id="btn-open-upload">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          + New Song / Upload
+        </button>
+
+        <div class="selector-container">
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="needs_sync">Needs Sync</button>
+            <button class="filter-btn" data-filter="synced">Synced</button>
+          </div>
+          <select id="track-selector" class="track-dropdown"></select>
+        </div>
+      </div>
+
+      <div class="top-center">
+        <div class="timecode-hud">
+          <span class="timecode-current" id="hud-current-time">00:00.000</span>
+          <span class="timecode-slash">/</span>
+          <span class="timecode-total" id="hud-total-time">00:00.000</span>
+        </div>
+
+        <div class="control-group">
+          <span class="group-label">Offset</span>
+          <button class="micro-btn" id="btn-offset-m100">-100ms</button>
+          <button class="micro-btn" id="btn-offset-m50">-50ms</button>
+          <span class="offset-val-display" id="offset-display">0.00s</span>
+          <button class="micro-btn" id="btn-offset-p50">+50ms</button>
+          <button class="micro-btn" id="btn-offset-p100">+100ms</button>
+        </div>
+
+        <div class="control-group">
+          <span class="group-label">Rate</span>
+          <button class="micro-btn" data-rate="0.5">0.5x</button>
+          <button class="micro-btn" data-rate="0.75">0.75x</button>
+          <button class="micro-btn active" data-rate="1.0">1.0x</button>
+          <button class="micro-btn" data-rate="1.25">1.25x</button>
+        </div>
+      </div>
+
+      <div class="top-right">
+        <button class="btn btn-secondary" id="btn-shortcuts" title="Keyboard Shortcuts (?)">
+          <kbd class="kbd-chip">?</kbd>
+        </button>
+        <button class="btn btn-secondary" id="btn-export-json" title="Export / Inspect JSON">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Export
+        </button>
+        <button class="btn btn-primary" id="btn-save-master">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Save (Ctrl+S)
+        </button>
+      </div>
+    </header>
+
+    <!-- Studio 3-Column Workstation Grid -->
+    <main class="studio-grid">
+
+      <!-- Left Column: Track Inspector & Metadata -->
+      <aside class="panel-left">
+        <div>
+          <div class="section-title">Track Artwork</div>
+          <div class="art-container">
+            <img id="track-art-img" class="art-image" src="" alt="Album Artwork" />
+            <div class="art-badge" id="art-status-badge">iTunes Auto-Match</div>
+          </div>
+        </div>
+
+        <div class="telemetry-card">
+          <div class="section-title" style="margin-bottom: 0;">Synchronization Progress</div>
+          <div class="sync-progress-bar">
+            <div class="sync-progress-fill" id="sync-progress-fill"></div>
+          </div>
+          <div class="telemetry-row">
+            <span class="telemetry-label">Words Timed</span>
+            <span class="telemetry-val" id="stats-words-timed">0 / 0 (0%)</span>
+          </div>
+          <div class="telemetry-row">
+            <span class="telemetry-label">Verses Count</span>
+            <span class="telemetry-val" id="stats-verses-count">0</span>
+          </div>
+          <div class="telemetry-row">
+            <span class="telemetry-label">R2 Video File</span>
+            <span class="telemetry-val" id="stats-r2-status" style="color: var(--accent-green);">Bound</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Song Metadata</div>
+          <div class="meta-form">
+            <div class="field-group">
+              <label class="field-label">Canonical ID</label>
+              <input type="text" id="meta-id" class="field-input" readonly />
+            </div>
+            <div class="field-group">
+              <label class="field-label">Track Title</label>
+              <input type="text" id="meta-title" class="field-input" placeholder="Title" />
+            </div>
+            <div class="field-group">
+              <label class="field-label">Artist Name</label>
+              <input type="text" id="meta-artist" class="field-input" placeholder="Artist" />
+            </div>
+            <div class="field-group">
+              <label class="field-label">iTunes Track Override (Cyrillic/JP)</label>
+              <input type="text" id="meta-itunes-track" class="field-input" placeholder="e.g. Плак-плак" />
+            </div>
+            <div class="field-group">
+              <label class="field-label">iTunes Artist Override</label>
+              <input type="text" id="meta-itunes-artist" class="field-input" placeholder="e.g. IC3PEAK" />
+            </div>
+
+            <div class="toggle-row">
+              <span class="toggle-label">Has Localized Translation</span>
+              <input type="checkbox" id="meta-has-translation" class="toggle-switch" />
+            </div>
+            <div class="toggle-row">
+              <span class="toggle-label">Is Dialect</span>
+              <input type="checkbox" id="meta-is-dialect" class="toggle-switch" />
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center Column: Video Monitor & Scrubber -->
+      <section class="panel-center">
+        <div class="video-viewport">
+          <video id="studio-video" src="" preload="auto" playsinline></video>
+          
+          <!-- Live Active Verse HUD -->
+          <div class="active-hud" id="active-hud" style="display: none;">
+            <div class="active-hud-words" id="active-hud-words"></div>
+            <div class="active-hud-translation" id="active-hud-translation"></div>
+          </div>
+        </div>
+
+        <!-- Scrubber Deck -->
+        <div class="transport-deck">
+          <div class="timeline-scrubber-track" id="timeline-track">
+            <div class="timeline-playhead" id="timeline-playhead"></div>
+            <div id="timeline-blocks-container"></div>
+          </div>
+
+          <div class="transport-controls">
+            <div class="transport-left">
+              <button class="btn btn-secondary" id="btn-play-pause">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <span id="play-pause-label">Play (K)</span>
+              </button>
+              <button class="micro-btn" id="btn-seek-back">-2s (J)</button>
+              <button class="micro-btn" id="btn-seek-fwd">+2s (L)</button>
+            </div>
+
+            <div class="transport-center">
+              <span style="color: var(--text-dim); font-size: 11px;">Tap-to-Sync: Focus right panel & tap <kbd class="kbd-chip">SPACE</kbd></span>
+            </div>
+
+            <div class="transport-right">
+              <button class="btn btn-danger" id="btn-wipe-timestamps">Wipe Timestamps</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right Column: Interactive Timing & Lyrics Matrix -->
+      <aside class="panel-right" tabindex="0" id="matrix-pane">
+        <div class="matrix-header">
+          <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">TIMING MATRIX</span>
+          <div class="matrix-tools">
+            <button class="micro-btn" id="btn-open-ingest">📋 Paste Raw / LRC</button>
+            <button class="micro-btn" id="btn-add-verse">+ Add Verse</button>
+          </div>
+        </div>
+
+        <!-- Verse Cards Scroll Area -->
+        <div class="verses-scroll-area" id="verses-container">
+          <!-- Populated dynamically by TypeScript engine -->
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <!-- Video Upload Modal -->
+  <div class="modal-overlay" id="upload-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">Upload Video to Cloudflare R2</div>
+        <button class="icon-btn" id="btn-close-upload">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 12px;">
+          Upload a new track video (.mp4 or .webm) directly to the <code class="kbd-chip">gewoonthy-media</code> R2 bucket. It will automatically enter the synchronization workflow.
+        </p>
+
+        <div class="field-group">
+          <label class="field-label">Select Video File</label>
+          <input type="file" id="upload-file-input" accept="video/mp4,video/webm,video/mkv" class="field-input" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Parsed Artist</label>
+          <input type="text" id="upload-artist-input" class="field-input" placeholder="Artist" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Parsed Title</label>
+          <input type="text" id="upload-title-input" class="field-input" placeholder="Title" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label">Canonical R2 Key</label>
+          <input type="text" id="upload-canonical-key" class="field-input" readonly />
+        </div>
+
+        <div id="upload-progress-container" style="display: none;">
+          <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+            <span id="upload-status-text">Uploading to R2...</span>
+            <span id="upload-pct-text">0%</span>
+          </div>
+          <div class="sync-progress-bar">
+            <div class="sync-progress-fill" id="upload-progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-cancel-upload">Cancel</button>
+        <button class="btn btn-primary" id="btn-start-upload">Start R2 Upload</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Raw Lyrics Ingestion Modal -->
+  <div class="modal-overlay" id="ingest-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">Raw Lyrics & LRC Parser</div>
+        <button class="icon-btn" id="btn-close-ingest">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 12px;">
+          Paste lyrics text or a synchronized LRC file. Each line becomes a verse. Furigana bracket syntax like <code class="kbd-chip">漢字[かんじ]</code> is automatically detected and parsed into Japanese ruby annotations.
+        </p>
+
+        <textarea id="raw-lyrics-input" class="field-input" style="height: 240px; font-family: var(--font-mono); font-size: 12px; resize: vertical;" placeholder="Paste raw song lyrics here...&#10;Line 1 will be Verse 1&#10;Line 2 will be Verse 2"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-cancel-ingest">Cancel</button>
+        <button class="btn btn-primary" id="btn-apply-ingest">Parse & Generate Verses</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal -->
+  <div class="modal-overlay" id="shortcuts-modal">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-header">
+        <div class="modal-title">Keyboard Workstation Shortcuts</div>
+        <button class="icon-btn" id="btn-close-shortcuts">✕</button>
+      </div>
+      <div class="modal-body">
+        <table class="shortcut-table">
+          <tbody>
+            <tr><td><kbd class="kbd-chip">SPACE</kbd></td><td>Stamp current word timing & advance to next word</td></tr>
+            <tr><td><kbd class="kbd-chip">BACKSPACE</kbd></td><td>Undo / wipe timing of current word</td></tr>
+            <tr><td><kbd class="kbd-chip">SHIFT</kbd> + <kbd class="kbd-chip">BACKSPACE</kbd></td><td>Delete current verse</td></tr>
+            <tr><td><kbd class="kbd-chip">TAB</kbd> / <kbd class="kbd-chip">SHIFT</kbd> + <kbd class="kbd-chip">TAB</kbd></td><td>Focus next / previous word without setting time</td></tr>
+            <tr><td><kbd class="kbd-chip">[</kbd> / <kbd class="kbd-chip">]</kbd></td><td>Nudge active word timing -50ms / +50ms</td></tr>
+            <tr><td><kbd class="kbd-chip">K</kbd></td><td>Play / Pause Video playback</td></tr>
+            <tr><td><kbd class="kbd-chip">J</kbd> / <kbd class="kbd-chip">L</kbd></td><td>Seek -2 seconds / +2 seconds</td></tr>
+            <tr><td><kbd class="kbd-chip">CTRL</kbd> + <kbd class="kbd-chip">S</kbd></td><td>Save all changes to JSON file & Manifest</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-dismiss-shortcuts">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Export JSON Modal -->
+  <div class="modal-overlay" id="export-modal">
+    <div class="modal-card" style="max-width: 680px;">
+      <div class="modal-header">
+        <div class="modal-title">Export Lyrics JSON (Zero Data Loss)</div>
+        <button class="icon-btn" id="btn-close-export">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-muted); font-size: 12px;">
+          Directly inspect or download the JSON payload for this track. Use this if saving offline or committing via git manually.
+        </p>
+        <textarea id="export-json-display" class="field-input" style="height: 280px; font-family: var(--font-mono); font-size: 11px; white-space: pre;" readonly></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="btn-copy-export">Copy JSON</button>
+        <button class="btn btn-primary" id="btn-download-export">Download &lt;id&gt;.json</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification HUD -->
+  <div class="toast-hud" id="toast-hud">
+    <div class="toast-dot" id="toast-dot"></div>
+    <span id="toast-message">Timings saved successfully</span>
+  </div>
+
+  <!-- Bootstrap Modular TypeScript Studio Engine -->
+  <script>
+    import '../../lib/karaoke/studio/index';
+  </script>
+</body>
+</html>

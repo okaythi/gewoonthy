@@ -1,0 +1,149 @@
+[
+  {
+    "id": "bmth-go-to-hell",
+    "videoFile": "Bring Me The Horizon - Go To Hell, For Heavens Sake.mp4",
+    "title": "Go To Hell, For Heavens Sake",
+    "artist": "Bring Me The Horizon",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "ic3peak-boo-hoo",
+    "videoFile": "IC3PEAK - Boo-Hoo.mp4",
+    "title": "Boo-Hoo",
+    "artist": "IC3PEAK",
+    "itunesTrack": "Плак-плак",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": true
+  },
+  {
+    "id": "kyary-kirakira-killer",
+    "videoFile": "きゃりーぱみゅぱみゅ - きらきらキラー.mp4",
+    "title": "きらきらキラー",
+    "artist": "きゃりーぱみゅぱみゅ",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "martelin-so-fe",
+    "videoFile": "MARTELIN - SÓ FÉ.mp4",
+    "title": "SÓ FÉ",
+    "artist": "MARTELIN",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "jessi-nunu-nana",
+    "videoFile": "Jessi (제시) - 눈누난나 (NUNU NANA.mp4",
+    "title": "눈누난나 (NUNU NANA)",
+    "artist": "Jessi (제시)",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "yame-becane",
+    "videoFile": "Yamê - Bécane.mp4",
+    "title": "Bécane",
+    "artist": "Yamê",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "gabrielle-5-fine-frokner",
+    "videoFile": "Gabrielle - 5 fine frøkner.mp4",
+    "title": "5 fine frøkner",
+    "artist": "Gabrielle",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "zaterdag",
+    "videoFile": "Zaterdag.mp4",
+    "title": "Zaterdag",
+    "artist": "Krapoel in Axe",
+    "globalOffset": 0,
+    "isDialect": true,
+    "hasTranslation": true
+  },
+  {
+    "id": "qw4rtz-joel-legendre",
+    "videoFile": "Joël Legendre à Soirée Canadienne.mp4",
+    "title": "M'en Revenant de Sainte-Hélène",
+    "artist": "QW4RTZ - Joël Legendre",
+    "itunesArtist": "QW4RTZ",
+    "itunesTrack": "M'en Revenant de Sainte-Hélène",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "luckhaos-e-a-uniao-flasco",
+    "videoFile": "LUCKHAOS - É a União Flasco.mp4",
+    "title": "É a União Flasco",
+    "artist": "LUCKHAOS",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "system-of-a-down-chop-suey",
+    "videoFile": "System Of A Down - Chop Suey!.mp4",
+    "title": "Chop Suey!",
+    "artist": "System Of A Down",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "grafgravers-van-de-g-no-de-h",
+    "videoFile": "Grafgravers - Van De G No De H.mp4",
+    "title": "Van De G No De H",
+    "artist": "Grafgravers",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "inori",
+    "videoFile": "INORI.mp4",
+    "title": "INORI",
+    "artist": "Unknown",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "videoclub-roi",
+    "videoFile": "VIDEOCLUB - Roi.mp4",
+    "title": "Roi",
+    "artist": "VIDEOCLUB",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "kero-kero-bonito-break",
+    "videoFile": "Kero Kero Bonito - Break.mp4",
+    "title": "Break",
+    "artist": "Kero Kero Bonito",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": false
+  },
+  {
+    "id": "a-vida-e-desafio",
+    "videoFile": "A Vida É Desafio.mp4",
+    "title": "A Vida É Desafio",
+    "artist": "Racionais MC's",
+    "globalOffset": 0,
+    "isDialect": false,
+    "hasTranslation": true
+  }
+]

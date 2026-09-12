@@ -1,0 +1,2167 @@
+{
+  "id": "videoclub-roi",
+  "videoFile": "VIDEOCLUB - Roi.mp4",
+  "title": "Roi",
+  "artist": "VIDEOCLUB",
+  "globalOffset": 0,
+  "isDialect": false,
+  "hasTranslation": false,
+  "lyricsData": [
+    {
+      "verseStart": 23.129,
+      "verseEnd": 25.214,
+      "words": [
+        {
+          "word": "T'en",
+          "start": 23.129,
+          "end": 23.252
+        },
+        {
+          "word": "trouveras",
+          "start": 23.252,
+          "end": 23.374
+        },
+        {
+          "word": "d'autres",
+          "start": 23.374,
+          "end": 23.577
+        },
+        {
+          "word": "des",
+          "start": 23.577,
+          "end": 23.74
+        },
+        {
+          "word": "mecs",
+          "start": 23.74,
+          "end": 24.065
+        },
+        {
+          "word": "comme",
+          "start": 24.065,
+          "end": 24.187
+        },
+        {
+          "word": "moi",
+          "start": 24.187,
+          "end": 25.214
+        }
+      ]
+    },
+    {
+      "verseStart": 25.214,
+      "verseEnd": 27.535,
+      "words": [
+        {
+          "word": "Y'en",
+          "start": 25.214,
+          "end": 25.337
+        },
+        {
+          "word": "aura",
+          "start": 25.337,
+          "end": 25.459
+        },
+        {
+          "word": "plein",
+          "start": 25.459,
+          "end": 25.58
+        },
+        {
+          "word": "des",
+          "start": 25.58,
+          "end": 25.864
+        },
+        {
+          "word": "gars",
+          "start": 25.864,
+          "end": 26.026
+        },
+        {
+          "word": "pour",
+          "start": 26.026,
+          "end": 26.312
+        },
+        {
+          "word": "toi",
+          "start": 26.312,
+          "end": 27.535
+        }
+      ]
+    },
+    {
+      "verseStart": 27.535,
+      "verseEnd": 29.667,
+      "words": [
+        {
+          "word": "Tes",
+          "start": 27.535,
+          "end": 27.668
+        },
+        {
+          "word": "boucles",
+          "start": 27.668,
+          "end": 27.831
+        },
+        {
+          "word": "brunes",
+          "start": 27.831,
+          "end": 28.075
+        },
+        {
+          "word": "s'évaporent",
+          "start": 28.075,
+          "end": 29.667
+        }
+      ]
+    },
+    {
+      "verseStart": 29.667,
+      "verseEnd": 32.034,
+      "words": [
+        {
+          "word": "Dans",
+          "start": 29.667,
+          "end": 29.83
+        },
+        {
+          "word": "mon",
+          "start": 29.83,
+          "end": 29.912
+        },
+        {
+          "word": "âme,",
+          "start": 29.912,
+          "end": 30.402
+        },
+        {
+          "word": "dans",
+          "start": 30.402,
+          "end": 30.482
+        },
+        {
+          "word": "mon",
+          "start": 30.482,
+          "end": 30.77
+        },
+        {
+          "word": "corps",
+          "start": 30.77,
+          "end": 32.034
+        }
+      ]
+    },
+    {
+      "verseStart": 32.034,
+      "verseEnd": 34.197,
+      "words": [
+        {
+          "word": "Je",
+          "start": 32.034,
+          "end": 32.157
+        },
+        {
+          "word": "te",
+          "start": 32.157,
+          "end": 32.28
+        },
+        {
+          "word": "cherche",
+          "start": 32.28,
+          "end": 32.567
+        },
+        {
+          "word": "dans",
+          "start": 32.567,
+          "end": 32.691
+        },
+        {
+          "word": "mes",
+          "start": 32.691,
+          "end": 32.854
+        },
+        {
+          "word": "songes,",
+          "start": 32.854,
+          "end": 33.097
+        },
+        {
+          "word": "je",
+          "start": 33.097,
+          "end": 33.219
+        },
+        {
+          "word": "te",
+          "start": 33.219,
+          "end": 33.382
+        },
+        {
+          "word": "traque",
+          "start": 33.382,
+          "end": 33.626
+        },
+        {
+          "word": "dans",
+          "start": 33.626,
+          "end": 33.748
+        },
+        {
+          "word": "mes",
+          "start": 33.748,
+          "end": 33.912
+        },
+        {
+          "word": "rêves",
+          "start": 33.912,
+          "end": 34.197
+        }
+      ]
+    },
+    {
+      "verseStart": 34.197,
+      "verseEnd": 36.414,
+      "words": [
+        {
+          "word": "À",
+          "start": 34.197,
+          "end": 34.323
+        },
+        {
+          "word": "l'aube",
+          "start": 34.323,
+          "end": 34.45
+        },
+        {
+          "word": "ou",
+          "start": 34.45,
+          "end": 34.616
+        },
+        {
+          "word": "dans",
+          "start": 34.616,
+          "end": 34.738
+        },
+        {
+          "word": "mon",
+          "start": 34.738,
+          "end": 34.86
+        },
+        {
+          "word": "ombre,",
+          "start": 34.86,
+          "end": 34.941
+        },
+        {
+          "word": "ère",
+          "start": 34.941,
+          "end": 35.307
+        },
+        {
+          "word": "en",
+          "start": 35.307,
+          "end": 35.47
+        },
+        {
+          "word": "vaine",
+          "start": 35.47,
+          "end": 35.714
+        },
+        {
+          "word": "sur",
+          "start": 35.714,
+          "end": 35.922
+        },
+        {
+          "word": "tes",
+          "start": 35.922,
+          "end": 36.044
+        },
+        {
+          "word": "lèvres",
+          "start": 36.044,
+          "end": 36.414
+        }
+      ]
+    },
+    {
+      "verseStart": 36.414,
+      "verseEnd": 38.543,
+      "words": [
+        {
+          "word": "Écorchant",
+          "start": 36.414,
+          "end": 36.905
+        },
+        {
+          "word": "les",
+          "start": 36.905,
+          "end": 37.027
+        },
+        {
+          "word": "abîmes",
+          "start": 37.027,
+          "end": 37.514
+        },
+        {
+          "word": "de",
+          "start": 37.514,
+          "end": 37.636
+        },
+        {
+          "word": "mon",
+          "start": 37.636,
+          "end": 37.801
+        },
+        {
+          "word": "cœur",
+          "start": 37.801,
+          "end": 38.131
+        },
+        {
+          "word": "écarlate",
+          "start": 38.131,
+          "end": 38.543
+        }
+      ]
+    },
+    {
+      "verseStart": 38.543,
+      "verseEnd": 40.789,
+      "words": [
+        {
+          "word": "Tu",
+          "start": 38.543,
+          "end": 38.746
+        },
+        {
+          "word": "n'es",
+          "start": 38.746,
+          "end": 38.869
+        },
+        {
+          "word": "que",
+          "start": 38.869,
+          "end": 39.032
+        },
+        {
+          "word": "le",
+          "start": 39.032,
+          "end": 39.194
+        },
+        {
+          "word": "point",
+          "start": 39.194,
+          "end": 39.315
+        },
+        {
+          "word": "fixe",
+          "start": 39.315,
+          "end": 39.518
+        },
+        {
+          "word": "de",
+          "start": 39.518,
+          "end": 39.721
+        },
+        {
+          "word": "mes",
+          "start": 39.721,
+          "end": 39.884
+        },
+        {
+          "word": "songes",
+          "start": 39.884,
+          "end": 40.175
+        },
+        {
+          "word": "disparates",
+          "start": 40.175,
+          "end": 40.789
+        }
+      ]
+    },
+    {
+      "verseStart": 40.789,
+      "verseEnd": 45.208,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 40.789,
+          "end": 41.331
+        },
+        {
+          "word": "dans",
+          "start": 41.331,
+          "end": 41.576
+        },
+        {
+          "word": "la",
+          "start": 41.576,
+          "end": 41.738
+        },
+        {
+          "word": "neige,",
+          "start": 41.738,
+          "end": 42.023
+        },
+        {
+          "word": "aime-moi",
+          "start": 42.023,
+          "end": 42.147
+        },
+        {
+          "word": "sous",
+          "start": 42.147,
+          "end": 42.472
+        },
+        {
+          "word": "l'soleil,",
+          "start": 42.472,
+          "end": 43.045
+        },
+        {
+          "word": "aime-moi",
+          "start": 43.045,
+          "end": 43.455
+        },
+        {
+          "word": "la",
+          "start": 43.455,
+          "end": 43.617
+        },
+        {
+          "word": "peau",
+          "start": 43.617,
+          "end": 43.739
+        },
+        {
+          "word": "beige",
+          "start": 43.739,
+          "end": 44.185
+        },
+        {
+          "word": "dans",
+          "start": 44.185,
+          "end": 44.307
+        },
+        {
+          "word": "les",
+          "start": 44.307,
+          "end": 44.47
+        },
+        {
+          "word": "fleurs",
+          "start": 44.47,
+          "end": 44.674
+        },
+        {
+          "word": "de",
+          "start": 44.674,
+          "end": 44.8
+        },
+        {
+          "word": "vermeilles",
+          "start": 44.8,
+          "end": 45.208
+        }
+      ]
+    },
+    {
+      "verseStart": 45.208,
+      "verseEnd": 47.338,
+      "words": [
+        {
+          "word": "J'vois",
+          "start": 45.208,
+          "end": 45.373
+        },
+        {
+          "word": "des",
+          "start": 45.373,
+          "end": 45.496
+        },
+        {
+          "word": "gens",
+          "start": 45.496,
+          "end": 45.66
+        },
+        {
+          "word": "qui",
+          "start": 45.66,
+          "end": 45.823
+        },
+        {
+          "word": "courent",
+          "start": 45.823,
+          "end": 46.068
+        },
+        {
+          "word": "nus,",
+          "start": 46.068,
+          "end": 46.354
+        },
+        {
+          "word": "j'vois",
+          "start": 46.354,
+          "end": 46.517
+        },
+        {
+          "word": "des",
+          "start": 46.517,
+          "end": 46.639
+        },
+        {
+          "word": "gens",
+          "start": 46.639,
+          "end": 46.802
+        },
+        {
+          "word": "qui",
+          "start": 46.802,
+          "end": 46.966
+        },
+        {
+          "word": "m'sourient",
+          "start": 46.966,
+          "end": 47.338
+        }
+      ]
+    },
+    {
+      "verseStart": 47.338,
+      "verseEnd": 49.751,
+      "words": [
+        {
+          "word": "Mais",
+          "start": 47.338,
+          "end": 47.543
+        },
+        {
+          "word": "moi",
+          "start": 47.543,
+          "end": 47.708
+        },
+        {
+          "word": "j'plane",
+          "start": 47.708,
+          "end": 47.873
+        },
+        {
+          "word": "dans",
+          "start": 47.873,
+          "end": 47.994
+        },
+        {
+          "word": "la",
+          "start": 47.994,
+          "end": 48.158
+        },
+        {
+          "word": "rue,",
+          "start": 48.158,
+          "end": 48.489
+        },
+        {
+          "word": "dans",
+          "start": 48.489,
+          "end": 48.651
+        },
+        {
+          "word": "tes",
+          "start": 48.651,
+          "end": 48.814
+        },
+        {
+          "word": "yeux,",
+          "start": 48.814,
+          "end": 49.018
+        },
+        {
+          "word": "sous",
+          "start": 49.018,
+          "end": 49.181
+        },
+        {
+          "word": "la",
+          "start": 49.181,
+          "end": 49.383
+        },
+        {
+          "word": "pluie",
+          "start": 49.383,
+          "end": 49.751
+        }
+      ]
+    },
+    {
+      "verseStart": 49.751,
+      "verseEnd": 54.131,
+      "words": [
+        {
+          "word": "Et",
+          "start": 49.751,
+          "end": 49.914
+        },
+        {
+          "word": "je",
+          "start": 49.914,
+          "end": 50.036
+        },
+        {
+          "word": "reste",
+          "start": 50.036,
+          "end": 50.24
+        },
+        {
+          "word": "l'esprit",
+          "start": 50.24,
+          "end": 50.491
+        },
+        {
+          "word": "de",
+          "start": 50.491,
+          "end": 50.657
+        },
+        {
+          "word": "tes",
+          "start": 50.657,
+          "end": 50.779
+        },
+        {
+          "word": "lointains",
+          "start": 50.779,
+          "end": 51.268
+        },
+        {
+          "word": "souvenirs,",
+          "start": 51.268,
+          "end": 51.512
+        },
+        {
+          "word": "dans",
+          "start": 51.512,
+          "end": 52.007
+        },
+        {
+          "word": "mes",
+          "start": 52.007,
+          "end": 52.17
+        },
+        {
+          "word": "songes",
+          "start": 52.17,
+          "end": 52.416
+        },
+        {
+          "word": "ensevelis,",
+          "start": 52.416,
+          "end": 52.986
+        },
+        {
+          "word": "tes",
+          "start": 52.986,
+          "end": 53.149
+        },
+        {
+          "word": "larmes,",
+          "start": 53.149,
+          "end": 53.516
+        },
+        {
+          "word": "tes",
+          "start": 53.516,
+          "end": 53.639
+        },
+        {
+          "word": "rires",
+          "start": 53.639,
+          "end": 54.131
+        }
+      ]
+    },
+    {
+      "verseStart": 54.131,
+      "verseEnd": 56.501,
+      "words": [
+        {
+          "word": "Tu",
+          "start": 54.131,
+          "end": 54.297
+        },
+        {
+          "word": "es",
+          "start": 54.297,
+          "end": 54.46
+        },
+        {
+          "word": "ma",
+          "start": 54.46,
+          "end": 54.665
+        },
+        {
+          "word": "femme",
+          "start": 54.665,
+          "end": 54.871
+        },
+        {
+          "word": "iconique,",
+          "start": 54.871,
+          "end": 55.361
+        },
+        {
+          "word": "tu",
+          "start": 55.361,
+          "end": 55.482
+        },
+        {
+          "word": "es",
+          "start": 55.482,
+          "end": 55.645
+        },
+        {
+          "word": "mon",
+          "start": 55.645,
+          "end": 55.766
+        },
+        {
+          "word": "rubis",
+          "start": 55.766,
+          "end": 55.972
+        },
+        {
+          "word": "saphir",
+          "start": 55.972,
+          "end": 56.501
+        }
+      ]
+    },
+    {
+      "verseStart": 56.501,
+      "verseEnd": 58.949,
+      "words": [
+        {
+          "word": "Je",
+          "start": 56.501,
+          "end": 56.663
+        },
+        {
+          "word": "suis",
+          "start": 56.663,
+          "end": 56.785
+        },
+        {
+          "word": "ta",
+          "start": 56.785,
+          "end": 56.907
+        },
+        {
+          "word": "rose",
+          "start": 56.907,
+          "end": 57.11
+        },
+        {
+          "word": "lyrique,",
+          "start": 57.11,
+          "end": 57.436
+        },
+        {
+          "word": "je",
+          "start": 57.436,
+          "end": 57.639
+        },
+        {
+          "word": "suis",
+          "start": 57.639,
+          "end": 57.802
+        },
+        {
+          "word": "ces",
+          "start": 57.802,
+          "end": 57.924
+        },
+        {
+          "word": "gens",
+          "start": 57.924,
+          "end": 58.085
+        },
+        {
+          "word": "qui",
+          "start": 58.085,
+          "end": 58.248
+        },
+        {
+          "word": "t'admirent",
+          "start": 58.248,
+          "end": 58.949
+        }
+      ]
+    },
+    {
+      "verseStart": 58.949,
+      "verseEnd": 68.013,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 58.949,
+          "end": 59.235
+        },
+        {
+          "word": "dans",
+          "start": 59.235,
+          "end": 60.094
+        },
+        {
+          "word": "la",
+          "start": 60.094,
+          "end": 60.216
+        },
+        {
+          "word": "neige,",
+          "start": 60.216,
+          "end": 60.991
+        },
+        {
+          "word": "aime-moi",
+          "start": 60.991,
+          "end": 61.888
+        },
+        {
+          "word": "sous",
+          "start": 61.888,
+          "end": 62.051
+        },
+        {
+          "word": "le",
+          "start": 62.051,
+          "end": 62.294
+        },
+        {
+          "word": "soleil,",
+          "start": 62.294,
+          "end": 63.047
+        },
+        {
+          "word": "aime-moi",
+          "start": 63.047,
+          "end": 64.31
+        },
+        {
+          "word": "la",
+          "start": 64.31,
+          "end": 64.512
+        },
+        {
+          "word": "peau",
+          "start": 64.512,
+          "end": 64.715
+        },
+        {
+          "word": "beige",
+          "start": 64.715,
+          "end": 65.454
+        },
+        {
+          "word": "dans",
+          "start": 65.454,
+          "end": 65.616
+        },
+        {
+          "word": "les",
+          "start": 65.616,
+          "end": 65.82
+        },
+        {
+          "word": "fleurs",
+          "start": 65.82,
+          "end": 66.634
+        },
+        {
+          "word": "de",
+          "start": 66.634,
+          "end": 66.801
+        },
+        {
+          "word": "vermeilles",
+          "start": 66.801,
+          "end": 68.013
+        }
+      ]
+    },
+    {
+      "verseStart": 68.013,
+      "verseEnd": 76.491,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 68.013,
+          "end": 68.745
+        },
+        {
+          "word": "dans",
+          "start": 68.745,
+          "end": 68.95
+        },
+        {
+          "word": "la",
+          "start": 68.95,
+          "end": 69.113
+        },
+        {
+          "word": "neige,",
+          "start": 69.113,
+          "end": 69.889
+        },
+        {
+          "word": "aime-moi",
+          "start": 69.889,
+          "end": 70.743
+        },
+        {
+          "word": "sous",
+          "start": 70.743,
+          "end": 70.906
+        },
+        {
+          "word": "le",
+          "start": 70.906,
+          "end": 71.111
+        },
+        {
+          "word": "soleil,",
+          "start": 71.111,
+          "end": 72.214
+        },
+        {
+          "word": "aime-moi",
+          "start": 72.214,
+          "end": 73.286
+        },
+        {
+          "word": "la",
+          "start": 73.286,
+          "end": 73.492
+        },
+        {
+          "word": "peau",
+          "start": 73.492,
+          "end": 73.695
+        },
+        {
+          "word": "beige",
+          "start": 73.695,
+          "end": 74.512
+        },
+        {
+          "word": "dans",
+          "start": 74.512,
+          "end": 74.679
+        },
+        {
+          "word": "les",
+          "start": 74.679,
+          "end": 74.843
+        },
+        {
+          "word": "fleurs",
+          "start": 74.843,
+          "end": 75.589
+        },
+        {
+          "word": "de",
+          "start": 75.589,
+          "end": 75.793
+        },
+        {
+          "word": "vermeilles",
+          "start": 75.793,
+          "end": 76.491
+        }
+      ]
+    },
+    {
+      "verseStart": 76.491,
+      "verseEnd": 80.754,
+      "words": [
+        {
+          "word": "Des",
+          "start": 76.491,
+          "end": 76.721
+        },
+        {
+          "word": "jours",
+          "start": 76.721,
+          "end": 76.847
+        },
+        {
+          "word": "durant,",
+          "start": 76.847,
+          "end": 77.84
+        },
+        {
+          "word": "fuyant",
+          "start": 77.84,
+          "end": 78.125
+        },
+        {
+          "word": "la",
+          "start": 78.125,
+          "end": 78.248
+        },
+        {
+          "word": "nuit,",
+          "start": 78.248,
+          "end": 78.535
+        },
+        {
+          "word": "j'parcours",
+          "start": 78.535,
+          "end": 78.657
+        },
+        {
+          "word": "ta",
+          "start": 78.657,
+          "end": 78.782
+        },
+        {
+          "word": "peau,",
+          "start": 78.782,
+          "end": 79.768
+        },
+        {
+          "word": "j'parcours",
+          "start": 79.768,
+          "end": 79.891
+        },
+        {
+          "word": "la",
+          "start": 79.891,
+          "end": 80.305
+        },
+        {
+          "word": "ville",
+          "start": 80.305,
+          "end": 80.754
+        }
+      ]
+    },
+    {
+      "verseStart": 80.754,
+      "verseEnd": 83.298,
+      "words": [
+        {
+          "word": "La",
+          "start": 80.754,
+          "end": 80.923
+        },
+        {
+          "word": "fumée",
+          "start": 80.923,
+          "end": 81.129
+        },
+        {
+          "word": "suave",
+          "start": 81.129,
+          "end": 81.457
+        },
+        {
+          "word": "de",
+          "start": 81.457,
+          "end": 81.621
+        },
+        {
+          "word": "ta",
+          "start": 81.621,
+          "end": 81.743
+        },
+        {
+          "word": "bouche,",
+          "start": 81.743,
+          "end": 81.988
+        },
+        {
+          "word": "file,",
+          "start": 81.988,
+          "end": 82.192
+        },
+        {
+          "word": "s'échappe",
+          "start": 82.192,
+          "end": 82.314
+        },
+        {
+          "word": "de",
+          "start": 82.314,
+          "end": 82.641
+        },
+        {
+          "word": "jours",
+          "start": 82.641,
+          "end": 82.805
+        },
+        {
+          "word": "en",
+          "start": 82.805,
+          "end": 83.011
+        },
+        {
+          "word": "jours",
+          "start": 83.011,
+          "end": 83.298
+        }
+      ]
+    },
+    {
+      "verseStart": 83.298,
+      "verseEnd": 85.596,
+      "words": [
+        {
+          "word": "Quand",
+          "start": 83.298,
+          "end": 83.461
+        },
+        {
+          "word": "je",
+          "start": 83.461,
+          "end": 83.584
+        },
+        {
+          "word": "râle",
+          "start": 83.584,
+          "end": 83.747
+        },
+        {
+          "word": "dans",
+          "start": 83.747,
+          "end": 83.874
+        },
+        {
+          "word": "la",
+          "start": 83.874,
+          "end": 84.042
+        },
+        {
+          "word": "nuit,",
+          "start": 84.042,
+          "end": 84.331
+        },
+        {
+          "word": "je",
+          "start": 84.331,
+          "end": 84.496
+        },
+        {
+          "word": "suis",
+          "start": 84.496,
+          "end": 84.659
+        },
+        {
+          "word": "seule",
+          "start": 84.659,
+          "end": 84.823
+        },
+        {
+          "word": "sous",
+          "start": 84.823,
+          "end": 85.067
+        },
+        {
+          "word": "mes",
+          "start": 85.067,
+          "end": 85.23
+        },
+        {
+          "word": "vices",
+          "start": 85.23,
+          "end": 85.596
+        }
+      ]
+    },
+    {
+      "verseStart": 85.596,
+      "verseEnd": 90.289,
+      "words": [
+        {
+          "word": "Je",
+          "start": 85.596,
+          "end": 85.806
+        },
+        {
+          "word": "t'aime",
+          "start": 85.806,
+          "end": 86.061
+        },
+        {
+          "word": "quand",
+          "start": 86.061,
+          "end": 86.265
+        },
+        {
+          "word": "il",
+          "start": 86.265,
+          "end": 86.591
+        },
+        {
+          "word": "pleut",
+          "start": 86.591,
+          "end": 86.795
+        },
+        {
+          "word": "tu",
+          "start": 86.795,
+          "end": 86.958
+        },
+        {
+          "word": "es",
+          "start": 86.958,
+          "end": 87.081
+        },
+        {
+          "word": "la",
+          "start": 87.081,
+          "end": 87.204
+        },
+        {
+          "word": "nymphe",
+          "start": 87.204,
+          "end": 87.286
+        },
+        {
+          "word": "de",
+          "start": 87.286,
+          "end": 87.491
+        },
+        {
+          "word": "mes",
+          "start": 87.491,
+          "end": 87.655
+        },
+        {
+          "word": "vœux,",
+          "start": 87.655,
+          "end": 87.984
+        },
+        {
+          "word": "je",
+          "start": 87.984,
+          "end": 88.147
+        },
+        {
+          "word": "t'embrasse",
+          "start": 88.147,
+          "end": 88.27
+        },
+        {
+          "word": "dans",
+          "start": 88.27,
+          "end": 88.472
+        },
+        {
+          "word": "mes",
+          "start": 88.472,
+          "end": 88.681
+        },
+        {
+          "word": "rêves",
+          "start": 88.681,
+          "end": 89.051
+        },
+        {
+          "word": "et",
+          "start": 89.051,
+          "end": 89.215
+        },
+        {
+          "word": "je",
+          "start": 89.215,
+          "end": 89.378
+        },
+        {
+          "word": "t'aime",
+          "start": 89.378,
+          "end": 89.546
+        },
+        {
+          "word": "au",
+          "start": 89.546,
+          "end": 89.673
+        },
+        {
+          "word": "bout",
+          "start": 89.673,
+          "end": 89.835
+        },
+        {
+          "word": "des",
+          "start": 89.835,
+          "end": 90.003
+        },
+        {
+          "word": "lèvres",
+          "start": 90.003,
+          "end": 90.289
+        }
+      ]
+    },
+    {
+      "verseStart": 90.289,
+      "verseEnd": 92.497,
+      "words": [
+        {
+          "word": "Je",
+          "start": 90.289,
+          "end": 90.412
+        },
+        {
+          "word": "déteste",
+          "start": 90.412,
+          "end": 90.615
+        },
+        {
+          "word": "le",
+          "start": 90.615,
+          "end": 90.778
+        },
+        {
+          "word": "gout",
+          "start": 90.778,
+          "end": 90.9
+        },
+        {
+          "word": "mièvre",
+          "start": 90.9,
+          "end": 91.023
+        },
+        {
+          "word": "de",
+          "start": 91.023,
+          "end": 91.348
+        },
+        {
+          "word": "leurs",
+          "start": 91.348,
+          "end": 91.512
+        },
+        {
+          "word": "bouches,",
+          "start": 91.512,
+          "end": 91.841
+        },
+        {
+          "word": "de",
+          "start": 91.841,
+          "end": 92.046
+        },
+        {
+          "word": "leurs",
+          "start": 92.046,
+          "end": 92.17
+        },
+        {
+          "word": "rêves",
+          "start": 92.17,
+          "end": 92.497
+        }
+      ]
+    },
+    {
+      "verseStart": 92.497,
+      "verseEnd": 94.973,
+      "words": [
+        {
+          "word": "Dans",
+          "start": 92.497,
+          "end": 92.664
+        },
+        {
+          "word": "la",
+          "start": 92.664,
+          "end": 92.827
+        },
+        {
+          "word": "nuit",
+          "start": 92.827,
+          "end": 92.952
+        },
+        {
+          "word": "tu",
+          "start": 92.952,
+          "end": 93.074
+        },
+        {
+          "word": "me",
+          "start": 93.074,
+          "end": 93.156
+        },
+        {
+          "word": "regardes,",
+          "start": 93.156,
+          "end": 93.323
+        },
+        {
+          "word": "sous",
+          "start": 93.323,
+          "end": 93.74
+        },
+        {
+          "word": "les",
+          "start": 93.74,
+          "end": 93.903
+        },
+        {
+          "word": "nuages",
+          "start": 93.903,
+          "end": 94.229
+        },
+        {
+          "word": "je",
+          "start": 94.229,
+          "end": 94.351
+        },
+        {
+          "word": "divague",
+          "start": 94.351,
+          "end": 94.973
+        }
+      ]
+    },
+    {
+      "verseStart": 94.973,
+      "verseEnd": 95.834,
+      "words": [
+        {
+          "word": "Avec",
+          "start": 94.973,
+          "end": 95.096
+        },
+        {
+          "word": "toi",
+          "start": 95.096,
+          "end": 95.263
+        },
+        {
+          "word": "je",
+          "start": 95.263,
+          "end": 95.427
+        },
+        {
+          "word": "suis",
+          "start": 95.427,
+          "end": 95.59
+        },
+        {
+          "word": "roi",
+          "start": 95.59,
+          "end": 95.834
+        }
+      ]
+    },
+    {
+      "verseStart": 95.834,
+      "verseEnd": 96.694,
+      "words": [
+        {
+          "word": "Toi",
+          "start": 95.834,
+          "end": 95.957
+        },
+        {
+          "word": "je",
+          "start": 95.957,
+          "end": 96.081
+        },
+        {
+          "word": "suis",
+          "start": 96.081,
+          "end": 96.204
+        },
+        {
+          "word": "roi",
+          "start": 96.204,
+          "end": 96.694
+        }
+      ]
+    },
+    {
+      "verseStart": 96.694,
+      "verseEnd": 97.804,
+      "words": [
+        {
+          "word": "Toi",
+          "start": 96.694,
+          "end": 96.979
+        },
+        {
+          "word": "je",
+          "start": 96.979,
+          "end": 97.102
+        },
+        {
+          "word": "suis",
+          "start": 97.102,
+          "end": 97.226
+        },
+        {
+          "word": "roi",
+          "start": 97.226,
+          "end": 97.804
+        }
+      ]
+    },
+    {
+      "verseStart": 97.804,
+      "verseEnd": 112.221,
+      "words": [
+        {
+          "word": "Toi",
+          "start": 97.804,
+          "end": 98.098
+        },
+        {
+          "word": "je",
+          "start": 98.098,
+          "end": 98.261
+        },
+        {
+          "word": "suis",
+          "start": 98.261,
+          "end": 98.423
+        },
+        {
+          "word": "roi",
+          "start": 98.423,
+          "end": 112.221
+        }
+      ]
+    },
+    {
+      "verseStart": 112.221,
+      "verseEnd": 121.007,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 112.221,
+          "end": 113.248
+        },
+        {
+          "word": "dans",
+          "start": 113.248,
+          "end": 113.454
+        },
+        {
+          "word": "la",
+          "start": 113.454,
+          "end": 113.623
+        },
+        {
+          "word": "neige,",
+          "start": 113.623,
+          "end": 114.316
+        },
+        {
+          "word": "aime-moi",
+          "start": 114.316,
+          "end": 115.141
+        },
+        {
+          "word": "sous",
+          "start": 115.141,
+          "end": 115.324
+        },
+        {
+          "word": "le",
+          "start": 115.324,
+          "end": 115.577
+        },
+        {
+          "word": "soleil,",
+          "start": 115.577,
+          "end": 116.473
+        },
+        {
+          "word": "aime-moi",
+          "start": 116.473,
+          "end": 117.618
+        },
+        {
+          "word": "la",
+          "start": 117.618,
+          "end": 117.781
+        },
+        {
+          "word": "peau",
+          "start": 117.781,
+          "end": 117.984
+        },
+        {
+          "word": "beige",
+          "start": 117.984,
+          "end": 118.715
+        },
+        {
+          "word": "dans",
+          "start": 118.715,
+          "end": 118.919
+        },
+        {
+          "word": "les",
+          "start": 118.919,
+          "end": 119.456
+        },
+        {
+          "word": "fleurs",
+          "start": 119.456,
+          "end": 119.945
+        },
+        {
+          "word": "de",
+          "start": 119.945,
+          "end": 120.108
+        },
+        {
+          "word": "vermeilles",
+          "start": 120.108,
+          "end": 121.007
+        }
+      ]
+    },
+    {
+      "verseStart": 121.007,
+      "verseEnd": 129.882,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 121.007,
+          "end": 122.108
+        },
+        {
+          "word": "dans",
+          "start": 122.108,
+          "end": 122.272
+        },
+        {
+          "word": "la",
+          "start": 122.272,
+          "end": 122.476
+        },
+        {
+          "word": "neige,",
+          "start": 122.476,
+          "end": 123.255
+        },
+        {
+          "word": "aime-moi",
+          "start": 123.255,
+          "end": 123.989
+        },
+        {
+          "word": "sous",
+          "start": 123.989,
+          "end": 124.195
+        },
+        {
+          "word": "le",
+          "start": 124.195,
+          "end": 124.443
+        },
+        {
+          "word": "soleil,",
+          "start": 124.443,
+          "end": 125.505
+        },
+        {
+          "word": "aime-moi",
+          "start": 125.505,
+          "end": 126.534
+        },
+        {
+          "word": "la",
+          "start": 126.534,
+          "end": 126.739
+        },
+        {
+          "word": "peau",
+          "start": 126.739,
+          "end": 126.943
+        },
+        {
+          "word": "beige",
+          "start": 126.943,
+          "end": 127.715
+        },
+        {
+          "word": "dans",
+          "start": 127.715,
+          "end": 127.878
+        },
+        {
+          "word": "les",
+          "start": 127.878,
+          "end": 128.206
+        },
+        {
+          "word": "fleurs",
+          "start": 128.206,
+          "end": 128.817
+        },
+        {
+          "word": "de",
+          "start": 128.817,
+          "end": 128.98
+        },
+        {
+          "word": "vermeilles",
+          "start": 128.98,
+          "end": 129.882
+        }
+      ]
+    },
+    {
+      "verseStart": 129.882,
+      "verseEnd": 131.944,
+      "words": [
+        {
+          "word": "J'suis",
+          "start": 129.882,
+          "end": 130.005
+        },
+        {
+          "word": "un",
+          "start": 130.005,
+          "end": 130.176
+        },
+        {
+          "word": "garçon",
+          "start": 130.176,
+          "end": 130.38
+        },
+        {
+          "word": "de",
+          "start": 130.38,
+          "end": 130.544
+        },
+        {
+          "word": "la",
+          "start": 130.544,
+          "end": 130.708
+        },
+        {
+          "word": "nuit,",
+          "start": 130.708,
+          "end": 130.871
+        },
+        {
+          "word": "moi",
+          "start": 130.871,
+          "end": 131.075
+        },
+        {
+          "word": "je",
+          "start": 131.075,
+          "end": 131.243
+        },
+        {
+          "word": "laisse",
+          "start": 131.243,
+          "end": 131.366
+        },
+        {
+          "word": "tomber",
+          "start": 131.366,
+          "end": 131.531
+        },
+        {
+          "word": "les",
+          "start": 131.531,
+          "end": 131.696
+        },
+        {
+          "word": "filles",
+          "start": 131.696,
+          "end": 131.944
+        }
+      ]
+    },
+    {
+      "verseStart": 131.944,
+      "verseEnd": 138.6,
+      "words": [
+        {
+          "word": "Je",
+          "start": 131.944,
+          "end": 132.05
+        },
+        {
+          "word": "n'aime",
+          "start": 132.05,
+          "end": 132.214
+        },
+        {
+          "word": "que",
+          "start": 132.214,
+          "end": 132.378
+        },
+        {
+          "word": "tes",
+          "start": 132.378,
+          "end": 132.543
+        },
+        {
+          "word": "bas",
+          "start": 132.543,
+          "end": 132.706
+        },
+        {
+          "word": "résilles",
+          "start": 132.706,
+          "end": 133.074
+        },
+        {
+          "word": "qui",
+          "start": 133.074,
+          "end": 133.237
+        },
+        {
+          "word": "dans",
+          "start": 133.237,
+          "end": 133.401
+        },
+        {
+          "word": "mes",
+          "start": 133.401,
+          "end": 133.564
+        },
+        {
+          "word": "pensées",
+          "start": 133.564,
+          "end": 133.732
+        },
+        {
+          "word": "grésillent",
+          "start": 133.732,
+          "end": 138.6
+        }
+      ]
+    },
+    {
+      "verseStart": 138.6,
+      "verseEnd": 140.826,
+      "words": [
+        {
+          "word": "J'suis",
+          "start": 138.6,
+          "end": 138.766
+        },
+        {
+          "word": "un",
+          "start": 138.766,
+          "end": 138.892
+        },
+        {
+          "word": "garçon",
+          "start": 138.892,
+          "end": 139.058
+        },
+        {
+          "word": "de",
+          "start": 139.058,
+          "end": 139.14
+        },
+        {
+          "word": "la",
+          "start": 139.14,
+          "end": 139.263
+        },
+        {
+          "word": "nuit,",
+          "start": 139.263,
+          "end": 139.716
+        },
+        {
+          "word": "moi",
+          "start": 139.716,
+          "end": 139.838
+        },
+        {
+          "word": "je",
+          "start": 139.838,
+          "end": 140.046
+        },
+        {
+          "word": "laisse",
+          "start": 140.046,
+          "end": 140.21
+        },
+        {
+          "word": "tomber",
+          "start": 140.21,
+          "end": 140.374
+        },
+        {
+          "word": "les",
+          "start": 140.374,
+          "end": 140.537
+        },
+        {
+          "word": "filles",
+          "start": 140.537,
+          "end": 140.826
+        }
+      ]
+    },
+    {
+      "verseStart": 140.826,
+      "verseEnd": 147.76,
+      "words": [
+        {
+          "word": "Je",
+          "start": 140.826,
+          "end": 140.989
+        },
+        {
+          "word": "n'aime",
+          "start": 140.989,
+          "end": 141.153
+        },
+        {
+          "word": "que",
+          "start": 141.153,
+          "end": 141.276
+        },
+        {
+          "word": "tes",
+          "start": 141.276,
+          "end": 141.403
+        },
+        {
+          "word": "bas",
+          "start": 141.403,
+          "end": 141.529
+        },
+        {
+          "word": "résilles",
+          "start": 141.529,
+          "end": 141.936
+        },
+        {
+          "word": "qui",
+          "start": 141.936,
+          "end": 142.103
+        },
+        {
+          "word": "dans",
+          "start": 142.103,
+          "end": 142.225
+        },
+        {
+          "word": "mes",
+          "start": 142.225,
+          "end": 142.39
+        },
+        {
+          "word": "pensées",
+          "start": 142.39,
+          "end": 142.557
+        },
+        {
+          "word": "grésillent",
+          "start": 142.557,
+          "end": 147.76
+        }
+      ]
+    },
+    {
+      "verseStart": 147.76,
+      "verseEnd": 152.187,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 147.76,
+          "end": 148.873
+        },
+        {
+          "word": "dans",
+          "start": 148.873,
+          "end": 148.996
+        },
+        {
+          "word": "la",
+          "start": 148.996,
+          "end": 149.205
+        },
+        {
+          "word": "neige,",
+          "start": 149.205,
+          "end": 150.02
+        },
+        {
+          "word": "aime-moi",
+          "start": 150.02,
+          "end": 150.957
+        },
+        {
+          "word": "sous",
+          "start": 150.957,
+          "end": 151.079
+        },
+        {
+          "word": "le",
+          "start": 151.079,
+          "end": 151.325
+        },
+        {
+          "word": "soleil",
+          "start": 151.325,
+          "end": 152.187
+        }
+      ]
+    },
+    {
+      "verseStart": 152.187,
+      "verseEnd": 156.737,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 152.187,
+          "end": 153.376
+        },
+        {
+          "word": "la",
+          "start": 153.376,
+          "end": 153.499
+        },
+        {
+          "word": "peau",
+          "start": 153.499,
+          "end": 153.663
+        },
+        {
+          "word": "beige",
+          "start": 153.663,
+          "end": 154.485
+        },
+        {
+          "word": "dans",
+          "start": 154.485,
+          "end": 154.649
+        },
+        {
+          "word": "les",
+          "start": 154.649,
+          "end": 154.771
+        },
+        {
+          "word": "fleurs",
+          "start": 154.771,
+          "end": 155.544
+        },
+        {
+          "word": "de",
+          "start": 155.544,
+          "end": 155.667
+        },
+        {
+          "word": "vermeille",
+          "start": 155.667,
+          "end": 156.737
+        }
+      ]
+    },
+    {
+      "verseStart": 156.737,
+      "verseEnd": 160.998,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 156.737,
+          "end": 157.796
+        },
+        {
+          "word": "dans",
+          "start": 157.796,
+          "end": 157.935
+        },
+        {
+          "word": "la",
+          "start": 157.935,
+          "end": 158.18
+        },
+        {
+          "word": "neige,",
+          "start": 158.18,
+          "end": 158.751
+        },
+        {
+          "word": "aime-moi",
+          "start": 158.751,
+          "end": 159.611
+        },
+        {
+          "word": "sous",
+          "start": 159.611,
+          "end": 159.774
+        },
+        {
+          "word": "le",
+          "start": 159.774,
+          "end": 160.018
+        },
+        {
+          "word": "soleil",
+          "start": 160.018,
+          "end": 160.998
+        }
+      ]
+    },
+    {
+      "verseStart": 160.998,
+      "verseEnd": 166.425,
+      "words": [
+        {
+          "word": "Aime-moi",
+          "start": 160.998,
+          "end": 162.184
+        },
+        {
+          "word": "la",
+          "start": 162.184,
+          "end": 162.307
+        },
+        {
+          "word": "peau",
+          "start": 162.307,
+          "end": 162.55
+        },
+        {
+          "word": "beige",
+          "start": 162.55,
+          "end": 163.201
+        },
+        {
+          "word": "dans",
+          "start": 163.201,
+          "end": 163.364
+        },
+        {
+          "word": "les",
+          "start": 163.364,
+          "end": 163.527
+        },
+        {
+          "word": "fleurs",
+          "start": 163.527,
+          "end": 164.262
+        },
+        {
+          "word": "de",
+          "start": 164.262,
+          "end": 164.425
+        },
+        {
+          "word": "vermeille",
+          "start": 164.425,
+          "end": 0
+        }
+      ]
+    }
+  ]
+}

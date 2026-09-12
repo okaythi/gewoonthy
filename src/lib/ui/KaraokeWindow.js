@@ -1,5 +1,5 @@
 import { windowManager } from '../WindowManager.js';
-import { songsDictionary } from '../../data/lyrics.ts';
+import { loadCatalog, loadLyrics } from '../karaoke/catalog.ts';
 import { localesFetcher } from '../LocalesFetcher.js';
 import { authManager, AuthState } from '../auth.js';
 
@@ -9,7 +9,8 @@ export const openKaraokeWindow = async () => {
     failed_load: 'Failed to load markdown content.'
   };
 
-  const availableSongs = Object.keys(songsDictionary).sort((a, b) => a.localeCompare(b));
+  const catalog = await loadCatalog();
+  const availableSongs = catalog.filter(s => s.isOnR2 && s.hasLyrics);
   
   let leftSidebarHTML = `
     <div class="karaoke-sidebar" style="width: 250px; border-right: 1px solid var(--ubu-border); background: var(--ubu-bg); display: flex; flex-direction: column; overflow-y: auto;">
@@ -21,35 +22,13 @@ export const openKaraokeWindow = async () => {
       </div>
   `;
 
-  availableSongs.forEach(songFile => {
-    let songName = songFile.split(' - ')[1]?.replace('.mp4', '') || songFile.replace('.mp4', '');
-    let artistName = songFile.split(' - ')[0] || 'Unknown';
-    let queryArtist = artistName;
-    let queryTrack = songName;
+  availableSongs.forEach(song => {
+    const queryArtist = song.itunesArtist || song.artist;
+    const queryTrack = song.itunesTrack || song.title;
 
-    if (songFile === 'Zaterdag.mp4') {
-      songName = 'Zaterdag';
-      artistName = 'Krapoel in Axe';
-      queryArtist = 'Krapoel in Axe';
-      queryTrack = 'Zaterdag';
-    } else if (songFile === 'Joël Legendre à Soirée Canadienne.mp4') {
-      songName = "M'en Revenant de Sainte-Hélène";
-      artistName = "QW4RTZ - Joël Legendre";
-      queryArtist = "QW4RTZ";
-      queryTrack = "M'en Revenant de Sainte-Hélène";
-    } else if (songFile === 'A Vida É Desafio.mp4') {
-      songName = "A Vida É Desafio";
-      artistName = "Racionais MC's";
-      queryArtist = "Racionais MC's";
-      queryTrack = "A Vida É Desafio";
-    }
-
-    const hasTranslation = songsDictionary[songFile]?.lyricsData?.some(v => v.translation);
-    const isDialect = songsDictionary[songFile]?.isDialect;
-    
     let globeBadge = '';
-    if (hasTranslation) {
-      if (isDialect) {
+    if (song.hasTranslation) {
+      if (song.isDialect) {
         globeBadge = `<div title="Contains dialect localization" style="display: flex; align-items: center; justify-content: center; margin-left: auto;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E95420" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M 8 4 L 4 4 L 4 20 L 8 20 M 14 4 L 20 12 L 14 20" />
@@ -66,13 +45,12 @@ export const openKaraokeWindow = async () => {
       }
     }
 
-    // We will dynamically fetch the image later, for now we leave an img tag with a placeholder that will be updated
     leftSidebarHTML += `
-      <div class="song-item" data-song="${songFile}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
+      <div class="song-item" data-song="${song.id}" style="padding: 10px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px;">
         <img class="song-art" data-artist="${encodeURIComponent(queryArtist)}" data-track="${encodeURIComponent(queryTrack)}" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10'/><circle cx='12' cy='12' r='3'/></svg>';" style="width: 40px; height: 40px; border-radius: 4px; object-fit: cover;" />
         <div style="overflow: hidden; flex: 1;">
-          <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${songName}</div>
-          <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${artistName}</div>
+          <div style="font-weight: bold; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${song.title}</div>
+          <div style="font-size: 12px; opacity: 0.7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${song.artist}</div>
         </div>
         ${globeBadge}
       </div>
@@ -212,7 +190,11 @@ export const openKaraokeWindow = async () => {
     return null;
   };
 
-  const renderPlayer = (songFile) => {
+  const renderPlayer = async (songIdentifier) => {
+    const song = availableSongs.find(s => s.id === songIdentifier || s.videoFile === songIdentifier);
+    if (!song) return;
+    const songFile = song.videoFile;
+
     // Basic structure for video player, porting from production
     mainView.innerHTML = `
       <div class="karaoke-player-container" style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; overflow: hidden;">
@@ -352,18 +334,19 @@ export const openKaraokeWindow = async () => {
     btnDislike.addEventListener('click', () => castVote('dislike'));
 
     btnShuffle.addEventListener('click', () => {
-      const remaining = availableSongs.filter(s => s !== songFile);
+      const remaining = availableSongs.filter(s => s.id !== song.id);
       if(remaining.length > 0) {
         const next = remaining[Math.floor(Math.random() * remaining.length)];
-        songItems.forEach(t => t.style.background = t.dataset.song === next ? 'rgba(255,255,255,0.1)' : 'transparent');
-        renderPlayer(next);
+        songItems.forEach(t => t.style.background = t.dataset.song === next.id ? 'rgba(255,255,255,0.1)' : 'transparent');
+        renderPlayer(next.id);
       }
     });
 
     // Audio & Lyrics sync logic
-    const lyricsData = songsDictionary[songFile]?.lyricsData;
+    const songData = await loadLyrics(song.id);
+    const lyricsData = songData?.lyricsData;
     
-    vid.src = `https://cdn.sudothy.me/${encodeURIComponent(songFile)}`;
+    vid.src = song.videoUrl;
     vid.volume = 0.5;
     vid.load();
     vid.play().catch(e => console.warn('Autoplay prevented', e));

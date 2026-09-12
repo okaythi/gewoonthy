@@ -1,0 +1,2112 @@
+{
+  "id": "ic3peak-boo-hoo",
+  "videoFile": "IC3PEAK - Boo-Hoo.mp4",
+  "title": "Boo-Hoo",
+  "artist": "IC3PEAK",
+  "itunesTrack": "Плак-плак",
+  "globalOffset": 0,
+  "isDialect": false,
+  "hasTranslation": true,
+  "lyricsData": [
+    {
+      "verseStart": 2.275,
+      "verseEnd": 8.196,
+      "words": [
+        {
+          "word": "Плак- ",
+          "start": 2.275,
+          "end": 2.561
+        },
+        {
+          "word": "плак, ",
+          "start": 2.561,
+          "end": 5.331
+        },
+        {
+          "word": "плак- ",
+          "start": 5.331,
+          "end": 5.615
+        },
+        {
+          "word": "плак",
+          "start": 5.615,
+          "end": 8.196
+        }
+      ],
+      "translation": "Boo-hoo, boo-hoo"
+    },
+    {
+      "verseStart": 8.196,
+      "verseEnd": 12.068,
+      "words": [
+        {
+          "word": "Плак- ",
+          "start": 8.196,
+          "end": 8.523
+        },
+        {
+          "word": "плак, ",
+          "start": 8.523,
+          "end": 11.416
+        },
+        {
+          "word": "плак- ",
+          "start": 11.416,
+          "end": 11.741
+        },
+        {
+          "word": "плак",
+          "start": 11.741,
+          "end": 12.068
+        }
+      ],
+      "translation": "Boo-hoo, boo-hoo"
+    },
+    {
+      "verseStart": 12.068,
+      "verseEnd": 15.206,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 12.068,
+          "end": 12.354
+        },
+        {
+          "word": "тебе ",
+          "start": 12.354,
+          "end": 12.721
+        },
+        {
+          "word": "писала ",
+          "start": 12.721,
+          "end": 12.924
+        },
+        {
+          "word": "и ",
+          "start": 12.924,
+          "end": 13.331
+        },
+        {
+          "word": "ждала ",
+          "start": 13.331,
+          "end": 13.658
+        },
+        {
+          "word": "тебя ",
+          "start": 13.658,
+          "end": 14.147
+        },
+        {
+          "word": "в ",
+          "start": 14.147,
+          "end": 14.392
+        },
+        {
+          "word": "ночи ( ",
+          "start": 14.392,
+          "end": 14.636
+        },
+        {
+          "word": "плак- ",
+          "start": 14.636,
+          "end": 14.881
+        },
+        {
+          "word": "плак)",
+          "start": 14.881,
+          "end": 15.206
+        }
+      ],
+      "translation": "I wrote to you and waited for you in the night (boo-hoo)"
+    },
+    {
+      "verseStart": 15.206,
+      "verseEnd": 18.14,
+      "words": [
+        {
+          "word": "Ты ",
+          "start": 15.206,
+          "end": 15.452
+        },
+        {
+          "word": "не ",
+          "start": 15.452,
+          "end": 15.777
+        },
+        {
+          "word": "отвечаешь ",
+          "start": 15.777,
+          "end": 16.305
+        },
+        {
+          "word": "больше ",
+          "start": 16.305,
+          "end": 16.671
+        },
+        {
+          "word": "на ",
+          "start": 16.671,
+          "end": 16.915
+        },
+        {
+          "word": "мои ",
+          "start": 16.915,
+          "end": 17.2
+        },
+        {
+          "word": "звонки ( ",
+          "start": 17.2,
+          "end": 17.449
+        },
+        {
+          "word": "плак- ",
+          "start": 17.449,
+          "end": 17.815
+        },
+        {
+          "word": "плак)",
+          "start": 17.815,
+          "end": 18.14
+        }
+      ],
+      "translation": "You don't answer my calls anymore (boo-hoo)"
+    },
+    {
+      "verseStart": 18.14,
+      "verseEnd": 21.071,
+      "words": [
+        {
+          "word": "Каждый ",
+          "start": 18.14,
+          "end": 18.629
+        },
+        {
+          "word": "вечер ",
+          "start": 18.629,
+          "end": 18.873
+        },
+        {
+          "word": "оставляю ",
+          "start": 18.873,
+          "end": 19.281
+        },
+        {
+          "word": "под ",
+          "start": 19.281,
+          "end": 19.606
+        },
+        {
+          "word": "подушкой ",
+          "start": 19.606,
+          "end": 19.809
+        },
+        {
+          "word": "зуб ( ",
+          "start": 19.809,
+          "end": 20.299
+        },
+        {
+          "word": "плак- ",
+          "start": 20.299,
+          "end": 20.502
+        },
+        {
+          "word": "плак)",
+          "start": 20.502,
+          "end": 21.071
+        }
+      ],
+      "translation": "Every evening I leave a tooth under the pillow (boo-hoo)"
+    },
+    {
+      "verseStart": 21.071,
+      "verseEnd": 24.215,
+      "words": [
+        {
+          "word": "Умоляю ",
+          "start": 21.071,
+          "end": 21.77
+        },
+        {
+          "word": "небеса ",
+          "start": 21.77,
+          "end": 21.974
+        },
+        {
+          "word": "назад ",
+          "start": 21.974,
+          "end": 22.505
+        },
+        {
+          "word": "тебя ",
+          "start": 22.505,
+          "end": 22.708
+        },
+        {
+          "word": "вернуть ( ",
+          "start": 22.708,
+          "end": 23.404
+        },
+        {
+          "word": "плак- ",
+          "start": 23.404,
+          "end": 23.81
+        },
+        {
+          "word": "плак)",
+          "start": 23.81,
+          "end": 24.215
+        }
+      ],
+      "translation": "Begging the heavens to bring you back (boo-hoo)"
+    },
+    {
+      "verseStart": 24.215,
+      "verseEnd": 27.359,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 24.215,
+          "end": 24.42
+        },
+        {
+          "word": "была ",
+          "start": 24.42,
+          "end": 24.745
+        },
+        {
+          "word": "хорошей, ",
+          "start": 24.745,
+          "end": 25.32
+        },
+        {
+          "word": "а ",
+          "start": 25.32,
+          "end": 25.525
+        },
+        {
+          "word": "плохой ",
+          "start": 25.525,
+          "end": 25.729
+        },
+        {
+          "word": "я ",
+          "start": 25.729,
+          "end": 25.972
+        },
+        {
+          "word": "не ",
+          "start": 25.972,
+          "end": 26.175
+        },
+        {
+          "word": "была ( ",
+          "start": 26.175,
+          "end": 26.421
+        },
+        {
+          "word": "плак- ",
+          "start": 26.421,
+          "end": 27.033
+        },
+        {
+          "word": "плак)",
+          "start": 27.033,
+          "end": 27.359
+        }
+      ],
+      "translation": "I was good, and I wasn't bad (boo-hoo)"
+    },
+    {
+      "verseStart": 27.359,
+      "verseEnd": 30.543,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 27.359,
+          "end": 27.565
+        },
+        {
+          "word": "всю ",
+          "start": 27.565,
+          "end": 27.894
+        },
+        {
+          "word": "жизнь, ",
+          "start": 27.894,
+          "end": 28.34
+        },
+        {
+          "word": "как ",
+          "start": 28.34,
+          "end": 28.707
+        },
+        {
+          "word": "паинька, ",
+          "start": 28.707,
+          "end": 29.074
+        },
+        {
+          "word": "по ",
+          "start": 29.074,
+          "end": 29.403
+        },
+        {
+          "word": "правилам ",
+          "start": 29.403,
+          "end": 29.606
+        },
+        {
+          "word": "жила ( ",
+          "start": 29.606,
+          "end": 30.096
+        },
+        {
+          "word": "плак- ",
+          "start": 30.096,
+          "end": 30.339
+        },
+        {
+          "word": "плак)",
+          "start": 30.339,
+          "end": 30.543
+        }
+      ],
+      "translation": "All my life, like a good girl, I lived by the rules (boo-hoo)"
+    },
+    {
+      "verseStart": 30.543,
+      "verseEnd": 33.359,
+      "words": [
+        {
+          "word": "Надоело ",
+          "start": 30.543,
+          "end": 30.91
+        },
+        {
+          "word": "плакать, ",
+          "start": 30.91,
+          "end": 31.235
+        },
+        {
+          "word": "надоело ",
+          "start": 31.235,
+          "end": 31.522
+        },
+        {
+          "word": "мне ",
+          "start": 31.522,
+          "end": 31.888
+        },
+        {
+          "word": "страдать ( ",
+          "start": 31.888,
+          "end": 32.545
+        },
+        {
+          "word": "плак- ",
+          "start": 32.545,
+          "end": 32.952
+        },
+        {
+          "word": "плак)",
+          "start": 32.952,
+          "end": 33.359
+        }
+      ],
+      "translation": "I'm tired of crying, I'm tired of suffering (boo-hoo)"
+    },
+    {
+      "verseStart": 33.359,
+      "verseEnd": 36.97,
+      "words": [
+        {
+          "word": "Всё ",
+          "start": 33.359,
+          "end": 33.729
+        },
+        {
+          "word": "равно ",
+          "start": 33.729,
+          "end": 34.095
+        },
+        {
+          "word": "не ",
+          "start": 34.095,
+          "end": 34.503
+        },
+        {
+          "word": "выйдет ",
+          "start": 34.503,
+          "end": 34.707
+        },
+        {
+          "word": "свою ",
+          "start": 34.707,
+          "end": 34.912
+        },
+        {
+          "word": "смерть ",
+          "start": 34.912,
+          "end": 35.201
+        },
+        {
+          "word": "предугадать ( ",
+          "start": 35.201,
+          "end": 35.77
+        },
+        {
+          "word": "плак- ",
+          "start": 35.77,
+          "end": 36.177
+        },
+        {
+          "word": "плак)",
+          "start": 36.177,
+          "end": 36.97
+        }
+      ],
+      "translation": "Still won't be able to foresee my own death (boo-hoo)"
+    },
+    {
+      "verseStart": 36.97,
+      "verseEnd": 42.78,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 36.97,
+          "end": 37.423
+        },
+        {
+          "word": "ла- ",
+          "start": 37.423,
+          "end": 37.79
+        },
+        {
+          "word": "ла- ",
+          "start": 37.79,
+          "end": 38.854
+        },
+        {
+          "word": "ла- ",
+          "start": 38.854,
+          "end": 39.84
+        },
+        {
+          "word": "ла- ",
+          "start": 39.84,
+          "end": 40.165
+        },
+        {
+          "word": "а- ",
+          "start": 40.165,
+          "end": 40.532
+        },
+        {
+          "word": "а- ",
+          "start": 40.532,
+          "end": 41.634
+        },
+        {
+          "word": "а",
+          "start": 41.634,
+          "end": 42.78
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 42.78,
+      "verseEnd": 48.416,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 42.78,
+          "end": 43.433
+        },
+        {
+          "word": "ла- ",
+          "start": 43.433,
+          "end": 43.926
+        },
+        {
+          "word": "ла- ",
+          "start": 43.926,
+          "end": 44.617
+        },
+        {
+          "word": "ла- ",
+          "start": 44.617,
+          "end": 44.78
+        },
+        {
+          "word": "ла- ",
+          "start": 44.78,
+          "end": 45.797
+        },
+        {
+          "word": "а- ",
+          "start": 45.797,
+          "end": 46.494
+        },
+        {
+          "word": "а- ",
+          "start": 46.494,
+          "end": 47.025
+        },
+        {
+          "word": "а",
+          "start": 47.025,
+          "end": 48.416
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 48.416,
+      "verseEnd": 51.436,
+      "words": [
+        {
+          "word": "Мама ",
+          "start": 48.416,
+          "end": 48.823
+        },
+        {
+          "word": "говорила ",
+          "start": 48.823,
+          "end": 49.645
+        },
+        {
+          "word": "мне: \" ",
+          "start": 49.645,
+          "end": 49.93
+        },
+        {
+          "word": "Слушайся ",
+          "start": 49.93,
+          "end": 50.744
+        },
+        {
+          "word": "мужа\"",
+          "start": 50.744,
+          "end": 51.436
+        }
+      ],
+      "translation": "Mum told me: \"Listen to your husband\""
+    },
+    {
+      "verseStart": 51.436,
+      "verseEnd": 54.554,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 51.436,
+          "end": 51.643
+        },
+        {
+          "word": "не ",
+          "start": 51.643,
+          "end": 51.932
+        },
+        {
+          "word": "послушна, ",
+          "start": 51.932,
+          "end": 52.957
+        },
+        {
+          "word": "я ",
+          "start": 52.957,
+          "end": 53.12
+        },
+        {
+          "word": "делаю ",
+          "start": 53.12,
+          "end": 53.533
+        },
+        {
+          "word": "хуже",
+          "start": 53.533,
+          "end": 54.554
+        }
+      ],
+      "translation": "I'm not obedient, I make it worse"
+    },
+    {
+      "verseStart": 54.554,
+      "verseEnd": 57.661,
+      "words": [
+        {
+          "word": "Делаю ",
+          "start": 54.554,
+          "end": 54.965
+        },
+        {
+          "word": "не ",
+          "start": 54.965,
+          "end": 55.295
+        },
+        {
+          "word": "так, ",
+          "start": 55.295,
+          "end": 55.702
+        },
+        {
+          "word": "как ",
+          "start": 55.702,
+          "end": 56.068
+        },
+        {
+          "word": "наказывал ",
+          "start": 56.068,
+          "end": 56.807
+        },
+        {
+          "word": "папа",
+          "start": 56.807,
+          "end": 57.661
+        }
+      ],
+      "translation": "I don't do it like dad ordered"
+    },
+    {
+      "verseStart": 57.661,
+      "verseEnd": 60.606,
+      "words": [
+        {
+          "word": "Вместо ",
+          "start": 57.661,
+          "end": 58.314
+        },
+        {
+          "word": "звезды ",
+          "start": 58.314,
+          "end": 59.011
+        },
+        {
+          "word": "я ",
+          "start": 59.011,
+          "end": 59.255
+        },
+        {
+          "word": "хватаю ",
+          "start": 59.255,
+          "end": 59.747
+        },
+        {
+          "word": "гранату",
+          "start": 59.747,
+          "end": 60.606
+        }
+      ],
+      "translation": "Instead of a star, I grab a grenade"
+    },
+    {
+      "verseStart": 60.606,
+      "verseEnd": 63.56,
+      "words": [
+        {
+          "word": "Мама ",
+          "start": 60.606,
+          "end": 61.102
+        },
+        {
+          "word": "говорила ",
+          "start": 61.102,
+          "end": 61.715
+        },
+        {
+          "word": "мне: \" ",
+          "start": 61.715,
+          "end": 62.126
+        },
+        {
+          "word": "Слушайся ",
+          "start": 62.126,
+          "end": 62.616
+        },
+        {
+          "word": "мужа\"",
+          "start": 62.616,
+          "end": 63.56
+        }
+      ],
+      "translation": "Mum told me: \"Listen to your husband\""
+    },
+    {
+      "verseStart": 63.56,
+      "verseEnd": 66.708,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 63.56,
+          "end": 63.764
+        },
+        {
+          "word": "не ",
+          "start": 63.764,
+          "end": 64.091
+        },
+        {
+          "word": "послушна, ",
+          "start": 64.091,
+          "end": 65.072
+        },
+        {
+          "word": "я ",
+          "start": 65.072,
+          "end": 65.281
+        },
+        {
+          "word": "делаю ",
+          "start": 65.281,
+          "end": 65.608
+        },
+        {
+          "word": "хуже",
+          "start": 65.608,
+          "end": 66.708
+        }
+      ],
+      "translation": "I'm not obedient, I make it worse"
+    },
+    {
+      "verseStart": 66.708,
+      "verseEnd": 69.693,
+      "words": [
+        {
+          "word": "Делаю ",
+          "start": 66.708,
+          "end": 67.076
+        },
+        {
+          "word": "не ",
+          "start": 67.076,
+          "end": 67.45
+        },
+        {
+          "word": "так, ",
+          "start": 67.45,
+          "end": 67.859
+        },
+        {
+          "word": "как ",
+          "start": 67.859,
+          "end": 68.224
+        },
+        {
+          "word": "наказывал ",
+          "start": 68.224,
+          "end": 68.957
+        },
+        {
+          "word": "папа",
+          "start": 68.957,
+          "end": 69.693
+        }
+      ],
+      "translation": "I don't do it like dad ordered"
+    },
+    {
+      "verseStart": 69.693,
+      "verseEnd": 72.958,
+      "words": [
+        {
+          "word": "Вместо ",
+          "start": 69.693,
+          "end": 70.141
+        },
+        {
+          "word": "звезды ",
+          "start": 70.141,
+          "end": 70.957
+        },
+        {
+          "word": "я ",
+          "start": 70.957,
+          "end": 71.615
+        },
+        {
+          "word": "хватаю ",
+          "start": 71.615,
+          "end": 71.9
+        },
+        {
+          "word": "гранату",
+          "start": 71.9,
+          "end": 72.958
+        }
+      ],
+      "translation": "Instead of a star, I grab a grenade"
+    },
+    {
+      "verseStart": 72.958,
+      "verseEnd": 78.927,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 72.958,
+          "end": 73.244
+        },
+        {
+          "word": "хотела ",
+          "start": 73.244,
+          "end": 74.113
+        },
+        {
+          "word": "бы ",
+          "start": 74.113,
+          "end": 74.605
+        },
+        {
+          "word": "тебя, ",
+          "start": 74.605,
+          "end": 75.012
+        },
+        {
+          "word": "как ",
+          "start": 75.012,
+          "end": 76.399
+        },
+        {
+          "word": "тогда, ",
+          "start": 76.399,
+          "end": 77.132
+        },
+        {
+          "word": "обнять",
+          "start": 77.132,
+          "end": 78.927
+        }
+      ],
+      "translation": "I'd like to hug you like back then"
+    },
+    {
+      "verseStart": 78.927,
+      "verseEnd": 84.883,
+      "words": [
+        {
+          "word": "Но ",
+          "start": 78.927,
+          "end": 79.335
+        },
+        {
+          "word": "для ",
+          "start": 79.335,
+          "end": 80.236
+        },
+        {
+          "word": "этого ",
+          "start": 80.236,
+          "end": 81.175
+        },
+        {
+          "word": "придётся ",
+          "start": 81.175,
+          "end": 82.071
+        },
+        {
+          "word": "тело ",
+          "start": 82.071,
+          "end": 82.844
+        },
+        {
+          "word": "раскопать",
+          "start": 82.844,
+          "end": 84.883
+        }
+      ],
+      "translation": "But for that I'd have to dig up the body"
+    },
+    {
+      "verseStart": 84.883,
+      "verseEnd": 91.015,
+      "words": [
+        {
+          "word": "Твои ",
+          "start": 84.883,
+          "end": 85.702
+        },
+        {
+          "word": "кости ",
+          "start": 85.702,
+          "end": 86.482
+        },
+        {
+          "word": "ледяные ",
+          "start": 86.482,
+          "end": 87.95
+        },
+        {
+          "word": "где- ",
+          "start": 87.95,
+          "end": 88.321
+        },
+        {
+          "word": "то ",
+          "start": 88.321,
+          "end": 88.647
+        },
+        {
+          "word": "там ",
+          "start": 88.647,
+          "end": 89.054
+        },
+        {
+          "word": "на ",
+          "start": 89.054,
+          "end": 89.422
+        },
+        {
+          "word": "дне",
+          "start": 89.422,
+          "end": 91.015
+        }
+      ],
+      "translation": "Your ice-cold bones are somewhere down at the bottom"
+    },
+    {
+      "verseStart": 91.015,
+      "verseEnd": 99.312,
+      "words": [
+        {
+          "word": "Прорастут ",
+          "start": 91.015,
+          "end": 92.611
+        },
+        {
+          "word": "цветы ",
+          "start": 92.611,
+          "end": 93.797
+        },
+        {
+          "word": "в ",
+          "start": 93.797,
+          "end": 94.162
+        },
+        {
+          "word": "этой ",
+          "start": 94.162,
+          "end": 94.652
+        },
+        {
+          "word": "оплаканной ",
+          "start": 94.652,
+          "end": 95.226
+        },
+        {
+          "word": "земле",
+          "start": 95.226,
+          "end": 99.312
+        }
+      ],
+      "translation": "Flowers will sprout in this wept-over earth"
+    },
+    {
+      "verseStart": 99.312,
+      "verseEnd": 105.437,
+      "words": [
+        {
+          "word": "Плак- ",
+          "start": 99.312,
+          "end": 99.638
+        },
+        {
+          "word": "плак, ",
+          "start": 99.638,
+          "end": 102.499
+        },
+        {
+          "word": "плак- ",
+          "start": 102.499,
+          "end": 102.824
+        },
+        {
+          "word": "плак",
+          "start": 102.824,
+          "end": 105.437
+        }
+      ],
+      "translation": "Boo-hoo, boo-hoo"
+    },
+    {
+      "verseStart": 105.437,
+      "verseEnd": 109.236,
+      "words": [
+        {
+          "word": "Плак- ",
+          "start": 105.437,
+          "end": 105.766
+        },
+        {
+          "word": "плак, ",
+          "start": 105.766,
+          "end": 108.544
+        },
+        {
+          "word": "плак- ",
+          "start": 108.544,
+          "end": 108.91
+        },
+        {
+          "word": "плак",
+          "start": 108.91,
+          "end": 109.236
+        }
+      ],
+      "translation": "Boo-hoo, boo-hoo"
+    },
+    {
+      "verseStart": 109.236,
+      "verseEnd": 112.303,
+      "words": [
+        {
+          "word": "Растекаются ",
+          "start": 109.236,
+          "end": 110.039
+        },
+        {
+          "word": "по ",
+          "start": 110.039,
+          "end": 110.417
+        },
+        {
+          "word": "всей ",
+          "start": 110.417,
+          "end": 110.786
+        },
+        {
+          "word": "стене ",
+          "start": 110.786,
+          "end": 111.192
+        },
+        {
+          "word": "твои ",
+          "start": 111.192,
+          "end": 111.478
+        },
+        {
+          "word": "мозги ( ",
+          "start": 111.478,
+          "end": 111.648
+        },
+        {
+          "word": "плак- ",
+          "start": 111.648,
+          "end": 111.976
+        },
+        {
+          "word": "плак)",
+          "start": 111.976,
+          "end": 112.303
+        }
+      ],
+      "translation": "Your brains are splattered all over the wall (boo-hoo)"
+    },
+    {
+      "verseStart": 112.303,
+      "verseEnd": 115.338,
+      "words": [
+        {
+          "word": "Очень ",
+          "start": 112.303,
+          "end": 112.924
+        },
+        {
+          "word": "разозлилась ",
+          "start": 112.924,
+          "end": 113.454
+        },
+        {
+          "word": "на ",
+          "start": 113.454,
+          "end": 113.74
+        },
+        {
+          "word": "тебя, ",
+          "start": 113.74,
+          "end": 113.944
+        },
+        {
+          "word": "ты ",
+          "start": 113.944,
+          "end": 114.27
+        },
+        {
+          "word": "уж ",
+          "start": 114.27,
+          "end": 114.521
+        },
+        {
+          "word": "прости ( ",
+          "start": 114.521,
+          "end": 114.686
+        },
+        {
+          "word": "плак- ",
+          "start": 114.686,
+          "end": 115.053
+        },
+        {
+          "word": "плак)",
+          "start": 115.053,
+          "end": 115.338
+        }
+      ],
+      "translation": "Got really angry at you, you gotta forgive me (boo-hoo)"
+    },
+    {
+      "verseStart": 115.338,
+      "verseEnd": 118.406,
+      "words": [
+        {
+          "word": "Сотый ",
+          "start": 115.338,
+          "end": 115.745
+        },
+        {
+          "word": "раз ",
+          "start": 115.745,
+          "end": 116.072
+        },
+        {
+          "word": "во ",
+          "start": 116.072,
+          "end": 116.316
+        },
+        {
+          "word": "сне ",
+          "start": 116.316,
+          "end": 116.563
+        },
+        {
+          "word": "я ",
+          "start": 116.563,
+          "end": 116.809
+        },
+        {
+          "word": "наблюдаю ",
+          "start": 116.809,
+          "end": 117.054
+        },
+        {
+          "word": "твой ",
+          "start": 117.054,
+          "end": 117.468
+        },
+        {
+          "word": "конец ( ",
+          "start": 117.468,
+          "end": 117.713
+        },
+        {
+          "word": "плак- ",
+          "start": 117.713,
+          "end": 118.038
+        },
+        {
+          "word": "плак)",
+          "start": 118.038,
+          "end": 118.406
+        }
+      ],
+      "translation": "For the hundredth time in my sleep I watch your end (boo-hoo)"
+    },
+    {
+      "verseStart": 118.406,
+      "verseEnd": 121.475,
+      "words": [
+        {
+          "word": "И ",
+          "start": 118.406,
+          "end": 118.65
+        },
+        {
+          "word": "не ",
+          "start": 118.65,
+          "end": 118.855
+        },
+        {
+          "word": "так ",
+          "start": 118.855,
+          "end": 119.101
+        },
+        {
+          "word": "уж ",
+          "start": 119.101,
+          "end": 119.469
+        },
+        {
+          "word": "страшно, ",
+          "start": 119.469,
+          "end": 119.755
+        },
+        {
+          "word": "в ",
+          "start": 119.755,
+          "end": 119.964
+        },
+        {
+          "word": "самом ",
+          "start": 119.964,
+          "end": 120.085
+        },
+        {
+          "word": "деле, ",
+          "start": 120.085,
+          "end": 120.33
+        },
+        {
+          "word": "умереть ( ",
+          "start": 120.33,
+          "end": 120.701
+        },
+        {
+          "word": "плак- ",
+          "start": 120.701,
+          "end": 121.066
+        },
+        {
+          "word": "плак)",
+          "start": 121.066,
+          "end": 121.475
+        }
+      ],
+      "translation": "And it's really not that scary to die (boo-hoo)"
+    },
+    {
+      "verseStart": 121.475,
+      "verseEnd": 124.507,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 121.475,
+          "end": 121.683
+        },
+        {
+          "word": "была ",
+          "start": 121.683,
+          "end": 122.05
+        },
+        {
+          "word": "хорошей, ",
+          "start": 122.05,
+          "end": 122.463
+        },
+        {
+          "word": "а ",
+          "start": 122.463,
+          "end": 122.669
+        },
+        {
+          "word": "плохой ",
+          "start": 122.669,
+          "end": 122.872
+        },
+        {
+          "word": "я ",
+          "start": 122.872,
+          "end": 123.035
+        },
+        {
+          "word": "не ",
+          "start": 123.035,
+          "end": 123.242
+        },
+        {
+          "word": "была ( ",
+          "start": 123.242,
+          "end": 123.693
+        },
+        {
+          "word": "плак- ",
+          "start": 123.693,
+          "end": 124.1
+        },
+        {
+          "word": "плак)",
+          "start": 124.1,
+          "end": 124.507
+        }
+      ],
+      "translation": "I was good, and I wasn't bad (boo-hoo)"
+    },
+    {
+      "verseStart": 124.507,
+      "verseEnd": 127.418,
+      "words": [
+        {
+          "word": "И ",
+          "start": 124.507,
+          "end": 124.712
+        },
+        {
+          "word": "всю ",
+          "start": 124.712,
+          "end": 124.916
+        },
+        {
+          "word": "жизнь ",
+          "start": 124.916,
+          "end": 125.12
+        },
+        {
+          "word": "как ",
+          "start": 125.12,
+          "end": 125.324
+        },
+        {
+          "word": "паинька, ",
+          "start": 125.324,
+          "end": 125.813
+        },
+        {
+          "word": "по ",
+          "start": 125.813,
+          "end": 126.102
+        },
+        {
+          "word": "правилам ",
+          "start": 126.102,
+          "end": 126.393
+        },
+        {
+          "word": "жила ( ",
+          "start": 126.393,
+          "end": 126.686
+        },
+        {
+          "word": "плак- ",
+          "start": 126.686,
+          "end": 127.052
+        },
+        {
+          "word": "плак)",
+          "start": 127.052,
+          "end": 127.418
+        }
+      ],
+      "translation": "And all my life like a good girl, I lived by the rules (boo-hoo)"
+    },
+    {
+      "verseStart": 127.418,
+      "verseEnd": 130.444,
+      "words": [
+        {
+          "word": "Надоело ",
+          "start": 127.418,
+          "end": 127.907
+        },
+        {
+          "word": "плакать, ",
+          "start": 127.907,
+          "end": 128.359
+        },
+        {
+          "word": "надоело ",
+          "start": 128.359,
+          "end": 128.891
+        },
+        {
+          "word": "мне ",
+          "start": 128.891,
+          "end": 129.095
+        },
+        {
+          "word": "страдать ( ",
+          "start": 129.095,
+          "end": 129.341
+        },
+        {
+          "word": "плак- ",
+          "start": 129.341,
+          "end": 129.873
+        },
+        {
+          "word": "плак)",
+          "start": 129.873,
+          "end": 130.444
+        }
+      ],
+      "translation": "I'm tired of crying, I'm tired of suffering (boo-hoo)"
+    },
+    {
+      "verseStart": 130.444,
+      "verseEnd": 133.717,
+      "words": [
+        {
+          "word": "Всё ",
+          "start": 130.444,
+          "end": 130.893
+        },
+        {
+          "word": "равно ",
+          "start": 130.893,
+          "end": 131.302
+        },
+        {
+          "word": "не ",
+          "start": 131.302,
+          "end": 131.631
+        },
+        {
+          "word": "выйдет ",
+          "start": 131.631,
+          "end": 131.834
+        },
+        {
+          "word": "свою ",
+          "start": 131.834,
+          "end": 132.001
+        },
+        {
+          "word": "смерть ",
+          "start": 132.001,
+          "end": 132.368
+        },
+        {
+          "word": "предугадать ( ",
+          "start": 132.368,
+          "end": 132.857
+        },
+        {
+          "word": "плак- ",
+          "start": 132.857,
+          "end": 133.27
+        },
+        {
+          "word": "плак)",
+          "start": 133.27,
+          "end": 133.717
+        }
+      ],
+      "translation": "Still won't be able to foresee my own death (boo-hoo)"
+    },
+    {
+      "verseStart": 133.717,
+      "verseEnd": 136.696,
+      "words": [
+        {
+          "word": "Мама ",
+          "start": 133.717,
+          "end": 134.003
+        },
+        {
+          "word": "говорила ",
+          "start": 134.003,
+          "end": 134.493
+        },
+        {
+          "word": "мне: \" ",
+          "start": 134.493,
+          "end": 134.982
+        },
+        {
+          "word": "Слушайся ",
+          "start": 134.982,
+          "end": 135.39
+        },
+        {
+          "word": "мужа\"",
+          "start": 135.39,
+          "end": 136.696
+        }
+      ],
+      "translation": "Mum told me: \"Listen to your husband\""
+    },
+    {
+      "verseStart": 136.696,
+      "verseEnd": 139.577,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 136.696,
+          "end": 136.86
+        },
+        {
+          "word": "не ",
+          "start": 136.86,
+          "end": 137.063
+        },
+        {
+          "word": "послушна, ",
+          "start": 137.063,
+          "end": 137.983
+        },
+        {
+          "word": "я ",
+          "start": 137.983,
+          "end": 138.186
+        },
+        {
+          "word": "делаю ",
+          "start": 138.186,
+          "end": 138.682
+        },
+        {
+          "word": "хуже",
+          "start": 138.682,
+          "end": 139.577
+        }
+      ],
+      "translation": "I'm not obedient, I make it worse"
+    },
+    {
+      "verseStart": 139.577,
+      "verseEnd": 142.641,
+      "words": [
+        {
+          "word": "Делаю ",
+          "start": 139.577,
+          "end": 140.27
+        },
+        {
+          "word": "не ",
+          "start": 140.27,
+          "end": 140.433
+        },
+        {
+          "word": "так, ",
+          "start": 140.433,
+          "end": 140.845
+        },
+        {
+          "word": "как ",
+          "start": 140.845,
+          "end": 141.252
+        },
+        {
+          "word": "наказывал ",
+          "start": 141.252,
+          "end": 141.904
+        },
+        {
+          "word": "папа",
+          "start": 141.904,
+          "end": 142.641
+        }
+      ],
+      "translation": "I don't do it like dad ordered"
+    },
+    {
+      "verseStart": 142.641,
+      "verseEnd": 145.761,
+      "words": [
+        {
+          "word": "Вместо ",
+          "start": 142.641,
+          "end": 143.103
+        },
+        {
+          "word": "звезды ",
+          "start": 143.103,
+          "end": 143.794
+        },
+        {
+          "word": "я ",
+          "start": 143.794,
+          "end": 144.168
+        },
+        {
+          "word": "хватаю ",
+          "start": 144.168,
+          "end": 144.576
+        },
+        {
+          "word": "гранату",
+          "start": 144.576,
+          "end": 145.761
+        }
+      ],
+      "translation": "Instead of a star, I grab a grenade"
+    },
+    {
+      "verseStart": 145.761,
+      "verseEnd": 148.669,
+      "words": [
+        {
+          "word": "Мама ",
+          "start": 145.761,
+          "end": 146.09
+        },
+        {
+          "word": "говорила ",
+          "start": 146.09,
+          "end": 146.911
+        },
+        {
+          "word": "мне: \" ",
+          "start": 146.911,
+          "end": 147.321
+        },
+        {
+          "word": "Слушайся ",
+          "start": 147.321,
+          "end": 147.972
+        },
+        {
+          "word": "мужа\"",
+          "start": 147.972,
+          "end": 148.669
+        }
+      ],
+      "translation": "Mum told me: \"Listen to your husband\""
+    },
+    {
+      "verseStart": 148.669,
+      "verseEnd": 151.73,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 148.669,
+          "end": 148.832
+        },
+        {
+          "word": "не ",
+          "start": 148.832,
+          "end": 149.202
+        },
+        {
+          "word": "послушна, ",
+          "start": 149.202,
+          "end": 150.14
+        },
+        {
+          "word": "я ",
+          "start": 150.14,
+          "end": 150.344
+        },
+        {
+          "word": "делаю ",
+          "start": 150.344,
+          "end": 150.751
+        },
+        {
+          "word": "хуже",
+          "start": 150.751,
+          "end": 151.73
+        }
+      ],
+      "translation": "I'm not obedient, I make it worse"
+    },
+    {
+      "verseStart": 151.73,
+      "verseEnd": 154.798,
+      "words": [
+        {
+          "word": "Делаю ",
+          "start": 151.73,
+          "end": 152.427
+        },
+        {
+          "word": "не ",
+          "start": 152.427,
+          "end": 152.592
+        },
+        {
+          "word": "так, ",
+          "start": 152.592,
+          "end": 153.003
+        },
+        {
+          "word": "как ",
+          "start": 153.003,
+          "end": 153.409
+        },
+        {
+          "word": "наказывал ",
+          "start": 153.409,
+          "end": 153.736
+        },
+        {
+          "word": "папа",
+          "start": 153.736,
+          "end": 154.798
+        }
+      ],
+      "translation": "I don't do it like dad ordered"
+    },
+    {
+      "verseStart": 154.798,
+      "verseEnd": 158.178,
+      "words": [
+        {
+          "word": "Вместо ",
+          "start": 154.798,
+          "end": 155.247
+        },
+        {
+          "word": "звезды ",
+          "start": 155.247,
+          "end": 156.021
+        },
+        {
+          "word": "я ",
+          "start": 156.021,
+          "end": 156.467
+        },
+        {
+          "word": "хватаю ",
+          "start": 156.467,
+          "end": 156.792
+        },
+        {
+          "word": "гранату",
+          "start": 156.792,
+          "end": 158.178
+        }
+      ],
+      "translation": "Instead of a star, I grab a grenade"
+    },
+    {
+      "verseStart": 158.178,
+      "verseEnd": 161.295,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 158.178,
+          "end": 158.79
+        },
+        {
+          "word": "ла- ",
+          "start": 158.79,
+          "end": 158.96
+        },
+        {
+          "word": "ла- ",
+          "start": 158.96,
+          "end": 159.368
+        },
+        {
+          "word": "ла- ",
+          "start": 159.368,
+          "end": 160.064
+        },
+        {
+          "word": "ла- ",
+          "start": 160.064,
+          "end": 160.234
+        },
+        {
+          "word": "а- ",
+          "start": 160.234,
+          "end": 160.602
+        },
+        {
+          "word": "а- ",
+          "start": 160.602,
+          "end": 160.968
+        },
+        {
+          "word": "а",
+          "start": 160.968,
+          "end": 161.295
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 161.295,
+      "verseEnd": 164.403,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 161.295,
+          "end": 161.911
+        },
+        {
+          "word": "ла- ",
+          "start": 161.911,
+          "end": 162.033
+        },
+        {
+          "word": "ла- ",
+          "start": 162.033,
+          "end": 162.445
+        },
+        {
+          "word": "ла- ",
+          "start": 162.445,
+          "end": 163.26
+        },
+        {
+          "word": "ла- ",
+          "start": 163.26,
+          "end": 163.341
+        },
+        {
+          "word": "а- ",
+          "start": 163.341,
+          "end": 163.708
+        },
+        {
+          "word": "а- ",
+          "start": 163.708,
+          "end": 164.075
+        },
+        {
+          "word": "а",
+          "start": 164.075,
+          "end": 164.403
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 164.403,
+      "verseEnd": 167.36,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 164.403,
+          "end": 164.939
+        },
+        {
+          "word": "ла- ",
+          "start": 164.939,
+          "end": 165.061
+        },
+        {
+          "word": "ла- ",
+          "start": 165.061,
+          "end": 165.511
+        },
+        {
+          "word": "ла- ",
+          "start": 165.511,
+          "end": 166.086
+        },
+        {
+          "word": "ла- ",
+          "start": 166.086,
+          "end": 166.249
+        },
+        {
+          "word": "а- ",
+          "start": 166.249,
+          "end": 166.657
+        },
+        {
+          "word": "а- ",
+          "start": 166.657,
+          "end": 166.988
+        },
+        {
+          "word": "а",
+          "start": 166.988,
+          "end": 167.36
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 167.36,
+      "verseEnd": 170.104,
+      "words": [
+        {
+          "word": "Ла- ",
+          "start": 167.36,
+          "end": 168.013
+        },
+        {
+          "word": "ла- ",
+          "start": 168.013,
+          "end": 168.177
+        },
+        {
+          "word": "ла- ",
+          "start": 168.177,
+          "end": 168.546
+        },
+        {
+          "word": "ла- ",
+          "start": 168.546,
+          "end": 169.121
+        },
+        {
+          "word": "ла- ",
+          "start": 169.121,
+          "end": 169.243
+        },
+        {
+          "word": "а- ",
+          "start": 169.243,
+          "end": 169.57
+        },
+        {
+          "word": "а- ",
+          "start": 169.57,
+          "end": 169.897
+        },
+        {
+          "word": "а",
+          "start": 169.897,
+          "end": 170.104
+        }
+      ],
+      "translation": "La-la-la-la-la-a-a-a"
+    },
+    {
+      "verseStart": 170.104,
+      "verseEnd": 176.112,
+      "words": [
+        {
+          "word": "Я ",
+          "start": 170.104,
+          "end": 170.433
+        },
+        {
+          "word": "хотела ",
+          "start": 170.433,
+          "end": 171.251
+        },
+        {
+          "word": "бы ",
+          "start": 171.251,
+          "end": 171.619
+        },
+        {
+          "word": "тебя, ",
+          "start": 171.619,
+          "end": 172.354
+        },
+        {
+          "word": "как ",
+          "start": 172.354,
+          "end": 173.744
+        },
+        {
+          "word": "тогда, ",
+          "start": 173.744,
+          "end": 174.321
+        },
+        {
+          "word": "обнять",
+          "start": 174.321,
+          "end": 176.112
+        }
+      ],
+      "translation": "I'd like to hug you like back then"
+    },
+    {
+      "verseStart": 176.112,
+      "verseEnd": 182.193,
+      "words": [
+        {
+          "word": "Но ",
+          "start": 176.112,
+          "end": 176.605
+        },
+        {
+          "word": "для ",
+          "start": 176.605,
+          "end": 177.383
+        },
+        {
+          "word": "этого ",
+          "start": 177.383,
+          "end": 178.442
+        },
+        {
+          "word": "придётся ",
+          "start": 178.442,
+          "end": 179.867
+        },
+        {
+          "word": "тело ",
+          "start": 179.867,
+          "end": 180.071
+        },
+        {
+          "word": "раскопать",
+          "start": 180.071,
+          "end": 182.193
+        }
+      ],
+      "translation": "But for that I'd have to dig up the body"
+    },
+    {
+      "verseStart": 182.193,
+      "verseEnd": 188.161,
+      "words": [
+        {
+          "word": "Твои ",
+          "start": 182.193,
+          "end": 182.93
+        },
+        {
+          "word": "кости ",
+          "start": 182.93,
+          "end": 183.75
+        },
+        {
+          "word": "ледяные ",
+          "start": 183.75,
+          "end": 185.219
+        },
+        {
+          "word": "где- ",
+          "start": 185.219,
+          "end": 185.545
+        },
+        {
+          "word": "то ",
+          "start": 185.545,
+          "end": 185.953
+        },
+        {
+          "word": "там ",
+          "start": 185.953,
+          "end": 186.363
+        },
+        {
+          "word": "на ",
+          "start": 186.363,
+          "end": 186.773
+        },
+        {
+          "word": "дне",
+          "start": 186.773,
+          "end": 188.161
+        }
+      ],
+      "translation": "Your ice-cold bones are somewhere down at the bottom"
+    },
+    {
+      "verseStart": 188.161,
+      "verseEnd": 194.461,
+      "words": [
+        {
+          "word": "Прорастут ",
+          "start": 188.161,
+          "end": 189.712
+        },
+        {
+          "word": "цветы ",
+          "start": 189.712,
+          "end": 190.857
+        },
+        {
+          "word": "в ",
+          "start": 190.857,
+          "end": 191.31
+        },
+        {
+          "word": "этой ",
+          "start": 191.31,
+          "end": 191.636
+        },
+        {
+          "word": "оплаканной ",
+          "start": 191.636,
+          "end": 192.461
+        },
+        {
+          "word": "земле",
+          "start": 192.461,
+          "end": 193.14
+        }
+      ],
+      "translation": "Flowers will sprout in this wept-over earth"
+    }
+  ]
+}

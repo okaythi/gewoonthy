@@ -1,0 +1,3478 @@
+{
+  "id": "zaterdag",
+  "videoFile": "Zaterdag.mp4",
+  "title": "Zaterdag",
+  "artist": "Krapoel in Axe",
+  "globalOffset": 0,
+  "isDialect": true,
+  "hasTranslation": true,
+  "lyricsData": [
+    {
+      "verseStart": 25.216,
+      "verseEnd": 27.296,
+      "words": [
+        {
+          "word": "Zoterdagavend ",
+          "start": 25.216,
+          "end": 26.071
+        },
+        {
+          "word": "genne ",
+          "start": 26.071,
+          "end": 26.235
+        },
+        {
+          "word": "kik ",
+          "start": 26.235,
+          "end": 26.563
+        },
+        {
+          "word": "in '",
+          "start": 26.563,
+          "end": 26.728
+        },
+        {
+          "word": "t ",
+          "start": 26.728,
+          "end": 26.971
+        },
+        {
+          "word": "bad",
+          "start": 26.971,
+          "end": 27.296
+        }
+      ],
+      "translation": "Zaterdagavond ga ik in het bad"
+    },
+    {
+      "verseStart": 27.296,
+      "verseEnd": 29.217,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 27.296,
+          "end": 27.419
+        },
+        {
+          "word": "er ",
+          "start": 27.419,
+          "end": 27.623
+        },
+        {
+          "word": "groeie ",
+          "start": 27.623,
+          "end": 27.826
+        },
+        {
+          "word": "al ",
+          "start": 27.826,
+          "end": 27.99
+        },
+        {
+          "word": "sjampionne ",
+          "start": 27.99,
+          "end": 28.152
+        },
+        {
+          "word": "uit ",
+          "start": 28.152,
+          "end": 28.437
+        },
+        {
+          "word": "me ",
+          "start": 28.437,
+          "end": 28.725
+        },
+        {
+          "word": "gat",
+          "start": 28.725,
+          "end": 29.217
+        }
+      ],
+      "translation": "Want er groeien al champignons uit mijn gat"
+    },
+    {
+      "verseStart": 29.217,
+      "verseEnd": 31.342,
+      "words": [
+        {
+          "word": "Mennen ",
+          "start": 29.217,
+          "end": 29.422
+        },
+        {
+          "word": "okselgeur ",
+          "start": 29.422,
+          "end": 29.869
+        },
+        {
+          "word": "is ",
+          "start": 29.869,
+          "end": 30.441
+        },
+        {
+          "word": "nemie ",
+          "start": 30.441,
+          "end": 30.567
+        },
+        {
+          "word": "te ",
+          "start": 30.567,
+          "end": 30.772
+        },
+        {
+          "word": "doen",
+          "start": 30.772,
+          "end": 31.342
+        }
+      ],
+      "translation": "Mijn okselgeur is niet meer te doen"
+    },
+    {
+      "verseStart": 31.342,
+      "verseEnd": 33.346,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 31.342,
+          "end": 31.464
+        },
+        {
+          "word": "spoat ",
+          "start": 31.464,
+          "end": 31.668
+        },
+        {
+          "word": "deodorant ",
+          "start": 31.668,
+          "end": 32.201
+        },
+        {
+          "word": "in ",
+          "start": 32.201,
+          "end": 32.486
+        },
+        {
+          "word": "elke ",
+          "start": 32.486,
+          "end": 32.65
+        },
+        {
+          "word": "schoen",
+          "start": 32.65,
+          "end": 33.346
+        }
+      ],
+      "translation": "Ik spuit deodorant in elke schoen"
+    },
+    {
+      "verseStart": 33.346,
+      "verseEnd": 35.471,
+      "words": [
+        {
+          "word": "'",
+          "start": 33.346,
+          "end": 33.508
+        },
+        {
+          "word": "k ",
+          "start": 33.508,
+          "end": 33.84
+        },
+        {
+          "word": "Was ",
+          "start": 33.84,
+          "end": 34.004
+        },
+        {
+          "word": "men ",
+          "start": 34.004,
+          "end": 34.127
+        },
+        {
+          "word": "hoor ",
+          "start": 34.127,
+          "end": 34.332
+        },
+        {
+          "word": "want '",
+          "start": 34.332,
+          "end": 34.536
+        },
+        {
+          "word": "t ",
+          "start": 34.536,
+          "end": 34.699
+        },
+        {
+          "word": "is ",
+          "start": 34.699,
+          "end": 34.984
+        },
+        {
+          "word": "wee ",
+          "start": 34.984,
+          "end": 35.228
+        },
+        {
+          "word": "vettig",
+          "start": 35.228,
+          "end": 35.471
+        }
+      ],
+      "translation": "Ik was mijn haar want het is weer vettig"
+    },
+    {
+      "verseStart": 35.471,
+      "verseEnd": 37.688,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 35.471,
+          "end": 35.72
+        },
+        {
+          "word": "zin ",
+          "start": 35.72,
+          "end": 35.845
+        },
+        {
+          "word": "oept ",
+          "start": 35.845,
+          "end": 36.01
+        },
+        {
+          "word": "uur, ",
+          "start": 36.01,
+          "end": 36.462
+        },
+        {
+          "word": "twintig ",
+          "start": 36.462,
+          "end": 36.624
+        },
+        {
+          "word": "uur ",
+          "start": 36.624,
+          "end": 36.909
+        },
+        {
+          "word": "dertig",
+          "start": 36.909,
+          "end": 37.688
+        }
+      ],
+      "translation": "Ik ben op tijd, twintig uur dertig"
+    },
+    {
+      "verseStart": 37.688,
+      "verseEnd": 39.816,
+      "words": [
+        {
+          "word": "Da ",
+          "start": 37.688,
+          "end": 37.932
+        },
+        {
+          "word": "is ",
+          "start": 37.932,
+          "end": 38.018
+        },
+        {
+          "word": "dus ",
+          "start": 38.018,
+          "end": 38.183
+        },
+        {
+          "word": "nog ",
+          "start": 38.183,
+          "end": 38.264
+        },
+        {
+          "word": "taad ",
+          "start": 38.264,
+          "end": 38.467
+        },
+        {
+          "word": "veu ",
+          "start": 38.467,
+          "end": 38.711
+        },
+        {
+          "word": "wa ",
+          "start": 38.711,
+          "end": 38.873
+        },
+        {
+          "word": "puiste ",
+          "start": 38.873,
+          "end": 39.118
+        },
+        {
+          "word": "uit ",
+          "start": 39.118,
+          "end": 39.28
+        },
+        {
+          "word": "te ",
+          "start": 39.28,
+          "end": 39.402
+        },
+        {
+          "word": "pitse",
+          "start": 39.402,
+          "end": 39.816
+        }
+      ],
+      "translation": "Dat is dus nog tijd voor wat puisten uit te knijpen"
+    },
+    {
+      "verseStart": 39.816,
+      "verseEnd": 41.37,
+      "words": [
+        {
+          "word": "En ",
+          "start": 39.816,
+          "end": 39.979
+        },
+        {
+          "word": "binne ",
+          "start": 39.979,
+          "end": 40.223
+        },
+        {
+          "word": "het ",
+          "start": 40.223,
+          "end": 40.347
+        },
+        {
+          "word": "urreke ",
+          "start": 40.347,
+          "end": 40.718
+        },
+        {
+          "word": "zenne ",
+          "start": 40.718,
+          "end": 41.084
+        },
+        {
+          "word": "kik ",
+          "start": 41.084,
+          "end": 41.206
+        },
+        {
+          "word": "ritse",
+          "start": 41.206,
+          "end": 41.37
+        }
+      ],
+      "translation": "En binnen het uurtje ben ik weg"
+    },
+    {
+      "verseStart": 41.37,
+      "verseEnd": 44.021,
+      "words": [
+        {
+          "word": "Jo ",
+          "start": 41.37,
+          "end": 42.021
+        },
+        {
+          "word": "zoterdagovend, ",
+          "start": 42.021,
+          "end": 42.88
+        },
+        {
+          "word": "men ",
+          "start": 42.88,
+          "end": 43.004
+        },
+        {
+          "word": "hoor ",
+          "start": 43.004,
+          "end": 43.166
+        },
+        {
+          "word": "in ",
+          "start": 43.166,
+          "end": 43.289
+        },
+        {
+          "word": "de ",
+          "start": 43.289,
+          "end": 43.369
+        },
+        {
+          "word": "ploei",
+          "start": 43.369,
+          "end": 44.021
+        }
+      ],
+      "translation": "Ja zaterdagavond, mijn haar in de plooi"
+    },
+    {
+      "verseStart": 44.021,
+      "verseEnd": 45.889,
+      "words": [
+        {
+          "word": "Op ",
+          "start": 44.021,
+          "end": 44.143
+        },
+        {
+          "word": "en ",
+          "start": 44.143,
+          "end": 44.225
+        },
+        {
+          "word": "top ",
+          "start": 44.225,
+          "end": 44.346
+        },
+        {
+          "word": "in ",
+          "start": 44.346,
+          "end": 44.711
+        },
+        {
+          "word": "kostum, ",
+          "start": 44.711,
+          "end": 44.996
+        },
+        {
+          "word": "da ",
+          "start": 44.996,
+          "end": 45.158
+        },
+        {
+          "word": "zirre ",
+          "start": 45.158,
+          "end": 45.321
+        },
+        {
+          "word": "zoe",
+          "start": 45.321,
+          "end": 45.889
+        }
+      ],
+      "translation": "Op en top in kostuum, dat zie je zo"
+    },
+    {
+      "verseStart": 45.889,
+      "verseEnd": 48.22,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 45.889,
+          "end": 46.053
+        },
+        {
+          "word": "zen ",
+          "start": 46.053,
+          "end": 46.217
+        },
+        {
+          "word": "de ",
+          "start": 46.217,
+          "end": 46.38
+        },
+        {
+          "word": "playboy, ",
+          "start": 46.38,
+          "end": 47.111
+        },
+        {
+          "word": "ik ",
+          "start": 47.111,
+          "end": 47.233
+        },
+        {
+          "word": "weet ",
+          "start": 47.233,
+          "end": 47.355
+        },
+        {
+          "word": "da ",
+          "start": 47.355,
+          "end": 47.483
+        },
+        {
+          "word": "van ",
+          "start": 47.483,
+          "end": 47.607
+        },
+        {
+          "word": "men ",
+          "start": 47.607,
+          "end": 47.771
+        },
+        {
+          "word": "age",
+          "start": 47.771,
+          "end": 48.22
+        }
+      ],
+      "translation": "Ik ben de playboy, ik weet dat van mijn eigen"
+    },
+    {
+      "verseStart": 48.22,
+      "verseEnd": 50.309,
+      "words": [
+        {
+          "word": "Mo ",
+          "start": 48.22,
+          "end": 48.341
+        },
+        {
+          "word": "over ",
+          "start": 48.341,
+          "end": 48.505
+        },
+        {
+          "word": "maan ",
+          "start": 48.505,
+          "end": 48.628
+        },
+        {
+          "word": "witte ",
+          "start": 48.628,
+          "end": 48.795
+        },
+        {
+          "word": "kase ",
+          "start": 48.795,
+          "end": 48.917
+        },
+        {
+          "word": "moette ",
+          "start": 48.917,
+          "end": 49.412
+        },
+        {
+          "word": "ga ",
+          "start": 49.412,
+          "end": 49.615
+        },
+        {
+          "word": "zwage",
+          "start": 49.615,
+          "end": 50.309
+        }
+      ],
+      "translation": "Maar over mijn witte kousen moet je gaan zwijgen"
+    },
+    {
+      "verseStart": 50.309,
+      "verseEnd": 52.264,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 50.309,
+          "end": 50.432
+        },
+        {
+          "word": "bewonder ",
+          "start": 50.432,
+          "end": 50.676
+        },
+        {
+          "word": "nog ",
+          "start": 50.676,
+          "end": 50.798
+        },
+        {
+          "word": "ne ",
+          "start": 50.798,
+          "end": 50.921
+        },
+        {
+          "word": "kie ",
+          "start": 50.921,
+          "end": 51.326
+        },
+        {
+          "word": "mennen ",
+          "start": 51.326,
+          "end": 51.489
+        },
+        {
+          "word": "age ",
+          "start": 51.489,
+          "end": 51.734
+        },
+        {
+          "word": "kop",
+          "start": 51.734,
+          "end": 52.264
+        }
+      ],
+      "translation": "Ik bewonder nog een keer mijn eigen kop"
+    },
+    {
+      "verseStart": 52.264,
+      "verseEnd": 54.388,
+      "words": [
+        {
+          "word": "Veu ",
+          "start": 52.264,
+          "end": 52.428
+        },
+        {
+          "word": "te ",
+          "start": 52.428,
+          "end": 52.55
+        },
+        {
+          "word": "zien ",
+          "start": 52.55,
+          "end": 52.754
+        },
+        {
+          "word": "is '",
+          "start": 52.754,
+          "end": 52.881
+        },
+        {
+          "word": "t ",
+          "start": 52.881,
+          "end": 52.962
+        },
+        {
+          "word": "goe ",
+          "start": 52.962,
+          "end": 53.084
+        },
+        {
+          "word": "of ",
+          "start": 53.084,
+          "end": 53.328
+        },
+        {
+          "word": "is '",
+          "start": 53.328,
+          "end": 53.492
+        },
+        {
+          "word": "t ",
+          "start": 53.492,
+          "end": 53.818
+        },
+        {
+          "word": "een ",
+          "start": 53.818,
+          "end": 53.941
+        },
+        {
+          "word": "flop",
+          "start": 53.941,
+          "end": 54.388
+        }
+      ],
+      "translation": "Om te zien is het goed of is het een flop"
+    },
+    {
+      "verseStart": 54.388,
+      "verseEnd": 56.387,
+      "words": [
+        {
+          "word": "'",
+          "start": 54.388,
+          "end": 54.55
+        },
+        {
+          "word": "k ",
+          "start": 54.55,
+          "end": 54.672
+        },
+        {
+          "word": "Zen ",
+          "start": 54.672,
+          "end": 54.795
+        },
+        {
+          "word": "kleir ",
+          "start": 54.795,
+          "end": 55.002
+        },
+        {
+          "word": "veu '",
+          "start": 55.002,
+          "end": 55.126
+        },
+        {
+          "word": "t ",
+          "start": 55.126,
+          "end": 55.289
+        },
+        {
+          "word": "kafee, ",
+          "start": 55.289,
+          "end": 55.533
+        },
+        {
+          "word": "dus ",
+          "start": 55.533,
+          "end": 55.696
+        },
+        {
+          "word": "goe ",
+          "start": 55.696,
+          "end": 55.94
+        },
+        {
+          "word": "gezind",
+          "start": 55.94,
+          "end": 56.387
+        }
+      ],
+      "translation": "Ik ben klaar voor het café, dus goed gezind"
+    },
+    {
+      "verseStart": 56.387,
+      "verseEnd": 58.432,
+      "words": [
+        {
+          "word": "En ",
+          "start": 56.387,
+          "end": 56.55
+        },
+        {
+          "word": "azzek ",
+          "start": 56.55,
+          "end": 56.795
+        },
+        {
+          "word": "binnekoom ",
+          "start": 56.795,
+          "end": 57.043
+        },
+        {
+          "word": "krakik ",
+          "start": 57.043,
+          "end": 57.41
+        },
+        {
+          "word": "derekt ",
+          "start": 57.41,
+          "end": 57.696
+        },
+        {
+          "word": "men ",
+          "start": 57.696,
+          "end": 57.98
+        },
+        {
+          "word": "pint",
+          "start": 57.98,
+          "end": 58.432
+        }
+      ],
+      "translation": "En als ik binnenkom kraak ik direct mijn pint"
+    },
+    {
+      "verseStart": 58.432,
+      "verseEnd": 60.762,
+      "words": [
+        {
+          "word": "Mo ",
+          "start": 58.432,
+          "end": 58.594
+        },
+        {
+          "word": "zukte ",
+          "start": 58.594,
+          "end": 58.922
+        },
+        {
+          "word": "nen ",
+          "start": 58.922,
+          "end": 59.085
+        },
+        {
+          "word": "Bob ",
+          "start": 59.085,
+          "end": 59.494
+        },
+        {
+          "word": "mook ",
+          "start": 59.494,
+          "end": 59.822
+        },
+        {
+          "word": "ik ",
+          "start": 59.822,
+          "end": 59.943
+        },
+        {
+          "word": "maa ",
+          "start": 59.943,
+          "end": 60.066
+        },
+        {
+          "word": "uit ",
+          "start": 60.066,
+          "end": 60.188
+        },
+        {
+          "word": "de ",
+          "start": 60.188,
+          "end": 60.309
+        },
+        {
+          "word": "voete",
+          "start": 60.309,
+          "end": 60.762
+        }
+      ],
+      "translation": "Maar zoek je een Bob, maak ik mij uit de voeten"
+    },
+    {
+      "verseStart": 60.762,
+      "verseEnd": 62.721,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 60.762,
+          "end": 60.884
+        },
+        {
+          "word": "drink ",
+          "start": 60.884,
+          "end": 60.966
+        },
+        {
+          "word": "zoterdags ",
+          "start": 60.966,
+          "end": 61.088
+        },
+        {
+          "word": "liever ",
+          "start": 61.088,
+          "end": 61.373
+        },
+        {
+          "word": "e ",
+          "start": 61.373,
+          "end": 61.7
+        },
+        {
+          "word": "stuk ",
+          "start": 61.7,
+          "end": 61.903
+        },
+        {
+          "word": "in ",
+          "start": 61.903,
+          "end": 62.067
+        },
+        {
+          "word": "men ",
+          "start": 62.067,
+          "end": 62.189
+        },
+        {
+          "word": "kloete",
+          "start": 62.189,
+          "end": 62.721
+        }
+      ],
+      "translation": "Ik drink zaterdags liever een stuk in mijn kloten"
+    },
+    {
+      "verseStart": 62.721,
+      "verseEnd": 64.68,
+      "words": [
+        {
+          "word": "Bob ",
+          "start": 62.721,
+          "end": 62.966
+        },
+        {
+          "word": "hie ",
+          "start": 62.966,
+          "end": 63.089
+        },
+        {
+          "word": "Bob ",
+          "start": 63.089,
+          "end": 63.294
+        },
+        {
+          "word": "doo, ",
+          "start": 63.294,
+          "end": 63.783
+        },
+        {
+          "word": "tes ",
+          "start": 63.783,
+          "end": 63.945
+        },
+        {
+          "word": "allemoo ",
+          "start": 63.945,
+          "end": 64.272
+        },
+        {
+          "word": "iet ",
+          "start": 64.272,
+          "end": 64.394
+        },
+        {
+          "word": "vies",
+          "start": 64.394,
+          "end": 64.68
+        }
+      ],
+      "translation": "Bob hier Bob daar, het is allemaal iets vies"
+    },
+    {
+      "verseStart": 64.68,
+      "verseEnd": 66.521,
+      "words": [
+        {
+          "word": "Azzek ",
+          "start": 64.68,
+          "end": 65.008
+        },
+        {
+          "word": "oep ",
+          "start": 65.008,
+          "end": 65.257
+        },
+        {
+          "word": "ne ",
+          "start": 65.257,
+          "end": 65.42
+        },
+        {
+          "word": "boem ",
+          "start": 65.42,
+          "end": 65.704
+        },
+        {
+          "word": "peir ",
+          "start": 65.704,
+          "end": 65.786
+        },
+        {
+          "word": "komek ",
+          "start": 65.786,
+          "end": 65.907
+        },
+        {
+          "word": "toch ",
+          "start": 65.907,
+          "end": 66.192
+        },
+        {
+          "word": "oept ",
+          "start": 66.192,
+          "end": 66.395
+        },
+        {
+          "word": "nies",
+          "start": 66.395,
+          "end": 66.521
+        }
+      ],
+      "translation": "Als ik op een boom peer kom ik toch op het nieuws"
+    },
+    {
+      "verseStart": 66.521,
+      "verseEnd": 69.581,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 66.521,
+          "end": 67.668
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 67.668,
+          "end": 69.581
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 69.581,
+      "verseEnd": 71.428,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 69.581,
+          "end": 69.791
+        },
+        {
+          "word": "gon ",
+          "start": 69.791,
+          "end": 69.913
+        },
+        {
+          "word": "fieste ",
+          "start": 69.913,
+          "end": 70.035
+        },
+        {
+          "word": "en ",
+          "start": 70.035,
+          "end": 70.201
+        },
+        {
+          "word": "as ",
+          "start": 70.201,
+          "end": 70.322
+        },
+        {
+          "word": "da ",
+          "start": 70.322,
+          "end": 70.484
+        },
+        {
+          "word": "nog ",
+          "start": 70.484,
+          "end": 70.607
+        },
+        {
+          "word": "ni ",
+          "start": 70.607,
+          "end": 70.932
+        },
+        {
+          "word": "mag",
+          "start": 70.932,
+          "end": 71.428
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 71.428,
+      "verseEnd": 73.261,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 71.428,
+          "end": 72.163
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 72.163,
+          "end": 73.261
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 73.261,
+      "verseEnd": 75.39,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 73.261,
+          "end": 73.424
+        },
+        {
+          "word": "zoterdag ",
+          "start": 73.424,
+          "end": 73.915
+        },
+        {
+          "word": "is '",
+          "start": 73.915,
+          "end": 74.366
+        },
+        {
+          "word": "t ",
+          "start": 74.366,
+          "end": 74.53
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 74.53,
+          "end": 75.39
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 75.39,
+      "verseEnd": 77.55,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 75.39,
+          "end": 76.246
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 76.246,
+          "end": 77.55
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 77.55,
+      "verseEnd": 79.634,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 77.55,
+          "end": 77.753
+        },
+        {
+          "word": "gon ",
+          "start": 77.753,
+          "end": 77.875
+        },
+        {
+          "word": "fieste ",
+          "start": 77.875,
+          "end": 78.043
+        },
+        {
+          "word": "en ",
+          "start": 78.043,
+          "end": 78.368
+        },
+        {
+          "word": "as ",
+          "start": 78.368,
+          "end": 78.49
+        },
+        {
+          "word": "da ",
+          "start": 78.49,
+          "end": 78.611
+        },
+        {
+          "word": "nog ",
+          "start": 78.611,
+          "end": 78.856
+        },
+        {
+          "word": "ni ",
+          "start": 78.856,
+          "end": 79.019
+        },
+        {
+          "word": "mag",
+          "start": 79.019,
+          "end": 79.634
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 79.634,
+      "verseEnd": 81.639,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 79.634,
+          "end": 80.419
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 80.419,
+          "end": 81.639
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 81.639,
+      "verseEnd": 84.09,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 81.639,
+          "end": 81.721
+        },
+        {
+          "word": "zoterdag ",
+          "start": 81.721,
+          "end": 82.536
+        },
+        {
+          "word": "is '",
+          "start": 82.536,
+          "end": 82.617
+        },
+        {
+          "word": "t ",
+          "start": 82.617,
+          "end": 82.862
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 82.862,
+          "end": 84.09
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 84.09,
+      "verseEnd": 85.85,
+      "words": [
+        {
+          "word": "Der ",
+          "start": 84.09,
+          "end": 84.213
+        },
+        {
+          "word": "is ",
+          "start": 84.213,
+          "end": 84.377
+        },
+        {
+          "word": "een ",
+          "start": 84.377,
+          "end": 84.499
+        },
+        {
+          "word": "foaf, ",
+          "start": 84.499,
+          "end": 84.828
+        },
+        {
+          "word": "do ",
+          "start": 84.828,
+          "end": 84.951
+        },
+        {
+          "word": "gonnek ",
+          "start": 84.951,
+          "end": 85.235
+        },
+        {
+          "word": "is ",
+          "start": 85.235,
+          "end": 85.396
+        },
+        {
+          "word": "binne",
+          "start": 85.396,
+          "end": 85.85
+        }
+      ],
+      "translation": "Er is een fuif, daar ga ik eens binnen"
+    },
+    {
+      "verseStart": 85.85,
+      "verseEnd": 87.93,
+      "words": [
+        {
+          "word": "Over ",
+          "start": 85.85,
+          "end": 85.973
+        },
+        {
+          "word": "die ",
+          "start": 85.973,
+          "end": 86.176
+        },
+        {
+          "word": "honderd ",
+          "start": 86.176,
+          "end": 86.299
+        },
+        {
+          "word": "frank ",
+          "start": 86.299,
+          "end": 86.461
+        },
+        {
+          "word": "inkom ",
+          "start": 86.461,
+          "end": 86.665
+        },
+        {
+          "word": "moete ",
+          "start": 86.665,
+          "end": 86.991
+        },
+        {
+          "word": "ni ",
+          "start": 86.991,
+          "end": 87.155
+        },
+        {
+          "word": "beginne",
+          "start": 87.155,
+          "end": 87.93
+        }
+      ],
+      "translation": "Over die honderd frank inkom moet je niet beginnen"
+    },
+    {
+      "verseStart": 87.93,
+      "verseEnd": 90.055,
+      "words": [
+        {
+          "word": "Ha ",
+          "start": 87.93,
+          "end": 88.135
+        },
+        {
+          "word": "hei ",
+          "start": 88.135,
+          "end": 88.379
+        },
+        {
+          "word": "twie ",
+          "start": 88.379,
+          "end": 88.627
+        },
+        {
+          "word": "oege ",
+          "start": 88.627,
+          "end": 88.872
+        },
+        {
+          "word": "en ",
+          "start": 88.872,
+          "end": 89.076
+        },
+        {
+          "word": "ik ",
+          "start": 89.076,
+          "end": 89.403
+        },
+        {
+          "word": "twie ",
+          "start": 89.403,
+          "end": 89.566
+        },
+        {
+          "word": "doame",
+          "start": 89.566,
+          "end": 90.055
+        }
+      ],
+      "translation": "Zij heeft twee ogen en ik twee duimen"
+    },
+    {
+      "verseStart": 90.055,
+      "verseEnd": 92.099,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 90.055,
+          "end": 90.259
+        },
+        {
+          "word": "koom ",
+          "start": 90.259,
+          "end": 90.382
+        },
+        {
+          "word": "hie ",
+          "start": 90.382,
+          "end": 90.545
+        },
+        {
+          "word": "ni ",
+          "start": 90.545,
+          "end": 90.666
+        },
+        {
+          "word": "veu ",
+          "start": 90.666,
+          "end": 90.789
+        },
+        {
+          "word": "de ",
+          "start": 90.789,
+          "end": 90.911
+        },
+        {
+          "word": "foaf, ",
+          "start": 90.911,
+          "end": 91.073
+        },
+        {
+          "word": "mo ",
+          "start": 91.073,
+          "end": 91.2
+        },
+        {
+          "word": "veu ",
+          "start": 91.2,
+          "end": 91.367
+        },
+        {
+          "word": "de ",
+          "start": 91.367,
+          "end": 91.53
+        },
+        {
+          "word": "proame",
+          "start": 91.53,
+          "end": 92.099
+        }
+      ],
+      "translation": "Ik kom hier niet voor de fuif, maar voor de pramen"
+    },
+    {
+      "verseStart": 92.099,
+      "verseEnd": 94.387,
+      "words": [
+        {
+          "word": "Hilde ",
+          "start": 92.099,
+          "end": 92.222
+        },
+        {
+          "word": "of ",
+          "start": 92.222,
+          "end": 92.426
+        },
+        {
+          "word": "Hilda, ",
+          "start": 92.426,
+          "end": 93.161
+        },
+        {
+          "word": "ik ",
+          "start": 93.161,
+          "end": 93.286
+        },
+        {
+          "word": "schaar ",
+          "start": 93.286,
+          "end": 93.489
+        },
+        {
+          "word": "ze ",
+          "start": 93.489,
+          "end": 93.611
+        },
+        {
+          "word": "baa ",
+          "start": 93.611,
+          "end": 93.733
+        },
+        {
+          "word": "de ",
+          "start": 93.733,
+          "end": 93.977
+        },
+        {
+          "word": "kol",
+          "start": 93.977,
+          "end": 94.387
+        }
+      ],
+      "translation": "Hilde of Hilda, ik grijp ze bij de kraag"
+    },
+    {
+      "verseStart": 94.387,
+      "verseEnd": 96.231,
+      "words": [
+        {
+          "word": "Het ",
+          "start": 94.387,
+          "end": 94.51
+        },
+        {
+          "word": "spelt ",
+          "start": 94.51,
+          "end": 94.675
+        },
+        {
+          "word": "veu ",
+          "start": 94.675,
+          "end": 94.842
+        },
+        {
+          "word": "ma ",
+          "start": 94.842,
+          "end": 95.005
+        },
+        {
+          "word": "allemoo ",
+          "start": 95.005,
+          "end": 95.453
+        },
+        {
+          "word": "genne ",
+          "start": 95.453,
+          "end": 95.617
+        },
+        {
+          "word": "rol",
+          "start": 95.617,
+          "end": 96.231
+        }
+      ],
+      "translation": "Het speelt voor mij allemaal geen rol"
+    },
+    {
+      "verseStart": 96.231,
+      "verseEnd": 98.397,
+      "words": [
+        {
+          "word": "Nie ",
+          "start": 96.231,
+          "end": 96.361
+        },
+        {
+          "word": "zoterdags ",
+          "start": 96.361,
+          "end": 96.934
+        },
+        {
+          "word": "lig ",
+          "start": 96.934,
+          "end": 97.179
+        },
+        {
+          "word": "ik ",
+          "start": 97.179,
+          "end": 97.341
+        },
+        {
+          "word": "ni ",
+          "start": 97.341,
+          "end": 97.462
+        },
+        {
+          "word": "in ",
+          "start": 97.462,
+          "end": 97.584
+        },
+        {
+          "word": "maa ",
+          "start": 97.584,
+          "end": 97.868
+        },
+        {
+          "word": "bed",
+          "start": 97.868,
+          "end": 98.397
+        }
+      ],
+      "translation": "Nee, zaterdags lig ik niet in mijn bed"
+    },
+    {
+      "verseStart": 98.397,
+      "verseEnd": 100.403,
+      "words": [
+        {
+          "word": "En ",
+          "start": 98.397,
+          "end": 98.561
+        },
+        {
+          "word": "oep ",
+          "start": 98.561,
+          "end": 98.848
+        },
+        {
+          "word": "den ",
+          "start": 98.848,
+          "end": 98.969
+        },
+        {
+          "word": "tellevies ",
+          "start": 98.969,
+          "end": 99.38
+        },
+        {
+          "word": "is '",
+          "start": 99.38,
+          "end": 99.501
+        },
+        {
+          "word": "t ",
+          "start": 99.501,
+          "end": 99.624
+        },
+        {
+          "word": "ok ",
+          "start": 99.624,
+          "end": 99.707
+        },
+        {
+          "word": "ni ",
+          "start": 99.707,
+          "end": 99.871
+        },
+        {
+          "word": "vet",
+          "start": 99.871,
+          "end": 100.403
+        }
+      ],
+      "translation": "En op de televisie is het ook niet vet"
+    },
+    {
+      "verseStart": 100.403,
+      "verseEnd": 102.198,
+      "words": [
+        {
+          "word": "Ge ",
+          "start": 100.403,
+          "end": 100.689
+        },
+        {
+          "word": "moet ",
+          "start": 100.689,
+          "end": 101.056
+        },
+        {
+          "word": "ni ",
+          "start": 101.056,
+          "end": 101.179
+        },
+        {
+          "word": "probere ",
+          "start": 101.179,
+          "end": 101.302
+        },
+        {
+          "word": "van ",
+          "start": 101.302,
+          "end": 101.464
+        },
+        {
+          "word": "het ",
+          "start": 101.464,
+          "end": 101.587
+        },
+        {
+          "word": "maa ",
+          "start": 101.587,
+          "end": 101.912
+        },
+        {
+          "word": "te ",
+          "start": 101.912,
+          "end": 102.035
+        },
+        {
+          "word": "belette",
+          "start": 102.035,
+          "end": 102.198
+        }
+      ],
+      "translation": "Je moet niet proberen van het mij te beletten"
+    },
+    {
+      "verseStart": 102.198,
+      "verseEnd": 104.73,
+      "words": [
+        {
+          "word": "Van ",
+          "start": 102.198,
+          "end": 103.058
+        },
+        {
+          "word": "zoterdags ",
+          "start": 103.058,
+          "end": 103.181
+        },
+        {
+          "word": "en ",
+          "start": 103.181,
+          "end": 103.384
+        },
+        {
+          "word": "stapke ",
+          "start": 103.384,
+          "end": 103.547
+        },
+        {
+          "word": "in ",
+          "start": 103.547,
+          "end": 103.709
+        },
+        {
+          "word": "de ",
+          "start": 103.709,
+          "end": 103.871
+        },
+        {
+          "word": "wereld ",
+          "start": 103.871,
+          "end": 104.12
+        },
+        {
+          "word": "te ",
+          "start": 104.12,
+          "end": 104.283
+        },
+        {
+          "word": "zette",
+          "start": 104.283,
+          "end": 104.73
+        }
+      ],
+      "translation": "Om zaterdags een stapje in de wereld te zetten"
+    },
+    {
+      "verseStart": 104.73,
+      "verseEnd": 106.651,
+      "words": [
+        {
+          "word": "Me ",
+          "start": 104.73,
+          "end": 104.853
+        },
+        {
+          "word": "toeverwoter ",
+          "start": 104.853,
+          "end": 105.263
+        },
+        {
+          "word": "van ",
+          "start": 105.263,
+          "end": 105.385
+        },
+        {
+          "word": "den ",
+          "start": 105.385,
+          "end": 105.551
+        },
+        {
+          "word": "interbrew",
+          "start": 105.551,
+          "end": 106.651
+        }
+      ],
+      "translation": "Met toverwater van de interbrew"
+    },
+    {
+      "verseStart": 106.651,
+      "verseEnd": 108.896,
+      "words": [
+        {
+          "word": "Of ",
+          "start": 106.651,
+          "end": 106.855
+        },
+        {
+          "word": "de ",
+          "start": 106.855,
+          "end": 107.019
+        },
+        {
+          "word": "nectar ",
+          "start": 107.019,
+          "end": 107.183
+        },
+        {
+          "word": "van ",
+          "start": 107.183,
+          "end": 107.349
+        },
+        {
+          "word": "den ",
+          "start": 107.349,
+          "end": 107.471
+        },
+        {
+          "word": "hocht, ",
+          "start": 107.471,
+          "end": 107.755
+        },
+        {
+          "word": "dadis ",
+          "start": 107.755,
+          "end": 107.959
+        },
+        {
+          "word": "al ",
+          "start": 107.959,
+          "end": 108.081
+        },
+        {
+          "word": "eve ",
+          "start": 108.081,
+          "end": 108.326
+        },
+        {
+          "word": "goe",
+          "start": 108.326,
+          "end": 108.896
+        }
+      ],
+      "translation": "Of de nectar van de haacht, dat is al even goed"
+    },
+    {
+      "verseStart": 108.896,
+      "verseEnd": 110.98,
+      "words": [
+        {
+          "word": "Eve ",
+          "start": 108.896,
+          "end": 109.059
+        },
+        {
+          "word": "goe ",
+          "start": 109.059,
+          "end": 109.346
+        },
+        {
+          "word": "veu ",
+          "start": 109.346,
+          "end": 109.467
+        },
+        {
+          "word": "de ",
+          "start": 109.467,
+          "end": 109.59
+        },
+        {
+          "word": "stress ",
+          "start": 109.59,
+          "end": 109.874
+        },
+        {
+          "word": "en ",
+          "start": 109.874,
+          "end": 109.997
+        },
+        {
+          "word": "den ",
+          "start": 109.997,
+          "end": 110.489
+        },
+        {
+          "word": "dynamik",
+          "start": 110.489,
+          "end": 110.98
+        }
+      ],
+      "translation": "Even goed voor de stress en de dynamiek"
+    },
+    {
+      "verseStart": 110.98,
+      "verseEnd": 112.977,
+      "words": [
+        {
+          "word": "Veu ",
+          "start": 110.98,
+          "end": 111.101
+        },
+        {
+          "word": "oeve ",
+          "start": 111.101,
+          "end": 111.223
+        },
+        {
+          "word": "piston ",
+          "start": 111.223,
+          "end": 111.917
+        },
+        {
+          "word": "en ",
+          "start": 111.917,
+          "end": 112.08
+        },
+        {
+          "word": "den ",
+          "start": 112.08,
+          "end": 112.245
+        },
+        {
+          "word": "ellentrik",
+          "start": 112.245,
+          "end": 112.977
+        }
+      ],
+      "translation": "Voor uw piston en de elektriciteit"
+    },
+    {
+      "verseStart": 112.977,
+      "verseEnd": 115.226,
+      "words": [
+        {
+          "word": "Van ",
+          "start": 112.977,
+          "end": 113.14
+        },
+        {
+          "word": "nor ",
+          "start": 113.14,
+          "end": 113.263
+        },
+        {
+          "word": "haas ",
+          "start": 113.263,
+          "end": 113.511
+        },
+        {
+          "word": "goon ",
+          "start": 113.511,
+          "end": 113.836
+        },
+        {
+          "word": "moette ",
+          "start": 113.836,
+          "end": 114.043
+        },
+        {
+          "word": "ma ",
+          "start": 114.043,
+          "end": 114.288
+        },
+        {
+          "word": "direct ",
+          "start": 114.288,
+          "end": 114.533
+        },
+        {
+          "word": "nog ",
+          "start": 114.533,
+          "end": 114.656
+        },
+        {
+          "word": "ni ",
+          "start": 114.656,
+          "end": 114.82
+        },
+        {
+          "word": "klappe",
+          "start": 114.82,
+          "end": 115.226
+        }
+      ],
+      "translation": "Over naar huis gaan moet je tegen mij direct nog niet praten"
+    },
+    {
+      "verseStart": 115.226,
+      "verseEnd": 117.428,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 115.226,
+          "end": 115.349
+        },
+        {
+          "word": "gen ",
+          "start": 115.349,
+          "end": 115.594
+        },
+        {
+          "word": "jest ",
+          "start": 115.594,
+          "end": 115.715
+        },
+        {
+          "word": "nog ",
+          "start": 115.715,
+          "end": 115.841
+        },
+        {
+          "word": "wa ",
+          "start": 115.841,
+          "end": 116.004
+        },
+        {
+          "word": "pinkes ",
+          "start": 116.004,
+          "end": 116.166
+        },
+        {
+          "word": "in ",
+          "start": 116.166,
+          "end": 116.329
+        },
+        {
+          "word": "men ",
+          "start": 116.329,
+          "end": 116.653
+        },
+        {
+          "word": "kamezole ",
+          "start": 116.653,
+          "end": 116.775
+        },
+        {
+          "word": "kappe",
+          "start": 116.775,
+          "end": 117.428
+        }
+      ],
+      "translation": "Ik ga eerst nog wat pintjes in mijn kamizool kappen"
+    },
+    {
+      "verseStart": 117.428,
+      "verseEnd": 119.468,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 117.428,
+          "end": 118.209
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 118.209,
+          "end": 119.468
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 119.468,
+      "verseEnd": 121.593,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 119.468,
+          "end": 119.63
+        },
+        {
+          "word": "gon ",
+          "start": 119.63,
+          "end": 119.875
+        },
+        {
+          "word": "fieste ",
+          "start": 119.875,
+          "end": 120.247
+        },
+        {
+          "word": "en ",
+          "start": 120.247,
+          "end": 120.491
+        },
+        {
+          "word": "as ",
+          "start": 120.491,
+          "end": 120.614
+        },
+        {
+          "word": "da ",
+          "start": 120.614,
+          "end": 120.819
+        },
+        {
+          "word": "nog ",
+          "start": 120.819,
+          "end": 120.983
+        },
+        {
+          "word": "ni ",
+          "start": 120.983,
+          "end": 121.104
+        },
+        {
+          "word": "mag",
+          "start": 121.104,
+          "end": 121.593
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 121.593,
+      "verseEnd": 123.593,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 121.593,
+          "end": 122.658
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 122.658,
+          "end": 123.593
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 123.593,
+      "verseEnd": 125.671,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 123.593,
+          "end": 123.715
+        },
+        {
+          "word": "zoterdag ",
+          "start": 123.715,
+          "end": 124.367
+        },
+        {
+          "word": "is '",
+          "start": 124.367,
+          "end": 124.489
+        },
+        {
+          "word": "t ",
+          "start": 124.489,
+          "end": 124.691
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 124.691,
+          "end": 125.671
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 125.671,
+      "verseEnd": 127.682,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 125.671,
+          "end": 126.535
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 126.535,
+          "end": 127.682
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 127.682,
+      "verseEnd": 129.975,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 127.682,
+          "end": 127.804
+        },
+        {
+          "word": "gon ",
+          "start": 127.804,
+          "end": 128.291
+        },
+        {
+          "word": "fieste ",
+          "start": 128.291,
+          "end": 128.616
+        },
+        {
+          "word": "en ",
+          "start": 128.616,
+          "end": 128.779
+        },
+        {
+          "word": "as ",
+          "start": 128.779,
+          "end": 128.942
+        },
+        {
+          "word": "da ",
+          "start": 128.942,
+          "end": 129.065
+        },
+        {
+          "word": "nog ",
+          "start": 129.065,
+          "end": 129.228
+        },
+        {
+          "word": "ni ",
+          "start": 129.228,
+          "end": 129.394
+        },
+        {
+          "word": "mag",
+          "start": 129.394,
+          "end": 129.975
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 129.975,
+      "verseEnd": 131.85,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 129.975,
+          "end": 130.751
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 130.751,
+          "end": 131.85
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 131.85,
+      "verseEnd": 134.01,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 131.85,
+          "end": 132.093
+        },
+        {
+          "word": "zoterdag ",
+          "start": 132.093,
+          "end": 132.791
+        },
+        {
+          "word": "is '",
+          "start": 132.791,
+          "end": 132.912
+        },
+        {
+          "word": "t ",
+          "start": 132.912,
+          "end": 133.075
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 133.075,
+          "end": 134.01
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 134.01,
+      "verseEnd": 136.053,
+      "words": [
+        {
+          "word": "Het ",
+          "start": 134.01,
+          "end": 134.133
+        },
+        {
+          "word": "broebelt ",
+          "start": 134.133,
+          "end": 134.418
+        },
+        {
+          "word": "in ",
+          "start": 134.418,
+          "end": 134.54
+        },
+        {
+          "word": "men ",
+          "start": 134.54,
+          "end": 134.785
+        },
+        {
+          "word": "strop ",
+          "start": 134.785,
+          "end": 134.988
+        },
+        {
+          "word": "en ",
+          "start": 134.988,
+          "end": 135.151
+        },
+        {
+          "word": "alles ",
+          "start": 135.151,
+          "end": 135.483
+        },
+        {
+          "word": "droat",
+          "start": 135.483,
+          "end": 136.053
+        }
+      ],
+      "translation": "Het broebelt in mijn strot en alles draait"
+    },
+    {
+      "verseStart": 136.053,
+      "verseEnd": 138.182,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 136.053,
+          "end": 136.175
+        },
+        {
+          "word": "moet ",
+          "start": 136.175,
+          "end": 136.461
+        },
+        {
+          "word": "no ",
+          "start": 136.461,
+          "end": 136.581
+        },
+        {
+          "word": "de ",
+          "start": 136.581,
+          "end": 136.708
+        },
+        {
+          "word": "koer, ",
+          "start": 136.708,
+          "end": 137.033
+        },
+        {
+          "word": "alles ",
+          "start": 137.033,
+          "end": 137.277
+        },
+        {
+          "word": "moet ",
+          "start": 137.277,
+          "end": 137.606
+        },
+        {
+          "word": "eroat",
+          "start": 137.606,
+          "end": 138.182
+        }
+      ],
+      "translation": "Ik moet naar de koer, alles moet eruit"
+    },
+    {
+      "verseStart": 138.182,
+      "verseEnd": 140.191,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 138.182,
+          "end": 138.263
+        },
+        {
+          "word": "geubel ",
+          "start": 138.263,
+          "end": 138.509
+        },
+        {
+          "word": "currywest ",
+          "start": 138.509,
+          "end": 139.002
+        },
+        {
+          "word": "en ",
+          "start": 139.002,
+          "end": 139.332
+        },
+        {
+          "word": "wa ",
+          "start": 139.332,
+          "end": 139.455
+        },
+        {
+          "word": "soep ",
+          "start": 139.455,
+          "end": 139.659
+        },
+        {
+          "word": "van ",
+          "start": 139.659,
+          "end": 139.781
+        },
+        {
+          "word": "testrak",
+          "start": 139.781,
+          "end": 140.191
+        }
+      ],
+      "translation": "Ik braak curryworst en wat soep van daarnet"
+    },
+    {
+      "verseStart": 140.191,
+      "verseEnd": 142.391,
+      "words": [
+        {
+          "word": "'",
+          "start": 140.191,
+          "end": 140.353
+        },
+        {
+          "word": "t ",
+          "start": 140.353,
+          "end": 140.476
+        },
+        {
+          "word": "Lei ",
+          "start": 140.476,
+          "end": 140.68
+        },
+        {
+          "word": "allemoo ",
+          "start": 140.68,
+          "end": 140.923
+        },
+        {
+          "word": "te ",
+          "start": 140.923,
+          "end": 141.086
+        },
+        {
+          "word": "drave ",
+          "start": 141.086,
+          "end": 141.208
+        },
+        {
+          "word": "in ",
+          "start": 141.208,
+          "end": 141.33
+        },
+        {
+          "word": "de ",
+          "start": 141.33,
+          "end": 141.453
+        },
+        {
+          "word": "GFT-",
+          "start": 141.453,
+          "end": 141.821
+        },
+        {
+          "word": "bak",
+          "start": 141.821,
+          "end": 142.391
+        }
+      ],
+      "translation": "Het ligt allemaal te drijven in de GFT-bak"
+    },
+    {
+      "verseStart": 142.391,
+      "verseEnd": 144.605,
+      "words": [
+        {
+          "word": "Azzek ",
+          "start": 142.391,
+          "end": 142.555
+        },
+        {
+          "word": "paas '",
+          "start": 142.555,
+          "end": 142.844
+        },
+        {
+          "word": "t ",
+          "start": 142.844,
+          "end": 143.005
+        },
+        {
+          "word": "es ",
+          "start": 143.005,
+          "end": 143.09
+        },
+        {
+          "word": "gedoon, ",
+          "start": 143.09,
+          "end": 143.334
+        },
+        {
+          "word": "kraak ",
+          "start": 143.334,
+          "end": 143.501
+        },
+        {
+          "word": "nog ",
+          "start": 143.501,
+          "end": 143.743
+        },
+        {
+          "word": "een ",
+          "start": 143.743,
+          "end": 143.947
+        },
+        {
+          "word": "drets ",
+          "start": 143.947,
+          "end": 144.07
+        },
+        {
+          "word": "oep ",
+          "start": 144.07,
+          "end": 144.155
+        },
+        {
+          "word": "men ",
+          "start": 144.155,
+          "end": 144.318
+        },
+        {
+          "word": "hum",
+          "start": 144.318,
+          "end": 144.605
+        }
+      ],
+      "translation": "Als ik denk dat het is gedaan, valt nog een flats op mijn hemd"
+    },
+    {
+      "verseStart": 144.605,
+      "verseEnd": 146.407,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 144.605,
+          "end": 144.728
+        },
+        {
+          "word": "val ",
+          "start": 144.728,
+          "end": 144.89
+        },
+        {
+          "word": "over ",
+          "start": 144.89,
+          "end": 145.053
+        },
+        {
+          "word": "men ",
+          "start": 145.053,
+          "end": 145.257
+        },
+        {
+          "word": "voete, ",
+          "start": 145.257,
+          "end": 145.462
+        },
+        {
+          "word": "das ",
+          "start": 145.462,
+          "end": 145.585
+        },
+        {
+          "word": "ni ",
+          "start": 145.585,
+          "end": 145.707
+        },
+        {
+          "word": "het ",
+          "start": 145.707,
+          "end": 145.911
+        },
+        {
+          "word": "slum",
+          "start": 145.911,
+          "end": 146.407
+        }
+      ],
+      "translation": "Ik val over mijn voeten, dat is niet het slimste"
+    },
+    {
+      "verseStart": 146.407,
+      "verseEnd": 148.651,
+      "words": [
+        {
+          "word": "Het ",
+          "start": 146.407,
+          "end": 146.611
+        },
+        {
+          "word": "weud ",
+          "start": 146.611,
+          "end": 146.937
+        },
+        {
+          "word": "teveul, ",
+          "start": 146.937,
+          "end": 147.546
+        },
+        {
+          "word": "ik ",
+          "start": 147.546,
+          "end": 147.669
+        },
+        {
+          "word": "begin ",
+          "start": 147.669,
+          "end": 147.791
+        },
+        {
+          "word": "het ",
+          "start": 147.791,
+          "end": 147.954
+        },
+        {
+          "word": "te ",
+          "start": 147.954,
+          "end": 148.116
+        },
+        {
+          "word": "vuule",
+          "start": 148.116,
+          "end": 148.651
+        }
+      ],
+      "translation": "Het wordt te veel, ik begin het te voelen"
+    },
+    {
+      "verseStart": 148.651,
+      "verseEnd": 150.689,
+      "words": [
+        {
+          "word": "Mo ",
+          "start": 148.651,
+          "end": 148.773
+        },
+        {
+          "word": "jest ",
+          "start": 148.773,
+          "end": 148.895
+        },
+        {
+          "word": "de ",
+          "start": 148.895,
+          "end": 149.017
+        },
+        {
+          "word": "kotssmook ",
+          "start": 149.017,
+          "end": 149.302
+        },
+        {
+          "word": "me ",
+          "start": 149.302,
+          "end": 149.425
+        },
+        {
+          "word": "nog ",
+          "start": 149.425,
+          "end": 149.628
+        },
+        {
+          "word": "e ",
+          "start": 149.628,
+          "end": 149.75
+        },
+        {
+          "word": "pinke ",
+          "start": 149.75,
+          "end": 149.954
+        },
+        {
+          "word": "wegspuule",
+          "start": 149.954,
+          "end": 150.689
+        }
+      ],
+      "translation": "Maar eerst de kots-smaak met nog een pintje wegspoelen"
+    },
+    {
+      "verseStart": 150.689,
+      "verseEnd": 152.732,
+      "words": [
+        {
+          "word": "En ",
+          "start": 150.689,
+          "end": 150.811
+        },
+        {
+          "word": "ik ",
+          "start": 150.811,
+          "end": 151.095
+        },
+        {
+          "word": "val ",
+          "start": 151.095,
+          "end": 151.381
+        },
+        {
+          "word": "in '",
+          "start": 151.381,
+          "end": 151.544
+        },
+        {
+          "word": "t ",
+          "start": 151.544,
+          "end": 151.788
+        },
+        {
+          "word": "sloop ",
+          "start": 151.788,
+          "end": 151.91
+        },
+        {
+          "word": "in ",
+          "start": 151.91,
+          "end": 152.033
+        },
+        {
+          "word": "den ",
+          "start": 152.033,
+          "end": 152.364
+        },
+        {
+          "word": "assenbak",
+          "start": 152.364,
+          "end": 152.732
+        }
+      ],
+      "translation": "En ik val in slaap in de asbak"
+    },
+    {
+      "verseStart": 152.732,
+      "verseEnd": 154.85,
+      "words": [
+        {
+          "word": "Geft ",
+          "start": 152.732,
+          "end": 152.895
+        },
+        {
+          "word": "na ",
+          "start": 152.895,
+          "end": 153.058
+        },
+        {
+          "word": "toe, ",
+          "start": 153.058,
+          "end": 153.139
+        },
+        {
+          "word": "ik ",
+          "start": 153.139,
+          "end": 153.343
+        },
+        {
+          "word": "zen ",
+          "start": 153.343,
+          "end": 153.506
+        },
+        {
+          "word": "agelek ",
+          "start": 153.506,
+          "end": 153.79
+        },
+        {
+          "word": "toch ",
+          "start": 153.79,
+          "end": 154.197
+        },
+        {
+          "word": "ne ",
+          "start": 154.197,
+          "end": 154.359
+        },
+        {
+          "word": "krak",
+          "start": 154.359,
+          "end": 154.85
+        }
+      ],
+      "translation": "Geef nu toe, ik ben eigenlijk toch een krak"
+    },
+    {
+      "verseStart": 154.85,
+      "verseEnd": 156.852,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 154.85,
+          "end": 155.013
+        },
+        {
+          "word": "gen ",
+          "start": 155.013,
+          "end": 155.298
+        },
+        {
+          "word": "no ",
+          "start": 155.298,
+          "end": 155.462
+        },
+        {
+          "word": "mennen ",
+          "start": 155.462,
+          "end": 155.624
+        },
+        {
+          "word": "toas ",
+          "start": 155.624,
+          "end": 155.747
+        },
+        {
+          "word": "wo ",
+          "start": 155.747,
+          "end": 155.91
+        },
+        {
+          "word": "de ",
+          "start": 155.91,
+          "end": 156.033
+        },
+        {
+          "word": "stella ",
+          "start": 156.033,
+          "end": 156.322
+        },
+        {
+          "word": "sto",
+          "start": 156.322,
+          "end": 156.852
+        }
+      ],
+      "translation": "Ik ga naar mijn thuis waar de Stella staat"
+    },
+    {
+      "verseStart": 156.852,
+      "verseEnd": 159.016,
+      "words": [
+        {
+          "word": "Ge ",
+          "start": 156.852,
+          "end": 156.974
+        },
+        {
+          "word": "wet ",
+          "start": 156.974,
+          "end": 157.137
+        },
+        {
+          "word": "wel ",
+          "start": 157.137,
+          "end": 157.299
+        },
+        {
+          "word": "wo ",
+          "start": 157.299,
+          "end": 157.467
+        },
+        {
+          "word": "dien ",
+          "start": 157.467,
+          "end": 157.63
+        },
+        {
+          "word": "oemgekapte ",
+          "start": 157.63,
+          "end": 158.16
+        },
+        {
+          "word": "boem ",
+          "start": 158.16,
+          "end": 158.324
+        },
+        {
+          "word": "sto",
+          "start": 158.324,
+          "end": 159.016
+        }
+      ],
+      "translation": "Je weet wel waar die omgekapte boom staat"
+    },
+    {
+      "verseStart": 159.016,
+      "verseEnd": 161.172,
+      "words": [
+        {
+          "word": "Ik ",
+          "start": 159.016,
+          "end": 159.138
+        },
+        {
+          "word": "pak ",
+          "start": 159.138,
+          "end": 159.259
+        },
+        {
+          "word": "den ",
+          "start": 159.259,
+          "end": 159.341
+        },
+        {
+          "word": "trap ",
+          "start": 159.341,
+          "end": 159.585
+        },
+        {
+          "word": "no ",
+          "start": 159.585,
+          "end": 159.709
+        },
+        {
+          "word": "bove, ",
+          "start": 159.709,
+          "end": 159.752
+        },
+        {
+          "word": "mo ",
+          "start": 159.752,
+          "end": 160.239
+        },
+        {
+          "word": "ha ",
+          "start": 160.239,
+          "end": 160.401
+        },
+        {
+          "word": "luipt ",
+          "start": 160.401,
+          "end": 160.562
+        },
+        {
+          "word": "mier ",
+          "start": 160.562,
+          "end": 160.685
+        },
+        {
+          "word": "no ",
+          "start": 160.685,
+          "end": 160.767
+        },
+        {
+          "word": "benee",
+          "start": 160.767,
+          "end": 161.172
+        }
+      ],
+      "translation": "Ik pak de trap naar boven, maar hij loopt meer naar beneden"
+    },
+    {
+      "verseStart": 161.172,
+      "verseEnd": 163.33,
+      "words": [
+        {
+          "word": "Daddis ",
+          "start": 161.172,
+          "end": 161.335
+        },
+        {
+          "word": "al ",
+          "start": 161.335,
+          "end": 161.457
+        },
+        {
+          "word": "van ",
+          "start": 161.457,
+          "end": 161.578
+        },
+        {
+          "word": "veurige ",
+          "start": 161.578,
+          "end": 161.7
+        },
+        {
+          "word": "zoterdag ",
+          "start": 161.7,
+          "end": 162.147
+        },
+        {
+          "word": "gelee",
+          "start": 162.147,
+          "end": 163.33
+        }
+      ],
+      "translation": "Dat is al van vorige zaterdag geleden"
+    },
+    {
+      "verseStart": 163.33,
+      "verseEnd": 165.291,
+      "words": [
+        {
+          "word": "Dat ",
+          "start": 163.33,
+          "end": 163.452
+        },
+        {
+          "word": "den ",
+          "start": 163.452,
+          "end": 163.58
+        },
+        {
+          "word": "trap ",
+          "start": 163.58,
+          "end": 163.743
+        },
+        {
+          "word": "nemie ",
+          "start": 163.743,
+          "end": 163.905
+        },
+        {
+          "word": "doe ",
+          "start": 163.905,
+          "end": 164.271
+        },
+        {
+          "word": "wat ",
+          "start": 164.271,
+          "end": 164.434
+        },
+        {
+          "word": "da ",
+          "start": 164.434,
+          "end": 164.677
+        },
+        {
+          "word": "gaa ",
+          "start": 164.677,
+          "end": 164.8
+        },
+        {
+          "word": "verwacht",
+          "start": 164.8,
+          "end": 165.291
+        }
+      ],
+      "translation": "Dat de trap niet meer doet wat je verwacht"
+    },
+    {
+      "verseStart": 165.291,
+      "verseEnd": 167.401,
+      "words": [
+        {
+          "word": "Da ",
+          "start": 165.291,
+          "end": 165.414
+        },
+        {
+          "word": "kunde ",
+          "start": 165.414,
+          "end": 165.785
+        },
+        {
+          "word": "veu ",
+          "start": 165.785,
+          "end": 165.907
+        },
+        {
+          "word": "hemme ",
+          "start": 165.907,
+          "end": 166.156
+        },
+        {
+          "word": "oep ",
+          "start": 166.156,
+          "end": 166.503
+        },
+        {
+          "word": "ne ",
+          "start": 166.503,
+          "end": 166.747
+        },
+        {
+          "word": "zoterdagnacht",
+          "start": 166.747,
+          "end": 167.401
+        }
+      ],
+      "translation": "Dat kan je voorhebben op een zaterdagnacht"
+    },
+    {
+      "verseStart": 167.401,
+      "verseEnd": 169.771,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 167.401,
+          "end": 168.342
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 168.342,
+          "end": 169.771
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 169.771,
+      "verseEnd": 171.685,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 169.771,
+          "end": 169.853
+        },
+        {
+          "word": "gon ",
+          "start": 169.853,
+          "end": 170.015
+        },
+        {
+          "word": "fieste ",
+          "start": 170.015,
+          "end": 170.501
+        },
+        {
+          "word": "en ",
+          "start": 170.501,
+          "end": 170.624
+        },
+        {
+          "word": "as ",
+          "start": 170.624,
+          "end": 170.746
+        },
+        {
+          "word": "da ",
+          "start": 170.746,
+          "end": 170.827
+        },
+        {
+          "word": "nog ",
+          "start": 170.827,
+          "end": 170.989
+        },
+        {
+          "word": "ni ",
+          "start": 170.989,
+          "end": 171.111
+        },
+        {
+          "word": "mag",
+          "start": 171.111,
+          "end": 171.685
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 171.685,
+      "verseEnd": 173.721,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 171.685,
+          "end": 172.46
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 172.46,
+          "end": 173.721
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 173.721,
+      "verseEnd": 175.921,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 173.721,
+          "end": 173.883
+        },
+        {
+          "word": "zoterdag ",
+          "start": 173.883,
+          "end": 174.576
+        },
+        {
+          "word": "is '",
+          "start": 174.576,
+          "end": 174.7
+        },
+        {
+          "word": "t ",
+          "start": 174.7,
+          "end": 174.821
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 174.821,
+          "end": 175.921
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 175.921,
+      "verseEnd": 177.854,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 175.921,
+          "end": 176.741
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 176.741,
+          "end": 177.854
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 177.854,
+      "verseEnd": 180.141,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 177.854,
+          "end": 178.058
+        },
+        {
+          "word": "gon ",
+          "start": 178.058,
+          "end": 178.345
+        },
+        {
+          "word": "fieste ",
+          "start": 178.345,
+          "end": 178.796
+        },
+        {
+          "word": "en ",
+          "start": 178.796,
+          "end": 178.959
+        },
+        {
+          "word": "as ",
+          "start": 178.959,
+          "end": 179.081
+        },
+        {
+          "word": "da ",
+          "start": 179.081,
+          "end": 179.203
+        },
+        {
+          "word": "nog ",
+          "start": 179.203,
+          "end": 179.448
+        },
+        {
+          "word": "ni ",
+          "start": 179.448,
+          "end": 179.57
+        },
+        {
+          "word": "mag",
+          "start": 179.57,
+          "end": 180.141
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 180.141,
+      "verseEnd": 182.105,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 180.141,
+          "end": 180.923
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 180.923,
+          "end": 182.105
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 182.105,
+      "verseEnd": 184.272,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 182.105,
+          "end": 182.227
+        },
+        {
+          "word": "zoterdag ",
+          "start": 182.227,
+          "end": 182.596
+        },
+        {
+          "word": "is '",
+          "start": 182.596,
+          "end": 182.682
+        },
+        {
+          "word": "t ",
+          "start": 182.682,
+          "end": 183.049
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 183.049,
+          "end": 184.272
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 184.272,
+      "verseEnd": 186.272,
+      "words": [
+        {
+          "word": "Joepiao, ",
+          "start": 184.272,
+          "end": 185.131
+        },
+        {
+          "word": "Jupilerajee",
+          "start": 185.131,
+          "end": 186.272
+        }
+      ],
+      "translation": "Joepiao, Jupilerajee"
+    },
+    {
+      "verseStart": 186.272,
+      "verseEnd": 190.401,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 186.272,
+          "end": 186.515
+        },
+        {
+          "word": "gon ",
+          "start": 186.515,
+          "end": 186.759
+        },
+        {
+          "word": "fieste ",
+          "start": 186.759,
+          "end": 187.211
+        },
+        {
+          "word": "en ",
+          "start": 187.211,
+          "end": 187.334
+        },
+        {
+          "word": "as ",
+          "start": 187.334,
+          "end": 187.497
+        },
+        {
+          "word": "da ",
+          "start": 187.497,
+          "end": 187.742
+        },
+        {
+          "word": "nog ",
+          "start": 187.742,
+          "end": 187.905
+        },
+        {
+          "word": "ni ",
+          "start": 187.905,
+          "end": 187.987
+        },
+        {
+          "word": "mag",
+          "start": 187.987,
+          "end": 190.401
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 190.401,
+      "verseEnd": 194.817,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 190.401,
+          "end": 190.77
+        },
+        {
+          "word": "zoterdag ",
+          "start": 190.77,
+          "end": 190.934
+        },
+        {
+          "word": "is '",
+          "start": 190.934,
+          "end": 191.426
+        },
+        {
+          "word": "t ",
+          "start": 191.426,
+          "end": 191.593
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 191.593,
+          "end": 194.817
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    },
+    {
+      "verseStart": 194.817,
+      "verseEnd": 198.85,
+      "words": [
+        {
+          "word": "Welle ",
+          "start": 194.817,
+          "end": 194.939
+        },
+        {
+          "word": "gon ",
+          "start": 194.939,
+          "end": 195.187
+        },
+        {
+          "word": "fieste ",
+          "start": 195.187,
+          "end": 195.525
+        },
+        {
+          "word": "en ",
+          "start": 195.525,
+          "end": 195.651
+        },
+        {
+          "word": "as ",
+          "start": 195.651,
+          "end": 195.814
+        },
+        {
+          "word": "da ",
+          "start": 195.814,
+          "end": 195.982
+        },
+        {
+          "word": "nog ",
+          "start": 195.982,
+          "end": 196.146
+        },
+        {
+          "word": "ni ",
+          "start": 196.146,
+          "end": 196.27
+        },
+        {
+          "word": "mag",
+          "start": 196.27,
+          "end": 198.85
+        }
+      ],
+      "translation": "Wij gaan feesten en als dat nog niet mag"
+    },
+    {
+      "verseStart": 198.85,
+      "verseEnd": 201.92,
+      "words": [
+        {
+          "word": "Want ",
+          "start": 198.85,
+          "end": 199.055
+        },
+        {
+          "word": "zoterdag ",
+          "start": 199.055,
+          "end": 199.629
+        },
+        {
+          "word": "is '",
+          "start": 199.629,
+          "end": 199.751
+        },
+        {
+          "word": "t ",
+          "start": 199.751,
+          "end": 199.92
+        },
+        {
+          "word": "krapoelekesdag",
+          "start": 199.92,
+          "end": 0
+        }
+      ],
+      "translation": "Want zaterdag is het krapoeltjesdag"
+    }
+  ]
+}
