@@ -801,11 +801,33 @@ video#studio-video {
   color: var(--text-muted);
 }
 
-.verse-inputs {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 6px;
-  margin-top: 2px;
+.speaker-tag {
+  font-size: 9px;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--studio-border);
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: var(--accent-cyan);
+}
+
+.verse-translation-subtitle {
+  font-size: 11px;
+  color: var(--text-dim);
+  font-style: italic;
+  padding: 3px 6px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--accent-orange);
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.verse-translation-subtitle:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 /* Ingestion Drawer / Modal */

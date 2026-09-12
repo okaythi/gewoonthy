@@ -73,8 +73,10 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
           <div style="display: flex; align-items: center; gap: 8px;">
             <span class="verse-id-badge">#${String(vIdx + 1).padStart(2, '0')}</span>
             <span class="verse-time-range">${rangeDisplay}</span>
+            ${verse.speaker ? `<span class="speaker-tag">${verse.speaker}</span>` : ''}
           </div>
           <div class="verse-actions">
+            ${state.activeSong?.hasTranslation && !verse.translation ? `<button class="icon-btn" data-action="add-translation" data-v="${vIdx}" title="Add translation">+Tr</button>` : ''}
             <button class="icon-btn" data-action="seek-verse" data-v="${vIdx}" title="Seek video to verse">▶</button>
             <button class="icon-btn" data-action="add-word-to-v" data-v="${vIdx}" title="Add word to verse">+</button>
             <button class="icon-btn danger" data-action="del-verse" data-v="${vIdx}" title="Delete verse">✕</button>
@@ -99,12 +101,11 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
           }).join('')}
         </div>
 
-        <div class="verse-inputs">
-          <input type="text" class="field-input" placeholder="Speaker" value="${verse.speaker || ''}" 
-                 data-action="update-speaker" data-v="${vIdx}" />
-          <input type="text" class="field-input" placeholder="Localized Translation" value="${verse.translation || ''}" 
-                 data-action="update-translation" data-v="${vIdx}" />
-        </div>
+        ${verse.translation ? `
+          <div class="verse-translation-subtitle" data-action="edit-translation" data-v="${vIdx}" title="Click to edit translation">
+            <span style="opacity: 0.5; margin-right: 4px;">↳</span>${verse.translation}
+          </div>
+        ` : ''}
       </div>
     `;
   }).join('');
@@ -173,17 +174,30 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
     });
   });
 
-  versesContainer.querySelectorAll('[data-action="update-speaker"]').forEach(input => {
-    input.addEventListener('change', (e) => {
-      const v = Number(input.getAttribute('data-v'));
-      state.localLyrics[v].speaker = (e.target as HTMLInputElement).value.trim() || undefined;
+  // Translation click to edit
+  versesContainer.querySelectorAll('[data-action="edit-translation"]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const v = Number(el.getAttribute('data-v'));
+      const current = state.localLyrics[v]?.translation || '';
+      const updated = prompt('Edit verse translation (or leave empty to remove):', current);
+      if (updated !== null) {
+        state.localLyrics[v].translation = updated.trim() || undefined;
+        renderMatrix(els, onRenderBlocks);
+      }
     });
   });
 
-  versesContainer.querySelectorAll('[data-action="update-translation"]').forEach(input => {
-    input.addEventListener('change', (e) => {
-      const v = Number(input.getAttribute('data-v'));
-      state.localLyrics[v].translation = (e.target as HTMLInputElement).value.trim() || undefined;
+  // Add translation to verse
+  versesContainer.querySelectorAll('[data-action="add-translation"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const v = Number(btn.getAttribute('data-v'));
+      const text = prompt('Enter verse translation:');
+      if (text) {
+        state.localLyrics[v].translation = text.trim();
+        renderMatrix(els, onRenderBlocks);
+      }
     });
   });
 
