@@ -1,5 +1,9 @@
 import type { Word, Verse, SongMetadata, SongLyricFile, SaveLyricsPayload } from '../../types/karaoke';
 
+export const OPENING_PUNCT_REGEX = /^[「『“‘"'(（【〔《〈［\[]+$/;
+export const CLOSING_PUNCT_REGEX = /^[」』”’"')）】〕》〉］\]、。！？!?…・―—~〜,.:;]+$/;
+export const ALL_PUNCT_REGEX = /^[「『“‘"'(（【〔《〈［\[」』”’"')）】〕》〉］\]、。！？!?…・―—~〜,.:;\s]+$/;
+
 /**
  * Standardize text using Unicode NFC normalization and trimmed whitespace.
  */
@@ -155,11 +159,59 @@ export function validateSongContract(payload: unknown): { valid: boolean; errors
 }
 
 /**
+ * Automatically merges isolated punctuation (quotes, brackets, periods) into adjacent words
+ * so users never have to tap/sync a quotation mark or punctuation symbol.
+ */
+export function cleanVersePunctuation(verses: Verse[]): Verse[] {
+  verses.forEach(v => {
+    if (!v.words || v.words.length === 0) return;
+
+    const cleaned: Word[] = [];
+    let pendingPrefix = '';
+
+    for (let i = 0; i < v.words.length; i++) {
+      const w = v.words[i];
+      const trimmed = w.word.trim();
+
+      // If word is pure punctuation
+      if (ALL_PUNCT_REGEX.test(trimmed)) {
+        if (OPENING_PUNCT_REGEX.test(trimmed)) {
+          // Opening quote: accumulate to prepend to the next word
+          pendingPrefix += w.word;
+        } else if (cleaned.length > 0) {
+          // Closing quote or punctuation: append to previous word
+          const prev = cleaned[cleaned.length - 1];
+          prev.word = prev.word.trimEnd() + w.word;
+          if (w.end > prev.end) prev.end = w.end;
+        } else {
+          // Lone punctuation at start: accumulate as prefix
+          pendingPrefix += w.word;
+        }
+      } else {
+        // Normal word: attach any accumulated opening punctuation prefix
+        if (pendingPrefix) {
+          w.word = pendingPrefix + w.word;
+          pendingPrefix = '';
+        }
+        cleaned.push(w);
+      }
+    }
+
+    // If any leftover prefix with no subsequent word, append to last word
+    if (pendingPrefix && cleaned.length > 0) {
+      cleaned[cleaned.length - 1].word += pendingPrefix;
+    }
+
+    v.words = cleaned;
+  });
+
+  return verses;
+}
+
+/**
  * Ingests raw lyrics text or LRC file content, breaking it into structured Verses and Words.
- * Supports:
- * - LRC format: [00:12.34]Word word word
- * - Japanese ruby bracket format: 漢字[かんじ] or [漢字:かんじ]
- * - Trailing space preservation for non-CJK text
+ * Automatically attaches opening and closing punctuation (quotes, brackets) to adjacent phonetic words
+ * so quotation marks never become standalone synchronization targets.
  */
 export function parseRawLyrics(rawText: string): Verse[] {
   if (!rawText || !rawText.trim()) return [];
@@ -201,12 +253,28 @@ export function parseRawLyrics(rawText: string): Verse[] {
     const isCjkOnly = /^[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf\s]+$/.test(verseContent);
 
     if (isCjkOnly && !tokenText.includes(' ')) {
+      // Split Japanese character-by-character, automatically attaching quotes & punctuation
+      let pendingPrefix = '';
       for (const char of tokenText) {
-        words.push({
-          word: char,
-          start: 0,
-          end: 0
-        });
+        if (OPENING_PUNCT_REGEX.test(char)) {
+          pendingPrefix += char;
+        } else if (CLOSING_PUNCT_REGEX.test(char)) {
+          if (words.length > 0) {
+            words[words.length - 1].word += char;
+          } else {
+            pendingPrefix += char;
+          }
+        } else {
+          words.push({
+            word: pendingPrefix + char,
+            start: 0,
+            end: 0
+          });
+          pendingPrefix = '';
+        }
+      }
+      if (pendingPrefix && words.length > 0) {
+        words[words.length - 1].word += pendingPrefix;
       }
     } else {
       const parts = tokenText.split(/(\s+)/);
@@ -250,5 +318,6 @@ export function parseRawLyrics(rawText: string): Verse[] {
     }
   }
 
-  return verses;
+  // Final sanitation pass to merge any isolated punctuation tokens
+  return cleanVersePunctuation(verses);
 }

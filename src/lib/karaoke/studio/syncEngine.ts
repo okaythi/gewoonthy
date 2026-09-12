@@ -1,5 +1,7 @@
 import { state, setOffset, setPlaybackRate } from './state';
 import { renderMatrix, updateTelemetry } from './renderer';
+import { formatTime } from './format';
+import { ALL_PUNCT_REGEX } from '../naming';
 import type { getStudioElements } from './dom';
 
 type StudioElements = ReturnType<typeof getStudioElements>;
@@ -25,19 +27,22 @@ export function initSyncEngine(
       const verse = state.localLyrics[state.currentV];
       if (!verse || !verse.words || state.currentW >= verse.words.length) return;
 
+      const stampedV = state.currentV;
+      const stampedW = state.currentW;
+
       // 1. Stamp start of current word
-      verse.words[state.currentW].start = Math.max(0, time);
+      verse.words[stampedW].start = Math.max(0, time);
 
       // 2. If first word of verse, set verseStart
-      if (state.currentW === 0) {
+      if (stampedW === 0) {
         verse.verseStart = Math.max(0, time);
       }
 
       // 3. Close end timestamp of previous word
-      if (state.currentW > 0) {
-        verse.words[state.currentW - 1].end = Math.max(verse.words[state.currentW - 1].start, time);
-      } else if (state.currentV > 0) {
-        const prevV = state.localLyrics[state.currentV - 1];
+      if (stampedW > 0) {
+        verse.words[stampedW - 1].end = Math.max(verse.words[stampedW - 1].start, time);
+      } else if (stampedV > 0) {
+        const prevV = state.localLyrics[stampedV - 1];
         if (prevV.words.length > 0) {
           const lastW = prevV.words[prevV.words.length - 1];
           lastW.end = Math.max(lastW.start, time);
@@ -53,9 +58,49 @@ export function initSyncEngine(
         state.currentV++;
       }
 
-      renderMatrix(els, onRenderBlocks);
-      onRenderBlocks();
-      updateTelemetry(els);
+      // Automatically skip any standalone punctuation words
+      while (
+        state.currentV < state.localLyrics.length &&
+        state.localLyrics[state.currentV]?.words?.[state.currentW] &&
+        ALL_PUNCT_REGEX.test(state.localLyrics[state.currentV].words[state.currentW].word.trim())
+      ) {
+        state.currentW++;
+        if (state.currentW >= state.localLyrics[state.currentV].words.length) {
+          state.currentW = 0;
+          state.currentV++;
+        }
+      }
+
+      // In-place DOM update within current verse
+      if (state.currentV === stampedV) {
+        const stampedChip = document.getElementById(`chip-${stampedV}-${stampedW}`);
+        if (stampedChip) {
+          stampedChip.classList.add('timed');
+          stampedChip.classList.remove('target-next');
+          const tsEl = stampedChip.querySelector('.word-timestamp');
+          if (tsEl) tsEl.textContent = `${time.toFixed(2)}s`;
+        }
+
+        const nextChip = document.getElementById(`chip-${state.currentV}-${state.currentW}`);
+        if (nextChip) {
+          nextChip.classList.add('target-next');
+        }
+
+        if (stampedW === 0) {
+          const rangeEl = document.querySelector(`#card-v-${stampedV} .verse-time-range`);
+          if (rangeEl && verse.verseStart > 0) {
+            rangeEl.textContent = `${formatTime(verse.verseStart)} → ${formatTime(verse.verseEnd || 0)}`;
+          }
+        }
+
+        onRenderBlocks();
+        updateTelemetry(els);
+      } else {
+        // Transition to next verse: full render to switch active card and scroll smoothly
+        renderMatrix(els, onRenderBlocks);
+        onRenderBlocks();
+        updateTelemetry(els);
+      }
     } else if (e.code === 'Backspace') {
       e.preventDefault();
       if (e.shiftKey) {

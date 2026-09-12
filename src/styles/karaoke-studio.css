@@ -29,6 +29,26 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 html, body {
@@ -728,21 +748,24 @@ video#studio-video {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  align-items: baseline;
-  line-height: 2;
+  align-items: stretch;
+  line-height: 1.3;
 }
 
 .word-chip {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  box-sizing: border-box;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--studio-border);
   border-radius: 4px;
-  padding: 3px 6px;
+  padding: 4px 5px 3px 5px;
   cursor: pointer;
   user-select: none;
-  transition: all 0.12s ease;
+  transition: background-color 0.1s ease, border-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease;
   position: relative;
 }
 .word-chip:hover {
@@ -757,8 +780,7 @@ video#studio-video {
   border-color: var(--accent-cyan);
   background: var(--accent-cyan-dim);
   color: #fff;
-  transform: scale(1.04);
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
 }
 .word-chip.target-next {
   border-color: var(--accent-amber);
@@ -770,12 +792,23 @@ video#studio-video {
   font-weight: 600;
   font-family: var(--font-jp);
   white-space: pre;
+  text-align: center;
+  line-height: 1.2;
 }
 .word-timestamp {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 8.5px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
   color: var(--text-dim);
-  margin-top: 1px;
+  margin-top: 2px;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
 }
 .word-chip.timed .word-timestamp {
   color: var(--accent-green);

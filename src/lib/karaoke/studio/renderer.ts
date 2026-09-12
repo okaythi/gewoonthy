@@ -201,14 +201,23 @@ export function renderMatrix(els: StudioElements, onRenderBlocks: () => void): v
     });
   });
 
-  // Smooth scroll active card vertically inside the verses container ONLY (never scroll window)
-  const activeCard = document.getElementById(`card-v-${state.currentV}`);
-  if (activeCard && versesContainer) {
-    const cardTop = activeCard.offsetTop;
-    const containerTop = versesContainer.offsetTop;
-    versesContainer.scrollTo({
-      top: Math.max(0, cardTop - containerTop - 12),
-      behavior: 'smooth'
-    });
+  // Smooth scroll active card vertically inside the verses container ONLY when transitioning to a different verse
+  if (state.currentV !== lastScrolledVerse) {
+    lastScrolledVerse = state.currentV;
+    const activeCard = document.getElementById(`card-v-${state.currentV}`);
+    if (activeCard && versesContainer) {
+      const cardTop = activeCard.offsetTop;
+      const containerTop = versesContainer.offsetTop;
+      versesContainer.scrollTo({
+        top: Math.max(0, cardTop - containerTop - 12),
+        behavior: 'smooth'
+      });
+    }
   }
+}
+
+let lastScrolledVerse = -1;
+
+export function resetScrollTrack(): void {
+  lastScrolledVerse = -1;
 }

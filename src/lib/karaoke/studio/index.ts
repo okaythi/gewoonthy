@@ -1,5 +1,5 @@
 import { loadCatalog, loadLyrics } from '../catalog';
-import { parseRawLyrics } from '../naming';
+import { parseRawLyrics, cleanVersePunctuation } from '../naming';
 import { getStudioElements } from './dom';
 import { 
   state, 
@@ -95,7 +95,8 @@ export async function bootstrapStudio(): Promise<void> {
 
     // Load Lyrics
     const lyricsDoc = await loadLyrics(song.id);
-    setLyrics(lyricsDoc?.lyricsData ? JSON.parse(JSON.stringify(lyricsDoc.lyricsData)) : []);
+    const parsedLyrics = lyricsDoc?.lyricsData ? JSON.parse(JSON.stringify(lyricsDoc.lyricsData)) : [];
+    setLyrics(cleanVersePunctuation(parsedLyrics));
     setTargetIndices(0, 0);
 
     renderMatrix(els, playerController.renderBlocks);
