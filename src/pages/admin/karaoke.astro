@@ -56,23 +56,6 @@ const pageTitle = "Karaoke Studio // Lyrics Sync Workstation";
           <span class="timecode-slash">/</span>
           <span class="timecode-total" id="hud-total-time">00:00.000</span>
         </div>
-
-        <div class="control-group">
-          <span class="group-label">Offset</span>
-          <button class="micro-btn" id="btn-offset-m100">-100</button>
-          <button class="micro-btn" id="btn-offset-m50">-50</button>
-          <span class="offset-val-display" id="offset-display">0.00s</span>
-          <button class="micro-btn" id="btn-offset-p50">+50</button>
-          <button class="micro-btn" id="btn-offset-p100">+100</button>
-        </div>
-
-        <div class="control-group">
-          <span class="group-label">Rate</span>
-          <button class="micro-btn" data-rate="0.5">0.5x</button>
-          <button class="micro-btn" data-rate="0.75">0.75x</button>
-          <button class="micro-btn active" data-rate="1.0">1.0x</button>
-          <button class="micro-btn" data-rate="1.25">1.25x</button>
-        </div>
       </div>
 
       <div class="top-right">
@@ -189,6 +172,23 @@ const pageTitle = "Karaoke Studio // Lyrics Sync Workstation";
               </button>
               <button class="micro-btn" id="btn-seek-back">-2s (J)</button>
               <button class="micro-btn" id="btn-seek-fwd">+2s (L)</button>
+
+              <div class="control-group">
+                <span class="group-label">Rate</span>
+                <button class="micro-btn" data-rate="0.5">0.5x</button>
+                <button class="micro-btn" data-rate="0.75">0.75x</button>
+                <button class="micro-btn active" data-rate="1.0">1.0x</button>
+                <button class="micro-btn" data-rate="1.25">1.25x</button>
+              </div>
+
+              <div class="control-group">
+                <span class="group-label">Offset</span>
+                <button class="micro-btn" id="btn-offset-m100">-100</button>
+                <button class="micro-btn" id="btn-offset-m50">-50</button>
+                <span class="offset-val-display" id="offset-display">0.00s</span>
+                <button class="micro-btn" id="btn-offset-p50">+50</button>
+                <button class="micro-btn" id="btn-offset-p100">+100</button>
+              </div>
             </div>
 
             <div class="transport-center">
