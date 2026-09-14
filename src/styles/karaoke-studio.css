@@ -574,8 +574,35 @@ video#studio-video {
   font-size: 20px;
   font-weight: 700;
   font-family: var(--font-jp);
-  line-height: 1.3;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.hud-word-wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+}
+.hud-word-base {
+  color: rgba(255, 255, 255, 0.45);
+  user-select: none;
+}
+.hud-word-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px rgba(6, 182, 212, 0.7);
+  pointer-events: none;
+  user-select: none;
+  clip-path: inset(0 calc(100% - var(--wipe-progress, 0%)) 0 0);
+  will-change: clip-path;
 }
 .active-hud-translation {
   font-size: 12px;
@@ -861,7 +888,8 @@ video#studio-video {
   margin-bottom: 2px;
   white-space: nowrap;
   pointer-events: none;
-  color: var(--text-muted);
+  color: inherit;
+  opacity: 0.85;
 }
 
 .speaker-tag {

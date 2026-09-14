@@ -74,6 +74,30 @@ export const openKaraokeWindow = async () => {
         white-space: nowrap;
         pointer-events: none;
         user-select: none;
+        color: inherit;
+        opacity: 0.85;
+      }
+      .word-wrapper {
+        position: relative;
+        display: inline-block;
+        vertical-align: baseline;
+      }
+      .word-base {
+        color: rgba(255, 255, 255, 0.45);
+        user-select: none;
+      }
+      .word-highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #FF7744;
+        text-shadow: 0 0 4px rgba(233, 84, 32, 0.8), 0 0 12px rgba(233, 84, 32, 0.4);
+        pointer-events: none;
+        user-select: none;
+        clip-path: inset(0 calc(100% - var(--wipe-progress, 0%)) 0 0);
+        will-change: clip-path;
       }
     </style>
     <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%; font-family: 'Noto Sans JP', system-ui, sans-serif;">
@@ -359,7 +383,10 @@ export const openKaraokeWindow = async () => {
               const isJp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(w.word);
               const margin = isJp ? "0" : "0 2px";
               const display = w.furigana ? `<span class="yomitan-ruby" data-furi="${w.furigana}">${w.word}</span>` : w.word;
-              return `<span class="word" id="word-${vIdx}-${wIdx}" style="opacity: 0.5; transition: opacity 0.1s; margin: ${margin};">${display}</span>`;
+              return `<span class="word-wrapper" id="word-${vIdx}-${wIdx}" style="margin: ${margin};">
+                <span class="word-base">${display}</span>
+                <span class="word-highlight" aria-hidden="true">${display}</span>
+              </span>`;
             }).join('')}
           </div>
           ${verse.translation ? `<div class="verse-translation" style="position: absolute; bottom: 4px; left: 0; width: 100%; text-align: center; font-size: 14px; font-family: system-ui, sans-serif; opacity: 0.4; color: white; pointer-events: none; text-shadow: none; font-weight: 500; letter-spacing: 0.5px;">${verse.translation}</div>` : ''}
@@ -371,6 +398,7 @@ export const openKaraokeWindow = async () => {
     let activeWordIndex = -1;
     let animationFrameId = null;
     let lastActiveLyricTime = Date.now();
+    let cachedWordElements = [];
 
     const updateLyrics = () => {
       const time = vid.currentTime;
@@ -399,34 +427,42 @@ export const openKaraokeWindow = async () => {
         }
         if (newVerseIndex !== -1) {
           const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
-          if (newV) newV.style.display = 'block';
+          if (newV) {
+            newV.style.display = 'block';
+            cachedWordElements = Array.from(newV.querySelectorAll('.word-wrapper'));
+          }
+        } else {
+          cachedWordElements = [];
         }
         activeVerseIndex = newVerseIndex;
       }
 
-      if (newWordIndex !== activeWordIndex || newVerseIndex !== activeVerseIndex) {
-        if (newVerseIndex !== -1) {
-          lastActiveLyricTime = Date.now();
-          lyricsContainer.style.opacity = '1';
+      if (newVerseIndex !== -1) {
+        lastActiveLyricTime = Date.now();
+        lyricsContainer.style.opacity = '1';
+        const verse = lyricsData[newVerseIndex];
+
+        // Real-time smooth syllable wipe progress calculation
+        for (let j = 0; j < verse.words.length; j++) {
+          const w = verse.words[j];
+          const el = cachedWordElements[j];
+          if (!el) continue;
+
+          let progress = 0;
+          if (time >= w.end) {
+            progress = 100;
+          } else if (time > w.start && w.end > w.start) {
+            progress = Math.min(100, Math.max(0, ((time - w.start) / (w.end - w.start)) * 100));
+          }
+          el.style.setProperty('--wipe-progress', `${progress}%`);
+        }
+
+        // Mathematical foolproof scrolling to prevent container overflow
+        if (newWordIndex !== activeWordIndex) {
           const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
-          const words = newV.querySelectorAll('.word');
-          
-          let activeWordEl = null;
-          words.forEach((w, idx) => {
-            if (idx === newWordIndex) {
-              activeWordEl = w;
-              w.style.opacity = '1';
-              w.style.color = '#FF7744';
-              w.style.textShadow = '0 0 4px rgba(233, 84, 32, 0.8), 0 0 12px rgba(233, 84, 32, 0.4)';
-            } else {
-              w.style.opacity = '0.5';
-              w.style.color = 'white';
-              w.style.textShadow = '';
-            }
-          });
-          
-          // Mathematical foolproof scrolling to prevent container overflow
-          const scrollInner = newV.querySelector('.verse-scroll');
+          const activeWordEl = cachedWordElements[newWordIndex];
+          const scrollInner = newV?.querySelector('.verse-scroll');
+
           if (activeWordEl && scrollInner) {
             const vHeight = newV.clientHeight;
             const wordTop = activeWordEl.offsetTop; 
@@ -445,10 +481,11 @@ export const openKaraokeWindow = async () => {
             }
             scrollInner.style.transform = `translateY(${translateY}px)`;
           }
-        } else {
-          lyricsContainer.style.opacity = '0';
+          activeWordIndex = newWordIndex;
         }
-        activeWordIndex = newWordIndex;
+      } else {
+        lyricsContainer.style.opacity = '0';
+        activeWordIndex = -1;
       }
       
       // Garbage collection timeout: hide lyrics if no update in 3000ms

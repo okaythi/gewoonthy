@@ -237,47 +237,91 @@ export function parseRawLyrics(rawText: string): Verse[] {
 
     if (!verseContent) continue;
 
-    // Tokenize words with furigana support
     const words: Word[] = [];
-    const rubyRegex = /([\u4e00-\u9faf\u3400-\u4dbf]+)\[([\u3040-\u309f\u30a0-\u30ff]+)\]/g;
-    let tokenText = verseContent;
 
-    const rubyTokens: { original: string; kanji: string; furigana: string; placeholder: string }[] = [];
-    let rIdx = 0;
-    tokenText = tokenText.replace(rubyRegex, (match, kanji, furigana) => {
-      const placeholder = `__RUBY_${rIdx++}__`;
-      rubyTokens.push({ original: match, kanji, furigana, placeholder });
-      return placeholder;
-    });
+    // Check if line contains CJK characters
+    const hasCjk = /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]/.test(verseContent);
 
-    const isCjkOnly = /^[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf\s]+$/.test(verseContent);
+    if (hasCjk) {
+      // Regex tokenizer for Japanese lyrics:
+      // 1. Ruby annotation: 漢字[ふりがな]
+      // 2. Compound kana (拗音, 促音, 長音): standard kana followed by small kana or ー
+      // 3. Standalone Kanji
+      // 4. Latin / alphanumeric words
+      // 5. Punctuation
+      // 6. Whitespace
+      const tokenRegex = /([\u4e00-\u9faf\u3400-\u4dbf]+)\[([\u3040-\u309f\u30a0-\u30ff]+)\]|([\u3040-\u309f\u30a0-\u30ff][ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮー]*)|([\u4e00-\u9faf\u3400-\u4dbf])|([^\s\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf「『“‘"'(（【〔《〈［\[」』”’"')）】〕》〉］\]、。！？!?…・―—~〜,.:;]+)|([「『“‘"'(（【〔《〈［\[」』”’"')）】〕》〉］\]、。！？!?…・―—~〜,.:;]+)|(\s+)/gu;
 
-    if (isCjkOnly && !tokenText.includes(' ')) {
-      // Split Japanese character-by-character, automatically attaching quotes & punctuation
+      let match: RegExpExecArray | null;
       let pendingPrefix = '';
-      for (const char of tokenText) {
-        if (OPENING_PUNCT_REGEX.test(char)) {
-          pendingPrefix += char;
-        } else if (CLOSING_PUNCT_REGEX.test(char)) {
+
+      while ((match = tokenRegex.exec(verseContent)) !== null) {
+        const [, rubyKanji, rubyFuri, compoundKana, singleKanji, latinWord, punct, whitespace] = match;
+
+        if (whitespace) {
           if (words.length > 0) {
-            words[words.length - 1].word += char;
-          } else {
-            pendingPrefix += char;
+            const lastWord = words[words.length - 1];
+            if (!/[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(lastWord.word)) {
+              if (!lastWord.word.endsWith(' ')) {
+                lastWord.word += ' ';
+              }
+            }
           }
-        } else {
+          continue;
+        }
+
+        if (punct) {
+          if (OPENING_PUNCT_REGEX.test(punct)) {
+            pendingPrefix += punct;
+          } else if (CLOSING_PUNCT_REGEX.test(punct)) {
+            if (words.length > 0) {
+              words[words.length - 1].word += punct;
+            } else {
+              pendingPrefix += punct;
+            }
+          } else {
+            pendingPrefix += punct;
+          }
+          continue;
+        }
+
+        if (rubyKanji && rubyFuri) {
           words.push({
-            word: pendingPrefix + char,
+            word: pendingPrefix + rubyKanji,
+            furigana: rubyFuri,
+            start: 0,
+            end: 0
+          });
+          pendingPrefix = '';
+        } else if (compoundKana) {
+          words.push({
+            word: pendingPrefix + compoundKana,
+            start: 0,
+            end: 0
+          });
+          pendingPrefix = '';
+        } else if (singleKanji) {
+          words.push({
+            word: pendingPrefix + singleKanji,
+            start: 0,
+            end: 0
+          });
+          pendingPrefix = '';
+        } else if (latinWord) {
+          words.push({
+            word: pendingPrefix + latinWord,
             start: 0,
             end: 0
           });
           pendingPrefix = '';
         }
       }
+
       if (pendingPrefix && words.length > 0) {
         words[words.length - 1].word += pendingPrefix;
       }
     } else {
-      const parts = tokenText.split(/(\s+)/);
+      const parts = verseContent.split(/(\s+)/);
       let currentWord = '';
 
       for (let p = 0; p < parts.length; p++) {
@@ -297,15 +341,6 @@ export function parseRawLyrics(rawText: string): Verse[] {
       }
       if (currentWord) {
         words.push({ word: currentWord, start: 0, end: 0 });
-      }
-    }
-
-    for (const w of words) {
-      for (const rt of rubyTokens) {
-        if (w.word.includes(rt.placeholder)) {
-          w.word = w.word.replace(rt.placeholder, rt.kanji);
-          w.furigana = rt.furigana;
-        }
       }
     }
 
