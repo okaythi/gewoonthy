@@ -99,6 +99,60 @@ export const openKaraokeWindow = async () => {
         clip-path: inset(0 calc(100% - var(--wipe-progress, 0%)) 0 0);
         will-change: clip-path;
       }
+      .k-lyrics-container {
+        flex-shrink: 0;
+        height: 100px;
+        width: 100%;
+        margin-top: 8px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-family: 'Zen Kurenaido', 'Noto Sans JP', 'Great Vibes', system-ui, sans-serif;
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        transition: opacity 0.3s;
+        opacity: 0;
+        overflow: hidden;
+        position: relative;
+        padding: 4px 16px;
+        box-sizing: border-box;
+      }
+      .k-line {
+        width: 100%;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: opacity 0.2s ease;
+      }
+      .k-line-top {
+        justify-content: flex-start;
+        padding-left: 5%;
+      }
+      .k-line-bottom {
+        justify-content: flex-end;
+        padding-right: 5%;
+      }
+      .k-line.k-line-idle {
+        opacity: 0.55;
+      }
+      .k-line.k-line-active {
+        opacity: 1;
+      }
+      .k-line-translation {
+        font-size: 13px;
+        font-family: system-ui, sans-serif;
+        font-weight: 500;
+        opacity: 0.5;
+        margin-left: 12px;
+        color: rgba(255, 255, 255, 0.85);
+        text-shadow: none;
+      }
     </style>
     <div class="karaoke-layout" style="display: flex; width: 100%; height: 100%; font-family: 'Noto Sans JP', system-ui, sans-serif;">
       ${leftSidebarHTML}
@@ -228,27 +282,38 @@ export const openKaraokeWindow = async () => {
           <video id="k-vid" crossorigin="anonymous" playsinline style="width: 100%; height: 100%; max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); object-fit: contain;"></video>
         </div>
         
-        <div id="k-lyrics" style="flex-shrink: 0; height: 100px; width: 100%; margin-top: 15px; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 32px; font-weight: bold; font-family: 'Great Vibes', 'Zen Kurenaido', system-ui, sans-serif; color: white; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); transition: opacity 0.3s; opacity: 0; overflow: hidden; position: relative;">
-          <!-- Lyrics inject here -->
+        <div id="k-lyrics" class="k-lyrics-container">
+          <div id="k-line-top" class="k-line k-line-top"></div>
+          <div id="k-line-bottom" class="k-line k-line-bottom"></div>
         </div>
         
-        <div class="k-controls" style="flex-shrink: 0; height: 60px; margin-top: 15px; background: rgba(0,0,0,0.4); border-radius: 8px; z-index: 4; display: flex; align-items: center; padding: 0 20px; gap: 15px; border: 1px solid rgba(255,255,255,0.1);">
-          <button id="k-play" style="background: none; border: none; color: white; cursor: pointer;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <div class="k-controls" style="flex-shrink: 0; height: 42px; margin-top: 8px; background: rgba(0,0,0,0.4); border-radius: 8px; z-index: 4; display: flex; align-items: center; padding: 0 14px; gap: 10px; border: 1px solid rgba(255,255,255,0.1);">
+          <button id="k-play" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; padding: 2px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </button>
-          <div id="k-time" style="color: white; font-size: 12px; font-family: monospace;">0:00 / 0:00</div>
-          <input type="range" id="k-progress" value="0" min="0" max="100" style="flex: 1; cursor: pointer;">
+          <div id="k-time" style="color: white; font-size: 11px; font-family: monospace; white-space: nowrap;">0:00 / 0:00</div>
+          <input type="range" id="k-progress" value="0" min="0" max="100" style="flex: 1; height: 4px; cursor: pointer; accent-color: #E95420;">
           
-          <button id="btn-like" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; gap: 5px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
-            <span id="like-count" style="font-size:12px;">0</span>
+          <div class="k-vol-group" style="display: flex; align-items: center; gap: 6px;">
+            <button id="k-vol-btn" title="Mute/Unmute" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; padding: 2px;">
+              <svg id="k-vol-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+            <input type="range" id="k-volume" min="0" max="1" step="0.05" value="0.5" style="width: 55px; height: 4px; cursor: pointer; accent-color: #E95420;" />
+          </div>
+
+          <button id="btn-like" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 2px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg>
+            <span id="like-count" style="font-size: 11px;">0</span>
           </button>
-          <button id="btn-dislike" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; gap: 5px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path></svg>
-            <span id="dislike-count" style="font-size:12px;">0</span>
+          <button id="btn-dislike" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 2px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-2"></path></svg>
+            <span id="dislike-count" style="font-size: 11px;">0</span>
           </button>
-          <button id="btn-shuffle" style="background: none; border: none; color: white; cursor: pointer;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
+          <button id="btn-shuffle" style="background: none; border: none; color: white; cursor: pointer; display: flex; align-items: center; padding: 2px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
           </button>
         </div>
       </div>
@@ -257,14 +322,62 @@ export const openKaraokeWindow = async () => {
     // Initialize Video Player JS
     const vid = mainView.querySelector('#k-vid');
     const lyricsContainer = mainView.querySelector('#k-lyrics');
+    const lineTopEl = mainView.querySelector('#k-line-top');
+    const lineBottomEl = mainView.querySelector('#k-line-bottom');
     const playBtn = mainView.querySelector('#k-play');
     const timeDisp = mainView.querySelector('#k-time');
     const progress = mainView.querySelector('#k-progress');
+    const volBtn = mainView.querySelector('#k-vol-btn');
+    const volInput = mainView.querySelector('#k-volume');
+    const volIcon = mainView.querySelector('#k-vol-icon');
     const btnLike = mainView.querySelector('#btn-like');
     const btnDislike = mainView.querySelector('#btn-dislike');
     const btnShuffle = mainView.querySelector('#btn-shuffle');
     const likeCount = mainView.querySelector('#like-count');
     const dislikeCount = mainView.querySelector('#dislike-count');
+
+    // Volume Control Logic
+    let prevVolume = 0.5;
+    const updateVolIcon = (vol, isMuted) => {
+      if (isMuted || vol === 0) {
+        volIcon.innerHTML = `
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        `;
+      } else if (vol < 0.5) {
+        volIcon.innerHTML = `
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        `;
+      } else {
+        volIcon.innerHTML = `
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        `;
+      }
+    };
+
+    volInput.addEventListener('input', (e) => {
+      const val = parseFloat(e.target.value);
+      vid.volume = val;
+      vid.muted = (val === 0);
+      if (val > 0) prevVolume = val;
+      updateVolIcon(val, vid.muted);
+    });
+
+    volBtn.addEventListener('click', () => {
+      if (vid.muted || vid.volume === 0) {
+        vid.muted = false;
+        vid.volume = prevVolume || 0.5;
+        volInput.value = vid.volume;
+      } else {
+        prevVolume = vid.volume;
+        vid.muted = true;
+        volInput.value = 0;
+      }
+      updateVolIcon(vid.volume, vid.muted);
+    });
 
     // Voting Logic (Half-optimistic & per-user D1)
     let currentVote = null; // 'like' | 'dislike' | null
@@ -375,124 +488,146 @@ export const openKaraokeWindow = async () => {
     vid.load();
     vid.play().catch(e => console.warn('Autoplay prevented', e));
 
-    if (lyricsData) {
-      lyricsContainer.innerHTML = lyricsData.map((verse, vIdx) => `
-        <div class="verse" id="verse-${vIdx}" style="display: none; width: 100%; height: 100%; position: absolute; top: 0; left: 0; overflow: hidden;">
-          <div class="verse-scroll" style="width: 100%; text-align: center; line-height: 2.5; padding-bottom: ${verse.translation ? '28px' : '0'}; transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); font-family: 'Great Vibes', 'Zen Kurenaido', 'Noto Sans JP', system-ui, sans-serif;">
-            ${verse.words.map((w, wIdx) => {
-              const isJp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(w.word);
-              const margin = isJp ? "0" : "0 2px";
-              const display = w.furigana ? `<span class="yomitan-ruby" data-furi="${w.furigana}">${w.word}</span>` : w.word;
-              return `<span class="word-wrapper" id="word-${vIdx}-${wIdx}" style="margin: ${margin};">
-                <span class="word-base">${display}</span>
-                <span class="word-highlight" aria-hidden="true">${display}</span>
-              </span>`;
-            }).join('')}
-          </div>
-          ${verse.translation ? `<div class="verse-translation" style="position: absolute; bottom: 4px; left: 0; width: 100%; text-align: center; font-size: 14px; font-family: system-ui, sans-serif; opacity: 0.4; color: white; pointer-events: none; text-shadow: none; font-weight: 500; letter-spacing: 0.5px;">${verse.translation}</div>` : ''}
-        </div>
-      `).join('');
-    }
+    const renderVerseWordsHTML = (verse, lineKey) => {
+      if (!verse) return '';
+      const wordsHTML = verse.words.map((w, wIdx) => {
+        const isJp = /[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(w.word);
+        const margin = isJp ? "0" : "0 2px";
+        const display = w.furigana ? `<span class="yomitan-ruby" data-furi="${w.furigana}">${w.word}</span>` : w.word;
+        return `<span class="word-wrapper" id="w-${lineKey}-${wIdx}" style="margin: ${margin};">
+          <span class="word-base">${display}</span>
+          <span class="word-highlight" aria-hidden="true">${display}</span>
+        </span>`;
+      }).join('');
 
-    let activeVerseIndex = -1;
-    let activeWordIndex = -1;
+      const translationHTML = verse.translation
+        ? `<span class="k-line-translation">${verse.translation}</span>`
+        : '';
+
+      return wordsHTML + translationHTML;
+    };
+
+    let currentTopVerseIndex = -2;
+    let currentBottomVerseIndex = -2;
+    let cachedTopWords = [];
+    let cachedBottomWords = [];
     let animationFrameId = null;
-    let lastActiveLyricTime = Date.now();
-    let cachedWordElements = [];
 
     const updateLyrics = () => {
       const time = vid.currentTime;
-      let newVerseIndex = -1;
-      let newWordIndex = -1;
-      
-      if (lyricsData) {
+      let activeV = -1;
+      let upcomingV = -1;
+
+      if (lyricsData && lyricsData.length > 0) {
         for (let i = 0; i < lyricsData.length; i++) {
-          if (time >= lyricsData[i].verseStart && time <= lyricsData[i].verseEnd) {
-            newVerseIndex = i;
-            for (let j = 0; j < lyricsData[i].words.length; j++) {
-              if (time >= lyricsData[i].words[j].start && time <= lyricsData[i].words[j].end) {
-                newWordIndex = j;
-                break;
-              }
-            }
+          const v = lyricsData[i];
+          if (time >= v.verseStart && time <= v.verseEnd) {
+            activeV = i;
+            break;
+          }
+          if (time < v.verseStart) {
+            upcomingV = i;
             break;
           }
         }
       }
 
-      if (newVerseIndex !== activeVerseIndex) {
-        if (activeVerseIndex !== -1) {
-          const old = mainView.querySelector(`#verse-${activeVerseIndex}`);
-          if (old) old.style.display = 'none';
-        }
-        if (newVerseIndex !== -1) {
-          const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
-          if (newV) {
-            newV.style.display = 'block';
-            cachedWordElements = Array.from(newV.querySelectorAll('.word-wrapper'));
-          }
+      // Determine which verses should occupy Top and Bottom lines
+      const focusV = activeV !== -1 ? activeV : upcomingV;
+      let targetTop = -1;
+      let targetBottom = -1;
+
+      if (focusV !== -1 && lyricsData) {
+        if (focusV % 2 === 0) {
+          // Even verse on Top line
+          targetTop = focusV;
+          targetBottom = focusV + 1 < lyricsData.length ? focusV + 1 : -1;
         } else {
-          cachedWordElements = [];
+          // Odd verse on Bottom line; Top line immediately switches to next upcoming text!
+          targetBottom = focusV;
+          targetTop = focusV + 1 < lyricsData.length ? focusV + 1 : -1;
         }
-        activeVerseIndex = newVerseIndex;
       }
 
-      if (newVerseIndex !== -1) {
-        lastActiveLyricTime = Date.now();
+      // Mount or update Top line DOM only when verse changes
+      if (targetTop !== currentTopVerseIndex) {
+        currentTopVerseIndex = targetTop;
+        if (targetTop !== -1 && lyricsData && lyricsData[targetTop]) {
+          lineTopEl.innerHTML = renderVerseWordsHTML(lyricsData[targetTop], 'top');
+          cachedTopWords = Array.from(lineTopEl.querySelectorAll('.word-wrapper'));
+        } else {
+          lineTopEl.innerHTML = '';
+          cachedTopWords = [];
+        }
+      }
+
+      // Mount or update Bottom line DOM only when verse changes
+      if (targetBottom !== currentBottomVerseIndex) {
+        currentBottomVerseIndex = targetBottom;
+        if (targetBottom !== -1 && lyricsData && lyricsData[targetBottom]) {
+          lineBottomEl.innerHTML = renderVerseWordsHTML(lyricsData[targetBottom], 'bot');
+          cachedBottomWords = Array.from(lineBottomEl.querySelectorAll('.word-wrapper'));
+        } else {
+          lineBottomEl.innerHTML = '';
+          cachedBottomWords = [];
+        }
+      }
+
+      // Update appearance and smooth wipe progress on both lines
+      if (targetTop !== -1 || targetBottom !== -1) {
         lyricsContainer.style.opacity = '1';
-        const verse = lyricsData[newVerseIndex];
 
-        // Real-time smooth syllable wipe progress calculation
-        for (let j = 0; j < verse.words.length; j++) {
-          const w = verse.words[j];
-          const el = cachedWordElements[j];
-          if (!el) continue;
+        // Top line wipe update
+        if (targetTop !== -1 && lyricsData && lyricsData[targetTop]) {
+          const isTopActive = targetTop === activeV;
+          lineTopEl.classList.toggle('k-line-active', isTopActive);
+          lineTopEl.classList.toggle('k-line-idle', !isTopActive);
 
-          let progress = 0;
-          if (time >= w.end) {
-            progress = 100;
-          } else if (time > w.start && w.end > w.start) {
-            progress = Math.min(100, Math.max(0, ((time - w.start) / (w.end - w.start)) * 100));
+          const vTop = lyricsData[targetTop];
+          for (let j = 0; j < vTop.words.length; j++) {
+            const w = vTop.words[j];
+            const el = cachedTopWords[j];
+            if (!el) continue;
+
+            let progress = 0;
+            if (isTopActive) {
+              if (time >= w.end) {
+                progress = 100;
+              } else if (time > w.start && w.end > w.start) {
+                progress = Math.min(100, Math.max(0, ((time - w.start) / (w.end - w.start)) * 100));
+              }
+            }
+            el.style.setProperty('--wipe-progress', `${progress}%`);
           }
-          el.style.setProperty('--wipe-progress', `${progress}%`);
         }
 
-        // Mathematical foolproof scrolling to prevent container overflow
-        if (newWordIndex !== activeWordIndex) {
-          const newV = mainView.querySelector(`#verse-${newVerseIndex}`);
-          const activeWordEl = cachedWordElements[newWordIndex];
-          const scrollInner = newV?.querySelector('.verse-scroll');
+        // Bottom line wipe update
+        if (targetBottom !== -1 && lyricsData && lyricsData[targetBottom]) {
+          const isBottomActive = targetBottom === activeV;
+          lineBottomEl.classList.toggle('k-line-active', isBottomActive);
+          lineBottomEl.classList.toggle('k-line-idle', !isBottomActive);
 
-          if (activeWordEl && scrollInner) {
-            const vHeight = newV.clientHeight;
-            const wordTop = activeWordEl.offsetTop; 
-            const wordHeight = activeWordEl.offsetHeight;
-            const innerHeight = scrollInner.scrollHeight;
-            
-            let translateY = 0;
-            if (innerHeight > vHeight) {
-              translateY = (vHeight / 2) - (wordTop + (wordHeight / 2));
-              const maxScroll = -(innerHeight - vHeight);
-              if (translateY > 0) translateY = 0;
-              if (translateY < maxScroll) translateY = maxScroll;
-            } else {
-              // Vertically center if it fully fits
-              translateY = (vHeight - innerHeight) / 2;
+          const vBot = lyricsData[targetBottom];
+          for (let j = 0; j < vBot.words.length; j++) {
+            const w = vBot.words[j];
+            const el = cachedBottomWords[j];
+            if (!el) continue;
+
+            let progress = 0;
+            if (isBottomActive) {
+              if (time >= w.end) {
+                progress = 100;
+              } else if (time > w.start && w.end > w.start) {
+                progress = Math.min(100, Math.max(0, ((time - w.start) / (w.end - w.start)) * 100));
+              }
             }
-            scrollInner.style.transform = `translateY(${translateY}px)`;
+            el.style.setProperty('--wipe-progress', `${progress}%`);
           }
-          activeWordIndex = newWordIndex;
         }
       } else {
         lyricsContainer.style.opacity = '0';
-        activeWordIndex = -1;
       }
-      
-      // Garbage collection timeout: hide lyrics if no update in 3000ms
-      if (Date.now() - lastActiveLyricTime > 3000) {
-        lyricsContainer.style.opacity = '0';
-      }
-      
+
       animationFrameId = requestAnimationFrame(updateLyrics);
     };
 
@@ -502,8 +637,8 @@ export const openKaraokeWindow = async () => {
     playBtn.addEventListener('click', togglePlay);
     vid.addEventListener('click', togglePlay);
 
-    vid.addEventListener('play', () => playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>');
-    vid.addEventListener('pause', () => playBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>');
+    vid.addEventListener('play', () => playBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>');
+    vid.addEventListener('pause', () => playBtn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>');
 
     const formatTime = (time) => {
       if (isNaN(time)) return "0:00";
